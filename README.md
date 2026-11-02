@@ -5,6 +5,14 @@
 A Jekyll digital laboratory for GIS × AI × Code × Interactive Learning.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 3 review
+
+The lavender campus/motion work is on `feat/atlas-iteration-3`, based on feature-2.
+It does **not** alter production publishing. See [scope, screenshots, tests and
+built-preview instructions](docs/ATLAS-ITERATION-3.md) and
+[campus data provenance](docs/CAMPUS_DATA.md). A CI artifact supplies a static
+preview after the PR checks pass.
+
 ## Explore
 
 - `/`: Atlas homepage with a local SVG globe.

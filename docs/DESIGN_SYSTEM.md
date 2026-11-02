@@ -1,47 +1,75 @@
-# Atlas design system
+# Atlas design system · Iteration 3
 
 ## Direction
 
-A living atlas: editorial composition, cartographic linework and functional
-experiments. Homepage uses a two-column geographic hero, three connected fields,
-a large matrix feature and a compact note list. Projects use editorial rows;
-knowledge uses a linked SVG map and searchable list. Avoid repeating card grids.
+Lavender Cyberpunk × Playful Geek × Soft Futurism. Default to a purple-black
+canvas, restrained lavender accents, editorial type and cartographic reference
+lines. A small SVG character, Atlas Mote, introduces warmth in the Explore hero,
+loading, empty states and the closing note. No continuous particles or glass UI.
+The original Geo/AI/Code labs and legacy Chirpy blog remain functional.
 
-## Tokens
+## Shared tokens
 
-| Token | Dark | Light |
-| --- | --- | --- |
-| Canvas | `#101b24` | `#f2f3ec` |
-| Panel | `#172631` | `#e5e9e1` |
-| Text | `#edf1ec` | `#182c32` |
-| Secondary | `#b0c0c7` | `#4c6268` |
-| Accent | `#b8dfb4` | `#27604c` |
-| Warm accent | `#e0b77d` | `#83521c` |
+`assets/css/atlas-tokens.css` is shared by Atlas and the retained blog. Atlas's
+older short token names alias these values; campus components use the full names.
 
+| Token | Dark default |
+| --- | --- |
+| `--bg-primary` | `#090711` |
+| `--bg-secondary` | `#151024` |
+| `--surface` | `#211A32` |
+| `--lavender-primary` | `#C4B5FD` |
+| `--lavender-accent` | `#A78BFA` |
+| `--lavender-light` | `#E9D5FF` |
+| `--text-primary` | `#F5F3FF` |
+| `--text-secondary` | `#B8AECF` |
+| `--border` | `rgba(196,181,253,0.16)` |
+
+Retain an optional global light mode in the same purple family; explicit choice
+persists across Atlas and legacy blog pages. Default is dark, independent of OS.
 System sans for reading; Georgia for editorial emphasis; system monospace for
-labels, code and measurements. No external font request. Layout max-width is
-1200–1240px; reading columns stay narrower. Most sections use 32–48px spacing.
+coordinates and labels. No new font/CDN/UI-framework dependency.
 
-## Interaction
+## Motion contract
 
-- Standard links for navigation, buttons for actions; minimum 44px control height.
-- A visible keyboard focus ring and a skip-to-content link on every Atlas page.
-- Mobile menu uses an expanded state; Escape closes it and restores button focus.
-  Without JavaScript, navigation and notes stay visible.
-- Theme follows system preference initially, then remembers explicit choice where
-  localStorage is available. Storage failure does not break the site.
-- Motion is limited to short color transitions under `prefers-reduced-motion:
-  no-preference`. No continuous animation, particles or GPU-heavy 3D.
-- Tables/code can scroll within their own region. Scrollable code is focusable.
-  Labs and editorial rows become single-column on smaller screens.
+- Enter: 560ms, stagger 0/65/130ms, opacity and 18px translation. Observer reveals
+  only once; content is never permanently hidden while awaiting JavaScript.
+- Hero grid/orb: 680–700ms once, different timing from headings.
+- Spring feedback: 180–450ms, `cubic-bezier(.2,.9,.25,1.18)`; button press scales
+  to .96. Map selection/favorite feedback is one-shot and meaningful.
+- Magnetic primary links: mouse/fine-pointer only, maximum 4px per axis. Tilt:
+  maximum 2° per axis, only designated non-map cards. Pointer-follow light is
+  local to the hovered element. No idle requestAnimationFrame loop.
+- Menu entry: 340ms soft transition, native expanded state, Escape to close.
+- Navigation: native same-origin View Transitions (140ms exit / 340ms entry),
+  progressive enhancement. No interception, SPA router, blocking exit timer or
+  custom history. Unsupported browsers navigate normally.
+- Reduced motion: suppress CSS motion, skip/cancel Web Animations and reset pointer
+  transforms. Coarse pointers do not receive magnetic/tilt effects. Map pan/zoom
+  remains direct input rather than decorative motion.
 
-## Assets
+## Campus map UI
 
-`assets/img/atlas/globe.svg` is an orthographic globe centered on 90°E, 22°N.
-Coastlines derive from Natural Earth's `ne_110m_land.geojson`, public domain:
-https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson
-Graticules and the globe mark are generated vector artwork. Dots are decorative
-illustrations, not personal locations. Source data is not a GIS analysis service.
+Use a source-backed local point atlas rather than invented roads/building geometry.
+Map UI: rounded frame, compact toolbar, responsive search/list, independent layers,
+readout, keyboard/zoom controls, details, favorite feedback and Mote empty states.
+Controls never tilt with the map. Nearby marker callouts can move visually; dashed
+leaders point to the unchanged geographic representative point. Marker screen
+size stays constant during zoom. The map state survives navigation in sessionStorage;
+favorites use localStorage with an in-page fallback if storage is unavailable.
 
-`social.png` is a 1200×630 raster social preview generated from the same local
-vector globe and brand typography. It is metadata-only, not a homepage download.
+Mobile: map above the scrollable list, visible controls, single-column paths,
+page vertical scrolling preserved over the map. Plain navigation, source cards
+and official-map links remain available without JavaScript.
+
+## Assets and provenance
+
+- `mote.svg`: original vector character, not a real person or animal.
+- `globe.svg`: retained orthographic Natural Earth coastline artwork, recolored
+  lavender; geometry unchanged. Natural Earth data is public domain.
+- `social.png`: matching purple raster social preview, not a homepage download.
+- `_data/campus.yml`: six public OSM representative points, accessed through their
+  Mapcarta source pages. See `CAMPUS_DATA.md` for licensing and exact sources.
+
+Use the shared palette for new components. Do not reintroduce green surfaces or
+an unrelated theme, fake data, indefinite movement, or pointer effects on map drags.

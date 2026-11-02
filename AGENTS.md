@@ -7,8 +7,11 @@
 - Keep Jekyll + Markdown + native JavaScript + CSS/SVG. No framework migration
   without a concrete need. Atlas shell is `_layouts/atlas.html`; metadata/navigation
   are in `_data/atlas.yml`; notes are in `_atlas_notes/`.
-- Visual language: editorial navy/celadon, restrained amber, cartographic lines,
-  generous spacing, distinct section layouts. Support light/dark themes, keyboard
+- Visual language: lavender cyberpunk / playful geek; purple-black canvas, lavender
+  accents, cartographic lines, generous spacing and distinct section layouts.
+  Use global tokens; no green theme. Motion uses 300–700ms opacity/transform,
+  meaningful feedback and reduced-motion/touch fallbacks. Campus coordinates
+  require explicit provenance; do not invent roads, building footprints or POIs. Support light/dark themes, keyboard
   operation and reduced motion. No decorative particle engines or fake counters.
 - Treat models as models: pure-strategy Nash equilibrium is not social optimum;
   shallow raw-pointer ownership is unsafe; spherical Mercator scale is local;

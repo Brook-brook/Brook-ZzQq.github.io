@@ -38,3 +38,10 @@ backend storage or unverified external project is presented as completed. Pyodid
 needs the pinned CDN at first load and is not a complete local Python environment.
 Original theme demo posts remain labelled via the legacy blog entry; they are not
 Brook's personal experience or newly authored learning notes.
+
+## Iteration 3 review branch
+
+Lavender shared tokens, meaningful motion and source-backed Zijingang point atlas.
+See `ATLAS-ITERATION-3.md` and `CAMPUS_DATA.md`. Dining/housing data and a full
+road/building basemap are future verification tasks, not completed map coverage.
+The production feature-2 deploy trigger remains unchanged.
