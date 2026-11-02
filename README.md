@@ -1,27 +1,28 @@
-# Brook's Atlas
+# Brook’s Digital Universe
 
-**Mapping Knowledge. Building Intelligence. Exploring Possibilities.**
+**A personal digital garden for learning, building and exploring.**
 
-A Jekyll digital laboratory for GIS × AI × Code × Interactive Learning.
+A Jekyll personal space for learning notes, projects, creative experiments and
+new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
-## Iteration 4 review
+## Iteration 5 review
 
-The Obsidian Glass campus redesign is on `feat/atlas-iteration-4`, based on the
-unmerged `feat/atlas-iteration-3` branch.
-It does **not** alter production publishing. See [scope, screenshots, tests and
-built-preview instructions](docs/ATLAS-ITERATION-4.md) and
-[campus data provenance](docs/CAMPUS_DATA.md). A CI artifact supplies a static
-preview after the PR checks pass.
+The new Home, Study and data-driven Projects are on `feat/atlas-iteration-5`,
+based on the **unmerged** fourth-round branch (`4d32f15`). Production publishing
+is unchanged. See [report, screenshots and preview instructions](docs/ATLAS-ITERATION-5.md),
+[product audit](docs/iteration-5-audit.md), [compliance review](docs/iteration-5-compliance.md)
+and [third-party notices](THIRD_PARTY_NOTICES.md).
 
 ## Explore
 
-- `/`: Atlas homepage with a local SVG globe.
+- `/`: personal introduction, real tutorial notebook, selected work and build records.
+- `/study/`: searchable Markdown tutorials and linked interactive experiments.
 - `/explore/`: sourced Zijingang point atlas, search, favorites and Geo/AI/Code lab links.
 - `/playground/`: prisoner/stag games, C++ copying and Mercator scale.
 - `/playground/nash/`: editable 2×2 pure-strategy equilibrium explorer.
 - `/playground/python/`: real Python via lazy Pyodide Worker.
-- `/knowledge/`: searchable Markdown tutorials and a linked knowledge map.
+- `/knowledge/`: retained relationship map and tutorial index; all article URLs remain valid.
 - `/projects/`, `/about/`: accurate project states and public introduction.
 - `/journal/`: preserved Chirpy demo posts; old `/atlas/` routes redirect.
 
@@ -61,8 +62,11 @@ Python tests need the pinned jsDelivr runtime; no model/service credentials exis
 
 ## Content and boundaries
 
-Add a Markdown file to `_atlas_notes/` with the metadata used by existing notes.
-The collection builds lists and note pages automatically. Tutorials added in this
+Add a Markdown file to `_atlas_notes/` with existing metadata; Study categories,
+latest notes and article pages update automatically. Add project records to
+`_data/projects.yml`; optional details, links, preview and `featured: true` drive
+Projects and Home without separate page edits. Notebook choices and factual
+build records live in `_data/universe.yml`. No CMS or database is needed. Tutorials added in this
 iteration are labelled laboratory tutorials, not personal experience or accolades.
 
 Only pure-strategy equilibria are enumerated. C++ is a semantic visualization;
@@ -75,8 +79,11 @@ browser virtual filesystem, output cap and 5-second run timeout.
 - [Development rules](AGENTS.md)
 - [Design system](docs/DESIGN_SYSTEM.md)
 - [Roadmap and limits](docs/ROADMAP.md)
-- [Hallmark before-design audit](docs/design-audit-iteration-4.md)
-- [Iteration 4 screenshots and validation](docs/ATLAS-ITERATION-4.md)
+- [Locked product/design direction](design.md)
+- [Iteration 5 product audit](docs/iteration-5-audit.md)
+- [Iteration 5 screenshots and validation](docs/ATLAS-ITERATION-5.md)
+- [Open-source review](docs/iteration-5-compliance.md)
+- [Iteration 4 foundation](docs/ATLAS-ITERATION-4.md)
 - [Iteration 2 engineering audit](docs/ATLAS-ITERATION-2.md)
 
 For GitHub Pages, select **Settings → Pages → Source → GitHub Actions**.
@@ -90,4 +97,6 @@ Built on [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) under the
 existing MIT license. [Original theme README](docs/CHIRPY_README.md).
 Globe coastline data: [Natural Earth](https://www.naturalearthdata.com/), public
 domain. Python runtime: [Pyodide](https://pyodide.org/), pinned to 0.27.7 and
-loaded only on request. Playwright and axe are development-only dependencies.
+loaded only on request. Playwright and axe are development-only dependencies. Full upstream notices and
+license texts are retained in THIRD_PARTY_NOTICES.md and licenses/. Every future
+iteration updates its own compliance report, even without new dependencies.

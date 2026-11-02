@@ -1,4 +1,4 @@
-# Brook's Atlas roadmap
+# Brook’s Digital Universe roadmap
 
 ## Implemented in the review branch
 
@@ -45,3 +45,17 @@ Lavender shared tokens, meaningful motion and source-backed Zijingang point atla
 See `ATLAS-ITERATION-3.md` and `CAMPUS_DATA.md`. Dining/housing data and a full
 road/building basemap are future verification tasks, not completed map coverage.
 The production feature-2 deploy trigger remains unchanged.
+
+
+## Iteration 5
+
+Home now connects real tutorials, projects, runnable experiments and factual build
+records. Study is a first-class `/study/` entry backed by existing Markdown; old
+Knowledge routes remain. Projects and optional homepage previews come from YAML.
+No personal progress, life history or new interests were invented. Future growth
+can add authored content without making current GIS/AI/code categories permanent.
+
+A recurring open-source review is part of AGENTS.md, with notices and complete
+verified license texts. The fourth-round map remains a featured work with its
+original interactions and source data. Production still targets feature-2; review
+branches are not automatically merged or deployed.
