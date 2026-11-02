@@ -1,0 +1,92 @@
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/explore/:1 [1440px] a field's edge is under 3:1 against what surrounds it: input 1.38:1 | fix: Draw the field in --color-muted, or fill it a step off the surface it sits on
+FAIL 48 assets/css/campus.css:19 colour literal #a78bfa12 outside tokens (background on .campus-grid) | fix: Lift the value into the token block
+FAIL 48 assets/css/campus.css:27 colour literal #0009 outside tokens (mask-image on .campus-grid) | fix: Lift the value into the token block
+FAIL 48 assets/css/campus.css:44 font-family literal "Georgia, serif" on .campus-hero h1 em | fix: Lift the value into the token block
+FAIL 48 assets/css/campus.css:85 colour literal #a78bfa10 outside tokens (background on .campus-orb) | fix: Lift the value into the token block
+FAIL 48 assets/css/campus.css:108 colour literal #c4b5fd35 outside tokens (box-shadow on .orb-orbit::after) | fix: Lift the value into the token block
+FAIL 48 assets/css/campus.css:119 colour literal #c4b5fd12 outside tokens (background on .orb-core) | fix: Lift the value into the token block
+FAIL 48 assets/css/campus.css:124 colour literal #0003 outside tokens (box-shadow on .orb-core) | fix: Lift the value into the token block
+FAIL 48 assets/css/campus.css:253 colour literal #0002 outside tokens (box-shadow on .campus-map-panel) | fix: Lift the value into the token block
+FAIL 48 assets/css/campus.css:456 colour literal #a78bfa0a outside tokens (background on .map-stage) | fix: Lift the value into the token block
+FAIL 48 assets/css/campus.css:542 colour literal #0003 outside tokens (box-shadow on .campus-pin) | fix: Lift the value into the token block
+FAIL 48 assets/css/campus.css:554 colour literal #c4b5fd13 outside tokens (box-shadow on .campus-pin[aria-pressed='tru…) | fix: Lift the value into the token block
+FAIL 62 assets/css/campus.css:570 .pin-label is hidden at rest (opacity: 0) and depends on a script to appear | fix: Visible by default: scope the hidden state under a .js class the script adds, or animate from visible with @starting-style
+FAIL 67 assets/css/campus.css:29 .campus-kicker: letter-spaced tracked 0.12em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 assets/css/campus.css:136 .orb-label: letter-spaced tracked 0.12em at 9px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 assets/css/campus.css:175 .hero-bottom-note: letter-spaced tracked 0.07em at 9px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 assets/css/campus.css:508 .map-watermark > span: letter-spaced tracked 0.8em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 assets/css/campus.css:513 .map-overline: letter-spaced tracked 0.08em at 9px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 73 http://127.0.0.1:4173/Brook-ZzQq.github.io/explore/:1 [1440px] text painted under another element: div.map-status-bar over "查看坐标"; details.campus-data-note over "求是大讲堂"; sum… | fix: Give the text its own space, or put it above what covers it on a surface of its own
+REFLEX 24b assets/css/campus.css:11 padding: 65px 0 70px (off the 4px scale) on .campus-hero | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:37 margin: 32px 0 26px (off the 4px scale) on .campus-hero h1 | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:53 margin: 18px 0 12px (off the 4px scale) on .campus-intro | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:68 padding: 16px 22px (off the 4px scale) on .campus-hero .button | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:153 padding: 10px 14px (off the 4px scale) on .orb-tag | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:209 padding: 50px 0 (off the 4px scale) on .campus-exploration | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:220 gap: 10px (off the 4px scale) on .campus-categories | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:230 padding: 10px 16px (off the 4px scale) on .campus-categories button | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:234 gap: 10px (off the 4px scale) on .campus-categories button | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:260 padding: 12px 22px (off the 4px scale) on .map-topbar | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:262 gap: 14px (off the 4px scale) on .map-topbar | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:267 gap: 10px (off the 4px scale) on .map-brand | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:308 padding: 20px 16px 10px (off the 4px scale) on .campus-sidebar | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:333 padding: 14px 2px (off the 4px scale) on .map-search input | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:338 margin-right: 10px (off the 4px scale) on .map-search kbd | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:341 padding: 0 5px (off the 4px scale) on .map-search kbd | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:360 padding: 8px 3px (off the 4px scale) on .map-list-heading button | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:378 gap: 10px (off the 4px scale) on .campus-place | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:381 padding: 16px 6px (off the 4px scale) on .campus-place | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:416 padding: 5px 0 (off the 4px scale) on .place-source | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:433 margin-left: 14px (off the 4px scale) on .place-select > span | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:566 padding: 5px 10px (off the 4px scale) on .pin-label | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:604 gap: 6px (off the 4px scale) on .map-controls | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:628 padding: 3px (off the 4px scale) on .map-layers | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:636 padding: 8px 10px (off the 4px scale) on .map-layers button | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:663 padding: 10px 20px (off the 4px scale) on .map-status-bar | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:677 padding: 16px 6px (off the 4px scale) on .campus-empty | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:718 margin: 5px 0 (off the 4px scale) on .detail-content h3 | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:722 margin: 6px 0 (off the 4px scale) on .detail-content p | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:734 margin-top: 14px (off the 4px scale) on .detail-meta | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:750 margin-top: 14px (off the 4px scale) on .campus-data-note | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:767 gap: 18px (off the 4px scale) on .campus-path-grid | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:789 margin-bottom: 25px (off the 4px scale) on .path-symbol | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:798 margin: 14px 0 (off the 4px scale) on .campus-path h3 | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:803 margin: 0 0 30px (off the 4px scale) on .campus-path p | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:811 padding: 54px 0 70px (off the 4px scale) on .campus-outro | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:818 margin-bottom: 10px (off the 4px scale) on .campus-outro > img | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:840 padding: 22px (off the 4px scale) on .campus-path | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:856 padding-top: 30px (off the 4px scale) on .campus-hero | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:878 gap: 18px (off the 4px scale) on .campus-hero .actions | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:884 padding: 13px 17px (off the 4px scale) on .campus-hero .button | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:888 margin-left: 10px (off the 4px scale) on .campus-hero .button > span | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:892 margin-top: 26px (off the 4px scale) on .campus-command | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:901 gap: 10px (off the 4px scale) on .hero-bottom-note | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:908 margin-left: 5px (off the 4px scale) on .hero-bottom-note > a > span | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:917 gap: 7px (off the 4px scale) on .campus-categories | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:920 padding: 8px 13px (off the 4px scale) on .campus-categories button | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:922 gap: 7px (off the 4px scale) on .campus-categories button | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:931 padding: 10px 14px (off the 4px scale) on .map-topbar | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:932 gap: 6px (off the 4px scale) on .map-topbar | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:940 padding: 6px 9px (off the 4px scale) on .map-topbar > .subtle-button | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:954 padding: 14px (off the 4px scale) on .campus-sidebar | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:992 padding: 4px 6px (off the 4px scale) on .pin-label | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:995 padding: 12px 14px (off the 4px scale) on .map-status-bar | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:997 gap: 10px (off the 4px scale) on .map-status-bar | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:1030 gap: 10px (off the 4px scale) on .detail-meta | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:1037 gap: 14px (off the 4px scale) on .campus-path-grid | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:1042 gap: 6px 16px (off the 4px scale) on .campus-path | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:1043 padding: 25px 22px (off the 4px scale) on .campus-path | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:1052 margin: 10px 0 (off the 4px scale) on .campus-path h3 | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/campus.css:1120 gap: 6px (off the 4px scale) on .map-status-bar | fix: Use the 4px spacing scale
+REFLEX 26b assets/css/campus.css:1 no :active styling anywhere | fix: All eight states; guard: not a form control, no aria-disabled anywhere
+REFLEX 38iii assets/css/campus.css:43 accented word inside a heading (.campus-hero h1 em) | fix: Set the whole head one way: a line break, a second line at a second size, or the whole head in the accent. Guard: the theme names the coloured word as its signature and it appears once on the page, in the hero
+REFLEX 39b http://127.0.0.1:4173/Brook-ZzQq.github.io/explore/:1 [1440px] control height outside 32 to 52px: a.button 58px, button 55px, button 55px | fix: Marketing controls stand 44 to 52px; app UI 32 to 40px with a 44px hit target
+REFLEX 49b http://127.0.0.1:4173/Brook-ZzQq.github.io/explore/:1 [320px] link "原有博客 / 模板示例" wraps to 2 lines (a) | fix: Shorten the label or set nowrap
+REFLEX 64 assets/css/campus.css:138 monospace label voice on .orb-label | fix: Labels in the body face, a step smaller, sentence case; mono only for code and figures
+REFLEX 64 assets/css/campus.css:152 monospace label voice on .orb-tag | fix: Labels in the body face, a step smaller, sentence case; mono only for code and figures
+REFLEX 64 assets/css/campus.css:183 monospace label voice on .hero-bottom-note | fix: Labels in the body face, a step smaller, sentence case; mono only for code and figures
+REFLEX 64 assets/css/campus.css:520 monospace label voice on .map-overline | fix: Labels in the body face, a step smaller, sentence case; mono only for code and figures
+REFLEX 75 http://127.0.0.1:4173/Brook-ZzQq.github.io/explore/:1 [1440px] text that strains the eye: small at 8px, p.eyebrow at 10.1px, span at 9.3px, a at 9.3px | fix: Running text 12px or more (16px for body), functional text 11px or more, multi-line prose leaded 1.3 or more
+WARN F3 assets/css/campus.css:33 no text-wrap: balance on any display head (6 head rule(s), e.g. .campus-hero h1) | fix: Add text-wrap: balance to h1/h2-level heads
+WARN F19 http://127.0.0.1:4173/Brook-ZzQq.github.io/explore/:1 [1440px] 4 font weights in running use (400, 500, 600, 700) | fix: Three weights at most, display and body together, picked as extremes
+WARN F24 assets/css/campus.css:124 a hairline border under a wide soft shadow on .orb-core | fix: Commit to one: a defined edge, or elevation by shadow
