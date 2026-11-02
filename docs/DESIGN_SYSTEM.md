@@ -1,6 +1,12 @@
-# Brook’s Atlas design system: Obsidian Glass
+# Brook’s Digital Universe design system: Obsidian Glass
 
-Iteration 4 builds on the lavender system. Hallmark 2.0.0 provides the audit,
+Iteration 5 keeps the fourth-round lavender system and broadens the product
+into an open personal digital garden. `design.md` locks that direction. Home
+uses a real tutorial notebook, selected work, reading index and factual build log;
+Study and Projects use content-index layouts. Campus is one work, not the
+umbrella identity.
+
+Iteration 4 built on the lavender system. Hallmark 2.0.0 provides the audit,
 redesign and render gates; the user’s supplied brand sets the visual material.
 Explore is an application screen: show the real point atlas before supplementary
 learning links. Do not reintroduce a large marketing hero or decorative orbit.
@@ -84,3 +90,27 @@ with a collapsed list, and the opaque fallback with `@supports` blocks removed.
 Hallmark render checks eight widths, and emits five screenshots. Always inspect
 the actual images, run an independent finish review, fix concrete findings, and
 record original warnings/waivers instead of claiming an unexecuted pass.
+
+
+## Fifth-round content and interaction layers
+
+`universe.css` scopes the personal Home and content indexes. Their 1280px reading
+container overrides the same shared container token; the full map retains its
+wider workspace. Breakpoints remain 60rem for layout, 40rem for phone type and
+65.625rem for the shared menu. Do not create per-project color themes.
+
+The notebook is a real four-panel tutorial excerpt selector with proper tab roles,
+roving tabindex, Arrow/Home/End keys, article links and experiment links. It does
+not claim to execute code. All excerpts remain readable without JavaScript.
+Study categories derive from collection metadata; search/empty states reuse the
+shared filtering code. Native project disclosures reveal record-specific details
+and keep planned records free of false demo controls.
+
+A single featured product image has local pointer light, driven by the existing
+fine-pointer/reduced-motion-aware controller. No map or Python interpreter is
+embedded on Home: its actual map capture is lazy-loaded. The social image is also
+a real capture of the fifth-round Home, not a fabricated interface or stock photo.
+
+Use `_data/projects.yml` optional fields and generic includes for new work rather
+than writing rigid technology categories into navigation. Build records describe
+real website changes, not inferred personal study progress or life events.

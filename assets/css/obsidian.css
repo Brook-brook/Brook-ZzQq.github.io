@@ -1,4 +1,4 @@
-/* Hallmark · shape: app screen · genre: atmospheric · theme: brand · redesign: full · scope: app
+/* Hallmark · shape: shared shell · genre: atmospheric · theme: brand · redesign: full
  * paper: #080710 · accent: #a78bfa · display: system sans · body: system sans
  * nav: glass dock · signature: sourced Zijingang point atlas · states: loading / empty / error / selected
  * axes: dark/grotesk-sans/chromatic-purple · posture: restrained · motion: calm · v2.0.0 */
@@ -1398,5 +1398,36 @@ html.has-js .show-labels .pin-label {
   }
   .map-topbar .campus-categories button {
     flex-shrink: 0;
+  }
+}
+.map-status-bar {
+  flex-wrap: wrap;
+}
+/* Retained Knowledge controls share the new, immediately visible access states. */
+.knowledge-map a:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+}
+.knowledge-map a:focus-visible circle {
+  stroke: var(--color-focus);
+  stroke-width: 3px;
+}
+.note-search input {
+  border-color: var(--color-control-edge);
+}
+
+/* A compact wordmark prevents fallback fonts from wrapping the 320px header. */
+.site-header .brand-name-compact {
+  display: none;
+}
+@media (max-width: 22rem) {
+  .site-header .brand-name-full {
+    display: none;
+  }
+  .site-header .brand-name-compact {
+    display: inline;
+  }
+  .campus-heading h1 {
+    font-size: var(--text-xl);
   }
 }

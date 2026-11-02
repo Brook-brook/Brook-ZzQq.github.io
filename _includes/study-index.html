@@ -1,0 +1,9 @@
+{% assign ordered_notes = site.atlas_notes | sort: 'date' | reverse %}
+{% assign study_categories = site.atlas_notes | map: 'category' | uniq | sort %}
+<section class="study-index" aria-labelledby="study-list-title">
+  <div class="study-toolbar"><h2 id="study-list-title">笔记与可验证的实验</h2><div class="note-search" hidden><label for="note-query">搜索笔记</label><input id="note-query" type="search" placeholder="标题、摘要或分类" autocomplete="off"></div></div>
+  <div class="filters study-filters" aria-label="笔记分类" hidden><button type="button" data-category="all" aria-pressed="true">全部</button>{% for category in study_categories %}<button type="button" data-category="{{ category }}" aria-pressed="false">{{ category }}</button>{% endfor %}</div>
+  <p id="note-count" role="status"></p>
+  <div class="study-notes">{% for note in ordered_notes %}<article class="study-note" data-note data-category="{{ note.category }}"><div class="study-note-meta"><span>{{ note.category }}</span><span>实验室教程</span><span>发布于 <time datetime="{{ note.date | date_to_xmlschema }}">{{ note.date | date: '%Y-%m-%d' }}</time></span></div><div><h3><a href="{{ note.url | relative_url }}">{{ note.title }}</a></h3><p>{{ note.summary }}</p><div class="study-note-links"><a href="{{ note.url | relative_url }}">阅读笔记</a><a href="{{ note.lab_url | relative_url }}">打开对应实验</a></div></div></article>{% endfor %}</div>
+  <p id="note-empty" hidden>没有匹配的笔记。换个关键词，或选择“全部”。</p>
+</section>

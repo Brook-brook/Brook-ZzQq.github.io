@@ -1,0 +1,7 @@
+<article class="universe-project" id="project-{{ include.project.id }}">
+  <div class="project-state"><span class="project-status status-{{ include.project.status }}">{{ include.project.status_label }}</span><span>{{ include.project.type }}</span></div>
+  <div class="project-story"><h2>{{ include.project.title }}</h2><p>{{ include.project.summary }}</p>{% if include.project.stack %}<ul class="project-stack" aria-label="技术栈">{% for tech in include.project.stack %}<li>{{ tech }}</li>{% endfor %}</ul>{% endif %}
+    {% if include.project.details %}<details class="project-disclosure"><summary>展开实现与边界</summary><dl>{% for detail in include.project.details %}<dt>{{ detail.label }}</dt><dd>{{ detail.text }}</dd>{% endfor %}</dl></details>{% endif %}
+    {% if include.project.links %}<div class="project-destinations">{% for link in include.project.links %}<a href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}">{{ link.label }}</a>{% endfor %}</div>{% endif %}
+  </div>
+</article>

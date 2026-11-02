@@ -5,8 +5,8 @@ nav:
     path: /explore/
   - label: Projects
     path: /projects/
-  - label: Knowledge
-    path: /knowledge/
+  - label: Study
+    path: /study/
   - label: Playground
     path: /playground/
   - label: About

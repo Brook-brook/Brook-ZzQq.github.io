@@ -1,0 +1,108 @@
+FAIL 7a assets/css/atlas.css:67 pure #fff: color: white (nav a[aria-current]) | fix: Tint the base toward the anchor hue
+FAIL 24a assets/css/atlas.css:1 +70 more raw spacing lengths with a matching --space-* token in this file | fix: Use the tokens
+FAIL 24a assets/css/atlas.css:40 padding: 24px 32px on header, main, footer where --space-lg exists | fix: Use var(--space-lg)
+FAIL 24a assets/css/atlas.css:47 gap: 24px on header where --space-lg exists | fix: Use var(--space-lg)
+FAIL 24a assets/css/atlas.css:60 gap: 24px on nav where --space-lg exists | fix: Use var(--space-lg)
+FAIL 24a assets/css/atlas.css:64 padding: 8px 0 on nav a where --space-xs exists | fix: Use var(--space-xs)
+FAIL 24a assets/css/atlas.css:139 padding: 40px on .coordinates where --space-xl exists | fix: Use var(--space-xl)
+FAIL 24a assets/css/atlas.css:152 padding-top: 24px on article where --space-lg exists | fix: Use var(--space-lg)
+FAIL 24a assets/css/atlas.css:165 padding: 12px 20px on .button, button where --space-sm exists | fix: Use var(--space-sm)
+FAIL 24a assets/css/atlas.css:181 gap: 40px on .lab-grid where --space-xl exists | fix: Use var(--space-xl)
+FAIL 26a http://127.0.0.1:4173/Brook-ZzQq.github.io/knowledge/:1 [1440px] nothing shows keyboard focus on a "GIS", a "Game Theory", a "Python", a "C++" | fix: Give every control a :focus-visible ring; never remove an outline without putting one back
+FAIL 39a assets/css/atlas.css:341 disabled via opacity alone on button:disabled | fix: Three disabled channels: fill, ink and cursor, plus the disabled attribute
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1280px] contrast 1.11:1 at best over the gradient behind span "Brook's Atlas A living a" | fix: Raise the contrast to threshold, or give the text its own ground
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1280px] contrast 2.10:1 at best over the gradient behind small "A living atlas of knowle" | fix: Raise the contrast to threshold, or give the text its own ground
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1280px] contrast 2.10:1 at best over the gradient behind a "Explore" | fix: Raise the contrast to threshold, or give the text its own ground
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1280px] contrast 1.53:1 at best over the gradient behind p.eyebrow "AN INDEPENDENT DIGITAL L" | fix: Raise the contrast to threshold, or give the text its own ground
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1280px] contrast 1.11:1 at best over the gradient behind h1 "Mapping knowledge. Explo" | fix: Raise the contrast to threshold, or give the text its own ground
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1280px] contrast 1.53:1 at best over the gradient behind em "Exploring" | fix: Raise the contrast to threshold, or give the text its own ground
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1280px] contrast 1.11:1 at best over the gradient behind p.hero-intro "从紫金港出发，向好奇心靠近。" | fix: Raise the contrast to threshold, or give the text its own ground
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1280px] contrast 2.10:1 at best over the gradient behind p.lead "我是 Brook。这是一张持续生长的知识地图，用" | fix: Raise the contrast to threshold, or give the text its own ground
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1280px] contrast 1.53:1 at best over the gradient behind a.quiet-link "动手做个实验 →" | fix: Raise the contrast to threshold, or give the text its own ground
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1280px] contrast 2.10:1 at best over the gradient behind p.hero-caption "GIS · AI · CODE · INTERA" | fix: Raise the contrast to threshold, or give the text its own ground
+FAIL 40 http://127.0.0.1:4173/Brook-ZzQq.github.io/knowledge/:1 [1440px] a field's edge is under 3:1 against what surrounds it: input 1.44:1 | fix: Draw the field in --color-muted, or fill it a step off the surface it sits on
+FAIL 48 assets/css/atlas.css:122 colour literal #c4b5fd22 outside tokens (background on .coordinates) | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:175 colour literal #e9d5ff outside tokens (background on .button:hover, button:hover) | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:176 colour literal #151024 outside tokens (color on .button:hover, button:hover) | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:321 colour literal #e9d5ff outside tokens (outline on :focus-visible) | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:466 font-family literal "Georgia, serif" on .brand-mark | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:530 font-family literal "Georgia, 'Times New Roman', serif" on .hero h1 em, h1 em | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:584 colour literal #0002 outside tokens (filter on .hero-globe) | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:613 colour literal #0001 outside tokens (box-shadow on .globe-node) | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:1163 colour literal #a78bfa0d outside tokens (background on body:has(.hero)) | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:1493 colour literal #a78bfa22 outside tokens (box-shadow on .js-magnetic:hover) | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:1505 colour literal #0002 outside tokens (box-shadow on .motion-card:hover, .field:ho…) | fix: Lift the value into the token block
+FAIL 48 assets/css/atlas.css:1512 colour literal #c4b5fd0d outside tokens (background on .motion-card::after) | fix: Lift the value into the token block
+FAIL 67 assets/css/atlas.css:89 .eyebrow: letter-spaced tracked 0.14em at 12px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 assets/css/atlas.css:452 .brand small: letter-spaced tracked 0.12em at 8px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 assets/css/atlas.css:559 .hero-caption: letter-spaced tracked 0.09em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 assets/css/atlas.css:586 .orbit-label: letter-spaced tracked 0.09em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 assets/css/atlas.css:631 .manifesto-strip: letter-spaced tracked 0.05em at 13px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 assets/css/atlas.css:678 .field-number: letter-spaced tracked 0.08em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+REFLEX 12 assets/css/atlas.css:1477 overshoot easing cubic-bezier(0.2, 0.9, 0.25, 1.18) on .button, button, .js-magnetic | fix: Use exponential ease-out on UI state changes
+REFLEX 12 assets/css/atlas.css:1539 overshoot easing cubic-bezier(0.2, 0.9, 0.25, 1.18) on .campus-categories button:hover > span | fix: Use exponential ease-out on UI state changes
+REFLEX 12 assets/css/atlas.css:1549 overshoot easing cubic-bezier(0.2, 0.9, 0.25, 1.18) on .favorite-button[aria-pressed='true'] | fix: Use exponential ease-out on UI state changes
+REFLEX 24b assets/css/atlas.css:104 padding-top: 70px (off the 4px scale) on .hero | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:188 margin: 18px 0 8px (off the 4px scale) on label | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:211 padding: 12px 18px (off the 4px scale) on .result | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:226 padding: 15px 10px (off the 4px scale) on th, td | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:231 margin: 18px 0 12px (off the 4px scale) on caption | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:387 padding: 12px 6px (off the 4px scale) on th, td | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:518 padding: 58px 0 50px (off the 4px scale) on .hero | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:526 margin: 30px 0 28px (off the 4px scale) on .hero h1 | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:537 margin-bottom: 10px (off the 4px scale) on .hero-intro | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:544 margin-top: 30px (off the 4px scale) on .hero .actions | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:546 gap: 26px (off the 4px scale) on .hero .actions | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:550 padding: 13px 24px (off the 4px scale) on .hero .button | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:553 margin-left: 22px (off the 4px scale) on .button span | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:571 margin: 0 6px 2px 0 (off the 4px scale) on .status-dot | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:610 padding: 10px 16px (off the 4px scale) on .globe-node | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:636 padding: 22px 0 (off the 4px scale) on .manifesto-strip | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:697 margin-bottom: 26px (off the 4px scale) on .field p | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:768 padding: 25px 0 (off the 4px scale) on .note-row | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:778 margin: 0 0 6px (off the 4px scale) on .note-row h3 | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:794 padding-top: 6px (off the 4px scale) on .note-category | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:813 padding-top: 42px (off the 4px scale) on .site-footer | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:814 padding-bottom: 42px (off the 4px scale) on .site-footer | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:835 padding: 30px 0 (off the 4px scale) on .explore-index > a | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:842 margin: 10px 0 (off the 4px scale) on .explore-index h2 | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:903 margin-top: 30px (off the 4px scale) on .lab-callout | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:919 margin-bottom: 30px (off the 4px scale) on .interactive-section h2 | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:923 padding: 4px 10px (off the 4px scale) on .tag | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:933 padding: 45px 0 (off the 4px scale) on .project-row | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:939 gap: 14px (off the 4px scale) on .project-meta | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:952 gap: 14px (off the 4px scale) on dl | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:966 gap: 30px (off the 4px scale) on .knowledge-map | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1011 margin: 0 0 6px (off the 4px scale) on .note-search label | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1036 gap: 18px (off the 4px scale) on .note-toc | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1038 margin: 30px 0 (off the 4px scale) on .note-toc | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1052 margin: 10px 0 (off the 4px scale) on .prose li | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1114 padding: 10px (off the 4px scale) on .nash-table td | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1118 gap: 6px (off the 4px scale) on .payoff-pair | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1144 gap: 10px (off the 4px scale) on .python-toolbar | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1214 padding: 8px 10px (off the 4px scale) on .globe-node | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1218 gap: 30px (off the 4px scale) on .featured-lab, .split-feature | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1221 padding: 22px (off the 4px scale) on .field | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1232 padding: 18px 20px (off the 4px scale) on .site-header | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1253 column-gap: 22px (off the 4px scale) on .site-header nav | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1260 padding-top: 34px (off the 4px scale) on .hero | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1261 gap: 10px (off the 4px scale) on .hero | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1270 margin-top: 30px (off the 4px scale) on .hero-caption | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1303 gap: 18px (off the 4px scale) on .section-heading | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1313 gap: 6px 20px (off the 4px scale) on .field | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1333 margin: 6px 0 12px (off the 4px scale) on .field p | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1341 gap: 30px (off the 4px scale) on .featured-lab, .split-feature | fix: Use the 4px spacing scale
+REFLEX 24b assets/css/atlas.css:1355 padding: 30px 20px (off the 4px scale) on .site-footer | fix: Use the 4px spacing scale
+REFLEX 38iii assets/css/atlas.css:529 accented word inside a heading (.hero h1 em, h1 em) | fix: Set the whole head one way: a line break, a second line at a second size, or the whole head in the accent. Guard: the theme names the coloured word as its signature and it appears once on the page, in the hero
+REFLEX 38iii assets/css/atlas.css:844 accented word inside a heading (.explore-index h2 span) | fix: Set the whole head one way: a line break, a second line at a second size, or the whole head in the accent. Guard: the theme names the coloured word as its signature and it appears once on the page, in the hero
+REFLEX 39b http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1440px] control height outside 32 to 52px: a.button 55px | fix: Marketing controls stand 44 to 52px; app UI 32 to 40px with a 44px hit target
+REFLEX 71 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1440px] heads nearer what precedes them than what they head: h2 "在不同领域之间，
+发现新的连接。" 32px over, 70px under; h2 "理解，来自一次次… | fix: At least twice the space above a head as below it
+REFLEX 75 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1440px] text that strains the eye: p.hero-caption at 10.4px, div.orbit-label at 9.6px, div.orbit-label at 9.6px, span.… | fix: Running text 12px or more (16px for body), functional text 11px or more, multi-line prose leaded 1.3 or more
+REFLEX 75 http://127.0.0.1:4173/Brook-ZzQq.github.io/projects/:1 [1440px] text that strains the eye: span at 10.4px, span at 10.4px, span at 10.4px, span at 10.4px | fix: Running text 12px or more (16px for body), functional text 11px or more, multi-line prose leaded 1.3 or more
+WARN 3 assets/css/atlas.css:210 side stripe border-left: 3px solid var(--accent) on .result | fix: Hairline all round, none, or an accent square
+WARN 3 assets/css/atlas.css:1064 side stripe border-left: 3px solid var(--accent) on .prose blockquote | fix: Hairline all round, none, or an accent square
+WARN F3 assets/css/atlas.css:70 no text-wrap: balance on any display head (21 head rule(s), e.g. h1) | fix: Add text-wrap: balance to h1/h2-level heads
+WARN F16 assets/css/atlas.css:1 browser surfaces unthemed: ::selection, scrollbar-color | fix: Theme the parts you did not draw from the palette
+WARN F19 http://127.0.0.1:4173/Brook-ZzQq.github.io/:1 [1440px] 4 font weights in running use (400, 500, 600, 700) | fix: Three weights at most, display and body together, picked as extremes
+WARN F24 assets/css/atlas.css:613 a hairline border under a wide soft shadow on .globe-node | fix: Commit to one: a defined edge, or elevation by shadow

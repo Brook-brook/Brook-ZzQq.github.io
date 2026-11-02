@@ -1,6 +1,7 @@
 # Brook's Atlas
 
-- Product: a living knowledge atlas for GIS × AI × Code × Interactive Learning.
+- Product: Brook’s Digital Universe, an open personal digital garden for learning,
+  projects, creative work and future interests. Brook’s Atlas is its campus work.
 - Public identity is Brook. Never expose private contact details, precise personal
   location, finances, schedules, private biography or secrets. Do not invent skills,
   projects, experience, usage figures or learning achievements.
@@ -36,3 +37,15 @@
   and semicolons. Keep private/scratch material in ignored `work/`, excluded by Jekyll.
 - `docs/DESIGN_SYSTEM.md`, `docs/ROADMAP.md`, and `docs/ATLAS-ITERATION-2.md`
   record the design, current status, and validation. Keep them consistent with code.
+
+## Personal space and recurring compliance (Iteration 5 onward)
+
+- Brook’s Digital Universe is an open personal space; GIS/AI/code are current
+  interests, not permanent priority categories. Atlas is a retained campus work.
+- Add tutorials to `_atlas_notes/`; projects to `_data/projects.yml`; homepage
+  previews/build records to `_data/universe.yml`. Never invent learning progress,
+  life events, private biography or project completion. Preserve /knowledge/ URLs.
+- Every iteration must review new/changed dependencies, copied code, fonts, icons,
+  images, maps/data and their actual licenses/provenance. Do not copy resources of
+  unclear origin. Preserve copyright and required full license text. Update
+  THIRD_PARTY_NOTICES.md and docs/iteration-N-compliance.md, even with no additions.

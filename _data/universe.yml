@@ -1,0 +1,50 @@
+brand: Brook’s Digital Universe
+short_brand: Brook’s Universe
+intro: 我是 Brook。这里收集学习笔记、能运行的小实验，以及还在生长的作品。
+preview_notes:
+  - slug: python-first-steps
+    sample: |
+      def greet(name):
+          return f"Hello, {name}!"
+
+      ideas = ["learn", "build", "explore"]
+      for idea in ideas:
+          print(greet(idea))
+  - slug: cpp-copy
+    sample: |
+      // 独立资源，明确所有权
+      std::vector<int> original{1, 2, 3};
+      auto copy = original;
+      copy[0] = 42;
+      // original[0] 仍为 1
+  - slug: mercator-scale
+    sample: |
+      # 球面墨卡托的局部尺度
+      import math
+      latitude = 60
+      k = 1 / math.cos(math.radians(latitude))
+      print(round(k, 1))  # 2.0
+  - slug: game-equilibrium
+    sample: |
+      合作 / 合作：3, 3
+      背叛 / 合作：5, 0
+      合作 / 背叛：0, 5
+      背叛 / 背叛：1, 1
+
+      均衡不等于社会最优。
+updates:
+  - title: 地图成为可操作的探索空间
+    date: '2026-11-02'
+    text: Obsidian Glass 设计、来源明确的地点与移动端交互，已提交第四轮开发分支。
+    url: https://github.com/Brook-brook/Brook-ZzQq.github.io/pull/3
+    label: 第四轮开发记录
+  - title: 让抽象概念可以动手验证
+    date: '2026-11-02'
+    text: 收益矩阵、对象复制、投影尺度与 Python 运行环境组成现有学习实验。
+    url: /playground/
+    label: 打开学习实验
+  - title: 校验构建后的 Pages 发布产物
+    date: '2026-11-02'
+    text: 加入 Jekyll 构建与资源路径检查，避免把未处理的模板直接当成网页发布。
+    url: https://github.com/Brook-brook/Brook-ZzQq.github.io/commit/5d39d2f892d2e4e289154bea54bc80874f34049e
+    label: 查看发布修复
