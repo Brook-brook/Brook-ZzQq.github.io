@@ -1,0 +1,33 @@
+/* Retain Chirpy's layout and controls while sharing the Atlas palette. */
+:root[data-bs-theme][data-theme] {
+  --main-bg: var(--bg-primary);
+  --sidebar-bg: var(--bg-secondary);
+  --topbar-bg: var(--bg-secondary);
+  --card-bg: var(--bg-secondary);
+  --button-bg: var(--surface);
+  --card-header-bg: var(--surface);
+  --text-color: var(--text-primary);
+  --heading-color: var(--text-primary);
+  --text-muted-color: var(--text-secondary);
+  --text-muted-highlight-color: var(--text-secondary);
+  --label-color: var(--text-secondary);
+  --link-color: var(--lavender-primary);
+  --link-underline-color: var(--lavender-accent);
+  --main-border-color: var(--border);
+  --sidebar-border-color: var(--border);
+  --sidebar-muted-color: var(--text-secondary);
+  --sidebar-active-color: var(--lavender-primary);
+  --sidebar-hover-bg: var(--surface);
+  --sidebar-btn-bg: var(--surface);
+  --sidebar-btn-color: var(--lavender-primary);
+  --site-title-color: var(--lavender-primary);
+  --site-subtitle-color: var(--text-secondary);
+  --search-border-color: var(--border);
+  --btn-border-color: var(--border);
+  --toc-highlight: var(--lavender-primary);
+}
+:root[data-bs-theme][data-theme] {
+  --card-hover-bg: var(--surface);
+  --prompt-tip-bg: var(--surface);
+  --prompt-tip-icon-color: var(--lavender-primary);
+}

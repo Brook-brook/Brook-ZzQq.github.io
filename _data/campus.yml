@@ -1,0 +1,67 @@
+version: 1
+checked: '2026-11-02'
+license: ODbL-1.0
+attribution: OpenStreetMap contributors
+coordinateSystem: WGS84
+note: 地点代表点来自公开 OSM 数据的 Mapcarta 展示；不是建筑入口或实测坐标，不含道路与建筑轮廓，不提供步行导航。
+places:
+  - id: main-library
+    name: 主图书馆
+    english: Main Library
+    category: library
+    tags: [library, study]
+    icon: book
+    coordinates: [120.07561, 30.30534]
+    osm: way/1208408934
+    source: https://mapcarta.com/W1208408934
+    description: 从阅读开始，沿着一个问题继续探索。地图标记为公开数据中的图书馆代表点。
+  - id: medical-library
+    name: 农医图书馆
+    english: Agriculture & Medicine Library
+    category: library
+    tags: [library, study]
+    icon: book
+    coordinates: [120.08268, 30.29849]
+    osm: way/448480118
+    source: https://mapcarta.com/W448480118
+    description: 紫金港的另一处阅读节点。开放安排与入馆要求请以图书馆官方信息为准。
+  - id: north-four
+    name: 北4教学楼
+    english: North Teaching Building 4
+    category: teaching
+    tags: [teaching]
+    icon: building
+    coordinates: [120.07166, 30.30766]
+    osm: way/1112645053
+    source: https://mapcarta.com/W1112645053
+    description: 把教学空间放进校园的坐标里。这里只展示地点，不推测课程、教室开放或建筑入口。
+  - id: lecture-hall
+    name: 求是大讲堂
+    english: Qiushi Lecture Hall
+    category: teaching
+    tags: [teaching]
+    icon: building
+    coordinates: [120.07473, 30.30430]
+    osm: way/529029530
+    source: https://mapcarta.com/W529029530
+    description: 一处公开地图中收录的校园讲堂。活动信息与具体入口请通过学校官方渠道核实。
+  - id: qiushi
+    name: 求是书院
+    english: Qiushi Academy
+    category: landscape
+    tags: [landscape]
+    icon: spark
+    coordinates: [120.07481, 30.30533]
+    osm: node/11197016001
+    source: https://mapcarta.com/N11197016001
+    description: 在校园记忆与当下之间，留一个探索的坐标。公开数据将其记录为纪念性地点。
+  - id: lake-island
+    name: 湖心岛
+    english: Island in the Lake
+    category: landscape
+    tags: [landscape]
+    icon: wave
+    coordinates: [120.08257, 30.30237]
+    osm: way/445920824
+    source: https://mapcarta.com/W445920824
+    description: 公开地图中的校园水域景观节点。点标记不表示岛屿形状、可达性或步行路线。
