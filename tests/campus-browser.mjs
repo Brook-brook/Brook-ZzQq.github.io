@@ -266,7 +266,7 @@ try {
         .getPropertyValue("--main-bg")
         .trim()
     ),
-    "#090711"
+    "#080710" // Iteration 4 user-specified Obsidian base.
   );
   await l.goto(base + "/");
   await l.click("#theme-toggle");
@@ -280,7 +280,7 @@ try {
         .getPropertyValue("--main-bg")
         .trim()
     ),
-    "#f5f3ff"
+    "#f3eff9" // Corresponding shared light palette.
   );
   await legacy.close();
   console.log(

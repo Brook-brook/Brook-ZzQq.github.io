@@ -7,9 +7,11 @@
 - Keep Jekyll + Markdown + native JavaScript + CSS/SVG. No framework migration
   without a concrete need. Atlas shell is `_layouts/atlas.html`; metadata/navigation
   are in `_data/atlas.yml`; notes are in `_atlas_notes/`.
-- Visual language: lavender cyberpunk / playful geek; purple-black canvas, lavender
+- Visual language: Obsidian Glass / lavender cyberpunk / playful geek; purple-black canvas, lavender
   accents, cartographic lines, generous spacing and distinct section layouts.
-  Use global tokens; no green theme. Motion uses 300–700ms opacity/transform,
+  Use global tokens; no green theme. Explore is a map-first app screen, with three
+  glass depths only on isolated floating tools. Keep opaque fallbacks and lighter
+  blur on mobile. Read docs/DESIGN_SYSTEM.md before visual changes. Motion uses 300–700ms opacity/transform,
   meaningful feedback and reduced-motion/touch fallbacks. Campus coordinates
   require explicit provenance; do not invent roads, building footprints or POIs. Support light/dark themes, keyboard
   operation and reduced motion. No decorative particle engines or fake counters.

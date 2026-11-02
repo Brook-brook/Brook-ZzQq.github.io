@@ -1,75 +1,86 @@
-# Atlas design system · Iteration 3
+# Brook’s Atlas design system: Obsidian Glass
 
-## Direction
+Iteration 4 builds on the lavender system. Hallmark 2.0.0 provides the audit,
+redesign and render gates; the user’s supplied brand sets the visual material.
+Explore is an application screen: show the real point atlas before supplementary
+learning links. Do not reintroduce a large marketing hero or decorative orbit.
 
-Lavender Cyberpunk × Playful Geek × Soft Futurism. Default to a purple-black
-canvas, restrained lavender accents, editorial type and cartographic reference
-lines. A small SVG character, Atlas Mote, introduces warmth in the Explore hero,
-loading, empty states and the closing note. No continuous particles or glass UI.
-The original Geo/AI/Code labs and legacy Chirpy blog remain functional.
+## Source of truth
 
-## Shared tokens
+`assets/css/atlas-tokens.css` defines colors, font stacks, spacing, type, easing,
+durations, depth and shared aliases. `obsidian.css` owns the common shell and
+Explore. `campus.css` remains a compatibility import. Other labs retain their
+existing layouts in `atlas.css`, with the same shared palette. The old blog uses
+`atlas-legacy.css` aliases. No runtime UI or motion library was added.
 
-`assets/css/atlas-tokens.css` is shared by Atlas and the retained blog. Atlas's
-older short token names alias these values; campus components use the full names.
+| Role | Dark | Light |
+| --- | --- | --- |
+| Base | `#080710` | `#F3EFF9` |
+| Elevated | `#181225` | `#EAE2F3` |
+| Surface | `#211A32` | `#E3DAEE` |
+| Accent | `#A78BFA` | `#6941A5` |
+| Soft accent | `#D8C9FF` | `#684096` |
+| Primary text | `#F5F1FF` | `#241A35` |
+| Secondary text | `#B8AECF` | `#61516F` |
 
-| Token | Dark default |
-| --- | --- |
-| `--bg-primary` | `#090711` |
-| `--bg-secondary` | `#151024` |
-| `--surface` | `#211A32` |
-| `--lavender-primary` | `#C4B5FD` |
-| `--lavender-accent` | `#A78BFA` |
-| `--lavender-light` | `#E9D5FF` |
-| `--text-primary` | `#F5F3FF` |
-| `--text-secondary` | `#B8AECF` |
-| `--border` | `rgba(196,181,253,0.16)` |
+Body and UI use the local system sans stack (Avenir Next / Segoe UI / system-ui).
+Monospace is reserved for coordinates and code. No external font requests.
+Labels are sentence case and untracked. Heads have one color, style and weight.
+Spacing comes from the Hallmark scaffold’s 2/4/8/12/16/24/40/64px rhythm.
+Three font weights at most. Data and coordinates use tabular figures.
 
-Retain an optional global light mode in the same purple family; explicit choice
-persists across Atlas and legacy blog pages. Default is dark, independent of OS.
-System sans for reading; Georgia for editorial emphasis; system monospace for
-coordinates and labels. No new font/CDN/UI-framework dependency.
+## Glass is hierarchy
 
-## Motion contract
+| Depth | Job | Desktop blur | Phone blur |
+| --- | --- | --- | --- |
+| Light | Navigation dock, map controls and layer toggles | 10px | 6px |
+| Medium | Search, category filters and source list | 18px | 8px |
+| Heavy | Selected place detail | 24px | 12px |
 
-- Enter: 560ms, stagger 0/65/130ms, opacity and 18px translation. Observer reveals
-  only once; content is never permanently hidden while awaiting JavaScript.
-- Hero grid/orb: 680–700ms once, different timing from headings.
-- Spring feedback: 180–450ms, `cubic-bezier(.2,.9,.25,1.18)`; button press scales
-  to .96. Map selection/favorite feedback is one-shot and meaningful.
-- Magnetic primary links: mouse/fine-pointer only, maximum 4px per axis. Tilt:
-  maximum 2° per axis, only designated non-map cards. Pointer-follow light is
-  local to the hovered element. No idle requestAnimationFrame loop.
-- Menu entry: 340ms soft transition, native expanded state, Escape to close.
-- Navigation: native same-origin View Transitions (140ms exit / 340ms entry),
-  progressive enhancement. No interception, SPA router, blocking exit timer or
-  custom history. Unsupported browsers navigate normally.
-- Reduced motion: suppress CSS motion, skip/cancel Web Animations and reset pointer
-  transforms. Coarse pointers do not receive magnetic/tilt effects. Map pan/zoom
-  remains direct input rather than decorative motion.
+An opaque `--glass-solid` fallback comes first. Only `@supports` enables translucent
+fills and blur, including Safari’s prefixed property. Phone panels lose large
+shadows. Edge highlights, reflected light and fills vary by depth, but no filter
+covers the moving map or an entire viewport. Never nest repeated bordered cards.
+Do not add gradients behind headings or continuous ambient motion.
 
-## Campus map UI
+## Campus structure and honesty
 
-Use a source-backed local point atlas rather than invented roads/building geometry.
-Map UI: rounded frame, compact toolbar, responsive search/list, independent layers,
-readout, keyboard/zoom controls, details, favorite feedback and Mote empty states.
-Controls never tilt with the map. Nearby marker callouts can move visually; dashed
-leaders point to the unchanged geographic representative point. Marker screen
-size stays constant during zoom. The map state survives navigation in sessionStorage;
-favorites use localStorage with an in-page fallback if storage is unavailable.
+The geographic reference grid and six verified WGS84 points are the visual stage.
+Coordinates, point fitting and non-geographic callout offsets retain their existing
+model. Lines lead back to the true representative point. No guessed roads,
+footprints, building entrances or location tracking. Keep official-map and
+ODbL/source links, the non-basemap explanation, and unverified-category empty states.
 
-Mobile: map above the scrollable list, visible controls, single-column paths,
-page vertical scrolling preserved over the map. Plain navigation, source cards
-and official-map links remain available without JavaScript.
+Desktop: compact heading, source list, map, selected detail in reserved map space.
+Detail layout is synchronized before reprojecting, so navigation restores the view.
+Phone/tablet: map first, then the searchable source list; detail becomes an inline
+sheet below the map without covering controls. A source list is a navigation
+landmark, its scrolled entries remain keyboard reachable. A closed source list
+gets a visible map focus fallback when its detail closes.
 
-## Assets and provenance
+## Motion
 
-- `mote.svg`: original vector character, not a real person or animal.
-- `globe.svg`: retained orthographic Natural Earth coastline artwork, recolored
-  lavender; geometry unchanged. Natural Earth data is public domain.
-- `social.png`: matching purple raster social preview, not a homepage download.
-- `_data/campus.yml`: six public OSM representative points, accessed through their
-  Mapcarta source pages. See `CAMPUS_DATA.md` for licensing and exact sources.
+- Calm state feedback uses 120 / 220 / 420ms and `cubic-bezier(.22,1,.36,1)`.
+- No scroll-triggered content reveals on the app screen. A finite 500ms grid settle
+  remains; the grid is coordinate reference, never a particle background.
+- Selected marker scales to 1.12 and rotates 6 degrees; labels and pressed states
+  remain meaningful without motion. No continuous pulse.
+- One magnetic primary CTA moves at most 4px per axis, with a local pointer-follow
+  lavender fill. Mouse/fine pointers only; pointerleave/cancel reset it.
+- Detail and list state changes use finite transform/opacity feedback. Global
+  reduced-motion changes cancel running Web Animations and clear pointer offsets.
+- Glass dock indicator moves using translate/scale, never animated width or layout.
+  Hover/focus preview returns to the current route. Native links and cross-document
+  View Transitions preserve browser history; unsupported browsers navigate normally.
+- Focus outlines appear immediately, without animated outline/border geometry.
+- No idle animation loop; `requestAnimationFrame` is scheduled only by interaction.
 
-Use the shared palette for new components. Do not reintroduce green surfaces or
-an unrelated theme, fake data, indefinite movement, or pointer effects on map drags.
+## Verification contract
+
+Run the existing model, browser and Python suites. New Obsidian checks cover
+320/390/768/1440/1920px, map-first visibility, unobstructed selected controls,
+actual label visibility, detail closure under layer changes, focus restoration
+with a collapsed list, and the opaque fallback with `@supports` blocks removed.
+Hallmark render checks eight widths, and emits five screenshots. Always inspect
+the actual images, run an independent finish review, fix concrete findings, and
+record original warnings/waivers instead of claiming an unexecuted pass.

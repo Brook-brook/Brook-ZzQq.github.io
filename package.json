@@ -25,7 +25,7 @@
     "test": "npm run lint:js && npm run lint:scss",
     "prepare": "husky",
     "test:atlas": "node --test tests/atlas-models.test.js tests/campus-models.test.js tests/pages-build.test.js",
-    "test:atlas:browser": "node tests/atlas-browser.mjs && node tests/campus-browser.mjs",
+    "test:atlas:browser": "node tests/atlas-browser.mjs && node tests/campus-browser.mjs && node tests/obsidian-browser.mjs",
     "test:atlas:python": "node tests/atlas-python.mjs"
   },
   "dependencies": {

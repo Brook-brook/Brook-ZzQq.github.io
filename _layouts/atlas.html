@@ -15,24 +15,25 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/atlas/mark.svg' | relative_url }}">
-  <meta name="theme-color" content="#090711">
+  <meta name="theme-color" content="#080710">
   <script src="{{ '/assets/js/atlas/theme.js' | relative_url }}"></script>
   <link rel="stylesheet" href="{{ '/assets/css/atlas-tokens.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/atlas.css' | relative_url }}">
+  {% unless page.campus %}<link rel="stylesheet" href="{{ '/assets/css/atlas.css' | relative_url }}">{% endunless %}
+  <link rel="stylesheet" href="{{ '/assets/css/obsidian.css' | relative_url }}">
   <script type="module" src="{{ '/assets/js/atlas/site.js' | relative_url }}"></script>
   <meta name="view-transition" content="same-origin">
   <script type="module" src="{{ '/assets/js/atlas/motion.js' | relative_url }}"></script>
-  {% if page.campus %}<link rel="stylesheet" href="{{ '/assets/css/campus.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/campus.js' | relative_url }}"></script>{% endif %}
+  {% if page.campus %}<script type="module" src="{{ '/assets/js/atlas/campus.js' | relative_url }}"></script>{% endif %}
   {% if page.lab %}<script type="module" src="{{ '/assets/js/atlas/lab.js' | relative_url }}"></script>{% endif %}
   {% if page.python %}<script type="module" src="{{ '/assets/js/atlas/python.js' | relative_url }}"></script>{% endif %}
   {% if page.nash %}<script type="module" src="{{ '/assets/js/atlas/nash.js' | relative_url }}"></script>{% endif %}
 </head>
-<body>
+<body{% if page.campus %} class="campus-app"{% endif %}>
 <a class="skip" href="#main">跳至正文</a>
 <header class="site-header">
-  <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">B<span>✦</span></span><span>Brook's Atlas<small>A LIVING ATLAS OF KNOWLEDGE</small></span></a>
+  <a class="brand" href="{{ '/' | relative_url }}"><svg class="atlas-mark" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 3 32 11v14L18 33 4 25V11Z"/><path d="m11 24 7-16 7 16m-12-5h10M4 11l14 8 14-8M18 19v14"/></svg><span>Brook's Atlas<small>A living atlas of knowledge</small></span></a>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>菜单</button>
-  <nav id="primary-nav" aria-label="主要导航">
+  <nav id="primary-nav" aria-label="主要导航"><span class="dock-indicator" aria-hidden="true" hidden></span>
     {% for item in site.data.atlas.nav %}
     <a href="{{ item.path | relative_url }}"{% if page.url == item.path or page.section == item.label %} aria-current="page"{% endif %}>{{ item.label }}</a>
     {% endfor %}
@@ -53,5 +54,5 @@
   <aside class="note-end"><p>把概念变成一次实验。</p><a class="text-link" href="{{ page.lab_url | relative_url }}">打开对应实验 ↗</a><a href="{{ '/knowledge/' | relative_url }}">返回知识地图</a></aside>
 {% else %}{{ content }}{% endif %}
 </main>
-<footer class="site-footer"><div><a class="brand" href="{{ '/' | relative_url }}">Brook's Atlas</a><p>Mapping Knowledge. Building Intelligence.<br>Exploring Possibilities.</p></div><div><a href="https://github.com/Brook-brook">GitHub ↗</a><a href="{{ '/journal/' | relative_url }}">原有博客 / 模板示例</a><a href="{{ '/about/' | relative_url }}">About Brook</a></div><p class="footer-note">GIS × AI × Creative Computing<br>Built with curiosity. Powered by Jekyll.<br>地球轮廓：Natural Earth · Public Domain</p></footer>
+<footer class="site-footer"><div><a class="brand" href="{{ '/' | relative_url }}">Brook's Atlas</a><p>Mapping Knowledge. Building Intelligence.<br>Exploring Possibilities.</p></div><div><a href="https://github.com/Brook-brook">GitHub ↗</a><a href="{{ '/journal/' | relative_url }}">博客 / 模板示例</a><a href="{{ '/about/' | relative_url }}">About Brook</a></div><p class="footer-note">GIS × AI × Creative Computing<br>Built with curiosity. Powered by Jekyll.<br>地球轮廓：Natural Earth · Public Domain</p></footer>
 </body></html>

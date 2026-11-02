@@ -12,7 +12,11 @@ const targets = [
     '.title-line, main h1:not(:has(.title-line)), .campus-kicker, .campus-intro, .campus-path, .section-heading, .campus-place, .fields > a, .note-row'
   )
 ];
-if ('IntersectionObserver' in window && !reduce.matches) {
+if (
+  'IntersectionObserver' in window &&
+  !reduce.matches &&
+  !document.body.classList.contains('campus-app')
+) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -96,3 +100,35 @@ reduce.addEventListener('change', () => {
 fine.addEventListener('change', () => {
   if (!fine.matches) responsive.forEach((reset) => reset());
 });
+
+// One real navigation indicator; native links remain responsible for navigation.
+const dock = document.getElementById('primary-nav');
+const indicator = dock?.querySelector('.dock-indicator');
+if (indicator) {
+  let last;
+  function pointTo(link, animated = true) {
+    if (!link || !dock.clientWidth || !fine.matches) return;
+    const next = `translateX(${link.offsetLeft}px) scaleX(${link.offsetWidth / 100})`;
+    indicator.hidden = false;
+    if (last && animated && !reduce.matches)
+      animate(indicator, [{ transform: last }, { transform: next }], {
+        duration: 320,
+        easing: 'cubic-bezier(.22,1,.36,1)'
+      });
+    indicator.style.transform = next;
+    last = next;
+  }
+  const current = () => pointTo(dock.querySelector('[aria-current]'));
+  dock.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('pointerenter', () => pointTo(link));
+    link.addEventListener('focus', () => pointTo(link));
+  });
+  dock.addEventListener('pointerleave', current);
+  dock.addEventListener('focusout', (event) => {
+    if (!dock.contains(event.relatedTarget)) current();
+  });
+  new ResizeObserver(() =>
+    pointTo(dock.querySelector('[aria-current]'), false)
+  ).observe(dock);
+  document.fonts.ready.then(current);
+}
