@@ -1,0 +1,33 @@
+# Brook's Atlas
+
+- Product: a living knowledge atlas for GIS × AI × Code × Interactive Learning.
+- Public identity is Brook. Never expose private contact details, precise personal
+  location, finances, schedules, private biography or secrets. Do not invent skills,
+  projects, experience, usage figures or learning achievements.
+- Keep Jekyll + Markdown + native JavaScript + CSS/SVG. No framework migration
+  without a concrete need. Atlas shell is `_layouts/atlas.html`; metadata/navigation
+  are in `_data/atlas.yml`; notes are in `_atlas_notes/`.
+- Visual language: editorial navy/celadon, restrained amber, cartographic lines,
+  generous spacing, distinct section layouts. Support light/dark themes, keyboard
+  operation and reduced motion. No decorative particle engines or fake counters.
+- Treat models as models: pure-strategy Nash equilibrium is not social optimum;
+  shallow raw-pointer ownership is unsafe; spherical Mercator scale is local;
+  simulated AI flows must be labelled. Never simulate defined C++ results after UB.
+- Python uses pinned Pyodide in a lazy Worker. Keep load/run errors, stop, timeout,
+  capped output and environment limitations. Do not add backend secrets or services.
+- Existing Chirpy posts/theme remain under the legacy blog routes. New home is
+  Atlas; legacy preview paths redirect. Do not delete valuable existing features.
+- Use `relative_url` for internal URLs and test both root and project baseurl.
+  Keep deployment disabled unless the user explicitly authorizes publication.
+  Never merge or force-push without authorization. Push review branches and PRs.
+- Run `npm run build`, `npm test`, `npm run test:atlas`,
+  `bundle exec jekyll build`, and internal HTMLProofer. Serve `_site` and run
+  `npm run test:atlas:browser`; do not equate lint with browser verification.
+- Check 390, 768 and 1440 px, both themes, interaction semantics, internal links,
+  missing assets, keyboard navigation and no page-level overflow. Run actual Python
+  smoke tests when CDN access is available; report any limitations precisely.
+- Do not format Liquid templates with a generic HTML formatter: it can corrupt
+  conditional attributes. Use clear manual formatting. Code uses single quotes
+  and semicolons. Keep private/scratch material in ignored `work/`, excluded by Jekyll.
+- `docs/DESIGN_SYSTEM.md`, `docs/ROADMAP.md`, and `docs/ATLAS-ITERATION-2.md`
+  record the design, current status, and validation. Keep them consistent with code.

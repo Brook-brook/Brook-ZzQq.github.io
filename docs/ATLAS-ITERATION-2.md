@@ -1,82 +1,100 @@
-# Brook's Atlas — iteration 2
+# Brook's Atlas — implementation and validation
 
-## Recovery and audit (2026-11-02)
+## Baseline and scope
 
-- Repository: `Brook-brook/Brook-ZzQq.github.io`; clean local `work` branch at
-  `ae677a8`, matching remote `master`. Remote has only `master`.
-- No `feat/brooks-atlas`, Atlas source, PRs, or Actions runs were found.
-  `git fsck --no-reflogs --unreachable` found no recoverable objects. This is
-  the Chirpy 7.6 template, not a recovered first iteration. Other inaccessible
-  old workspaces cannot be ruled out.
-- Read README, contribution documentation, configuration, layouts, JS build,
-  existing workflows and test script. No AGENTS.md exists in this workspace.
-- Existing blog, template posts, components and homepage are preserved.
-  The new experience is an additive `/atlas/` preview, with a blog sidebar entry.
-- Existing Pages starter workflow is nested under `.github/workflows/starter/`
-  and is not an active workflow. Active CI builds assets and Jekyll; CD and
-  Publish workflows belong to the upstream theme release process. No deployment
-  configuration is activated by this change.
-- Live Pages URL cannot be verified: executor network policy rejects the
-  `brook-brook.github.io` host (CONNECT 403). This does not prove the site is down.
-  GitHub repository metadata and empty Actions history do not establish deployment.
+The starting workspace was clean at `ae677a8` (Chirpy 7.6 template), matching remote
+`master`. Previous Atlas commits mentioned in an old delivery screenshot were not
+present locally or remotely. Brook explicitly ended recovery and authorized a
+fresh implementation from the two briefs, prioritizing the first one.
 
-## Scope and product status
+This branch builds that authorized product on the existing Jekyll architecture.
+It does not claim to recover the unavailable first implementation. The initial
+isolated checkpoint is `32aa11a`; subsequent commits complete and verify it.
 
-Implemented in this branch, pending merge/release:
+## Implemented
 
-- Explore, Playground, Projects and Knowledge preview pages with shared navigation.
-- Configurable prisoner/stag matrices, strategy selection, live payoffs,
-  exhaustive pure-strategy equilibrium marking and total-welfare comparison.
-  Boundary parameters are explicitly described; mixed equilibria are not computed.
-- Four-step shallow/deep copy visualization: construction, copy, mutation and
-  destruction. Stops at dangling pointer; never simulates a defined result for UB.
-- Spherical Mercator local scale and area distortion, with a deterministic
-  GIS-to-AI validation workflow. No real model or GIS service is called.
-- Mobile single-column labs, locally scrolling code/table regions, keyboard skip
-  link, visible focus, semantic controls/status, reduced-motion support.
-- No added external runtime dependencies, fonts, tiles, analytics or AI requests.
-  Browser testing dependencies are development-only.
+- Atlas root homepage with a vector orthographic globe and clickable lab entries.
+- Explore → Geo/AI/Code, Projects, Knowledge, Playground and About.
+- Responsive menu, dark/light themes, local theme preference, skip link, focus
+  styling, keyboard-accessible code regions and reduced-motion behavior.
+- Markdown note collection with four new lab tutorials, metadata, TOC, highlighted
+  code, linked experiments, knowledge graph, search and category filters.
+- Configurable prisoner/stag games, payoff matrices, pure equilibrium marking,
+  welfare comparison, plus an editable generic 2×2 pure equilibrium explorer.
+- Four-step C++ object/resource copying visualization, shallow/deep comparison,
+  mutation, explicit A destruction and correct dangling-pointer warnings.
+- Spherical Mercator local length/area scale with a labelled deterministic GIS × AI
+  workflow. No real model invocation, GIS backend or personal location data.
+- Python Playground using pinned Pyodide 0.27.7 in a lazy Worker. Three examples,
+  real code execution, loading/error states, stop/reload, fresh execution globals,
+  output cap and 5-second timeout. No runtime download on initial page load.
+- Preserved legacy blog/posts at `/journal/` and original post routes, with a
+  template-content notice. Old `/atlas/` preview paths redirect to the new routes.
 
-Not implemented: Python execution, public goods, mixed-strategy solver, the full
-C++ curriculum, real AI tool calling. No claims about `xxx-geospatial` are made;
-no unverified repository is promoted. Public identity in new content is Brook.
+## Build and hosting
 
-## Technical debt and release decisions
+Jekyll 4.4.1 / Ruby 3.3 were used locally in a Docker container because the executor
+has no Ruby installation. The restricted environment blocked `index.rubygems.org`;
+compatible gems were obtained from the allowed `rubygems.org` API/download service,
+installed locally, then the complete graph was verified by Bundler. TLS validation
+and the session proxy remained enabled. Temporary installation files are ignored.
 
-- First-round design/code remains unavailable; recover it before reconciling the
-  preview with any separately retained design. This branch does not replace home.
-- The original blog retains upstream template identity/demo content and external
-  dependencies. Review those before publishing a personalized homepage.
-- Choose the production entry URL, Pages source and baseurl before enabling Pages.
-  This work does not merge, publish, dispatch or enable a deployment.
-- Browser checks cover WCAG rule automation, not a complete manual accessibility
-  audit or screen-reader certification. No Lighthouse or real-device profiling.
-- Python next: lazy-loaded Pyodide Worker, loading/error state, execution timeout,
-  stop/reset, capped output and explicit browser-Python limitations.
+Default `url`/`baseurl` describe the GitHub **project** Pages URL, not a user-root
+site. Both project-path and empty-baseurl builds were tested. The existing nested
+Pages starter workflow remains inactive. CI builds/tests only; no deployment was
+enabled, dispatched, merged or executed.
 
-## Validation
+Live site verification remains unavailable because the executor policy rejects
+`brook-brook.github.io`. This is a network verification limit, not evidence that
+the live site is down. The PR is the review/delivery artifact.
 
-See the final validation record below. Local intermediate logs/screenshots remain
-in ignored `work/`; implementation and tests are committed.
+## Validation results
 
-## Recovery evidence supplied later by Brook
+| Command / check | Actual outcome |
+| --- | --- |
+| `npm run build` | PASS, retained Chirpy CSS/JS assets build |
+| `npm test` | PASS, ESLint and existing SCSS lint |
+| `npm run test:atlas` | PASS, 6 model tests, including equilibrium/welfare, ties, matching pennies, Mercator and ownership |
+| `bash tools/test.sh` | PASS, production Jekyll build + HTMLProofer; 36 files, 140 internal links |
+| `npm run test:atlas:browser` | PASS, real Chromium, 15 Atlas pages × 3 viewport widths × 2 themes |
+| `npm run test:atlas:python` | PASS, actual Pyodide in Chromium, three examples, exception, output cap, infinite-loop timeout, reload and stop |
+| Empty-baseurl build and browser check | PASS, root-path configuration with all 15 pages and lab interactions |
+| C++ deep-copy snippet compile/run | PASS, `g++ -std=c++17 -Wall -Wextra -pedantic -fsanitize=address`, then run; assertions before/after A destruction |
 
-A prior delivery screenshot identifies local commits `ec356b1` on
-`feat/brooks-atlas` and `3bfb029` on `feat/interactive-learning-lab`, plus
-`/workspace/previews/Brooks-Atlas-Mac-Preview.zip`. It explicitly says neither
-commit was pushed to GitHub and the archive was not downloaded to the Mac.
-The uploaded first-round task brief is requirements text, not source code.
+Browser checks include internal page/anchor links, local asset responses, JS errors,
+page overflow, axe WCAG A/AA rules, menus/Escape, skip navigation, theme persistence,
+search/empty state, payoff updates, C++ steps, latitude changes, Nash presets and
+Python load failure/retry. No-JS navigation and all notes were also checked.
+390px/768px/1440px screenshots were inspected for layout; screenshots stay in
+ignored `work/`. Axe is automated coverage, not full screen-reader certification.
 
-Rechecked both commit IDs with `git cat-file`: neither exists in this object
-database. The named branches and preview directory are absent. No alternate Git
-object store is configured and this is not a shallow clone. Current workspace,
-shared downloads and temporary locations did not reveal the prior archive.
-Current reflog contains baseline initialization/reset activity and this round's
-branch creation. This does not establish what happened to a separate old runtime.
+For deterministic Python QA in this restricted environment, Playwright routed
+CDN requests to byte-for-byte official files downloaded from the pinned jsDelivr
+release. This executes the real WebAssembly interpreter, not a fake runtime.
+The ordinary test uses the live CDN when no `PYODIDE_FIXTURE` is supplied. Direct
+first-load CDN behavior can still vary with a visitor's network; load failures and
+retry are supported and tested.
 
-Second-round expansion is paused while original artifacts are being located.
-The additive preview is a separate checkpoint, not a recovery or replacement of
-the original implementation. Frontend build, JS/SCSS lint and five model tests
-passed. Jekyll and browser verification remain incomplete; Ruby dependency setup
-hit a restricted index host and temporary container storage limits. This checkpoint
-is not ready for release. Nothing has been deployed or merged.
+## Known limits / next iteration
+
+- No public-goods module, mixed-strategy solver, full C++ curriculum, real GIS
+  Agent or unverified external project is claimed as complete.
+- Python is the browser port, with a virtual filesystem and package/system limits.
+  Fresh globals are created per run; this is not a full interpreter state reset.
+- Original Chirpy demo routes retain their upstream libraries and external assets.
+  Atlas pages use local CSS/JS/SVG; only Python requests an external runtime.
+- No Lighthouse score, real-device profile or external-link reliability claim.
+- Review and explicitly approve production publication separately.
+
+See `ROADMAP.md`, `DESIGN_SYSTEM.md`, and root `AGENTS.md` for ongoing rules.
+
+## Review visuals and resource footprint
+
+- [Desktop homepage](screenshots/home-desktop.png)
+- [Mobile homepage](screenshots/home-mobile.png)
+- [Tablet homepage](screenshots/home-tablet.png)
+
+Homepage CSS, theme/site scripts and globe total about 93 KB uncompressed
+(about 31 KB gzip, excluding HTML and favicon). No font/tile/framework/runtime
+request is required by the homepage. These are byte measurements, not measured
+visitor load-time or Core Web Vitals claims.
