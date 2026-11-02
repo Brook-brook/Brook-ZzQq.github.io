@@ -1,0 +1,13 @@
+nav:
+  - label: Home
+    path: /
+  - label: Explore
+    path: /explore/
+  - label: Projects
+    path: /projects/
+  - label: Knowledge
+    path: /knowledge/
+  - label: Playground
+    path: /playground/
+  - label: About
+    path: /about/

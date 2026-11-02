@@ -44,10 +44,37 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
-          node-version: lts/*
+          node-version: '24'
 
       - name: Build Assets
-        run: npm i && npm run build
+        run: npm ci && npm run build
+
+      - name: Test Atlas models
+        run: npm run test:atlas
 
       - name: Test Site
         run: bash tools/test.sh
+
+      - name: Install browser
+        if: matrix.ruby == '3.3'
+        run: npx playwright install --with-deps chromium
+
+      - name: Test Atlas in browser
+        if: matrix.ruby == '3.3'
+        run: |
+          python3 -m http.server 4173 --directory _site &
+          for attempt in {1..20}; do
+            curl --silent --fail http://127.0.0.1:4173/Brook-ZzQq.github.io/ >/dev/null && break
+            sleep 0.5
+          done
+          npm run test:atlas:browser
+
+      - name: Test real browser Python
+        if: matrix.ruby == '3.3'
+        run: |
+          python3 -m http.server 4174 --directory _site &
+          for attempt in {1..20}; do
+            curl --silent --fail http://127.0.0.1:4174/Brook-ZzQq.github.io/ >/dev/null && break
+            sleep 0.5
+          done
+          ATLAS_BASE_URL=http://127.0.0.1:4174/Brook-ZzQq.github.io npm run test:atlas:python

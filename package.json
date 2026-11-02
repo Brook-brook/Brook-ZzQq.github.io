@@ -23,7 +23,10 @@
     "lint:scss": "stylelint _sass/**/*.scss",
     "lint:fix:scss": "npm run lint:scss -- --fix",
     "test": "npm run lint:js && npm run lint:scss",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:atlas": "node --test tests/atlas-models.test.js",
+    "test:atlas:browser": "node tests/atlas-browser.mjs",
+    "test:atlas:python": "node tests/atlas-python.mjs"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
@@ -52,7 +55,9 @@
     "rollup": "^4.62.2",
     "semantic-release": "^25.0.5",
     "stylelint": "^17.13.0",
-    "stylelint-config-standard-scss": "^17.0.0"
+    "stylelint-config-standard-scss": "^17.0.0",
+    "playwright": "^1.56.1",
+    "@axe-core/playwright": "^4.11.0"
   },
   "prettier": {
     "trailingComma": "none"

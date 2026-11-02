@@ -1,0 +1,81 @@
+name: Deploy Brook's Atlas
+
+on:
+  push:
+    # Publish the branch Brook has selected; do not merge or publish master.
+    branches: [feat/atlas-iteration-2]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Build frontend assets
+        run: npm ci && npm run build
+
+      - name: Test lab models
+        run: npm run test:atlas && node --test tests/pages-build.test.js
+
+      - name: Configure Pages metadata
+        id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Build Jekyll
+        env:
+          JEKYLL_ENV: production
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: bundle exec jekyll build --baseurl "$BASE_PATH" --destination "_site$BASE_PATH"
+
+      - name: Check internal links
+        run: |
+          bundle exec htmlproofer _site --disable-external \
+            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+
+      - name: Verify the publish directory contains built pages
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          node tools/check-pages-build.mjs "_site$BASE_PATH"
+          touch "_site$BASE_PATH/.nojekyll"
+
+      - name: Upload built site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site${{ steps.pages.outputs.base_path }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy built site to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
