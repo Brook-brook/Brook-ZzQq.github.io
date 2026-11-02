@@ -1,0 +1,69 @@
+- id: universe
+  title: Brook’s Digital Universe
+  type: Web / Personal space
+  status: available
+  status_label: 已实现
+  summary: 让学习笔记、技术作品与新的探索方向，在同一个个人数字空间里持续生长。
+  stack: [Jekyll, Markdown, YAML, JavaScript]
+  details:
+    - label: 内容结构
+      text: Study 读取 Markdown 教程，Projects 读取独立项目记录；保留原 Brook’s Atlas 的学习实验与知识地图。
+    - label: 实现取舍
+      text: 复用静态站点与本地交互，避免为内容管理引入数据库或大型框架。
+  links:
+    - label: 查看源码
+      url: https://github.com/Brook-brook/Brook-ZzQq.github.io
+    - label: 浏览 Study
+      url: /study/
+- id: learning-lab
+  title: Learning Lab
+  type: Interactive learning
+  status: available
+  status_label: 已实现
+  summary: 在收益矩阵、对象复制、地图尺度与 Python 代码之间，把一个问题变成可以验证的实验。
+  stack: [JavaScript, SVG, Pyodide, Web Worker]
+  details:
+    - label: 现在能做什么
+      text: 囚徒困境与猎鹿、通用 2×2 纯策略均衡探索器、C++ 对象复制、墨卡托局部尺度与 Python 执行。
+    - label: 模型边界
+      text: 不计算混合策略均衡；C++ 是语义可视化；GIS × AI 是确定性流程示意。Python 按需在 Worker 加载，支持停止与错误反馈。
+  links:
+    - label: 打开实验室
+      url: /playground/
+    - label: 运行 Python
+      url: /playground/python/
+- id: zijingang
+  title: Zijingang Point Atlas
+  type: GIS / Campus exploration
+  status: review
+  status_label: 已实现，待发布
+  featured: true
+  preview:
+    image: /assets/img/atlas/campus-preview.png
+    width: 1024
+    height: 521
+    alt: 紫金港地点图的真实界面，显示六个地点代表点与图层控件
+    note: 地点图界面预览。完整交互在 Explore 中打开。
+    caption: 不是道路底图。
+    attribution: OpenStreetMap contributors，ODbL
+    attribution_url: https://www.openstreetmap.org/copyright
+  summary: 从六个有公开来源的地点代表点，重新看一眼紫金港。搜索、分类、收藏与地图图层都可以操作。
+  stack: [WGS84, JavaScript, SVG, OSM]
+  details:
+    - label: 数据与交互
+      text: 原生 DOM / SVG、WGS84 地点数据、本地收藏与会话视图恢复。不请求个人定位。
+    - label: 数据边界
+      text: 不是道路底图或步行导航。食堂、宿舍区尚未收录核实坐标；分类保留明确空状态。
+    - label: 开发记录
+      text: 第四轮完成 Obsidian Glass 地图工作区、移动端与交互复审，开发分支待审核，未自动部署。
+  links:
+    - label: 打开完整地图
+      url: /explore/
+    - label: 查看第四轮记录
+      url: https://github.com/Brook-brook/Brook-ZzQq.github.io/pull/3
+- id: next
+  title: GeoAI & collaborative systems
+  type: Future experiments
+  status: planned
+  status_label: 计划中
+  summary: 真实 GIS 工具调用、公共物品博弈与空间数据分析，留给后续验证。这些功能尚未实现。

@@ -40,7 +40,7 @@ description: Brook 的紫金港地点图。搜索有来源的校园坐标、收�
         <div id="campus-detail" class="campus-detail glass-heavy" hidden tabindex="-1" aria-labelledby="detail-title"><div class="detail-badge" aria-hidden="true">{% include atlas-icon.html name='pin' %}</div><div class="detail-content"><p id="detail-category">校园地点</p><h3 id="detail-title"></h3><p id="detail-description"></p><div class="detail-meta"><code id="detail-coordinates"></code><a id="detail-source" href="https://www.openstreetmap.org/">核对 OSM 数据</a></div></div><button id="detail-favorite" class="subtle-button" type="button" aria-pressed="false">收藏地点</button><button id="detail-close" class="icon-button" type="button" aria-label="关闭地点详情">×</button></div>
       </div>
     </div>
-    <div class="map-status-bar"><span id="campus-status" role="status">地点坐标有来源，探索不靠猜。</span><a href="https://map.zju.edu.cn/">打开官方校园图</a></div>
+    <div class="map-status-bar"><span id="campus-status" role="status">地点坐标有来源，探索不靠猜。</span><a href="https://map.zju.edu.cn/">打开官方校园图</a><a href="https://www.openstreetmap.org/copyright">© OpenStreetMap，ODbL</a></div>
   </div>
   <p class="map-help" id="map-help">标记引线指向地点代表点。拖拽平移，＋ / − 缩放，方向键移动，Home 复位。鼠标滚轮缩放需按住 Ctrl。手机可左右拖动，使用按钮缩放；上下滑动仍可滚动页面。</p>
   <details class="campus-data-note"><summary>关于这张地点图与数据来源</summary><p>这是有地理坐标的地点图，不是道路底图。{{ site.data.campus.note }} 当前收录 {{ site.data.campus.places | size }} 个地点，核对日期 {{ site.data.campus.checked }}；食堂与宿舍区暂未收录核实坐标。学习空间分类复用两处图书馆地点，不代表特定自习室或实时开放状态。</p><p>© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>，数据按 ODbL 提供。各地点保留 OSM 标识与 Mapcarta 来源。收藏只保存到当前浏览器；地图不申请个人定位。</p></details>

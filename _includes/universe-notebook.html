@@ -1,0 +1,6 @@
+<div class="notebook glass-medium" data-notebook>
+  <div class="notebook-heading"><span>翻开一页笔记</span><a href="{{ '/study/' | relative_url }}">Study</a></div>
+  <div class="notebook-tabs" aria-label="选择笔记预览" hidden>{% for entry in site.data.universe.preview_notes %}{% assign note = site.atlas_notes | where: 'slug', entry.slug | first %}<button type="button" id="preview-tab-{{ forloop.index }}" data-preview-tab="{{ forloop.index }}">{{ note.category }}</button>{% endfor %}</div>
+  {% for entry in site.data.universe.preview_notes %}{% assign note = site.atlas_notes | where: 'slug', entry.slug | first %}<div class="notebook-page" id="preview-note-{{ forloop.index }}" data-preview-panel="{{ forloop.index }}"><h2>{{ note.title }}</h2><p>{{ note.summary }}</p><pre tabindex="0"><code>{{ entry.sample | escape }}</code></pre><div class="notebook-links"><a href="{{ note.url | relative_url }}">阅读这篇笔记</a><a href="{{ note.lab_url | relative_url }}">打开对应实验</a></div></div>{% endfor %}
+  <p class="notebook-caption">阅读原理，再到实验室验证。</p>
+</div>
