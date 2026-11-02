@@ -1,0 +1,12 @@
+---
+layout: atlas
+title: Code Lab
+permalink: /explore/code/
+section: Explore
+---
+<p class="eyebrow">EXPLORE / 03 · CREATIVE COMPUTING</p><h1>从一个概念，<br>到一段运行的代码。</h1><p class="lead">不以熟练度百分比衡量学习。通过观察、实验和反思，理解程序为什么这样运行。</p><section class="split-feature"><div><span class="tag">可操作</span><h2>看见 C++ 对象背后的资源。</h2><p>观察复制、修改、析构如何改变对象与堆内存的关系。区分裸指针的别名问题与深拷贝的独立所有权。</p><a class="button" href="{{ '/playground/#copy' | relative_url }}">对象复制可视化 ↗</a></div><pre tabindex="0"><code>// 相同地址，还是独立资源？
+Box b(a);
+*a.p = 9;
+
+// 理解所有权，比记住语法更重要。
+// 生产代码优先使用 RAII 值类型。</code></pre></section><section class="split-feature"><div><span class="tag">可执行 · 首次需下载运行时</span><h2>Python，边写边验证。</h2><p>变量、条件、循环、函数、列表与字典。在独立 Worker 中执行真实 Python，页面保持响应。</p><a class="button" href="{{ '/playground/python/' | relative_url }}">打开 Python Playground ↗</a></div><div class="formula-panel"><span>LEARNING → PRACTICING → BUILDING</span><strong>&gt;&gt;&gt; explore()</strong><p>修改输入，观察输出。<br>保留问题，也验证答案。</p></div></section><section><h2>接下来想理解的事</h2><p>继承、多态、运算符重载与智能指针的完整课程尚未实现。当前笔记解释构造、复制与析构的所有权边界，优先保证概念正确。</p><a class="text-link" href="{{ '/knowledge/cpp-copy/' | relative_url }}">阅读 C++ 复制与所有权笔记 ↗</a></section>

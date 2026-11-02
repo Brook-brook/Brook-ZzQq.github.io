@@ -2,6 +2,15 @@
 layout: default
 ---
 
+{% if page.url contains '/journal/' %}
+<aside aria-label="原有主题内容说明" class="p-3 mb-4 border rounded">
+  <strong>原有博客 / Chirpy 模板示例</strong>
+  <p>保留原有主题的教程与演示内容；这些文章不代表 Brook 的个人经历或项目成果。</p>
+  <a href="{{ '/' | relative_url }}">返回 Brook's Atlas →</a>
+</aside>
+{% endif %}
+
+
 {% include lang.html %}
 
 {% assign all_pinned = site.posts | where: 'pin', 'true' %}

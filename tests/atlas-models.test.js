@@ -45,3 +45,33 @@ test('copy ownership: mutation and destruction', () => {
   assert.equal(copyState(false, 3).dangling, true);
   assert.equal(copyState(true, 3).dangling, false);
 });
+
+test('matching pennies has no pure equilibrium; all-zero game has four', async () => {
+  const { analyzeMatrix } = await import('../assets/js/atlas/models.js');
+  assert.deepEqual(
+    analyzeMatrix([
+      [
+        [1, -1],
+        [-1, 1]
+      ],
+      [
+        [-1, 1],
+        [1, -1]
+      ]
+    ]).equilibria,
+    []
+  );
+  assert.equal(
+    analyzeMatrix([
+      [
+        [0, 0],
+        [0, 0]
+      ],
+      [
+        [0, 0],
+        [0, 0]
+      ]
+    ]).equilibria.length,
+    4
+  );
+});

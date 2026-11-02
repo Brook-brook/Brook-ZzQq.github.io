@@ -4,8 +4,14 @@ import globals from 'globals';
 
 export default defineConfig([
   globalIgnores([
-    'assets/*', '!assets/js/', 'assets/js/*', '!assets/js/atlas/',
-    'node_modules/*', '_site/*', 'work/*', 'vendor/*'
+    'assets/*',
+    '!assets/js/',
+    'assets/js/*',
+    '!assets/js/atlas/',
+    'node_modules/*',
+    '_site/*',
+    'work/*',
+    'vendor/*'
   ]),
   js.configs.recommended,
   {
@@ -16,7 +22,8 @@ export default defineConfig([
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node
+        ...globals.node,
+        ...globals.worker
       }
     }
   },

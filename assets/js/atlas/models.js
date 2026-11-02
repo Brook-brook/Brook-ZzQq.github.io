@@ -21,6 +21,9 @@ export function gameModel(kind, t) {
             [1, 1]
           ]
         ];
+  return analyzeMatrix(matrix);
+}
+export function analyzeMatrix(matrix) {
   const equilibria = [];
   let bestTotal = -Infinity;
   matrix.forEach((row, i) =>

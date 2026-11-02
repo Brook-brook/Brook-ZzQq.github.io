@@ -25,7 +25,8 @@
     "test": "npm run lint:js && npm run lint:scss",
     "prepare": "husky",
     "test:atlas": "node --test tests/atlas-models.test.js",
-    "test:atlas:browser": "node tests/atlas-browser.mjs"
+    "test:atlas:browser": "node tests/atlas-browser.mjs",
+    "test:atlas:python": "node tests/atlas-python.mjs"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",

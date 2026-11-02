@@ -82,6 +82,59 @@ if (el('game')) {
         return div;
       })
     );
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 480 220');
+    svg.setAttribute('aria-hidden', 'true');
+    function shape(tag, attrs, text) {
+      const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
+      Object.entries(attrs).forEach(([key, value]) =>
+        node.setAttribute(key, value)
+      );
+      if (text) node.textContent = text;
+      svg.append(node);
+      return node;
+    }
+    function box(x, y, title, detail, inactive = false) {
+      shape('rect', {
+        x,
+        y,
+        width: 140,
+        height: 60,
+        rx: 4,
+        fill: 'none',
+        stroke: 'currentColor',
+        opacity: inactive ? '.4' : '1'
+      });
+      shape('text', { x: x + 12, y: y + 24 }, title);
+      shape('text', { x: x + 12, y: y + 46, 'font-size': '12' }, detail);
+    }
+    box(20, 25, 'Object A', state.aAlive ? 'p → H1' : '已析构', !state.aAlive);
+    box(
+      320,
+      25,
+      'Heap H1',
+      state.aAlive ? `int = ${state.aValue}` : '已释放',
+      !state.aAlive
+    );
+    if (state.aAlive)
+      shape('path', {
+        d: 'M160 55 H310 l-9 -5 m9 5 l-9 5',
+        fill: 'none',
+        stroke: 'currentColor'
+      });
+    if (state.bAlive) {
+      box(20, 135, 'Object B', `p → ${state.bAddress}`);
+      if (deep) box(320, 135, 'Heap H2', `int = ${state.bValue}`);
+      shape('path', {
+        d: deep
+          ? 'M160 165 H310 l-9 -5 m9 5 l-9 5'
+          : 'M160 165 C250 165 220 55 310 55 l-9 -5 m9 5 l-9 5',
+        fill: 'none',
+        stroke: 'currentColor',
+        'stroke-dasharray': state.dangling ? '5 5' : 'none'
+      });
+    }
+    el('memory').prepend(svg);
     el('copy-next').disabled = step === 3;
     el('copy-code').textContent = `#include <optional> // C++17
 
