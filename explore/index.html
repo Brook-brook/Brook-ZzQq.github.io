@@ -1,7 +1,58 @@
 ---
 layout: atlas
-title: Explore
+title: Explore ZJU
 permalink: /explore/
 section: Explore
+campus: true
+description: 在 Brook's Atlas 探索浙江大学紫金港校区。淡紫色地点地图、校园分类与有来源的空间坐标。
 ---
-<p class="eyebrow">THE ATLAS / EXPLORATION FIELDS</p><h1>沿着好奇心，<br>找到下一个问题。</h1><p class="lead">从空间思维到智能系统，再到可运行的代码。先选择一个入口，再把概念连接起来。</p><div class="explore-index"><a href="{{ '/explore/geo/' | relative_url }}"><span class="field-number">01 / GEOSPATIAL</span><h2>Geo Lab <span>↗</span></h2><p>坐标系统 · 地图投影 · 空间计算 · GeoAI</p><span class="tag">墨卡托尺度实验已可操作</span></a><a href="{{ '/explore/ai/' | relative_url }}"><span class="field-number">02 / INTELLIGENCE</span><h2>AI Lab <span>↗</span></h2><p>从模型到 Agent · 工具调用 · 验证与边界</p><span class="tag">确定性流程示意 · 无真实模型调用</span></a><a href="{{ '/explore/code/' | relative_url }}"><span class="field-number">03 / CREATIVE COMPUTING</span><h2>Code Lab <span>↗</span></h2><p>Python · C++ · 内存模型 · 软件工程</p><span class="tag">对象复制与 Python 执行实验</span></a></div><section class="closing"><h2>想先动手？</h2><a class="button" href="{{ '/playground/' | relative_url }}">打开 Playground ↗</a></section>
+<section class="campus-hero" aria-labelledby="campus-title">
+  <div class="campus-grid" aria-hidden="true"></div>
+  <div class="campus-hero-copy">
+    <p class="eyebrow campus-kicker"><span class="status-dot"></span> BROOK'S ATLAS / ZIJINGANG FIELD GUIDE</p>
+    <h1 id="campus-title"><span class="title-line">Explore ZJU.</span><span class="title-line">Discover <em>your</em></span><span class="title-line">little universe<span class="lavender-dot">.</span></span></h1>
+    <p class="campus-intro">把日常走过的校园，变成值得探索的小宇宙。</p>
+    <p class="lead">一处阅读空间，一个灵感坐标。<br>在紫金港，沿着好奇心重新出发。</p>
+    <div class="actions"><a class="button js-magnetic" href="#campus-map">开启校园探索 <span aria-hidden="true">↗</span></a><a class="quiet-link" href="{{ '/playground/' | relative_url }}">去学习实验室 <span aria-hidden="true">↗</span></a></div>
+    <p class="campus-command"><span aria-hidden="true">›</span> atlas.explore(<span>'zijingang'</span>)<span class="command-cursor" aria-hidden="true">_</span></p>
+  </div>
+  <div class="campus-orb" aria-hidden="true"><div class="orb-orbit orbit-one"></div><div class="orb-orbit orbit-two"></div><div class="orb-core"><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" alt="" width="140" height="140"><span>hello, explorer.</span></div><span class="orb-label orb-north">N / FIND YOUR NEXT IDEA</span><span class="orb-label orb-east">⌘ CAMPUS MODE</span><span class="orb-tag tag-one">⌑ 一起去探索</span><span class="orb-tag tag-two">✧ STAY CURIOUS</span><span class="orb-cross">＋</span></div>
+  <div class="hero-bottom-note"><span>HANGZHOU, CHINA / 浙江大学紫金港校区</span><a href="#campus-map">向下探索 <span aria-hidden="true">↓</span></a></div>
+</section>
+<section id="campus-map" class="campus-exploration" data-campus data-url="{{ '/assets/data/campus.json' | relative_url }}" aria-labelledby="map-heading">
+  <div class="section-heading"><div><p class="eyebrow">01 / A FEW PLACES TO BEGIN</p><h2 id="map-heading">今天，想去哪里？<span class="tiny-star" aria-hidden="true">✦</span></h2></div><p class="section-aside">不必安排一场远行。<br>从校园里的一个坐标开始。</p></div>
+  <div class="campus-categories" aria-label="校园地点分类">
+    <button type="button" data-category="all" aria-pressed="true" data-map-control hidden><span aria-hidden="true">✦</span> 全部地点</button>
+    <button type="button" data-category="teaching" aria-pressed="false" data-map-control hidden><span aria-hidden="true">⌂</span> 教学楼</button>
+    <button type="button" data-category="library" aria-pressed="false" data-map-control hidden><span aria-hidden="true">▤</span> 图书馆</button>
+    <button type="button" data-category="dining" aria-pressed="false" data-map-control hidden><span aria-hidden="true">♧</span> 食堂</button>
+    <button type="button" data-category="housing" aria-pressed="false" data-map-control hidden><span aria-hidden="true">⌑</span> 宿舍区</button>
+    <button type="button" data-category="landscape" aria-pressed="false" data-map-control hidden><span aria-hidden="true">✧</span> 校园景观</button>
+    <button type="button" data-category="study" aria-pressed="false" data-map-control hidden><span aria-hidden="true">✎</span> 学习空间</button>
+  </div>
+  <div class="campus-map-panel">
+    <div class="map-topbar"><div class="map-brand"><span class="status-dot"></span><strong>ZIJINGANG / 地点探索图</strong><span class="map-version">WGS84 · POINT ATLAS</span></div><button type="button" class="subtle-button" id="map-sidebar-toggle" aria-expanded="true" aria-controls="campus-sidebar" data-map-control hidden>收起地点栏 <span aria-hidden="true">⇥</span></button></div>
+    <div class="campus-map-layout">
+      <aside id="campus-sidebar" class="campus-sidebar" aria-label="地点搜索与列表">
+        <div class="map-search" data-map-control hidden><label class="sr-only" for="campus-search">搜索校园地点</label><span aria-hidden="true">⌕</span><input id="campus-search" type="search" placeholder="搜索地点，发现一个新坐标…" autocomplete="off"><kbd aria-hidden="true">/</kbd></div>
+        <div class="map-list-heading"><span id="campus-count">{{ site.data.campus.places | size }} 个公开地点</span><button id="favorites-only" class="subtle-button" type="button" aria-pressed="false" data-map-control hidden>♡ 只看收藏</button></div>
+        <div id="campus-list" class="campus-place-list">{% for place in site.data.campus.places %}<article class="campus-place" data-place="{{ place.id }}"><div class="place-icon" aria-hidden="true">{% if place.category == 'library' %}▤{% elsif place.category == 'teaching' %}⌂{% else %}✧{% endif %}</div><div class="place-copy"><h3>{{ place.name }}</h3><p>{{ place.english }}</p><a class="place-source" href="{{ place.source }}">地点来源 ↗</a><button type="button" class="place-select" data-select="{{ place.id }}" data-map-control hidden aria-label="在地图上查看{{ place.name }}">查看坐标 <span aria-hidden="true">↗</span></button></div><button type="button" class="favorite-button" data-favorite="{{ place.id }}" aria-label="收藏{{ place.name }}" aria-pressed="false" data-map-control hidden>♡</button></article>{% endfor %}</div>
+        <div id="campus-empty" class="campus-empty" hidden><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" alt="" width="88" height="88"><h3>这个坐标，还留着一点空白。</h3><p id="campus-empty-text">试试其他关键词或分类。</p><button id="campus-clear" class="subtle-button" type="button">显示全部地点 ↗</button></div>
+      </aside>
+      <div class="map-stage">
+        <div class="map-overline"><span>OPEN DATA / CURATED POINTS</span><span class="north-arrow" aria-label="北方向">↑ N</span></div>
+        <div id="campus-canvas" class="campus-canvas" tabindex="0" role="group" aria-label="校园地点图，可用方向键平移，加减键缩放，Home 复位" aria-describedby="map-help" aria-busy="true"><div id="map-world" class="map-world"><svg id="campus-graticule" aria-hidden="true"></svg><div class="map-watermark" aria-hidden="true">ZJU<span>ZIJINGANG</span></div><div id="campus-markers"></div></div><div class="map-loading" id="map-loading"><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" alt="" width="70" height="70"><span id="map-load-message">启用 JavaScript，可在这里探索地点。</span><button id="campus-retry" class="subtle-button" type="button" hidden>重新加载</button></div></div>
+        <div class="map-controls" aria-label="地图视图控制" data-map-control hidden><button type="button" id="map-zoom-in" aria-label="放大地图">＋</button><button type="button" id="map-zoom-out" aria-label="缩小地图">−</button><button type="button" id="map-reset" aria-label="复位地图">⌖</button></div>
+        <div class="map-layers" aria-label="地图图层" data-map-control hidden><button type="button" data-layer="grid" aria-pressed="true">参考网格</button><button type="button" data-layer="points" aria-pressed="true">地点</button><button type="button" data-layer="labels" aria-pressed="false">标签</button></div>
+        <div class="map-readout"><span id="map-coordinates">WGS84 / 地点代表点</span><span id="map-zoom">×1.0</span></div>
+      </div>
+    </div>
+    <div class="map-status-bar"><span id="campus-status" role="status">地点坐标有来源，探索不靠猜。</span><a href="https://map.zju.edu.cn/">打开官方校园图 ↗</a></div>
+  </div>
+  <div id="campus-detail" class="campus-detail" hidden tabindex="-1" aria-labelledby="detail-title"><div class="detail-badge" aria-hidden="true">⌖</div><div class="detail-content"><p class="eyebrow" id="detail-category">CAMPUS COORDINATE</p><h3 id="detail-title"></h3><p id="detail-description"></p><div class="detail-meta"><code id="detail-coordinates"></code><a id="detail-source" href="https://www.openstreetmap.org/">核对 OSM 数据 ↗</a></div></div><button id="detail-favorite" class="subtle-button" type="button" aria-pressed="false">♡ 收藏地点</button><button id="detail-close" class="icon-button" type="button" aria-label="关闭地点详情">×</button></div>
+  <p class="map-help" id="map-help">标记引线指向地点代表点 · 拖拽平移 · ＋ / − 缩放 · 方向键移动 · Home 复位。鼠标滚轮缩放需按住 Ctrl。手机可左右拖动，使用按钮缩放；上下滑动仍可滚动页面。</p>
+  <details class="campus-data-note"><summary>关于这张地点图与数据来源</summary><p>这是有地理坐标的地点图，不是道路底图。{{ site.data.campus.note }} 当前收录 {{ site.data.campus.places | size }} 个地点，核对日期 {{ site.data.campus.checked }}；食堂与宿舍区暂未收录核实坐标。学习空间分类复用两处图书馆地点，不代表特定自习室或实时开放状态。</p><p>© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>，数据按 ODbL 提供。各地点保留 OSM 标识与 Mapcarta 来源。收藏只保存到当前浏览器；地图不申请个人定位。</p></details>
+  <noscript><p>交互地图需要 JavaScript。上方仍可阅读全部地点并打开来源；也可使用<a href="https://map.zju.edu.cn/">浙江大学官方校园图</a>。</p></noscript>
+</section>
+<section class="campus-lab-paths"><div class="section-heading"><div><p class="eyebrow">02 / ONE CAMPUS, MANY CURIOSITIES</p><h2>把探索，带进实验室。</h2></div><p class="section-aside">从一个地点，走向一个问题。<br>原有学习空间，依然在这里。</p></div><div class="campus-path-grid"><a class="campus-path motion-card" href="{{ '/explore/geo/' | relative_url }}"><span class="path-symbol" aria-hidden="true">◎</span><span class="eyebrow">01 / GEO LAB</span><h3>地图，为什么会变形？</h3><p>从校园坐标出发，理解投影与空间尺度。</p><span class="text-link">探索空间思维 ↗</span></a><a class="campus-path motion-card" href="{{ '/explore/ai/' | relative_url }}"><span class="path-symbol" aria-hidden="true">⌘</span><span class="eyebrow">02 / AI LAB</span><h3>让想法，学会使用工具。</h3><p>理解模型、工具与结果验证之间的联系。</p><span class="text-link">走进智能实验 ↗</span></a><a class="campus-path motion-card" href="{{ '/explore/code/' | relative_url }}"><span class="path-symbol" aria-hidden="true">{ }</span><span class="eyebrow">03 / CODE LAB</span><h3>好奇心，也是可执行的。</h3><p>用 Python 与 C++，让抽象概念可以操作。</p><span class="text-link">把问题写成代码 ↗</span></a></div></section>
+<section class="campus-outro"><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" width="90" height="90" alt=""><p class="eyebrow">A SMALL ATLAS. AN OPEN WORLD.</p><h2>下一个有趣的发现，<br>也许就在转角。</h2><a class="quiet-link js-magnetic" href="{{ '/knowledge/' | relative_url }}">把灵感放进知识地图 ↗</a></section>

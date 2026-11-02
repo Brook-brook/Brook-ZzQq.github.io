@@ -6,9 +6,11 @@
   } catch {
     /* private browsing */
   }
-  if (!['light', 'dark'].includes(theme))
-    theme = matchMedia('(prefers-color-scheme: light)').matches
-      ? 'light'
-      : 'dark';
+  if (!['light', 'dark'].includes(theme)) theme = 'dark';
   document.documentElement.dataset.theme = theme;
+  try {
+    localStorage.setItem('theme', theme);
+  } catch {
+    /* optional shared preference */
+  }
 })();

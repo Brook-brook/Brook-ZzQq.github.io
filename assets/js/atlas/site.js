@@ -12,6 +12,7 @@ if (toggle) {
     root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
     try {
       localStorage.setItem('atlas-theme', root.dataset.theme);
+      localStorage.setItem('theme', root.dataset.theme);
     } catch {
       /* optional persistence */
     }

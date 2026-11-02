@@ -1,0 +1,24 @@
+/* Shared palette for Atlas and the retained Chirpy blog. */
+:root {
+  --bg-primary: #090711;
+  --bg-secondary: #151024;
+  --surface: #211a32;
+  --lavender-primary: #c4b5fd;
+  --lavender-accent: #a78bfa;
+  --lavender-light: #e9d5ff;
+  --text-primary: #f5f3ff;
+  --text-secondary: #b8aecf;
+  --border: rgba(196, 181, 253, 0.16);
+}
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg-primary: #f5f3ff;
+  --bg-secondary: #ede7f8;
+  --surface: #e7dff3;
+  --text-primary: #211a32;
+  --text-secondary: #655675;
+  --lavender-primary: #6941a5;
+  --lavender-accent: #7452b5;
+  --lavender-light: #704199;
+  --border: rgba(85, 53, 140, 0.24);
+}
