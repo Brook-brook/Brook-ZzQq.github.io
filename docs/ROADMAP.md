@@ -12,7 +12,7 @@
 - Lazy Pyodide Worker with examples, real execution, errors, output cap,
   stop/reload and timeout. Runtime downloads only after the visitor requests it.
 - Existing Chirpy blog/posts remain accessible; old Atlas preview routes redirect.
-- Automated model and browser checks; build-only CI. No production deployment.
+- Automated model/browser checks plus an explicit build-before-deploy Pages workflow.
 
 ## Next useful increments
 
@@ -27,8 +27,9 @@
 
 Review the PR before merging. The default config targets the GitHub project URL
 `https://brook-brook.github.io/Brook-ZzQq.github.io/`. For a different Pages path,
-change `url`/`baseurl` and repeat the path tests. The nested starter Pages workflow
-has not been activated; configure Pages only after explicit publication approval.
+change `url`/`baseurl` and repeat the path tests. Publishing now uses `.github/workflows/pages.yml`, targeting the selected
+`feat/atlas-iteration-2` branch. Pages Source must be **GitHub Actions**; see
+`PUBLISHING.md`. The nested upstream starter remains inactive.
 
 ## Limits
 

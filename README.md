@@ -3,7 +3,7 @@
 **Mapping Knowledge. Building Intelligence. Exploring Possibilities.**
 
 A Jekyll digital laboratory for GIS × AI × Code × Interactive Learning.
-Public identity: **Brook**. This branch is ready for review; it is not deployed.
+Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
 ## Explore
 
@@ -65,8 +65,10 @@ browser virtual filesystem, output cap and 5-second run timeout.
 - [Roadmap and limits](docs/ROADMAP.md)
 - [Audit and validation](docs/ATLAS-ITERATION-2.md)
 
-No production deploy workflow has been enabled. Review and approve publication
-separately; do not merge or deploy automatically.
+For GitHub Pages, select **Settings → Pages → Source → GitHub Actions**.
+The publish workflow builds and deploys `feat/atlas-iteration-2`, the branch Brook
+has selected. Do not publish the raw source directory as static HTML.
+See [publishing and recovery](docs/PUBLISHING.md). No automatic merge is performed.
 
 ## Credits
 

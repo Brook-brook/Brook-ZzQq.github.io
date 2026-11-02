@@ -98,3 +98,18 @@ Homepage CSS, theme/site scripts and globe total about 93 KB uncompressed
 (about 31 KB gzip, excluding HTML and favicon). No font/tile/framework/runtime
 request is required by the homepage. These are byte measurements, not measured
 visitor load-time or Core Web Vitals claims.
+
+## Follow-up: fix raw-source publication
+
+Brook selected `feat/atlas-iteration-2` as the Pages branch and reported a plain
+page showing YAML front matter. The corresponding Pages run `41442756275` only
+checked out and uploaded files; it never ran Node or Jekyll. The inherited source
+`.nojekyll` flag caused a raw-source static deployment.
+
+The follow-up removes the source flag, adds `.github/workflows/pages.yml` with
+Node + Jekyll + link checks, and validates the exact uploaded directory using
+`tools/check-pages-build.mjs`. Only the generated site receives `.nojekyll`.
+Source must be switched to GitHub Actions. Current tools cannot update the Pages
+administration setting, so that one repository-setting step belongs to Brook.
+Earlier statements about deployment being disabled describe the initial delivery;
+this follow-up repairs the publication Brook has now initiated.
