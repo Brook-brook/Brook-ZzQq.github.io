@@ -49,5 +49,22 @@ jobs:
       - name: Build Assets
         run: npm i && npm run build
 
+      - name: Test Atlas models
+        run: npm run test:atlas
+
       - name: Test Site
         run: bash tools/test.sh
+
+      - name: Install browser
+        if: matrix.ruby == '3.3'
+        run: npx playwright install --with-deps chromium
+
+      - name: Test Atlas in browser
+        if: matrix.ruby == '3.3'
+        run: |
+          python3 -m http.server 4173 --directory _site &
+          for attempt in {1..20}; do
+            curl --silent --fail http://127.0.0.1:4173/atlas/ >/dev/null && break
+            sleep 0.5
+          done
+          npm run test:atlas:browser

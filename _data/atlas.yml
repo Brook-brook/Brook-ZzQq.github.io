@@ -1,0 +1,9 @@
+nav:
+  - label: Explore
+    path: /atlas/
+  - label: Playground
+    path: /atlas/playground/
+  - label: Projects
+    path: /atlas/projects/
+  - label: Knowledge
+    path: /atlas/knowledge/

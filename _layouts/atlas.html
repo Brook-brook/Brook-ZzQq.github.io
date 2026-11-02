@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }} · Brook's Atlas</title>
+    <meta name="description" content="Brook 的 GIS、代码与交互学习实验室。" />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/atlas.css' | relative_url }}"
+    />
+    <script
+      type="module"
+      src="{{ '/assets/js/atlas/lab.js' | relative_url }}"
+    ></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">跳至正文</a>
+    <header>
+      <a class="brand" href="{{ '/atlas/' | relative_url }}"
+        >B<span> / </span>Brook's Atlas</a
+      >
+      <nav aria-label="主要导航">
+        {% for item in site.data.atlas.nav %}
+        <a href="{{ item.path | relative_url }}"{% if page.url == item.path %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {% endfor %}
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">{{ content }}</main>
+    <footer>
+      <span>Brook · GIS × AI × Code</span
+      ><a href="{{ '/' | relative_url }}">原有博客</a
+      ><span>第二轮审阅版 · 未发布</span>
+    </footer>
+  </body>
+</html>

@@ -1,3 +1,25 @@
+# Brook's Atlas iteration preview
+
+This repository currently retains the Chirpy template homepage. The Atlas
+iteration is additive and has not been deployed: open `/atlas/` after building.
+See [recovery findings, scope and validation](docs/ATLAS-ITERATION-2.md).
+
+```sh
+npm install
+npm run build
+bundle install
+bundle exec jekyll build
+npm run test:atlas
+# Serve _site on port 4173 in another terminal, then:
+npm run test:atlas:browser
+```
+
+Browser tests use `/usr/bin/chromium` locally; set `CHROMIUM_PATH` for a different
+installation. CI installs Playwright Chromium. The upstream theme documentation
+and credits follow below.
+
+---
+
 <!-- markdownlint-disable-next-line -->
 <div align="center">
 

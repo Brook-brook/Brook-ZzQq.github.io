@@ -3,7 +3,10 @@ import js from '@eslint/js';
 import globals from 'globals';
 
 export default defineConfig([
-  globalIgnores(['assets/*', 'node_modules/*', '_site/*']),
+  globalIgnores([
+    'assets/*', '!assets/js/', 'assets/js/*', '!assets/js/atlas/',
+    'node_modules/*', '_site/*', 'work/*', 'vendor/*'
+  ]),
   js.configs.recommended,
   {
     rules: {

@@ -1,0 +1,176 @@
+---
+layout: atlas
+title: Playground
+permalink: /atlas/playground/
+---
+
+<p class="eyebrow">02 / PLAYGROUND</p>
+<h1>先改变一个变量。</h1>
+<p class="lead">观察结果，再追问原因。以下实验均在浏览器本地运行，无需账户。</p>
+<nav class="jump" aria-label="实验导航">
+  <a href="#game">博弈</a><a href="#copy">C++ 对象复制</a
+  ><a href="#geo">Geo × AI</a>
+</nav>
+<noscript><p>实验需要启用 JavaScript。下方概念解释仍可阅读。</p></noscript>
+<section id="game">
+  <p class="eyebrow">LAB 01 / GAME THEORY</p>
+  <h2>最佳回应，不一定是最好结局。</h2>
+  <div class="lab-grid">
+    <div>
+      <label for="game-kind">博弈模型</label
+      ><select id="game-kind">
+        <option value="prisoner">囚徒困境</option>
+        <option value="stag">猎鹿博弈</option></select
+      ><label for="temptation"
+        >单方选择第二策略时的收益
+        <output id="temptation-value">5</output></label
+      ><input
+        id="temptation"
+        type="range"
+        min="0"
+        max="6"
+        value="5"
+        step="0.5"
+      /><label for="row-choice">你的策略（行玩家）</label
+      ><select id="row-choice">
+        <option value="0">合作 / 猎鹿</option>
+        <option value="1">背叛 / 猎兔</option></select
+      ><label for="col-choice">对方策略（列玩家）</label
+      ><select id="col-choice">
+        <option value="0">合作 / 猎鹿</option>
+        <option value="1">背叛 / 猎兔</option>
+      </select>
+      <p id="game-result" class="result" role="status"></p>
+    </div>
+    <div>
+      <div class="table-wrap">
+        <table>
+          <caption>
+            收益矩阵 ·（行玩家，列玩家）
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">你 ↓ / 对方 →</th>
+              <th scope="col">第一策略</th>
+              <th scope="col">第二策略</th>
+            </tr>
+          </thead>
+          <tbody id="matrix"></tbody>
+        </table>
+      </div>
+      <p id="equilibria"></p>
+      <p id="game-explanation"></p>
+    </div>
+  </div>
+  <details>
+    <summary>概念与边界</summary>
+    <p>
+      纳什均衡：在其他人的策略固定时，没有玩家能通过单方面改变策略提高收益。带 ★
+      的单元格是纯策略纳什均衡；存在无差异时使用弱不等式。这里仅枚举纯策略，不计算混合策略均衡。社会最优按两人收益总和衡量，不代表唯一的公平标准。
+    </p>
+    <p>
+      标准囚徒困境要求 T &gt; R &gt; P &gt;
+      S；调整参数后可能不再满足该条件。猎鹿是协调博弈，安全的猎兔与高收益但依赖合作的猎鹿可以同时构成均衡。
+    </p>
+  </details>
+</section>
+<section id="copy">
+  <p class="eyebrow">LAB 02 / C++ OBJECT MODEL</p>
+  <h2>复制对象，还是复制它指向的数据？</h2>
+  <div class="lab-grid">
+    <div>
+      <label for="copy-kind">复制方式</label
+      ><select id="copy-kind">
+        <option value="shallow">浅拷贝：复制裸指针</option>
+        <option value="deep">深拷贝：分配独立资源</option>
+      </select>
+      <div class="actions">
+        <button id="copy-next" type="button">下一步</button
+        ><button id="copy-reset" type="button">重置</button>
+      </div>
+      <p id="copy-step" role="status"></p>
+      <div id="memory" class="memory" aria-label="对象与堆内存关系"></div>
+    </div>
+    <div>
+      <pre><code id="copy-code"></code></pre>
+    </div>
+  </div>
+  <p>
+    这是拥有裸指针的教学模型，不会执行
+    C++。默认复制构造逐成员复制，指针成员因此共享同一地址；若两个对象都负责
+    delete，就会产生悬空指针及重复释放风险。演示在未定义行为之前停止，不能预测其运行结果。深拷贝示例只展示复制构造；完整值类型还需要复制赋值（Rule
+    of Three/Five）。实际代码优先使用 std::vector 等 RAII
+    值类型；std::unique_ptr 不可复制，std::shared_ptr
+    的复制表示共享所有权，也不是深拷贝。
+  </p>
+</section>
+<section id="geo">
+  <p class="eyebrow">LAB 03 / GEO × AI</p>
+  <h2>地图上的相同距离，地面上相同吗？</h2>
+  <div class="lab-grid">
+    <div>
+      <label for="latitude">纬度 <output id="latitude-value">30°</output></label
+      ><input id="latitude" type="range" min="-80" max="80" value="30" />
+      <p id="geo-result" class="result" role="status"></p>
+      <p>
+        球面墨卡托局部尺度因子 k = 1 / cos
+        φ。图中同样的地面小圆，投影后在高纬度被放大。仅讨论球面模型和局部尺度；不能直接代替椭球测地计算。
+      </p>
+    </div>
+    <div>
+      <svg viewBox="0 0 400 240" role="img" aria-labelledby="geo-title">
+        <title id="geo-title">
+          同样大小的地面区域在不同纬度的墨卡托投影尺度比较
+        </title>
+        <defs>
+          <pattern
+            id="grid"
+            width="40"
+            height="40"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 40 0 L 0 0 0 40"
+              fill="none"
+              stroke="currentColor"
+              opacity=".2"
+            />
+          </pattern>
+        </defs>
+        <rect width="400" height="240" fill="url(#grid)" />
+        <circle
+          cx="100"
+          cy="120"
+          r="16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+        <circle
+          id="projected-circle"
+          cx="290"
+          cy="120"
+          r="18.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+        <text x="65" y="225">赤道基准</text>
+        <text x="255" y="225">当前纬度</text>
+      </svg>
+    </div>
+  </div>
+  <h3>送入 AI 前，先检查空间语义</h3>
+  <ol class="pipeline">
+    <li>输入：纬度、投影与距离单位</li>
+    <li>工具：用确定性公式计算局部尺度</li>
+    <li>验证：检查纬度范围与模型假设</li>
+    <li>解释：生成基于计算结果的说明</li>
+  </ol>
+  <p id="geo-ai"></p>
+  <p class="muted">
+    这是确定性流程模拟，不调用 AI 模型、不执行真实缓冲区分析。真实 GIS Agent
+    应核实
+    CRS、单位、数据来源并验证工具结果；语言模型不能凭文字推理替代空间计算。
+  </p>
+</section>

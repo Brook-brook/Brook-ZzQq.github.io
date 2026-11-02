@@ -217,6 +217,8 @@ compress_html:
     envs: [development]
 
 exclude:
+  - work
+  - tests
   - "*.gem"
   - "*.gemspec"
   - docs
