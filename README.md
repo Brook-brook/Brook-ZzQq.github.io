@@ -5,18 +5,19 @@
 A Jekyll digital laboratory for GIS × AI × Code × Interactive Learning.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
-## Iteration 3 review
+## Iteration 4 review
 
-The lavender campus/motion work is on `feat/atlas-iteration-3`, based on feature-2.
+The Obsidian Glass campus redesign is on `feat/atlas-iteration-4`, based on the
+unmerged `feat/atlas-iteration-3` branch.
 It does **not** alter production publishing. See [scope, screenshots, tests and
-built-preview instructions](docs/ATLAS-ITERATION-3.md) and
+built-preview instructions](docs/ATLAS-ITERATION-4.md) and
 [campus data provenance](docs/CAMPUS_DATA.md). A CI artifact supplies a static
 preview after the PR checks pass.
 
 ## Explore
 
 - `/`: Atlas homepage with a local SVG globe.
-- `/explore/`: Geo, AI and Code labs.
+- `/explore/`: sourced Zijingang point atlas, search, favorites and Geo/AI/Code lab links.
 - `/playground/`: prisoner/stag games, C++ copying and Mercator scale.
 - `/playground/nash/`: editable 2×2 pure-strategy equilibrium explorer.
 - `/playground/python/`: real Python via lazy Pyodide Worker.
@@ -36,7 +37,10 @@ bundle exec jekyll serve
 ```
 
 Open `http://127.0.0.1:4000/Brook-ZzQq.github.io/`.
-For a root-domain installation, set `baseurl: ""` and verify that configuration.
+For a local root-path preview without editing deployment configuration, run
+`bundle exec jekyll serve --baseurl ""` and open `http://127.0.0.1:4000/`.
+A plain Python server cannot compile Jekyll source; use the built CI preview
+if you do not have Ruby. See the iteration report for exact ZIP instructions.
 
 ## Verify
 
@@ -71,7 +75,9 @@ browser virtual filesystem, output cap and 5-second run timeout.
 - [Development rules](AGENTS.md)
 - [Design system](docs/DESIGN_SYSTEM.md)
 - [Roadmap and limits](docs/ROADMAP.md)
-- [Audit and validation](docs/ATLAS-ITERATION-2.md)
+- [Hallmark before-design audit](docs/design-audit-iteration-4.md)
+- [Iteration 4 screenshots and validation](docs/ATLAS-ITERATION-4.md)
+- [Iteration 2 engineering audit](docs/ATLAS-ITERATION-2.md)
 
 For GitHub Pages, select **Settings → Pages → Source → GitHub Actions**.
 The publish workflow builds and deploys `feat/atlas-iteration-2`, the branch Brook

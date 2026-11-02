@@ -11,6 +11,8 @@ export default defineConfig([
     'node_modules/*',
     '_site/*',
     'work/*',
+    '.agents/**',
+    '.hallmark/**',
     'vendor/*'
   ]),
   js.configs.recommended,
@@ -26,6 +28,11 @@ export default defineConfig([
         ...globals.worker
       }
     }
+  },
+  {
+    // Retain the existing campus test suite’s quote style without changing tests.
+    files: ['tests/campus-browser.mjs'],
+    rules: { quotes: ['error', 'double', { avoidEscape: true }] }
   },
   {
     files: ['_javascript/**/*.js'],

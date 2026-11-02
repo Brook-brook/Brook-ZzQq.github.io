@@ -1,6 +1,5 @@
 import {
   categories,
-  symbols,
   filterPlaces,
   projectPlaces,
   clampView,
@@ -63,6 +62,14 @@ if (root) {
     } catch {
       /* navigation still works */
     }
+  }
+  function updateListHint() {
+    const hint = $('campus-list-hint');
+    hint.hidden = list.hidden || list.scrollHeight <= list.clientHeight + 2;
+    hint.textContent =
+      list.scrollTop + list.clientHeight >= list.scrollHeight - 2
+        ? '已到地点列表末尾。'
+        : '滚动列表，查看其余地点。';
   }
   function announce(message) {
     $('campus-status').textContent = message;
@@ -182,7 +189,6 @@ if (root) {
     for (const p of places) {
       const saved = favorites.includes(p.id);
       const button = root.querySelector(`[data-favorite="${p.id}"]`);
-      button.textContent = saved ? '♥' : '♡';
       button.setAttribute('aria-pressed', String(saved));
       button.setAttribute(
         'aria-label',
@@ -191,7 +197,7 @@ if (root) {
     }
     if (selected) {
       const saved = favorites.includes(selected);
-      $('detail-favorite').textContent = `${saved ? '♥ 已收藏' : '♡ 收藏地点'}`;
+      $('detail-favorite').textContent = `${saved ? '已收藏' : '收藏地点'}`;
       $('detail-favorite').setAttribute('aria-pressed', String(saved));
     }
   }
@@ -217,19 +223,19 @@ if (root) {
     selected = id;
     if (trigger) lastTrigger = trigger;
     $('detail-title').textContent = place.name;
-    $('detail-category').textContent =
-      `CAMPUS COORDINATE / ${categories[place.category]}`;
+    $('detail-category').textContent = categories[place.category];
     $('detail-description').textContent = place.description;
     const [lon, lat] = place.coordinates;
     $('detail-coordinates').textContent =
       `${lat.toFixed(5)}° N / ${lon.toFixed(5)}° E`;
     $('map-coordinates').textContent =
-      `${lat.toFixed(5)}° N · ${lon.toFixed(5)}° E`;
+      `${lat.toFixed(5)}° N / ${lon.toFixed(5)}° E`;
     $('detail-source').href = `https://www.openstreetmap.org/${place.osm}`;
     const detail = $('campus-detail');
-    const changed = detail.dataset.place !== id;
-    detail.dataset.place = id;
+    const changed = detail.dataset.selectedPlace !== id;
+    detail.dataset.selectedPlace = id;
     detail.hidden = false;
+    draw();
     root.querySelectorAll('[data-pin]').forEach((pin) => {
       pin.setAttribute('aria-pressed', String(pin.dataset.pin === id));
     });
@@ -241,7 +247,7 @@ if (root) {
     favoriteUI();
     persist();
     if (notify) {
-      announce(`已选择${place.name}，下方显示地点详情。`);
+      announce(`已选择${place.name}，已打开地点详情。`);
       detail.focus({ preventScroll: true });
       detail.scrollIntoView({
         block: 'nearest',
@@ -253,6 +259,7 @@ if (root) {
   function closeDetail() {
     selected = null;
     $('campus-detail').hidden = true;
+    draw();
     root
       .querySelectorAll('[data-pin]')
       .forEach((pin) => pin.setAttribute('aria-pressed', 'false'));
@@ -304,6 +311,7 @@ if (root) {
     $('map-grid-lines')?.toggleAttribute('hidden', !layers.grid);
     updateAnchors(ids);
     $('campus-markers').classList.toggle('show-labels', layers.labels);
+    updateListHint();
     persist();
   }
   async function load() {
@@ -329,7 +337,23 @@ if (root) {
         const icon = document.createElement('span');
         icon.className = 'pin-icon';
         icon.setAttribute('aria-hidden', 'true');
-        icon.textContent = symbols[p.icon];
+        const svg = document.createElementNS(
+          'http://www.w3.org/2000/svg',
+          'svg'
+        );
+        svg.setAttribute('viewBox', '0 0 24 24');
+        svg.setAttribute('fill', 'none');
+        svg.setAttribute('stroke', 'currentColor');
+        svg.setAttribute('stroke-width', '1.5');
+        svg.classList.add('atlas-icon');
+        const use = document.createElementNS(
+          'http://www.w3.org/2000/svg',
+          'use'
+        );
+        const icons = new URL('../../img/atlas/icons.svg', import.meta.url);
+        use.setAttribute('href', `${icons.href}#${p.icon}`);
+        svg.append(use);
+        icon.append(svg);
         const label = document.createElement('span');
         label.className = 'pin-label';
         label.textContent = p.name;
@@ -377,7 +401,9 @@ if (root) {
   });
   $('detail-close').addEventListener('click', () => {
     closeDetail();
-    if (lastTrigger?.isConnected && !lastTrigger.hidden) lastTrigger.focus();
+    if (lastTrigger?.isConnected && lastTrigger.getClientRects().length)
+      lastTrigger.focus();
+    else canvas.focus({ preventScroll: true });
   });
   $('campus-retry').addEventListener('click', load);
   root.querySelectorAll('[data-category]').forEach((b) =>
@@ -510,7 +536,8 @@ if (root) {
     const button = event.currentTarget,
       expanded = button.getAttribute('aria-expanded') === 'true';
     button.setAttribute('aria-expanded', String(!expanded));
-    button.textContent = expanded ? '展开地点栏 ⇤' : '收起地点栏 ⇥';
+    button.textContent = expanded ? '展开地点栏' : '收起地点栏';
+    if (!expanded) feedback($('campus-sidebar'));
     $('campus-sidebar').hidden = expanded;
     root
       .querySelector('.campus-map-layout')
@@ -542,6 +569,8 @@ if (root) {
       root.getAnimations({ subtree: true }).forEach((a) => a.cancel());
   });
   new ResizeObserver(draw).observe(canvas);
+  new ResizeObserver(updateListHint).observe(list);
+  list.addEventListener('scroll', updateListHint, { passive: true });
   window.addEventListener('pagehide', persist);
   load();
 }
