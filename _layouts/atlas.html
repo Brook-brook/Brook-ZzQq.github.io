@@ -32,7 +32,7 @@
 <body{% if page.campus %} class="campus-app"{% elsif page.universe %} class="universe-page"{% endif %}>
 <a class="skip" href="#main">跳至正文</a>
 <header class="site-header">
-  <a class="brand" href="{{ '/' | relative_url }}"><svg class="atlas-mark" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 3 32 11v14L18 33 4 25V11Z"/><path d="m11 24 7-16 7 16m-12-5h10M4 11l14 8 14-8M18 19v14"/></svg><span>{{ site.data.universe.short_brand }}<small>A personal digital garden</small></span></a>
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.data.universe.brand }} 首页"><svg class="atlas-mark" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 3 32 11v14L18 33 4 25V11Z"/><path d="m11 24 7-16 7 16m-12-5h10M4 11l14 8 14-8M18 19v14"/></svg><span><span class="brand-name-full">{{ site.data.universe.short_brand }}</span><span class="brand-name-compact" aria-hidden="true">Brook</span><small>A personal digital garden</small></span></a>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>菜单</button>
   <nav id="primary-nav" aria-label="主要导航"><span class="dock-indicator" aria-hidden="true" hidden></span>
     {% assign active_section = page.section %}{% if page.collection == 'atlas_notes' or page.url == '/knowledge/' %}{% assign active_section = 'Study' %}{% endif %}

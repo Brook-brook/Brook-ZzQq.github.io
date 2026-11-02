@@ -104,6 +104,11 @@ actual browser behavior; static checking is not treated as a browser preview.
   artifact guard also passed (nine homepage assets and retained routes/bundles).
 - `git diff --check`: passed.
 
+GitHub CI’s first run passed both Ruby builds, then exposed a 320px first-screen
+map failure under the runner’s different font metrics. A compact narrow-phone
+wordmark and appropriately sized campus heading fix the layout without changing
+the existing assertion. The full brand remains the accessible link name.
+
 One intermediate browser run overlapped regeneration of the served directory and
 returned a temporary 404. The final run used a frozen build and completed; this
 was not hidden by weakening a test. Existing interaction assertions remain.

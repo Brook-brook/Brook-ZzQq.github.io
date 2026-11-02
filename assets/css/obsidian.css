@@ -1415,3 +1415,19 @@ html.has-js .show-labels .pin-label {
 .note-search input {
   border-color: var(--color-control-edge);
 }
+
+/* A compact wordmark prevents fallback fonts from wrapping the 320px header. */
+.site-header .brand-name-compact {
+  display: none;
+}
+@media (max-width: 22rem) {
+  .site-header .brand-name-full {
+    display: none;
+  }
+  .site-header .brand-name-compact {
+    display: inline;
+  }
+  .campus-heading h1 {
+    font-size: var(--text-xl);
+  }
+}
