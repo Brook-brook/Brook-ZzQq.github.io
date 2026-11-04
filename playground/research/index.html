@@ -1,0 +1,62 @@
+---
+layout: atlas
+title: RSS 研究实验
+permalink: /playground/research/
+section: Playground
+universe: true
+research: true
+description: 修改 RSS 或 Atom 样本，逐条观察链接规范化、去重和待复核 JSON。只在当前页面处理，不联网、不调用 AI。
+---
+<div class="research-page">
+  <header class="research-intro">
+    <nav class="breadcrumbs" aria-label="面包屑"><a href="{{ '/playground/' | relative_url }}">Playground</a><span aria-hidden="true">/</span><span>RSS 研究实验</span></nav>
+    <h1>一份来源，怎样变成可核对的记录？</h1>
+    <p>改一条链接，观察 XML 解析、规范化与去重，再检查输出。</p>
+    <a class="universe-link" href="{{ '/knowledge/rss-normalization/' | relative_url }}">先读实验原理</a>
+  </header>
+  <div class="research-boundary"><p>样本是自编练习数据，使用 example.test 占位链接。内容只在当前页面处理，不联网、不调用 AI，也不保存到网站。</p></div>
+  <noscript><p class="research-nojs">这个实验需要 JavaScript 才能解析 XML。你仍可阅读下面的样本、处理规则与<a href="{{ '/knowledge/rss-normalization/' | relative_url }}">原理教程</a>。</p></noscript>
+  <form id="research-form" class="research-workbench" aria-describedby="research-limits">
+    <section class="research-input" aria-labelledby="research-input-title">
+      <div class="research-section-heading"><h2 id="research-input-title">输入一份订阅样本</h2><button id="research-run" class="research-primary" type="submit" disabled>运行一次处理</button></div>
+      <div class="research-sample-controls"><div><label for="research-example">练习样本</label><select id="research-example"><option value="rss">RSS 2.0</option><option value="atom">Atom</option></select></div><button id="research-load" type="button" disabled>载入样本</button></div>
+      <label for="research-xml">RSS / Atom 内容</label>
+      <textarea id="research-xml" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="research-limits research-status">&lt;rss version="2.0"&gt;
+  &lt;channel&gt;
+    &lt;title&gt;本地练习样本&lt;/title&gt;
+    &lt;item&gt;
+      &lt;title&gt;练习：检查 CRS 与单位&lt;/title&gt;
+      &lt;link&gt;https://example.test/note?id=1&amp;amp;utm_source=lab#part&lt;/link&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;title&gt;同一链接的另一条记录&lt;/title&gt;
+      &lt;link&gt;https://example.test/note?id=1&lt;/link&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;title&gt;练习：记录数据来源&lt;/title&gt;
+      &lt;link&gt;https://example.test/note?id=2&lt;/link&gt;
+    &lt;/item&gt;
+    &lt;item&gt;&lt;title&gt;这条缺少链接&lt;/title&gt;&lt;/item&gt;
+  &lt;/channel&gt;
+&lt;/rss&gt;</textarea>
+      <label class="research-option" for="research-tracking"><input id="research-tracking" type="checkbox" checked><span>移除常见跟踪参数</span></label>
+      <p class="research-help">只移除 utm_*、fbclid、gclid；保留其它查询参数的原有顺序，并移除链接片段。</p>
+      <p id="research-limits" class="research-help">每次最多 50 KB、200 条。支持 RSS 2.0 与标准 Atom 的标题和链接，不提取全文。</p>
+    </section>
+    <section class="research-output" aria-labelledby="research-output-title">
+      <div class="research-section-heading"><h2 id="research-output-title">核对处理结果</h2></div>
+      <ol class="research-pipeline" aria-label="处理顺序"><li>读取 XML</li><li>规范化链接</li><li>按链接去重</li><li>生成 JSON</li></ol>
+      <p id="research-status" class="research-status" role="status" aria-live="polite">修改样本后运行，结果会显示在这里。</p>
+      <div id="research-results" hidden>
+        <dl class="research-counts"><div><dt>保留</dt><dd id="research-kept">0</dd></div><div><dt>重复</dt><dd id="research-duplicates">0</dd></div><div><dt>需修正</dt><dd id="research-invalid">0</dd></div></dl>
+        <label for="research-json">待复核记录（只读）</label>
+        <textarea id="research-json" readonly spellcheck="false" aria-describedby="research-output-help"></textarea>
+        <p id="research-output-help" class="research-help">summary 与 score 保持 null，review_status 为 needs_review。结构有效不代表内容准确。</p>
+      </div>
+      <button id="research-download" type="button" disabled>下载当前 JSON</button>
+    </section>
+  </form>
+  <section id="research-decisions" class="research-decisions" aria-labelledby="research-decisions-title" hidden><h2 id="research-decisions-title">每条记录，为什么留下或移除？</h2><ol id="research-rows"></ol></section>
+  <section class="research-rules" aria-labelledby="research-rules-title"><h2 id="research-rules-title">这一步能保证什么？</h2><div><p><strong>保留首次出现的链接。</strong> host 大小写、默认端口和片段会被规范化；可选移除跟踪参数。不同 id 参数仍代表不同链接。</p><p><strong>去重只比较规范化链接。</strong> 不判断正文相似度、不验证文章事实或数据许可；有些网站依赖跟踪参数，处理前要了解来源规则。</p><p><strong>导出仍是草稿。</strong> 不读取账号或私人文件，不执行输入中的代码。只有人工核对来源与授权后，才适合整理为公开笔记。</p></div></section>
+  <nav class="research-next" aria-label="继续学习"><a href="{{ '/knowledge/bestblogs-research/' | relative_url }}">阅读 BestBlogs 源码研究</a><a href="{{ '/study/' | relative_url }}">返回 Study</a><a href="{{ '/playground/python/' | relative_url }}">打开 Python 实验</a></nav>
+</div>

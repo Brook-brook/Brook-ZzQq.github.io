@@ -56,6 +56,10 @@ main() {
 
   read_baseurl
 
+  # Exercise publication boundaries with real isolated Jekyll builds before
+  # generating the site; this also runs through the existing CI entry point.
+  bundle exec ruby tests/study-publication.rb
+
   # build
   JEKYLL_ENV=production bundle exec jekyll b \
     -d "$SITE_DIR$_baseurl" -c "$_config"

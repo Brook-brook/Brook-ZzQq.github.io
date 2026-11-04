@@ -79,3 +79,17 @@ under their own licenses and lockfiles. Prettier 3.6.2 (MIT) was invoked for sou
 formatting only; it is not a new runtime or project dependency. The npm lockfile’s
 license metadata was inventoried during the fifth-round review; it does not
 substitute for checking actual licenses when adding or copying resources.
+
+## Iteration 6 research and learning additions
+
+No new runtime or development package, font, icon, image, map/data source or
+copied third-party implementation is added. The RSS/Atom teaching fixtures,
+normalization code, note rendering and publication hook are original project
+work. Browser XML/URL APIs and Ruby date/URI are platform/standard-library APIs.
+Existing dependencies, license texts and asset attribution above remain intact.
+
+The public BestBlogs reading note independently summarizes evidence at commit
+`756ffbddf5cf4cd87e383a82b7c997563032e93f` and links upstream files. No BestBlogs
+implementation, Prompt, DSL, image, OPML or article body is redistributed. Its
+CLI/Skills declare MIT locally; no root-wide license was verified. See
+`docs/iteration-6-compliance.md` and the retained seven research reports.

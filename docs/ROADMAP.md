@@ -59,3 +59,13 @@ A recurring open-source review is part of AGENTS.md, with notices and complete
 verified license texts. The fourth-round map remains a featured work with its
 original interactions and source data. Production still targets feature-2; review
 branches are not automatically merged or deployed.
+
+
+## Iteration 6 review branch
+
+Implemented for review, not automatically published: typed Study notes and source
+provenance, centralized research publication checks, combination filters/shareable
+URLs, independently written BestBlogs/RSS notes and a local RSS/Atom-to-JSON lab.
+Existing map and programming labs remain. Next: verify the usefulness of curated
+notes before considering a separately bounded Research CLI/Agent. No live content
+crawler, model scoring, recommendation service or automatic publication is added.

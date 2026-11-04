@@ -1,0 +1,5 @@
+
+> jekyll-theme-chirpy@7.6.0 test:atlas:python
+> node tests/atlas-python.mjs
+
+PASS real Pyodide in Chromium: 3 examples, exception, capped output, infinite-loop timeout, reload and stop

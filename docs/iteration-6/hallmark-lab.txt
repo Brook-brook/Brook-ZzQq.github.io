@@ -1,0 +1,7 @@
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+assets/css/obsidian.css
+  WAIVED 29 :135 glass panel: backdrop-filter blur over a translucent white on .glass-light
+  WAIVED 29 :267 glass panel: backdrop-filter blur over a translucent white on .site-header #primary-nav
+  ANSWERED F4 :846 2 filled primary-button recipes: .campus-categories button[aria-pressed='true'] + .m…
+  ANSWERED F24 :126 a hairline border under a wide soft shadow on .glass-light, .glass-medium, .glass-heavy
+sloplint: 0 FAIL, 0 WARN, 2 WAIVED, 2 ANSWERED across 3 file(s) and 1 URL(s).

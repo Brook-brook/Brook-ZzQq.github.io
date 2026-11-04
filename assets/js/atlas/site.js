@@ -49,32 +49,86 @@ if (menu && nav) {
 }
 const query = document.getElementById('note-query');
 if (query) {
-  const filters = document.querySelector('.filters');
-  filters.hidden = false;
-  document.querySelector('.note-search').hidden = false;
-  const notes = [...document.querySelectorAll('[data-note]')];
+  const index = query.closest('[data-note-index]') || query.closest('section');
+  const filters = index.querySelector('.filters');
+  const kinds = index.querySelector('[data-note-kinds]');
+  const reset = index.querySelector('#note-reset');
+  const notes = [...index.querySelectorAll('[data-note]')];
+  const categories = [...filters.querySelectorAll('button[data-category]')];
+  const kindButtons = [...(kinds?.querySelectorAll('button[data-kind]') || [])];
   let category = 'all';
-  function filter() {
+  let kind = 'all';
+  filters.hidden = false;
+  index.querySelector('.note-search').hidden = false;
+  if (kinds) kinds.hidden = false;
+  if (reset) reset.hidden = false;
+
+  function readState() {
+    const params = new URL(location.href).searchParams;
+    query.value = (params.get('q') || '').slice(0, 120);
+    const requestedCategory = params.get('category');
+    const requestedKind = params.get('kind');
+    category = categories.some((button) => button.dataset.category === requestedCategory)
+      ? requestedCategory : 'all';
+    kind = kindButtons.some((button) => button.dataset.kind === requestedKind)
+      ? requestedKind : 'all';
+  }
+
+  function writeState() {
+    const url = new URL(location.href);
+    for (const [key, value] of [['q', query.value.trim()], ['category', category], ['kind', kind]]) {
+      if (!value || value === 'all') url.searchParams.delete(key);
+      else url.searchParams.set(key, value);
+    }
+    try {
+      history.replaceState(null, '', url);
+    } catch {
+      // Filtering remains usable if optional URL persistence is unavailable.
+    }
+  }
+
+  function filter(syncUrl = true) {
     const text = query.value.trim().toLocaleLowerCase();
     notes.forEach((note) => {
+      const haystack = note.dataset.search || note.textContent;
       note.hidden = !(
         (category === 'all' || note.dataset.category === category) &&
-        note.textContent.toLocaleLowerCase().includes(text)
+        (kind === 'all' || (note.dataset.noteKind || 'tutorial') === kind) &&
+        haystack.toLocaleLowerCase().includes(text)
       );
     });
+    categories.forEach((button) => button.setAttribute('aria-pressed',
+      String(button.dataset.category === category)));
+    kindButtons.forEach((button) => button.setAttribute('aria-pressed',
+      String(button.dataset.kind === kind)));
     const count = notes.filter((note) => !note.hidden).length;
-    document.getElementById('note-count').textContent = `${count} 篇笔记`;
-    document.getElementById('note-empty').hidden = count > 0;
+    index.querySelector('#note-count').textContent = `${count} 篇笔记`;
+    index.querySelector('#note-empty').hidden = count > 0;
+    if (syncUrl) writeState();
   }
-  query.addEventListener('input', filter);
+  query.addEventListener('input', () => filter());
   filters.addEventListener('click', (event) => {
-    const button = event.target.closest('button');
+    const button = event.target.closest('button[data-category]');
     if (!button) return;
     category = button.dataset.category;
-    filters
-      .querySelectorAll('button')
-      .forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
     filter();
   });
-  filter();
+  kinds?.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-kind]');
+    if (!button) return;
+    kind = button.dataset.kind;
+    filter();
+  });
+  reset?.addEventListener('click', () => {
+    query.value = '';
+    category = kind = 'all';
+    filter();
+    query.focus();
+  });
+  window.addEventListener('popstate', () => {
+    readState();
+    filter(false);
+  });
+  readState();
+  filter(false);
 }

@@ -1,10 +1,9 @@
 import { chromium } from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
-import { readdir, mkdir } from 'node:fs/promises';
-const expectedNotes = (await readdir('_atlas_notes')).filter((p) =>
-  p.endsWith('.md')
-).length;
+import { mkdir } from 'node:fs/promises';
+import { expectedPublicNotes } from './expected-notes.mjs';
+const expectedNotes = (await expectedPublicNotes()).length;
 const base =
   process.env.ATLAS_BASE_URL || 'http://127.0.0.1:4173/Brook-ZzQq.github.io';
 const shots = process.env.UNIVERSE_SHOT_DIR || 'work/universe';
