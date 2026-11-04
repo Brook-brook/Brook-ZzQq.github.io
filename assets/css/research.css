@@ -1,0 +1,328 @@
+/* Hallmark · shape: app screen · genre: atmospheric · theme: brand
+ * nav: shared glass dock · signature: editable RSS becomes traceable JSON
+ * states: idle / changed / error / empty / complete · motion: state only · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V4 · weakest: evidence visibility, added per-record reasons beside the actual normalized URL */
+/* Hallmark · answered F15 · Uses the shared container, token palette and focus treatment; no second design system. */
+.research-page {
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+.research-intro {
+  max-width: 52rem;
+  padding-block: var(--space-sm) var(--space-lg);
+}
+.research-intro .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: 0 0 var(--space-lg);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+.research-intro h1 {
+  margin: 0;
+  font-size: var(--text-display);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.research-intro > p {
+  color: var(--text-secondary);
+  margin-block: var(--space-md) var(--space-xs);
+}
+.research-boundary {
+  border-left: 2px solid var(--accent-primary);
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-xl);
+  color: var(--text-secondary);
+  max-width: 54rem;
+  font-size: var(--text-sm);
+}
+.research-boundary p {
+  margin: 0;
+}
+.research-workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  border-block: 1px solid var(--glass-border);
+  gap: var(--space-xl);
+  margin: 0;
+}
+.research-input,
+.research-output {
+  min-width: 0;
+  padding-block: var(--space-lg);
+}
+.research-input {
+  border-right: 1px solid var(--glass-border);
+  padding-right: var(--space-xl);
+}
+.research-section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+}
+.research-section-heading h2,
+.research-decisions h2,
+.research-rules h2 {
+  margin: 0;
+  font-size: var(--text-section);
+  text-wrap: balance;
+}
+.research-page label {
+  display: block;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-xs);
+}
+.research-page textarea,
+.research-page select {
+  border: 1px solid var(--color-control-edge);
+  border-radius: var(--radius-control);
+  background: var(--color-field);
+  color: var(--text-primary);
+  padding: var(--space-sm);
+}
+.research-page textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 23rem;
+  font: var(--text-sm)/1.7 var(--font-outlier);
+  resize: vertical;
+  tab-size: 2;
+}
+.research-page textarea[readonly] {
+  min-height: 22rem;
+}
+.research-page select {
+  min-height: 44px;
+  font-size: var(--text-sm);
+}
+.research-page button {
+  min-height: 44px;
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-control-edge);
+  border-radius: var(--radius-control);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  transition: transform var(--dur-micro) var(--ease-out);
+}
+.research-page button:hover:not(:disabled) {
+  background: var(--color-control-hover);
+}
+.research-page button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.research-page button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+.research-page button.research-primary {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary);
+  color: var(--color-on-accent);
+}
+.research-page button.research-primary:hover:not(:disabled) {
+  background: var(--accent-soft);
+}
+.research-page :where(button, textarea, select, input):focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+}
+.research-sample-controls {
+  display: flex;
+  align-items: end;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+.research-page label.research-option {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  gap: var(--space-xs);
+  margin-block: var(--space-xs) 0;
+  cursor: pointer;
+}
+.research-option input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-primary);
+}
+.research-help {
+  margin-block: 0 var(--space-md);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+.research-pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-sm);
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  list-style-position: inside;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.research-pipeline li {
+  border-top: 2px solid var(--glass-border);
+  padding-top: var(--space-xs);
+}
+.research-status {
+  color: var(--text-secondary);
+  margin-block: 0 var(--space-lg);
+  min-height: 3.4em;
+}
+.research-status[data-state='error'] {
+  color: var(--text-primary);
+  border-left: 2px solid var(--accent-primary);
+  padding-left: var(--space-md);
+}
+.research-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+  margin: 0 0 var(--space-lg);
+}
+.research-counts > div {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+}
+.research-counts dt {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+.research-counts dd {
+  margin: 0;
+  font-size: var(--text-xl);
+  font-variant-numeric: tabular-nums;
+}
+.research-decisions,
+.research-rules {
+  margin-top: var(--space-xl);
+}
+.research-decisions > ol {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-lg) 0 0;
+}
+.research-decisions li {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  column-gap: var(--space-lg);
+  border-bottom: 1px solid var(--glass-border);
+  padding-block: var(--space-lg);
+}
+.research-decisions li > h3 {
+  margin: 0 0 var(--space-xs);
+  font-size: var(--text-md);
+}
+.research-decisions li > p {
+  grid-column: 2;
+  margin: 0 0 var(--space-xs);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+.research-row-state {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: start;
+  color: var(--accent-soft);
+  font-size: var(--text-sm);
+}
+.research-decisions [data-result='invalid'] .research-row-state,
+.research-decisions [data-result='duplicate'] .research-row-state {
+  color: var(--text-secondary);
+}
+.research-row-url > span {
+  display: block;
+}
+.research-row-url code {
+  font: inherit;
+  overflow-wrap: anywhere;
+  color: var(--text-primary);
+}
+.research-rules {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: var(--space-xl);
+  padding-top: var(--space-lg);
+}
+.research-rules p {
+  margin: 0 0 var(--space-md);
+  color: var(--text-secondary);
+}
+.research-rules strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.research-next {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+  margin-top: var(--space-lg);
+}
+.research-next a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-sm);
+}
+@media (max-width: 60rem) {
+  .research-workbench,
+  .research-rules {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .research-input {
+    border-right: 0;
+    border-bottom: 1px solid var(--glass-border);
+    padding-right: 0;
+  }
+  .research-rules {
+    gap: var(--space-lg);
+  }
+  .research-page textarea {
+    min-height: 18rem;
+  }
+}
+@media (max-width: 40rem) {
+  .research-page {
+    padding-top: var(--space-lg);
+  }
+  .research-boundary {
+    margin-bottom: var(--space-lg);
+  }
+  .research-page textarea,
+  .research-page textarea[readonly] {
+    min-height: 17rem;
+    font-size: var(--text-md);
+  }
+  .research-page select {
+    font-size: var(--text-md);
+  }
+  .research-counts {
+    gap: var(--space-lg);
+  }
+  .research-pipeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm) var(--space-lg);
+  }
+  .research-decisions li {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    column-gap: var(--space-sm);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .research-page button {
+    transition: none;
+  }
+  .research-page button:active:not(:disabled) {
+    transform: none;
+  }
+}

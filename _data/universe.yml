@@ -33,6 +33,11 @@ preview_notes:
 
       均衡不等于社会最优。
 updates:
+  - title: 给研究结论留下可核对的来源
+    date: '2026-11-04'
+    text: 新增固定源码版本的研究笔记，以及可修改 RSS、观察去重和导出草稿的本地实验。
+    url: /knowledge/bestblogs-research/
+    label: 阅读研究笔记
   - title: 地图成为可操作的探索空间
     date: '2026-11-02'
     text: Obsidian Glass 设计、来源明确的地点与移动端交互，已提交第四轮开发分支。

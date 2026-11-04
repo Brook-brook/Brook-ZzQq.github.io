@@ -61,6 +61,25 @@
       url: /explore/
     - label: 查看第四轮记录
       url: https://github.com/Brook-brook/Brook-ZzQq.github.io/pull/3
+- id: research-workbench
+  title: RSS Research Workbench
+  type: Data / Learning
+  status: review
+  status_label: 已实现，待发布
+  summary: 修改本地 RSS 或 Atom 样本，逐条查看链接规范化、去重原因和待复核 JSON。
+  stack: [JavaScript, DOMParser, RSS, Atom]
+  details:
+    - label: 数据边界
+      text: 在当前页面处理自编样本或粘贴的 XML，不抓取外网，不调用 AI，不保存内容；去重只比较规范化链接。
+    - label: 学习路径
+      text: 从源码研究到数据契约，连接 Study 的证据笔记与实际可运行的实验。导出记录仍需人工核对。
+  links:
+    - label: 打开实验
+      url: /playground/research/
+    - label: 阅读原理
+      url: /knowledge/rss-normalization/
+    - label: 阅读源码研究
+      url: /knowledge/bestblogs-research/
 - id: next
   title: GeoAI & collaborative systems
   type: Future experiments

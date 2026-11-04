@@ -1,0 +1,119 @@
+/* Hallmark · shape: app screen · genre: atmospheric · theme: brand
+ * signature: research notes retain their source version alongside the reading
+ * states: filtered / empty / source-checked · posture: restrained · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V4 · weakest: source density, keep long identifiers in a disclosure */
+/* Hallmark · waive 49b · Real Study article titles wrap to two lines at 320px · Preserve complete research and tutorial questions so the learning topic remains readable; navigation and action labels stay single-line. */
+.study-kind-filter {
+  border: 0;
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  min-width: 0;
+}
+.study-kind-filter legend {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+}
+.study-kind-filter > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+.study-kind-filter button,
+#note-reset {
+  min-height: 44px;
+  border: 1px solid var(--color-control-edge);
+  border-radius: var(--radius-control);
+  padding: var(--space-xs) var(--space-sm);
+  color: var(--text-secondary);
+  background: var(--color-clear);
+  font: inherit;
+  font-size: var(--text-sm);
+}
+.study-kind-filter button[aria-pressed='true'] {
+  color: var(--text-primary);
+  background: var(--color-control-hover);
+  border-color: var(--accent-primary);
+}
+.study-kind-filter button:hover,
+#note-reset:hover { color: var(--text-primary); }
+.study-kind-filter button:active,
+#note-reset:active { transform: translateY(1px); }
+.study-kind-filter button:focus-visible,
+#note-reset:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+.study-result-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+.study-result-line p { margin: 0; }
+.note-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+}
+.note-provenance {
+  border-block: 1px solid var(--glass-border);
+  padding-block: var(--space-md);
+  margin-block: var(--space-lg);
+  font-size: var(--text-sm);
+}
+.note-provenance summary {
+  min-height: 44px;
+  cursor: pointer;
+  color: var(--accent-soft);
+}
+.note-provenance details {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--color-clear);
+}
+.note-provenance summary:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+.note-provenance dl {
+  display: block;
+  margin-block: var(--space-sm) var(--space-md);
+}
+.note-provenance dl > div {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: var(--space-sm);
+  padding-block: var(--space-xs);
+}
+.note-provenance dt { color: var(--text-secondary); }
+.note-provenance dd {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.note-provenance dd span {
+  display: inline-block;
+  margin-inline-start: var(--space-sm);
+}
+.note-provenance code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.note-provenance p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+.note-provenance ul {
+  padding-inline-start: var(--space-lg);
+  overflow-wrap: anywhere;
+}
+.note-provenance li { padding-block: var(--space-2xs); }
+@media (prefers-reduced-motion: reduce) {
+  .study-kind-filter button:active,
+  #note-reset:active { transform: none; }
+}

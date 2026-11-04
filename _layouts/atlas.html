@@ -20,7 +20,9 @@
   <link rel="stylesheet" href="{{ '/assets/css/atlas-tokens.css' | relative_url }}">
   {% unless page.campus or page.universe %}<link rel="stylesheet" href="{{ '/assets/css/atlas.css' | relative_url }}">{% endunless %}
   <link rel="stylesheet" href="{{ '/assets/css/obsidian.css' | relative_url }}">
+  {% if page.collection == 'atlas_notes' or page.url == '/study/' %}<link rel="stylesheet" href="{{ '/assets/css/study.css' | relative_url }}">{% endif %}
   {% if page.universe %}<link rel="stylesheet" href="{{ '/assets/css/universe.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/universe.js' | relative_url }}"></script>{% endif %}
+  {% if page.research %}<link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/research.js' | relative_url }}"></script>{% endif %}
   <script type="module" src="{{ '/assets/js/atlas/site.js' | relative_url }}"></script>
   <meta name="view-transition" content="same-origin">
   <script type="module" src="{{ '/assets/js/atlas/motion.js' | relative_url }}"></script>
@@ -46,14 +48,14 @@
 {% if page.collection == 'atlas_notes' %}
   <nav class="breadcrumbs" aria-label="面包屑"><a href="{{ '/study/' | relative_url }}">Study</a><span aria-hidden="true">/</span><span>{{ page.category }}</span></nav>
   <article class="note">
-    <p class="eyebrow">FIELD NOTE / {{ page.category | upcase }}</p>
     <h1>{{ page.title }}</h1>
     <p class="lead">{{ page.summary }}</p>
-    <div class="note-meta">实验室教程 · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time> · {{ content | strip_html | size | divided_by: 500 | plus: 1 }} 分钟参考阅读</div>
+    <div class="note-meta"><span>{% include note-kind.html note=page %}</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time><span>{{ content | strip_html | size | divided_by: 500 | plus: 1 }} 分钟参考阅读</span></div>
+    {% include note-provenance.html %}
     {% if page.toc %}<nav class="note-toc" aria-label="本文目录"><strong>本文导航</strong>{% for heading in page.toc %}<a href="#{{ heading.id }}">{{ heading.label }}</a>{% endfor %}</nav>{% endif %}
     <div class="prose">{{ content | replace: '<pre', '<pre tabindex="0"' }}</div>
   </article>
-  <aside class="note-end"><a href="{{ '/study/' | relative_url }}">返回 Study</a><p>把概念变成一次实验。</p><a class="text-link" href="{{ page.lab_url | relative_url }}">打开对应实验 ↗</a><a href="{{ '/knowledge/' | relative_url }}">返回知识地图</a></aside>
+  <aside class="note-end"><a href="{{ '/study/' | relative_url }}">返回 Study</a>{% if page.lab_url %}<p>把概念变成一次实验。</p><a class="text-link" href="{{ page.lab_url | relative_url }}">打开对应实验</a>{% else %}<p>带着来源与边界，继续判断。</p>{% endif %}<a href="{{ '/knowledge/' | relative_url }}">返回知识地图</a></aside>
 {% else %}{{ content }}{% endif %}
 </main>
 <footer class="site-footer"><div><a class="brand" href="{{ '/' | relative_url }}">{{ site.data.universe.brand }}</a><p>学习、构建，也给新的方向留一点位置。</p></div><div><a href="https://github.com/Brook-brook">GitHub ↗</a><a href="{{ '/study/' | relative_url }}">Study</a><a href="{{ '/knowledge/' | relative_url }}">知识关系图</a><a href="{{ '/journal/' | relative_url }}">博客 / 模板示例</a><a href="{{ '/THIRD_PARTY_NOTICES.md' | relative_url }}">开源致谢</a><a href="{{ '/about/' | relative_url }}">About Brook</a></div><p class="footer-note">Built with curiosity.<br>Powered by Jekyll.</p></footer>

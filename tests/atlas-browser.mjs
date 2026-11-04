@@ -2,6 +2,8 @@ import { chromium } from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { writeFileSync } from 'node:fs';
+import { expectedPublicNotes } from './expected-notes.mjs';
+const publicNotes = await expectedPublicNotes();
 const browser = await chromium.launch({
   executablePath:
     process.env.CHROMIUM_PATH ||
@@ -178,7 +180,7 @@ try {
   await page.goto(base + '/');
   assert.ok(await page.locator('#primary-nav').isVisible());
   await page.goto(base + '/knowledge/');
-  assert.equal(await page.locator('[data-note]:visible').count(), 4);
+  assert.equal(await page.locator('[data-note]:visible').count(), publicNotes.length);
   await page.close();
   console.log('PASS no-JavaScript: navigation and all notes accessible');
 } finally {

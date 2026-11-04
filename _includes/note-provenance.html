@@ -1,0 +1,15 @@
+{% if page.kind == 'research' %}
+<aside class="note-provenance" aria-label="研究来源与核对记录" data-research-provenance>
+  <details open>
+    <summary>研究来源与核对记录</summary>
+    <dl>
+      <div><dt>研究对象</dt><dd><a href="{{ page.source_repo | escape }}">{{ page.source_repo | remove: 'https://github.com/' | escape }}</a></dd></div>
+      <div><dt>固定版本</dt><dd><code>{{ page.source_commit | escape }}</code></dd></div>
+      <div><dt>分析日期</dt><dd><time datetime="{{ page.analyzed_at | date: '%Y-%m-%d' }}">{{ page.analyzed_at | date: '%Y-%m-%d' }}</time></dd></div>
+      <div><dt>来源核对</dt><dd><time datetime="{{ page.reviewed_at | date: '%Y-%m-%d' }}">{{ page.reviewed_at | date: '%Y-%m-%d' }}</time><span>来源已核对</span></dd></div>
+    </dl>
+    <p>核对指公开源码与文档交叉检查，不代表人工批准、上游认可或正式发布。{% if page.ai_assisted %}本笔记使用 AI 辅助整理，请结合原始证据判断。{% endif %}</p>
+    <ul>{% for source in page.sources %}<li><a href="{{ source.url | escape }}">{{ source.title | escape }}</a></li>{% endfor %}</ul>
+  </details>
+</aside>
+{% endif %}
