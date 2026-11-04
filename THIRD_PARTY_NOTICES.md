@@ -93,3 +93,12 @@ The public BestBlogs reading note independently summarizes evidence at commit
 implementation, Prompt, DSL, image, OPML or article body is redistributed. Its
 CLI/Skills declare MIT locally; no root-wide license was verified. See
 `docs/iteration-6-compliance.md` and the retained seven research reports.
+
+## Iteration 7 design reference
+
+VoltAgent awesome-design-md, commit fcc70284932276d085f01ef9f83edde90b1258cb:
+MIT, Copyright (c) 2026 VoltAgent. Full notice:
+licenses/VoltAgent-awesome-design-md-MIT.txt. Used to study design documentation
+and tonal/component principles; no brand UI implementation, proprietary font,
+logo, photo or third-party mascot was incorporated. New styling is original;
+the small Mote illustration already belongs to this project.

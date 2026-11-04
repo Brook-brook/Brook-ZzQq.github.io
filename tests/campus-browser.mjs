@@ -266,7 +266,7 @@ try {
         .getPropertyValue("--main-bg")
         .trim()
     ),
-    "#080710" // Iteration 4 user-specified Obsidian base.
+    "#171127" // Iteration 7 user-requested soft deep-purple base.
   );
   await l.goto(base + "/");
   await l.click("#theme-toggle");
@@ -280,7 +280,7 @@ try {
         .getPropertyValue("--main-bg")
         .trim()
     ),
-    "#f3eff9" // Corresponding shared light palette.
+    "#f5effc" // Corresponding milk-lavender light palette.
   );
   await legacy.close();
   console.log(

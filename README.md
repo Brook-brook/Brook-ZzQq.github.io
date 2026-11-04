@@ -6,6 +6,14 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 7 UI refinement
+
+The lavender garden refinement is on `feat/atlas-iteration-7`, based on sixth-round
+`07a2b5e`. It studies awesome-design-md without copying branded assets.
+[Report/screenshots](docs/ATLAS-ITERATION-7.md),
+[reference study](docs/design-research-iteration-7.md),
+[compliance](docs/iteration-7-compliance.md). Publishing remains unchanged.
+
 ## Iteration 6 review
 
 Source-based research notes and a local RSS/Atom learning experiment are on

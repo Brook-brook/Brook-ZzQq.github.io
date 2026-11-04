@@ -1,0 +1,36 @@
+PASS campus 390: axe, filters, empty state, favorites, marker/detail, layers, view persistence, keyboard, reduced motion
+PASS campus 768: axe, filters, empty state, favorites, marker/detail, layers, view persistence, keyboard, reduced motion
+PASS campus 1440: axe, filters, empty state, favorites, marker/detail, layers, view persistence, keyboard, reduced motion
+PASS campus touch, no-JS source cards and shared legacy palette
+PASS campus network failure and blocked storage fallbacks
+
+PASS Obsidian 320: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 390: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 768: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 1440: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 1920: map-first, selected controls, keyboard, complete source list, glass fallback
+
+PASS Universe 390 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 390 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 768 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 768 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 1440 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 1440 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe no-JavaScript: all tutorials and notebook previews readable
+
+PASS Study 390 dark: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 390 light: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 768 dark: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 768 light: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 1440 dark: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 1440 light: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study no-JavaScript 390: 6 published notes and full content routes readable
+PASS Study no-JavaScript 1440: 6 published notes and full content routes readable
+
+PASS research 390 dark: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 390 light: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 768 dark: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 768 light: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 1440 dark: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 1440 light: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research no-JavaScript: readable fixture, explicit limitation, disabled execution/export and actual learning links
