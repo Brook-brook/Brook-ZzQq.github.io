@@ -49,3 +49,20 @@
   images, maps/data and their actual licenses/provenance. Do not copy resources of
   unclear origin. Preserve copyright and required full license text. Update
   THIRD_PARTY_NOTICES.md and docs/iteration-N-compliance.md, even with no additions.
+
+## Study content (Iteration 6)
+
+- Existing notes without kind remain tutorials. Research uses kind: research,
+  review_status: source_checked, a full source_commit, HTTPS source_repo, dated
+  analyzed_at/reviewed_at, titled HTTPS sources and explicit ai_assisted boolean.
+- source_checked means evidence cross-checking, not human/owner publication approval.
+  Never write reviewed_by: Brook to describe an automated source audit.
+- The Jekyll post_read hook removes published:false, draft:true and unverified
+  research from every collection consumer/direct output, even with --unpublished.
+  Checked research with incomplete provenance fails the build. Do not bypass this
+  by publishing raw source or using --safe (which disables custom plugins).
+- Keep lab_url optional; render no empty or fake experiment link. New categories
+  and content kinds must remain searchable in Study and the retained Knowledge.
+- Run npm run test:study:build as well as the existing suites after content model
+  changes. The local research lab never fetches URLs, stores pasted text or calls
+  AI; edits invalidate exported results, and output remains needs_review.

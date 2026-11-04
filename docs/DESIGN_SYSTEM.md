@@ -114,3 +114,19 @@ a real capture of the fifth-round Home, not a fabricated interface or stock phot
 Use `_data/projects.yml` optional fields and generic includes for new work rather
 than writing rigid technology categories into navigation. Build records describe
 real website changes, not inferred personal study progress or life events.
+
+
+## Sixth-round research and data learning
+
+Study adds separate native pressed-button groups for content type and category,
+a keyword field, shareable query state and a reset action. Research provenance
+uses typography and a native disclosure, with wrapping full commits and source
+links. It is not another card grid or an approval badge. Tutorials retain the
+same layout and only show experiment links when a real lab_url exists.
+
+The new RSS/Atom lab is an app screen inside the existing shell. Source and JSON
+use the code face, while controls and explanations use the body face. Row labels
+explain retained/duplicate/invalid decisions in text; counts derive from actual
+input. No new color tokens, blur stacks, idle motion or visualization libraries.
+Errors identify/focus the XML field; edits clear stale output and disable export.
+No-JS keeps the sample, limitations and reading paths accessible.

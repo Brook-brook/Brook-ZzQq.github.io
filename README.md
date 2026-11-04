@@ -6,6 +6,15 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 6 review
+
+Source-based research notes and a local RSS/Atom learning experiment are on
+`feat/atlas-iteration-6`, based on research commit `3d49c7f` (fifth-round product
+baseline `a4b24a6`). This is a review branch, with no automatic merge/publication.
+See [scope and validation](docs/ATLAS-ITERATION-6.md),
+[initial audit](docs/iteration-6-audit.md), [content authoring](docs/STUDY_CONTENT.md)
+and [license review](docs/iteration-6-compliance.md).
+
 ## Iteration 5 review
 
 The new Home, Study and data-driven Projects are on `feat/atlas-iteration-5`,
@@ -17,11 +26,12 @@ and [third-party notices](THIRD_PARTY_NOTICES.md).
 ## Explore
 
 - `/`: personal introduction, real tutorial notebook, selected work and build records.
-- `/study/`: searchable Markdown tutorials and linked interactive experiments.
+- `/study/`: searchable tutorials and source-based research; type/category/query filters can be shared by URL.
 - `/explore/`: sourced Zijingang point atlas, search, favorites and Geo/AI/Code lab links.
 - `/playground/`: prisoner/stag games, C++ copying and Mercator scale.
 - `/playground/nash/`: editable 2×2 pure-strategy equilibrium explorer.
 - `/playground/python/`: real Python via lazy Pyodide Worker.
+- `/playground/research/`: edit local RSS/Atom, inspect URL normalization/deduplication and download unreviewed JSON; no network or AI.
 - `/knowledge/`: retained relationship map and tutorial index; all article URLs remain valid.
 - `/projects/`, `/about/`: accurate project states and public introduction.
 - `/journal/`: preserved Chirpy demo posts; old `/atlas/` routes redirect.
@@ -48,6 +58,7 @@ if you do not have Ruby. See the iteration report for exact ZIP instructions.
 ```sh
 npm test
 npm run test:atlas
+npm run test:study:build
 bash tools/test.sh
 python3 -m http.server 4173 --directory _site
 # In another terminal:
@@ -62,12 +73,14 @@ Python tests need the pinned jsDelivr runtime; no model/service credentials exis
 
 ## Content and boundaries
 
-Add a Markdown file to `_atlas_notes/` with existing metadata; Study categories,
+Add tutorials or source-checked research Markdown to `_atlas_notes/`; see
+[the metadata/publication rules](docs/STUDY_CONTENT.md). Research without complete
+evidence or the required status does not become a public article. Study categories,
 latest notes and article pages update automatically. Add project records to
 `_data/projects.yml`; optional details, links, preview and `featured: true` drive
 Projects and Home without separate page edits. Notebook choices and factual
-build records live in `_data/universe.yml`. No CMS or database is needed. Tutorials added in this
-iteration are labelled laboratory tutorials, not personal experience or accolades.
+build records live in `_data/universe.yml`. No CMS or database is needed. Content labels distinguish laboratory tutorials and project research, without
+claiming personal experience or accolades. Source checking is not owner approval.
 
 Only pure-strategy equilibria are enumerated. C++ is a semantic visualization;
 unsafe shallow-copy code is not executed. GIS uses spherical/local approximations.
@@ -80,6 +93,8 @@ browser virtual filesystem, output cap and 5-second run timeout.
 - [Design system](docs/DESIGN_SYSTEM.md)
 - [Roadmap and limits](docs/ROADMAP.md)
 - [Locked product/design direction](design.md)
+- [Iteration 6 report](docs/ATLAS-ITERATION-6.md)
+- [Study content model](docs/STUDY_CONTENT.md)
 - [Iteration 5 product audit](docs/iteration-5-audit.md)
 - [Iteration 5 screenshots and validation](docs/ATLAS-ITERATION-5.md)
 - [Open-source review](docs/iteration-5-compliance.md)

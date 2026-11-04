@@ -1,0 +1,15 @@
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+assets/css/obsidian.css
+  WAIVED 29 :135 glass panel: backdrop-filter blur over a translucent white on .glass-light
+  WAIVED 29 :267 glass panel: backdrop-filter blur over a translucent white on .site-header #primary-nav
+  ANSWERED F4 :846 3 filled primary-button recipes: .campus-categories button[aria-pressed='true'] + .m…
+  ANSWERED F24 :126 a hairline border under a wide soft shadow on .glass-light, .glass-medium, .glass-heavy
+http://127.0.0.1:4179/Brook-ZzQq.github.io/study/
+  WAIVED 49b :1 [320px] link "把 RSS 条目整理成可核对的 JSON" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "读 BestBlogs：先把源码与产品描述分开" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "用 Python 把一个问题拆成输入与输出" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "纳什均衡，为什么不等于社会最优？" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "复制了对象，为什么数据仍然共享？" wraps to 2 lines (a)
+assets/css/atlas-tokens.css
+  NOTE waive :1 4 reflex gates waived (29, 12, 11, 49b): that is a house style, not a s… | fix: Lock it into a design.md so later pages inherit it instead of re-arguing it
+sloplint: 0 FAIL, 0 WARN, 7 WAIVED, 2 ANSWERED, 1 NOTE across 3 file(s) and 1 URL(s).
