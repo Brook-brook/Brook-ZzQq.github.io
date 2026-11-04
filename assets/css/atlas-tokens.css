@@ -1,39 +1,39 @@
 /* Hallmark · shape: shared tokens · genre: atmospheric · theme: brand · redesign: full
- * paper: #080710 · accent: #a78bfa · display: system sans · body: system sans
+ * paper: #171127 · accent: #c3a5f5 · display: system sans · body: system sans
  * nav: glass dock · signature: sourced Zijingang point atlas · states: loading / empty / error / selected
  * axes: dark/grotesk-sans/chromatic-purple · posture: restrained · motion: calm · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V4 · weakest: hierarchy, moved the working map ahead of introductory copy */
 :root {
   color-scheme: dark;
-  --bg-base: #080710;
-  --bg-elevated: #181225;
-  --bg-surface: #211a32;
-  --accent-primary: #a78bfa;
-  --accent-soft: #d8c9ff;
+  --bg-base: #171127;
+  --bg-elevated: #231a39;
+  --bg-surface: #302443;
+  --accent-primary: #c3a5f5;
+  --accent-soft: #e3d4ff;
   --accent-glow: rgba(167, 139, 250, 0.16);
-  --text-primary: #f5f1ff;
-  --text-secondary: #b8aecf;
-  --glass-fill: rgba(30, 23, 48, 0.72);
-  --glass-border: rgba(216, 201, 255, 0.18);
-  --glass-light: rgba(27, 22, 40, 0.72);
-  --glass-medium: rgba(30, 23, 48, 0.8);
-  --glass-heavy: rgba(32, 25, 48, 0.94);
-  --glass-solid: #211a32;
+  --text-primary: #f8f2ff;
+  --text-secondary: #c8badb;
+  --glass-fill: rgba(48, 35, 70, 0.65);
+  --glass-border: rgba(222, 201, 255, 0.25);
+  --glass-light: rgba(48, 35, 70, 0.60);
+  --glass-medium: rgba(57, 42, 80, 0.68);
+  --glass-heavy: rgba(48, 35, 70, 0.92);
+  --glass-solid: #302443;
   --glass-highlight: rgba(255, 249, 255, 0.08);
   --glass-shadow: rgba(3, 1, 8, 0.3);
   --glass-reflection: rgba(216, 201, 255, 0.045);
   --glass-blur-light: 10px;
   --glass-blur-medium: 18px;
   --glass-blur-heavy: 24px;
-  --color-field: #100d1b;
-  --color-map: #100d1b;
+  --color-field: #1d162e;
+  --color-map: #1d162e;
   --color-map-grid: rgba(196, 181, 253, 0.065);
   --color-map-ink: #ded4f8;
-  --color-control-edge: #7b6a98;
-  --color-control-hover: #352943;
-  --color-point-fill: #252035;
-  --color-point-ring: #9c88bc;
-  --color-on-accent: #181025;
+  --color-control-edge: #9681b2;
+  --color-control-hover: #49365f;
+  --color-point-fill: #38284d;
+  --color-point-ring: #baa0d9;
+  --color-on-accent: #261638;
   --color-lake: #c8bedf;
   --color-rule: var(--glass-border);
   --color-muted: var(--text-secondary);
@@ -83,8 +83,8 @@
   --dur-micro: 120ms;
   --dur-short: 220ms;
   --dur-long: 420ms;
-  --radius-card: 24px;
-  --radius-control: 12px;
+  --radius-card: 28px;
+  --radius-control: 16px;
   --radius-pill: 999px;
   --container: 1600px;
   --gutter: 32px;
@@ -101,29 +101,29 @@
 }
 :root[data-theme='light'] {
   color-scheme: light;
-  --bg-base: #f3eff9;
-  --bg-elevated: #eae2f3;
-  --bg-surface: #e3daee;
-  --accent-primary: #6941a5;
-  --accent-soft: #684096;
+  --bg-base: #f5effc;
+  --bg-elevated: #eee4f8;
+  --bg-surface: #e7d9f2;
+  --accent-primary: #71439f;
+  --accent-soft: #674087;
   --accent-glow: rgba(105, 65, 165, 0.1);
-  --text-primary: #241a35;
-  --text-secondary: #61516f;
-  --glass-fill: rgba(249, 245, 255, 0.82);
+  --text-primary: #30203f;
+  --text-secondary: #665173;
+  --glass-fill: rgba(255, 251, 255, 0.72);
   --glass-border: rgba(89, 64, 117, 0.2);
-  --glass-light: rgba(249, 245, 255, 0.8);
-  --glass-medium: rgba(249, 245, 255, 0.86);
-  --glass-heavy: rgba(249, 245, 255, 0.96);
+  --glass-light: rgba(255, 251, 255, 0.65);
+  --glass-medium: rgba(255, 251, 255, 0.76);
+  --glass-heavy: rgba(255, 251, 255, 0.94);
   --glass-solid: #f9f5ff;
   --glass-highlight: rgba(255, 249, 255, 0.9);
   --glass-shadow: rgba(48, 25, 68, 0.09);
   --glass-reflection: rgba(105, 65, 165, 0.035);
-  --color-field: #eae2f3;
-  --color-map: #eae2f3;
+  --color-field: #eee4f8;
+  --color-map: #eee4f8;
   --color-map-grid: rgba(79, 55, 106, 0.1);
   --color-map-ink: #59416f;
-  --color-control-edge: #887198;
-  --color-control-hover: #e5daee;
+  --color-control-edge: #90739f;
+  --color-control-hover: #e7d7f3;
   --color-point-fill: #f3edf9;
   --color-point-ring: #7c5b99;
   --color-on-accent: #fffaff;

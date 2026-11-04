@@ -15,7 +15,7 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/atlas/mark.svg' | relative_url }}">
-  <meta name="theme-color" content="#080710">
+  <meta name="theme-color" content="#171127">
   <script src="{{ '/assets/js/atlas/theme.js' | relative_url }}"></script>
   <link rel="stylesheet" href="{{ '/assets/css/atlas-tokens.css' | relative_url }}">
   {% unless page.campus or page.universe %}<link rel="stylesheet" href="{{ '/assets/css/atlas.css' | relative_url }}">{% endunless %}
@@ -23,6 +23,7 @@
   {% if page.collection == 'atlas_notes' or page.url == '/study/' %}<link rel="stylesheet" href="{{ '/assets/css/study.css' | relative_url }}">{% endif %}
   {% if page.universe %}<link rel="stylesheet" href="{{ '/assets/css/universe.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/universe.js' | relative_url }}"></script>{% endif %}
   {% if page.research %}<link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/research.js' | relative_url }}"></script>{% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/lavender.css' | relative_url }}">
   <script type="module" src="{{ '/assets/js/atlas/site.js' | relative_url }}"></script>
   <meta name="view-transition" content="same-origin">
   <script type="module" src="{{ '/assets/js/atlas/motion.js' | relative_url }}"></script>

@@ -24,3 +24,21 @@ may wrap to two phone lines; primary navigation and control labels remain single
 See docs/DESIGN_SYSTEM.md for the shared system, docs/iteration-5-audit.md for scope,
 and THIRD_PARTY_NOTICES.md for provenance. Every iteration updates its compliance
 report. No production source changes, auto-merge or deployment without authorization.
+
+## Lavender garden refinement (Iteration 7)
+
+The user's latest preference refines the material to pale/deep purple, translucent
+frosted glass and a soft, comforting personality. Authoritative colors are now
+#171127 night canvas, #231A39 elevation, #C3A5F5 action and #E3D4FF soft accent;
+light mode is #F5EFFC with #71439F actions and dark plum text. Tokens remain the
+source of truth. The older hex examples above describe the previous iteration.
+
+Keep the actual personal notebook, learning content and campus work. Round actions
+into pills, retain readable fields and use existing Mote only as a tiny companion.
+Glass is isolated and has opaque/reduced-transparency fallbacks. Never introduce
+idle character animation, fake personal progress, brand logos or proprietary fonts.
+
+Design specification order: atmosphere, semantic palette, type hierarchy,
+component states, layout/spacing, elevation, guardrails, responsive behavior and
+implementation guidance. See docs/design-research-iteration-7.md for the pinned
+reference study; this is an original Brook adaptation, not a copied brand theme.

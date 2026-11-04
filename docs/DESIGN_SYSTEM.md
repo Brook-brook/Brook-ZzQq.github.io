@@ -130,3 +130,13 @@ explain retained/duplicate/invalid decisions in text; counts derive from actual
 input. No new color tokens, blur stacks, idle motion or visualization libraries.
 Errors identify/focus the XML field; edits clear stale output and disable export.
 No-JS keeps the sample, limitations and reading paths accessible.
+
+## Iteration 7: lavender garden
+
+The latest user preference softens Obsidian into deep purple and milk-lavender.
+Current tokens supersede the earlier color table: night #171127, elevated #231A39,
+action #C3A5F5, soft accent #E3D4FF; light #F5EFFC, action #71439F. Text remains
+high contrast; semi-transparent layers retain solid fallbacks. lavender.css adds
+rounded actions and a quiet tonal canvas without changing page structures.
+Reduced transparency removes backdrop filters; mobile keeps existing lower blur.
+The existing Mote greets readers inside the working notebook, without idle motion.
