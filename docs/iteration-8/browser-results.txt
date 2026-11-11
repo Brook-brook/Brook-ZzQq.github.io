@@ -85,3 +85,29 @@ Real Python execution
 > node tests/atlas-python.mjs
 
 PASS real Pyodide in Chromium: 3 examples, exception, capped output, infinite-loop timeout, reload and stop
+
+Final accessibility refinement: input leaves unchanged live status regions intact (MutationObserver assertion)
+PASS learning 390 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 390 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 768 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 768 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 1440 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 1440 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning storage blocked: no false durable-save claim, memory/export remain usable
+PASS learning storage corrupt: no false durable-save claim, memory/export remain usable
+PASS learning storage quota: no false durable-save claim, memory/export remain usable
+PASS learning multiple tabs: external changes pause saving rather than silently overwrite
+PASS learning no-JS: routes, real resources and questions readable without fake controls
+
+Root path: final accessibility refinement and complete learning regression
+PASS learning 390 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 390 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 768 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 768 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 1440 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 1440 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning storage blocked: no false durable-save claim, memory/export remain usable
+PASS learning storage corrupt: no false durable-save claim, memory/export remain usable
+PASS learning storage quota: no false durable-save claim, memory/export remain usable
+PASS learning multiple tabs: external changes pause saving rather than silently overwrite
+PASS learning no-JS: routes, real resources and questions readable without fake controls

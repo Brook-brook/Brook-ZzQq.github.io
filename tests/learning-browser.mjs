@@ -63,7 +63,18 @@ try {
     await page.keyboard.press('Space');
     assert.match(await page.locator('#learning-progress').innerText(), /1 \/ 9/);
     await first(page).locator('summary').click();
+    await page.evaluate(() => {
+      window.learningStatusChanges = 0;
+      window.learningStatusObserver = new MutationObserver(() => { window.learningStatusChanges++; });
+      for (const id of ['learning-progress', 'learning-storage']) {
+        window.learningStatusObserver.observe(document.getElementById(id), { childList: true, characterData: true, subtree: true });
+      }
+    });
     await first(page).locator('textarea').fill('我能解释空列表与正常输出。<img src=x onerror=alert(1)>');
+    assert.equal(await page.evaluate(() => {
+      window.learningStatusObserver.disconnect();
+      return window.learningStatusChanges;
+    }), 0, 'typing a note must not rewrite unchanged live announcements');
     const saved = await keyState(page);
     assert.equal(saved.entries['python-values'].completed, true);
     await page.reload();

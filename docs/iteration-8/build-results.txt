@@ -114,3 +114,60 @@ Finished in 1.1 seconds
 Artifact checks
 PASS Pages artifact: rendered layout, 11 homepage assets, main routes and legacy bundles (/Brook-ZzQq.github.io)
 PASS Pages artifact: rendered layout, 11 homepage assets, main routes and legacy bundles (/)
+
+Final accessibility refinement: lint
+
+> jekyll-theme-chirpy@7.6.0 test
+> npm run lint:js && npm run lint:scss
+
+
+> jekyll-theme-chirpy@7.6.0 lint:js
+> eslint
+
+
+> jekyll-theme-chirpy@7.6.0 lint:scss
+> stylelint _sass/**/*.scss
+
+
+Final accessibility refinement: publication fixtures, production build and internal links
+PASS legacy tutorial and checked research render through real Jekyll
+PASS research without source checking stays absent, including --unpublished
+PASS explicit unpublished and draft notes stay absent under --unpublished
+PASS checked research with missing commit fails before output
+PASS credential-bearing source URLs cannot be marked checked
+PASS source-check dates must follow analysis dates
+PASS AI assistance must be explicit boolean metadata
+PASS a misspelled research kind cannot bypass source checking
+PASS quoted published and draft flags cannot accidentally publish notes
+PASS demoting research removes stale output on the same destination
+PASS learning routes reference public notes and require unique stable IDs
+PASS learning routes cannot link research removed by publication checks
+PASS study publication: 12 cases, 77 assertions, 0 failures
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/_site/Brook-ZzQq.github.io
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 2.553 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Running 3 checks (Images, Links, Scripts) in ["_site"] on *.html files ...
+
+
+Checking 176 internal links
+Checking internal link hashes in 25 files
+Ran on 41 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 1.17 seconds
+
+Root-path build after accessibility refinement
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/work/iteration8/root
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 2.434 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.

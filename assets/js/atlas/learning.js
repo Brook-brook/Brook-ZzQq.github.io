@@ -43,7 +43,8 @@ if (workspace) {
       step.classList.toggle('is-self-checked', entry.completed);
       if (entry.completed) completed++;
     }
-    progress.textContent = `已自检 ${completed} / ${steps.length} 步。由你手动记录，不代表系统评定掌握程度。`;
+    const progressText = `已自检 ${completed} / ${steps.length} 步。由你手动记录，不代表系统评定掌握程度。`;
+    if (progress.textContent !== progressText) progress.textContent = progressText;
     const nextId = nextLearningStep(groups, state);
     if (nextId) {
       const target = steps.find((step) => step.dataset.learningStep === nextId);
@@ -68,7 +69,8 @@ if (workspace) {
       const text = JSON.stringify(state);
       localStorage.setItem(LEARNING_KEY, text);
       lastStored = text;
-      storageStatus.textContent = '已保存在当前浏览器。没有上传或发布。';
+      const savedText = '已保存在当前浏览器。没有上传或发布。';
+      if (storageStatus.textContent !== savedText) storageStatus.textContent = savedText;
     } catch {
       writable = false;
       storageStatus.textContent = '无法写入本机存储。本页记录仍在，请导出备份；刷新后可能丢失。';
@@ -78,7 +80,8 @@ if (workspace) {
   function renderImportPreview() {
     const keys = Object.keys(pendingImport.entries);
     const additions = keys.filter((id) => !Object.hasOwn(state.entries, id)).length;
-    previewSummary.textContent = `备份包含 ${keys.length} 条记录，可补入 ${additions} 条。已有记录以本页为准；导入前不会改动任何记录。`;
+    const summaryText = `备份包含 ${keys.length} 条记录，可补入 ${additions} 条。已有记录以本页为准；导入前不会改动任何记录。`;
+    if (previewSummary.textContent !== summaryText) previewSummary.textContent = summaryText;
     confirmImport.disabled = additions === 0;
   }
 
