@@ -24,8 +24,8 @@
     "lint:fix:scss": "npm run lint:scss -- --fix",
     "test": "npm run lint:js && npm run lint:scss",
     "prepare": "husky",
-    "test:atlas": "node --test tests/atlas-models.test.js tests/campus-models.test.js tests/pages-build.test.js tests/research-models.test.js",
-    "test:atlas:browser": "node tests/atlas-browser.mjs && node tests/campus-browser.mjs && node tests/obsidian-browser.mjs && node tests/universe-browser.mjs && node tests/study-browser.mjs && node tests/research-browser.mjs",
+    "test:atlas": "node --test tests/atlas-models.test.js tests/campus-models.test.js tests/pages-build.test.js tests/research-models.test.js tests/learning-models.test.js",
+    "test:atlas:browser": "node tests/atlas-browser.mjs && node tests/campus-browser.mjs && node tests/obsidian-browser.mjs && node tests/universe-browser.mjs && node tests/study-browser.mjs && node tests/research-browser.mjs && node tests/learning-browser.mjs",
     "test:atlas:python": "node tests/atlas-python.mjs",
     "test:study:build": "bundle exec ruby tests/study-publication.rb"
   },

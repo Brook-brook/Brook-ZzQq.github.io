@@ -1,0 +1,3 @@
+{% assign note_slug = page.slug %}
+{% capture learning_links %}{% for path in site.data.learning_paths %}{% assign matching = path.steps | where: 'note', note_slug %}{% if matching.size > 0 %}{% assign first_step = matching | first %}<a href="{{ '/study/paths/' | relative_url }}#{{ first_step.id }}">{{ path.title }}</a>{% endif %}{% endfor %}{% endcapture %}
+{% assign learning_links = learning_links | strip %}{% if learning_links != '' %}<nav class="note-toc" aria-label="相关学习路线"><strong>放回学习路线</strong>{{ learning_links }}</nav>{% endif %}

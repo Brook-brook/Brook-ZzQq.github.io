@@ -54,3 +54,9 @@ body {
     backdrop-filter: none;
   }
 }
+
+/* Learning links remain lightweight on existing experimental screens. */
+.learning-related { border-top: 1px solid var(--glass-border); padding-block: var(--space-lg); margin-top: var(--space-xl); }
+.learning-related h2 { font-size: var(--text-lg); }
+.learning-related > div { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); }
+.learning-related a { display: inline-flex; align-items: center; min-height: 44px; font-size: var(--text-sm); }

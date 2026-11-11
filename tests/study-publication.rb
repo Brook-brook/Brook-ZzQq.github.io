@@ -7,6 +7,7 @@ require "tmpdir"
 require "yaml"
 require "jekyll"
 require_relative "../_plugins/atlas-note-publication"
+require_relative "../_plugins/learning-path-validation"
 
 # A generator runs after :site/:post_read, just as an index/sitemap generator
 # would. Its written output must never receive filtered research documents.
@@ -211,6 +212,43 @@ class StudyPublicationChecks
         site = build(source, destination)
         absent_everywhere(site, destination, ["checked"])
         assert(!File.read(File.join(destination, "index.html")).include?("checked-preview"), "stale notebook preview remains")
+      end
+    end
+
+    check("learning routes reference public notes and require unique stable IDs") do
+      with_fixture do |source, destination|
+        note(source, "legacy")
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        path = [{ "id" => "route", "title" => "Real fixture route", "summary" => "Learning",
+                  "steps" => [{ "id" => "first", "title" => "Read", "note" => "legacy", "question" => "Explain?" }] }]
+        data_file = File.join(source, "_data", "learning_paths.yml")
+        File.write(data_file, YAML.dump(path))
+        site = build(source, destination)
+        assert(site.collections.fetch("atlas_notes").docs.length == 1, "valid route should preserve notes")
+        path[0]["steps"][0]["id"] = "route"
+        File.write(data_file, YAML.dump(path))
+        begin
+          build(source, destination)
+          assert(false, "duplicate route/step IDs must fail")
+        rescue Jekyll::Errors::FatalException => error
+          assert(error.message.include?("learning_paths.yml"), "identify invalid route data")
+        end
+      end
+    end
+
+    check("learning routes cannot link research removed by publication checks") do
+      with_fixture do |source, destination|
+        note(source, "pending", "kind" => "research", "review_status" => "needs_review")
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        path = [{ "id" => "route", "title" => "Fixture", "summary" => "Learning",
+                  "steps" => [{ "id" => "first", "title" => "Read", "note" => "pending", "question" => "Explain?" }] }]
+        File.write(File.join(source, "_data", "learning_paths.yml"), YAML.dump(path))
+        begin
+          build(source, destination, unpublished: true)
+          assert(false, "route to unpublished research must fail")
+        rescue Jekyll::Errors::FatalException
+          assert(!File.exist?(page_path(destination, "pending")), "hidden research must remain absent")
+        end
       end
     end
 
