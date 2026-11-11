@@ -102,3 +102,12 @@ licenses/VoltAgent-awesome-design-md-MIT.txt. Used to study design documentation
 and tonal/component principles; no brand UI implementation, proprietary font,
 logo, photo or third-party mascot was incorporated. New styling is original;
 the small Mote illustration already belongs to this project.
+
+## Iteration 8 learning ecosystem
+
+No new third-party package, source implementation, course material, font, icon,
+image or map/data source is integrated. Learning routes, self-check prompts,
+local journal/backup logic and tests are original project work using existing
+notes/labs and platform APIs. Existing Mote and all license notices remain.
+Environment setup restores the existing npm/Ruby development dependencies;
+it does not add application dependencies. See docs/iteration-8-compliance.md.

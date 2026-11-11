@@ -66,3 +66,22 @@
 - Run npm run test:study:build as well as the existing suites after content model
   changes. The local research lab never fetches URLs, stores pasted text or calls
   AI; edits invalidate exported results, and output remains needs_review.
+
+## Learning ecosystem (Iteration 8)
+
+- Routes in `_data/learning_paths.yml` connect public notes, actual labs and
+  scientific self-check questions. `_plugins/learning-path-validation.rb` runs
+  after note publication filtering; keep both hooks and their real-build tests.
+- Path/step IDs are permanent browser-record identifiers. Do not rename/remove
+  them without an explicit versioned data migration and recovery tests.
+- `/study/paths/` records only explicit checks and optional notes. Reading or
+  visiting an experiment must not imply completion, mastery or personal history.
+- Journal data uses only `brooks-universe.learning.v1` in localStorage. Never
+  send it to a server, include it in a URL/repository or mix it with pasted RSS.
+  Keep plain-text/local-storage limits visible; no cloud/encryption claims.
+- Backups require bounded validation, preview and explicit merge; local entries
+  win conflicts. Preserve unreadable raw storage. Blocked/quota/conflicting tabs
+  must show memory-only status and retain export. Reset only this key after
+  confirmation. New features must preserve theme and campus favorites.
+- Run learning models/browser coverage with the existing suites. Verify no-JS
+  reading, both themes, phone controls and storage/import failure states.

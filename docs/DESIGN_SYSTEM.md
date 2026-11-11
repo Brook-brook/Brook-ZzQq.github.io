@@ -140,3 +140,15 @@ high contrast; semi-transparent layers retain solid fallbacks. lavender.css adds
 rounded actions and a quiet tonal canvas without changing page structures.
 Reduced transparency removes backdrop filters; mobile keeps existing lower blur.
 The existing Mote greets readers inside the working notebook, without idle motion.
+
+## Iteration 8 learning routes
+
+Learning paths retain the milk-lavender/deep-purple tokens and soft controls.
+A compact Mote/resume panel reflects explicit local records, not an invented
+achievement. Four native anchor links lead to ruled step lists; no locked modules,
+streaks, fake grades or repetitive dashboard cards. Native disclosures keep journal
+fields optional. Mobile navigation wraps and the desktop route index is sticky.
+All questions and resources remain readable without JavaScript; record controls
+appear only when the local client is ready. Storage failure and import conflicts
+have text feedback, not color-only states. Keyboard, 16px journal fields and
+reduced-motion support remain required.
