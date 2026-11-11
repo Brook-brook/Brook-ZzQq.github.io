@@ -1,0 +1,76 @@
+- id: python-data
+  challenge: 用自编数据写一个最小 Python 清洗脚本，保留正常与错误输入的例子，不必先接入 AI。
+  title: 从 Python 到可核对的数据
+  summary: 从一个能运行的函数出发，整理数据，再追踪研究结论的来源。
+  prerequisite: 可以从零开始；先读教程，再打开实验。
+  steps:
+    - id: python-values
+      title: 把输入变成可解释的输出
+      note: python-first-steps
+      lab: /playground/python/
+      lab_label: 运行 Python
+      question: 把列表改为空列表，mean 函数会发生什么？记录一次正常输出与一次异常，并解释原因。
+    - id: rss-records
+      title: 为数据定义相等与重复
+      note: rss-normalization
+      lab: /playground/research/
+      lab_label: 修改 RSS 样本
+      question: 只改变 id 参数，再改变 utm_source，分别观察保留条数。URL 相同能否证明正文相同？
+    - id: source-evidence
+      title: 让研究判断有可追溯的证据
+      note: bestblogs-research
+      question: 从原始源码找一条 A 级证据，再写一条不能确认的 D 级问题。来源已核对为什么不等于结论已获人工批准？
+- id: spatial-reasoning
+  challenge: 为一份获准使用的公开空间数据写一张说明卡：来源、CRS、单位、分辨率与不能支持的结论。
+  title: 在空间分析前，先问清模型
+  summary: 从投影尺度走向真实地点资料，区分计算结果、示意与数据限制。
+  prerequisite: 了解经纬度即可；公式可结合实验反复观察。
+  steps:
+    - id: mercator-assumptions
+      title: 分清长度、面积与局部尺度
+      note: mercator-scale
+      lab: /playground/#geo
+      lab_label: 调整纬度
+      question: 纬度 60° 时，长度尺度和面积尺度分别是多少？为什么不能用单点尺度修正任意长路线？
+    - id: map-provenance
+      title: 检查地图能支持什么结论
+      note: mercator-scale
+      lab: /explore/
+      lab_label: 检查校园地点与来源
+      question: 选一个地点查看来源。代表点与建筑入口有何区别？现有地点图是否足够支持步行最短路径？
+- id: cpp-ownership
+  challenge: 用值类型或 std::vector 写一个可独立复制的小例子，再用自己的话解释资源何时释放。
+  title: 看见对象背后的资源
+  summary: 比较复制与析构，练习在看起来正常的代码中辨认所有权边界。
+  prerequisite: 知道变量和函数的基本含义；不需要先掌握全部 C++。
+  steps:
+    - id: copy-relations
+      title: 对象复制了，资源也复制了吗？
+      note: cpp-copy
+      lab: /playground/#copy
+      lab_label: 逐步观察对象复制
+      question: 浅拷贝时两个对象指向哪里？深拷贝后修改副本，原对象为什么保持独立？
+    - id: lifetime-boundaries
+      title: 不把未定义行为当作固定结果
+      note: cpp-copy
+      lab: /playground/#copy
+      lab_label: 比较析构与 RAII 示例
+      question: 一份资源由两个原始指针重复释放时，能否预测确定输出？std::vector 示例如何表达独立值语义？
+- id: game-models
+  challenge: 设计一个自己的 2×2 收益矩阵，逐一说明哪些结果能抵抗单方面改变策略。
+  title: 把策略和最优分开看
+  summary: 从个人收益到收益矩阵，辨认均衡、共同利益和模型的计算范围。
+  prerequisite: 能比较两个数的大小；先从 2×2 矩阵开始。
+  steps:
+    - id: individual-collective
+      title: 个人最佳回应与集体利益
+      note: game-equilibrium
+      lab: /playground/#game
+      lab_label: 调整博弈策略
+      question: 囚徒困境中的均衡为什么不是集体收益最高的结果？猎鹿博弈为什么会有两个纯策略均衡？
+    - id: pure-equilibrium
+      title: 没找到纯策略均衡，意味着什么？
+      note: game-equilibrium
+      lab: /playground/nash/
+      lab_label: 编辑收益矩阵
+      question: 用匹配硬币的收益矩阵测试探索器。没有纯策略均衡，是否等于不存在任何纳什均衡？

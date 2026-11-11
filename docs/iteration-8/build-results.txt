@@ -1,0 +1,173 @@
+Iteration 8 — actual local verification, 2026-11-11
+
+ESLint and SCSS
+
+> jekyll-theme-chirpy@7.6.0 test
+> npm run lint:js && npm run lint:scss
+
+
+> jekyll-theme-chirpy@7.6.0 lint:js
+> eslint
+
+
+> jekyll-theme-chirpy@7.6.0 lint:scss
+> stylelint _sass/**/*.scss
+
+
+Model tests
+
+> jekyll-theme-chirpy@7.6.0 test:atlas
+> node --test tests/atlas-models.test.js tests/campus-models.test.js tests/pages-build.test.js tests/research-models.test.js tests/learning-models.test.js
+
+✔ prisoner: individual equilibrium differs from social optimum (1.702544ms)
+✔ stag has two coordination equilibria and handles indifference (0.279247ms)
+✔ all reported equilibria resist unilateral improvements across slider range (1.595269ms)
+✔ Mercator: equator, 60 degrees, symmetry and domain (0.562929ms)
+✔ copy ownership: mutation and destruction (0.425279ms)
+✔ matching pennies has no pure equilibrium; all-zero game has four (0.280461ms)
+✔ campus filtering combines query, category and favorites, including verified empty categories (1.43504ms)
+✔ Mercator point projection preserves east/right, north/up, and fits multiple screens (0.425807ms)
+✔ invalid or unrelated-campus coordinates are rejected rather than rendered (0.596098ms)
+✔ stored view values are bounded and invalid storage values cannot escape the map (0.251162ms)
+✔ starts empty, changes only explicit manual records and supports undo (2.825005ms)
+✔ JSON backup round trip keeps Unicode and literal markup as data (1.471975ms)
+✔ bad JSON, unsupported versions, extra fields and unknown IDs fail, never partially restore (2.593665ms)
+✔ bounded notes and UTF-8 file size reject excess input (2.824225ms)
+✔ maximum current nine-step backup round trips even escaped control characters (1.400991ms)
+✔ import merges new records, preserves all occupied local records and does not mutate inputs (0.468129ms)
+✔ blank imported records do not block useful restoration (0.587064ms)
+✔ continuation prioritizes an active unfinished path, not a fabricated ability score (0.920025ms)
+✔ Pages artifact guard rejects the raw Jekyll checkout that caused the plain page (47.529488ms)
+✔ URL identity: host/default port/fragment normalize without removing meaningful query (1.394567ms)
+✔ tracking removal preserves remaining query order and duplicate parameters (0.211761ms)
+✔ tracking removal can be disabled while fragment removal remains explicit (4.678287ms)
+✔ tracker filtering preserves retained query spelling, bare values and encoded keys (0.477453ms)
+✔ non-web, relative, credential-bearing and concealed-control URLs are rejected (0.779685ms)
+✔ URL dedup keeps the first record and reports invalid entries independently (2.649761ms)
+✔ the tracking option changes dedup rather than silently discarding query identity (0.498085ms)
+✔ output is deterministic, input is untouched, and no synthetic AI result is assigned (0.414396ms)
+✔ empty and all-invalid inputs remain explicit and over-limit input fails (0.829612ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 590.721212
+
+Jekyll publication fixtures, production build and internal links
+PASS legacy tutorial and checked research render through real Jekyll
+PASS research without source checking stays absent, including --unpublished
+PASS explicit unpublished and draft notes stay absent under --unpublished
+PASS checked research with missing commit fails before output
+PASS credential-bearing source URLs cannot be marked checked
+PASS source-check dates must follow analysis dates
+PASS AI assistance must be explicit boolean metadata
+PASS a misspelled research kind cannot bypass source checking
+PASS quoted published and draft flags cannot accidentally publish notes
+PASS demoting research removes stale output on the same destination
+PASS learning routes reference public notes and require unique stable IDs
+PASS learning routes cannot link research removed by publication checks
+PASS study publication: 12 cases, 77 assertions, 0 failures
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/_site/Brook-ZzQq.github.io
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 2.741 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Running 3 checks (Images, Links, Scripts) in ["_site"] on *.html files ...
+
+
+Checking 176 internal links
+Checking internal link hashes in 25 files
+Ran on 41 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 0.94 seconds
+
+Root-path build
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/work/iteration8/root
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 2.454 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+
+Root-path internal links
+Running 3 checks (Images, Links, Scripts) in ["work/iteration8/root"] on *.html files ...
+
+
+Checking 176 internal links
+Checking internal link hashes in 25 files
+Ran on 41 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 1.1 seconds
+
+Artifact checks
+PASS Pages artifact: rendered layout, 11 homepage assets, main routes and legacy bundles (/Brook-ZzQq.github.io)
+PASS Pages artifact: rendered layout, 11 homepage assets, main routes and legacy bundles (/)
+
+Final accessibility refinement: lint
+
+> jekyll-theme-chirpy@7.6.0 test
+> npm run lint:js && npm run lint:scss
+
+
+> jekyll-theme-chirpy@7.6.0 lint:js
+> eslint
+
+
+> jekyll-theme-chirpy@7.6.0 lint:scss
+> stylelint _sass/**/*.scss
+
+
+Final accessibility refinement: publication fixtures, production build and internal links
+PASS legacy tutorial and checked research render through real Jekyll
+PASS research without source checking stays absent, including --unpublished
+PASS explicit unpublished and draft notes stay absent under --unpublished
+PASS checked research with missing commit fails before output
+PASS credential-bearing source URLs cannot be marked checked
+PASS source-check dates must follow analysis dates
+PASS AI assistance must be explicit boolean metadata
+PASS a misspelled research kind cannot bypass source checking
+PASS quoted published and draft flags cannot accidentally publish notes
+PASS demoting research removes stale output on the same destination
+PASS learning routes reference public notes and require unique stable IDs
+PASS learning routes cannot link research removed by publication checks
+PASS study publication: 12 cases, 77 assertions, 0 failures
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/_site/Brook-ZzQq.github.io
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 2.553 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Running 3 checks (Images, Links, Scripts) in ["_site"] on *.html files ...
+
+
+Checking 176 internal links
+Checking internal link hashes in 25 files
+Ran on 41 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 1.17 seconds
+
+Root-path build after accessibility refinement
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/work/iteration8/root
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 2.434 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.

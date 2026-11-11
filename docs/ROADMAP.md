@@ -69,3 +69,24 @@ URLs, independently written BestBlogs/RSS notes and a local RSS/Atom-to-JSON lab
 Existing map and programming labs remain. Next: verify the usefulness of curated
 notes before considering a separately bounded Research CLI/Agent. No live content
 crawler, model scoring, recommendation service or automatic publication is added.
+
+## Iteration 7 UI refinement
+
+Shared purple-night/milk-lavender tokens, softer glass, rounded controls and the
+original Mote remain the baseline. The referenced design documents informed the
+UI without copying branded assets. See `ATLAS-ITERATION-7.md`.
+
+## Iteration 8 learning ecosystem — review branch
+
+Four freely accessible learning routes connect the six existing notes and actual
+experiments: Python/data/evidence, projection/provenance, C++ ownership and game
+models. Nine self-check steps have optional manual checks and local notes, a
+continue link, and JSON export/previewed merge. Notes and relevant labs link back
+to their routes. Storage failures and another tab's changes pause persistence
+without claiming durable saving. No automatic mastery or engagement counters.
+
+Next useful learning work: deepen one route with independently written worked
+examples and explanation feedback, then add RAII/move or public-goods material
+only alongside a real experiment. A durable cross-device journal needs a separate
+storage/identity decision; there is no synchronization or account in this version.
+The fourth-to-eighth-round branches remain review work until explicitly published.

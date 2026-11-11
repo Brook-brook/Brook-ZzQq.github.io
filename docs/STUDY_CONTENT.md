@@ -71,3 +71,38 @@ The exported JSON has null summary/score and `needs_review`; no AI was run.
 Changing input/rules or encountering an error invalidates prior output/download.
 The author must still check facts, permissions and suitability before turning a
 record into public writing. The lab does not offer a fake approve/publish action.
+
+## Learning routes and local journals
+
+`/study/paths/` is generated from `_data/learning_paths.yml`. A route has a stable
+`id`, `title`, `summary`, starting-point `prerequisite`, optional-work `challenge`
+and ordered `steps`. Each step has a stable `id`, `title`, public note `slug` in
+`note`, and a conceptually accurate `question`. Optional `lab` and `lab_label`
+must point to an actual internal experiment, using its real anchor if needed.
+No lab is invented for a reading-only step. Articles and lab pages derive their
+return links from this same data, rather than duplicating a curriculum in HTML.
+
+The low-priority post-read validation hook checks routes after research/draft
+filtering. A missing or unpublished note, duplicate/malformed ID, missing question
+or invalid lab-link shape fails the build. HTMLProofer then checks destinations
+and anchors. Route resources/questions remain readable without JavaScript.
+
+IDs identify saved records and **must remain stable**. New IDs remain compatible
+with existing records; recheck the maximum-size backup round-trip test and file
+limit as routes grow. Changing/removing IDs or the JSON format requires a tested migration. Backups
+reject unknown IDs/versions rather than silently drop a learner's writing. An
+unreadable stored record is preserved; the page switches to memory-only mode.
+
+The journal is a separate browser feature, not content to publish. Version 1 is
+`{version: 1, entries: {stepId: {completed: boolean, note: string}}}` under
+`brooks-universe.learning.v1`. Blank entries are omitted. Notes are bounded to
+2000 UTF-16 code units per step; backups to 256 KB, including JSON escaping.
+Records are created only by explicit input, never by visits, elapsed time or
+model inference. They do not certify mastery or describe Brook's own progress.
+
+Import validates the whole file before preview, then fills only locally absent
+records after confirmation. Existing nonempty entries win; export first when
+moving between devices. Current localStorage is unencrypted and origin-specific;
+there is no cloud sync or account. Blocked writes, quota errors and multi-tab
+changes preserve page memory/export and show that saving is unavailable. Clear
+requires confirmation and removes only this key, preserving other site features.

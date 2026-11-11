@@ -6,6 +6,17 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 8 learning ecosystem
+
+`feat/atlas-iteration-8` continues seventh-round `4b77661`. Four open learning
+routes connect existing notes, real experiments and self-check questions. An
+optional local journal restores manual checks/notes, offers JSON backup and
+previewed merging, and preserves existing entries on import. No account, upload,
+automatic completion or ability scoring is added. The lavender glass UI remains.
+See [report and preview](docs/ATLAS-ITERATION-8.md),
+[initial audit](docs/iteration-8-audit.md) and
+[resource/privacy review](docs/iteration-8-compliance.md). Production is unchanged.
+
 ## Iteration 7 UI refinement
 
 The lavender garden refinement is on `feat/atlas-iteration-7`, based on sixth-round
@@ -35,6 +46,7 @@ and [third-party notices](THIRD_PARTY_NOTICES.md).
 
 - `/`: personal introduction, real tutorial notebook, selected work and build records.
 - `/study/`: searchable tutorials and source-based research; type/category/query filters can be shared by URL.
+- `/study/paths/`: Python/data, spatial reasoning, C++ ownership and game-model routes; optional local self-checks, notes and backup.
 - `/explore/`: sourced Zijingang point atlas, search, favorites and Geo/AI/Code lab links.
 - `/playground/`: prisoner/stag games, C++ copying and Mercator scale.
 - `/playground/nash/`: editable 2×2 pure-strategy equilibrium explorer.
@@ -89,6 +101,12 @@ latest notes and article pages update automatically. Add project records to
 Projects and Home without separate page edits. Notebook choices and factual
 build records live in `_data/universe.yml`. No CMS or database is needed. Content labels distinguish laboratory tutorials and project research, without
 claiming personal experience or accolades. Source checking is not owner approval.
+
+Learning routes live in `_data/learning_paths.yml`; the build verifies stable
+unique IDs and links to public notes after publication filtering. Each visitor's
+optional journal stays in their browser, separate from public Markdown. It is
+plain local data, with no account or synchronization; export before clearing
+browser data or changing devices. See [route authoring](docs/STUDY_CONTENT.md#learning-routes-and-local-journals).
 
 Only pure-strategy equilibria are enumerated. C++ is a semantic visualization;
 unsafe shallow-copy code is not executed. GIS uses spherical/local approximations.
