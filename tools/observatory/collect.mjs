@@ -3,7 +3,7 @@ import { resolve, join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { validateStreamIndex, validateStreamArchive, streamDay } from '../../assets/js/atlas/stream-models.js';
+import { validateStreamIndex, validateStreamArchive, streamDay, streamLocalDay } from '../../assets/js/atlas/stream-models.js';
 
 const MAX_XML = 2 * 1024 * 1024;
 const userAgent = 'BrooksObservatory/1.0 (+https://github.com/Brook-brook/Brook-ZzQq.github.io)';
@@ -177,7 +177,7 @@ export async function collect({ output, manifest, force = false }) {
       for (const entry of normalized.records) {
         const found = known.get(entry.id); const record = mergeRecord(found?.record, entry, now);
         if (record === found?.record) continue;
-        const day = found?.day || now.slice(0, 10);
+        const day = found?.day || streamLocalDay(now);
         const rows = days.get(day) || [];
         if (found) { rows[rows.findIndex((row) => row.id === entry.id)] = record; revisions++; }
         else { rows.push(record); additions++; }
@@ -197,12 +197,13 @@ export async function collect({ output, manifest, force = false }) {
     }
   }
   for (const day of changedDays) await save(join(archives, day + '.json'), { schema_version: 1, date: day, records: days.get(day) });
-  const records = [...known.values()].map((entry) => entry.record).sort((a, b) => b.changed_at.localeCompare(a.changed_at) || a.id.localeCompare(b.id));
+  const records = [...known.values()].map((entry) => entry.record).sort((a, b) => b.changed_at.localeCompare(a.changed_at) ||
+    String(b.published_at || '').localeCompare(String(a.published_at || '')) || a.id.localeCompare(b.id));
   const success = states.filter((entry) => ['ok', 'not_modified'].includes(entry.status)).length;
   const receipt = { at: now, status: success === states.length ? 'ok' : success ? 'partial' : 'error',
     sources_ok: success, sources_total: states.length, additions, revisions, total: records.length,
     failed_sources: states.filter((entry) => !['ok', 'not_modified'].includes(entry.status)).map((entry) => ({ id: entry.id, error: entry.error })) };
-  const month = now.slice(0, 7); const history = await json(join(runs, month + '.json'), { schema_version: 1, runs: [] });
+  const month = streamLocalDay(now).slice(0, 7); const history = await json(join(runs, month + '.json'), { schema_version: 1, runs: [] });
   history.runs.push(receipt); await save(join(runs, month + '.json'), history);
   const result = { schema_version: 1, attempted_at: now, interval_minutes: config.interval_minutes,
     last_complete_at: success === states.length ? now : before?.last_complete_at || null,

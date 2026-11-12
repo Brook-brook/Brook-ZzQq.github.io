@@ -6,6 +6,9 @@ const count = (value) => Number.isSafeInteger(value) && value >= 0;
 export const streamTime = (value) => typeof value === 'string' && /T.*(?:Z|[+-]\d{2}:\d{2})$/.test(value) && Number.isFinite(Date.parse(value));
 export const streamDay = (value) => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) &&
   Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
+export const streamLocalDay = (value) => new Intl.DateTimeFormat('sv-SE', {
+  timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit'
+}).format(new Date(value));
 const safeUrl = (value, hosts) => {
   try { const url = new URL(value); return text(value, 2048) && url.protocol === 'https:' && !url.username && !url.password &&
     !url.port && (!hosts || hosts.includes(url.hostname)); } catch { return false; }
@@ -78,7 +81,7 @@ export function validateStreamArchive(data, index) {
   requireValue(object(data) && data.schema_version === 1 && streamDay(data.date) && Array.isArray(data.records) && data.records.length <= 10000);
   const sources = new Map(index.sources.map((source) => [source.id, source])); const ids = new Set();
   for (const record of data.records) {
-    validateRecord(record, sources); requireValue(record.first_seen_at.slice(0, 10) === data.date && !ids.has(record.id)); ids.add(record.id);
+    validateRecord(record, sources); requireValue(streamLocalDay(record.first_seen_at) === data.date && !ids.has(record.id)); ids.add(record.id);
   }
   const summary = index.archives.find((day) => day.date === data.date);
   requireValue(summary && summary.count === data.records.length);
@@ -92,9 +95,9 @@ export function filterStream(records, { topic = 'all', source = 'all', query = '
 }
 
 export function streamSnapshot(item) {
-  const day = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(item.first_seen_at));
+  const day = streamLocalDay(item.first_seen_at);
   return { id: item.id, title: item.title, url: item.url, topic: item.topic, item_type: 'update',
-    version: `自动采集元信息 · ${item.published_at ? item.published_at.slice(0, 10) + ' 源站发布' : '发布时间待核对'}`,
+    version: `自动采集元信息 · ${item.published_at ? streamLocalDay(item.published_at) + ' 源站发布' : '发布时间待核对'}`,
     checked_on: day, caveat: `自动收集标题，尚未逐条核实。${item.caveat}`,
     question: '原文究竟主张什么？请记录证据位置、材料版本与尚不能确认的问题。' };
 }

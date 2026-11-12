@@ -1,7 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { canonicalUrl, normalizeEntries, mergeRecord } from '../tools/observatory/collect.mjs';
+import { mkdtemp, writeFile, readFile, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { canonicalUrl, normalizeEntries, mergeRecord, collect } from '../tools/observatory/collect.mjs';
+import { streamLocalDay, validateStreamIndex, validateStreamArchive } from '../assets/js/atlas/stream-models.js';
 
 const source = { id: 'synthetic-source', topic: 'ai', publisher: 'Synthetic fixture', caveat: 'Unreviewed metadata', article_hosts: ['example.org'] };
 const now = '2026-11-12T00:00:00.000Z';
@@ -42,4 +46,46 @@ test('archive history retains first observation and previous metadata, unchanged
   const updated = mergeRecord(first, { ...incoming, title: 'Corrected title' }, '2026-11-12T04:00:00Z');
   assert.equal(updated.first_seen_at, now); assert.equal(updated.previous_versions[0].title, 'Original title');
   assert.equal(updated.revision_count, 1); assert.equal(first.title, 'Original title');
+});
+
+test('archive days follow Shanghai midnight rather than UTC midnight', () => {
+  assert.equal(streamLocalDay('2026-11-11T16:00:00Z'), '2026-11-12');
+  assert.equal(streamLocalDay('2026-11-11T15:59:59Z'), '2026-11-11');
+});
+
+test('real parser/collector pipeline retains archives on partial failures, 304 and rate limits', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'brook-feed-test-'));
+  const originalFetch = globalThis.fetch; const calls = []; let phase = 0;
+  const config = { schema_version: 1, per_feed_limit: 50, interval_minutes: 120, sources: [1, 2].map((n) => ({
+    ...source, id: `fixture-${n}`, title: `Synthetic ${n}`, home: 'https://example.org/',
+    url: `https://example.org/feed-${n}`, feed_hosts: ['example.org']
+  })) };
+  const manifest = join(root, 'sources.json'); const output = join(root, 'feed');
+  await writeFile(manifest, JSON.stringify(config));
+  globalThis.fetch = async (url, options) => {
+    calls.push({ url, headers: options.headers });
+    if (url.endsWith('feed-2')) return new Response(null, { status: phase ? 429 : 403, headers: { 'retry-after': '86400' } });
+    if (phase === 1) return new Response(null, { status: 304 });
+    if (phase === 2) return new Response(null, { status: 503 });
+    return new Response('<rss><channel><item><title>Fixture only</title><link>https://example.org/paper</link></item></channel></rss>', { headers: { etag: 'fixture-v1' } });
+  };
+  const index = async () => validateStreamIndex(JSON.parse(await readFile(join(output, 'index.json'), 'utf8')));
+  try {
+    const first = await collect({ output, manifest, force: true });
+    assert.equal(first.status, 'partial'); assert.equal(first.total, 1);
+    const initial = await index();
+    const archive = await readFile(join(output, initial.archives[0].path), 'utf8');
+    validateStreamArchive(JSON.parse(archive), initial);
+    assert.equal((await collect({ output, manifest })).skipped, true);
+    assert.equal(calls.length, 2, 'lease prevents duplicate requests');
+    phase = 1; const second = await collect({ output, manifest, force: true });
+    assert.equal(second.additions, 0); assert.equal(second.revisions, 0);
+    const after304 = await index(); assert.equal(after304.sources[0].status, 'not_modified');
+    assert.equal(calls[2].headers['If-None-Match'], 'fixture-v1');
+    phase = 2; const third = await collect({ output, manifest, force: true });
+    assert.equal(third.status, 'error'); assert.equal(third.total, 1);
+    assert.equal((await index()).sources[1].status, 'deferred');
+    assert.equal(calls.length, 5, 'Retry-After prevents another request to the limited source');
+    assert.equal(await readFile(join(output, initial.archives[0].path), 'utf8'), archive, 'failed polls never rewrite prior records');
+  } finally { globalThis.fetch = originalFetch; await rm(root, { recursive: true, force: true }); }
 });

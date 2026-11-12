@@ -6,6 +6,8 @@ on:
     paths:
       - _data/observatory_trigger.json
       - tools/observatory/**
+      - assets/js/atlas/stream-models.js
+      - tests/collector-models.test.js
       - _data/observatory_feeds.json
       - .github/workflows/observatory-refresh.yml
   workflow_dispatch:
