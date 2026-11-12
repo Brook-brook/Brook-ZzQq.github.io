@@ -13,7 +13,7 @@ description: 持续发现 AI 前沿与全球政经材料，按日保留原始链
     <p class="observatory-eyebrow">AI / Economy / World</p>
     <h1>看见变化，<br>也看懂来龙去脉。</h1>
     <p class="observatory-lead">从一份原始材料开始，把前沿 AI、全球经济与国际政治，慢慢连成自己的理解。</p>
-    <div class="page-inline-links"><a href="#updates">看看新发布</a><a href="#briefings">从导读开始</a><a href="#source-library">找一个可靠来源</a><a href="#reading-desk">我的阅读桌</a></div>
+    <div class="page-inline-links"><a href="#updates">看看新发布</a><a href="#briefings">从导读开始</a><a href="#source-library">找一个可靠来源</a><a href="#reading-desk" data-open-reading-room>专注研读</a><a href="#reading-desk">我的阅读桌</a></div>
     <p class="observatory-date">选编目录 · 核对于 <time datetime="{{ site.data.observatory.checked_on }}">{{ site.data.observatory.checked_on }}</time>（北京时间）。核对入口、标题与用途；原站动态请打开来源查看。</p>
     <p id="observatory-freshness" role="status"></p>
   </header>
@@ -55,12 +55,15 @@ description: 持续发现 AI 前沿与全球政经材料，按日保留原始链
     <div><a href="{{ '/knowledge/reading-ai-evidence/' | relative_url }}"><span>01 / AI 阅读方法</span><h3>任务、基线、预算与证据</h3><p>从一篇论文读懂作者究竟验证了什么。</p></a><a href="{{ '/knowledge/reading-world-evidence/' | relative_url }}"><span>02 / 政经阅读方法</span><h3>事实、预测、立场与机制</h3><p>把发布时间、统计口径与政策状态放回判断里。</p></a></div>
   </section>
 
+  {% include observatory-reading-guides.html %}
+
   <div class="observatory-layout">
     <aside id="reading-desk" class="reading-desk glass-light" aria-labelledby="desk-title">
       <img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" width="48" height="48" alt="">
       <h2 id="desk-title">给好奇心，留一张阅读桌。</h2><p>选几份材料，带着问题读，再留下自己的解释。</p>
       <div hidden data-observatory-control>
         <p id="reading-count" role="status"></p><p id="reading-storage" class="observatory-help" role="status" aria-live="polite"></p>
+        <button class="reading-export" type="button" data-open-reading-room hidden>打开专注研读</button>
         <div class="reading-starters"><button type="button" data-start-list="{{ site.data.observatory.starters.ai | join: ' ' }}">加入 AI 起步 {{ site.data.observatory.starters.ai.size }} 源</button><button type="button" data-start-list="{{ site.data.observatory.starters.world | join: ' ' }}">加入政经起步 {{ site.data.observatory.starters.world.size }} 源</button></div>
         <button id="reading-export" class="reading-export" type="button" disabled>下载阅读计划 · Markdown</button>
         <button id="reading-backup" class="reading-export" type="button">下载清单与手记 · JSON</button>
@@ -97,5 +100,6 @@ description: 持续发现 AI 前沿与全球政经材料，按日保留原始链
     </section>
 
   </div>
+  {% include observatory-reading-room.html %}
   <aside class="observatory-boundaries"><h2>给判断留一点余地。</h2><p>自动更新记录公开订阅里的元信息；目录与导读另有核对日期，均不能代替原文。预印本、公司能力声明、官方统计、政策立场与媒体报道具有不同的证据边界；多家转述同一消息并不等于多份独立证据。</p><p>每份导读都保留原始链接与版本。目录核对记录入口与用途；阅读提示经 AI 辅助整理，结论请结合原文与独立来源判断。</p></aside>
 </div>

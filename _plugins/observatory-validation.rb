@@ -122,9 +122,31 @@ module ObservatoryValidation
     raise Jekyll::Errors::FatalException,
       "_data/observatory_stream.json: require bounded needs_review metadata, valid timestamps, unique IDs and HTTPS links matching observatory_feeds.json."
   end
+
+  def self.validate_guides!(site)
+    guides = site.data["reading_guides"]
+    return if guides.nil?
+
+    valid = guides.is_a?(Array) && guides.length == 3 &&
+      guides.all? { |guide| guide.is_a?(Hash) } &&
+      guides.all? { |guide| guide["id"].is_a?(String) } &&
+      guides.map { |guide| guide["id"] }.sort == %w[ai economy politics]
+    methods = site.collections.fetch("atlas_notes").docs.map(&:url)
+    valid &&= guides.all? do |guide|
+      present?(guide["title"], 120) && present?(guide["method_label"], 120) &&
+        methods.include?(guide["method_url"]) && guide["questions"].is_a?(Array) &&
+        guide["questions"].length.between?(3, 6) && guide["questions"].all? { |question| present?(question) } &&
+        present?(guide["outline"], 1200) && guide["outline"].start_with?("【研读提纲｜")
+    end
+    return if valid
+
+    raise Jekyll::Errors::FatalException,
+      "_data/reading_guides.yml: require three unique topics, bounded prompts/outlines and methods linked to published notes."
+  end
 end
 
 Jekyll::Hooks.register :site, :post_read do |site|
   ObservatoryValidation.validate!(site)
   ObservatoryValidation.validate_stream!(site)
+  ObservatoryValidation.validate_guides!(site)
 end

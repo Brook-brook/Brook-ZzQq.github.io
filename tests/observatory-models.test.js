@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   emptyReadingList, validateReadingList, parseReadingList, toggleReading, addReadings,
-  matchesSource, catalogAge, shanghaiDate, readingPlan, MAX_LIST_BYTES, recordReflection, mergeReadings
+  matchesSource, catalogAge, shanghaiDate, readingPlan, MAX_LIST_BYTES, recordReflection, mergeReadings,
+  filterSavedReadings, appendReadingOutline
 } from '../assets/js/atlas/observatory-models.js';
 
 const item = (id = 'paper') => ({
@@ -10,6 +11,43 @@ const item = (id = 'paper') => ({
   version: 'v1 · 2026-11-10', checked_on: '2026-11-12', question: '如何核对对照与预算？', caveat: '未复现实验。', reflection: ''
 });
 const state = (saved = []) => ({ version: 2, saved });
+
+test('private reading retrieval intersects topic, annotations and normalized user text without changing snapshots', () => {
+  const records = state([{ ...item('ai-note'), reflection: 'My BASELINE question <img>' },
+    { ...item('economic-note'), topic: 'economy', reflection: '统计口径' }, item('empty-note')]);
+  const before = JSON.stringify(records);
+  assert.deepEqual(filterSavedReadings(records, { query: 'ＢＡＳＥＬＩＮＥ', annotated: true, topic: 'ai' }).map((item) => item.id), ['ai-note']);
+  assert.equal(filterSavedReadings(records, { annotated: true }).length, 2);
+  assert.equal(filterSavedReadings(records, { query: '口径', topic: 'ai' }).length, 0);
+  assert.equal(filterSavedReadings(records, { query: '<img>' }).length, 1);
+  assert.equal(JSON.stringify(records), before);
+});
+
+test('legacy retrieval recovers v1 in memory and never invents a reflection', () => {
+  const legacy = { ...item() }; delete legacy.reflection;
+  const input = { version: 1, saved: [legacy] };
+  assert.equal(filterSavedReadings(input).length, 1);
+  assert.equal(filterSavedReadings(input, { annotated: true }).length, 0);
+  assert.equal(input.version, 1); assert.equal(Object.hasOwn(legacy, 'reflection'), false);
+});
+
+test('outline insertion appends prompts without replacing user writing or duplicating an already-filled outline', () => {
+  const outline = '【研读提纲｜AI 证据】\n原文主张：\n我的解释：';
+  const original = '我的原始想法\n证据：表 2';
+  const inserted = appendReadingOutline(original, outline);
+  assert.ok(inserted.reflection.startsWith(original + '\n\n'));
+  assert.equal(inserted.added, true);
+  const filled = inserted.reflection.replace('我的解释：', '我的解释：还需独立复现');
+  assert.deepEqual(appendReadingOutline(filled, outline), { reflection: filled, added: false });
+});
+
+test('outline overflow and invalid input never truncate or partially replace an existing note', () => {
+  const original = '字'.repeat(1990);
+  assert.throws(() => appendReadingOutline(original, '【研读提纲｜经济口径】\n统计期：\n证据位置：'), /超过/);
+  assert.equal(original.length, 1990);
+  assert.throws(() => appendReadingOutline('preserved', ''));
+  assert.throws(() => appendReadingOutline('preserved', '\u0000'));
+});
 
 test('only explicit selection creates a snapshot; toggle supports removal without mutating input', () => {
   const empty = emptyReadingList();
