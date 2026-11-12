@@ -154,3 +154,32 @@ title in ChatGPT Tasks. If later enabling native cron on the default branch, rem
 the redundant task after verifying the native run. Do not auto-merge to enable it.
 Workflow dispatch can be run from the ops branch for manual recovery; the one-hour
 duplicate lease still applies. Website PR and production publishing are separate.
+
+## Focused reading and evidence prompts
+
+`_data/reading_guides.yml` defines three original question sets and blank outlines
+for AI evaluation, economic evidence and political texts. It references the actual
+published reading-method notes. The real build rejects missing/duplicate topics,
+oversized guides and methods removed by publication filtering. These are AI-assisted
+study prompts, not source_checked research, automatic answers or proof of mastery.
+
+The native reading room reuses the existing v2 state/controller. Choosing “加入并研读”
+explicitly adds a snapshot if absent; an already-saved material opens without
+rewriting its title/link/version or the storage key. Local retrieval includes only
+title, version, question and reflection. Filters do not replace the current editor.
+Comparing two materials is a transient view of saved metadata and optional notes;
+different domains or multiple reports do not prove independent confirmation.
+
+Outline insertion appends blank topic-specific labels after any existing text,
+refuses overflow and detects the marker even after the learner fills the fields.
+It never replaces/truncates existing notes or writes invented conclusions. Both
+editors share the same write path and remain synchronized. JSON/Markdown exports
+inside the room contain the whole local list and continue to work when persistence
+is blocked, corrupt, quota-limited or paused by another tab. The modal shows that
+status directly. No additional key, schema migration, server/model call, private
+URL parameter or cloud sync was added.
+
+Native dialog focus, Escape and source-button restoration keep the workflow short;
+closed dialogs stay absent from no-JS reading. Existing anchors and the original
+desk remain the fallback when showModal is unavailable. Public guides and source
+methods remain directly readable in both cases.

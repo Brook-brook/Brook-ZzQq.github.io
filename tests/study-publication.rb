@@ -326,6 +326,37 @@ class StudyPublicationChecks
       end
     end
 
+    check("reading guides link published method notes with three accurate topic slots") do
+      with_fixture do |source, destination|
+        %w[reading-ai-evidence reading-world-evidence].each { |slug| note(source, slug) }
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        FileUtils.cp(File.expand_path("../_data/reading_guides.yml", __dir__), File.join(source, "_data", "reading_guides.yml"))
+        site = build(source, destination)
+        assert(site.data["reading_guides"].length == 3, "real reading guides should build")
+      end
+    end
+
+    check("reading guides reject missing/duplicate topics, oversized outlines and unpublished methods") do
+      %w[missing duplicate oversize unpublished].each do |mode|
+        with_fixture do |source, destination|
+          note(source, "reading-ai-evidence", mode == "unpublished" ? { "published" => false } : {})
+          note(source, "reading-world-evidence")
+          data = YAML.safe_load(File.read(File.expand_path("../_data/reading_guides.yml", __dir__)))
+          data[0].delete("id") if mode == "missing"
+          data[0]["id"] = "politics" if mode == "duplicate"
+          data[0]["outline"] = "【研读提纲｜" + "字" * 1200 if mode == "oversize"
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          File.write(File.join(source, "_data", "reading_guides.yml"), YAML.dump(data))
+          begin
+            build(source, destination)
+            assert(false, "invalid guide #{mode} must fail before rendering")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("reading_guides.yml"), "identify invalid guide #{mode}")
+          end
+        end
+      end
+    end
+
     puts "#{@failures.empty? ? 'PASS' : 'FAIL'} study publication: #{@cases} cases, #{@assertions} assertions, #{@failures.length} failures"
     exit(@failures.empty? ? 0 : 1)
   end

@@ -50,6 +50,9 @@ export function mountStream(room) {
     for (const button of list.querySelectorAll('[data-stream-save]')) {
       button.setAttribute('aria-pressed', String(selected.has(button.dataset.streamSave)));
     }
+    for (const button of list.querySelectorAll('[data-stream-study]')) {
+      setText(button, selected.has(button.dataset.streamStudy) ? '继续研读' : '加入并研读');
+    }
   }
   window.addEventListener('observatory:selection', (event) => {
     selected = new Set(event.detail); selectedButtons();
@@ -82,7 +85,18 @@ export function mountStream(room) {
         window.dispatchEvent(new CustomEvent('observatory:save-update', { detail }));
         setText(feedback, detail.result ? '清单已更新，保存状态与备份请到阅读桌查看。' : '清单未改变，取消移除或保存提示请到阅读桌查看。');
       });
-      actions.append(save, desk); li.append(meta, heading, dates, detail, actions, feedback); return li;
+      actions.append(save);
+      if (room.dataset.readingRoomEnabled === 'true') {
+        const study = el('button', '加入并研读'); study.type = 'button'; study.dataset.streamStudy = item.id;
+        study.setAttribute('aria-label', `研读：${item.title}`);
+        study.addEventListener('click', () => {
+          const detail = { item: streamSnapshot(item), result: false };
+          window.dispatchEvent(new CustomEvent('observatory:study-update', { detail }));
+          if (!detail.result) setText(feedback, '本次未打开研读空间，请到阅读桌查看清单容量与保存提示。');
+        });
+        actions.append(study);
+      }
+      actions.append(desk); li.append(meta, heading, dates, detail, actions, feedback); return li;
     });
     list.replaceChildren(...nodes); selectedButtons();
     setText(get('stream-count'), `显示 ${nodes.length} / ${matches.length} 份${currentDay === 'latest' ? '最近变更的元信息' : `${currentDay} 首次收集的材料`} · 档案累计 ${index.total} 份`);

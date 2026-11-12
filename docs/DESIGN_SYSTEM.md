@@ -180,3 +180,18 @@ while reading or typing. Native details expose source limits/revisions and optio
 private reflections. No idle motion, infinite scrolling, new blur stacks, authority
 scores, company logos or artificial urgency. Eight rows per batch; load-more sends
 focus to the first added link. Reduced motion/solid glass fallbacks remain shared.
+
+## Iteration 11: a room for understanding
+
+A native dialog provides one heavy-glass reading sheet, with opaque header/footer
+and a single scrolling body. Desktop separates the local library from the writing
+area; phone/tablet collapse library tools under a native disclosure. Source identity,
+saved version, actual reading question and optional evidence lens lead into the
+editor. Comparison is a native disclosure, not a third dashboard column.
+
+Keep 16px editable controls, 44px actions, high-contrast placeholder text and the
+same Mote for an honest empty list. Source caveats stay discoverable without using
+multiple duplicate introductory paragraphs. Opening has one finite transform/
+opacity entry; reduced motion removes it. Native Escape/focus restoration and a
+visible save-status footer take priority over close animations. No idle glow,
+new blur stack, AI answer, authority score or inferred learning achievement.

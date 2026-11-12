@@ -69,6 +69,23 @@ export function recordReflection(state, id, reflection) {
   return validateReadingList({ version: 2, saved: current.saved.map((item) => item.id === id ? { ...item, reflection } : item) });
 }
 
+export function filterSavedReadings(state, { query = '', topic = 'all', annotated = false } = {}) {
+  const normalize = (value) => value.normalize('NFKC').toLowerCase();
+  const term = normalize(query.trim().slice(0, 120));
+  return validateReadingList(state).saved.filter((item) => (topic === 'all' || item.topic === topic) &&
+    (!annotated || item.reflection.trim().length > 0) &&
+    normalize([item.title, item.version, item.question, item.reflection].join(' ')).includes(term));
+}
+
+export function appendReadingOutline(reflection, outline) {
+  if (!validReflection(reflection) || !validReflection(outline) || !outline.trim()) throw new Error('手记或提纲格式无法识别，原内容未改动。');
+  const marker = outline.trim().split('\n')[0];
+  if (reflection.includes(marker)) return { reflection, added: false };
+  const next = reflection + (reflection ? '\n\n' : '') + outline.trim() + '\n';
+  if (next.length > MAX_REFLECTION) throw new Error('追加后将超过 2,000 字符，提纲未插入。请先备份或精简，原内容保留。');
+  return { reflection: next, added: true };
+}
+
 export function mergeReadings(state, backup) {
   const current = validateReadingList(state); const incoming = validateReadingList(backup);
   const merged = new Map(current.saved.map((item) => [item.id, item]));

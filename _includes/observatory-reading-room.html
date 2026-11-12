@@ -1,0 +1,36 @@
+<dialog id="reading-room" class="reading-room glass-heavy" aria-labelledby="reading-room-title" aria-describedby="reading-room-privacy" data-reading-room>
+  <header class="reading-room-header">
+    <div><p class="observatory-eyebrow">A little room for understanding</p><h2 id="reading-room-title" tabindex="-1">专注研读</h2><p id="reading-room-privacy" class="observatory-help">手记明文留在本机，不上传。清理浏览器可能丢失，请保管备份。</p></div>
+    <button id="reading-room-close" type="button" aria-label="关闭专注研读">关闭 <span aria-hidden="true">×</span></button>
+  </header>
+  <div class="reading-room-body">
+    <aside class="reading-room-library" aria-labelledby="room-library-title">
+      <details id="reading-room-library-controls" open><summary id="room-library-title">清单与手记 · 切换／查找</summary>
+      <label for="reading-room-query">检索清单与自己的手记<input id="reading-room-query" type="search" maxlength="120" placeholder="材料、版本或写下的问题" autocomplete="off"></label>
+      <label for="reading-room-topic">主题<select id="reading-room-topic"><option value="all">全部主题</option>{% for topic in site.data.observatory.topics %}<option value="{{ topic.id }}">{{ topic.title | escape }}</option>{% endfor %}</select></label>
+      <label class="reading-room-check"><input id="reading-room-annotated" type="checkbox">只看写过手记的材料</label>
+      <p id="reading-room-count" class="observatory-help" role="status"></p>
+      <label for="reading-room-select">切换研读材料<select id="reading-room-select"><option value="">请选择材料</option></select></label>
+      <p id="reading-room-filter-empty" class="observatory-help" hidden>没有匹配的材料。当前研读内容与手记会保留，可以重置筛选再找。</p>
+      <button id="reading-room-reset" type="button">重置筛选</button>
+      <div class="reading-room-backups"><button id="reading-room-json" type="button">备份全部清单 · JSON</button><button id="reading-room-md" type="button">导出全部计划 · Markdown</button></div>
+      </details>
+    </aside>
+    <div class="reading-room-workspace">
+      <div id="reading-room-empty" class="reading-room-empty" hidden><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" width="56" height="56" alt=""><h3>先留一份材料，慢慢读。</h3><p>从新发布或选编导读中选择“加入并研读”。收藏只表示想读，打开或写下手记都不代表已掌握。</p><a id="reading-room-find" href="#updates">去看看新材料 →</a><a href="#reading-guides" data-room-guide-link>先看看三类阅读提纲 →</a></div>
+      <article id="reading-room-current" aria-labelledby="reading-room-material-title" hidden>
+        <p id="reading-room-meta" class="observatory-meta"></p>
+        <h3 id="reading-room-material-title"></h3><a id="reading-room-source" href="#source-library">打开原文 ↗</a>
+        <details><summary>收藏版本与阅读边界</summary><p id="reading-room-kind" class="observatory-help"></p><p id="reading-room-version"></p><p id="reading-room-caveat"></p></details>
+        <p id="reading-room-question" class="reading-room-question"></p>
+        <details id="reading-room-lens"><summary id="reading-room-lens-title">研读提示</summary><ol id="reading-room-questions"></ol><a id="reading-room-method" href="#reading-guides">阅读方法 →</a></details>
+        <div class="reading-room-editor-head"><label for="reading-room-note">我的解释与证据记录</label><button id="reading-room-outline" type="button">追加研读提纲</button></div>
+        <textarea id="reading-room-note" rows="11" maxlength="2000" autocomplete="off" aria-describedby="reading-room-note-hint reading-room-status" placeholder="先用自己的话写一句，再标出原文证据、版本与尚不能确认的部分。"></textarea>
+        <p id="reading-room-note-hint" class="observatory-help"></p>
+        <p id="reading-room-edit-feedback" class="observatory-help" role="status"></p>
+        <details id="reading-room-compare"><summary>并读另一份收藏，找异同与证据</summary><label for="reading-room-compare-select">选择另一份材料<select id="reading-room-compare-select"><option value="">先选择一份</option></select></label><div id="reading-room-comparison" hidden><h4 id="reading-room-compare-title"></h4><a id="reading-room-compare-url" href="#source-library">打开对照原文 ↗</a><p id="reading-room-compare-version" class="observatory-help"></p><p id="reading-room-compare-question"></p><details><summary>这份材料已有的手记</summary><p id="reading-room-compare-note" class="reading-room-note-preview"></p></details><p class="observatory-help">比较材料的时间、版本、样本／统计口径与结论边界。域名不同也未必是独立证据，先检查是否转引同一原文；不要把多份转述当成多次独立验证。</p></div></details>
+      </article>
+    </div>
+  </div>
+  <footer class="reading-room-footer"><p id="reading-room-status" role="status" aria-live="polite"></p><p class="observatory-help">检索、并读和编辑都只在当前页面进行。清单最多 60 份，每份手记最多 2,000 字符；备份与旧版格式继续兼容。</p></footer>
+</dialog>

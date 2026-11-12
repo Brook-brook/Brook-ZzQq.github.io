@@ -3,6 +3,7 @@ import {
   matchesSource, catalogAge, readingPlan, recordReflection, mergeReadings, MAX_LIST_BYTES, MAX_REFLECTION
 } from './observatory-models.js';
 import { mountStream } from './observatory-stream.js';
+import { mountReadingRoom } from './reading-room.js';
 
 const room = document.querySelector('[data-observatory]');
 if (room) {
@@ -25,15 +26,18 @@ if (room) {
   let lastStored = null;
   let writable = true;
   let pendingImport = null;
+  let studio = null;
+  const studyButtons = [];
   const filters = { query: '', topic: 'all', kind: 'all' };
   const setText = (element, text) => { if (element.textContent !== text) element.textContent = text; };
+  const setStorage = (text) => { setText(storageStatus, text); studio?.updateStatus?.(text); };
   try {
     lastStored = localStorage.getItem(READING_KEY);
     if (lastStored !== null) state = parseReadingList(lastStored);
-    setText(storageStatus, '清单与理解手记留在当前浏览器，可随时备份。');
+    setStorage('清单与理解手记留在当前浏览器，可随时备份。');
   } catch {
     writable = false;
-    setText(storageStatus, '旧清单无法读取或存储不可用，原数据未覆盖。本页只暂存，请导出后再离开。');
+    setStorage('旧清单无法读取或存储不可用，原数据未覆盖。本页只暂存，请导出后再离开。');
   }
   const age = catalogAge(checked);
   if (age === null) setText(document.getElementById('observatory-freshness'), '核对日期与本机日期无法比对，请在原站确认版本与发布状态。');
@@ -56,20 +60,32 @@ if (room) {
     try {
       if (localStorage.getItem(READING_KEY) !== lastStored) {
         writable = false;
-        setText(storageStatus, '另一标签页修改了清单。为避免覆盖，本页只暂存；请先导出，再刷新。');
+        setStorage('另一标签页修改了清单。为避免覆盖，本页只暂存；请先导出，再刷新。');
         return;
       }
       const text = JSON.stringify(state);
       localStorage.setItem(READING_KEY, text); lastStored = text;
-      setText(storageStatus, '已保存到当前浏览器，可下载阅读计划或 JSON 备份。');
+      setStorage('已保存到当前浏览器，可下载阅读计划或 JSON 备份。');
     } catch {
       writable = false;
-      setText(storageStatus, '无法写入本机存储。本页清单仍在，请先下载阅读计划；刷新后可能丢失。');
+      setStorage('无法写入本机存储。本页清单仍在，请先下载阅读计划；刷新后可能丢失。');
     }
+  }
+
+  function writeNote(id, value) {
+    try {
+      state = recordReflection(state, id, value);
+      const field = document.getElementById(`reading-note-${id}`);
+      if (field && field.value !== value) field.value = value;
+      const hint = document.getElementById(`reading-hint-${id}`);
+      if (hint) setText(hint, `本机编辑 · ${value.length} / ${MAX_REFLECTION} 字符；保存状态见上方。`);
+      persist(); return true;
+    } catch (error) { setStorage(`${error.message} 请复制未保存的文字。`); return false; }
   }
 
   function renderList(focusAfterRemove) {
     for (const button of buttons) button.setAttribute('aria-pressed', String(state.saved.some((item) => item.id === button.dataset.saveItem)));
+    for (const button of studyButtons) setText(button, state.saved.some((item) => item.id === button.dataset.studyItem) ? '继续研读' : '加入并研读');
     window.dispatchEvent(new CustomEvent('observatory:selection', { detail: state.saved.map((item) => item.id) }));
     const openNotes = new Set([...queue.querySelectorAll('details[open]')].map((node) => node.dataset.noteFor));
     const nodes = state.saved.map((item) => {
@@ -85,24 +101,25 @@ if (room) {
       const input = document.createElement('textarea'); input.id = label.htmlFor; input.rows = 5;
       input.maxLength = MAX_REFLECTION; input.value = item.reflection; input.autocomplete = 'off';
       const hint = document.createElement('small'); hint.id = `reading-hint-${item.id}`;
-      hint.textContent = `只保存在本机 · ${item.reflection.length} / ${MAX_REFLECTION} 字符`;
+      hint.textContent = `本机编辑 · ${item.reflection.length} / ${MAX_REFLECTION} 字符；保存状态见上方。`;
       input.setAttribute('aria-describedby', hint.id);
-      input.addEventListener('input', () => {
-        try {
-          state = recordReflection(state, item.id, input.value);
-          setText(hint, `只保存在本机 · ${input.value.length} / ${MAX_REFLECTION} 字符`); persist();
-        } catch (error) { setText(storageStatus, `${error.message} 请复制未保存的文字。`); }
-      });
+      input.addEventListener('input', () => writeNote(item.id, input.value));
       notes.append(summary, label, input, hint);
       const remove = document.createElement('button'); remove.type = 'button'; remove.textContent = '移除';
       remove.setAttribute('aria-label', `移除：${item.title}`);
       remove.addEventListener('click', () => removeOrToggle(item, item.id));
-      li.append(link, meta, notes, remove); return li;
+      li.append(link, meta);
+      if (studio?.available) {
+        const study = document.createElement('a'); study.href = '#reading-desk'; study.textContent = '专注研读 →'; study.dataset.studySaved = item.id;
+        study.addEventListener('click', (event) => { event.preventDefault(); studio.open(item.id); }); li.append(study);
+      }
+      li.append(notes, remove); return li;
     });
     queue.replaceChildren(...nodes);
     setText(document.getElementById('reading-count'), `已选 ${state.saved.length} 份材料 · 随时增减`);
     document.getElementById('reading-empty').hidden = state.saved.length > 0;
     exported.disabled = state.saved.length === 0;
+    studio?.refresh?.();
     if (focusAfterRemove) {
       (queue.querySelector('button') || room.querySelector('[data-start-list]')).focus();
     }
@@ -110,7 +127,7 @@ if (room) {
 
   function change(update, focusAfterRemove) {
     try { state = update(); renderList(focusAfterRemove); persist(); return true; }
-    catch (error) { setText(storageStatus, `${error.message} 本次未改动清单。`); return false; }
+    catch (error) { setStorage(`${error.message} 本次未改动清单。`); return false; }
   }
   function removeOrToggle(item, focusAfterRemove) {
     const selected = state.saved.find((entry) => entry.id === item.id);
@@ -123,6 +140,12 @@ if (room) {
   window.addEventListener('observatory:save-update', (event) => {
     event.detail.result = removeOrToggle(event.detail.item);
   });
+  function studyItem(item) {
+    if (!studio?.available) return false;
+    if (!state.saved.some((entry) => entry.id === item.id) && !change(() => addReadings(state, [item]))) return false;
+    return studio.open(item.id);
+  }
+  window.addEventListener('observatory:study-update', (event) => { event.detail.result = studyItem(event.detail.item); });
   for (const button of buttons) button.addEventListener('click', () => {
     const changed = removeOrToggle(byId.get(button.dataset.saveItem));
     setText(button.closest('[data-reading-item]').querySelector('[data-save-feedback]'), changed
@@ -151,14 +174,16 @@ if (room) {
   function download(content, type, name) {
     const url = URL.createObjectURL(new Blob([content], { type }));
     const link = document.createElement('a'); link.href = url; link.download = name;
-    document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+    (room.querySelector('dialog[open]') || document.body).append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
-  exported.addEventListener('click', () => {
+  function exportMarkdown() {
     download(readingPlan(state), 'text/markdown;charset=utf-8', 'brooks-observatory-reading-plan.md');
-  });
-  document.getElementById('reading-backup').addEventListener('click', () => {
+  }
+  function exportJSON() {
     download(JSON.stringify(state, null, 2) + '\n', 'application/json', 'brooks-observatory-backup.json');
-  });
+  }
+  exported.addEventListener('click', exportMarkdown);
+  document.getElementById('reading-backup').addEventListener('click', exportJSON);
   const importFile = document.getElementById('reading-import');
   const importStatus = document.getElementById('reading-import-status');
   const importConfirm = document.getElementById('reading-import-confirm');
@@ -193,19 +218,26 @@ if (room) {
     if (!window.confirm('清除本机观察台清单及其中的理解手记？不影响学习路线手记、主题和校园收藏。')) return;
     try {
       localStorage.removeItem(READING_KEY); lastStored = null; writable = true;
-      setText(storageStatus, '观察台清单已清除。学习手记、主题与校园收藏保留。');
+      setStorage('观察台清单已清除。学习手记、主题与校园收藏保留。');
     } catch {
       writable = false;
-      setText(storageStatus, '本页清单已清空，但无法删除存储；刷新可能恢复旧清单。');
+      setStorage('本页清单已清空，但无法删除存储；刷新可能恢复旧清单。');
     }
     cancelImport(); state = emptyReadingList(); renderList();
   });
   window.addEventListener('storage', (event) => {
     if (event.key !== READING_KEY && event.key !== null) return;
     writable = false;
-    setText(storageStatus, '其他标签页修改了存储。本页暂停保存；请先导出阅读计划，再刷新。');
+    setStorage('其他标签页修改了存储。本页暂停保存；请先导出阅读计划，再刷新。');
   });
   room.querySelectorAll('[data-observatory-control]').forEach((element) => { element.hidden = false; });
+  studio = mountReadingRoom(room, { getState: () => state, writeNote, exportJSON, exportMarkdown, getStatus: () => storageStatus.textContent });
+  if (studio.available) for (const node of room.querySelectorAll('[data-reading-item]')) {
+    const button = document.createElement('button'); button.type = 'button'; button.dataset.studyItem = node.dataset.readingItem;
+    button.setAttribute('aria-label', `研读：${byId.get(node.dataset.readingItem).title}`);
+    button.addEventListener('click', () => studyItem(byId.get(node.dataset.readingItem)));
+    (node.querySelector('.observatory-item-actions') || node).append(button); studyButtons.push(button);
+  }
   renderList(); filterSources();
   mountStream(room);
 }

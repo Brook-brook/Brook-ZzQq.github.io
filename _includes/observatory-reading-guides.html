@@ -1,0 +1,12 @@
+<section id="reading-guides" class="reading-guides" aria-labelledby="reading-guides-title">
+  <h2 id="reading-guides-title">一份材料，带着三个问题读。</h2>
+  <p class="observatory-help">先定位原文，再写出自己的解释。以下是 AI 辅助整理的阅读提纲，不是自动答案，也不能代替核实证据。</p>
+  {% for guide in site.data.reading_guides %}
+  <details data-reading-guide="{{ guide.id }}">
+    <summary><span data-guide-title>{{ guide.title | escape }}</span></summary>
+    <ol data-guide-questions>{% for question in guide.questions %}<li>{{ question | escape }}</li>{% endfor %}</ol>
+    <a data-guide-method href="{{ guide.method_url | relative_url }}">{{ guide.method_label | escape }} →</a>
+    <details><summary>查看可追加到手记的提纲</summary><pre data-guide-outline>{{ guide.outline | escape }}</pre></details>
+  </details>
+  {% endfor %}
+</section>

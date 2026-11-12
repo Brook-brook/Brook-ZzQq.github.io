@@ -116,3 +116,57 @@
 @media (prefers-reduced-motion: reduce) {
   .observatory button:active:not(:disabled) { transform: none; }
 }
+
+/* A single focused sheet, sharing the existing reading state and glass tokens. */
+.reading-guides { margin-block: var(--space-xl); padding-block: var(--space-lg); border-block: 1px solid var(--glass-border); }
+.reading-guides h2 { font-size: var(--text-xl); }
+.reading-guides > details { padding-block: var(--space-sm); border-top: 1px solid var(--glass-border); }
+.reading-guides li { font-size: var(--text-sm); line-height: 1.9; margin-block: var(--space-sm); }
+.reading-guides pre { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; font-size: var(--text-sm); line-height: 1.9; }
+.reading-guides a { display: inline-flex; align-items: center; min-height: 44px; }
+.reading-room-open { overflow: hidden; scrollbar-gutter: stable; }
+.reading-room { width: min(1180px, calc(100vw - 48px)); max-width: none; max-height: calc(100vh - 48px); max-height: calc(100dvh - 48px); padding: 0; margin: auto; color: var(--text-primary); border: 1px solid var(--glass-border); border-radius: var(--radius-card); overflow: hidden; }
+.reading-room:not([open]) { display: none; }
+.reading-room[open] { display: flex; flex-direction: column; animation: reading-room-enter var(--dur-long) var(--ease-out); }
+.reading-room::backdrop { background: var(--bg-base); opacity: .78; }
+.reading-room-header, .reading-room-footer { flex-shrink: 0; background: var(--bg-elevated); padding: var(--space-md) var(--space-lg); }
+.reading-room-header { display: flex; align-items: start; justify-content: space-between; gap: var(--space-md); border-bottom: 1px solid var(--glass-border); }
+.reading-room-header > div { min-width: 0; }
+.reading-room-header .observatory-eyebrow { margin: 0 0 var(--space-xs); }
+.reading-room-header h2 { margin: 0; font-size: var(--text-xl); }
+.reading-room-header p:last-child { margin: var(--space-xs) 0 0; }
+#reading-room-close { flex-shrink: 0; }
+.reading-room-body { display: grid; grid-template-columns: minmax(230px, .36fr) minmax(0, 1fr); gap: var(--space-lg); padding: var(--space-lg); min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+.reading-room-library, .reading-room-workspace { min-width: 0; }
+.reading-room-library { border-inline-end: 1px solid var(--glass-border); padding-inline-end: var(--space-lg); }
+.reading-room-library > details { margin: 0; }
+.reading-room-library label { display: block; margin-top: var(--space-md); }
+.reading-room-library select { text-overflow: ellipsis; }
+.reading-room-check { display: flex !important; align-items: center; gap: var(--space-sm); min-height: 44px; }
+.reading-room-check input { width: 20px; height: 20px; flex-shrink: 0; accent-color: var(--accent-primary); }
+.reading-room-backups { display: grid; gap: var(--space-sm); margin-top: var(--space-lg); }
+#reading-room-reset { margin-top: var(--space-sm); }
+.reading-room-workspace h3 { font-size: var(--text-lg); line-height: 1.6; margin-block: 0 var(--space-sm); overflow-wrap: anywhere; }
+.reading-room-workspace a { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
+.reading-room-workspace details li { font-size: var(--text-sm); line-height: 1.9; margin-block: var(--space-xs); }
+.reading-room-question { border-inline-start: 2px solid var(--accent-primary); padding-inline-start: var(--space-md); line-height: 1.9; font-size: var(--text-sm); }
+.reading-room-editor-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-sm); }
+#reading-room-note { font-size: 16px; }
+.reading-room textarea::placeholder { color: var(--text-secondary); opacity: 1; }
+.reading-room-note-preview { white-space: pre-wrap; overflow-wrap: anywhere; }
+.reading-room-empty { padding-block: var(--space-lg); }
+.reading-room-empty > img { margin-bottom: var(--space-lg); }
+.reading-room-empty > p { color: var(--text-secondary); line-height: 1.9; }
+.reading-room-empty > a { display: flex; }
+.reading-room-footer { border-top: 1px solid var(--glass-border); }
+.reading-room-footer p { margin: 0; font-size: var(--text-sm); line-height: 1.7; }
+.reading-room-footer p + p { margin-top: var(--space-xs); }
+@keyframes reading-room-enter { from { opacity: 0; transform: translateY(8px) scale(.99); } to { opacity: 1; transform: none; } }
+@media (max-width: 48rem) {
+  .reading-room { width: calc(100vw - 16px); max-height: calc(100vh - 16px); max-height: calc(100dvh - 16px); }
+  .reading-room-header, .reading-room-footer, .reading-room-body { padding: var(--space-md); }
+  .reading-room-header .observatory-eyebrow { display: none; }
+  .reading-room-body { grid-template-columns: minmax(0, 1fr); gap: var(--space-md); }
+  .reading-room-library { border-inline-end: 0; border-bottom: 1px solid var(--glass-border); padding: 0 0 var(--space-sm); }
+}
+@media (prefers-reduced-motion: reduce) { .reading-room[open] { animation: none; } }
