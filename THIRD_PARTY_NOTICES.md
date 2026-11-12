@@ -111,3 +111,14 @@ local journal/backup logic and tests are original project work using existing
 notes/labs and platform APIs. Existing Mote and all license notices remain.
 Environment setup restores the existing npm/Ruby development dependencies;
 it does not add application dependencies. See docs/iteration-8-compliance.md.
+
+## Iteration 9 Observatory
+
+No new third-party dependency, font, image, icon, map dataset or source-code
+implementation is incorporated. The directory links research publishers, public
+institutions and news agencies; those materials retain their own rights. Only
+bibliographic metadata and independently written short reading hints are used;
+no news/report text, chart, dataset or brand asset is reproduced. Tutorials,
+reading-list/export logic, styles and tests are original project work. Existing
+Mote and all notices remain. See docs/iteration-9-compliance.md and
+docs/OBSERVATORY_CONTENT.md for provenance and update/privacy boundaries.

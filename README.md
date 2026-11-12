@@ -6,6 +6,17 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 9 Observatory
+
+`feat/atlas-iteration-9` continues eighth-round `0536d46`. The new `/observatory/`
+connects 18 checked AI/economy/politics sources, four versioned reading briefings,
+two original reading-method tutorials and a local reading desk. Search/filter,
+starter sets, saved metadata snapshots and Markdown learning-plan export work in
+the browser. This is a dated curated directory, not an automatic live-news feed.
+See [report/screenshots/preview](docs/ATLAS-ITERATION-9.md),
+[curation and storage rules](docs/OBSERVATORY_CONTENT.md) and
+[source/privacy review](docs/iteration-9-compliance.md). No automatic publication.
+
 ## Iteration 8 learning ecosystem
 
 `feat/atlas-iteration-8` continues seventh-round `4b77661`. Four open learning
@@ -47,6 +58,7 @@ and [third-party notices](THIRD_PARTY_NOTICES.md).
 - `/`: personal introduction, real tutorial notebook, selected work and build records.
 - `/study/`: searchable tutorials and source-based research; type/category/query filters can be shared by URL.
 - `/study/paths/`: Python/data, spatial reasoning, C++ ownership and game-model routes; optional local self-checks, notes and backup.
+- `/observatory/`: AI frontiers and world affairs; checked original sources, dated briefings, reading methods and an exportable local reading list.
 - `/explore/`: sourced Zijingang point atlas, search, favorites and Geo/AI/Code lab links.
 - `/playground/`: prisoner/stag games, C++ copying and Mercator scale.
 - `/playground/nash/`: editable 2×2 pure-strategy equilibrium explorer.

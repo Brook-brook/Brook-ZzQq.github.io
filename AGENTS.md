@@ -85,3 +85,22 @@
   confirmation. New features must preserve theme and campus favorites.
 - Run learning models/browser coverage with the existing suites. Verify no-JS
   reading, both themes, phone controls and storage/import failure states.
+
+## Observatory (Iteration 9)
+
+- Read docs/OBSERVATORY_CONTENT.md for source curation. The page is a dated
+  directory/reading desk, not a live crawler, neutral-truth oracle or news archive.
+- Separate original materials, institutional analysis and reporting. Keep versions,
+  evidence limits and actual check dates; date changes require real verification.
+  Distinguish forecasts, statistics, policy proposals, enacted texts and outcomes.
+- Use stable document URLs and new IDs for different documents/versions. Preserve
+  historical saved snapshots even when sources leave the current catalog.
+- Only explicit selection creates brooks-universe.observatory.v1. Do not collect
+  reading history, private answers, mastery scores or upload preferences. Keep it
+  separate from the existing learning journal and campus favorites.
+- Preserve blocked/corrupt/conflicting storage with memory-only feedback and export.
+  Reset only this key with confirmation. Use safe text/HTTPS rendering; Markdown
+  plans contain questions and blank reflections, never fabricated answers.
+- New reading-method notes are tutorials, with AI-assistance disclosure and real
+  sources. Do not invent lab_url for reading-only material or bypass research
+  publication checks. Run Observatory models/browser and real-build catalog tests.
