@@ -161,3 +161,20 @@
   Run search models, real publication builds and browser tests at both basepaths.
 - Home route counts mean self-check questions, never completion. Project filters
   preserve available/review/planned states and never add controls to planned work.
+
+
+## Search refinement (Iteration 13)
+
+- Alternative spellings are explicit technical aliases, not inferred semantic
+  relationships, typo correction or a source-verification claim. Keep AND matching,
+  short Latin word boundaries and stable/literal-title priority covered by models.
+- Highlight original strings with text nodes/mark only; preserve Unicode graphemes
+  and literal markup. Keyword context must come from bounded public metadata.
+  Keep inline text flow for marked links, visible-space and stable-sheet regressions.
+- Type counts describe matches for the current query before type selection. More
+  adds eight results locally and focuses the first new link; query/type changes
+  reset the batch. Empty-state recovery must preserve the query unless explicitly
+  cleared. Never put queries in a URL, storage, requests or a second index/store.
+- During composition, defer result changes and preserve candidate navigation/Esc.
+  Test DOM composition events separately from actual OS/phone IME claims. Keep
+  no-JS directory, dialog fallback, rapid close and private-editor shortcuts intact.

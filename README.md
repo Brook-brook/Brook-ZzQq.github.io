@@ -6,6 +6,17 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 13 search refinement
+
+`feat/atlas-iteration-13` continues twelfth-round `b2e41e4`. Search understands a
+small explicit set of technical spellings (CPP/C++, GIS/地理信息系统), avoids short
+Latin substring noise, highlights original text safely and explains keyword hits.
+Type counts, eight-at-a-time continuation, reset and empty-state recovery keep the
+current query in place. Composition events defer updates until Chinese input is
+committed. Public metadata only; no query upload/history, new store or packages.
+See [verification and preview](docs/ATLAS-ITERATION-13.md) and
+[resource/privacy review](docs/iteration-13-compliance.md). Production is unchanged.
+
 ## Iteration 12 content discovery
 
 `feat/atlas-iteration-12` continues eleventh-round `748a582`. A lazy public-content

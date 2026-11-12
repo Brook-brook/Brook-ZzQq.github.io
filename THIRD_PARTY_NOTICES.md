@@ -156,3 +156,11 @@ Public discovery, homepage routes and project filters add no dependencies, copie
 third-party code, fonts, images or external requests beyond existing resources.
 Native search/magnifier implementation is original; the original local Mote is
 reused. Existing licenses and notices remain. Details: docs/iteration-12-compliance.md.
+
+
+## Iteration 13 review
+
+Search refinement adds no dependencies, third-party snippets, fonts, icons or
+external assets. Explicit technical aliases, native matching/highlighting and
+controls are original project code. Existing Mote and full license texts remain.
+See docs/iteration-13-compliance.md for resource and privacy boundaries.

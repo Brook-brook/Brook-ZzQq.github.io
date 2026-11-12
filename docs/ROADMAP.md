@@ -148,3 +148,15 @@ a separate storage/identity decision. Existing learning routes and labs remain.
 - Next: improve cross-note prerequisite links and add one source-backed worked
   learning example. Avoid inferred mastery, gamified streaks and platform claims.
 - Submission/verification and known limits: docs/ATLAS-ITERATION-12.md.
+
+
+## Iteration 13 — public search refinement (review branch)
+
+- Explicit technical spellings, short-word boundaries, stable ranking and safe
+  original-text highlighting with public keyword context.
+- Query-aware type counts, in-dialog batches, clear and empty-state recovery;
+  composition-aware input and preserved private-editor shortcuts.
+- No full-text/private/news indexing, inferred semantic/AI search, search history,
+  new storage, packages or production changes. docs/ATLAS-ITERATION-13.md records
+  verification and preview. Next prioritize a worked learning example and its
+  prerequisite links rather than adding broad inferred term expansions.
