@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{{ site.data.observatory_stream | jsonify }}

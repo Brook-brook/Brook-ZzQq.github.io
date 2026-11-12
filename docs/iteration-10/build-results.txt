@@ -1,0 +1,197 @@
+2026-11-12 (Asia/Shanghai) — actual command output, no private user notes.
+
+Asset build
+
+
+> jekyll-theme-chirpy@7.6.0 build
+> concurrently npm:build:*
+
+[css]
+[css] > jekyll-theme-chirpy@7.6.0 build:css
+[css] > node purgecss.js
+[css]
+[js]
+[js] > jekyll-theme-chirpy@7.6.0 build:js
+[js] > rollup -c --bundleConfigAsCjs --environment BUILD:production
+[js]
+[js] > Directory "assets/js/dist" has been cleaned.
+[js]
+[js] _javascript/commons.js → assets/js/dist/commons.min.js...
+[css] npm run build:css exited with code 0
+[js] created assets/js/dist/commons.min.js in 3.9s
+[js]
+[js] _javascript/home.js → assets/js/dist/home.min.js...
+[js] created assets/js/dist/home.min.js in 1.6s
+[js]
+[js] _javascript/categories.js → assets/js/dist/categories.min.js...
+[js] created assets/js/dist/categories.min.js in 1.5s
+[js]
+[js] _javascript/page.js → assets/js/dist/page.min.js...
+[js] created assets/js/dist/page.min.js in 1.6s
+[js]
+[js] _javascript/post.js → assets/js/dist/post.min.js...
+[js] created assets/js/dist/post.min.js in 1.6s
+[js]
+[js] _javascript/misc.js → assets/js/dist/misc.min.js...
+[js] created assets/js/dist/misc.min.js in 1.3s
+[js]
+[js] _javascript/theme.js → assets/js/dist/theme.min.js...
+[js] created assets/js/dist/theme.min.js in 257ms
+[js]
+[js] _javascript/pwa/app.js → assets/js/dist/app.min.js...
+[js] created assets/js/dist/app.min.js in 403ms
+[js]
+[js] _javascript/pwa/sw.js → assets/js/dist/sw.min.js...
+[js] created assets/js/dist/sw.min.js in 142ms
+[js] npm run build:js exited with code 0
+
+Lint
+
+
+> jekyll-theme-chirpy@7.6.0 test
+> npm run lint:js && npm run lint:scss
+
+
+> jekyll-theme-chirpy@7.6.0 lint:js
+> eslint
+
+
+> jekyll-theme-chirpy@7.6.0 lint:scss
+> stylelint _sass/**/*.scss
+
+
+Node models
+
+
+> jekyll-theme-chirpy@7.6.0 test:atlas
+> node --test tests/atlas-models.test.js tests/campus-models.test.js tests/pages-build.test.js tests/research-models.test.js tests/learning-models.test.js tests/observatory-models.test.js tests/collector-models.test.js tests/stream-models.test.js
+
+✔ prisoner: individual equilibrium differs from social optimum (1.956551ms)
+✔ stag has two coordination equilibria and handles indifference (0.231229ms)
+✔ all reported equilibria resist unilateral improvements across slider range (2.837432ms)
+✔ Mercator: equator, 60 degrees, symmetry and domain (1.112731ms)
+✔ copy ownership: mutation and destruction (0.231193ms)
+✔ matching pennies has no pure equilibrium; all-zero game has four (1.260298ms)
+✔ campus filtering combines query, category and favorites, including verified empty categories (2.037456ms)
+✔ Mercator point projection preserves east/right, north/up, and fits multiple screens (0.59232ms)
+✔ invalid or unrelated-campus coordinates are rejected rather than rendered (0.768001ms)
+✔ stored view values are bounded and invalid storage values cannot escape the map (0.345513ms)
+✔ RSS and Atom extract only bibliographic fields, never descriptions or article bodies (115.639937ms)
+✔ rejects DTD/entity declarations, UTF-16, malformed XML and excessive input (344.323574ms)
+✔ canonical link validation preserves identifying query bytes and blocks off-source/unsafe links (1.108259ms)
+✔ deduplicates deterministically, bounds collection and keeps invalid/future dates explicit (12.579212ms)
+✔ archive history retains first observation and previous metadata, unchanged polls do not rewrite records (0.630861ms)
+✔ archive days follow Shanghai midnight rather than UTC midnight (27.870105ms)
+{"at":"2026-11-12T09:01:28.374Z","status":"partial","sources_ok":1,"sources_total":2,"additions":1,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-2","error":"http_403"}]}
+Recent collection exists; no duplicate fetch.
+{"at":"2026-11-12T09:01:28.461Z","status":"partial","sources_ok":1,"sources_total":2,"additions":0,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-2","error":"http_429"}]}
+{"at":"2026-11-12T09:01:28.469Z","status":"error","sources_ok":0,"sources_total":2,"additions":0,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-1","error":"http_503"},{"id":"fixture-2","error":"http_429"}]}
+✔ real parser/collector pipeline retains archives on partial failures, 304 and rate limits (112.170949ms)
+✔ starts empty, changes only explicit manual records and supports undo (5.467768ms)
+✔ JSON backup round trip keeps Unicode and literal markup as data (0.39708ms)
+✔ bad JSON, unsupported versions, extra fields and unknown IDs fail, never partially restore (4.359922ms)
+✔ bounded notes and UTF-8 file size reject excess input (2.080745ms)
+✔ maximum current nine-step backup round trips even escaped control characters (1.153713ms)
+✔ import merges new records, preserves all occupied local records and does not mutate inputs (1.431692ms)
+✔ blank imported records do not block useful restoration (1.660936ms)
+✔ continuation prioritizes an active unfinished path, not a fabricated ability score (0.644265ms)
+✔ only explicit selection creates a snapshot; toggle supports removal without mutating input (3.687494ms)
+✔ starter additions preserve existing materials and deduplicate repeated selection (1.065144ms)
+✔ historical snapshots retain links, versions and reading hints after catalog changes (18.231821ms)
+✔ rejects invalid JSON/schema/version, duplicate IDs and unsafe links as a whole (0.816348ms)
+✔ bounds record count, string length and total UTF-8 bytes (31.113511ms)
+✔ v1 snapshots migrate in memory with blank notes and keep immutable historical metadata (1.127149ms)
+✔ backup merging keeps local notes, fills matching blanks and rejects overflow without partial writes (2.272468ms)
+✔ source filtering intersects topic, material type and normalized search (1.320945ms)
+✔ freshness uses the Shanghai calendar and does not turn future/invalid checks into freshness claims (2.531095ms)
+✔ Markdown export preserves source/version/hints and leaves the learner’s answers blank (1.494614ms)
+✔ Pages artifact guard rejects the raw Jekyll checkout that caused the plain page (46.135353ms)
+✔ URL identity: host/default port/fragment normalize without removing meaningful query (1.658511ms)
+✔ tracking removal preserves remaining query order and duplicate parameters (0.423259ms)
+✔ tracking removal can be disabled while fragment removal remains explicit (1.438744ms)
+✔ tracker filtering preserves retained query spelling, bare values and encoded keys (0.30533ms)
+✔ non-web, relative, credential-bearing and concealed-control URLs are rejected (0.985978ms)
+✔ URL dedup keeps the first record and reports invalid entries independently (1.572163ms)
+✔ the tracking option changes dedup rather than silently discarding query identity (0.310914ms)
+✔ output is deterministic, input is untouched, and no synthetic AI result is assigned (0.696172ms)
+✔ empty and all-invalid inputs remain explicit and over-limit input fails (3.86987ms)
+✔ bundled metadata is an actual bounded snapshot with separate source health and needs_review records (9.08363ms)
+✔ rejects unsafe source links, malformed dates, duplicate IDs and archive path/count corruption (10.864447ms)
+✔ daily archive lookup validates day, uniqueness and the full record count (61.051818ms)
+✔ filters metadata without fetching and snapshots retain first collection, source publication and review limits (2.032532ms)
+✔ status and JSON validation reject malformed or excessive input without accepting arbitrary index paths (18.244095ms)
+ℹ tests 50
+ℹ suites 0
+ℹ pass 50
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1838.651634
+
+Real Jekyll publication/build and project internal links
+
+PASS legacy tutorial and checked research render through real Jekyll
+PASS research without source checking stays absent, including --unpublished
+PASS explicit unpublished and draft notes stay absent under --unpublished
+PASS checked research with missing commit fails before output
+PASS credential-bearing source URLs cannot be marked checked
+PASS source-check dates must follow analysis dates
+PASS AI assistance must be explicit boolean metadata
+PASS a misspelled research kind cannot bypass source checking
+PASS quoted published and draft flags cannot accidentally publish notes
+PASS demoting research removes stale output on the same destination
+PASS learning routes reference public notes and require unique stable IDs
+PASS learning routes cannot link research removed by publication checks
+PASS observatory validates its source catalog and fails unsafe links before output
+PASS observatory rejects broken reading references and invalid verification dates
+PASS automatic bibliography validates real bundled metadata before any no-JS rendering
+PASS automatic bibliography rejects off-source, unsafe, duplicate and fake-reviewed records before output
+PASS study publication: 16 cases, 88 assertions, 0 failures
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/_site/Brook-ZzQq.github.io
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 1.845 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Running 3 checks (Images, Links, Scripts) in ["_site"] on *.html files ...
+
+
+Checking 193 internal links
+Checking internal link hashes in 28 files
+Ran on 44 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 0.86 seconds
+
+Final root build/internal links (same localhost exclusions as tools/test.sh)
+
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/work/iteration10/root-site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 1.67 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Running 3 checks (Images, Links, Scripts) in ["work/iteration10/root-site"] on *.html files ...
+
+
+Checking 193 internal links
+Checking internal link hashes in 28 files
+Ran on 44 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 1.07 seconds
+
+Real Python in Chromium
+
+
+> jekyll-theme-chirpy@7.6.0 test:atlas:python
+> node tests/atlas-python.mjs
+
+PASS real Pyodide in Chromium: 3 examples, exception, capped output, infinite-loop timeout, reload and stop

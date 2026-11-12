@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "interval_minutes": 120,
+  "per_feed_limit": 50,
+  "sources": [
+    {
+      "id": "arxiv-ai", "title": "arXiv · AI 新提交", "publisher": "arXiv / 论文作者", "topic": "ai",
+      "url": "https://rss.arxiv.org/rss/cs.AI", "home": "https://info.arxiv.org/help/rss.html",
+      "feed_hosts": ["rss.arxiv.org"], "article_hosts": ["arxiv.org", "www.arxiv.org"],
+      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。"
+    },
+    {
+      "id": "openai-news", "title": "OpenAI 官方发布", "publisher": "OpenAI", "topic": "ai",
+      "url": "https://openai.com/news/rss.xml", "home": "https://openai.com/news/",
+      "feed_hosts": ["openai.com", "www.openai.com"], "article_hosts": ["openai.com", "www.openai.com"],
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。"
+    },
+    {
+      "id": "hf-blog", "title": "Hugging Face Blog", "publisher": "Hugging Face / 博客作者", "topic": "ai",
+      "url": "https://huggingface.co/blog/feed.xml", "home": "https://huggingface.co/blog",
+      "feed_hosts": ["huggingface.co"], "article_hosts": ["huggingface.co"],
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。"
+    },
+    {
+      "id": "fed-press", "title": "Federal Reserve 官方发布", "publisher": "Federal Reserve Board", "topic": "economy",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml", "home": "https://www.federalreserve.gov/feeds/feeds.htm",
+      "feed_hosts": ["www.federalreserve.gov", "federalreserve.gov"], "article_hosts": ["www.federalreserve.gov", "federalreserve.gov"],
+      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。"
+    },
+    {
+      "id": "bis-press", "title": "BIS 官方发布", "publisher": "Bank for International Settlements", "topic": "economy",
+      "url": "https://www.bis.org/doclist/all_pressrels.rss", "home": "https://www.bis.org/rss",
+      "feed_hosts": ["www.bis.org", "bis.org"], "article_hosts": ["www.bis.org", "bis.org"],
+      "caveat": "机构发布与研究推断需分别阅读；不表示对市场走势的确定预测。"
+    },
+    {
+      "id": "europarl-news", "title": "欧洲议会动态", "publisher": "European Parliament", "topic": "politics",
+      "url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml", "home": "https://www.europarl.europa.eu/news/en",
+      "feed_hosts": ["www.europarl.europa.eu", "europarl.europa.eu"], "article_hosts": ["www.europarl.europa.eu", "europarl.europa.eu"],
+      "caveat": "机构新闻不是全部相关方观点；应区分提案、表决、通过文本与实际适用状态。"
+    },
+    {
+      "id": "un-news", "title": "UN News", "publisher": "United Nations News", "topic": "politics",
+      "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml", "home": "https://news.un.org/en/",
+      "feed_hosts": ["news.un.org"], "article_hosts": ["news.un.org"],
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。"
+    }
+  ]
+}

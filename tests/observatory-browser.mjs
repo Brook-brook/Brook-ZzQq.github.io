@@ -3,6 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { mkdir, readFile } from 'node:fs/promises';
 import { READING_KEY } from '../assets/js/atlas/observatory-models.js';
+import { createHash } from 'node:crypto';
 
 const base = (process.env.ATLAS_BASE_URL || 'http://127.0.0.1:4173/Brook-ZzQq.github.io').replace(/\/$/, '');
 const shots = process.env.OBSERVATORY_SHOT_DIR || 'work/iteration9/observatory';
@@ -12,7 +13,15 @@ const browser = await chromium.launch({
   headless: true, args: ['--no-sandbox']
 });
 const saved = (page) => page.evaluate((key) => JSON.parse(localStorage.getItem(key)), READING_KEY);
+const fixture = JSON.parse(await readFile('_data/observatory_stream.json', 'utf8'));
+const status = { schema_version: 1, attempted_at: fixture.attempted_at, last_complete_at: fixture.last_complete_at,
+  sources_ok: fixture.sources.filter((source) => ['ok', 'not_modified'].includes(source.status)).length,
+  sources_total: fixture.sources.length, total: fixture.total, index_path: 'index.json',
+  digest: createHash('sha256').update(JSON.stringify(fixture)).digest('hex') };
 async function open(page) {
+  await page.route('https://raw.githubusercontent.com/Brook-brook/Brook-ZzQq.github.io/observatory-data/feed/**', (route) => {
+    return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(route.request().url().endsWith('status.json') ? status : fixture) });
+  });
   assert.ok((await page.goto(base + '/observatory/')).ok());
   await page.locator('.observatory-filters').waitFor({ state: 'visible' });
 }
@@ -96,7 +105,7 @@ try {
     assert.equal(await page.locator('#reading-queue li').count(), 7);
     assert.ok(await page.evaluate(() => !!document.activeElement.closest('#reading-queue')));
     assert.equal(await page.locator('[data-save-item="contrastive-discovery"]').getAttribute('aria-pressed'), 'false');
-    await page.locator('#reading-desk summary').click();
+    await page.getByText('清除本机阅读清单', { exact: true }).click();
     const beforeClear = await saved(page);
     page.once('dialog', (dialog) => dialog.dismiss());
     await page.click('#reading-clear');

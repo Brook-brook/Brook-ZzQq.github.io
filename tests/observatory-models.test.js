@@ -2,14 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   emptyReadingList, validateReadingList, parseReadingList, toggleReading, addReadings,
-  matchesSource, catalogAge, shanghaiDate, readingPlan, MAX_LIST_BYTES
+  matchesSource, catalogAge, shanghaiDate, readingPlan, MAX_LIST_BYTES, recordReflection, mergeReadings
 } from '../assets/js/atlas/observatory-models.js';
 
 const item = (id = 'paper') => ({
   id, title: '一份材料', url: 'https://example.org/paper/v1', topic: 'ai', item_type: 'briefing',
-  version: 'v1 · 2026-11-10', checked_on: '2026-11-12', question: '如何核对对照与预算？', caveat: '未复现实验。'
+  version: 'v1 · 2026-11-10', checked_on: '2026-11-12', question: '如何核对对照与预算？', caveat: '未复现实验。', reflection: ''
 });
-const state = (saved = []) => ({ version: 1, saved });
+const state = (saved = []) => ({ version: 2, saved });
 
 test('only explicit selection creates a snapshot; toggle supports removal without mutating input', () => {
   const empty = emptyReadingList();
@@ -35,7 +35,7 @@ test('historical snapshots retain links, versions and reading hints after catalo
 });
 
 test('rejects invalid JSON/schema/version, duplicate IDs and unsafe links as a whole', () => {
-  for (const input of [null, [], { version: 2, saved: [] }, { version: 1, saved: [], score: 1 },
+  for (const input of [null, [], { version: 3, saved: [] }, { version: 2, saved: [], score: 1 },
     state([item(), item()]), state([{ ...item(), url: 'javascript:alert(1)' }]),
     state([{ ...item(), url: 'https://user:password@example.org/' }]),
     state([{ ...item(), title: 'line\nbreak' }]), state([{ ...item(), topic: 'unknown' }]),
@@ -51,7 +51,33 @@ test('bounds record count, string length and total UTF-8 bytes', () => {
   assert.throws(() => validateReadingList(state([{ ...item(), title: 'x'.repeat(241) }])));
   assert.throws(() => parseReadingList('中'.repeat(MAX_LIST_BYTES)));
   const large = Array.from({ length: 60 }, (_, i) => ({ ...item(`p-${i}`), question: '中'.repeat(1200), caveat: '中'.repeat(1200) }));
-  assert.throws(() => validateReadingList(state(large)), /过长/);
+  assert.equal(validateReadingList(state(large)).saved.length, 60, 'bounded notes now have a 2 MiB backup budget');
+  assert.throws(() => recordReflection(state([item()]), 'paper', 'x'.repeat(2001)));
+  assert.throws(() => recordReflection(state([item()]), 'paper', '\u0000'));
+});
+
+test('v1 snapshots migrate in memory with blank notes and keep immutable historical metadata', () => {
+  const legacy = { ...item('historical') }; delete legacy.reflection;
+  const raw = JSON.stringify({ version: 1, saved: [legacy] });
+  const recovered = parseReadingList(raw);
+  assert.deepEqual(recovered, state([{ ...legacy, reflection: '' }]));
+  const annotated = recordReflection(recovered, 'historical', '主张\n证据：表 2\n仍不确定 <script>');
+  assert.equal(recovered.saved[0].reflection, '');
+  assert.equal(annotated.saved[0].url, legacy.url);
+  assert.match(readingPlan(annotated), /\\<script\\>/);
+});
+
+test('backup merging keeps local notes, fills matching blanks and rejects overflow without partial writes', () => {
+  const local = state([{ ...item('keep'), reflection: 'local thought' }, item('fill'), item('changed')]);
+  const backup = state([{ ...item('keep'), reflection: 'incoming thought' }, { ...item('fill'), reflection: 'restored' },
+    { ...item('changed'), url: 'https://example.org/new', reflection: 'different document' }, item('new')]);
+  const result = mergeReadings(local, backup);
+  assert.deepEqual([result.added, result.filled, result.kept], [1, 1, 2]);
+  assert.deepEqual(result.state.saved.map((item) => item.reflection), ['local thought', 'restored', '', '']);
+  assert.equal(local.saved.length, 3); assert.equal(local.saved[1].reflection, '');
+  const full = state(Array.from({ length: 60 }, (_, i) => item(`p-${i}`)));
+  assert.throws(() => mergeReadings(full, state([item('overflow')])));
+  assert.equal(full.saved.length, 60);
 });
 
 test('source filtering intersects topic, material type and normalized search', () => {

@@ -106,3 +106,21 @@ part of CI. No live crawler, auto summarizer, account, synchronization or automa
 publication is presented as implemented. Next: deepen one guided topic, then
 consider a bounded, provenance-preserving metadata refresh with review before
 publication. Production publishing stays unchanged.
+
+## Iteration 10: continuous discovery and durable learning
+
+Implemented on a review branch: bounded public RSS/Atom metadata collection,
+independent daily archive and source/run health branches, metadata revision
+retention, visible-page snapshot polling with explicit apply, search/source/topic
+and archive lookup. Existing curated briefings keep their own actual check dates.
+
+The local reading desk now stores optional reflections with source/version
+snapshots, recovers v1 without visit-time writes, exports Markdown/JSON, and merges
+validated backups only after preview/confirmation. No automatic reading history,
+mastery inference, private uploads, full-text scraping or generated news summaries.
+
+The enabled two-hour automation triggers the verified ops workflow; native cron
+requires a workflow on GitHub's default branch and is not claimed active here.
+Website production remains unchanged. Next: author a source-checked guided topic
+that revisits an earlier forecast or AI evaluation, connecting archived evidence
+with the learner's own questions; cross-device notes still need a separate design.

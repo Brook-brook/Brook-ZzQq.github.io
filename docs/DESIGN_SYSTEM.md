@@ -165,3 +165,18 @@ Metadata and disclosures explain source/version/limitations, rather than implyin
 that official, corporate or popular material is automatically verified truth.
 Counts describe selected materials only. Native controls, text feedback and no-JS
 reading remain usable with reduced motion and the existing opaque glass fallback.
+
+## Iteration 10: living bibliography
+
+The automatic stream precedes curated reading without adopting a news dashboard.
+A single light-glass status strip explains actual attempts and partial failures;
+ruled headline rows keep source, publication and first collection separate. A quiet
+side ledger discloses publisher health and run receipts. Use existing lavender
+tokens, type and 44px controls, with 16px editable/select fields. Phone filters
+share two columns under the full-width search so content arrives sooner.
+
+New data is a pending, explicit apply action, never an animated list replacement
+while reading or typing. Native details expose source limits/revisions and optional
+private reflections. No idle motion, infinite scrolling, new blur stacks, authority
+scores, company logos or artificial urgency. Eight rows per batch; load-more sends
+focus to the first added link. Reduced motion/solid glass fallbacks remain shared.

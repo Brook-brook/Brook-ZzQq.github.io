@@ -122,3 +122,19 @@ no news/report text, chart, dataset or brand asset is reproduced. Tutorials,
 reading-list/export logic, styles and tests are original project work. Existing
 Mote and all notices remain. See docs/iteration-9-compliance.md and
 docs/OBSERVATORY_CONTENT.md for provenance and update/privacy boundaries.
+
+## Iteration 10 public feed metadata
+
+No runtime/development package, font, icon, image, map data or third-party source
+implementation was added. The collector/parser, archive, UI, tests and local-note
+logic are original project code using Python/Node/browser standard APIs and the
+existing Actions toolchain. All earlier full license notices remain.
+
+Public RSS/Atom publishers: arXiv, OpenAI, Hugging Face, Federal Reserve, Bank for
+International Settlements, European Parliament and United Nations News. Their
+titles, URLs and source-supplied dates retain the publishers' rights and terms;
+they are not relicensed under this repository's code license. Attribution and
+original links are retained. No article/report/abstract bodies, images, paywall
+content or publisher UI is copied. The initial real snapshot includes one 403
+and an empty arXiv feed; failure/empty results are disclosed, not bypassed.
+See `_data/observatory_feeds.json` and docs/iteration-10-compliance.md.

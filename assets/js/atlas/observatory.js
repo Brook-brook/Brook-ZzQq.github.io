@@ -1,7 +1,8 @@
 import {
   READING_KEY, emptyReadingList, parseReadingList, toggleReading, addReadings,
-  matchesSource, catalogAge, readingPlan
+  matchesSource, catalogAge, readingPlan, recordReflection, mergeReadings, MAX_LIST_BYTES, MAX_REFLECTION
 } from './observatory-models.js';
+import { mountStream } from './observatory-stream.js';
 
 const room = document.querySelector('[data-observatory]');
 if (room) {
@@ -23,12 +24,13 @@ if (room) {
   let state = emptyReadingList();
   let lastStored = null;
   let writable = true;
+  let pendingImport = null;
   const filters = { query: '', topic: 'all', kind: 'all' };
   const setText = (element, text) => { if (element.textContent !== text) element.textContent = text; };
   try {
     lastStored = localStorage.getItem(READING_KEY);
     if (lastStored !== null) state = parseReadingList(lastStored);
-    setText(storageStatus, '清单留在当前浏览器，可随时导出。');
+    setText(storageStatus, '清单与理解手记留在当前浏览器，可随时备份。');
   } catch {
     writable = false;
     setText(storageStatus, '旧清单无法读取或存储不可用，原数据未覆盖。本页只暂存，请导出后再离开。');
@@ -59,7 +61,7 @@ if (room) {
       }
       const text = JSON.stringify(state);
       localStorage.setItem(READING_KEY, text); lastStored = text;
-      setText(storageStatus, '已保存到当前浏览器，可下载阅读计划。');
+      setText(storageStatus, '已保存到当前浏览器，可下载阅读计划或 JSON 备份。');
     } catch {
       writable = false;
       setText(storageStatus, '无法写入本机存储。本页清单仍在，请先下载阅读计划；刷新后可能丢失。');
@@ -68,15 +70,34 @@ if (room) {
 
   function renderList(focusAfterRemove) {
     for (const button of buttons) button.setAttribute('aria-pressed', String(state.saved.some((item) => item.id === button.dataset.saveItem)));
+    window.dispatchEvent(new CustomEvent('observatory:selection', { detail: state.saved.map((item) => item.id) }));
+    const openNotes = new Set([...queue.querySelectorAll('details[open]')].map((node) => node.dataset.noteFor));
     const nodes = state.saved.map((item) => {
       const li = document.createElement('li');
       const link = document.createElement('a'); link.href = item.url; link.textContent = item.title;
       const meta = document.createElement('small');
-      meta.textContent = `${item.version}${byId.has(item.id) ? '' : ' · 历史收藏（当前目录外）'}`;
+      meta.textContent = `${item.version}${item.item_type === 'update' ? ' · 待核对快照' : byId.has(item.id) ? '' : ' · 历史收藏（当前目录外）'}`;
+      const notes = document.createElement('details'); notes.dataset.noteFor = item.id;
+      notes.open = openNotes.has(item.id);
+      const summary = document.createElement('summary'); summary.textContent = '我的理解手记';
+      const label = document.createElement('label'); label.htmlFor = `reading-note-${item.id}`;
+      label.textContent = '主张、证据位置、我的解释与下一步验证';
+      const input = document.createElement('textarea'); input.id = label.htmlFor; input.rows = 5;
+      input.maxLength = MAX_REFLECTION; input.value = item.reflection; input.autocomplete = 'off';
+      const hint = document.createElement('small'); hint.id = `reading-hint-${item.id}`;
+      hint.textContent = `只保存在本机 · ${item.reflection.length} / ${MAX_REFLECTION} 字符`;
+      input.setAttribute('aria-describedby', hint.id);
+      input.addEventListener('input', () => {
+        try {
+          state = recordReflection(state, item.id, input.value);
+          setText(hint, `只保存在本机 · ${input.value.length} / ${MAX_REFLECTION} 字符`); persist();
+        } catch (error) { setText(storageStatus, `${error.message} 请复制未保存的文字。`); }
+      });
+      notes.append(summary, label, input, hint);
       const remove = document.createElement('button'); remove.type = 'button'; remove.textContent = '移除';
       remove.setAttribute('aria-label', `移除：${item.title}`);
-      remove.addEventListener('click', () => change(() => toggleReading(state, item), item.id));
-      li.append(link, meta, remove); return li;
+      remove.addEventListener('click', () => removeOrToggle(item, item.id));
+      li.append(link, meta, notes, remove); return li;
     });
     queue.replaceChildren(...nodes);
     setText(document.getElementById('reading-count'), `已选 ${state.saved.length} 份材料 · 随时增减`);
@@ -91,8 +112,19 @@ if (room) {
     try { state = update(); renderList(focusAfterRemove); persist(); return true; }
     catch (error) { setText(storageStatus, `${error.message} 本次未改动清单。`); return false; }
   }
+  function removeOrToggle(item, focusAfterRemove) {
+    const selected = state.saved.find((entry) => entry.id === item.id);
+    if (selected?.reflection && !window.confirm('移除此材料及其理解手记？建议先下载备份。')) return false;
+    return change(() => toggleReading(state, item), focusAfterRemove);
+  }
+  window.addEventListener('observatory:selection-request', () => {
+    window.dispatchEvent(new CustomEvent('observatory:selection', { detail: state.saved.map((item) => item.id) }));
+  });
+  window.addEventListener('observatory:save-update', (event) => {
+    event.detail.result = removeOrToggle(event.detail.item);
+  });
   for (const button of buttons) button.addEventListener('click', () => {
-    const changed = change(() => toggleReading(state, byId.get(button.dataset.saveItem)));
+    const changed = removeOrToggle(byId.get(button.dataset.saveItem));
     setText(button.closest('[data-reading-item]').querySelector('[data-save-feedback]'), changed
       ? (writable ? '清单已更新，可在阅读桌查看与导出。' : '仅本页暂存，未保存。请到阅读桌导出后再离开。')
       : '本次未更改清单，请到阅读桌查看提示。');
@@ -116,13 +148,49 @@ if (room) {
     });
     filterSources(); query.focus();
   });
-  exported.addEventListener('click', () => {
-    const url = URL.createObjectURL(new Blob([readingPlan(state)], { type: 'text/markdown;charset=utf-8' }));
-    const link = document.createElement('a'); link.href = url; link.download = 'brooks-observatory-reading-plan.md';
+  function download(content, type, name) {
+    const url = URL.createObjectURL(new Blob([content], { type }));
+    const link = document.createElement('a'); link.href = url; link.download = name;
     document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  exported.addEventListener('click', () => {
+    download(readingPlan(state), 'text/markdown;charset=utf-8', 'brooks-observatory-reading-plan.md');
+  });
+  document.getElementById('reading-backup').addEventListener('click', () => {
+    download(JSON.stringify(state, null, 2) + '\n', 'application/json', 'brooks-observatory-backup.json');
+  });
+  const importFile = document.getElementById('reading-import');
+  const importStatus = document.getElementById('reading-import-status');
+  const importConfirm = document.getElementById('reading-import-confirm');
+  let importSequence = 0;
+  function cancelImport() {
+    importSequence++; pendingImport = null; importFile.value = ''; importConfirm.hidden = true;
+    document.getElementById('reading-import-cancel').hidden = true;
+  }
+  importFile.addEventListener('change', async () => {
+    const sequence = ++importSequence; pendingImport = null; importConfirm.hidden = true;
+    document.getElementById('reading-import-cancel').hidden = true;
+    try {
+      const file = importFile.files[0]; if (!file) return;
+      if (file.size > MAX_LIST_BYTES) throw new Error('备份超过 2 MiB，未导入。');
+      const candidate = parseReadingList(await file.text());
+      if (sequence !== importSequence) return;
+      const preview = mergeReadings(state, candidate); pendingImport = candidate;
+      setText(importStatus, `预览：新增 ${preview.added} 份，补入 ${preview.filled} 份空白手记，保留 ${preview.kept} 份本机记录。确认后合并；本机已有手记优先。`);
+      importConfirm.hidden = false; document.getElementById('reading-import-cancel').hidden = false;
+    } catch (error) { if (sequence === importSequence) setText(importStatus, `${error.message} 本机内容未改变。`); }
+  });
+  importConfirm.addEventListener('click', () => {
+    if (!pendingImport) return;
+    if (change(() => mergeReadings(state, pendingImport).state)) {
+      cancelImport(); setText(importStatus, '已合并到阅读桌。本机已有手记保留；保存状态见上方。');
+    }
+  });
+  document.getElementById('reading-import-cancel').addEventListener('click', () => {
+    cancelImport(); setText(importStatus, '已取消，本机内容未改变。');
   });
   document.getElementById('reading-clear').addEventListener('click', () => {
-    if (!window.confirm('清除本机观察台阅读清单？不影响学习手记、主题和校园收藏。')) return;
+    if (!window.confirm('清除本机观察台清单及其中的理解手记？不影响学习路线手记、主题和校园收藏。')) return;
     try {
       localStorage.removeItem(READING_KEY); lastStored = null; writable = true;
       setText(storageStatus, '观察台清单已清除。学习手记、主题与校园收藏保留。');
@@ -130,7 +198,7 @@ if (room) {
       writable = false;
       setText(storageStatus, '本页清单已清空，但无法删除存储；刷新可能恢复旧清单。');
     }
-    state = emptyReadingList(); renderList();
+    cancelImport(); state = emptyReadingList(); renderList();
   });
   window.addEventListener('storage', (event) => {
     if (event.key !== READING_KEY && event.key !== null) return;
@@ -139,4 +207,5 @@ if (room) {
   });
   room.querySelectorAll('[data-observatory-control]').forEach((element) => { element.hidden = false; });
   renderList(); filterSources();
+  mountStream(room);
 }
