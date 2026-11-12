@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-12T12:14:00.497Z",
+  "attempted_at": "2026-11-12T14:18:46.219Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 153,
+  "total": 154,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-12T12:14:00.497Z",
-      "last_success_at": "2026-11-12T12:14:00.497Z",
+      "attempted_at": "2026-11-12T14:18:46.219Z",
+      "last_success_at": "2026-11-12T14:18:46.219Z",
       "accepted": 0,
       "invalid": 0,
       "limited": false,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T12:14:00.497Z",
-      "last_success_at": "2026-11-12T12:14:00.497Z",
+      "attempted_at": "2026-11-12T14:18:46.219Z",
+      "last_success_at": "2026-11-12T14:18:46.219Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T12:14:00.497Z",
-      "last_success_at": "2026-11-12T12:14:00.497Z",
+      "attempted_at": "2026-11-12T14:18:46.219Z",
+      "last_success_at": "2026-11-12T14:18:46.219Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-12T12:14:00.497Z",
-      "last_success_at": "2026-11-12T12:14:00.497Z",
+      "attempted_at": "2026-11-12T14:18:46.219Z",
+      "last_success_at": "2026-11-12T14:18:46.219Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T12:14:00.497Z",
-      "last_success_at": "2026-11-12T12:14:00.497Z",
+      "attempted_at": "2026-11-12T14:18:46.219Z",
+      "last_success_at": "2026-11-12T14:18:46.219Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794481474-gzip\"",
-      "last_modified": "Thu, 12 Nov 2026 11:04:34 GMT",
+      "etag": "\"1794492902-gzip\"",
+      "last_modified": "Thu, 12 Nov 2026 14:15:02 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-12T12:14:00.497Z",
+      "attempted_at": "2026-11-12T14:18:46.219Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T12:14:00.497Z",
-      "last_success_at": "2026-11-12T12:14:00.497Z",
+      "attempted_at": "2026-11-12T14:18:46.219Z",
+      "last_success_at": "2026-11-12T14:18:46.219Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,52 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-7e2899c1e4e2515317ffd656a4765653c045298b4093c4bf6e86ff0d555b3528",
+      "source_id": "un-news",
+      "title": "Haiti: More than 1,000 killed between July and September, UN report reveals",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168789",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-12T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-12T14:18:46.219Z",
+      "changed_at": "2026-11-12T14:18:46.219Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-cf886cd6267ba1020acd49b6101598c563bd30671e89399b8b95be55bb0e2e1a",
+      "source_id": "un-news",
+      "title": "Lebanon: Devastation awaits returnees as UN peacekeepers prepare exit",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168784",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-11T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 11 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-12T08:01:23.049Z",
+      "changed_at": "2026-11-12T14:18:46.219Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Lebanon: After 48 years patrolling the Blue Line, UN peacekeepers prepare exit",
+          "url": "https://news.un.org/feed/view/en/story/2026/11/1168784",
+          "published_at": "2026-11-11T12:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Wed, 11 Nov 2026 12:00:00 +0000",
+          "date_warning": null,
+          "changed_at": "2026-11-12T08:01:23.049Z"
+        }
+      ]
+    },
     {
       "id": "n-4922ca6fb0dd92994c349853518621d0422aac137e6c9a194fc01e08fc5408aa",
       "source_id": "openai-news",
@@ -248,24 +294,6 @@
       "source_id": "un-news",
       "title": "Gaza winter aid: ‘No more delay’, Fletcher tells governments stalling on support",
       "url": "https://news.un.org/feed/view/en/story/2026/11/1168788",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-11T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Wed, 11 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-12T08:01:23.049Z",
-      "changed_at": "2026-11-12T08:01:23.049Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-cf886cd6267ba1020acd49b6101598c563bd30671e89399b8b95be55bb0e2e1a",
-      "source_id": "un-news",
-      "title": "Lebanon: After 48 years patrolling the Blue Line, UN peacekeepers prepare exit",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168784",
       "topic": "politics",
       "publisher": "United Nations News",
       "published_at": "2026-11-11T12:00:00.000Z",
@@ -1214,30 +1242,12 @@
       "changed_at": "2026-11-12T08:01:23.049Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-6af8b887c0eeeae9b3c734ace06d6fc06d110f4f8c070576843cf57ec643eed5",
-      "source_id": "un-news",
-      "title": "World News in Brief: Korea tensions mount, UN demands answers over staff death in Yemen, Guterres in Spain, Nepal alert ahead of COP31",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168750",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-05T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 05 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-12T08:01:23.049Z",
-      "changed_at": "2026-11-12T08:01:23.049Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-12",
-      "count": 153,
+      "count": 154,
       "path": "archive/2026-11-12.json"
     }
   ],
@@ -1280,6 +1290,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 153,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-12T14:18:46.219Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 1,
+      "revisions": 1,
+      "total": 154,
       "failed_sources": [
         {
           "id": "europarl-news",
