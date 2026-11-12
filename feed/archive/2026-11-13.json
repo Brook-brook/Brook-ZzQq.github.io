@@ -37,6 +37,42 @@
       "changed_at": "2026-11-12T16:14:35.619Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-87a784bdd6110f05671301f1fadf45673c2809d596d5e7db1470d9a74c249ca1",
+      "source_id": "fed-press",
+      "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
+      "topic": "economy",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-11-12T17:45:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 17:45:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
+      "first_seen_at": "2026-11-12T18:14:21.380Z",
+      "changed_at": "2026-11-12T18:14:21.380Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-2151f47ceb263959526eadb461bce1cefafe5c90bae6fbd80dedad22b4361a74",
+      "source_id": "un-news",
+      "title": "Kenya begins countdown towards end of Ebola after last patient discharged",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168790",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-12T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-12T18:14:21.380Z",
+      "changed_at": "2026-11-12T18:14:21.380Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }

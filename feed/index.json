@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-12T16:14:35.619Z",
+  "attempted_at": "2026-11-12T18:14:21.380Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 156,
+  "total": 158,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-12T16:14:35.619Z",
-      "last_success_at": "2026-11-12T16:14:35.619Z",
+      "attempted_at": "2026-11-12T18:14:21.380Z",
+      "last_success_at": "2026-11-12T18:14:21.380Z",
       "accepted": 0,
       "invalid": 0,
       "limited": false,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T16:14:35.619Z",
-      "last_success_at": "2026-11-12T16:14:35.619Z",
+      "attempted_at": "2026-11-12T18:14:21.380Z",
+      "last_success_at": "2026-11-12T18:14:21.380Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T16:14:35.619Z",
-      "last_success_at": "2026-11-12T16:14:35.619Z",
+      "attempted_at": "2026-11-12T18:14:21.380Z",
+      "last_success_at": "2026-11-12T18:14:21.380Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,13 +82,13 @@
         "federalreserve.gov"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T16:14:35.619Z",
-      "last_success_at": "2026-11-12T16:14:35.619Z",
+      "attempted_at": "2026-11-12T18:14:21.380Z",
+      "last_success_at": "2026-11-12T18:14:21.380Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
-      "etag": "W/\"c0f81e8be72dd1:0\"",
-      "last_modified": "Thu, 12 Nov 2026 16:00:15 GMT",
+      "etag": "W/\"4cdcb695cd72dd1:0\"",
+      "last_modified": "Thu, 12 Nov 2026 17:45:19 GMT",
       "error": null,
       "retry_after": null
     },
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T16:14:35.619Z",
-      "last_success_at": "2026-11-12T16:14:35.619Z",
+      "attempted_at": "2026-11-12T18:14:21.380Z",
+      "last_success_at": "2026-11-12T18:14:21.380Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794499774-gzip\"",
-      "last_modified": "Thu, 12 Nov 2026 16:09:34 GMT",
+      "etag": "\"1794503182-gzip\"",
+      "last_modified": "Thu, 12 Nov 2026 17:06:22 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-12T16:14:35.619Z",
+      "attempted_at": "2026-11-12T18:14:21.380Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T16:14:35.619Z",
-      "last_success_at": "2026-11-12T16:14:35.619Z",
+      "attempted_at": "2026-11-12T18:14:21.380Z",
+      "last_success_at": "2026-11-12T18:14:21.380Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-87a784bdd6110f05671301f1fadf45673c2809d596d5e7db1470d9a74c249ca1",
+      "source_id": "fed-press",
+      "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
+      "topic": "economy",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-11-12T17:45:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 17:45:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
+      "first_seen_at": "2026-11-12T18:14:21.380Z",
+      "changed_at": "2026-11-12T18:14:21.380Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-2151f47ceb263959526eadb461bce1cefafe5c90bae6fbd80dedad22b4361a74",
+      "source_id": "un-news",
+      "title": "Kenya begins countdown towards end of Ebola after last patient discharged",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168790",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-12T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-12T18:14:21.380Z",
+      "changed_at": "2026-11-12T18:14:21.380Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-e589a1e1c99ea10e62c21fe5cd70b6fa2b3ec3d0ab5750fd0a6f19cb45569122",
       "source_id": "fed-press",
@@ -1206,48 +1242,12 @@
       "changed_at": "2026-11-12T08:01:23.049Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-616c68177b707eae60eb2b7e618a86105e3926c540e149caa916945e5a2342dd",
-      "source_id": "openai-news",
-      "title": "Australian universities are creating AI-native graduates",
-      "url": "https://openai.com/index/australian-universities-ai-native-graduates",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-05T17:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 05 Nov 2026 17:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-12T08:01:23.049Z",
-      "changed_at": "2026-11-12T08:01:23.049Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-2993c3bddd49024d05647913b2ad8bc21e65d6f48a70b505640acf65befbd64e",
-      "source_id": "fed-press",
-      "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm",
-      "topic": "economy",
-      "publisher": "Federal Reserve Board",
-      "published_at": "2026-11-05T16:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 5 Nov 2026 16:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
-      "first_seen_at": "2026-11-12T08:01:23.049Z",
-      "changed_at": "2026-11-12T08:01:23.049Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-13",
-      "count": 2,
+      "count": 4,
       "path": "archive/2026-11-13.json"
     },
     {
@@ -1325,6 +1325,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 156,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-12T18:14:21.380Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 158,
       "failed_sources": [
         {
           "id": "europarl-news",
