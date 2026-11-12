@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "at": "2026-11-12T08:01:23.049Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 151,
+      "revisions": 0,
+      "total": 151,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    }
+  ]
+}
