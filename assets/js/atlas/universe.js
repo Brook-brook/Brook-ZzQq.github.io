@@ -82,6 +82,7 @@ if (finder) {
   }
   window.addEventListener('hashchange', () => revealLinkedProject(location.hash));
   document.addEventListener('click', (event) => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const link = event.target.closest('a[href]');
     if (!link) return;
     const url = new URL(link.href);

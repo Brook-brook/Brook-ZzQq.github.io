@@ -8,6 +8,7 @@ const prefix = new URL(base).pathname.replace(/\/$/, '');
 const shots = process.env.SEARCH_SHOT_DIR || 'work/site-search';
 await mkdir(shots, { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || (process.env.CI ? chromium.executablePath() : '/usr/bin/chromium'), args: ['--no-sandbox'] });
+let firstCatalogId;
 try {
   for (const width of [390, 768, 1440]) for (const theme of ['dark', 'light']) {
     const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
@@ -54,15 +55,26 @@ try {
     assert.equal(await page.locator('[data-open-site-search]').evaluate((e) => e === document.activeElement), true);
     await page.keyboard.press('Control+k');
     assert.equal(await dialog.evaluate((e) => e.open), true);
+    assert.equal(await page.evaluate(() => document.documentElement.classList.contains('site-search-open')), true);
     await page.keyboard.press('Escape');
+    await page.waitForFunction(() => !document.querySelector('[data-site-search-dialog]').open);
     assert.equal(requests.filter((url) => url.includes('/assets/data/site-search.json')).length, 1, 'reuse one public index');
     assert.equal(requests.some((url) => url.includes('nothing-public-search-xyz')), false, 'query is never sent');
     assert.equal(await page.evaluate(() => localStorage.getItem('brooks-universe.learning.v1')), 'PRIVATE_SEARCH_SENTINEL');
+    if (width === 390) {
+      await page.locator('.menu-toggle').click();
+      await page.locator('#primary-nav a').first().focus();
+      await page.keyboard.press('Control+k');
+      assert.equal(await dialog.evaluate((e) => e.open), true);
+      await page.keyboard.press('Escape');
+      await page.waitForFunction(() => document.querySelector('[data-open-site-search]') === document.activeElement);
+    }
 
     await page.goto(base + '/search/');
     const catalog = page.locator('[data-site-search-page]');
     await page.waitForSelector('[data-search-controls]:not([hidden])');
     const total = await catalog.locator('[data-search-results] li').count();
+    firstCatalogId = await catalog.locator('[data-search-entry]').first().getAttribute('data-entry-id');
     assert.ok(total >= 30);
     await page.fill('#page-search-query', 'Python');
     await catalog.locator('[data-search-kind="path"]').click();
@@ -118,6 +130,7 @@ try {
   const nojs = await fallback.newPage();
   await nojs.goto(base + '/search/');
   assert.ok((await nojs.locator('[data-search-entry]:visible').count()) >= 30);
+  assert.equal(await nojs.locator('[data-search-entry]').first().getAttribute('data-entry-id'), firstCatalogId, 'initial directory order stays consistent with and without JS');
   await nojs.goto(base + '/projects/');
   assert.equal(await nojs.locator('[data-project-row]:visible').count(), 5);
   assert.ok(await nojs.locator('[data-project-finder]').isHidden());

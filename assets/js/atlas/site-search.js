@@ -144,17 +144,22 @@ export function mountSiteSearch() {
     input.focus();
     load();
   }
-  opener.addEventListener('click', (event) => { event.preventDefault(); open(); });
+  opener.addEventListener('click', (event) => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault(); open();
+  });
   retry.addEventListener('click', load);
   dialog.querySelector('[data-search-close]').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', (event) => {
-    if (event.target.closest('a[href]')) { invoker = null; dialog.close(); }
+    if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.target.closest('a[href]')) { invoker = null; dialog.close(); }
   });
   dialog.addEventListener('close', () => {
+    if (dialog.open) return; // A queued close event can arrive after a rapid reopen.
     document.documentElement.classList.remove('site-search-open');
-    if (invoker?.isConnected) invoker.focus();
+    if (invoker) (invoker.isConnected && invoker.getClientRects().length ? invoker : opener).focus();
   });
   dialog.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') { event.preventDefault(); dialog.close(); return; }
     if (event.key !== 'Tab') return;
     const controls = [...dialog.querySelectorAll('a[href], button, input')].filter((node) => !node.disabled && node.getClientRects().length);
     if (event.shiftKey && document.activeElement === controls[0]) {

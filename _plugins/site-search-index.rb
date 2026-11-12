@@ -53,6 +53,7 @@ class AtlasSearchIndex < Jekyll::Generator
     end
     fail! unless records.length <= 1000 && records.map { |r| r["id"] }.uniq.length == records.length &&
       records.all? { |r| r["title"].length <= 240 && r["summary"].length <= 600 && r["keywords"].length <= 2000 && r["detail"].length <= 240 && r["url"].length <= 2048 }
+    records = records.each_with_index.sort_by { |record, index| [record["featured"] ? 0 : 1, index] }.map(&:first)
     site.data["search_index"] = { "schema_version" => 1, "entries" => records }
     fail! if JSON.generate(site.data["search_index"]).bytesize > 512 * 1024
   end
