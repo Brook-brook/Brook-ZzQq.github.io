@@ -145,7 +145,13 @@ try {
   await page.selectOption('#stream-day', day);
   await page.waitForFunction(() => document.getElementById('stream-message').textContent.includes('格式或来源无效'));
   assert.equal(await page.inputValue('#stream-day'), 'latest');
+  control.index = next; control.badDigest = false;
+  await page.clock.fastForward(8 * 60 * 60 * 1000);
+  await page.waitForFunction(() => document.getElementById('stream-updated').textContent.includes('超过 6 小时'));
+  assert.equal((await saved(page)).saved[0].reflection, 'keep typing privately');
+  assert.ok(await page.locator('[data-stream-item]').count(), 'an aging open tab retains existing materials');
   await context.close(); console.log('PASS continuous stream: five-minute visible-only polling, explicit snapshot apply, retained typing/focus, revision details, archive outside latest, HTTP/hash/archive failures retain content');
+  console.log('PASS continuously open tab: snapshot aging updates after eight clock hours without reload or changing notes');
 
   const restore = await browser.newContext(); await setup(restore);
   const legacy = { id: 'historical-paper', title: 'Historical document', url: 'https://example.org/old-v1', topic: 'ai', item_type: 'briefing', version: 'v1', checked_on: '2026-10-01', question: 'Evidence?', caveat: 'Historical copy' };

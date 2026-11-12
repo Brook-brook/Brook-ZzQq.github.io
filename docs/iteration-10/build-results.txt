@@ -66,60 +66,60 @@ Node models
 > jekyll-theme-chirpy@7.6.0 test:atlas
 > node --test tests/atlas-models.test.js tests/campus-models.test.js tests/pages-build.test.js tests/research-models.test.js tests/learning-models.test.js tests/observatory-models.test.js tests/collector-models.test.js tests/stream-models.test.js
 
-✔ prisoner: individual equilibrium differs from social optimum (2.2827ms)
-✔ stag has two coordination equilibria and handles indifference (0.376517ms)
-✔ all reported equilibria resist unilateral improvements across slider range (1.854468ms)
-✔ Mercator: equator, 60 degrees, symmetry and domain (1.145447ms)
-✔ copy ownership: mutation and destruction (0.201802ms)
-✔ matching pennies has no pure equilibrium; all-zero game has four (0.76653ms)
-✔ campus filtering combines query, category and favorites, including verified empty categories (2.550918ms)
-✔ Mercator point projection preserves east/right, north/up, and fits multiple screens (0.745136ms)
-✔ invalid or unrelated-campus coordinates are rejected rather than rendered (0.831289ms)
-✔ stored view values are bounded and invalid storage values cannot escape the map (0.25705ms)
-✔ RSS and Atom extract only bibliographic fields, never descriptions or article bodies (107.471064ms)
-✔ rejects DTD/entity declarations, UTF-16, malformed XML and excessive input (329.392281ms)
-✔ canonical link validation preserves identifying query bytes and blocks off-source/unsafe links (1.590169ms)
-✔ deduplicates deterministically, bounds collection and keeps invalid/future dates explicit (14.047103ms)
-✔ archive history retains first observation and previous metadata, unchanged polls do not rewrite records (1.378619ms)
-✔ archive days follow Shanghai midnight rather than UTC midnight (16.979932ms)
-{"at":"2026-11-12T08:32:22.121Z","status":"partial","sources_ok":1,"sources_total":2,"additions":1,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-2","error":"http_403"}]}
+✔ prisoner: individual equilibrium differs from social optimum (1.956551ms)
+✔ stag has two coordination equilibria and handles indifference (0.231229ms)
+✔ all reported equilibria resist unilateral improvements across slider range (2.837432ms)
+✔ Mercator: equator, 60 degrees, symmetry and domain (1.112731ms)
+✔ copy ownership: mutation and destruction (0.231193ms)
+✔ matching pennies has no pure equilibrium; all-zero game has four (1.260298ms)
+✔ campus filtering combines query, category and favorites, including verified empty categories (2.037456ms)
+✔ Mercator point projection preserves east/right, north/up, and fits multiple screens (0.59232ms)
+✔ invalid or unrelated-campus coordinates are rejected rather than rendered (0.768001ms)
+✔ stored view values are bounded and invalid storage values cannot escape the map (0.345513ms)
+✔ RSS and Atom extract only bibliographic fields, never descriptions or article bodies (115.639937ms)
+✔ rejects DTD/entity declarations, UTF-16, malformed XML and excessive input (344.323574ms)
+✔ canonical link validation preserves identifying query bytes and blocks off-source/unsafe links (1.108259ms)
+✔ deduplicates deterministically, bounds collection and keeps invalid/future dates explicit (12.579212ms)
+✔ archive history retains first observation and previous metadata, unchanged polls do not rewrite records (0.630861ms)
+✔ archive days follow Shanghai midnight rather than UTC midnight (27.870105ms)
+{"at":"2026-11-12T09:01:28.374Z","status":"partial","sources_ok":1,"sources_total":2,"additions":1,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-2","error":"http_403"}]}
 Recent collection exists; no duplicate fetch.
-{"at":"2026-11-12T08:32:22.302Z","status":"partial","sources_ok":1,"sources_total":2,"additions":0,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-2","error":"http_429"}]}
-{"at":"2026-11-12T08:32:22.310Z","status":"error","sources_ok":0,"sources_total":2,"additions":0,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-1","error":"http_503"},{"id":"fixture-2","error":"http_429"}]}
-✔ real parser/collector pipeline retains archives on partial failures, 304 and rate limits (214.275169ms)
-✔ starts empty, changes only explicit manual records and supports undo (4.172736ms)
-✔ JSON backup round trip keeps Unicode and literal markup as data (0.374489ms)
-✔ bad JSON, unsupported versions, extra fields and unknown IDs fail, never partially restore (3.053187ms)
-✔ bounded notes and UTF-8 file size reject excess input (2.800434ms)
-✔ maximum current nine-step backup round trips even escaped control characters (1.287489ms)
-✔ import merges new records, preserves all occupied local records and does not mutate inputs (0.724261ms)
-✔ blank imported records do not block useful restoration (0.32229ms)
-✔ continuation prioritizes an active unfinished path, not a fabricated ability score (0.31534ms)
-✔ only explicit selection creates a snapshot; toggle supports removal without mutating input (5.318967ms)
-✔ starter additions preserve existing materials and deduplicate repeated selection (2.048443ms)
-✔ historical snapshots retain links, versions and reading hints after catalog changes (27.960811ms)
-✔ rejects invalid JSON/schema/version, duplicate IDs and unsafe links as a whole (1.008511ms)
-✔ bounds record count, string length and total UTF-8 bytes (35.569044ms)
-✔ v1 snapshots migrate in memory with blank notes and keep immutable historical metadata (1.343812ms)
-✔ backup merging keeps local notes, fills matching blanks and rejects overflow without partial writes (1.682331ms)
-✔ source filtering intersects topic, material type and normalized search (0.368857ms)
-✔ freshness uses the Shanghai calendar and does not turn future/invalid checks into freshness claims (1.036457ms)
-✔ Markdown export preserves source/version/hints and leaves the learner’s answers blank (0.689882ms)
-✔ Pages artifact guard rejects the raw Jekyll checkout that caused the plain page (54.838631ms)
-✔ URL identity: host/default port/fragment normalize without removing meaningful query (1.157675ms)
-✔ tracking removal preserves remaining query order and duplicate parameters (0.199605ms)
-✔ tracking removal can be disabled while fragment removal remains explicit (1.15995ms)
-✔ tracker filtering preserves retained query spelling, bare values and encoded keys (0.289557ms)
-✔ non-web, relative, credential-bearing and concealed-control URLs are rejected (0.714852ms)
-✔ URL dedup keeps the first record and reports invalid entries independently (1.871284ms)
-✔ the tracking option changes dedup rather than silently discarding query identity (0.393309ms)
-✔ output is deterministic, input is untouched, and no synthetic AI result is assigned (0.703575ms)
-✔ empty and all-invalid inputs remain explicit and over-limit input fails (1.095991ms)
-✔ bundled metadata is an actual bounded snapshot with separate source health and needs_review records (5.705229ms)
-✔ rejects unsafe source links, malformed dates, duplicate IDs and archive path/count corruption (10.120223ms)
-✔ daily archive lookup validates day, uniqueness and the full record count (43.917331ms)
-✔ filters metadata without fetching and snapshots retain first collection, source publication and review limits (2.539201ms)
-✔ status and JSON validation reject malformed or excessive input without accepting arbitrary index paths (14.400619ms)
+{"at":"2026-11-12T09:01:28.461Z","status":"partial","sources_ok":1,"sources_total":2,"additions":0,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-2","error":"http_429"}]}
+{"at":"2026-11-12T09:01:28.469Z","status":"error","sources_ok":0,"sources_total":2,"additions":0,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-1","error":"http_503"},{"id":"fixture-2","error":"http_429"}]}
+✔ real parser/collector pipeline retains archives on partial failures, 304 and rate limits (112.170949ms)
+✔ starts empty, changes only explicit manual records and supports undo (5.467768ms)
+✔ JSON backup round trip keeps Unicode and literal markup as data (0.39708ms)
+✔ bad JSON, unsupported versions, extra fields and unknown IDs fail, never partially restore (4.359922ms)
+✔ bounded notes and UTF-8 file size reject excess input (2.080745ms)
+✔ maximum current nine-step backup round trips even escaped control characters (1.153713ms)
+✔ import merges new records, preserves all occupied local records and does not mutate inputs (1.431692ms)
+✔ blank imported records do not block useful restoration (1.660936ms)
+✔ continuation prioritizes an active unfinished path, not a fabricated ability score (0.644265ms)
+✔ only explicit selection creates a snapshot; toggle supports removal without mutating input (3.687494ms)
+✔ starter additions preserve existing materials and deduplicate repeated selection (1.065144ms)
+✔ historical snapshots retain links, versions and reading hints after catalog changes (18.231821ms)
+✔ rejects invalid JSON/schema/version, duplicate IDs and unsafe links as a whole (0.816348ms)
+✔ bounds record count, string length and total UTF-8 bytes (31.113511ms)
+✔ v1 snapshots migrate in memory with blank notes and keep immutable historical metadata (1.127149ms)
+✔ backup merging keeps local notes, fills matching blanks and rejects overflow without partial writes (2.272468ms)
+✔ source filtering intersects topic, material type and normalized search (1.320945ms)
+✔ freshness uses the Shanghai calendar and does not turn future/invalid checks into freshness claims (2.531095ms)
+✔ Markdown export preserves source/version/hints and leaves the learner’s answers blank (1.494614ms)
+✔ Pages artifact guard rejects the raw Jekyll checkout that caused the plain page (46.135353ms)
+✔ URL identity: host/default port/fragment normalize without removing meaningful query (1.658511ms)
+✔ tracking removal preserves remaining query order and duplicate parameters (0.423259ms)
+✔ tracking removal can be disabled while fragment removal remains explicit (1.438744ms)
+✔ tracker filtering preserves retained query spelling, bare values and encoded keys (0.30533ms)
+✔ non-web, relative, credential-bearing and concealed-control URLs are rejected (0.985978ms)
+✔ URL dedup keeps the first record and reports invalid entries independently (1.572163ms)
+✔ the tracking option changes dedup rather than silently discarding query identity (0.310914ms)
+✔ output is deterministic, input is untouched, and no synthetic AI result is assigned (0.696172ms)
+✔ empty and all-invalid inputs remain explicit and over-limit input fails (3.86987ms)
+✔ bundled metadata is an actual bounded snapshot with separate source health and needs_review records (9.08363ms)
+✔ rejects unsafe source links, malformed dates, duplicate IDs and archive path/count corruption (10.864447ms)
+✔ daily archive lookup validates day, uniqueness and the full record count (61.051818ms)
+✔ filters metadata without fetching and snapshots retain first collection, source publication and review limits (2.032532ms)
+✔ status and JSON validation reject malformed or excessive input without accepting arbitrary index paths (18.244095ms)
 ℹ tests 50
 ℹ suites 0
 ℹ pass 50
@@ -127,7 +127,7 @@ Recent collection exists; no duplicate fetch.
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 1751.953834
+ℹ duration_ms 1838.651634
 
 Real Jekyll publication/build and project internal links
 
@@ -154,7 +154,7 @@ Configuration file: /app/_config.yml
        Destination: /app/_site/Brook-ZzQq.github.io
  Incremental build: disabled. Enable with --incremental
       Generating...
-                    done in 1.851 seconds.
+                    done in 1.845 seconds.
  Auto-regeneration: disabled. Use --watch to enable.
 Running 3 checks (Images, Links, Scripts) in ["_site"] on *.html files ...
 
@@ -165,7 +165,7 @@ Ran on 44 files!
 
 
 HTML-Proofer finished successfully.
-Finished in 0.92 seconds
+Finished in 0.86 seconds
 
 Final root build/internal links (same localhost exclusions as tools/test.sh)
 
@@ -175,7 +175,7 @@ Configuration file: /app/_config.yml
        Destination: /app/work/iteration10/root-site
  Incremental build: disabled. Enable with --incremental
       Generating...
-                    done in 1.566 seconds.
+                    done in 1.67 seconds.
  Auto-regeneration: disabled. Use --watch to enable.
 Running 3 checks (Images, Links, Scripts) in ["work/iteration10/root-site"] on *.html files ...
 
@@ -186,7 +186,7 @@ Ran on 44 files!
 
 
 HTML-Proofer finished successfully.
-Finished in 0.88 seconds
+Finished in 1.07 seconds
 
 Real Python in Chromium
 

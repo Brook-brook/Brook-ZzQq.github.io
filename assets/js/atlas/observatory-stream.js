@@ -91,10 +91,15 @@ export function mountStream(room) {
     setText(more, `再看 ${Math.min(8, matches.length - nodes.length)} 份`);
   }
 
-  function renderHealth() {
+  function refreshStamp() {
+    if (!index) return;
     const okay = index.sources.filter((source) => ['ok', 'not_modified'].includes(source.status)).length;
     const stale = Date.now() - Date.parse(index.attempted_at) > 6 * 60 * 60 * 1000;
     setText(get('stream-updated'), `上次采集尝试：${time(index.attempted_at)}（北京时间） · ${okay} / ${index.sources.length} 个来源响应成功${stale ? ' · 快照已超过 6 小时，请检查采集状态' : ''}`);
+  }
+
+  function renderHealth() {
+    refreshStamp();
     const nodes = index.sources.map((source) => {
       const li = el('li'); const link = el('a', source.title); link.href = source.home;
       const labels = { ok: `成功 · 本轮接受 ${source.accepted} 条${source.limited ? '（达到单源上限）' : ''}`, not_modified: '成功 · 源站回复未修改', error: `采集失败 · ${source.error || '请求异常'}`, deferred: `限流等待 · 下次允许 ${time(source.retry_after)}` };
@@ -117,6 +122,7 @@ export function mountStream(room) {
   }
 
   async function check() {
+    refreshStamp();
     if (checking || document.hidden || !navigator.onLine) return;
     checking = true; lastCheck = Date.now(); checkButton.disabled = true;
     setText(message, '正在检查公共数据快照…');
@@ -179,9 +185,11 @@ export function mountStream(room) {
     checkButton.hidden = false;
     await check();
     setInterval(() => {
+      if (!document.hidden) refreshStamp();
       if (!navigator.connection?.saveData && !document.hidden && navigator.onLine) check();
     }, pollInterval);
     document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) refreshStamp();
       if (!document.hidden && Date.now() - lastCheck >= pollInterval && !navigator.connection?.saveData) check();
     });
   }

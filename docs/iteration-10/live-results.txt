@@ -1,6 +1,6 @@
 2026-11-12 (Asia/Shanghai) — actual command output, no private user notes.
 
-Actual public data, no route mocks
+Actual public data after final correction, no route mocks
 
 
 > jekyll-theme-chirpy@7.6.0 test:observatory:live

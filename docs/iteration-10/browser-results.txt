@@ -116,3 +116,33 @@ PASS Universe 768 light: 3 pages, axe, notebook tabs/keyboard, map preview, Stud
 PASS Universe 1440 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
 PASS Universe 1440 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
 PASS Universe no-JavaScript: all tutorials and notebook previews readable
+
+Final project stream regression, including long-open-tab aging
+
+PASS continuous stream 390 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 390 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 768 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 768 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 1440 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 1440 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream: five-minute visible-only polling, explicit snapshot apply, retained typing/focus, revision details, archive outside latest, HTTP/hash/archive failures retain content
+PASS continuously open tab: snapshot aging updates after eight clock hours without reload or changing notes
+PASS reading desk: v1 recovery without rewrite, explicit migration, previewed JSON merge/local-note priority, bad file preservation, cancel removal, reset protects route journal
+PASS note recovery quota: original storage preserved, typed memory-only reflection remains exportable
+PASS note recovery corrupt: original storage preserved, typed memory-only reflection remains exportable
+PASS no-JS continuous stream: real bundled original links, hidden unavailable controls, phone layout
+
+Final root stream regression, including long-open-tab aging
+
+PASS continuous stream 390 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 390 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 768 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 768 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 1440 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 1440 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream: five-minute visible-only polling, explicit snapshot apply, retained typing/focus, revision details, archive outside latest, HTTP/hash/archive failures retain content
+PASS continuously open tab: snapshot aging updates after eight clock hours without reload or changing notes
+PASS reading desk: v1 recovery without rewrite, explicit migration, previewed JSON merge/local-note priority, bad file preservation, cancel removal, reset protects route journal
+PASS note recovery quota: original storage preserved, typed memory-only reflection remains exportable
+PASS note recovery corrupt: original storage preserved, typed memory-only reflection remains exportable
+PASS no-JS continuous stream: real bundled original links, hidden unavailable controls, phone layout
