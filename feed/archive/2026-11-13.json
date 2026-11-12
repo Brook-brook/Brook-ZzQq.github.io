@@ -163,6 +163,24 @@
       "changed_at": "2026-11-12T20:17:07.538Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-a491aa90d650ab2bf91e0a7d38a72e157edfbef974240c627de775007f1696bc",
+      "source_id": "openai-news",
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "url": "https://openai.com/index/amplitude",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-12T20:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 20:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-12T22:18:20.596Z",
+      "changed_at": "2026-11-12T22:18:20.596Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
