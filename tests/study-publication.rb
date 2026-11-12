@@ -8,6 +8,7 @@ require "yaml"
 require "jekyll"
 require_relative "../_plugins/atlas-note-publication"
 require_relative "../_plugins/learning-path-validation"
+require_relative "../_plugins/observatory-validation"
 
 # A generator runs after :site/:post_read, just as an index/sitemap generator
 # would. Its written output must never receive filtered research documents.
@@ -248,6 +249,44 @@ class StudyPublicationChecks
           assert(false, "route to unpublished research must fail")
         rescue Jekyll::Errors::FatalException
           assert(!File.exist?(page_path(destination, "pending")), "hidden research must remain absent")
+        end
+      end
+    end
+
+    check("observatory validates its source catalog and fails unsafe links before output") do
+      with_fixture do |source, destination|
+        data = YAML.safe_load(File.read(File.expand_path("../_data/observatory.yml", __dir__)))
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        data_file = File.join(source, "_data", "observatory.yml")
+        File.write(data_file, YAML.dump(data))
+        site = build(source, destination)
+        assert(site.data["observatory"]["sources"].length == 18, "real source catalog should build")
+        data["sources"][0]["url"] = "https://name:password@example.test/source"
+        File.write(data_file, YAML.dump(data))
+        begin
+          build(source, destination)
+          assert(false, "credential-bearing catalog links must fail")
+        rescue Jekyll::Errors::FatalException => error
+          assert(error.message.include?("observatory.yml"), "identify invalid source catalog")
+        end
+      end
+    end
+
+    check("observatory rejects broken reading references and invalid verification dates") do
+      ["reference", "date", "duplicate"].each do |mode|
+        with_fixture do |source, destination|
+          data = YAML.safe_load(File.read(File.expand_path("../_data/observatory.yml", __dir__)))
+          data["briefings"][0]["source_id"] = "missing" if mode == "reference"
+          data["checked_on"] = "2026-02-30" if mode == "date"
+          data["briefings"][0]["id"] = data["sources"][0]["id"] if mode == "duplicate"
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          File.write(File.join(source, "_data", "observatory.yml"), YAML.dump(data))
+          begin
+            build(source, destination)
+            assert(false, "invalid catalog #{mode} must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("observatory.yml"), "catalog #{mode} should report validation failure")
+          end
         end
       end
     end

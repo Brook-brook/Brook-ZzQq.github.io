@@ -1,0 +1,254 @@
+checked_on: '2026-11-12'
+topics:
+  - id: ai
+    title: AI 前沿
+  - id: economy
+    title: 全球经济
+  - id: politics
+    title: 国际政治
+kinds:
+  - id: primary
+    title: 原始材料
+  - id: analysis
+    title: 机构分析
+  - id: reporting
+    title: 新闻报道
+starters:
+  ai: [ai-index, arxiv-ai, openreview]
+  world: [imf-weo, wto-trade, un-records, reuters-world]
+sources:
+  - id: ai-index
+    title: Stanford AI Index
+    publisher: Stanford HAI
+    topic: ai
+    kind: analysis
+    language: 英文 / 有官方中文译本入口
+    url: https://hai.stanford.edu/ai-index/2026-ai-index-report
+    summary: 从年度数据建立 AI 技术、产业与治理的整体坐标。
+    focus: 先读技术表现章节，再追踪图表背后的原始数据与评测条件。
+    caveat: 年度汇编存在时间滞后；不同基准的分数不宜直接比较。
+    question: 选一张图，写明任务、数据年份与评估条件；它不能说明什么？
+  - id: arxiv-ai
+    title: arXiv · Artificial Intelligence
+    publisher: arXiv
+    topic: ai
+    kind: primary
+    language: 英文为主
+    url: https://arxiv.org/list/cs.AI/recent
+    summary: 直接查看研究者新提交的 AI 论文与版本记录。
+    focus: 先找任务、方法、基线与限制，再决定是否精读正文。
+    caveat: 上架不等于同行评审通过；接收声明还应回查会议记录。
+    question: 作者实际验证了哪一个问题？结论适用于哪些任务和预算？
+  - id: openreview
+    title: OpenReview
+    publisher: OpenReview
+    topic: ai
+    kind: primary
+    language: 英文为主
+    url: https://openreview.net/
+    summary: 将投稿、评审讨论、作者回应与最终决定放在一起看。
+    focus: 从对应会议入口进入，核对论文版本与公开决定状态。
+    caveat: 公开投稿、评审意见和正式接收是不同状态；并非所有讨论都公开。
+    question: 评审质疑了哪个实验？作者的回应是否补充了可检查的证据？
+  - id: openai-research
+    title: OpenAI Research
+    publisher: OpenAI
+    topic: ai
+    kind: primary
+    language: 英文为主
+    url: https://openai.com/research/
+    summary: 跟踪模型、推理、多模态与部署研究的一手发布。
+    focus: 从发布页继续找技术报告、模型说明和评测设置。
+    caveat: 开发者是能力声明的利益相关方；需要对照独立评估与失败案例。
+    question: 该结果使用了哪些工具、提示、预算和测试集？
+  - id: anthropic-research
+    title: Anthropic Research
+    publisher: Anthropic
+    topic: ai
+    kind: primary
+    language: 英文为主
+    url: https://www.anthropic.com/research
+    summary: 观察可解释性、红队、社会影响与 AI 经济研究。
+    focus: 区分模型实验、用户样本观察与更广泛的社会推断。
+    caveat: 平台样本不自动代表所有用户或整个劳动市场。
+    question: 研究对象是谁？测量到的行为与作者推断之间还隔着什么？
+  - id: deepmind-research
+    title: Google DeepMind Research
+    publisher: Google DeepMind
+    topic: ai
+    kind: primary
+    language: 英文为主
+    url: https://deepmind.google/research/
+    summary: 追踪智能体、多模态、科学发现与机器人研究。
+    focus: 结合论文和评测入口，区分演示片段与完整任务测试。
+    caveat: 单个演示不能说明所有环境中的可靠性或可复现性。
+    question: 系统使用了什么环境、反馈和人工介入？失败条件是什么？
+  - id: qwen-research
+    title: Qwen · 官方研究仓库
+    publisher: Qwen / Alibaba Cloud
+    topic: ai
+    kind: primary
+    language: 中文 / 英文
+    url: https://github.com/QwenLM
+    summary: 从官方仓库追踪模型说明、技术报告与实现入口。
+    focus: 阅读具体仓库的模型卡、版本、推理要求与许可。
+    caveat: 代码开放、权重可下载和使用许可不是同一个概念；按具体版本核对。
+    question: 想复现该结果，需要哪个版本、硬件、权重与许可条件？
+  - id: nist-ai
+    title: NIST AI Risk Management Framework
+    publisher: NIST
+    topic: ai
+    kind: primary
+    language: 英文
+    url: https://www.nist.gov/itl/ai-risk-management-framework
+    summary: 用风险与评估框架补足只看模型能力的视角。
+    focus: 区分框架正文、配套指南、修订进程与行业适用场景。
+    caveat: 框架本身不是某个模型已通过认证或符合全部法律要求的证明。
+    question: 一个学习或 Agent 项目可能影响谁？你会如何测量与管理风险？
+  - id: imf-weo
+    title: IMF · World Economic Outlook
+    publisher: International Monetary Fund
+    topic: economy
+    kind: analysis
+    language: 英文 / 部分多语言资料
+    url: https://www.imf.org/en/publications/weo
+    summary: 从宏观展望理解增长、通胀、风险与情景假设。
+    focus: 记录报告版次、统计截止日，以及表格中的估计和预测标记。
+    caveat: 预测会修订；全球总量和单个经济体可能走出不同路径。
+    question: 这是已实现值、估计还是预测？基准情景依赖哪些条件？
+  - id: world-bank
+    title: World Bank Open Data
+    publisher: World Bank
+    topic: economy
+    kind: primary
+    language: 英文 / 多语言入口
+    url: https://data.worldbank.org/
+    summary: 为长期发展、人口与经济比较寻找可追溯的指标。
+    focus: 同时查看指标定义、来源、单位、数据年份与修订记录。
+    caveat: 缺失值不等于零；现价、可比价与购买力平价口径不能混用。
+    question: 两个国家的数字在年份、人口基准和价格口径上是否可比？
+  - id: bis-review
+    title: BIS Quarterly Review
+    publisher: Bank for International Settlements
+    topic: economy
+    kind: analysis
+    language: 英文为主
+    url: https://www.bis.org/publications/qr
+    summary: 理解国际银行、金融市场与货币金融条件。
+    focus: 从图表回到指标定义、样本范围与作者的分析假设。
+    caveat: 研究分析和模型推断不等于确定的市场预测。
+    question: 文中的机制解释是数据直接支持，还是仍需验证的分析？
+  - id: wto-trade
+    title: WTO · Global Trade Outlook and Statistics
+    publisher: World Trade Organization
+    topic: economy
+    kind: analysis
+    language: 英文 / 部分多语言资料
+    url: https://www.wto.org/english/res_e/publications_e/global-trade-outlook-and-statistics_e.htm
+    summary: 从货物、服务与地区数据理解全球贸易变化。
+    focus: 注意贸易量与贸易额、预测与实绩，以及 AI 相关商品的分类。
+    caveat: 名义金额会受价格和汇率影响；商品分类不能直接等同于 AI 增加值。
+    question: AI 相关商品贸易增长，是否足以证明整体生产率已经提高？
+  - id: fed-fomc
+    title: Federal Reserve · FOMC Materials
+    publisher: Federal Reserve Board
+    topic: economy
+    kind: primary
+    language: 英文
+    url: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+    summary: 从会议日历追溯政策声明、会议纪要与预测资料。
+    focus: 分开记录决议日、纪要发布日期和经济预测的条件。
+    caveat: 声明、纪要和参与者预测不是同一份材料，预测也不是承诺。
+    question: 这段信息是已经作出的决定，还是参与者对未来的判断？
+  - id: china-statistics
+    title: 国家统计局 · 最新发布
+    publisher: National Bureau of Statistics of China
+    topic: economy
+    kind: primary
+    language: 英文 / 可切换中文
+    url: https://www.stats.gov.cn/english/PressRelease/
+    summary: 追踪中国 CPI、PPI、PMI、GDP 等正式发布与统计说明。
+    focus: 先核对统计期，再区分同比、环比、初步核算与修订值。
+    caveat: 综合指标不代表每个行业或个体的体验，跨口径比较要核查方法。
+    question: 该数字描述哪个时期？与上次比较时，基期和口径一致吗？
+  - id: un-records
+    title: 联合国 · 安理会会议与表决索引
+    publisher: UN Dag Hammarskjöld Library
+    topic: politics
+    kind: primary
+    language: 英文 / 文件有多语言版本
+    url: https://research.un.org/en/docs/sc/quick
+    summary: 沿会议、表决与文件编号追溯国际政治的正式记录。
+    focus: 核对文件类型、表决状态、日期，再阅读对应原文。
+    caveat: 机构文件和各方立场不能直接证明政策的实地执行结果。
+    question: 这是草案、发言、表决记录还是通过的文本？
+  - id: eur-lex
+    title: EUR-Lex · 欧盟法律与政策文本
+    publisher: Publications Office of the European Union
+    topic: politics
+    kind: primary
+    language: 欧盟官方语言；含英文
+    url: https://eur-lex.europa.eu/homepage.html?locale=en
+    summary: 查找欧盟法律原文、法律程序、修订与合并文本。
+    focus: 区分提案与已通过法规，核对版本、适用范围和分阶段日期。
+    caveat: 生效、适用与执法不是同一时间；摘要不能替代现行条文。
+    question: 这项规则约束谁、何时适用？你读的是哪个版本？
+  - id: reuters-world
+    title: Reuters · World
+    publisher: Reuters
+    topic: politics
+    kind: reporting
+    language: 英文
+    url: https://www.reuters.com/world/
+    summary: 用国际报道发现事件，再回查数据与原始文件。
+    focus: 分开发生时间、报道时间、消息来源和仍待证实的信息。
+    caveat: 部分内容可能有限制访问；一篇报道不是完整事实或所有相关方观点。
+    question: 哪些陈述来自具名来源、原始文件或记者核实？还有什么未知？
+  - id: ap-world
+    title: AP · World News
+    publisher: The Associated Press
+    topic: politics
+    kind: reporting
+    language: 英文
+    url: https://apnews.com/world-news
+    summary: 以另一家通讯社的报道交叉核对重要国际事件。
+    focus: 对照不同来源的事实、引述和更正记录，避免只比较标题。
+    caveat: 多家媒体可能共用同一消息源；重复报道不一定是独立佐证。
+    question: 两篇报道是否确实拥有不同证据，而不是转述同一说法？
+briefings:
+  - id: contrastive-discovery
+    topic: ai
+    title: Agent 科学发现：把替代解释放到同一张桌上
+    source_id: arxiv-ai
+    url: https://arxiv.org/abs/2611.14514v1
+    version: 预印本 v1 · 2026-11-10 提交
+    summary: Contrastive Discovery 提出让科学发现 Agent 比较成组的竞争解释，而不只判断单个假设成立与否。先读问题定义，再检查实验预算与比较对象。
+    caveat: 这里只核对论文页的摘要与版本，未复现实验；论文自报的接收状态未另行查验会议录。
+    question: 作者如何构造互斥且完备的替代解释集合？否定一个解释后，还剩哪些可能？实验预算相同时应怎样比较方法？
+  - id: weo-october-2026
+    topic: economy
+    title: 读全球经济展望：先圈出预测的边界
+    source_id: imf-weo
+    url: https://www.imf.org/en/Publications/WEO/Issues/2026/10/13/world-economic-outlook-october-2026
+    version: IMF WEO · 2026-10-13 版
+    summary: 这份展望把增长、通胀和风险置于不同情景中。阅读时把预测值、统计截止时间与情景前提放在同一条记录里。
+    caveat: 该版使用截至 2026-10-01 的统计信息；后续数据或政策变化可能改变判断。
+    question: 选一个预测，写出地区、年份和假设。若其中一个条件变化，结论可能朝哪个方向调整？
+  - id: trade-ai-2026
+    topic: economy
+    title: AI 如何走进世界贸易的统计表？
+    source_id: wto-trade
+    url: https://www.wto.org/english/res_e/booksp_e/gtos1026_e.pdf
+    version: WTO · 2026 年 10 月更新
+    summary: 该版包含 AI 相关商品贸易的分析。沿商品分类与地区表，观察技术基础设施如何与全球供应链发生联系。
+    caveat: 贸易量、金额和增加值是不同概念；相关增长本身不能确定因果关系。
+    question: 作者如何界定 AI 相关商品？如果价格或汇率改变，贸易额和贸易量会如何分离？
+  - id: ai-act-reading
+    topic: politics
+    title: 从 AI Act 练习读懂一份政策文本
+    source_id: eur-lex
+    url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
+    version: Regulation (EU) 2024/1689 · 公布文本阅读练习
+    summary: 从法规编号、定义与适用范围入手，再通过 EUR-Lex 核查修订和现行合并文本，建立政策阅读的基本顺序。
+    caveat: 链接是公布文本，不声称它等于当前全部适用规则；具体日期与修订须查原站，不作为个案法律意见。
+    question: 选择一条义务，找到适用对象与时间。它来自条文、序言，还是外部解释？

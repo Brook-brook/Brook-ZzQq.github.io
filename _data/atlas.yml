@@ -7,6 +7,8 @@ nav:
     path: /projects/
   - label: Study
     path: /study/
+  - label: Observe
+    path: /observatory/
   - label: Playground
     path: /playground/
   - label: About
