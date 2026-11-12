@@ -211,3 +211,22 @@ Home links the four real routes in a ruled list after the notebook, before featu
 work, rather than repeating the notebook tabs or adding a dashboard. Counts mean
 self-check questions only. Projects gets one quiet filter surface, retaining the
 existing distinct project rows, native detail disclosures and truthful statuses.
+
+
+## Iteration 13: finding the matching words
+
+Search retains one heavy-glass sheet, ruled results and the milk/deep lavender
+palette. Small numeric type counts reserve digit space. A single clear action
+sits alongside the result count; the default state keeps its geometry and disables
+it. Explicit alternative spellings appear as quiet explanatory text, not an AI
+badge. Original matched words use a lavender mark with a fine lower edge; titles,
+summaries and detail labels remain readable without highlights.
+
+The dialog adds eight rows at a time without navigating away or fetching more.
+Empty states offer another content type with the current query, or actual indexed
+starter topics. No autocomplete overlay, new blur depth, idle motion or new theme.
+Keep 44px actions, 16px inputs, visible focus and finite reduced-motion behavior.
+The bounded sheet keeps its geometry across result counts; its body fills the
+remaining space. A new query resets the batch and body scroll, while continuation
+focuses the next result. Preserve ordinary inline text flow inside links so marks
+do not collapse surrounding spaces; keep the real Range/geometry regressions.
