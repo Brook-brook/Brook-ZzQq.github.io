@@ -1,3 +1,5 @@
+import { mountSiteSearch } from './site-search.js';
+
 const root = document.documentElement;
 const toggle = document.getElementById('theme-toggle');
 if (toggle) {
@@ -48,6 +50,7 @@ if (menu && nav) {
   matchMedia('(min-width: 1051px)').addEventListener('change', close);
 }
 const query = document.getElementById('note-query');
+mountSiteSearch();
 if (query) {
   const index = query.closest('[data-note-index]') || query.closest('section');
   const filters = index.querySelector('.filters');

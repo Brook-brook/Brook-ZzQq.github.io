@@ -10,6 +10,7 @@ require "jekyll"
 require_relative "../_plugins/atlas-note-publication"
 require_relative "../_plugins/learning-path-validation"
 require_relative "../_plugins/observatory-validation"
+require_relative "../_plugins/site-search-index"
 
 # A generator runs after :site/:post_read, just as an index/sitemap generator
 # would. Its written output must never receive filtered research documents.
@@ -85,7 +86,7 @@ class StudyPublicationChecks
   def note(source, slug, extra = {})
     data = {
       "layout" => "note", "title" => "Fixture #{slug}", "slug" => slug,
-      "date" => "2026-11-04", "category" => "Synthetic fixtures"
+      "date" => "2026-11-04", "category" => "Synthetic fixtures", "summary" => "Synthetic public summary"
     }.merge(extra)
     yaml = YAML.dump(data).sub(/\A---\s*\n/, "")
     File.write(File.join(source, "_atlas_notes", "#{slug}.md"),
@@ -352,6 +353,46 @@ class StudyPublicationChecks
             assert(false, "invalid guide #{mode} must fail before rendering")
           rescue Jekyll::Errors::FatalException => error
             assert(error.message.include?("reading_guides.yml"), "identify invalid guide #{mode}")
+          end
+        end
+      end
+    end
+
+    check("public search excludes drafts and unchecked research, including --unpublished") do
+      with_fixture do |source, destination|
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        File.write(File.join(source, "_data", "site_search.yml"), "entries: []\n")
+        File.write(File.join(source, "search.json"), "---\nlayout: null\n---\n{{ site.data.search_index | jsonify }}")
+        note(source, "tutorial")
+        note(source, "checked", source_checked)
+        note(source, "pending", { "kind" => "research", "review_status" => "needs_review" })
+        note(source, "draft", { "draft" => true })
+        note(source, "unpublished", { "published" => false })
+        site = build(source, destination, unpublished: true)
+        records = JSON.parse(File.read(File.join(destination, "search.json"))).fetch("entries")
+        assert(records.length == 2, "only public tutorial and checked research enter search")
+        assert(records.all? { |r| r["url"].start_with?("/Brook-ZzQq.github.io/knowledge/") }, "search links retain baseurl")
+        assert(records.none? { |r| r.values.join.include?("Content marker:") }, "search stores metadata, not bodies")
+        absent_everywhere(site, destination, %w[pending draft unpublished])
+        note(source, "checked", source_checked({ "review_status" => "needs_review" }))
+        build(source, destination, unpublished: true)
+        records = JSON.parse(File.read(File.join(destination, "search.json"))).fetch("entries")
+        assert(records.length == 1 && records[0]["title"] == "Fixture tutorial", "demotion removes stale search records on rebuild")
+      end
+    end
+
+    check("search fails closed on unsafe or duplicate configured public entries") do
+      ["//evil.test/x", "/../outside", "/valid"].each do |url|
+        with_fixture do |source, destination|
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          entry = { "kind" => "page", "title" => "Fixture", "summary" => "Public entry", "url" => url }
+          entries = url == "/valid" ? [entry, entry] : [entry]
+          File.write(File.join(source, "_data", "site_search.yml"), YAML.dump({ "entries" => entries }))
+          begin
+            build(source, destination)
+            assert(false, "unsafe or duplicate search entries must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("site search"), "identify search configuration failure")
           end
         end
       end

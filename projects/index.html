@@ -7,4 +7,10 @@ universe: true
 description: Brook 的技术作品与创意实验。查看实际实现、模型边界和下一步计划。
 ---
 <div class="universe-page-intro"><h1>做过的，和正在试的。</h1><p>浏览作品、打开实验，或翻看它们的实现记录。</p><a class="universe-link" href="{{ '/study/' | relative_url }}">也看看作品背后的学习笔记</a></div>
+<section class="project-finder" aria-label="筛选作品" hidden data-project-finder>
+  <label for="project-query">搜索作品或技术<input id="project-query" type="search" maxlength="120" autocomplete="off" placeholder="Python、校园、RSS……"></label>
+  <fieldset><legend>开发状态</legend><div><button type="button" data-project-filter="all" aria-pressed="true">全部</button><button type="button" data-project-filter="available" aria-pressed="false">已实现</button><button type="button" data-project-filter="review" aria-pressed="false">已实现，待发布</button><button type="button" data-project-filter="planned" aria-pressed="false">计划中</button></div></fieldset>
+  <div class="project-filter-status"><p role="status" data-project-count></p><button type="button" data-project-reset>清除筛选</button></div>
+</section>
 <div class="universe-projects">{% for project in site.data.projects %}{% include universe-project.html project=project %}{% endfor %}</div>
+<p class="project-empty" data-project-empty hidden>暂时没有匹配的作品。试试更短的词，或清除筛选。</p>
