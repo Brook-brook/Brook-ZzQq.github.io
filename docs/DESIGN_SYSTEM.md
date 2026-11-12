@@ -195,3 +195,19 @@ multiple duplicate introductory paragraphs. Opening has one finite transform/
 opacity entry; reduced motion removes it. Native Escape/focus restoration and a
 visible save-status footer take priority over close animations. No idle glow,
 new blur stack, AI answer, authority score or inferred learning achievement.
+
+
+## Iteration 12: follow a public thread
+
+Search is a utility in the shared shell, outside the seven primary destinations.
+A native heavy-glass sheet uses one scrolling result region; ruled rows label
+notes/routes/labs/projects/pages. Types are pressed buttons; input is 16px and
+controls are at least 44px. Empty states reuse Mote; failures offer retry and a
+complete static directory. No new blur layer or idle motion. A finite 420ms entry
+respects reduced motion. Narrow headers compact the wordmark, retaining the full
+accessible name and existing 1051px menu boundary.
+
+Home links the four real routes in a ruled list after the notebook, before featured
+work, rather than repeating the notebook tabs or adding a dashboard. Counts mean
+self-check questions only. Projects gets one quiet filter surface, retaining the
+existing distinct project rows, native detail disclosures and truthful statuses.

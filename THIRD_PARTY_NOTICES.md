@@ -148,3 +148,11 @@ lavender tokens are reused. Guide links refer to the existing independently writ
 AI/world reading-method notes and their already-attributed sources; no publisher
 body, abstract, table or proprietary lesson is reproduced. See
 docs/iteration-11-compliance.md. All earlier license notices remain.
+
+
+## Iteration 12 review
+
+Public discovery, homepage routes and project filters add no dependencies, copied
+third-party code, fonts, images or external requests beyond existing resources.
+Native search/magnifier implementation is original; the original local Mote is
+reused. Existing licenses and notices remain. Details: docs/iteration-12-compliance.md.

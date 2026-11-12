@@ -6,6 +6,17 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 12 content discovery
+
+`feat/atlas-iteration-12` continues eleventh-round `748a582`. A lazy public-content
+finder (header or Ctrl/⌘ K) connects notes, learning routes, working labs and
+truthfully labelled projects. `/search/` is a complete server-rendered directory;
+queries remain in memory, private journals and automatic news are not indexed.
+Home now opens the four existing learning routes; Projects combines status and
+keyword filters, with native reading retained without JavaScript.
+See [verification, screenshots and compiled preview](docs/ATLAS-ITERATION-12.md)
+and [resource/privacy review](docs/iteration-12-compliance.md). No production changes.
+
 ## Iteration 11 focused reading
 
 `feat/atlas-iteration-11` continues tenth-round `ccc0fb0`. Observe now opens a native
