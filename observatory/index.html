@@ -5,7 +5,7 @@ permalink: /observatory/
 section: Observe
 universe: true
 observatory: true
-description: 从原始研究、官方数据与国际报道出发，理解 AI 前沿和全球政经变化。精选来源、版本明确的导读与可保存的阅读计划。
+description: 持续发现 AI 前沿与全球政经材料，按日保留原始链接与元信息修订，用本机阅读手记沉淀自己的理解。
 ---
 <div class="observatory" data-observatory data-checked-on="{{ site.data.observatory.checked_on }}">
   <header class="observatory-intro">
@@ -13,10 +13,28 @@ description: 从原始研究、官方数据与国际报道出发，理解 AI 前
     <p class="observatory-eyebrow">AI / Economy / World</p>
     <h1>看见变化，<br>也看懂来龙去脉。</h1>
     <p class="observatory-lead">从一份原始材料开始，把前沿 AI、全球经济与国际政治，慢慢连成自己的理解。</p>
-    <div class="page-inline-links"><a href="#briefings">从本期导读开始</a><a href="#source-library">找一个可靠来源</a><a href="#reading-desk">我的阅读桌</a></div>
+    <div class="page-inline-links"><a href="#updates">看看新发布</a><a href="#briefings">从导读开始</a><a href="#source-library">找一个可靠来源</a><a href="#reading-desk">我的阅读桌</a></div>
     <p class="observatory-date">选编目录 · 核对于 <time datetime="{{ site.data.observatory.checked_on }}">{{ site.data.observatory.checked_on }}</time>（北京时间）。核对入口、标题与用途；原站动态请打开来源查看。</p>
     <p id="observatory-freshness" role="status"></p>
   </header>
+
+  <section id="updates" class="observatory-stream" aria-labelledby="updates-title" data-observatory-stream data-stream-bundle="{{ '/assets/data/observatory-stream.json' | relative_url }}">
+    <div class="observatory-section-head"><div><p class="observatory-eyebrow">Notice → Read → Connect</p><h2 id="updates-title">让新知流动，也有迹可循。</h2></div><p>先发现变化，再核对原文。值得停留的材料，可以带回阅读桌，慢慢写成自己的理解。</p></div>
+    <p class="observatory-help">约每 2 小时收集公开 RSS / Atom 的标题、链接与时间；页面可见时每 5 分钟检查新快照。发布者、缓存和调度可能延迟，并非秒级实时，也不保证完整覆盖。自动标题尚未逐条核实，与下方选编导读分开。</p>
+    <div class="stream-status glass-light"><p id="stream-updated">内置快照：{{ site.data.observatory_stream.attempted_at | escape }}。启用 JavaScript 后显示北京时间并检查更新。</p><button id="stream-check" type="button" hidden>检查新快照</button><button id="stream-apply" type="button" hidden>载入新快照 · 返回最近变更</button><p id="stream-message" role="status" aria-live="polite"></p></div>
+    <div class="stream-controls" hidden data-stream-control>
+      <label for="stream-query">搜索更新<input id="stream-query" type="search" maxlength="120" placeholder="标题或发布机构" autocomplete="off"></label>
+      <label for="stream-topic">观察主题<select id="stream-topic"><option value="all">全部主题</option>{% for topic in site.data.observatory.topics %}<option value="{{ topic.id }}">{{ topic.title | escape }}</option>{% endfor %}</select></label>
+      <label for="stream-source">订阅来源<select id="stream-source"><option value="all">全部订阅源</option></select></label>
+      <label for="stream-day">首次收集日 · 北京时间<select id="stream-day"><option value="latest">最近 60 份元信息变更</option></select></label>
+      <button id="stream-reset" type="button">重置筛选</button>
+    </div>
+    <p id="stream-count" class="observatory-help" role="status">以下为内置快照的 {{ site.data.observatory_stream.latest.size | at_most: 8 }} 份材料。无 JavaScript 时仍可打开原文；持续更新与历史查询需要联网。</p>
+    <div class="stream-layout">
+      <div class="stream-main"><ol id="stream-list" class="stream-list" aria-label="自动发现的公开材料">{% for item in site.data.observatory_stream.latest limit:8 %}<li><p class="observatory-meta">{{ item.publisher | escape }} · 自动发现，待核对</p><h3><a href="{{ item.url | escape }}">{{ item.title | escape }} ↗</a></h3><p class="observatory-help">{{ item.caveat | escape }}</p></li>{% endfor %}</ol><p id="stream-empty" class="observatory-empty" hidden>还没有匹配的材料。试试别的词或重置筛选；旧材料仍可按首次收集日查找。</p><button id="stream-more" type="button" hidden>再看 8 份</button></div>
+      <aside class="stream-ledger" aria-labelledby="stream-ledger-title"><h3 id="stream-ledger-title">更新，有来处。</h3><p class="observatory-help">“成功”表示订阅响应可读，并不代表结论已验证。空订阅和采集失败分别记录；失败时保留已有档案。</p><details><summary>查看 {{ site.data.observatory_stream.sources.size }} 个订阅源状态</summary><ul id="stream-health">{% for source in site.data.observatory_stream.sources %}<li><a href="{{ source.home | escape }}">{{ source.title | escape }}</a><span>{{ source.status | escape }}{% if source.error %} · {{ source.error | escape }}{% endif %}</span></li>{% endfor %}</ul></details><details><summary>最近采集记录</summary><ol id="stream-runs"></ol></details><a href="https://github.com/Brook-brook/Brook-ZzQq.github.io/tree/observatory-data/feed">打开公共历史档案 ↗</a><p class="observatory-help">按首次收集日归档，不冒充事件发生日。保存元信息修订，不复制文章正文。研究与政策材料请结合具体版本、方法和立场来读。</p></aside>
+    </div>
+  </section>
 
   <section id="briefings" class="observatory-briefings" aria-labelledby="briefings-title">
     <div class="observatory-section-head"><div><p class="observatory-eyebrow">Read with a question</p><h2 id="briefings-title">这次，从四份材料开始。</h2></div><p>先问一个小问题，再进入原文。以下是基于公开原文整理的阅读提示，未复现实验或逐项验证作者结论。</p></div>
@@ -45,10 +63,12 @@ description: 从原始研究、官方数据与国际报道出发，理解 AI 前
         <p id="reading-count" role="status"></p><p id="reading-storage" class="observatory-help" role="status" aria-live="polite"></p>
         <div class="reading-starters"><button type="button" data-start-list="{{ site.data.observatory.starters.ai | join: ' ' }}">加入 AI 起步 {{ site.data.observatory.starters.ai.size }} 源</button><button type="button" data-start-list="{{ site.data.observatory.starters.world | join: ' ' }}">加入政经起步 {{ site.data.observatory.starters.world.size }} 源</button></div>
         <button id="reading-export" class="reading-export" type="button" disabled>下载阅读计划 · Markdown</button>
+        <button id="reading-backup" class="reading-export" type="button">下载清单与手记 · JSON</button>
         <p id="reading-empty" class="observatory-help">从导读或来源里点“留在清单”，也可先选一组起步来源。收藏只代表想读，不代表已读或已掌握。</p>
         <ol id="reading-queue" aria-label="已选阅读材料"></ol>
-        <p class="observatory-help">计划包含原文链接、版本与问题，以及可自己填写的证据记录。清单只在当前浏览器保存，无账户或云端同步；导出后可自行保管。</p>
-        <details><summary>清除本机阅读清单</summary><p class="observatory-help">只移除观察台清单，保留学习手记、主题和校园收藏。</p><button id="reading-clear" type="button">清除清单</button></details>
+        <p class="observatory-help">展开材料的“我的理解手记”，记下证据和自己的解释（每份最多 2,000 字符、清单最多 60 份）。清单与手记以明文保存在当前浏览器，不上传、无账户或云端同步；清理浏览器可能丢失，请自行保管备份。</p>
+        <details><summary>从 JSON 恢复清单与手记</summary><label for="reading-import">选择本机备份（最多 2 MiB）<input id="reading-import" type="file" accept=".json,application/json"></label><p id="reading-import-status" class="observatory-help" role="status"></p><button id="reading-import-confirm" type="button" hidden>确认合并</button><button id="reading-import-cancel" type="button" hidden>取消</button><p class="observatory-help">先预览，再合并。本机已有手记优先；相同链接与版本可补入空白手记。旧版清单也可恢复，文件只在本机读取。</p></details>
+        <details><summary>清除本机阅读清单</summary><p class="observatory-help">移除观察台清单及其中的理解手记；保留学习路线手记、主题和校园收藏。</p><button id="reading-clear" type="button">清除清单</button></details>
       </div>
       <noscript><p>从下面两篇方法笔记开始，手动保留原文链接，也可以完成阅读练习。</p></noscript>
       <a href="{{ '/study/paths/' | relative_url }}">回到学习路线与手记</a>
@@ -77,5 +97,5 @@ description: 从原始研究、官方数据与国际报道出发，理解 AI 前
     </section>
 
   </div>
-  <aside class="observatory-boundaries"><h2>给判断留一点余地。</h2><p>这是一份按日期整理的来源目录与导读，后续发布请到原站查看。预印本、公司能力声明、官方统计、政策立场与媒体报道具有不同的证据边界；多家转述同一消息并不等于多份独立证据。</p><p>每份导读都保留原始链接与版本。目录核对记录入口与用途；阅读提示经 AI 辅助整理，结论请结合原文与独立来源判断。</p></aside>
+  <aside class="observatory-boundaries"><h2>给判断留一点余地。</h2><p>自动更新记录公开订阅里的元信息；目录与导读另有核对日期，均不能代替原文。预印本、公司能力声明、官方统计、政策立场与媒体报道具有不同的证据边界；多家转述同一消息并不等于多份独立证据。</p><p>每份导读都保留原始链接与版本。目录核对记录入口与用途；阅读提示经 AI 辅助整理，结论请结合原文与独立来源判断。</p></aside>
 </div>

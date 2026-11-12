@@ -2,6 +2,7 @@
 
 require "date"
 require "uri"
+require "time"
 
 module ObservatoryValidation
   def self.present?(value, max = 1200)
@@ -63,8 +64,67 @@ module ObservatoryValidation
     raise Jekyll::Errors::FatalException,
       "_data/observatory.yml: require a valid check date, unique IDs, known topics/types, HTTPS sources and consistent reading/starter references."
   end
+
+  # Validate links before Liquid renders the no-JS bibliography, not only in JS.
+  def self.validate_stream!(site)
+    stream = site.data["observatory_stream"]
+    manifest = site.data["observatory_feeds"]
+    return if stream.nil? && manifest.nil?
+
+    fail_stream! unless manifest.is_a?(Hash) && manifest["schema_version"] == 1 &&
+      manifest["sources"].is_a?(Array) && manifest["sources"].length.between?(1, 12) &&
+      stream.is_a?(Hash) && stream["schema_version"] == 1 && timestamp?(stream["attempted_at"]) &&
+      stream["sources"].is_a?(Array) && stream["sources"].length == manifest["sources"].length &&
+      stream["latest"].is_a?(Array) && stream["latest"].length <= 120 &&
+      stream["total"].is_a?(Integer) && stream["total"] >= stream["latest"].length
+    trusted = {}
+    manifest["sources"].each do |source|
+      fail_stream! unless source.is_a?(Hash) && present?(source["id"], 100) && !trusted.key?(source["id"]) &&
+        https?(source["url"]) && https?(source["home"]) && %w[ai economy politics].include?(source["topic"]) &&
+        source["article_hosts"].is_a?(Array) && !source["article_hosts"].empty? &&
+        %w[title publisher caveat].all? { |key| present?(source[key]) }
+      trusted[source["id"]] = source
+    end
+    ids = []
+    stream["sources"].each do |source|
+      fail_stream! unless source.is_a?(Hash) && (expected = trusted[source["id"]]) &&
+        source["feed_url"] == expected["url"] && source["home"] == expected["home"] &&
+        source["publisher"] == expected["publisher"] && source["article_hosts"] == expected["article_hosts"] &&
+        %w[ok not_modified error deferred].include?(source["status"])
+      ids << source["id"]
+    end
+    fail_stream! unless ids.uniq == ids
+    ids = []
+    stream["latest"].each do |record|
+      fail_stream! unless record.is_a?(Hash) && (source = trusted[record["source_id"]]) &&
+        record["id"].is_a?(String) && record["id"].match?(/\An-[a-f0-9]{64}\z/) &&
+        present?(record["title"], 240) && https?(record["url"]) &&
+        source["article_hosts"].include?(URI.parse(record["url"]).host) &&
+        record["publisher"] == source["publisher"] && record["topic"] == source["topic"] &&
+        record["review_status"] == "needs_review" && present?(record["caveat"]) &&
+        timestamp?(record["first_seen_at"]) && timestamp?(record["changed_at"]) &&
+        (record["published_at"].nil? || timestamp?(record["published_at"]))
+      ids << record["id"]
+    end
+    fail_stream! unless ids.uniq == ids
+  end
+
+  def self.timestamp?(value)
+    return false unless value.is_a?(String) && value.match?(/\A\d{4}-\d{2}-\d{2}T.+(?:Z|[+-]\d{2}:\d{2})\z/)
+    Date.iso8601(value[0, 10])
+    Time.iso8601(value)
+    true
+  rescue ArgumentError
+    false
+  end
+
+  def self.fail_stream!
+    raise Jekyll::Errors::FatalException,
+      "_data/observatory_stream.json: require bounded needs_review metadata, valid timestamps, unique IDs and HTTPS links matching observatory_feeds.json."
+  end
 end
 
 Jekyll::Hooks.register :site, :post_read do |site|
   ObservatoryValidation.validate!(site)
+  ObservatoryValidation.validate_stream!(site)
 end

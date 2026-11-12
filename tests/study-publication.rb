@@ -5,6 +5,7 @@
 require "fileutils"
 require "tmpdir"
 require "yaml"
+require "json"
 require "jekyll"
 require_relative "../_plugins/atlas-note-publication"
 require_relative "../_plugins/learning-path-validation"
@@ -286,6 +287,40 @@ class StudyPublicationChecks
             assert(false, "invalid catalog #{mode} must fail")
           rescue Jekyll::Errors::FatalException => error
             assert(error.message.include?("observatory.yml"), "catalog #{mode} should report validation failure")
+          end
+        end
+      end
+    end
+
+    check("automatic bibliography validates real bundled metadata before any no-JS rendering") do
+      with_fixture do |source, destination|
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        %w[observatory_feeds observatory_stream].each do |name|
+          FileUtils.cp(File.expand_path("../_data/#{name}.json", __dir__), File.join(source, "_data", "#{name}.json"))
+        end
+        site = build(source, destination)
+        assert(site.data["observatory_stream"]["latest"].length > 0, "real metadata snapshot should build")
+      end
+    end
+
+    check("automatic bibliography rejects off-source, unsafe, duplicate and fake-reviewed records before output") do
+      %w[host unsafe duplicate review date].each do |mode|
+        with_fixture do |source, destination|
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          FileUtils.cp(File.expand_path("../_data/observatory_feeds.json", __dir__), File.join(source, "_data", "observatory_feeds.json"))
+          data = JSON.parse(File.read(File.expand_path("../_data/observatory_stream.json", __dir__)))
+          row = data["latest"][0]
+          row["url"] = "https://off-source.test/paper" if mode == "host"
+          row["url"] = "javascript:alert(1)" if mode == "unsafe"
+          data["latest"] << row if mode == "duplicate"
+          row["review_status"] = "source_checked" if mode == "review"
+          row["first_seen_at"] = "2026-02-30T00:00:00Z" if mode == "date"
+          File.write(File.join(source, "_data", "observatory_stream.json"), JSON.dump(data))
+          begin
+            build(source, destination)
+            assert(false, "invalid automatic metadata #{mode} must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("observatory_stream.json"), "identify automatic snapshot validation failure")
           end
         end
       end

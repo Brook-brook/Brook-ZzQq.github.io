@@ -100,7 +100,7 @@ export function filterStream(records, { topic = 'all', source = 'all', query = '
 export function streamSnapshot(item) {
   const day = streamLocalDay(item.first_seen_at);
   return { id: item.id, title: item.title, url: item.url, topic: item.topic, item_type: 'update',
-    version: `自动采集元信息 · ${item.published_at ? streamLocalDay(item.published_at) + ' 源站发布' : '发布时间待核对'}`,
+    version: `自动采集元信息 r${item.revision_count} · ${item.published_at ? streamLocalDay(item.published_at) + ' 源站发布' : '发布时间待核对'}`,
     checked_on: day, caveat: `自动收集标题，尚未逐条核实。${item.caveat}`,
     question: '原文究竟主张什么？请记录证据位置、材料版本与尚不能确认的问题。' };
 }
