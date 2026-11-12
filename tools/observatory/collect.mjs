@@ -59,7 +59,7 @@ export function normalizeEntries(entries, source, now, limit = 50) {
 
 export function mergeRecord(previous, incoming, now) {
   if (!previous) return { ...incoming, first_seen_at: now, changed_at: now, revision_count: 0, previous_versions: [] };
-  const fields = ['title', 'url', 'published_at', 'updated_at'];
+  const fields = ['title', 'url', 'published_at', 'updated_at', 'published_raw', 'date_warning'];
   if (fields.every((key) => previous[key] === incoming[key])) return previous;
   const snapshot = Object.fromEntries([...fields, 'changed_at'].map((key) => [key, previous[key]]));
   return { ...previous, ...incoming, changed_at: now, revision_count: previous.revision_count + 1,
