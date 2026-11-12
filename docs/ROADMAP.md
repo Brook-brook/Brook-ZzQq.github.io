@@ -90,3 +90,19 @@ examples and explanation feedback, then add RAII/move or public-goods material
 only alongside a real experiment. A durable cross-device journal needs a separate
 storage/identity decision; there is no synchronization or account in this version.
 The fourth-to-eighth-round branches remain review work until explicitly published.
+
+## Iteration 9 Observatory — review branch
+
+Added `/observatory/` and an Observe navigation entry. Eighteen source entries
+cover AI research, macroeconomic data/analysis and political records/reporting.
+Four dated/versioned briefings connect original materials with concrete reading
+questions. Two new tutorials cover AI evaluation evidence and global-affairs
+reading, including an actual Chinese LLM-course entry for prerequisites.
+
+The local desk saves explicit material metadata snapshots, retains historical
+items, and exports Markdown with sources, versions, questions and blank evidence
+prompts. Root/project paths, browser/storage/privacy cases and prior labs remain
+part of CI. No live crawler, auto summarizer, account, synchronization or automatic
+publication is presented as implemented. Next: deepen one guided topic, then
+consider a bounded, provenance-preserving metadata refresh with review before
+publication. Production publishing stays unchanged.

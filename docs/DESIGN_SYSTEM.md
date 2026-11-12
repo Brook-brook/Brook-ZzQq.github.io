@@ -152,3 +152,16 @@ All questions and resources remain readable without JavaScript; record controls
 appear only when the local client is ready. Storage failure and import conflicts
 have text feedback, not color-only states. Keyboard, 16px journal fields and
 reduced-motion support remain required.
+
+## Iteration 9 reading observatory
+
+Observe is a reading room in the same lavender garden. A typographic opening leads
+to four ruled briefings, two method tutorials and a searchable source index. Avoid
+company logos, stock imagery, trust scores and decorative live-status indicators.
+One bounded sticky glass desk supports explicit collection and plan export; phone
+layout follows the same DOM/focus order with no nested scrolling. Keep the main
+download action above the list so it remains discoverable as the collection grows.
+Metadata and disclosures explain source/version/limitations, rather than implying
+that official, corporate or popular material is automatically verified truth.
+Counts describe selected materials only. Native controls, text feedback and no-JS
+reading remain usable with reduced motion and the existing opaque glass fallback.

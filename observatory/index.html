@@ -1,0 +1,81 @@
+---
+layout: atlas
+title: AI 前沿与全球观察
+permalink: /observatory/
+section: Observe
+universe: true
+observatory: true
+description: 从原始研究、官方数据与国际报道出发，理解 AI 前沿和全球政经变化。精选来源、版本明确的导读与可保存的阅读计划。
+---
+<div class="observatory" data-observatory data-checked-on="{{ site.data.observatory.checked_on }}">
+  <header class="observatory-intro">
+    <nav class="breadcrumbs" aria-label="面包屑"><a href="{{ '/study/' | relative_url }}">Study</a><span aria-hidden="true">/</span><span>观察台</span></nav>
+    <p class="observatory-eyebrow">AI / Economy / World</p>
+    <h1>看见变化，<br>也看懂来龙去脉。</h1>
+    <p class="observatory-lead">从一份原始材料开始，把前沿 AI、全球经济与国际政治，慢慢连成自己的理解。</p>
+    <div class="page-inline-links"><a href="#briefings">从本期导读开始</a><a href="#source-library">找一个可靠来源</a><a href="#reading-desk">我的阅读桌</a></div>
+    <p class="observatory-date">选编目录 · 核对于 <time datetime="{{ site.data.observatory.checked_on }}">{{ site.data.observatory.checked_on }}</time>（北京时间）。核对入口、标题与用途；原站动态请打开来源查看。</p>
+    <p id="observatory-freshness" role="status"></p>
+  </header>
+
+  <section id="briefings" class="observatory-briefings" aria-labelledby="briefings-title">
+    <div class="observatory-section-head"><div><p class="observatory-eyebrow">Read with a question</p><h2 id="briefings-title">这次，从四份材料开始。</h2></div><p>先问一个小问题，再进入原文。以下是基于公开原文整理的阅读提示，未复现实验或逐项验证作者结论。</p></div>
+    <div class="briefing-list">
+      {% for item in site.data.observatory.briefings %}{% assign source = site.data.observatory.sources | where: 'id', item.source_id | first %}{% assign topic = site.data.observatory.topics | where: 'id', item.topic | first %}
+      <article id="{{ item.id }}" class="briefing" data-reading-item="{{ item.id }}" data-item-type="briefing" data-topic="{{ item.topic }}" data-version="{{ item.version | escape }}">
+        <p class="observatory-meta">{{ topic.title | escape }} · <span data-item-version>{{ item.version | escape }}</span></p>
+        <h3 data-item-title>{{ item.title | escape }}</h3><p>{{ item.summary | escape }}</p>
+        <details><summary>带着什么问题读？</summary><p data-item-question>{{ item.question | escape }}</p><p class="observatory-caveat">阅读边界：{{ item.caveat | escape }}</p></details>
+        <div class="observatory-item-actions"><a data-item-url href="{{ item.url | escape }}">打开原文 · {{ source.publisher | escape }} ↗</a><button type="button" data-save-item="{{ item.id }}" aria-pressed="false" aria-label="留在清单：{{ item.title | escape }}" hidden data-observatory-control>留在清单</button></div>
+        <p data-save-feedback class="observatory-help"></p>
+      </article>{% endfor %}
+    </div>
+  </section>
+
+  <section class="observatory-method" aria-labelledby="method-title">
+    <h2 id="method-title">让信息，成为能解释的知识。</h2>
+    <div><a href="{{ '/knowledge/reading-ai-evidence/' | relative_url }}"><span>01 / AI 阅读方法</span><h3>任务、基线、预算与证据</h3><p>从一篇论文读懂作者究竟验证了什么。</p></a><a href="{{ '/knowledge/reading-world-evidence/' | relative_url }}"><span>02 / 政经阅读方法</span><h3>事实、预测、立场与机制</h3><p>把发布时间、统计口径与政策状态放回判断里。</p></a></div>
+  </section>
+
+  <div class="observatory-layout">
+    <aside id="reading-desk" class="reading-desk glass-light" aria-labelledby="desk-title">
+      <img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" width="48" height="48" alt="">
+      <h2 id="desk-title">给好奇心，留一张阅读桌。</h2><p>选几份材料，带着问题读，再留下自己的解释。</p>
+      <div hidden data-observatory-control>
+        <p id="reading-count" role="status"></p><p id="reading-storage" class="observatory-help" role="status" aria-live="polite"></p>
+        <div class="reading-starters"><button type="button" data-start-list="{{ site.data.observatory.starters.ai | join: ' ' }}">加入 AI 起步 {{ site.data.observatory.starters.ai.size }} 源</button><button type="button" data-start-list="{{ site.data.observatory.starters.world | join: ' ' }}">加入政经起步 {{ site.data.observatory.starters.world.size }} 源</button></div>
+        <button id="reading-export" class="reading-export" type="button" disabled>下载阅读计划 · Markdown</button>
+        <p id="reading-empty" class="observatory-help">从导读或来源里点“留在清单”，也可先选一组起步来源。收藏只代表想读，不代表已读或已掌握。</p>
+        <ol id="reading-queue" aria-label="已选阅读材料"></ol>
+        <p class="observatory-help">计划包含原文链接、版本与问题，以及可自己填写的证据记录。清单只在当前浏览器保存，无账户或云端同步；导出后可自行保管。</p>
+        <details><summary>清除本机阅读清单</summary><p class="observatory-help">只移除观察台清单，保留学习手记、主题和校园收藏。</p><button id="reading-clear" type="button">清除清单</button></details>
+      </div>
+      <noscript><p>从下面两篇方法笔记开始，手动保留原文链接，也可以完成阅读练习。</p></noscript>
+      <a href="{{ '/study/paths/' | relative_url }}">回到学习路线与手记</a>
+    </aside>
+    <section id="source-library" aria-labelledby="sources-title">
+      <div class="observatory-section-head"><div><p class="observatory-eyebrow">Follow the source</p><h2 id="sources-title">信息源，按用途来选。</h2></div></div>
+      <p class="observatory-help">原始材料帮助核对发布者说了什么；机构分析提供解释与预测；报道用于发现事件和交叉核对。它们都需要结合版本、方法与证据来读。</p>
+      <div class="observatory-filters" hidden data-observatory-control>
+        <label for="source-query">搜索来源<input id="source-query" type="search" maxlength="120" placeholder="机构、主题、指标或方法" autocomplete="off"></label>
+        <fieldset id="source-topics"><legend>观察主题</legend><div><button type="button" data-topic-filter="all" aria-pressed="true">全部主题</button>{% for topic in site.data.observatory.topics %}<button type="button" data-topic-filter="{{ topic.id }}" aria-pressed="false">{{ topic.title | escape }}</button>{% endfor %}</div></fieldset>
+        <fieldset id="source-kinds"><legend>材料类型</legend><div><button type="button" data-kind-filter="all" aria-pressed="true">全部类型</button>{% for kind in site.data.observatory.kinds %}<button type="button" data-kind-filter="{{ kind.id }}" aria-pressed="false">{{ kind.title | escape }}</button>{% endfor %}</div></fieldset>
+        <div class="observatory-result"><p id="source-count" role="status"></p><button id="source-reset" type="button">重置筛选</button></div>
+      </div>
+      <noscript><p>来源、导读与方法教程均可直接阅读。启用 JavaScript 后可筛选，并在本机保存与导出阅读清单。</p></noscript>
+      <div class="observatory-sources">
+        {% for source in site.data.observatory.sources %}{% assign topic = site.data.observatory.topics | where: 'id', source.topic | first %}{% assign kind = site.data.observatory.kinds | where: 'id', source.kind | first %}
+        <article id="source-{{ source.id }}" class="observatory-source" data-reading-item="{{ source.id }}" data-item-type="source" data-source-row data-topic="{{ source.topic }}" data-kind="{{ source.kind }}" data-version="目录入口 · {{ site.data.observatory.checked_on }} 核对" data-search="{{ topic.title | escape }} {{ kind.title | escape }} {{ source.language | escape }} {{ source.url | escape }} {{ source.title | escape }} {{ source.publisher | escape }} {{ source.summary | escape }} {{ source.focus | escape }} {{ source.question | escape }}">
+          <div class="observatory-meta"><span>{{ topic.title | escape }} / {{ kind.title | escape }}</span><span>{{ source.language | escape }}</span></div>
+          <h3 data-item-title><a data-item-url href="{{ source.url | escape }}">{{ source.title | escape }} ↗</a></h3><p>{{ source.summary | escape }}</p>
+          <details><summary>怎么读，留意什么</summary><p>{{ source.focus | escape }}</p><p class="observatory-caveat">留意：{{ source.caveat | escape }}</p><p data-item-question><strong>试着回答：</strong>{{ source.question | escape }}</p><p class="observatory-help">发布者：{{ source.publisher | escape }}</p></details>
+          <button type="button" data-save-item="{{ source.id }}" aria-pressed="false" aria-label="留在清单：{{ source.title | escape }}" hidden data-observatory-control>留在清单</button>
+          <p data-save-feedback class="observatory-help"></p>
+        </article>{% endfor %}
+      </div>
+      <p id="source-empty" class="observatory-empty" hidden>还没有符合条件的来源。换一个词，或重置主题与类型；你的阅读清单会保留。</p>
+    </section>
+
+  </div>
+  <aside class="observatory-boundaries"><h2>给判断留一点余地。</h2><p>这是一份按日期整理的来源目录与导读，后续发布请到原站查看。预印本、公司能力声明、官方统计、政策立场与媒体报道具有不同的证据边界；多家转述同一消息并不等于多份独立证据。</p><p>每份导读都保留原始链接与版本。目录核对记录入口与用途；阅读提示经 AI 辅助整理，结论请结合原文与独立来源判断。</p></aside>
+</div>
