@@ -1,5 +1,5 @@
 {
   "schema_version": 1,
-  "requested_at": null,
-  "reason": "initial-observatory-setup"
+  "requested_at": "2026-11-12T08:14:00Z",
+  "reason": "verify-scheduled-observatory-trigger"
 }
