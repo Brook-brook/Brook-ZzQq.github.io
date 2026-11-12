@@ -46,6 +46,9 @@ test('archive history retains first observation and previous metadata, unchanged
   const updated = mergeRecord(first, { ...incoming, title: 'Corrected title' }, '2026-11-12T04:00:00Z');
   assert.equal(updated.first_seen_at, now); assert.equal(updated.previous_versions[0].title, 'Original title');
   assert.equal(updated.revision_count, 1); assert.equal(first.title, 'Original title');
+  const dateCorrection = mergeRecord(first, { ...incoming, published_raw: 'Source corrected its date spelling' }, '2026-11-12T04:00:00Z');
+  assert.equal(dateCorrection.revision_count, 1, 'raw source date corrections are archived even with unchanged parsed time');
+  assert.equal(dateCorrection.previous_versions[0].published_raw, incoming.published_raw);
 });
 
 test('archive days follow Shanghai midnight rather than UTC midnight', () => {

@@ -3,7 +3,8 @@ const topics = ['ai', 'economy', 'politics'];
 const object = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 const text = (value, max) => typeof value === 'string' && value.trim().length > 0 && value.length <= max;
 const count = (value) => Number.isSafeInteger(value) && value >= 0;
-export const streamTime = (value) => typeof value === 'string' && /T.*(?:Z|[+-]\d{2}:\d{2})$/.test(value) && Number.isFinite(Date.parse(value));
+export const streamTime = (value) => typeof value === 'string' && streamDay(value.slice(0, 10)) &&
+  /^\d{4}-\d{2}-\d{2}T(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d(?:\.\d{1,3})?(?:Z|[+-]\d{2}:\d{2})$/.test(value) && Number.isFinite(Date.parse(value));
 export const streamDay = (value) => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) &&
   Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
 export const streamLocalDay = (value) => new Intl.DateTimeFormat('sv-SE', {
@@ -58,6 +59,8 @@ export function validateStreamIndex(data) {
       text(source.title, 240) && text(source.publisher, 240) && topics.includes(source.topic) &&
       ['ok', 'not_modified', 'error', 'deferred'].includes(source.status) && streamTime(source.attempted_at) &&
       (!source.last_success_at || streamTime(source.last_success_at)) &&
+      (!source.retry_after || streamTime(source.retry_after)) &&
+      (source.status !== 'ok' || (count(source.accepted) && count(source.invalid) && typeof source.limited === 'boolean')) &&
       safeUrl(source.home) && safeUrl(source.feed_url) && Array.isArray(source.article_hosts) && source.article_hosts.length > 0 &&
       source.article_hosts.length <= 10 && source.article_hosts.every((host) => typeof host === 'string' && /^[a-z0-9.-]+$/.test(host)));
     sourceMap.set(source.id, source);
