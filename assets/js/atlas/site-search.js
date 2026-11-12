@@ -1,4 +1,4 @@
-import { SEARCH_LIMIT, searchEntries, validateSearchIndex } from './search-models.js';
+import { SEARCH_LIMIT, searchEntries, validateSearchIndex, highlightSearch, keywordContext, searchAliasHint } from './search-models.js';
 
 export function mountSiteSearch() {
   const opener = document.querySelector('[data-open-site-search]');
@@ -16,12 +16,39 @@ export function mountSiteSearch() {
     const list = widget.querySelector('[data-search-results]');
     const count = widget.querySelector('[data-search-count]');
     const empty = widget.querySelector('[data-search-empty]');
+    const reset = widget.querySelector('[data-search-reset]');
+    const more = widget.querySelector('[data-search-more]');
+    const alias = widget.querySelector('[data-search-alias]');
+    const allKinds = widget.querySelector('[data-search-all]');
+    const suggestions = widget.querySelector('[data-search-suggestions]');
+    const popup = widget.hasAttribute('data-search-popup');
     let kind = 'all';
+    let limit = 8;
+    let composing = false;
     filters.hidden = false;
+    reset.hidden = false;
+    widget.querySelector('[data-search-help]').hidden = false;
     widget.querySelector('[data-search-controls]')?.removeAttribute('hidden');
+    for (const text of ['Python', 'C++', 'GIS', '纳什']) {
+      if (!searchEntries(records, text).length) continue;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = `试试 ${text}`;
+      button.addEventListener('click', () => { input.value = text; kind = 'all'; update(); input.focus(); });
+      suggestions.append(button);
+    }
+    function highlighted(node, text) {
+      node.replaceChildren(...highlightSearch(text, input.value).map((part) => {
+        if (!part.matched) return document.createTextNode(part.text);
+        const mark = document.createElement('mark');
+        mark.textContent = part.text;
+        return mark;
+      }));
+    }
     function render() {
-      const matches = searchEntries(records, input.value, kind);
-      const shown = widget.hasAttribute('data-search-popup') ? matches.slice(0, 8) : matches;
+      const all = searchEntries(records, input.value);
+      const matches = kind === 'all' ? all : all.filter((entry) => entry.kind === kind);
+      const shown = popup ? matches.slice(0, limit) : matches;
       const fragment = document.createDocumentFragment();
       for (const entry of shown) {
         let node = existing.get(entry.id);
@@ -40,19 +67,62 @@ export function mountSiteSearch() {
           node.append(detail, heading, summary);
           existing.set(entry.id, node);
         }
+        highlighted(node.querySelector('.search-result-detail'), entry.detail);
+        highlighted(node.querySelector('a'), entry.title);
+        highlighted(node.querySelector('p'), entry.summary);
+        let hint = node.querySelector('.search-result-keywords');
+        if (!hint) { hint = document.createElement('p'); hint.className = 'search-result-keywords'; node.append(hint); }
+        const needsKeyword = !searchEntries([{ ...entry, keywords: '' }], input.value).length;
+        const context = needsKeyword ? keywordContext(entry.keywords, input.value) : '';
+        hint.hidden = !context;
+        if (context) highlighted(hint, `关键词：${context}`);
         fragment.append(node);
       }
       list.replaceChildren(fragment);
-      count.textContent = `${matches.length} 个匹配入口${shown.length < matches.length ? ` · 显示前 ${shown.length} 个，完整目录见下方` : ''}`;
+      count.textContent = `${matches.length} 个匹配入口${shown.length < matches.length ? ` · 已显示 ${shown.length} 个` : ''}`;
+      reset.disabled = !input.value && kind === 'all';
+      widget.querySelector('[data-search-help]').hidden = Boolean(input.value.trim());
+      const alternatives = searchAliasHint(input.value);
+      alias.textContent = alternatives ? `常用写法：${alternatives}` : '';
+      alias.hidden = !alternatives;
       empty.hidden = matches.length > 0;
-      filters.querySelectorAll('button').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.searchKind === kind)));
+      allKinds.hidden = matches.length > 0 || all.length === 0 || kind === 'all';
+      allKinds.textContent = `在全部类型中查看 ${all.length} 个结果`;
+      suggestions.hidden = matches.length > 0 || all.length > 0;
+      filters.querySelectorAll('button').forEach((button) => {
+        button.setAttribute('aria-pressed', String(button.dataset.searchKind === kind));
+        let badge = button.querySelector('[data-search-kind-count]');
+        if (!badge) { badge = document.createElement('span'); badge.dataset.searchKindCount = ''; button.append(' ', badge); }
+        badge.textContent = button.dataset.searchKind === 'all' ? all.length : all.filter((entry) => entry.kind === button.dataset.searchKind).length;
+      });
+      if (more) {
+        const remaining = matches.length - shown.length;
+        more.hidden = remaining <= 0;
+        more.textContent = `再显示 ${Math.min(8, remaining)} 个 · 还剩 ${remaining} 个`;
+      }
     }
-    input.addEventListener('input', render);
+    function update() {
+      limit = 8;
+      render();
+      if (popup) widget.scrollTop = 0;
+    }
+    input.addEventListener('compositionstart', () => { composing = true; });
+    input.addEventListener('compositionend', () => { composing = false; update(); });
+    input.addEventListener('input', (event) => { if (!composing && !event.isComposing) update(); });
+    reset.addEventListener('click', () => { input.value = ''; kind = 'all'; composing = false; update(); input.focus(); });
+    allKinds.addEventListener('click', () => { kind = 'all'; update(); input.focus(); });
+    more?.addEventListener('click', () => {
+      const before = list.querySelectorAll('a').length;
+      limit += 8;
+      render();
+      list.querySelectorAll('a')[before]?.focus();
+    });
     filters.addEventListener('click', (event) => {
       const button = event.target.closest('[data-search-kind]');
-      if (button) { kind = button.dataset.searchKind; render(); }
+      if (button) { kind = button.dataset.searchKind; update(); }
     });
     input.addEventListener('keydown', (event) => {
+      if (composing || event.isComposing) { event.stopPropagation(); return; }
       if (event.key === 'ArrowDown' && list.querySelector('a')) {
         event.preventDefault();
         list.querySelector('a').focus();
@@ -159,6 +229,7 @@ export function mountSiteSearch() {
     if (invoker) (invoker.isConnected && invoker.getClientRects().length ? invoker : opener).focus();
   });
   dialog.addEventListener('keydown', (event) => {
+    if (event.isComposing) return;
     if (event.key === 'Escape') { event.preventDefault(); dialog.close(); return; }
     if (event.key !== 'Tab') return;
     const controls = [...dialog.querySelectorAll('a[href], button, input')].filter((node) => !node.disabled && node.getClientRects().length);
@@ -170,7 +241,7 @@ export function mountSiteSearch() {
   });
   document.addEventListener('keydown', (event) => {
     if (event.defaultPrevented || event.altKey || !(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k' ||
-      event.target.closest('input, textarea, select, [contenteditable="true"], [contenteditable=""]') || document.querySelector('dialog[open]')) return;
+      event.isComposing || event.target.isContentEditable || event.target.closest('input, textarea, select') || document.querySelector('dialog[open]')) return;
     event.preventDefault();
     open();
   });
