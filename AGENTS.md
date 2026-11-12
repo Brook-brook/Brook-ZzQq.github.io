@@ -146,3 +146,18 @@
 - Native focus trapping, Escape/close restoration, phone layout, reduced motion,
   modal-visible storage failure and real modal downloads require browser coverage.
   Keep the outside desk synchronized without rebuilding the invoker on dialog close.
+
+## Public discovery (Iteration 12)
+
+- Search generator runs after publication filtering and indexes public metadata
+  only: notes, real learning routes/labs, truthful projects and curated page entries.
+  Never index draft/unverified research, document bodies, dynamic news, private
+  browser notes or legacy template-post bodies. Rebuild removes demoted entries.
+- `/search/` remains a complete no-JS directory. Dialog index is lazy, size/time
+  bounded and baseurl-scoped; render text safely, expose failure/retry and preserve
+  native anchor fallback. Queries have no URL/storage/server history.
+- Keep shortcuts out of editors and other dialogs; trap keyboard focus, restore
+  the invoker, close on navigation and reveal same-page filtered project targets.
+  Run search models, real publication builds and browser tests at both basepaths.
+- Home route counts mean self-check questions, never completion. Project filters
+  preserve available/review/planned states and never add controls to planned work.

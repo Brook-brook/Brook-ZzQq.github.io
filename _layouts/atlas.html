@@ -24,6 +24,7 @@
   {% if page.universe %}<link rel="stylesheet" href="{{ '/assets/css/universe.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/universe.js' | relative_url }}"></script>{% endif %}
   {% if page.research %}<link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/research.js' | relative_url }}"></script>{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/lavender.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site-search.css' | relative_url }}">
   {% if page.learning %}<link rel="stylesheet" href="{{ '/assets/css/learning.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/learning.js' | relative_url }}"></script>{% endif %}
   {% if page.observatory %}<link rel="stylesheet" href="{{ '/assets/css/observatory.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/observatory.js' | relative_url }}"></script>{% endif %}
   <script type="module" src="{{ '/assets/js/atlas/site.js' | relative_url }}"></script>
@@ -45,6 +46,7 @@
     <a href="{{ item.path | relative_url }}"{% if page.url == item.path or active_section == item.label %} aria-current="page"{% endif %}>{{ item.label }}</a>
     {% endfor %}
   </nav>
+  <a class="site-search-toggle" href="{{ '/search/' | relative_url }}" data-open-site-search data-search-index="{{ '/assets/data/site-search.json' | relative_url }}" data-search-base="{{ site.baseurl | escape }}" aria-label="搜索本站公开内容"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><span>搜索</span></a>
   <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换至浅色主题" hidden>◐ <span>浅色</span></button>
 </header>
 <main id="main" tabindex="-1"{% if page.campus %} data-page="campus"{% endif %}{% if page.collection == 'atlas_notes' %} class="note-main"{% endif %}>
@@ -64,4 +66,5 @@
 {% include lab-learning-paths.html %}
 </main>
 <footer class="site-footer"><div><a class="brand" href="{{ '/' | relative_url }}">{{ site.data.universe.brand }}</a><p>学习、构建，也给新的方向留一点位置。</p></div><div><a href="https://github.com/Brook-brook">GitHub ↗</a><a href="{{ '/study/' | relative_url }}">Study</a><a href="{{ '/knowledge/' | relative_url }}">知识关系图</a><a href="{{ '/journal/' | relative_url }}">博客 / 模板示例</a><a href="{{ '/THIRD_PARTY_NOTICES.md' | relative_url }}">开源致谢</a><a href="{{ '/about/' | relative_url }}">About Brook</a></div><p class="footer-note">Built with curiosity.<br>Powered by Jekyll.</p></footer>
+{% include site-search.html %}
 </body></html>

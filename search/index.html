@@ -1,0 +1,17 @@
+---
+layout: atlas
+title: 搜索与内容目录
+permalink: /search/
+universe: true
+description: 查找 Brook 的公开笔记、学习路线、交互实验和作品记录。
+---
+<div class="universe-page-intro"><h1>沿着好奇心，找下一条线索。</h1><p>公开笔记、学习路线、实验与作品在这里汇合。私人手记仍在各自工作区，动态消息请到观察台查询。</p></div>
+<section class="site-search-page" data-search-widget data-site-search-page aria-label="公开内容目录">
+  <label for="page-search-query" class="site-search-page-controls" hidden data-search-controls>搜索公开标题、摘要与关键词<input id="page-search-query" type="search" maxlength="120" autocomplete="off" placeholder="例如：深拷贝、Python、源码研究"></label>
+  {% include site-search-filters.html %}
+  <p class="site-search-status" role="status" data-search-count>{{ site.data.search_index.entries.size }} 个公开入口</p>
+  <p class="site-search-error" role="status" data-search-error></p>
+  <ol class="site-search-results" data-search-results>{% for item in site.data.search_index.entries %}<li data-search-entry data-entry-id="{{ item.id }}" data-entry-kind="{{ item.kind }}" data-entry-keywords="{{ item.keywords | escape }}" data-entry-featured="{{ item.featured }}"><span class="search-result-detail">{{ item.detail | escape }}</span><h2><a href="{{ item.url | escape }}">{{ item.title | escape }}</a></h2><p>{{ item.summary | escape }}</p></li>{% endfor %}</ol>
+  <div class="site-search-empty" data-search-empty hidden><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" width="40" height="40" alt=""><p>没有匹配的入口。换个词，或切换到“全部”。</p></div>
+  <noscript><p>上方目录可直接阅读，浏览器“在页面中查找”也可使用。启用 JavaScript 后可组合关键词与类型筛选。</p></noscript>
+</section>

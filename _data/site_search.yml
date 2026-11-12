@@ -1,0 +1,80 @@
+entries:
+  - title: 学习路线与手记
+    kind: page
+    url: /study/paths/
+    summary: 从真实笔记、可运行实验和自查问题开始，按自己的节奏留下解释。
+    keywords: [学习, 路线, journal, 自查]
+    featured: true
+  - title: Study · 笔记与研究
+    kind: page
+    url: /study/
+    summary: 按类型、分类与关键词查找公开教程和有来源的项目研究。
+    keywords: [教程, 研究, 源码, 学习笔记]
+    featured: true
+  - title: Brook’s Digital Universe
+    kind: page
+    url: /
+    summary: 学习笔记、作品、实验与不断生长的新方向。
+    keywords: [首页, home, Brook]
+  - title: Projects · 作品与实验记录
+    kind: page
+    url: /projects/
+    summary: 查看真实实现、待发布作品与未来计划，阅读实现边界。
+    keywords: [项目, 作品, 实现, portfolio]
+  - title: 紫金港校园探索
+    kind: page
+    url: /explore/
+    summary: 六个有公开来源的地点代表点，支持搜索、收藏与图层；不是道路导航。
+    keywords: [GIS, campus, 地图, 坐标, WGS84, 紫金港]
+    featured: true
+  - title: 知识关系图
+    kind: page
+    url: /knowledge/
+    summary: 沿公开笔记之间的关系继续阅读，保留原 Knowledge 入口。
+    keywords: [知识地图, concepts, 关系]
+  - title: Playground · 交互实验
+    kind: page
+    url: /playground/
+    summary: 通过收益矩阵、对象复制、投影尺度与代码实验检验自己的解释。
+    keywords: [实验, code, 动手]
+  - title: AI 前沿与全球观察
+    kind: page
+    url: /observatory/
+    summary: 有来源的公开元信息、选编导读与本机专注研读；动态更新请在观察台查询。
+    keywords: [AI, 经济, 政治, 新闻, 来源, RSS, 研读]
+  - title: About Brook
+    kind: page
+    url: /about/
+    summary: 关于这个个人数字空间与公开身份 Brook。
+    keywords: [关于, 个人空间]
+  - title: Python 代码实验
+    kind: lab
+    url: /playground/python/
+    summary: 修改变量、判断、循环、函数与容器示例，在浏览器 Worker 中执行 Python。
+    keywords: [Python, loops, functions, 列表, 字典, 代码]
+    featured: true
+  - title: 囚徒困境与猎鹿博弈
+    kind: lab
+    url: /playground/#game
+    summary: 调整策略与收益矩阵，区分最佳回应、纯策略均衡和集体利益。
+    keywords: [game theory, 合作, 背叛, 博弈论]
+  - title: C++ 对象复制与所有权
+    kind: lab
+    url: /playground/#copy
+    summary: 逐步观察浅拷贝、深拷贝与资源释放；不把未定义行为当成固定结果。
+    keywords: [C++, deep copy, shallow copy, RAII, 内存, 析构]
+  - title: 墨卡托投影尺度
+    kind: lab
+    url: /playground/#geo
+    summary: 调整纬度，比较局部长度和面积尺度及其适用范围。
+    keywords: [Mercator, GIS, 投影, 空间, 地图]
+  - title: 纳什均衡探索器
+    kind: lab
+    url: /playground/nash/
+    summary: 编辑 2×2 收益矩阵，寻找能抵抗单方面偏离的纯策略结果；不计算混合策略。
+    keywords: [Nash, 最佳回应, 博弈, 矩阵]
+  - title: RSS Research Workbench · 数据去重实验
+    kind: lab
+    url: /playground/research/
+    summary: 修改本地 RSS／Atom，查看 URL 规范化、去重原因和待核对 JSON，不抓取外网。
+    keywords: [RSS, Atom, URL, normalization, 去重, 数据]

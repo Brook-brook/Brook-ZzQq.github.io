@@ -136,3 +136,15 @@ There is no automatic answer, truth/mastery score, visit record or private uploa
 Next: author one worked evidence comparison with primary sources and a clear
 revision history. Cross-device private notes and semantic retrieval still require
 a separate storage/identity decision. Existing learning routes and labs remain.
+
+
+## Iteration 12 — public content discovery (review branch)
+
+- Added public metadata search across notes, routes, real labs, projects and page
+  entries; lazy dialog plus a complete no-JS directory. No private-note/news index,
+  search history, external service or new storage.
+- Home foregrounds the existing four routes; Projects combines status and literal
+  keyword filters without promoting pending/planned work.
+- Next: improve cross-note prerequisite links and add one source-backed worked
+  learning example. Avoid inferred mastery, gamified streaks and platform claims.
+- Submission/verification and known limits: docs/ATLAS-ITERATION-12.md.

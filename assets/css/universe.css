@@ -22,6 +22,36 @@
 .universe-page {
   line-height: 1.65;
 }
+
+/* Ruled routes connect the notebook to existing experiments, without another card grid. */
+.home-learning-paths { display: grid; grid-template-columns: minmax(0, 0.65fr) minmax(0, 1fr); gap: var(--space-xl); padding-block: var(--space-xl) var(--space-2xl); border-top: 1px solid var(--glass-border); }
+.home-learning-paths .section-side > img { margin-bottom: 16px; }
+.home-learning-paths h2 { margin-top: 0; max-width: 12em; font-size: var(--text-section); }
+.home-path-list { list-style: none; padding: 0; margin: 0; }
+.home-path-list li + li { border-top: 1px solid var(--glass-border); }
+.home-path-list a { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 0; text-decoration: none; transition: transform 220ms var(--ease-out); }
+.home-path-list a:hover { transform: translateX(4px); }
+.home-path-list h3 { font-size: var(--text-md); margin: 0 0 4px; color: var(--text-primary); }
+.home-path-list p { font-size: var(--text-sm); color: var(--text-secondary); margin: 0; }
+.home-path-list a > span { flex-shrink: 0; color: var(--accent-soft); font-size: var(--text-xs); }
+.project-finder { margin-bottom: 24px; padding: 24px; border-radius: var(--radius-control); background: var(--glass-solid); }
+.project-finder label { display: grid; gap: 8px; font-size: var(--text-sm); color: var(--text-secondary); }
+.project-finder input { font: inherit; font-size: 16px; min-height: 48px; padding: 12px 16px; border-radius: var(--radius-control); background: var(--color-field); color: var(--text-primary); border: 1px solid var(--color-control-edge); }
+.project-finder input::placeholder { color: var(--text-secondary); opacity: 1; }
+.project-finder fieldset { padding: 0; margin: 16px 0; border: 0; }
+.project-finder legend { color: var(--text-secondary); font-size: var(--text-xs); margin-bottom: 8px; }
+.project-finder fieldset > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.project-finder button { padding: 8px 16px; min-height: 44px; font: inherit; font-size: var(--text-sm); color: var(--text-primary); background: var(--color-field); border: 1px solid var(--color-control-edge); border-radius: var(--radius-pill); cursor: pointer; }
+.project-finder button[aria-pressed="true"] { background: var(--accent-primary); color: var(--color-on-accent); border-color: var(--accent-primary); }
+.project-filter-status { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: var(--text-sm); color: var(--text-secondary); }
+.project-filter-status p { margin: 0; }
+.project-finder[hidden], .universe-project[hidden], .project-empty[hidden] { display: none; }
+@media (max-width: 60rem) { .home-learning-paths { grid-template-columns: 1fr; gap: 24px; } }
+@media (max-width: 40rem) {
+  .home-path-list a { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .project-finder { padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .home-path-list a { transition: none; transform: none; } }
 .universe-page main {
   max-width: var(--container);
   width: calc(100% - var(--gutter) * 2);

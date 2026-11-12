@@ -1,0 +1,4 @@
+<section class="home-learning-paths" aria-labelledby="home-paths-title">
+  <div class="section-side"><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" width="40" height="40" alt="" loading="lazy"><h2 id="home-paths-title">今天，顺着一个问题往下走。</h2><p>从笔记到实验，再用一个问题检验理解。挑一条感兴趣的路线，按自己的节奏来。</p><a class="universe-link" href="{{ '/study/paths/' | relative_url }}">打开学习路线与私人手记 →</a></div>
+  <ol class="home-path-list">{% for path in site.data.learning_paths %}<li><a href="{{ '/study/paths/' | relative_url }}#{{ path.id }}"><div><h3>{{ path.title }}</h3><p>{{ path.summary }}</p></div><span>{{ path.steps.size }} 个自查问题 <span aria-hidden="true">↗</span></span></a></li>{% endfor %}</ol>
+</section>

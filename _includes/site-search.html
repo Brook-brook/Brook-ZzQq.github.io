@@ -1,0 +1,12 @@
+<dialog id="site-search-dialog" class="site-search-dialog glass-heavy" aria-labelledby="site-search-title" data-site-search-dialog>
+  <header><div><p class="site-search-eyebrow">公开内容 · Ctrl / ⌘ K</p><h2 id="site-search-title">下一条探索线索</h2></div><button type="button" data-search-close aria-label="关闭全站搜索">关闭 ×</button></header>
+  <div class="site-search-body" data-search-widget data-search-popup>
+    <label for="site-search-query">搜索标题、摘要与关键词<input id="site-search-query" type="search" maxlength="120" placeholder="Python、投影、对象复制……" autocomplete="off"></label>
+    {% include site-search-filters.html %}
+    <p class="site-search-status" role="status" data-search-count></p>
+    <p class="site-search-error" role="status" data-search-error></p><button type="button" data-search-retry hidden>重试读取索引</button>
+    <ol class="site-search-results" data-search-results aria-label="搜索结果"></ol>
+    <div class="site-search-empty" data-search-empty hidden><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" width="40" height="40" alt=""><p>暂时没找到。试试更短的词，或切换内容类型。</p></div>
+  </div>
+  <footer><span>只检索本站公开内容；输入不上传、不保留历史。私人手记在原工作区查找。</span><a href="{{ '/search/' | relative_url }}">打开完整内容目录 →</a></footer>
+</dialog>

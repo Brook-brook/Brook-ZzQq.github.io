@@ -1,4 +1,4 @@
-<article class="universe-project" id="project-{{ include.project.id }}">
+<article class="universe-project" id="project-{{ include.project.id }}" data-project-row data-project-status="{{ include.project.status }}" data-project-search="{{ include.project.title | escape }} {{ include.project.summary | escape }} {{ include.project.type | escape }} {{ include.project.stack | join: ' ' | escape }}">
   <div class="project-state"><span class="project-status status-{{ include.project.status }}">{{ include.project.status_label }}</span><span>{{ include.project.type }}</span></div>
   <div class="project-story"><h2>{{ include.project.title }}</h2><p>{{ include.project.summary }}</p>{% if include.project.stack %}<ul class="project-stack" aria-label="技术栈">{% for tech in include.project.stack %}<li>{{ tech }}</li>{% endfor %}</ul>{% endif %}
     {% if include.project.details %}<details class="project-disclosure"><summary>展开实现与边界</summary><dl>{% for detail in include.project.details %}<dt>{{ detail.label }}</dt><dd>{{ detail.text }}</dd>{% endfor %}</dl></details>{% endif %}
