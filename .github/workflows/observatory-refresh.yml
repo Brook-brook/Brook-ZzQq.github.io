@@ -1,0 +1,79 @@
+name: Refresh Observatory metadata
+
+on:
+  push:
+    branches: [observatory-ops]
+    paths:
+      - _data/observatory_trigger.json
+      - tools/observatory/**
+      - _data/observatory_feeds.json
+      - .github/workflows/observatory-refresh.yml
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */2 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: observatory-collector
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'Brook-brook/Brook-ZzQq.github.io'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out collector only from its operations branch
+        uses: actions/checkout@v7
+        with:
+          ref: observatory-ops
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Run deterministic metadata parser tests
+        run: node --test tests/collector-models.test.js
+
+      - name: Prepare isolated data worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          observatory_data_dir="$RUNNER_TEMP/observatory-data"
+          if git ls-remote --exit-code --heads origin observatory-data >/dev/null; then
+            git fetch origin refs/heads/observatory-data
+            git worktree add --detach "$observatory_data_dir" FETCH_HEAD
+          else
+            git worktree add --detach "$observatory_data_dir" HEAD
+            git -C "$observatory_data_dir" switch --orphan observatory-data
+          fi
+          printf 'OBSERVATORY_DATA_DIR=%s\n' "$observatory_data_dir" >> "$GITHUB_ENV"
+
+      - name: Collect bounded public feed metadata
+        id: collect
+        continue-on-error: true
+        env:
+          NODE_USE_ENV_PROXY: '1'
+        run: node tools/observatory/collect.mjs --output "$OBSERVATORY_DATA_DIR/feed"
+
+      - name: Commit snapshots and history without publishing the website
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$OBSERVATORY_DATA_DIR/feed/index.json"
+          node tools/observatory/check-data.mjs "$OBSERVATORY_DATA_DIR/feed"
+          printf '%s\n' '# Observatory public metadata' '' 'RSS/Atom titles, original links and dates only. Automated metadata is unreviewed.' 'No article bodies, private notes, website code or deployment settings.' '' 'Source and collector: feat/atlas-iteration-10 / tools/observatory' > "$OBSERVATORY_DATA_DIR/README.md"
+          git -C "$OBSERVATORY_DATA_DIR" config user.name 'Brook Observatory Bot'
+          git -C "$OBSERVATORY_DATA_DIR" config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C "$OBSERVATORY_DATA_DIR" add -- feed README.md
+          if ! git -C "$OBSERVATORY_DATA_DIR" diff --cached --quiet; then
+            git -C "$OBSERVATORY_DATA_DIR" commit -m 'chore(observe): retain source metadata and collection health'
+            git -C "$OBSERVATORY_DATA_DIR" push origin HEAD:refs/heads/observatory-data
+          fi
+
+      - name: Report collector failure after preserving source health
+        if: steps.collect.outcome == 'failure'
+        run: exit 1
