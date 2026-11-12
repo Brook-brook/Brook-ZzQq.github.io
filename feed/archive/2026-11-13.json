@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-13",
+  "records": [
+    {
+      "id": "n-cbda9238a3684b28e47a3f036110852a357804594dae3b990092eac946cda973",
+      "source_id": "hf-blog",
+      "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
+      "url": "https://huggingface.co/blog/3d-lora-finetuning",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-12T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-12T16:14:35.619Z",
+      "changed_at": "2026-11-12T16:14:35.619Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-e589a1e1c99ea10e62c21fe5cd70b6fa2b3ec3d0ab5750fd0a6f19cb45569122",
+      "source_id": "fed-press",
+      "title": "Federal Reserve Board issues enforcement action with former employee of United Community Bank",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm",
+      "topic": "economy",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-11-12T16:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 16:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
+      "first_seen_at": "2026-11-12T16:14:35.619Z",
+      "changed_at": "2026-11-12T16:14:35.619Z",
+      "revision_count": 0,
+      "previous_versions": []
+    }
+  ]
+}

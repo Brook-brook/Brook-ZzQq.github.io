@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-12T14:18:46.219Z",
+  "attempted_at": "2026-11-12T16:14:35.619Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 154,
+  "total": 156,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-12T14:18:46.219Z",
-      "last_success_at": "2026-11-12T14:18:46.219Z",
+      "attempted_at": "2026-11-12T16:14:35.619Z",
+      "last_success_at": "2026-11-12T16:14:35.619Z",
       "accepted": 0,
       "invalid": 0,
       "limited": false,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T14:18:46.219Z",
-      "last_success_at": "2026-11-12T14:18:46.219Z",
+      "attempted_at": "2026-11-12T16:14:35.619Z",
+      "last_success_at": "2026-11-12T16:14:35.619Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,12 +60,12 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T14:18:46.219Z",
-      "last_success_at": "2026-11-12T14:18:46.219Z",
+      "attempted_at": "2026-11-12T16:14:35.619Z",
+      "last_success_at": "2026-11-12T16:14:35.619Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
-      "etag": "W/\"4139e-XAoUa3tPekGFPYc+Ot3/weLCTRQ\"",
+      "etag": "W/\"414c2-ixBK1xMjeRoDLts5XC5D0xv7zww\"",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -81,14 +81,14 @@
         "www.federalreserve.gov",
         "federalreserve.gov"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-12T14:18:46.219Z",
-      "last_success_at": "2026-11-12T14:18:46.219Z",
+      "status": "ok",
+      "attempted_at": "2026-11-12T16:14:35.619Z",
+      "last_success_at": "2026-11-12T16:14:35.619Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
-      "etag": "W/\"1026694f8d70dd1:0\"",
-      "last_modified": "Mon, 09 Nov 2026 21:00:11 GMT",
+      "etag": "W/\"c0f81e8be72dd1:0\"",
+      "last_modified": "Thu, 12 Nov 2026 16:00:15 GMT",
       "error": null,
       "retry_after": null
     },
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T14:18:46.219Z",
-      "last_success_at": "2026-11-12T14:18:46.219Z",
+      "attempted_at": "2026-11-12T16:14:35.619Z",
+      "last_success_at": "2026-11-12T16:14:35.619Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794492902-gzip\"",
-      "last_modified": "Thu, 12 Nov 2026 14:15:02 GMT",
+      "etag": "\"1794499774-gzip\"",
+      "last_modified": "Thu, 12 Nov 2026 16:09:34 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-12T14:18:46.219Z",
+      "attempted_at": "2026-11-12T16:14:35.619Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T14:18:46.219Z",
-      "last_success_at": "2026-11-12T14:18:46.219Z",
+      "attempted_at": "2026-11-12T16:14:35.619Z",
+      "last_success_at": "2026-11-12T16:14:35.619Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-e589a1e1c99ea10e62c21fe5cd70b6fa2b3ec3d0ab5750fd0a6f19cb45569122",
+      "source_id": "fed-press",
+      "title": "Federal Reserve Board issues enforcement action with former employee of United Community Bank",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm",
+      "topic": "economy",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-11-12T16:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 16:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
+      "first_seen_at": "2026-11-12T16:14:35.619Z",
+      "changed_at": "2026-11-12T16:14:35.619Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-cbda9238a3684b28e47a3f036110852a357804594dae3b990092eac946cda973",
+      "source_id": "hf-blog",
+      "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
+      "url": "https://huggingface.co/blog/3d-lora-finetuning",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-12T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-12T16:14:35.619Z",
+      "changed_at": "2026-11-12T16:14:35.619Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-7e2899c1e4e2515317ffd656a4765653c045298b4093c4bf6e86ff0d555b3528",
       "source_id": "un-news",
@@ -1206,45 +1242,14 @@
       "changed_at": "2026-11-12T08:01:23.049Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-05801dfef83d1073c2013b8151cfd5175dca89899cd8d803594300b8c6014126",
-      "source_id": "un-news",
-      "title": "Children at risk as war zone attacks on water and sanitation more than triple",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168743",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-05T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 05 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-12T08:01:23.049Z",
-      "changed_at": "2026-11-12T08:01:23.049Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-05a73febba9c224386c2535bb0dc4f93d27696f46bced2c4569af4a8d2f8b0ab",
-      "source_id": "un-news",
-      "title": "Abyei: Deadly drone strikes mark ‘new and concerning’ threat, UN peacekeeping chief warns",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168749",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-05T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 05 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-12T08:01:23.049Z",
-      "changed_at": "2026-11-12T08:01:23.049Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
+    {
+      "date": "2026-11-13",
+      "count": 2,
+      "path": "archive/2026-11-13.json"
+    },
     {
       "date": "2026-11-12",
       "count": 154,
@@ -1305,6 +1310,21 @@
       "additions": 1,
       "revisions": 1,
       "total": 154,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-12T16:14:35.619Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 156,
       "failed_sources": [
         {
           "id": "europarl-news",
