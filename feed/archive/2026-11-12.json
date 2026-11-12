@@ -2719,6 +2719,42 @@
       "changed_at": "2026-11-12T08:01:23.049Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-4922ca6fb0dd92994c349853518621d0422aac137e6c9a194fc01e08fc5408aa",
+      "source_id": "openai-news",
+      "title": "Holiday Extras is rethinking what it can build with Codex",
+      "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-12T09:30:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 09:30:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-12T12:14:00.497Z",
+      "changed_at": "2026-11-12T12:14:00.497Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-d7c1da8cb7dc41da688b7a9908111a63cf9fb297a134e952ad2db42224ad8dc2",
+      "source_id": "openai-news",
+      "title": "Supporting research on AI and children’s safety",
+      "url": "https://openai.com/index/children-first-declaration",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-12T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-12T12:14:00.497Z",
+      "changed_at": "2026-11-12T12:14:00.497Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
