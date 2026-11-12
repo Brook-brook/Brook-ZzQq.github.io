@@ -88,19 +88,45 @@
 
 ## Observatory (Iteration 9)
 
-- Read docs/OBSERVATORY_CONTENT.md for source curation. The page is a dated
-  directory/reading desk, not a live crawler, neutral-truth oracle or news archive.
+- Read docs/OBSERVATORY_CONTENT.md for source curation. Curated directory/briefings
+  remain dated. The separate automatic stream collects public metadata, never
+  implies verified news, neutral truth, complete coverage or a full-text archive.
 - Separate original materials, institutional analysis and reporting. Keep versions,
   evidence limits and actual check dates; date changes require real verification.
   Distinguish forecasts, statistics, policy proposals, enacted texts and outcomes.
 - Use stable document URLs and new IDs for different documents/versions. Preserve
   historical saved snapshots even when sources leave the current catalog.
-- Only explicit selection creates brooks-universe.observatory.v1. Do not collect
-  reading history, private answers, mastery scores or upload preferences. Keep it
+- Only explicit selection/import creates brooks-universe.observatory.v1. Optional
+  typed reflections stay local. Do not collect reading history, mastery scores
+  or upload notes/preferences. Keep it
   separate from the existing learning journal and campus favorites.
 - Preserve blocked/corrupt/conflicting storage with memory-only feedback and export.
   Reset only this key with confirmation. Use safe text/HTTPS rendering; Markdown
-  plans contain questions and blank reflections, never fabricated answers.
+  plans contain questions and only the learner's actual optional reflections,
+  never fabricated answers.
 - New reading-method notes are tutorials, with AI-assistance disclosure and real
   sources. Do not invent lab_url for reading-only material or bypass research
   publication checks. Run Observatory models/browser and real-build catalog tests.
+
+## Continuous Observatory (Iteration 10)
+
+- `_data/observatory_feeds.json` is the trusted source/host registry. Collector
+  reads bounded RSS/Atom bibliographic fields only; keep allowlisted HTTPS,
+  manual redirects, deadlines, size/item bounds, ETag/304 and Retry-After handling.
+- `observatory-ops` runs collection; `observatory-data` retains public daily
+  metadata, revisions and health only. Archive days and displayed dates use
+  Asia/Shanghai. Do not put notes, secrets, article bodies or website deploys there.
+- A native Actions cron on a non-default branch is inactive. Do not claim it is
+  enabled. The confirmed recurring trigger uses a separate automation to update
+  only ops `_data/observatory_trigger.json` with a current SHA. Check/maintain the
+  real enabled task; avoid duplicate schedulers. Production remains unchanged.
+- Frontend polls public status every five visible minutes, preserves old content
+  on failures and waits for explicit apply before replacing an existing snapshot.
+  Automatic titles stay needs_review, distinct from source_checked research.
+- Physical reading key remains v1; schema v2 adds update snapshots and optional
+  max-2,000-character reflections. Read v1 in memory without automatic rewrites.
+  Keep max60/2MiB, strict validation, previewed import/local-note priority, safe
+  text, original snapshots, blocked/quota/multi-tab recovery and usable exports.
+- Run collector/stream models and browser suites with the prior regressions. Test
+  actual data collection on Actions separately from deterministic HTTP fixtures;
+  do not call fixture tests proof of public-source availability.

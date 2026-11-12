@@ -1,0 +1,10 @@
+2026-11-12 (Asia/Shanghai) — actual command output, no private user notes.
+
+Actual public data, no route mocks
+
+
+> jekyll-theme-chirpy@7.6.0 test:observatory:live
+> node tests/stream-live.mjs
+
+PASS live public data 1440 dark: {"attempted_at":"2026-11-12T08:01:23.049Z","total":151,"sources_ok":6,"sources_total":7,"archives":[{"date":"2026-11-12","count":151,"path":"archive/2026-11-12.json"}]}; real status/index/archive HTTP200, digest/schema, source health, no private-record writes or console errors
+PASS live public data 390 light: {"attempted_at":"2026-11-12T08:01:23.049Z","total":151,"sources_ok":6,"sources_total":7,"archives":[{"date":"2026-11-12","count":151,"path":"archive/2026-11-12.json"}]}; real status/index/archive HTTP200, digest/schema, source health, no private-record writes or console errors

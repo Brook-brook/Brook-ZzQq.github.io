@@ -6,6 +6,20 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 10 continuous Observatory
+
+`feat/atlas-iteration-10` continues ninth-round `46dd8bf`. A bounded public RSS/Atom
+collector now retains titles, source links, publication/first-seen dates, metadata
+revisions and per-source health on `observatory-data`. An enabled recurring trigger
+requests collection about every two hours on `observatory-ops`, without merging or
+publishing the website. The page checks public snapshots every five visible minutes
+and offers explicit apply, topic/source search and daily archives. Private reading
+notes stay local, with v1 recovery, JSON backup/previewed merge and Markdown export.
+See [implementation, validation and preview](docs/ATLAS-ITERATION-10.md),
+[update/storage contract](docs/OBSERVATORY_CONTENT.md) and
+[resource review](docs/iteration-10-compliance.md). Publisher and scheduler delays
+apply; automatic metadata is unreviewed. Production publishing is unchanged.
+
 ## Iteration 9 Observatory
 
 `feat/atlas-iteration-9` continues eighth-round `0536d46`. The new `/observatory/`
@@ -58,7 +72,7 @@ and [third-party notices](THIRD_PARTY_NOTICES.md).
 - `/`: personal introduction, real tutorial notebook, selected work and build records.
 - `/study/`: searchable tutorials and source-based research; type/category/query filters can be shared by URL.
 - `/study/paths/`: Python/data, spatial reasoning, C++ ownership and game-model routes; optional local self-checks, notes and backup.
-- `/observatory/`: AI frontiers and world affairs; checked original sources, dated briefings, reading methods and an exportable local reading list.
+- `/observatory/`: continuous AI/world metadata, dated briefings and checked source directory, daily archives and a private local reading desk with backup.
 - `/explore/`: sourced Zijingang point atlas, search, favorites and Geo/AI/Code lab links.
 - `/playground/`: prisoner/stag games, C++ copying and Mercator scale.
 - `/playground/nash/`: editable 2×2 pure-strategy equilibrium explorer.

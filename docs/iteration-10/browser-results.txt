@@ -1,0 +1,118 @@
+2026-11-12 (Asia/Shanghai) — actual command output, no private user notes.
+
+Full project-path browser regression
+
+
+> jekyll-theme-chirpy@7.6.0 test:atlas:browser
+> node tests/atlas-browser.mjs && node tests/campus-browser.mjs && node tests/obsidian-browser.mjs && node tests/universe-browser.mjs && node tests/study-browser.mjs && node tests/research-browser.mjs && node tests/learning-browser.mjs && node tests/observatory-browser.mjs && node tests/stream-browser.mjs
+
+PASS 390px: 15 pages × 2 themes; links, axe, labs, search, keyboard, menu, storage, Python error path
+PASS 768px: 15 pages × 2 themes; links, axe, labs, search, keyboard, menu, storage, Python error path
+PASS 1440px: 15 pages × 2 themes; links, axe, labs, search, keyboard, menu, storage, Python error path
+PASS no-JavaScript: navigation and all notes accessible
+PASS campus 390: axe, filters, empty state, favorites, marker/detail, layers, view persistence, keyboard, reduced motion
+PASS campus 768: axe, filters, empty state, favorites, marker/detail, layers, view persistence, keyboard, reduced motion
+PASS campus 1440: axe, filters, empty state, favorites, marker/detail, layers, view persistence, keyboard, reduced motion
+PASS campus touch, no-JS source cards and shared legacy palette
+PASS campus network failure and blocked storage fallbacks
+PASS Obsidian 320: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 390: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 768: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 1440: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 1920: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Universe 390 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 390 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 768 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 768 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 1440 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 1440 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe no-JavaScript: all tutorials and notebook previews readable
+PASS Study 390 dark: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 390 light: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 768 dark: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 768 light: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 1440 dark: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 1440 light: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study no-JavaScript 390: 8 published notes and full content routes readable
+PASS Study no-JavaScript 1440: 8 published notes and full content routes readable
+PASS research 390 dark: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 390 light: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 768 dark: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 768 light: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 1440 dark: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 1440 light: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research no-JavaScript: readable fixture, explicit limitation, disabled execution/export and actual learning links
+PASS learning 390 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 390 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 768 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 768 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 1440 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 1440 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning storage blocked: no false durable-save claim, memory/export remain usable
+PASS learning storage corrupt: no false durable-save claim, memory/export remain usable
+PASS learning storage quota: no false durable-save claim, memory/export remain usable
+PASS learning multiple tabs: external changes pause saving rather than silently overwrite
+PASS learning no-JS: routes, real resources and questions readable without fake controls
+PASS Observatory 390 dark: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 390 light: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 768 dark: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 768 light: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 1440 dark: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 1440 light: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory blocked: inline memory-only feedback, original data preservation and usable export
+PASS Observatory corrupt: inline memory-only feedback, original data preservation and usable export
+PASS Observatory quota: inline memory-only feedback, original data preservation and usable export
+PASS Observatory historical material: safe text/HTTPS rendering and original snapshot export outside current catalog
+PASS Observatory multiple tabs: external changes pause writes and retain page-memory export
+PASS Observatory aging catalog: explicit stale-source reminder, no false live-news status
+PASS Observatory no-JS: full source directory, native reading disclosures and honest unavailable controls
+PASS Observatory expanded navigation: 1051/1280px without overlap
+PASS continuous stream 390 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 390 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 768 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 768 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 1440 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 1440 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream: five-minute visible-only polling, explicit snapshot apply, retained typing/focus, revision details, archive outside latest, HTTP/hash/archive failures retain content
+PASS reading desk: v1 recovery without rewrite, explicit migration, previewed JSON merge/local-note priority, bad file preservation, cancel removal, reset protects route journal
+PASS note recovery quota: original storage preserved, typed memory-only reflection remains exportable
+PASS note recovery corrupt: original storage preserved, typed memory-only reflection remains exportable
+PASS no-JS continuous stream: real bundled original links, hidden unavailable controls, phone layout
+
+Root-path Observatory and stream regression
+
+PASS Observatory 390 dark: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 390 light: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 768 dark: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 768 light: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 1440 dark: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 1440 light: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory blocked: inline memory-only feedback, original data preservation and usable export
+PASS Observatory corrupt: inline memory-only feedback, original data preservation and usable export
+PASS Observatory quota: inline memory-only feedback, original data preservation and usable export
+PASS Observatory historical material: safe text/HTTPS rendering and original snapshot export outside current catalog
+PASS Observatory multiple tabs: external changes pause writes and retain page-memory export
+PASS Observatory aging catalog: explicit stale-source reminder, no false live-news status
+PASS Observatory no-JS: full source directory, native reading disclosures and honest unavailable controls
+PASS Observatory expanded navigation: 1051/1280px without overlap
+PASS continuous stream 390 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 390 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 768 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 768 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 1440 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 1440 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream: five-minute visible-only polling, explicit snapshot apply, retained typing/focus, revision details, archive outside latest, HTTP/hash/archive failures retain content
+PASS reading desk: v1 recovery without rewrite, explicit migration, previewed JSON merge/local-note priority, bad file preservation, cancel removal, reset protects route journal
+PASS note recovery quota: original storage preserved, typed memory-only reflection remains exportable
+PASS note recovery corrupt: original storage preserved, typed memory-only reflection remains exportable
+PASS no-JS continuous stream: real bundled original links, hidden unavailable controls, phone layout
+
+Final homepage build-record regression
+
+PASS Universe 390 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 390 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 768 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 768 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 1440 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 1440 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe no-JavaScript: all tutorials and notebook previews readable
