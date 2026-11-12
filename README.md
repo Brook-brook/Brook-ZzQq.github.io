@@ -6,6 +6,17 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 11 focused reading
+
+`feat/atlas-iteration-11` continues tenth-round `ccc0fb0`. Observe now opens a native
+focused reading room directly from a material, with local title/note retrieval,
+discipline-specific evidence prompts, non-destructive outline insertion and a
+second saved material for comparison. Its existing local v2 snapshots and backups
+remain compatible; opening a material never means completion or source approval.
+No accounts, uploads, packages or new persistence schema. Public native guides
+remain readable without JavaScript. See [screenshots, verification and preview](docs/ATLAS-ITERATION-11.md)
+and [source/privacy review](docs/iteration-11-compliance.md). Production is unchanged.
+
 ## Iteration 10 continuous Observatory
 
 `feat/atlas-iteration-10` continues ninth-round `46dd8bf`. A bounded public RSS/Atom

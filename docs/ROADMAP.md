@@ -124,3 +124,15 @@ requires a workflow on GitHub's default branch and is not claimed active here.
 Website production remains unchanged. Next: author a source-checked guided topic
 that revisits an earlier forecast or AI evaluation, connecting archived evidence
 with the learner's own questions; cross-device notes still need a separate design.
+
+## Iteration 11: focused evidence reading
+
+Observe adds a native focused reading room, direct material entry, local note
+retrieval, three scientific reading lenses, bounded/non-destructive outline
+insertion and a second saved snapshot for comparison. Existing v2 storage and
+backups remain; source/version metadata never silently follows a changing feed.
+There is no automatic answer, truth/mastery score, visit record or private upload.
+
+Next: author one worked evidence comparison with primary sources and a clear
+revision history. Cross-device private notes and semantic retrieval still require
+a separate storage/identity decision. Existing learning routes and labs remain.

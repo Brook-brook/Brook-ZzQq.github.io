@@ -138,3 +138,13 @@ original links are retained. No article/report/abstract bodies, images, paywall
 content or publisher UI is copied. The initial real snapshot includes one 403
 and an empty arXiv feed; failure/empty results are disclosed, not bypassed.
 See `_data/observatory_feeds.json` and docs/iteration-10-compliance.md.
+
+## Iteration 11 focused reading
+
+No dependency, font, icon, image, map data, third-party implementation or new feed
+is integrated. Reading-room UI, native-dialog logic, local retrieval, outline
+helpers, question sets and tests are original project work. The existing Mote and
+lavender tokens are reused. Guide links refer to the existing independently written
+AI/world reading-method notes and their already-attributed sources; no publisher
+body, abstract, table or proprietary lesson is reproduced. See
+docs/iteration-11-compliance.md. All earlier license notices remain.

@@ -130,3 +130,19 @@
 - Run collector/stream models and browser suites with the prior regressions. Test
   actual data collection on Actions separately from deterministic HTTP fixtures;
   do not call fixture tests proof of public-source availability.
+
+## Focused reading (Iteration 11)
+
+- Native dialog enhances Observe; original anchors/desk and three public guides
+  remain the no-JS/unsupported-dialog fallback. Keep published-method references
+  checked in the real Jekyll hook, distinct from source/news verification.
+- The reading room uses the existing controller's state, write guard and exports.
+  Do not create another store/key/schema, record a visit or infer mastery. Opening
+  an existing v1/v2 snapshot must not write or replace its original metadata.
+- Guide insertion appends bounded prompts only, preserves earlier text and detects
+  an existing outline marker. Never truncate a note or fabricate a learner answer.
+- Local title/version/question/note retrieval and side-by-side evidence reading
+  never fetch private text. Different domains do not establish independent evidence.
+- Native focus trapping, Escape/close restoration, phone layout, reduced motion,
+  modal-visible storage failure and real modal downloads require browser coverage.
+  Keep the outside desk synchronized without rebuilding the invoker on dialog close.
