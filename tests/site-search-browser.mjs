@@ -23,7 +23,7 @@ try {
     page.on('request', (request) => requests.push(request.url()));
     await page.goto(base + '/');
     assert.equal(requests.filter((url) => url.includes('/assets/data/site-search.json')).length, 0, 'index stays lazy');
-    assert.equal(await page.locator('.home-path-list a').count(), 8);
+    assert.equal(await page.locator('.home-path-list a').count(), 10);
     for (const link of await page.locator('.home-path-list a').all()) assert.ok((await link.getAttribute('href')).startsWith(prefix + '/study/paths/#'));
     await page.screenshot({ path: `${shots}/home-${width}-${theme}.png`, fullPage: true });
     await page.locator('[data-open-site-search]').click();
@@ -127,7 +127,8 @@ try {
     assert.ok(total >= 30);
     await page.fill('#page-search-query', 'Python');
     await catalog.locator('[data-search-kind="path"]').click();
-    assert.equal(await catalog.locator('[data-search-results] li').count(), 1);
+    assert.deepEqual((await catalog.locator('[data-search-results] a').evaluateAll((nodes) => nodes.map((node) => node.getAttribute('href')))).sort(),
+      [`${prefix}/study/paths/#ai-development`, `${prefix}/study/paths/#python-data`].sort(), 'Python finds its original route and the explicitly Python-based AI starting point');
     await page.locator('#page-search-query').focus();
     await page.keyboard.press('Control+k');
     assert.equal(await dialog.evaluate((e) => e.open), false, 'shortcut preserves input editing');

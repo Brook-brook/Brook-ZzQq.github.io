@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, join } from 'node:path';
+import { assertNoPythonCache } from './build-cache.mjs';
 
 // A successful file upload is not proof that Jekyll ran. Guard the exact artifact
 // directory that upload-pages-artifact will receive, including project base paths.
@@ -12,6 +13,7 @@ assert.match(home, /^<!doctype html>/i, 'Homepage must be rendered through the H
 assert.ok(!/^---\s*$/m.test(home), 'Raw YAML front matter must not be published');
 assert.ok(!home.includes('{{') && !home.includes('{%'), 'Unprocessed Liquid must not be published');
 assert.match(home, /<header\b/, 'Shared navigation layout is missing');
+assertNoPythonCache(root);
 const canonical = home.match(/<link rel="canonical" href="([^"]+)"/);
 assert.ok(canonical, 'Built homepage must have a canonical URL');
 const publicHome = new URL(canonical[1]);

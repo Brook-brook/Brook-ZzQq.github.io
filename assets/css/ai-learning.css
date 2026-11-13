@@ -1,0 +1,49 @@
+/* Hallmark · shape: app screen · genre: playful · theme: brand
+ * idea: one concrete task connects request, tool, evidence and evaluation
+ * states: native reading / expanded question / explicit practice destination
+ * posture: restrained · v2.0.0 */
+.ai-learning-page { max-width: 1280px; margin-inline: auto; padding-block: var(--space-lg) var(--space-2xl); }
+.ai-learning-page .breadcrumbs { display: flex; flex-wrap: wrap; gap: var(--space-sm); align-items: center; font-size: var(--text-sm); margin-bottom: var(--space-xl); }
+.ai-learning-page :where(h1, h2, h3, p) { margin-block-start: 0; }
+.ai-learning-intro { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; margin-bottom: var(--space-2xl); }
+.ai-learning-intro h1 { font-size: var(--text-display); line-height: 1.35; max-width: 20ch; margin-bottom: var(--space-lg); }
+.ai-learning-page :is(h1, h2) { text-wrap: balance; }
+.ai-learning-intro > div > p { max-width: 60ch; color: var(--text-secondary); line-height: 1.8; }
+.ai-learning-jumps, .ai-learning-links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-xs) var(--space-lg); }
+.ai-learning-page a { min-height: 44px; display: inline-flex; align-items: center; }
+.ai-learning-page a:active { transform: translateY(1px); }
+.ai-learning-start { padding: var(--space-lg); border-radius: var(--radius-card); }
+.ai-learning-start img { float: right; margin-inline-start: var(--space-sm); }
+.ai-learning-start h2 { font-size: var(--text-lg); line-height: 1.5; }
+.ai-learning-start p { font-size: var(--text-sm); color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xs); }
+.ai-learning-route { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr); column-gap: var(--space-2xl); padding-block: var(--space-xl) var(--space-2xl); border-top: 1px solid var(--color-rule); scroll-margin-block-start: var(--space-lg); }
+.ai-learning-route > header { min-width: 0; }
+.ai-learning-route h2, .ai-learning-method h2 { font-size: var(--text-2xl); line-height: 1.4; margin-bottom: var(--space-md); }
+.ai-learning-route > header > p { color: var(--text-secondary); line-height: 1.8; }
+.ai-learning-prerequisite { font-size: var(--text-sm); }
+.ai-learning-route > ol { padding-inline-start: var(--space-lg); margin: 0; min-width: 0; }
+.ai-learning-route li { padding-inline-start: var(--space-xs); padding-bottom: var(--space-lg); }
+.ai-learning-route li + li { border-top: 1px solid var(--color-rule); padding-top: var(--space-lg); }
+.ai-learning-route h3 { font-size: var(--text-lg); line-height: 1.5; margin-bottom: var(--space-xs); }
+.ai-learning-route li > p { color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xs); }
+.ai-learning-links { font-size: var(--text-sm); }
+.ai-learning-page details { background: var(--color-clear); border: 0; border-radius: 0; padding: 0; margin-top: var(--space-xs); }
+.ai-learning-page details:not([open]) > :not(summary) { display: none; }
+.ai-learning-page summary { cursor: pointer; min-height: 44px; padding-block: var(--space-sm); color: var(--text-secondary); font-size: var(--text-sm); }
+.ai-learning-page details p { line-height: 1.8; margin-block: var(--space-xs); }
+.ai-learning-deliverable { grid-column: 2; border-top: 1px solid var(--color-rule); padding-block-start: var(--space-lg); }
+.ai-learning-deliverable p { color: var(--text-secondary); line-height: 1.8; }
+.ai-learning-deliverable p:last-child { font-size: var(--text-sm); margin-bottom: 0; }
+.ai-learning-method { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr); gap: var(--space-xl) var(--space-2xl); border-top: 1px solid var(--color-rule); padding-top: var(--space-xl); }
+.ai-learning-method p { color: var(--text-secondary); line-height: 1.8; }
+.ai-learning-page :is(a, summary):focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
+@media (max-width: 900px) {
+  .ai-learning-intro, .ai-learning-route, .ai-learning-method { grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+  .ai-learning-intro { margin-bottom: var(--space-xl); }
+  .ai-learning-intro h1 { max-width: none; }
+  .ai-learning-deliverable { grid-column: auto; }
+  .ai-learning-route { padding-block-end: var(--space-xl); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ai-learning-page a:active { transform: none; }
+}

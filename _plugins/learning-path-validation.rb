@@ -17,6 +17,9 @@ module LearningPathValidation
       path["steps"].each do |step|
         fail! unless step.is_a?(Hash) && present?(step["title"]) &&
           present?(step["question"]) && notes.include?(step["note"])
+        if step.key?("focus")
+          fail! unless present?(step["focus"]) && step["focus"].length <= 400
+        end
         if step["lab"]
           fail! unless step["lab"].is_a?(String) && step["lab"].start_with?("/") &&
             !step["lab"].start_with?("//") && present?(step["lab_label"])
@@ -33,7 +36,7 @@ module LearningPathValidation
 
   def self.fail!
     raise Jekyll::Errors::FatalException,
-      "_data/learning_paths.yml: routes require unique stable IDs, public notes, questions and valid internal lab links."
+      "_data/learning_paths.yml: routes require unique stable IDs, public notes, questions, bounded optional focus and valid internal lab links."
   end
 end
 
