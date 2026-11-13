@@ -193,3 +193,20 @@
   independent testing; preserve clear scope and reference links.
 - Keep range keyboard operation, matrix/row filters, accessible horizontally
   scrollable sample tables, no-JS defaults and actual JSON downloads tested.
+
+## Spatial validation workbench (Iteration 15)
+
+- spatial_samples.json is the original 80-point planar v1 fixture, four blocks of
+  20; synthetic-m is not geographic coordinates, a CRS or a real campus dataset.
+  Client/real-build validation must keep bounded coordinates, IDs, labels and blocks.
+- Uniform Euclidean kNN reads only query coordinates and training labels; scoring
+  reads test labels after prediction. Distance ties use ASCII IDs. Vote share is
+  not calibrated probability. Preserve the independent reference/label-isolation tests.
+- Compare one seeded random holdout and one block holdout, both 60/20. Do not call
+  this full cross-validation or universally rank methods. Show class composition,
+  nearest-training coverage distance, undefined denominators and deployment limits.
+- Parameter edits keep applied results visible, require explicit rerun and disable
+  stale export. Export only complete public data/parameters/splits/neighbors on click.
+  No private storage reads or uploads. Keep no-JS source and keyboard tables.
+- New route IDs extend, never rename the original nine learning steps. Old v1
+  backups must remain readable without automatic rewrite; no inferred completion.

@@ -6,6 +6,18 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 15 spatial validation
+
+`feat/atlas-iteration-15` continues fourteenth-round `7d9788d`. Real native uniform
+kNN compares a seeded random holdout and a spatial-block holdout on 80 original
+synthetic planar points. Readers inspect actual training neighbors, test classes,
+metrics/undefined denominators and coverage distance, then explicitly export a
+reproducible record. No geographic-performance or universal method-ranking claim.
+A new source-grounded guide and fifth learning route extend the same v1 journal;
+all nine earlier step IDs/backups remain. No dependencies or production changes.
+See [validation and preview](docs/ATLAS-ITERATION-15.md) and
+[resource/source review](docs/iteration-15-compliance.md).
+
 ## Iteration 14 binary evaluation
 
 `feat/atlas-iteration-14` continues `3274e30`. A synthetic-data workbench lets

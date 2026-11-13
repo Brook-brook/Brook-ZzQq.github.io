@@ -170,3 +170,12 @@ a separate storage/identity decision. Existing learning routes and labs remain.
   training/performance claim, probability claim, private store or new dependency.
 - Next: spatial holdout with real native kNN computation and then a practice
   workbench reusing the existing learning journal. See iterations-14-16-plan.md.
+
+## Iteration 15 — spatial evidence
+
+Implemented on the review branch: original 80-point planar kNN, seeded/random vs
+block holdout, neighbor inspection, class counts/coverage, explicit rerun/export,
+source-grounded spatial guide and a fifth route (12 permanent steps total).
+This is a teaching holdout, not a real-campus model or complete cross-validation.
+Production stays unchanged. Next: one-question self-explanation using the existing
+journal and a transparent, optional reference/counterexample.
