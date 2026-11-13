@@ -217,6 +217,24 @@
       "changed_at": "2026-11-13T00:18:13.043Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-23e5aead6df2bbc4ce74e2aa368713bb70aa1f809137b968e655a03056d8cd18",
+      "source_id": "un-news",
+      "title": "Six killed in Israeli airstrike on Gaza’s Nasser Hospital",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168796",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-12T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-13T02:16:58.467Z",
+      "changed_at": "2026-11-13T02:16:58.467Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
