@@ -72,3 +72,7 @@ toc:
 读到不懂的数学或代码时，把它缩成一个可以继续追的问题，不用一次读完全部背景。如果涉及实际 Python 数据处理，可继续进入[现有 Python 实验]({{ '/playground/python/' | relative_url }})；只有真正运行后，才记录自己的输出与观察。
 
 更多练习可回到[学习路线与手记]({{ '/study/paths/' | relative_url }})。收藏材料与读完论文都不自动证明已经掌握。
+
+如果精确率、召回率或 F1 还不清楚，先用[AI 评测实验]({{ '/playground/evaluation/' | relative_url }})
+核对 20 条合成样本，再读[指标笔记]({{ '/knowledge/ai-evaluation-basics/' | relative_url }})。
+这能帮助理解分母与阈值，但不能代替复现论文或判断真实模型的能力。

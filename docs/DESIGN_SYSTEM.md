@@ -230,3 +230,19 @@ The bounded sheet keeps its geometry across result counts; its body fills the
 remaining space. A new query resets the batch and body scroll, while continuation
 focuses the next result. Preserve ordinary inline text flow inside links so marks
 do not collapse surrounding spaces; keep the real Range/geometry regressions.
+
+
+## Iteration 14: inspect the denominator
+
+Evaluation is a teaching workbench within the shared shell. A compact headline
+leads to one light-glass parameter strip, then a real confusion matrix and a flat
+metric ledger; avoid a dashboard card grid. Lavender marks distinguish filled
+predictions; truth uses circle/square shapes and row labels, with a full text
+sample table. No real geography or model-score branding.
+
+Immediate TP/FP/FN/TN feedback sits by the threshold. Undefined metrics are an em
+ dash with a visible denominator explanation. The sample region is focusable and
+labelled for horizontal scrolling, while the page remains within the viewport.
+Native range/select/button controls stay at least 44px; selects use 16px text.
+SVG and tables have reading alternatives and no continuous animation. Mote is a
+quiet next-question prompt, not a progress or mastery claim.

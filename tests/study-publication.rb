@@ -11,6 +11,7 @@ require_relative "../_plugins/atlas-note-publication"
 require_relative "../_plugins/learning-path-validation"
 require_relative "../_plugins/observatory-validation"
 require_relative "../_plugins/site-search-index"
+require_relative "../_plugins/evaluation-data-validation"
 
 # A generator runs after :site/:post_read, just as an index/sitemap generator
 # would. Its written output must never receive filtered research documents.
@@ -393,6 +394,37 @@ class StudyPublicationChecks
             assert(false, "unsafe or duplicate search entries must fail")
           rescue Jekyll::Errors::FatalException => error
             assert(error.message.include?("site search"), "identify search configuration failure")
+          end
+        end
+      end
+    end
+
+    check("evaluation teaching fixture builds with its declared labels and original scores") do
+      with_fixture do |source, destination|
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        FileUtils.cp(File.expand_path("../_data/evaluation_samples.json", __dir__), File.join(source, "_data", "evaluation_samples.json"))
+        site = build(source, destination)
+        assert(site.data["evaluation_samples"]["samples"].length == 20, "public synthetic fixture is available after validation")
+      end
+    end
+
+    check("evaluation rejects unsafe/duplicate samples, impossible scores and misleading cohort labels") do
+      %w[schema duplicate score ratio title].each do |mode|
+        with_fixture do |source, destination|
+          data = JSON.parse(File.read(File.expand_path("../_data/evaluation_samples.json", __dir__)))
+          data["schema_version"] = 2 if mode == "schema"
+          data["samples"][1]["id"] = data["samples"][0]["id"] if mode == "duplicate"
+          data["samples"][0]["score"] = 101 if mode == "score"
+          data["samples"][0]["labels"]["rare"] = 0 if mode == "ratio"
+          data["scenarios"]["rare"] = "" if mode == "title"
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          File.write(File.join(source, "_data", "evaluation_samples.json"), JSON.generate(data))
+          begin
+            build(source, destination)
+            assert(false, "invalid evaluation data must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("evaluation_samples.json"), "identify invalid teaching fixture")
+            assert(!File.exist?(File.join(destination, "index.html")), "invalid data fails before writing")
           end
         end
       end

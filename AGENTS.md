@@ -178,3 +178,18 @@
 - During composition, defer result changes and preserve candidate navigation/Esc.
   Test DOM composition events separately from actual OS/phone IME claims. Keep
   no-JS directory, dialog fallback, rapid close and private-editor shortcuts intact.
+
+
+## Evaluation workbench (Iteration 14)
+
+- evaluation_samples.json is original synthetic teaching data, not model output,
+  probability, campus data or real performance. Preserve its v1 identity; client
+  and real-build checks require 20 unique samples and the declared class counts.
+- Binary evaluation uses score >= threshold. Display absent denominators as null/
+  undefined, distinct from zero; F1 uses 2TP/(2TP+FP+FN). A constant-negative
+  baseline has no threshold or substituted source-score rows in its report.
+- Lab parameters are memory-only. Export full public synthetic samples/parameters
+  only after a click, never private notes/preferences. Tuning this fixture is not
+  independent testing; preserve clear scope and reference links.
+- Keep range keyboard operation, matrix/row filters, accessible horizontally
+  scrollable sample tables, no-JS defaults and actual JSON downloads tested.

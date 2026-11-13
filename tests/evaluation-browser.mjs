@@ -1,0 +1,91 @@
+import { chromium } from 'playwright';
+import AxeBuilder from '@axe-core/playwright';
+import assert from 'node:assert/strict';
+import { mkdir, readFile } from 'node:fs/promises';
+
+const base = process.env.ATLAS_BASE_URL || 'http://127.0.0.1:4173/Brook-ZzQq.github.io';
+const shots = process.env.EVALUATION_SHOT_DIR || 'work/evaluation';
+await mkdir(shots, { recursive: true });
+const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || (process.env.CI ? chromium.executablePath() : '/usr/bin/chromium'), args: ['--no-sandbox'] });
+try {
+  for (const width of [390, 768, 1440]) for (const theme of ['dark', 'light']) {
+    const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce', acceptDownloads: true });
+    await context.addInitScript((theme) => {
+      localStorage.setItem('atlas-theme', theme);
+      localStorage.setItem('brooks-universe.learning.v1', 'PRIVATE_EVALUATION_SENTINEL');
+      localStorage.setItem('brooks-universe.observatory.v1', 'PRIVATE_EVALUATION_SENTINEL');
+    }, theme);
+    const page = await context.newPage();
+    const errors = [], missing = [], requests = [];
+    page.on('pageerror', (error) => errors.push(error.message));
+    page.on('response', (response) => { if (response.url().startsWith(base) && response.status() >= 400) missing.push(response.url()); });
+    page.on('request', (request) => requests.push({ url: request.url(), method: request.method() }));
+    const response = await page.goto(base + '/playground/evaluation/');
+    assert.ok(response.ok());
+    await page.waitForFunction(() => !document.getElementById('evaluation-controls').disabled);
+    assert.equal(await page.locator('#primary-nav [aria-current="page"]').count(), 1);
+    assert.equal(await page.locator('#evaluation-samples tr').count(), 20);
+    assert.equal(await page.locator('[data-metric="accuracy"]').innerText(), '50.0%');
+    assert.equal(await page.locator('[data-metric="precision"]').innerText(), '10.0%');
+    assert.equal(await page.locator('[data-metric="recall"]').innerText(), '50.0%');
+    assert.equal(await page.locator('[data-metric="f1"]').innerText(), '16.7%');
+    assert.match(await page.locator('#evaluation-baseline').innerText(), /90\.0%/);
+    const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+    assert.deepEqual(axe.violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(';')}`), [], `evaluation axe ${width} ${theme}`);
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    if (width === 390) {
+      const region = page.getByRole('region', { name: '合成样本表，可横向滚动查看各列' });
+      await region.focus(); await page.keyboard.press('ArrowRight');
+      await page.waitForFunction(() => document.querySelector('.evaluation-samples .evaluation-table-wrap').scrollLeft > 0);
+      await region.evaluate((node) => { node.scrollLeft = 0; });
+    }
+    await page.screenshot({ path: `${shots}/default-${width}-${theme}.png`, fullPage: true });
+    await page.locator('#evaluation-threshold').focus();
+    await page.keyboard.press('End');
+    assert.equal(await page.inputValue('#evaluation-threshold'), '100');
+    assert.equal(await page.locator('[data-metric="accuracy"]').innerText(), '90.0%');
+    assert.equal(await page.locator('[data-metric="precision"]').innerText(), '—');
+    assert.equal(await page.locator('[data-metric="recall"]').innerText(), '0.0%');
+    assert.equal(await page.locator('[data-metric="f1"]').innerText(), '0.0%');
+    assert.match(await page.locator('[data-formula="precision"]').innerText(), /分母为 0/);
+    await page.locator('[data-evaluation-filter="FN"]').click();
+    assert.equal(await page.locator('#evaluation-samples tr').count(), 2);
+    assert.deepEqual(await page.locator('#evaluation-samples th').allTextContents(), ['E01', 'E13']);
+    await page.locator('[data-evaluation-filter="FP"]').click();
+    assert.ok(await page.locator('#evaluation-empty').isVisible());
+    await page.locator('#evaluation-reset').click();
+    assert.equal(await page.locator('#evaluation-samples tr').count(), 20);
+    await page.selectOption('#evaluation-scenario', 'none');
+    assert.equal(await page.locator('[data-metric="recall"]').innerText(), '—');
+    await page.locator('#evaluation-threshold').focus(); await page.keyboard.press('End');
+    assert.equal(await page.locator('[data-metric="accuracy"]').innerText(), '100.0%');
+    assert.equal(await page.locator('[data-metric="f1"]').innerText(), '—');
+    assert.match(await page.locator('#evaluation-baseline').innerText(), /召回率未定义/);
+    await page.screenshot({ path: `${shots}/undefined-${width}-${theme}.png`, fullPage: true });
+    await page.selectOption('#evaluation-scenario', 'balanced');
+    await page.locator('#evaluation-threshold').focus(); await page.keyboard.press('Home');
+    assert.equal(await page.locator('[data-metric="precision"]').innerText(), '50.0%');
+    assert.equal(await page.locator('[data-metric="recall"]').innerText(), '100.0%');
+    const [download] = await Promise.all([page.waitForEvent('download'), page.locator('#evaluation-export').click()]);
+    const report = JSON.parse(await readFile(await download.path(), 'utf8'));
+    assert.equal(report.synthetic, true); assert.equal(report.scenario, 'balanced');
+    assert.equal(report.evaluation.threshold, 0); assert.equal(report.evaluation.rows.length, 20);
+    assert.deepEqual(report.evaluation.count, { TP: 10, FP: 10, FN: 0, TN: 0 });
+    assert.ok(!JSON.stringify(report).includes('PRIVATE_EVALUATION_SENTINEL'));
+    const privacy = await page.evaluate(() => [localStorage.getItem('brooks-universe.learning.v1'), localStorage.getItem('brooks-universe.observatory.v1')]);
+    assert.deepEqual(privacy, ['PRIVATE_EVALUATION_SENTINEL', 'PRIVATE_EVALUATION_SENTINEL']);
+    assert.ok(requests.every((r) => r.method === 'GET' && !r.url.includes('PRIVATE_EVALUATION_SENTINEL')));
+    assert.ok(requests.every((r) => r.url.startsWith(new URL(base).origin) || r.url.startsWith('blob:')), 'no external model/data requests');
+    assert.deepEqual(errors, []); assert.deepEqual(missing, []);
+    await context.close();
+  }
+  const nojs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 900 } });
+  const page = await nojs.newPage();
+  await page.goto(base + '/playground/evaluation/');
+  assert.equal(await page.locator('#evaluation-samples tr').count(), 20);
+  assert.ok(await page.locator('#evaluation-threshold').isDisabled());
+  assert.match(await page.locator('main').innerText(), /合成教学数据/);
+  assert.equal(await page.locator('[data-metric="precision"]').innerText(), '10.0%');
+  await nojs.close();
+  console.log('PASS evaluation: 390/768/1440 × two themes; real threshold/cohort metrics, zero/undefined, row filters, keyboard, JSON download, no private reads/writes/uploads, axe, no overflow/assets/errors, no-JS teaching fallback');
+} finally { await browser.close(); }
