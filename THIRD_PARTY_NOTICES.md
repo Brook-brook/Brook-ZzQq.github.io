@@ -185,3 +185,17 @@ f97b5b0ef4e6b480a861fe0d724307313579e417 (LICENSE.md actually read: LGPL v3).
 No source code, image, documentation file or library from either project is
 redistributed or linked at runtime. Existing full notices/Mote remain. See
 docs/iteration-15-compliance.md for actual source, synthetic-data and privacy scope.
+
+## Iteration 16 review
+
+The practice workspace, local literal filtering, original teaching prompts,
+recovery changes and tests add no project dependencies, fonts, images, map data or
+external model service. Existing full notices, Mote and permanent journal IDs remain.
+Methods refer to the already-attributed public notes; no news body or course is copied.
+
+Hallmark 2.0.0 was read/run at 04977e15f3dfd6ee4b74c887dac3eb52665d6c92;
+its actual MIT LICENSE was reviewed and the existing licenses/Hallmark-MIT.txt
+remains. A transient ignored puppeteer-core25.17.0 tool (Apache-2.0 package metadata)
+ran the local browser audit only; it is not a repository/site dependency or asset.
+No Hallmark theme/photo/logo or upstream implementation is redistributed.
+See docs/iteration-16-compliance.md for exact scope, storage/privacy and test limits.

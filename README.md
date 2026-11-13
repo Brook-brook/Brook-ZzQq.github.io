@@ -6,6 +6,21 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 16 self-explanation and recovery
+
+`feat/atlas-iteration-16` continues fifteenth-round `6517630`. A one-question
+practice workspace connects original hints/counterexamples with the same v1
+journal. Filtering pins drafts; only explicit checks/notes write records. A sixth
+AI/world-reading route extends to 15 permanent questions, preserving both prior
+nine- and twelve-step backups. Failed/conflicting resets preserve drafts, and
+unreadable original storage has an explicit exact-string recovery download.
+Python's empty-mean example now matches its guide; spatial prediction receives
+query coordinates only. No new project dependencies, grades, history or uploads.
+See [delivery and validation](docs/ATLAS-ITERATION-16.md),
+[actual Hallmark audit](docs/design-audit-iteration-16.md),
+[resource/privacy review](docs/iteration-16-compliance.md) and
+[compiled-preview instructions](docs/PREVIEW.md). Production remains unchanged.
+
 ## Iteration 15 spatial validation
 
 `feat/atlas-iteration-15` continues fourteenth-round `7d9788d`. Real native uniform

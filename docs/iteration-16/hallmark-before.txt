@@ -1,0 +1,13 @@
+FILE: hallmark-before.txt
+render tier: 15 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration16/hallmark-audit/.hallmark/before (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+  FAIL 24a x29 /workspace/Brook-ZzQq.github.io/assets/css/evaluation.css:1 +25 more raw spacing lengths with a matching --space-* token in…; /workspace/Brook-ZzQq.github.io/assets/css/evaluation.css:2 padding-block: 24px 64px on .evaluation-page where --space-lg e… | fix: Use the tokens
+  FAIL 49a x15 http://127.0.0.1:4195/Brook-ZzQq.github.io/study/practice/:1 [320px] control "把输入变成可解释的输出" wraps to 2 lines (a); http://127.0.0.1:4195/Brook-ZzQq.github.io/study/practice/:1 [320px] control "为数据定义相等与重复" wraps to 2 lines (a) | fix: Shorten the label or set nowrap
+  REFLEX 24b x8 /workspace/Brook-ZzQq.github.io/assets/css/evaluation.css:3 gap: 10px (off the 4px scale) on .evaluation-page .breadcrumbs; /workspace/Brook-ZzQq.github.io/assets/css/evaluation.css:15 padding: 10px 12px (off the 4px scale) on .evaluation-page sele… | fix: Use the 4px spacing scale
+  REFLEX 39b http://127.0.0.1:4195/Brook-ZzQq.github.io/playground/evaluation/:1 [1440px] control height outside 32 to 52px: button 92px, button… | fix: Marketing controls stand 44 to 52px; app UI 32 to 40px with a 44px hit target
+  REFLEX 49b http://127.0.0.1:4195/Brook-ZzQq.github.io/study/practice/:1 [320px] link "继续：把输入变成可解释的输出" wraps to 2 lines (a) | fix: Shorten the label or set nowrap
+  WARN F3 /workspace/Brook-ZzQq.github.io/assets/css/evaluation.css:5 no text-wrap: balance on any display head (15 head rule(s), e.g… | fix: Add text-wrap: balance to h1/h2-level heads
+  WARN F4 /workspace/Brook-ZzQq.github.io/assets/css/spatial-validation.css:16 2 filled primary-button recipes: .evaluation-page button + .spa… | fix: One filled primary per page; demote the rest to outline/quiet variants
+  WARN F7 /workspace/Brook-ZzQq.github.io/assets/css/evaluation.css:15 same container recipe on 6 selectors (.evaluation-page select, … | fix: Vary weight, radius, or fill by role; not every box is the same box
+  WARN F16 /workspace/Brook-ZzQq.github.io/assets/css/evaluation.css:1 browser surfaces unthemed: ::selection, scrollbar-color | fix: Theme the parts you did not draw from the palette
+sloplint: 44 FAIL, 10 REFLEX, 4 WARN across 5 file(s) and 3 URL(s), grouped by gate; every line is in .hallmark/before.txt.
+before: recorded 52 links, 43 fields, 0 handlers, 0 test hooks, 0 script hooks and 3 rendered page(s) in .hallmark/before.json; --kept checks a redesign against it

@@ -258,3 +258,24 @@ Native group/sample selectors and direct-to-evidence buttons keep the tiny chart
 marks illustrative instead of pretending to be touch targets. On phones, plots
 stack at readable scale, controls stay 16px/44px+, and original tables scroll in
 named keyboard regions. Both themes reuse shared tokens; no extra blur layer.
+
+## Iteration 16 one-question worksheet
+
+The task is explaining one question, not monitoring a dashboard. A compact native
+resume disclosure and a visible storage warning/backup link precede a single
+light-glass question picker. Secondary route/note filtering is a native disclosure;
+the worksheet stays visible while filters change. Question, optional explanation,
+manual self-check, hints and counterexample have a deliberate reading order.
+The public question directory takes full phone width when expanded; never squeeze
+complete tutorial titles beside secondary links or replace them with clipped labels.
+
+Only explicit question changes get one finite 320ms opacity/4px translation;
+repeated changes cancel the previous effect, and a live reduced-motion change
+cancels it. Typing, filtering and reference opening never trigger choreographed
+motion. Use the shared rhythm tokens (composing existing steps where needed),
+semantic colors, instant focus and 16px text fields. Data-matrix buttons may be
+larger than ordinary controls to hold the outcome and auditable count.
+
+Hallmark's bounded actual render/kept audit and fresh-context finish review are in
+design-audit-iteration-16.md. This is a refinement of the locked material, with
+no new theme, font, photo, dashboard shell or fabricated progress.

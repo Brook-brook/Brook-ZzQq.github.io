@@ -210,3 +210,28 @@
   No private storage reads or uploads. Keep no-JS source and keyboard tables.
 - New route IDs extend, never rename the original nine learning steps. Old v1
   backups must remain readable without automatic rewrite; no inferred completion.
+
+## Self-explanation practice and recovery (Iteration 16)
+
+- Paths and /study/practice/ render the same learning-workspace include, all 15
+  permanent steps and the existing v1 controller/key. Never derive the allowed ID
+  set from only visible/filtered steps or create another journal/preferences store.
+- Practice pins the current worksheet while filtering/typing; only explicit select,
+  next or public hash navigation changes the question. Explicit choices replace only
+  the public step fragment, so lab/back/reload restores context without a new journal
+  or visit history. Query stays in memory, IME
+  composition defers filtering, and private note text never enters public search.
+- Public hints/references/counterexamples are original, AI-assistance-disclosed,
+  tied exactly to public route steps by a real Jekyll hook after publication/route
+  validation. They never grade, infer mastery or auto-check a step. No-JS keeps all
+  questions, references and true resources readable with unavailable controls hidden.
+- The shared data-free learning:render event synchronizes the view, not another
+  state/store. Initial render, hints and navigation must not rewrite old v1 data.
+- Clear checks current raw storage before deletion. On conflict/get/remove errors,
+  preserve in-memory drafts, original raw data and export. Unknown raw storage can
+  be downloaded explicitly in a JSON-escaped diagnostic .txt envelope, separate
+  from importable backups; preserve unpaired UTF-16. Never silently repair/upload.
+- Keep original-nine and previous-twelve backup coverage, real paths/practice tab
+  conflicts, failure recovery/downloads, literal text, keyboard focus, hash/back,
+  reduced motion, small/short viewports and no-JS tests. Reference text is a method,
+  not factual verification of current news, actual AI performance or a learner.
