@@ -1,0 +1,9 @@
+FIRST RUN
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+assets/css/agent-runtime.css
+  WARN 3 :37 side stripe border-inline-start: 3px solid var(--accent-primary) on .runtime-status[data-error="true"], #runtime-parame… | fix: Hairline all round, none, or an accent square
+sloplint: 0 FAIL, 1 WARN across 1 file(s) and 1 URL(s).
+
+FINAL AFTER REVIEW
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 1 file(s) and 1 URL(s).

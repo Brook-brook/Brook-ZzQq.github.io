@@ -20,11 +20,15 @@
   entry. Ten routes/twenty-eight manual questions retain the same v1 journal.
 - Original local/server Python request example with actual-SDK offline contract
   tests; no live model service or website API-key field.
+- Bounded script-proposed Agent-runtime exercise with real native read tools,
+  separate proposal/dispatch budgets, batches, correlation, partial-work exports
+  and explicit stopped states. Complementary local/server Python SDK loop is
+  tested offline; it is not deployed as a model service.
 
 ## Next useful increments
 
-1. Bounded agent-runtime and retrieval-evidence teaching exercises, keeping local
-   execution, scripted decisions and true model inference clearly distinct.
+1. A bounded retrieval-evidence exercise, separating literal retrieval, annotated
+   relevance, source conditions and any later real model generation.
 2. C++ RAII/smart-pointer ownership examples; assignment and move semantics.
 3. Map analysis with a verified dataset and CRS-aware distance/buffer operations.
 4. Extend the real bounded local GIS tools only with explicit contracts/provenance;

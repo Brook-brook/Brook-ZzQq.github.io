@@ -11,6 +11,21 @@ redesign and render gates; the user’s supplied brand sets the visual material.
 Explore is an application screen: show the real point atlas before supplementary
 learning links. Do not reintroduce a large marketing hero or decorative orbit.
 
+## Runtime practice (Iteration 21)
+
+Agent runtime is an app screen, with a current action on one light-glass surface
+and adjacent unboxed evidence. Draft parameters, proposal/dispatch/receipt counts,
+explicit stopped states and native event details each have a distinct job. On
+phone the evidence follows the action; a real anchor reaches it. No continuous
+loop, status toast, new font or blur stack. Preserve the original Mote as a small
+self-explanation invitation rather than a product mockup.
+
+Controls precede supporting counters so the initial action fits the 1280×800
+desktop fold. Errors use explicit language and weight, without a decorative
+stripe. A finite 320ms evidence settle uses transform/opacity and cancels on a
+live reduced-motion change. Native details hold source tables, complete JSON
+and the optional local Python extension.
+
 ## Source of truth
 
 `assets/css/atlas-tokens.css` defines colors, font stacks, spacing, type, easing,

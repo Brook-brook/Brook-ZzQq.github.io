@@ -6,6 +6,23 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 21 a loop that can stop
+
+`feat/atlas-iteration-21` continues pushed twentieth-round `8d68747`. The new
+`/playground/agent-runtime/` exercise separates proposal, validation, actual
+read-only GIS dispatch and correlated observation. Six bounded scenarios cover
+batches, a labelled simulated failure, old-run receipts, forbidden tools and
+independent proposal/dispatch budgets. Script decisions and fixed explanations
+remain explicit; this is not a model service. Existing 28 journal IDs are intact.
+
+An original downloadable `agent_loop.py` shows the complementary local/server
+SDK loop using the same public catalog. Its 15 actual-SDK offline tests use fake
+HTTP responses; live inference is not claimed. No website package, private-data
+access, production workflow or deployment change. See [delivery](docs/ATLAS-ITERATION-21.md),
+[design audit](docs/design-audit-iteration-21.md),
+[source/privacy review](docs/iteration-21-compliance.md) and
+[compiled preview](docs/PREVIEW.md).
+
 ## Iteration 20 AI / Agent foundations
 
 `feat/atlas-iteration-20` continues nineteenth-round `8dc7313`. A complete native

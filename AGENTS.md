@@ -325,3 +325,31 @@
 - Keep test imports from creating bytecode beside public Python downloads.
   Artifact validation must reject __pycache__, .venv and .pyc recursively while
   allowing intended .py examples. Never commit or publish a local test venv.
+
+## Bounded runtime practice (Iteration 21)
+
+- `/playground/agent-runtime/` uses fixed script proposals, real native read-only
+  GIS tools and fixed-template explanations. Keep proposal, validation, execution
+  and accepted observation distinct. Simulated failures and old-run receipts are
+  explicit fault injection, not model or public-network behavior.
+- Each run owns its complete public catalog/settings snapshot. Validate an entire
+  batch before dispatch, correlate run/call/tool and recompute deterministic
+  receipts. A rejected receipt can be redelivered without another dispatch.
+- Count proposal decisions, actual dispatch attempts/successes and accepted/
+  rejected receipts separately. Check each independent budget before work. Partial
+  work survives a stop; exhausted/cancelled/failed never becomes completed.
+- Parameters stay in memory; draft edits invalidate stepping/export. Download
+  complete public evidence only after an explicit click. Never read the learning
+  or Observatory store. Preserve existing 28 IDs, v1 key and manual-only records.
+- The complementary Python client is a local/server example using pinned SDK
+  3.50.0 and three synchronous direct read tools. Reject malformed/duplicate JSON
+  keys, unknown tools/IDs, non-finite numbers and unsupported call forms before
+  dispatch. Return matching function_call_output IDs and necessary response
+  context, without putting hidden reasoning or the original query in the trace.
+- Its request/dispatch budgets are independent. `answered` means model text was
+  returned, not fact checked. Test with the actual SDK and a fully in-memory fake
+  transport; never describe those fixtures as real inference. No Key field in
+  Pages, remote tracing, shell/fetch tool or arbitrary private-file ingestion.
+- Keep actual download/partial-export/browser checks, source provenance, both
+  prefixes, mobile action feedback and reduced-motion cancellation. The initial
+  desktop action must remain visible at 1280×800; counters support the action.
