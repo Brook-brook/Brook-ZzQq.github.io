@@ -1,0 +1,63 @@
+schema_version: 1
+ai_assisted: true
+links:
+  - id: values-records
+    from: python-first-steps
+    to: rss-normalization
+    kind: prepare
+    reason: 先分清值、类型和容器，再观察 RSS 字段怎样进入结构化记录；这不要求用 Python 运行 RSS 实验。
+  - id: records-source
+    from: rss-normalization
+    to: bestblogs-research
+    kind: extend
+    reason: 去重实验展示一条记录怎样保留；源码研究进一步核对 CLI、数据流和证据，区分实际实现与产品描述。
+  - id: values-contracts
+    from: python-first-steps
+    to: tool-calling-boundaries
+    kind: prepare
+    reason: 用值和类型的基础理解 JSON 参数契约；合法字符串、数值与允许操作是不同问题，不要求接入模型账号。
+  - id: distance-validation
+    from: mercator-scale
+    to: spatial-validation
+    kind: prepare
+    reason: 先问坐标、单位和距离模型，再看空间邻居；投影尺度实验与合成平面点各有范围，不能混用成真实地理精度。
+  - id: metrics-space
+    from: ai-evaluation-basics
+    to: spatial-validation
+    kind: prepare
+    reason: 先核对混淆矩阵和分母，再比较随机与整区测试；类别构成和预测区域不同，不能只比较一个准确率。
+  - id: report-metrics
+    from: reading-ai-evidence
+    to: ai-evaluation-basics
+    kind: extend
+    reason: 把报告中的“高准确率”落到可操作算例，逐条找误报、漏报和没有定义的指标；合成实验不验证真实模型。
+  - id: space-report
+    from: spatial-validation
+    to: reading-ai-evidence
+    kind: compare
+    reason: 对照本机留出实验与模型报告的任务、划分和基线；计算可复算不意味着外推可靠，报告仍需原文证据。
+  - id: tools-space
+    from: tool-calling-boundaries
+    to: spatial-validation
+    kind: compare
+    reason: 工具回执一致性与模型评估有效性是两道边界。一次计算可以完全正确，但所用资料或预测目标仍不适合现实问题。
+  - id: games-policy
+    from: game-equilibrium
+    to: reading-world-evidence
+    kind: compare
+    reason: 收益矩阵帮助明确模型假设；现实政策判断还需文本状态、执行资料和独立证据，不能从模型直接预测国家行为。
+  - id: ai-world-evidence
+    from: reading-ai-evidence
+    to: reading-world-evidence
+    kind: compare
+    reason: 两种阅读都要保留版本、原文和证据边界；AI 任务预算与经济统计口径并非同一概念，需要分别核对。
+  - id: metadata-evidence
+    from: rss-normalization
+    to: reading-ai-evidence
+    kind: prepare
+    reason: 条目规范化、标题收集或来源可访问都不等于主张已核对；沿原文继续检查任务、条件、基线与限制。
+  - id: source-tools
+    from: bestblogs-research
+    to: tool-calling-boundaries
+    kind: extend
+    reason: 从核对源码中的请求与数据流，走向可操作的调用边界；结构化请求不自动授予权限，运行示意也不是实际 Agent。

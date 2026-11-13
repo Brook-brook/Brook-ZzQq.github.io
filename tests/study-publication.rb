@@ -14,6 +14,7 @@ require_relative "../_plugins/site-search-index"
 require_relative "../_plugins/evaluation-data-validation"
 require_relative "../_plugins/spatial-data-validation"
 require_relative "../_plugins/practice-prompt-validation"
+require_relative "../_plugins/knowledge-connections"
 
 # A generator runs after :site/:post_read, just as an index/sitemap generator
 # would. Its written output must never receive filtered research documents.
@@ -520,6 +521,98 @@ class StudyPublicationChecks
           assert(error.message.include?("learning_paths.yml"), "public route validation runs first")
           assert(!File.exist?(page_path(destination, "pending")), "unverified research remains unwritten")
         end
+      end
+    end
+
+    check("knowledge connections derive bounded metadata after public-note pruning") do
+      with_fixture do |source, destination|
+        note(source, "first")
+        note(source, "second", "lab_url" => "/playground/#geo")
+        note(source, "hidden", "published" => false)
+        note(source, "draft", "draft" => true)
+        note(source, "pending", "kind" => "research", "review_status" => "needs_review")
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        config = { "schema_version" => 1, "ai_assisted" => true, "links" => [
+          { "id" => "first-second", "from" => "first", "to" => "second", "kind" => "prepare", "reason" => "Original bounded suggestion" }
+        ] }
+        File.write(File.join(source, "_data", "knowledge_connections.yml"), YAML.dump(config))
+        site = build(source, destination, unpublished: true)
+        model = site.data["knowledge_model"]
+        assert(model["notes"].map { |n| n["id"] } == %w[first second], "only public endpoints enter metadata")
+        assert(model["notes"][0]["url"] == "/Brook-ZzQq.github.io/knowledge/first/", "project prefix is retained")
+        assert(model["notes"][1]["lab_url"] == "/Brook-ZzQq.github.io/playground/#geo", "actual optional lab is retained")
+        assert(model["notes"][0]["lab_url"].nil?, "reading-only note never gets a fake lab")
+        assert(!JSON.generate(model).include?("Content marker"), "public bodies are not indexed")
+        assert(!JSON.generate(model).include?("hidden"), "private title never enters graph metadata")
+      end
+    end
+
+    check("knowledge edges cannot bypass publication, including --unpublished") do
+      %w[hidden pending missing].each do |target|
+        with_fixture do |source, destination|
+          note(source, "first")
+          note(source, "hidden", "published" => false)
+          note(source, "pending", "kind" => "research", "review_status" => "needs_review")
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          config = { "schema_version" => 1, "ai_assisted" => true, "links" => [
+            { "id" => "bad-endpoint", "from" => "first", "to" => target, "kind" => "extend", "reason" => "No publication bypass" }
+          ] }
+          File.write(File.join(source, "_data", "knowledge_connections.yml"), YAML.dump(config))
+          begin
+            build(source, destination, unpublished: true)
+            assert(false, "private or missing endpoint must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("knowledge_connections.yml"), "identify graph configuration")
+            assert(!File.exist?(File.join(destination, "index.html")), "fail before public output")
+          end
+        end
+      end
+    end
+
+    check("knowledge malformed editorial fields fail before output") do
+      %w[schema disclosure duplicate pair self kind reason extra unsafe_lab].each do |mode|
+        with_fixture do |source, destination|
+          note(source, "first", "lab_url" => mode == "unsafe_lab" ? "javascript:alert(1)" : nil)
+          note(source, "second")
+          link = { "id" => "first-second", "from" => "first", "to" => "second", "kind" => "prepare", "reason" => "Original reason" }
+          config = { "schema_version" => 1, "ai_assisted" => true, "links" => [link] }
+          config["schema_version"] = 2 if mode == "schema"
+          config["ai_assisted"] = "yes" if mode == "disclosure"
+          config["links"] << link.dup if mode == "duplicate"
+          config["links"] << link.merge("id" => "reverse", "from" => "second", "to" => "first") if mode == "pair"
+          link["to"] = "first" if mode == "self"
+          link["kind"] = "mastery" if mode == "kind"
+          link["reason"] = "x" * 401 if mode == "reason"
+          link["confidence"] = 1 if mode == "extra"
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          File.write(File.join(source, "_data", "knowledge_connections.yml"), YAML.dump(config))
+          begin
+            build(source, destination)
+            assert(false, "invalid graph must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("knowledge_connections.yml"), "identify malformed graph")
+            assert(!File.exist?(File.join(destination, "index.html")), "invalid graph is unwritten")
+          end
+        end
+      end
+    end
+
+    check("knowledge demotion removes old metadata and output on a valid rebuild") do
+      with_fixture do |source, destination|
+        note(source, "first")
+        note(source, "second")
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        file = File.join(source, "_data", "knowledge_connections.yml")
+        File.write(file, YAML.dump({ "schema_version" => 1, "ai_assisted" => true, "links" => [
+          { "id" => "link", "from" => "first", "to" => "second", "kind" => "extend", "reason" => "A suggestion" }
+        ] }))
+        build(source, destination)
+        assert(File.exist?(page_path(destination, "second")), "public note initially exists")
+        note(source, "second", "published" => false)
+        File.write(file, YAML.dump({ "schema_version" => 1, "ai_assisted" => true, "links" => [] }))
+        site = build(source, destination, unpublished: true)
+        assert(site.data["knowledge_model"]["notes"].map { |n| n["id"] } == ["first"], "metadata removes demoted note")
+        assert(!File.exist?(page_path(destination, "second")), "normal Jekyll cleanup removes old direct output")
       end
     end
 
