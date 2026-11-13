@@ -6,6 +6,19 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 17 tool boundaries
+
+`feat/atlas-iteration-17` continues unmerged sixteenth-round `4d2dfc1`. An editable
+Tool Calling workbench actually runs three bounded local GIS read tools, then
+checks a correlated/recomputed receipt before a clearly fixed-template explanation.
+It is not an LLM/Agent service or MCP implementation. Original source-grounded
+teaching adds a seventh route / 18 permanent questions; all fifteen earlier
+records and original-nine/twelve backups remain. No new packages, private storage
+reads, network tools or production changes. See [delivery](docs/ATLAS-ITERATION-17.md),
+[design audit](docs/design-audit-iteration-17.md) and
+[sources and privacy](docs/iteration-17-compliance.md). Preview from the compiled
+CI artifact as described in [PREVIEW.md](docs/PREVIEW.md).
+
 ## Iteration 16 self-explanation and recovery
 
 `feat/atlas-iteration-16` continues fifteenth-round `6517630`. A one-question

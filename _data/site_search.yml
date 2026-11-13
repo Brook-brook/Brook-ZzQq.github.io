@@ -1,4 +1,9 @@
 entries:
+  - title: GIS Tool Calling · 提议、执行与回执
+    kind: lab
+    url: /playground/tool-calling/
+    summary: 修改结构化参数，逐步执行三个本机只读 GIS 工具，拦住类型错误、未开放工具与错配回执。
+    keywords: [AI, Agent, MCP, Tool Calling, function calling, 工具调用, 参数, JSON, GIS, 权限, 回执]
   - title: 自解释练习 · 一次讲清一个问题
     kind: page
     url: /study/practice/

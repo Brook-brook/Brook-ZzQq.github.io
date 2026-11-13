@@ -190,3 +190,14 @@ no automated grades/history/AI calls. Both original-nine and previous-twelve
 records remain usable. Three-round review branches stay unmerged and unpublished.
 Next priorities: real learner feedback on question clarity, a carefully sourced
 AI model/agent lesson, and representative spatial datasets only with provenance.
+
+## Iteration 17 — a tool boundary you can operate
+
+Implemented for review: editable calls, three actual local read-only GIS tools,
+strict contracts, explicit stages, correlated/recomputed receipts and honest fixed
+explanations. Six sourced campus representatives are reused without a coverage,
+freshness or routing claim. A seventh route extends the same journal to eighteen
+permanent questions, preserving earlier fifteen-record backups. The original AI
+flow/Mercator entry remains; no LLM, external tool service, private upload or
+production change. Next: make curated prerequisite/next-reading reasons visible
+across the growing public library rather than adding another unrelated panel.

@@ -1,0 +1,24 @@
+Fresh-context reviewer: /root/iteration17_finish_review
+Hallmark gates.md §6 explicitly requires this review; source files were read-only.
+
+ship
+
+No material finish findings.
+
+Idea/theme: the editable proposal → explicit local execution → correlated receipt → fixed-template explanation is carried throughout. The locked lavender material fits the working interface; no gap.
+
+Before: the old AI page gave the retained Mercator demo more visual prominence. Its clearly named link remains available; the new experiment and principles are easier to reach.
+
+Evidence: inspected all ten latest *4180* captures, both before shots, and desktop/mobile result and error shots. Live Chromium verification on :4181 confirmed:
+- Distinct validation, execution, receipt and explanation stages.
+- Mismatched receipts block explanation/export and recover explicitly.
+- Invalid calls focus the editor; completion focuses the explanation.
+- No page overflow at 375, 768 or 1440px; 16px fields, 48–50px lab controls and 44px AI links.
+- A labelled, keyboard-focusable source table and no page errors.
+
+Preserve the explicit execution boundary, honest source limits and clearly labelled fixed-template explanation.
+
+Builder follow-up: strengthened exact-key checking, attached download anchors to
+the document, styled the AI entry's real primary action with the existing recipe,
+and recaptured full pages from the top after separately asserting focus behavior.
+No new page structure or feature was introduced by that final polish.

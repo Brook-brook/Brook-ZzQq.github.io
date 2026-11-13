@@ -1,0 +1,31 @@
+
+## hallmark-first.txt
+render tier: failed on /workspace/Brook-ZzQq.github.io/playground/tool-calling/index.html: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/Brook-ZzQq.github.io/playground/tool-calling/index.html
+render tier: failed on /workspace/Brook-ZzQq.github.io/explore/ai.html: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/Brook-ZzQq.github.io/explore/ai.html
+render tier: 10 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration17/hallmark-audit/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+/workspace/Brook-ZzQq.github.io/playground/tool-calling/index.html
+  FAIL 19 :32 dash "–" in copy | fix: A comma, a colon, a full stop or parentheses; never a dash
+  FAIL 26a :1 no :focus-visible styling anywhere | fix: A focus ring at 3:1 or better, instant
+  FAIL 34 :1 no overflow-x: clip on html and body | fix: overflow-x: clip on both html and body
+  FAIL render :1 the page did not render (net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/Broo…); its render gates did not run | fix: Fix the page or the URL and rerun; an unrendered page is never a pass
+  REFLEX 26b :1 no :active styling anywhere | fix: All eight states; guard: not a form control, no aria-disabled anywhere
+  REFLEX 26b :1 no :disabled styling anywhere
+/workspace/Brook-ZzQq.github.io/explore/ai.html
+  FAIL 26a :1 no :focus-visible styling anywhere
+  FAIL 34 :1 no overflow-x: clip on html and body
+  FAIL render :1 the page did not render (net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/Broo…); its render gates did not run
+  REFLEX 26b :1 no :active styling anywhere
+http://127.0.0.1:4178/Brook-ZzQq.github.io/playground/tool-calling/
+  REFLEX 49b :1 [320px] link "© OpenStreetMap contributors，ODb" wraps to 2 lines (a) | fix: Shorten the label or set nowrap
+/workspace/Brook-ZzQq.github.io/assets/css/tool-calling.css
+  WARN 3 :34 side stripe border-left: 3px solid var(--accent-primary) on .tool-status[data-error="true"] | fix: Hairline all round, none, or an accent square
+  WARN F3 :9 no text-wrap: balance on any display head (3 head rule(s), e.g. .tool-intro h1, .ai-overview h1) | fix: Add text-wrap: balance to h1/h2-level heads
+sloplint: 7 FAIL, 4 REFLEX, 2 WARN across 3 file(s) and 2 URL(s).
+
+## hallmark-second.txt
+render tier: 10 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration17/hallmark-audit/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 1 file(s) and 2 URL(s).
+
+## hallmark-final.txt
+render tier: 10 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration17/hallmark-audit/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 1 file(s) and 2 URL(s).

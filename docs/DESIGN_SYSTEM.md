@@ -279,3 +279,15 @@ larger than ordinary controls to hold the outcome and auditable count.
 Hallmark's bounded actual render/kept audit and fresh-context finish review are in
 design-audit-iteration-16.md. This is a refinement of the locked material, with
 no new theme, font, photo, dashboard shell or fabricated progress.
+
+## Iteration 17 — proposal and receipt
+
+The local Tool Calling page uses one light-glass editable proposal beside an
+unboxed actual observation. On phone they follow the same DOM order. The active
+stage, precise action label, local status and optional contract explain the state;
+there is no simulated typing/thinking stream or idle loop. Native source details
+retain attribution and a keyboard-scrollable table. Only an explicit computed
+state change receives one cancellable 320ms/4px settle; reduced-motion changes
+cancel it. Use the existing radius-card/radius-control tokens, never undefined
+aliases. The AI entry retains its source-backed conceptual flow and Mercator link,
+removes inert labels/italic fragment, and leads with the genuinely operable tool.
