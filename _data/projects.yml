@@ -24,9 +24,9 @@
   stack: [JavaScript, SVG, Pyodide, Web Worker]
   details:
     - label: 现在能做什么
-      text: 囚徒困境与猎鹿、通用 2×2 纯策略均衡探索器、C++ 对象复制、墨卡托局部尺度与 Python 执行；开发分支另增合成数据的阈值评测实验，待审查发布。
+      text: 囚徒困境与猎鹿、通用 2×2 纯策略均衡探索器、C++ 对象复制、墨卡托局部尺度与 Python 执行；开发分支另增合成数据的阈值评测、真实 kNN 的空间留出对照，待审查发布。
     - label: 模型边界
-      text: 不计算混合策略均衡；C++ 是语义可视化；GIS × AI 是确定性流程示意。Python 按需在 Worker 加载，支持停止与错误反馈。
+      text: 不计算混合策略均衡；C++ 是语义可视化；空间留出使用自编平面点，不代表真实校园预测；原 GIS × AI 流程仍是确定性示意。Python 按需在 Worker 加载，支持停止与错误反馈。
   links:
     - label: 打开实验室
       url: /playground/

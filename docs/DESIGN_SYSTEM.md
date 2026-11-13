@@ -246,3 +246,15 @@ labelled for horizontal scrolling, while the page remains within the viewport.
 Native range/select/button controls stay at least 44px; selects use 16px text.
 SVG and tables have reading alternatives and no continuous animation. Mote is a
 quiet next-question prompt, not a progress or mastery claim.
+
+## Iteration 15 spatial validation
+
+A single light-glass parameter strip precedes two comparable, unframed planar SVGs.
+Circle/square encode train/test, fill encodes the true binary label, a diamond
+identifies the inspected test point, and finite dashed lines connect its actual
+training neighbors. Text/metrics/tables carry all evidence without color dependence.
+No invented geographic basemap, point-drag claims or idle marker animation.
+Native group/sample selectors and direct-to-evidence buttons keep the tiny chart
+marks illustrative instead of pretending to be touch targets. On phones, plots
+stack at readable scale, controls stay 16px/44px+, and original tables scroll in
+named keyboard regions. Both themes reuse shared tokens; no extra blur layer.

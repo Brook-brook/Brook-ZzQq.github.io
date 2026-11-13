@@ -12,6 +12,7 @@ require_relative "../_plugins/learning-path-validation"
 require_relative "../_plugins/observatory-validation"
 require_relative "../_plugins/site-search-index"
 require_relative "../_plugins/evaluation-data-validation"
+require_relative "../_plugins/spatial-data-validation"
 
 # A generator runs after :site/:post_read, just as an index/sitemap generator
 # would. Its written output must never receive filtered research documents.
@@ -425,6 +426,38 @@ class StudyPublicationChecks
           rescue Jekyll::Errors::FatalException => error
             assert(error.message.include?("evaluation_samples.json"), "identify invalid teaching fixture")
             assert(!File.exist?(File.join(destination, "index.html")), "invalid data fails before writing")
+          end
+        end
+      end
+    end
+
+    check("spatial synthetic source builds with exactly four bounded blocks") do
+      with_fixture do |source, destination|
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        FileUtils.cp(File.expand_path("../_data/spatial_samples.json", __dir__), File.join(source, "_data", "spatial_samples.json"))
+        site = build(source, destination)
+        assert(site.data["spatial_samples"]["points"].length == 80, "validated original points are available")
+      end
+    end
+
+    check("spatial source rejects malformed coordinates, blocks, labels and identity before writing") do
+      %w[schema id coordinate block label unit].each do |mode|
+        with_fixture do |source, destination|
+          data = JSON.parse(File.read(File.expand_path("../_data/spatial_samples.json", __dir__)))
+          data["schema_version"] = 2 if mode == "schema"
+          data["points"][1]["id"] = data["points"][0]["id"] if mode == "id"
+          data["points"][0]["x"] = 801 if mode == "coordinate"
+          data["points"][0]["block"] = 3 if mode == "block"
+          data["points"][0]["labels"]["zones"] = 2 if mode == "label"
+          data["unit"] = "EPSG:4326" if mode == "unit"
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          File.write(File.join(source, "_data", "spatial_samples.json"), JSON.generate(data))
+          begin
+            build(source, destination)
+            assert(false, "invalid spatial source must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("spatial_samples.json"), "identify invalid spatial source")
+            assert(!File.exist?(File.join(destination, "index.html")), "invalid spatial data fails before output")
           end
         end
       end

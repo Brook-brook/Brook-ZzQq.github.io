@@ -174,3 +174,14 @@ and COPYING were read at commit 7b2b14e0a89eedfa514dc9885e35a0ecade20cd0
 (BSD-3-Clause, 2007–2026 developers); concepts/formulas are cited, no code, figures
 or documentation files are redistributed and the library is not loaded. Existing
 Mote and full project notices remain. See docs/iteration-14-compliance.md.
+
+## Iteration 15 review
+
+Spatial kNN, the 80-point synthetic fixture, planar SVG, validation and new learning
+route are original work; no dependency, map asset, font or icon is added. Concepts
+were checked in scikit-learn's BSD-3-Clause documentation at
+7b2b14e0a89eedfa514dc9885e35a0ecade20cd0 and mlr3spatiotempcv's README/FAQ at
+f97b5b0ef4e6b480a861fe0d724307313579e417 (LICENSE.md actually read: LGPL v3).
+No source code, image, documentation file or library from either project is
+redistributed or linked at runtime. Existing full notices/Mote remain. See
+docs/iteration-15-compliance.md for actual source, synthetic-data and privacy scope.

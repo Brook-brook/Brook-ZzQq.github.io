@@ -1,0 +1,118 @@
+import { chromium } from 'playwright';
+import AxeBuilder from '@axe-core/playwright';
+import assert from 'node:assert/strict';
+import { mkdir, readFile } from 'node:fs/promises';
+const base = process.env.ATLAS_BASE_URL || 'http://127.0.0.1:4173/Brook-ZzQq.github.io';
+const shots = process.env.SPATIAL_SHOT_DIR || 'work/spatial';
+await mkdir(shots, { recursive: true });
+const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || (process.env.CI ? chromium.executablePath() : '/usr/bin/chromium'), args: ['--no-sandbox'] });
+try {
+  for (const width of [390, 768, 1440]) for (const theme of ['dark', 'light']) {
+    const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce', acceptDownloads: true });
+    await context.addInitScript((theme) => {
+      localStorage.setItem('atlas-theme', theme);
+      localStorage.setItem('brooks-universe.learning.v1', 'SPATIAL_PRIVATE_SENTINEL');
+      localStorage.setItem('brooks-universe.observatory.v1', 'SPATIAL_PRIVATE_SENTINEL');
+      window.spatialPrivateReads = [];
+      const original = Storage.prototype.getItem;
+      Storage.prototype.getItem = function (key) {
+        if (['brooks-universe.learning.v1', 'brooks-universe.observatory.v1'].includes(key)) window.spatialPrivateReads.push(key);
+        return original.call(this, key);
+      };
+    }, theme);
+    const page = await context.newPage();
+    const errors = [], missing = [], requests = [];
+    page.on('pageerror', (error) => errors.push(error.message));
+    page.on('response', (response) => { if (response.url().startsWith(base) && response.status() >= 400) missing.push(response.url()); });
+    page.on('request', (request) => requests.push({ url: request.url(), method: request.method() }));
+    assert.ok((await page.goto(base + '/playground/spatial-validation/')).ok());
+    await page.waitForFunction(() => !document.getElementById('spatial-controls').disabled);
+    const randomAccuracy = page.locator('[data-spatial-protocol="random"] [data-spatial-metric="accuracy"]');
+    const spatialAccuracy = page.locator('[data-spatial-protocol="spatial"] [data-spatial-metric="accuracy"]');
+    assert.equal(await randomAccuracy.innerText(), '90.0%'); assert.equal(await spatialAccuracy.innerText(), '0.0%');
+    assert.equal(await page.locator('[data-spatial-marks] > .spatial-point').count(), 160);
+    assert.equal(await page.locator('#spatial-inspect-sample option').count(), 20);
+    assert.equal(await page.inputValue('#spatial-inspect-sample'), 'S03');
+    assert.deepEqual(await page.locator('#spatial-neighbors th').allTextContents(), ['S11', 'S04', 'S02']);
+    assert.match(await page.locator('[data-spatial-protocol="random"] [data-coverage]').innerText(), /74\.36/);
+    assert.match(await page.locator('[data-spatial-protocol="spatial"] [data-coverage]').innerText(), /183\.54/);
+    let axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+    assert.deepEqual(axe.violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(';')}`), [], `spatial axe ${width} ${theme}`);
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.screenshot({ path: `${shots}/default-${width}-${theme}.png`, fullPage: true });
+    await page.locator('[data-inspect-group="spatial"]').click();
+    assert.equal(await page.inputValue('#spatial-inspect-protocol'), 'spatial');
+    assert.equal(await page.locator('#spatial-inspector-title').evaluate((node) => node === document.activeElement), true);
+    assert.equal(await page.inputValue('#spatial-inspect-sample'), 'S03', 'preserve the inspected sample when it is also in the new test set');
+    await page.selectOption('#spatial-inspect-sample', 'S01');
+    assert.deepEqual(await page.locator('#spatial-neighbors th').allTextContents(), ['S05', 'S41', 'S42']);
+    assert.equal(await page.locator('[data-spatial-protocol="spatial"] .spatial-neighbor-line').count(), 3);
+    assert.equal(await page.locator('[data-spatial-protocol="random"] .spatial-neighbor-line').count(), 0);
+    await page.selectOption('#spatial-pattern', 'diagonal');
+    assert.ok(await page.locator('#spatial-export').isDisabled());
+    assert.equal(await spatialAccuracy.innerText(), '0.0%');
+    assert.match(await page.locator('#spatial-status').innerText(), /上次运行/);
+    await page.getByRole('button', { name: '运行对照', exact: true }).click();
+    assert.equal(await randomAccuracy.innerText(), '90.0%'); assert.equal(await spatialAccuracy.innerText(), '100.0%');
+    assert.equal(await page.locator('[data-spatial-protocol="spatial"] [data-spatial-metric="recall"]').innerText(), '—');
+    assert.match(await page.locator('[data-spatial-protocol="spatial"] [data-test-count]').innerText(), /0 \/ 20/);
+    await page.screenshot({ path: `${shots}/counterexample-${width}-${theme}.png`, fullPage: true });
+    const [download] = await Promise.all([page.waitForEvent('download'), page.locator('#spatial-export').click()]);
+    const report = JSON.parse(await readFile(await download.path(), 'utf8'));
+    assert.equal(report.source.points.length, 80); assert.equal(report.parameters.pattern, 'diagonal');
+    assert.equal(report.protocols.spatial.evaluation.recall, null);
+    for (const group of Object.values(report.protocols)) {
+      assert.equal(group.train_ids.length, 60); assert.equal(group.test_ids.length, 20);
+      assert.ok(group.test_ids.every((id) => !group.train_ids.includes(id)));
+      assert.ok(group.predictions.every((p) => p.neighbors.every((n) => group.train_ids.includes(n.id))));
+    }
+    assert.ok(!JSON.stringify(report).includes('SPATIAL_PRIVATE_SENTINEL'));
+    await page.selectOption('#spatial-k', '7');
+    await page.locator('#spatial-seed').fill('0');
+    await page.selectOption('#spatial-block', '3');
+    assert.ok(await page.locator('#spatial-export').isDisabled());
+    await page.getByRole('button', { name: '运行对照', exact: true }).click();
+    assert.equal(await page.locator('#spatial-neighbors tr').count(), 7);
+    assert.equal(await page.locator('[data-spatial-protocol="spatial"] .spatial-neighbor-line').count(), 7);
+    assert.match(await page.locator('#spatial-applied').innerText(), /k = 7.*种子 0.*整区 D/);
+    const [changedDownload] = await Promise.all([page.waitForEvent('download'), page.locator('#spatial-export').click()]);
+    const changedReport = JSON.parse(await readFile(await changedDownload.path(), 'utf8'));
+    assert.deepEqual(changedReport.parameters, { pattern: 'diagonal', k: 7, seed: 0, block: 3 });
+    assert.deepEqual(changedReport.source, report.source, 'partition seed never regenerates coordinates or labels');
+    assert.notDeepEqual(changedReport.protocols.random.test_ids, report.protocols.random.test_ids);
+    assert.ok(changedReport.protocols.spatial.test_ids.every((id) => changedReport.source.points.find((p) => p.id === id).block === 3));
+    const protectedAccuracy = await spatialAccuracy.innerText();
+    await page.locator('#spatial-seed').fill('');
+    await page.getByRole('button', { name: '运行对照', exact: true }).click();
+    assert.ok(await page.locator('#spatial-seed').evaluate((node) => !node.validity.valid));
+    assert.ok(await page.locator('#spatial-export').isDisabled());
+    assert.equal(await spatialAccuracy.innerText(), protectedAccuracy);
+    await page.locator('#spatial-reset').click();
+    assert.equal(await spatialAccuracy.innerText(), '0.0%');
+    assert.equal(await page.inputValue('#spatial-seed'), '42');
+    assert.ok(await page.locator('#spatial-export').isEnabled());
+    await page.locator('.spatial-source > summary').click();
+    assert.equal(await page.locator('.spatial-source tbody tr').count(), 80);
+    if (width === 390) {
+      const region = page.getByRole('region', { name: '原始合成点数据表，可横向滚动' });
+      await region.focus(); await page.keyboard.press('ArrowRight');
+      await page.waitForFunction(() => document.querySelector('.spatial-source .spatial-table-wrap').scrollLeft > 0);
+    }
+    axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+    assert.deepEqual(axe.violations.map((v) => v.id), [], 'open data table');
+    assert.deepEqual(await page.evaluate(() => window.spatialPrivateReads), []);
+    assert.ok(requests.every((r) => r.method === 'GET' && !r.url.includes('SPATIAL_PRIVATE_SENTINEL')));
+    assert.ok(requests.every((r) => r.url.startsWith(new URL(base).origin) || r.url.startsWith('blob:')));
+    assert.deepEqual(errors, []); assert.deepEqual(missing, []);
+    await context.close();
+  }
+  const nojs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 900 } });
+  const page = await nojs.newPage(); await page.goto(base + '/playground/spatial-validation/');
+  assert.ok(await page.locator('#spatial-seed').isDisabled());
+  assert.ok(await page.locator('#spatial-results').isHidden());
+  await page.locator('.spatial-source > summary').click();
+  assert.equal(await page.locator('.spatial-source tbody tr:visible').count(), 80);
+  assert.match(await page.locator('main').innerText(), /不是完整交叉验证/);
+  await nojs.close();
+  console.log('PASS spatial: 390/768/1440 × both themes; actual kNN/split oracle, neighbors, counterexample/null recall, explicit rerun and stale export guard, invalid seed, full JSON download, keyboard scrolling, no private reads/requests, axe, assets/console/overflow, no-JS data');
+} finally { await browser.close(); }

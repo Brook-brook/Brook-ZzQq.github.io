@@ -76,6 +76,7 @@ try {
       assert.equal(await tabs.first().getAttribute('aria-selected'), 'true');
       const image = page.locator('.campus-preview img');
       await image.scrollIntoViewIfNeeded();
+      await image.evaluate((element) => element.decode());
       assert.ok(await image.evaluate((e) => e.complete && e.naturalWidth > 0));
       assert.equal(
         await page.locator('.campus-preview a').first().getAttribute('href'),
