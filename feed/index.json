@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-13T15:58:47.551Z",
+  "attempted_at": "2026-11-13T20:14:16.938Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 222,
+  "total": 226,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-13T15:58:47.551Z",
-      "last_success_at": "2026-11-13T15:58:47.551Z",
+      "attempted_at": "2026-11-13T20:14:16.938Z",
+      "last_success_at": "2026-11-13T20:14:16.938Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T15:58:47.551Z",
-      "last_success_at": "2026-11-13T15:58:47.551Z",
+      "attempted_at": "2026-11-13T20:14:16.938Z",
+      "last_success_at": "2026-11-13T20:14:16.938Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,12 +60,12 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T15:58:47.551Z",
-      "last_success_at": "2026-11-13T15:58:47.551Z",
+      "attempted_at": "2026-11-13T20:14:16.938Z",
+      "last_success_at": "2026-11-13T20:14:16.938Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
-      "etag": "W/\"4177d-df99bLvRw4ap4wjJzU57YdKV5mw\"",
+      "etag": "W/\"41746-IOspSet654+zr0endw6VcUO2nxI\"",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-13T15:58:47.551Z",
-      "last_success_at": "2026-11-13T15:58:47.551Z",
+      "attempted_at": "2026-11-13T20:14:16.938Z",
+      "last_success_at": "2026-11-13T20:14:16.938Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -103,9 +103,9 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "ok",
-      "attempted_at": "2026-11-13T15:58:47.551Z",
-      "last_success_at": "2026-11-13T15:58:47.551Z",
+      "status": "not_modified",
+      "attempted_at": "2026-11-13T20:14:16.938Z",
+      "last_success_at": "2026-11-13T20:14:16.938Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-13T15:58:47.551Z",
+      "attempted_at": "2026-11-13T20:14:16.938Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T15:58:47.551Z",
-      "last_success_at": "2026-11-13T15:58:47.551Z",
+      "attempted_at": "2026-11-13T20:14:16.938Z",
+      "last_success_at": "2026-11-13T20:14:16.938Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,78 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-cdc8eef67bc55a0d0fa5ca86f75a39576cb4cd55b8ad20129c59ea60f80062cd",
+      "source_id": "hf-blog",
+      "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+      "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-13T18:00:39.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 18:00:39 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-13T20:14:16.938Z",
+      "changed_at": "2026-11-13T20:14:16.938Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-96c7f67bef86f8316048a87fd511efdf23e6f81e02406769c1ce381b73c81b1f",
+      "source_id": "hf-blog",
+      "title": "XYBench: Helping with the problem behind the question",
+      "url": "https://huggingface.co/blog/allenai/xybench",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-13T17:02:35.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 17:02:35 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-13T20:14:16.938Z",
+      "changed_at": "2026-11-13T20:14:16.938Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-3a0059f8e9ef00d92513562ee31f7f1bc583b591080ceff5dc98f4613bdc9faa",
+      "source_id": "un-news",
+      "title": "Security Council LIVE: Fragile Gulf calm tested as threats to Hormuz shipping mount",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168804",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-13T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-13T20:14:16.938Z",
+      "changed_at": "2026-11-13T20:14:16.938Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-a6e3656d0ae59f0bd10c908746388b580b211a3c223d3b7bdafce3487759e059",
+      "source_id": "un-news",
+      "title": "COP31: Climate finance falls short as calls grow for polluters to pay",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168802",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-13T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-13T20:14:16.938Z",
+      "changed_at": "2026-11-13T20:14:16.938Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-7d4d71d056da02862d0b2ec1b87dadd7019731481c576401840bf8ff718ee663",
       "source_id": "openai-news",
@@ -1170,81 +1242,14 @@
       "changed_at": "2026-11-13T02:16:58.467Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-67672a694e389b29af5588bf1be29a978063408e3c6a0262fcadf6da500500d7",
-      "source_id": "openai-news",
-      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-      "url": "https://openai.com/business/customer-stories/amplitude",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-12T20:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 12 Nov 2026 20:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-13T00:18:13.043Z",
-      "changed_at": "2026-11-13T00:18:13.043Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-b9840fd67063a36a400d5e1d91fe182c1b415df6997c889b681a58ba22957843",
-      "source_id": "openai-news",
-      "title": "Gondola doubles revenue as its team builds more with Codex",
-      "url": "https://openai.com/business/customer-stories/gondola",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-12T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 12 Nov 2026 12:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-13T00:18:13.043Z",
-      "changed_at": "2026-11-13T00:18:13.043Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-a491aa90d650ab2bf91e0a7d38a72e157edfbef974240c627de775007f1696bc",
-      "source_id": "openai-news",
-      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-      "url": "https://openai.com/index/amplitude",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-12T20:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 12 Nov 2026 20:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-12T22:18:20.596Z",
-      "changed_at": "2026-11-12T22:18:20.596Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-84ec87286cb35a64f463f0646caa372ff180d409581b33a91619e73354134567",
-      "source_id": "hf-blog",
-      "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
-      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
-      "topic": "ai",
-      "publisher": "Hugging Face / 博客作者",
-      "published_at": "2026-11-12T19:07:35.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 12 Nov 2026 19:07:35 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
-      "first_seen_at": "2026-11-12T20:17:07.538Z",
-      "changed_at": "2026-11-12T20:17:07.538Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
+    {
+      "date": "2026-11-14",
+      "count": 4,
+      "path": "archive/2026-11-14.json"
+    },
     {
       "date": "2026-11-13",
       "count": 68,
@@ -1257,21 +1262,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-13T00:18:13.043Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 2,
-      "revisions": 0,
-      "total": 166,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-13T02:16:58.467Z",
       "status": "partial",
@@ -1370,6 +1360,21 @@
       "additions": 3,
       "revisions": 1,
       "total": 222,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T20:14:16.938Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 4,
+      "revisions": 0,
+      "total": 226,
       "failed_sources": [
         {
           "id": "europarl-news",
