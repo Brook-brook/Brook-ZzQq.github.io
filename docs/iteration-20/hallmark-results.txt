@@ -1,0 +1,10 @@
+
+--- hallmark-first.txt ---
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration20/hallmark-audit/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+/workspace/Brook-ZzQq.github.io/assets/css/ai-learning.css
+  REFLEX 26b :1 no :active styling anywhere | fix: All eight states; guard: not a form control, no aria-disabled anywhere
+sloplint: 0 FAIL, 1 REFLEX, 0 WARN across 1 file(s) and 1 URL(s).
+
+--- hallmark-final.txt ---
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration20/hallmark-audit/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 1 file(s) and 1 URL(s).

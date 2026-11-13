@@ -162,3 +162,63 @@
       lab: /playground/public-goods/
       lab_label: 比较倍率等号与收益切片
       question: 依次把倍率设成1、设成人数，解释为什么“所有组合总收益相同”和“所有纯策略组合都是均衡”不是同一件事。为什么两人端点切片不能代替全体逐人检查？
+- id: ai-development
+  challenge: 为一个获准使用的任务写最小应用卡：输入/输出、简单基线、失败例、模型和工具各自职责、预算、证据及保留测试；不需要先开通付费API。
+  title: 从一个请求，开始 AI 开发
+  summary: 先明确任务和上下文，再练请求、结构化输出与评测，分清能运行、符合格式和真正做对。
+  prerequisite: 能读一个 Python 函数和简单 JSON 即可；可先用已有本地实验，不需要 API Key。
+  steps:
+    - id: ai-model-boundaries
+      title: 模型、程序和数据各做什么？
+      focus: 从一个具体任务拆分职责，分清上下文、会话存储与参数更新。
+      note: ai-app-foundations
+      question: 为“计算两个目录点的距离并解释限制”分配模型、程序和资料的职责。把模型拿掉，哪些部分仍应正确？把资料放进上下文为什么不等于更新模型参数？
+    - id: ai-request-failures
+      title: 完成、拒绝和不完整，怎样分开？
+      focus: 看懂一次请求的状态、错误、重试与超时；附可在本地运行的 Python 例子。
+      note: model-request-contracts
+      question: 对完整文本、拒绝、不完整、429和超时各写一个应用状态。为什么流式中断后重试不能直接拼接正文？15秒传输超时是否等于全任务15秒截止？
+    - id: ai-output-contract
+      title: Schema 正确，结果就正确吗？
+      focus: 接着读同篇的输出契约，用实际工具检查格式、权限和事实证据的差别。
+      note: model-request-contracts
+      lab: /playground/tool-calling/
+      lab_label: 实测 JSON 类型与开放工具边界
+      question: 在工具实验中修改数值/字符串，再检查一个合法但与原意不符的参数。分别说明语法、schema、权限和事实证据能保证什么，不能保证什么。
+    - id: ai-task-evaluation
+      title: 用什么证明这次改动有用？
+      focus: 先写一个简单基线、三个失败例和保留测试，再决定怎样评价改动。
+      note: agent-evaluation
+      lab: /playground/evaluation/
+      lab_label: 用合成分类实验复习指标分母
+      question: 为自己的 AI 小任务写一个简单基线和三种失败用例，保留未调过的测试。为什么这个合成分类实验的分数不能当作自己 Agent 的成绩？
+- id: agent-development
+  challenge: 画出一个只读 Agent 的状态转换，注明模型可见资料、工具契约、回执、预算与停止；再用一个失败轨迹定位问题，不接入私人数据或写操作。
+  title: 从工具边界，走向 Agent 开发
+  summary: 理解谁控制下一步，区分本地/模型上下文，组织检索证据，并用任务与轨迹检验停止是否合理。
+  prerequisite: 建议先理解请求和 JSON；已有工具路线可随时并行阅读，不设解锁或自动先修判断。
+  steps:
+    - id: agent-control-loop
+      title: 谁决定下一步，什么时候停？
+      focus: 画出模型提议、程序执行和观察的关系，给完成、失败与预算耗尽命名。
+      note: agent-loop-basics
+      lab: /playground/tool-calling/
+      lab_label: 先操作循环中的本地工具环节
+      question: 固定脚本、模型路由和多步 Agent 的控制流有何不同？连续相同提议没有进展时，如何区分完成、失败和预算耗尽？轮数限制为什么不等于工具次数限制？
+    - id: agent-context-evidence
+      title: 找到了片段，回答就有依据吗？
+      focus: 用版本和适用条件核对引用，把检索命中与回答忠于证据分开。
+      note: retrieval-evidence
+      question: 对照虚构手册v1/v2和试用/正式空间，解释为什么引用真的链接仍可能答错。写出一条主张到片段、版本和适用条件的完整证据链。
+    - id: agent-permission-boundaries
+      title: 工具结果中的指令，能改变权限吗？
+      focus: 回到循环文章的上下文部分，画出本地对象、模型消息与保存状态的数据边界。
+      note: agent-loop-basics
+      lab: /playground/tool-calling/
+      lab_label: 尝试未开放工具并核对回执
+      question: 区分本地上下文、模型可见消息和持久运行状态。工具片段要求上传手记时，为什么不能执行？隐藏工具名与真正的资源权限检查有何区别？
+    - id: agent-trace-evaluation
+      title: 运行结束，和任务做对，差在哪里？
+      focus: 从真实可操作的错误案例定位失效层，设计必要且不泄露私人资料的诊断记录。
+      note: agent-evaluation
+      question: 从类型错误、执行失败、错配回执和解释越界中各选一例，写明期待状态和检查层。哪些轨迹字段值得保留，哪些私人内容不应默认上传？

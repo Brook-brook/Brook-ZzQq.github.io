@@ -247,3 +247,29 @@ open-source platform for laboratory, online, and field experiments.” Journal o
 Behavioral and Experimental Finance 9: 88–97. Only the contribution/multiplier/
 equal-return mechanism is compared; the 4-player / 20-point / 1.6 example is ours,
 not a reported experiment or empirical result. See docs/iteration-19-compliance.md.
+
+## Iteration 20 AI / Agent foundations
+
+Five Chinese foundation lessons, eight questions, reading focuses/connections,
+the native curriculum and injectable Python request example are original,
+AI-assisted work. No course prose, code, picture, embedding corpus, model output,
+font or icon is copied. The website adds no SDK/runtime dependency or model call.
+
+Actually read official documents and full licenses at these immutable commits:
+
+- Hugging Face Agents Course `9b3d6b3887bc489510da0239d4c1bc1ee23fd40f` — Apache-2.0;
+  full text: [HuggingFace-Agents-Course-LICENSE.txt](licenses/HuggingFace-Agents-Course-LICENSE.txt).
+- Transformers `e18fcb1b8e2b8f597269887ccf4c5fea1e8f493d` — Apache-2.0;
+  full text: [Transformers-LICENSE.txt](licenses/Transformers-LICENSE.txt).
+- OpenAI Python `59738a289ee82c7b86bf1e10230cceb6daa9716d` — Apache-2.0 with the
+  actual 2026 OpenAI notice; [OpenAI-Python-LICENSE.txt](licenses/OpenAI-Python-LICENSE.txt).
+- OpenAI Agents SDK `64fbde5d02b42ae5f9db668eb0184cdb3fc9d775` — MIT;
+  [OpenAI-Agents-SDK-LICENSE.txt](licenses/OpenAI-Agents-SDK-LICENSE.txt).
+- Anthropic Claude cookbooks `ce8b2629efe8b24048b127b4c79af1e9cbab93d4` — MIT;
+  [Claude-Cookbooks-LICENSE.txt](licenses/Claude-Cookbooks-LICENSE.txt).
+
+An ignored local test venv installs OpenAI 3.50.0 and dependencies only to test
+the real SDK against in-memory fake HTTP responses. No package is redistributed
+or added to the site. Actual installed license metadata and the precise source/
+testing limits are recorded in docs/ai-foundations-source-review.md and
+docs/iteration-20-compliance.md. Existing Hallmark/asset licenses remain intact.

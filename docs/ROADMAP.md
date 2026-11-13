@@ -4,7 +4,8 @@
 
 - Home, Explore, Geo Lab, AI Lab, Code Lab, Projects, Knowledge, About.
 - Responsive navigation, persistent dark/light mode, accessible no-JS reading.
-- Four Markdown tutorials with metadata, TOC, code blocks and experiment links.
+- Seventeen public notes/tutorials with metadata, TOC, code blocks and actual
+  experiment links when available; source-grounded research stays type-labelled.
 - Knowledge map, client-side search, category filtering and empty state.
 - Prisoner/stag payoff labs and editable 2×2 pure-strategy Nash explorer.
 - Linear public-goods lab with per-player deviations, separate total-points
@@ -15,15 +16,21 @@
   stop/reload and timeout. Runtime downloads only after the visitor requests it.
 - Existing Chirpy blog/posts remain accessible; old Atlas preview routes redirect.
 - Automated model/browser checks plus an explicit build-before-deploy Pages workflow.
+- Two AI/Agent development paths, five original foundation lessons and a native
+  entry. Ten routes/twenty-eight manual questions retain the same v1 journal.
+- Original local/server Python request example with actual-SDK offline contract
+  tests; no live model service or website API-key field.
 
 ## Next useful increments
 
-1. C++ RAII/smart-pointer ownership examples; assignment and move semantics.
-2. Map analysis with a verified dataset and CRS-aware distance/buffer operations.
-3. Extend the real bounded local GIS tools only with explicit contracts/provenance;
+1. Bounded agent-runtime and retrieval-evidence teaching exercises, keeping local
+   execution, scripted decisions and true model inference clearly distinct.
+2. C++ RAII/smart-pointer ownership examples; assignment and move semantics.
+3. Map analysis with a verified dataset and CRS-aware distance/buffer operations.
+4. Extend the real bounded local GIS tools only with explicit contracts/provenance;
    an actual model/API or MCP runtime needs a separate permission/cost decision.
-4. Add verified personal projects after reviewing their actual source and state.
-5. Review whether authored learning connections and worked counterexamples help
+5. Add verified personal projects after reviewing their actual source and state.
+6. Review whether authored learning connections and worked counterexamples help
    readers explain a result before adding more topics or recommendations.
 
 ## Release preparation
@@ -51,6 +58,15 @@ self-checks; all earlier IDs/backups remain compatible. Twelve public notes and
 thirteen reading suggestions are metadata-only discovery, not a prerequisite
 engine, inferred mastery or private recommendation system. The latest branch
 contains all three rounds. Review and explicit release remain required.
+
+## Iteration 20 — AI / Agent foundation review
+
+`/study/ai/` connects model/application boundaries, request/response contracts,
+agent loops, RAG evidence and task/trace evaluation. Five original tutorials and
+eight questions extend to 17 public notes, 21 authored reading connections and 53 public
+search entries. These are methods and explicit manual learning, not a model
+service, capability benchmark, autonomous site Agent or inferred progress.
+The Python download is verified offline using the real SDK with fake responses.
 
 ## Iteration 3 review branch
 

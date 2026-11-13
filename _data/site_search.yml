@@ -1,4 +1,10 @@
 entries:
+  - title: AI 与 Agent 开发学习路径
+    kind: page
+    url: /study/ai/
+    summary: 从模型、上下文和请求契约出发，学习工具、Agent循环、RAG证据与任务评测；两条开放路线连接笔记、实验和自解释。
+    keywords: [AI 开发, AI开发, Agent 开发, Agent开发, 智能体开发, 人工智能, LLM, 大语言模型, RAG, 检索增强生成, API, context, workflow, curriculum, 学习路径, 基础知识]
+    featured: true
   - title: 公共物品 · 个人激励与共同收益
     kind: lab
     url: /playground/public-goods/

@@ -243,6 +243,30 @@ class StudyPublicationChecks
       end
     end
 
+    check("optional learning focus is bounded public text, not a coerced value") do
+      ["Read the request status", 42, "", "x" * 401].each do |focus|
+        with_fixture do |source, destination|
+          note(source, "legacy")
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          path = [{ "id" => "route", "title" => "Fixture", "summary" => "Learning",
+                    "steps" => [{ "id" => "first", "title" => "Read", "note" => "legacy",
+                                  "question" => "Explain?", "focus" => focus }] }]
+          File.write(File.join(source, "_data", "learning_paths.yml"), YAML.dump(path))
+          if focus == "Read the request status"
+            site = build(source, destination)
+            assert(site.data["learning_paths"][0]["steps"][0]["focus"] == focus, "valid focus retained")
+          else
+            begin
+              build(source, destination)
+              assert(false, "invalid focus must fail before rendering")
+            rescue Jekyll::Errors::FatalException => error
+              assert(error.message.include?("learning_paths.yml"), "identify invalid focus")
+            end
+          end
+        end
+      end
+    end
+
     check("learning routes cannot link research removed by publication checks") do
       with_fixture do |source, destination|
         note(source, "pending", "kind" => "research", "review_status" => "needs_review")

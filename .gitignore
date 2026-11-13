@@ -36,3 +36,8 @@ work/
 # Project-installed design tooling and transient audits
 .agents/
 .hallmark/
+
+# Local Python learning examples and test environments
+.venv/
+__pycache__/
+*.pyc

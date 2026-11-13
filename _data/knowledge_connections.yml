@@ -1,6 +1,46 @@
 schema_version: 1
 ai_assisted: true
 links:
+  - id: values-model-request
+    from: python-first-steps
+    to: model-request-contracts
+    kind: prepare
+    reason: 能读函数、值与异常后，再理解请求输入、状态和SDK错误；Python基础是便于阅读的建议，不是锁定先修。
+  - id: foundations-request
+    from: ai-app-foundations
+    to: model-request-contracts
+    kind: prepare
+    reason: 先分清模型、应用与上下文，再给实际调用定义输入、超时和输出状态；不把一次完整文本当作事实核验。
+  - id: request-tool-contract
+    from: model-request-contracts
+    to: tool-calling-boundaries
+    kind: compare
+    reason: 对照结构化输出与工具执行，分别检查格式、允许操作、真实回执和业务含义；schema不能代替权限或事实证据。
+  - id: request-agent-loop
+    from: model-request-contracts
+    to: agent-loop-basics
+    kind: extend
+    reason: 从一次调用的错误与完成状态，走向多轮模型提议、工具执行和有预算的停止；轮数、工具数与总费用需要分开管理。
+  - id: loop-retrieval
+    from: agent-loop-basics
+    to: retrieval-evidence
+    kind: extend
+    reason: 工具观察进入下一轮上下文后，还需核对版本、适用条件与不可信指令；资料被检索到不等于自动获得授权或成为事实。
+  - id: retrieval-agent-evaluation
+    from: retrieval-evidence
+    to: agent-evaluation
+    kind: prepare
+    reason: 先把检索命中与回答忠于证据分开，再为整个Agent定义任务验收与失败轨迹；组件成绩不自动变成整体成功率。
+  - id: loop-agent-evaluation
+    from: agent-loop-basics
+    to: agent-evaluation
+    kind: extend
+    reason: 运行时有了完成、失败和预算状态，仍需用独立用例判断任务是否做对；日志长度和done不是可靠性证明。
+  - id: foundations-metrics
+    from: ai-app-foundations
+    to: ai-evaluation-basics
+    kind: compare
+    reason: 用已有合成分类实验复习指标分母，再为实际AI任务另选基线和验收；不把演示分数当作某个真实模型的性能。
   - id: games-public-goods
     from: game-equilibrium
     to: public-goods

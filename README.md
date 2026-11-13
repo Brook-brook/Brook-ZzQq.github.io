@@ -6,6 +6,22 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 20 AI / Agent foundations
+
+`feat/atlas-iteration-20` continues nineteenth-round `8dc7313`. A complete native
+`/study/ai/` entry connects five original Chinese, source-grounded lessons with
+two open routes and eight explicit questions: model/context, request/output
+contracts, agent loops, retrieval evidence and evaluation. Existing labs remain
+real local computations, not a claimed model service. All twenty prior journal
+IDs remain as the same v1 record extends to 28 questions / 10 routes.
+
+The downloadable original Python example is tested with the actual pinned SDK
+and an in-memory fake transport, not live inference or website credentials.
+There is no new website runtime package. See [source review](docs/ai-foundations-source-review.md),
+[delivery](docs/ATLAS-ITERATION-20.md), [design audit](docs/design-audit-iteration-20.md)
+and [resource/privacy review](docs/iteration-20-compliance.md). Work remains on
+review branches; [compiled preview](docs/PREVIEW.md) does not deploy the website.
+
 ## Iteration 19 one ledger, two objectives
 
 `feat/atlas-iteration-19` continues eighteenth-round `27790a1`. A real local

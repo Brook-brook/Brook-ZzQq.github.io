@@ -296,3 +296,32 @@
   selects keep focus and back-forward restoration remains the browser's job.
 - Scope search-toggle SVG geometry so earlier article SVG rules cannot enlarge
   the icon, add figure margins or wrap the search label. Keep real header tests.
+
+## AI / Agent foundations (Iteration 20)
+
+- `/study/ai/` is a native curriculum using the two appended public routes and
+  five original source-grounded notes. Optional step.focus is bounded nonempty
+  public text (400 characters), escaped on output. Do not duplicate article
+  summaries when the same article has different learning focuses.
+- Preserve the twenty earlier IDs; the eight appended questions bring the same
+  v1 journal to 28. No tracking, automatic prerequisites/completion, new private
+  store or generated grading. Keep old20 raw opening/export/explicit extension
+  on both paths/practice and no-JS curriculum reading.
+- Explain LLM/token/context, API/SDK, schema and task correctness separately.
+  RAG is not a universal truth guarantee or mandatory vector DB; source/title
+  collection is not verification. Model turns, tool calls, token budgets and
+  transport/end-to-end deadlines are different quantities.
+- The downloadable Python example runs only in a reader's own local/server
+  environment. Never add a public key field or execute credentials in Pages.
+  Its verified interface is openai 3.50.0; test using the real SDK and a fake
+  in-memory transport (`python tests/ai-request-offline.py` after installation).
+  Never label those fixtures live model responses or schema/capability evidence.
+- Keep official reference versions, actual licenses and AI-assistance disclosure.
+  Do not copy course images/corpora, model-judge percentages or hidden reasoning.
+  Review local/model-visible/persisted context and tracing boundaries explicitly.
+- The header brand uses its native visible name and an sr-only home suffix;
+  the compact text is accessible when displayed. Do not override visible text
+  with a different aria-label. Test label-content-name-mismatch at all widths.
+- Keep test imports from creating bytecode beside public Python downloads.
+  Artifact validation must reject __pycache__, .venv and .pyc recursively while
+  allowing intended .py examples. Never commit or publish a local test venv.
