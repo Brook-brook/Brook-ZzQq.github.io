@@ -29,6 +29,7 @@ python3 -m http.server 8000
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/study/practice/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/evaluation/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/spatial-validation/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/tool-calling/
 
 服务保持运行，停止时按Ctrl+C。端口8000被占用时，命令和网址一起改为8001。
 

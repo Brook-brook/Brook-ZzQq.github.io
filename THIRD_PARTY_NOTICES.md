@@ -199,3 +199,19 @@ remains. A transient ignored puppeteer-core25.17.0 tool (Apache-2.0 package meta
 ran the local browser audit only; it is not a repository/site dependency or asset.
 No Hallmark theme/photo/logo or upstream implementation is redistributed.
 See docs/iteration-16-compliance.md for exact scope, storage/privacy and test limits.
+
+## Iteration 17 review
+
+Original tool contracts, native computation/UI, teaching examples and tests add no
+dependency, image, font, icon or model service. Campus OSM representative data is
+reused unchanged with ODbL attribution and the original 2026-11-02 check date.
+
+MCP's official 2025-11-25 Tools/Architecture specifications and actual LICENSE were
+read at modelcontextprotocol/modelcontextprotocol commit
+06e923405df3df242f1471b9300d9db90ebd10fd. That LICENSE describes a MIT-to-Apache-2.0
+transition, remaining MIT contributions and CC-BY-4.0 for non-spec documentation;
+this notice does not flatten its mixed licensing into a single MIT claim. Only
+independent conceptual explanation with pinned references is added; no upstream
+code, diagrams, sample messages or library are copied or loaded. Existing full
+licenses, Mote and the previously installed ignored Hallmark tool remain.
+See docs/iteration-17-compliance.md.

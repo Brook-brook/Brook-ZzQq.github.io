@@ -235,3 +235,21 @@
   conflicts, failure recovery/downloads, literal text, keyboard focus, hash/back,
   reduced motion, small/short viewports and no-JS tests. Reference text is a method,
   not factual verification of current news, actual AI performance or a learner.
+
+## Local Tool Calling (Iteration 17)
+
+- `/playground/tool-calling/` uses a script proposal and fixed explanation template,
+  with real native find/distance/radius execution on the existing sourced campus
+  catalog. Never describe it as an LLM, autonomous Agent or MCP implementation.
+- Keep exact bounded fields/types/allowlist, explicit validation/execution/return,
+  call-ID/tool correlation and this small deterministic tool's recomputation guard.
+  Editing invalidates downstream state and export. No arbitrary URL, command,
+  private-storage read, permission escalation or text execution.
+- A spherical mean-radius arc over WGS84 representative coordinates is not an
+  ellipsoid geodesic, route or entrance distance. Radius uses raw inclusive values,
+  excludes center ID only, and searches catalog coverage only. Preserve source
+  date/ODbL; do not imply newly verified point data.
+- Explicit exports contain every field needed to replay all three public tools,
+  source provenance and honest script/template labels, never journal material.
+  Parameters stay in page memory. Preserve the earlier fifteen permanent step IDs
+  as the journal extends to eighteen, with a real legacy-15 resume/export test.
