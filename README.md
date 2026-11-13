@@ -6,6 +6,17 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 14 binary evaluation
+
+`feat/atlas-iteration-14` continues `3274e30`. A synthetic-data workbench lets
+readers change a threshold/cohort, inspect actual confusion counts, compare
+precision/recall/F1 and a constant-negative baseline, and download a reproducible
+record. Zero denominators are shown explicitly as undefined.
+An original source-grounded note links the lab to AI-report reading. No real AI
+performance, probability, private storage or new dependency claim.
+See [validation and preview](docs/ATLAS-ITERATION-14.md) and
+[resource/source review](docs/iteration-14-compliance.md). Production is unchanged.
+
 ## Iteration 13 search refinement
 
 `feat/atlas-iteration-13` continues twelfth-round `b2e41e4`. Search understands a

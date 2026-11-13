@@ -160,3 +160,13 @@ a separate storage/identity decision. Existing learning routes and labs remain.
   new storage, packages or production changes. docs/ATLAS-ITERATION-13.md records
   verification and preview. Next prioritize a worked learning example and its
   prerequisite links rather than adding broad inferred term expansions.
+
+
+## Iteration 14 — binary evaluation (review branch)
+
+- Actual threshold/cohort calculations, confusion matrix, null denominators,
+  constant-negative baseline, sample inspection and complete JSON download.
+- Original synthetic 20-record fixture and source-grounded tutorial; no real AI
+  training/performance claim, probability claim, private store or new dependency.
+- Next: spatial holdout with real native kNN computation and then a practice
+  workbench reusing the existing learning journal. See iterations-14-16-plan.md.

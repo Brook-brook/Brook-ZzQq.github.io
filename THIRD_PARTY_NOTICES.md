@@ -164,3 +164,13 @@ Search refinement adds no dependencies, third-party snippets, fonts, icons or
 external assets. Explicit technical aliases, native matching/highlighting and
 controls are original project code. Existing Mote and full license texts remain.
 See docs/iteration-13-compliance.md for resource and privacy boundaries.
+
+
+## Iteration 14 review
+
+Original synthetic evaluation data, native calculation/SVG and UI add no packages,
+fonts, images or copied third-party implementation. Scikit-learn's official docs
+and COPYING were read at commit 7b2b14e0a89eedfa514dc9885e35a0ecade20cd0
+(BSD-3-Clause, 2007–2026 developers); concepts/formulas are cited, no code, figures
+or documentation files are redistributed and the library is not loaded. Existing
+Mote and full project notices remain. See docs/iteration-14-compliance.md.
