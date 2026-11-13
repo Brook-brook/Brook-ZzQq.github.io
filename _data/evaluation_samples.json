@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "dataset_id": "atlas-synthetic-evaluation-v1",
+  "scenarios": {
+    "rare": "稀有正例（2 / 20）",
+    "balanced": "正负各半（10 / 20）",
+    "none": "没有正例（0 / 20）"
+  },
+  "samples": [
+    {
+      "id": "E01",
+      "score": 96,
+      "labels": {
+        "rare": 1,
+        "balanced": 1,
+        "none": 0
+      }
+    },
+    {
+      "id": "E02",
+      "score": 88,
+      "labels": {
+        "rare": 0,
+        "balanced": 1,
+        "none": 0
+      }
+    },
+    {
+      "id": "E03",
+      "score": 82,
+      "labels": {
+        "rare": 0,
+        "balanced": 0,
+        "none": 0
+      }
+    },
+    {
+      "id": "E04",
+      "score": 77,
+      "labels": {
+        "rare": 0,
+        "balanced": 1,
+        "none": 0
+      }
+    },
+    {
+      "id": "E05",
+      "score": 72,
+      "labels": {
+        "rare": 0,
+        "balanced": 1,
+        "none": 0
+      }
+    },
+    {
+      "id": "E06",
+      "score": 67,
+      "labels": {
+        "rare": 0,
+        "balanced": 0,
+        "none": 0
+      }
+    },
+    {
+      "id": "E07",
+      "score": 63,
+      "labels": {
+        "rare": 0,
+        "balanced": 1,
+        "none": 0
+      }
+    },
+    {
+      "id": "E08",
+      "score": 58,
+      "labels": {
+        "rare": 0,
+        "balanced": 0,
+        "none": 0
+      }
+    },
+    {
+      "id": "E09",
+      "score": 54,
+      "labels": {
+        "rare": 0,
+        "balanced": 1,
+        "none": 0
+      }
+    },
+    {
+      "id": "E10",
+      "score": 51,
+      "labels": {
+        "rare": 0,
+        "balanced": 0,
+        "none": 0
+      }
+    },
+    {
+      "id": "E11",
+      "score": 48,
+      "labels": {
+        "rare": 0,
+        "balanced": 1,
+        "none": 0
+      }
+    },
+    {
+      "id": "E12",
+      "score": 44,
+      "labels": {
+        "rare": 0,
+        "balanced": 0,
+        "none": 0
+      }
+    },
+    {
+      "id": "E13",
+      "score": 39,
+      "labels": {
+        "rare": 1,
+        "balanced": 1,
+        "none": 0
+      }
+    },
+    {
+      "id": "E14",
+      "score": 35,
+      "labels": {
+        "rare": 0,
+        "balanced": 0,
+        "none": 0
+      }
+    },
+    {
+      "id": "E15",
+      "score": 30,
+      "labels": {
+        "rare": 0,
+        "balanced": 0,
+        "none": 0
+      }
+    },
+    {
+      "id": "E16",
+      "score": 24,
+      "labels": {
+        "rare": 0,
+        "balanced": 1,
+        "none": 0
+      }
+    },
+    {
+      "id": "E17",
+      "score": 19,
+      "labels": {
+        "rare": 0,
+        "balanced": 0,
+        "none": 0
+      }
+    },
+    {
+      "id": "E18",
+      "score": 14,
+      "labels": {
+        "rare": 0,
+        "balanced": 0,
+        "none": 0
+      }
+    },
+    {
+      "id": "E19",
+      "score": 8,
+      "labels": {
+        "rare": 0,
+        "balanced": 1,
+        "none": 0
+      }
+    },
+    {
+      "id": "E20",
+      "score": 3,
+      "labels": {
+        "rare": 0,
+        "balanced": 0,
+        "none": 0
+      }
+    }
+  ]
+}

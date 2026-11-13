@@ -1,0 +1,72 @@
+/* Original teaching workbench, using the shared lavender material and type. */
+.evaluation-page { padding-block: 24px 64px; }
+.evaluation-page .breadcrumbs { display: flex; align-items: center; gap: 10px; font-size: var(--text-sm); color: var(--text-secondary); }
+.evaluation-intro { max-width: 760px; margin-block: 24px 32px; }
+.evaluation-intro h1 { font-size: clamp(1.8rem, 3.3vw, 3.2rem); line-height: 1.25; margin-block: 12px 20px; letter-spacing: -.025em; }
+.evaluation-intro > p:not(.lab-code) { color: var(--text-secondary); max-width: 48ch; }
+.lab-code { font: var(--text-xs) var(--font-outlier); color: var(--accent-soft); }
+.evaluation-page a { display: inline-flex; align-items: center; min-height: 44px; }
+.evaluation-boundary { max-width: 84ch; font-size: var(--text-sm); color: var(--text-secondary); padding-left: 16px; border-left: 2px solid var(--accent-primary); margin-block: 24px; }
+.evaluation-controls { border-radius: var(--radius-control); padding: 24px; margin-block: 32px 16px; }
+.evaluation-controls fieldset { border: 0; margin: 0; padding: 0; }
+.evaluation-controls legend { font-size: var(--text-sm); padding: 0 0 16px; }
+.evaluation-control-grid { display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1fr); gap: 32px; }
+.evaluation-control-grid label { display: grid; gap: 8px; font-size: var(--text-sm); color: var(--text-secondary); }
+.evaluation-page select { width: 100%; min-height: 48px; padding: 10px 12px; font: inherit; font-size: 16px; color: var(--text-primary); background: var(--color-field); border: 1px solid var(--color-control-edge); border-radius: var(--radius-control); }
+.evaluation-page input[type="range"] { width: 100%; min-height: 44px; margin: 0; accent-color: var(--accent-primary); }
+.evaluation-control-grid label[for="evaluation-threshold"] { display: flex; justify-content: space-between; }
+.evaluation-control-grid output { font-variant-numeric: tabular-nums; color: var(--text-primary); }
+.evaluation-page button { min-height: 44px; padding: 10px 16px; border: 1px solid var(--color-control-edge); border-radius: var(--radius-pill); font: inherit; font-size: var(--text-sm); color: var(--text-primary); background: var(--color-field); cursor: pointer; }
+.evaluation-page button:disabled { cursor: default; }
+.evaluation-page button[aria-pressed="true"] { color: var(--color-on-accent); background: var(--accent-primary); border-color: var(--accent-primary); }
+.evaluation-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+#evaluation-rule, .evaluation-help { margin: 4px 0 0; color: var(--text-secondary); font-size: var(--text-xs); line-height: 1.7; }
+.evaluation-status { min-height: 1.5em; margin: 12px 0 0; color: var(--text-primary); font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
+.evaluation-results { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); gap: 48px; padding-block: 24px; }
+.evaluation-page h2 { font-size: var(--text-xl); margin: 0 0 16px; }
+.evaluation-results > div > p { color: var(--text-secondary); font-size: var(--text-sm); }
+.evaluation-table-wrap { overflow-x: auto; max-width: 100%; }
+.evaluation-page table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+.evaluation-page caption { text-align: left; padding-bottom: 12px; color: var(--text-secondary); font-size: var(--text-xs); }
+.evaluation-page th, .evaluation-page td { text-align: left; padding: 12px; border-bottom: 1px solid var(--glass-border); vertical-align: middle; }
+.evaluation-page th { font-weight: 600; }
+.evaluation-matrix th:first-child { max-width: 120px; }
+.evaluation-matrix td { padding: 4px; }
+.evaluation-matrix button { width: 100%; min-height: 92px; border-radius: var(--radius-control); text-align: left; display: grid; gap: 8px; }
+.evaluation-matrix button strong { font-size: 1.5rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.evaluation-matrix button span { font-size: var(--text-xs); }
+.evaluation-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 20px; margin: 0; }
+.evaluation-metrics dt { font-size: var(--text-xs); color: var(--text-secondary); }
+.evaluation-metrics dd { margin: 6px 0 0; }
+.evaluation-metrics strong { display: block; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.35; font-variant-numeric: tabular-nums; font-weight: 600; }
+.evaluation-metrics small { display: block; margin-top: 8px; color: var(--text-secondary); font-size: var(--text-xs); overflow-wrap: anywhere; }
+.evaluation-baseline { border-top: 1px solid var(--glass-border); padding-top: 16px; margin-top: 24px; }
+.evaluation-score-figure { margin: 32px 0; padding-block: 24px; border-block: 1px solid var(--glass-border); }
+.evaluation-score-figure svg { display: block; width: 100%; max-width: 640px; height: auto; margin-inline: auto; }
+.evaluation-score-figure text { fill: var(--text-secondary); font: 12px var(--font-body); }
+.evaluation-grid-line { stroke: var(--glass-border); stroke-width: 1; }
+.evaluation-point { fill: var(--bg-base); stroke: var(--accent-soft); stroke-width: 1.3; }
+.evaluation-point.is-predicted { fill: var(--accent-primary); }
+[data-evaluation-cut] { stroke: var(--accent-primary); stroke-width: 1.5; stroke-dasharray: 4 3; }
+.evaluation-score-figure figcaption { color: var(--text-secondary); font-size: var(--text-xs); max-width: 72ch; margin: 12px auto 0; }
+.evaluation-samples { padding-block: 24px 40px; }
+.evaluation-sample-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.evaluation-sample-heading p, .evaluation-empty { font-size: var(--text-sm); color: var(--text-secondary); }
+.evaluation-sample-heading h2 { margin-bottom: 4px; }
+.evaluation-sample-heading p { margin: 0; }
+.evaluation-sample-table { min-width: 420px; font-variant-numeric: tabular-nums; }
+.evaluation-reading { max-width: 820px; padding-top: 32px; border-top: 1px solid var(--glass-border); }
+.evaluation-reading li { padding-left: 8px; margin-bottom: 20px; color: var(--text-secondary); }
+.evaluation-reading li strong { color: var(--text-primary); }
+.evaluation-next { display: grid; grid-template-columns: 40px 1fr; gap: 8px 16px; align-items: center; margin-top: 32px; }
+.evaluation-next p { margin: 0; }
+.evaluation-next a { grid-column: 2; }
+.evaluation-page [hidden] { display: none; }
+@media (max-width: 60rem) { .evaluation-results { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 40rem) {
+  .evaluation-controls { padding: 16px; }
+  .evaluation-control-grid { grid-template-columns: 1fr; gap: 20px; }
+  .evaluation-page th { padding-inline: 8px; }
+  .evaluation-matrix th { font-size: var(--text-xs); }
+  .evaluation-sample-heading { align-items: flex-start; }
+}

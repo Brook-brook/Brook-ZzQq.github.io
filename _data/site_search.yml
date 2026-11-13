@@ -1,4 +1,9 @@
 entries:
+  - title: AI 评测 · 阈值与错误
+    kind: lab
+    url: /playground/evaluation/
+    summary: 调整合成分数阈值，逐条核对混淆矩阵、准确率、精确率、召回率与 F1。
+    keywords: [AI, 人工智能, evaluation, classification, precision, recall, F1, accuracy, 评测, 混淆矩阵, 阈值, 误报, 漏报]
   - title: 学习路线与手记
     kind: page
     url: /study/paths/
