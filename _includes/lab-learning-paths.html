@@ -1,3 +1,3 @@
-{% if page.lab or page.python or page.nash or page.research or page.evaluation or page.spatial or page.toolcalling or page.publicgoods %}
+{% if page.lab or page.python or page.nash or page.research or page.evaluation or page.spatial or page.toolcalling or page.publicgoods or page.agent_runtime %}
 <aside class="learning-related" aria-label="关联学习路线"><h2>把实验，放回一条学习线索。</h2><div>{% for path in site.data.learning_paths %}{% for step in path.steps %}{% assign lab_base = step.lab | split: '#' | first %}{% if lab_base == page.url %}<a href="{{ '/study/paths/' | relative_url }}#{{ step.id }}">{{ path.title }}</a>{% break %}{% endif %}{% endfor %}{% endfor %}</div></aside>
 {% endif %}

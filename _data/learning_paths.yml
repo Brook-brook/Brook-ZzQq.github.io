@@ -202,8 +202,8 @@
       title: 谁决定下一步，什么时候停？
       focus: 画出模型提议、程序执行和观察的关系，给完成、失败与预算耗尽命名。
       note: agent-loop-basics
-      lab: /playground/tool-calling/
-      lab_label: 先操作循环中的本地工具环节
+      lab: /playground/agent-runtime/
+      lab_label: 逐步执行脚本循环与预算停止
       question: 固定脚本、模型路由和多步 Agent 的控制流有何不同？连续相同提议没有进展时，如何区分完成、失败和预算耗尽？轮数限制为什么不等于工具次数限制？
     - id: agent-context-evidence
       title: 找到了片段，回答就有依据吗？
@@ -221,4 +221,6 @@
       title: 运行结束，和任务做对，差在哪里？
       focus: 从真实可操作的错误案例定位失效层，设计必要且不泄露私人资料的诊断记录。
       note: agent-evaluation
+      lab: /playground/agent-runtime/
+      lab_label: 核对事件、回执和未完成状态
       question: 从类型错误、执行失败、错配回执和解释越界中各选一例，写明期待状态和检查层。哪些轨迹字段值得保留，哪些私人内容不应默认上传？

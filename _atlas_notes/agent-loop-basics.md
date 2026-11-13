@@ -7,7 +7,7 @@ kind: tutorial
 ai_assisted: true
 tags: [Agent, 智能体, agent loop, workflow, tool calling, budget, context, memory, 权限, 停止条件]
 summary: 分清固定流程与模型控制，沿提议、执行、观察和下一步认识运行时；用预算、状态与回执定义可检查的停止。
-lab_url: /playground/tool-calling/
+lab_url: /playground/agent-runtime/
 toc:
   - {id: control, label: 谁决定下一步}
   - {id: cycle, label: 一次循环包含什么}
@@ -81,6 +81,37 @@ toc:
 
 ## 先用已有工具练这一小段 {#practice}
 
+在 [循环与停止实验]({{ '/playground/agent-runtime/' | relative_url }})，逐步点击
+提议、校验、派发和交回。正常情景需要3次脚本提议、2次实际派发；批量
+情景的一次提议可以带两个调用。把派发预算改成1，观察已发生的计算仍被
+保留，而未发生的调用不会补成答案。停止和预算耗尽都不等于完成。
+
+首次旧运行回执会被拒绝，重交不需要重新执行工具。模拟失败情景有一次
+明确故障注入，后续本机函数仍真实运行；它不是网络或LLM的实测表现。
+整页提议和最终说明来自脚本/模板，不记录模型内部思考，也没有模型费用。
+
+如果希望自己接入模型，可在实验底部下载原创 `agent_loop.py` 与公开目录。
+先按[第一次请求](../model-request-contracts/#example)配置本地环境，再自行
+运行；代码不会由Pages执行。它把真实SDK响应中的调用交给受限本机函数，
+用同一个 `call_id` 返回 `function_call_output`，再请求下一轮。
+
+该Python例子只支持直接、同步、无namespace的三个只读函数，不是通用
+生产运行时。请求与派发有独立上限；整批先校验，派发途中到预算会保留
+已完成部分。重复ID、非法JSON键、非有限数值、未知工具和无效参数不会
+静默执行。真实模型是否正确完成任务仍需另行评测，不由“answered”认证。
+
+实际测试用固定SDK和内存假回包核对序列化、调用关联、必要上下文和异常，
+没有真实推理。为下一轮转交需要的reasoning元数据不等于公开内部思考；
+例子的最小轨迹不包含原问题或隐藏内容，也没有远程tracing。
+
+| 环节 | 网页教具 | 本地Python扩展 |
+| --- | --- | --- |
+| 下一提议 | 固定脚本 | 由你配置的SDK客户端返回 |
+| 工具 | 真实原生JS只读函数 | 真实Python只读函数 |
+| 说明 | 固定模板概括观察 | 模型文字，未自动核实事实 |
+| 已做测试 | 本机执行、故障案例、预算与UI | 实际SDK配假HTTP回包，非真实推理 |
+| 仍需自己验证 | 真实资料是否适用 | 模型支持/权限、行为、成本与任务效果 |
+
 在 [本地工具实验]({{ '/playground/tool-calling/' | relative_url }}) 修改参数、
 执行、核对错配回执，再修改参数观察旧结果失效。提案由脚本生成、解释为
 固定模板，真正运行的是三个本机只读函数；这只练循环中的工具边界，没有
@@ -99,3 +130,4 @@ toc:
 - [Hugging Face：What are Agents?](https://github.com/huggingface/agents-course/blob/9b3d6b3887bc489510da0239d4c1bc1ee23fd40f/units/en/unit1/what-are-agents.mdx)与[循环介绍](https://github.com/huggingface/agents-course/blob/9b3d6b3887bc489510da0239d4c1bc1ee23fd40f/units/en/unit1/agent-steps-and-structure.mdx)。把类比作为入门；prompt、循环和观察本身不保证正确性或权限隔离。
 - [OpenAI Agents SDK：Running agents](https://github.com/openai/openai-agents-python/blob/64fbde5d02b42ae5f9db668eb0184cdb3fc9d775/docs/running_agents.md)，核对实际运行循环、输出分类和 max_turns，不将其轮数等同于工具次数。
 - [Context management](https://github.com/openai/openai-agents-python/blob/64fbde5d02b42ae5f9db668eb0184cdb3fc9d775/docs/context.md)，核对本地对象、模型可见输入和状态保存的区别。
+- Python扩展示例另对照同一固定[SDK函数调用类型](https://github.com/openai/openai-python/blob/59738a289ee82c7b86bf1e10230cceb6daa9716d/src/openai/types/responses/response_function_tool_call.py)、[输入/工具结果类型](https://github.com/openai/openai-python/blob/59738a289ee82c7b86bf1e10230cceb6daa9716d/src/openai/types/responses/response_input_param.py)与[可请求元数据枚举](https://github.com/openai/openai-python/blob/59738a289ee82c7b86bf1e10230cceb6daa9716d/src/openai/types/responses/response_includable.py)。只核对接口，不将其视为已执行真实服务。
