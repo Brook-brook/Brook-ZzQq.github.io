@@ -1,4 +1,9 @@
 entries:
+  - title: 检索与证据 · 版本、片段与上下文
+    kind: lab
+    url: /playground/retrieval/
+    summary: 在原创虚构手册中做字面检索、核对公开标注和指标分母，再选择保留完整条件的上下文；不调用模型。
+    keywords: [RAG, 检索增强生成, retrieval, 证据, 引用, chunk, context, precision, recall, RR, 版本, 语料]
   - title: Agent 循环 · 提议、执行与停止
     kind: lab
     url: /playground/agent-runtime/

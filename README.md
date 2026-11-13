@@ -6,6 +6,23 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 22 retrieve, then preserve the conditions
+
+`feat/atlas-iteration-22` continues pushed twenty-first-round `fec83c1`. A native
+`/playground/retrieval/` exercise searches an original fictional manual corpus,
+keeps versions and explicit task annotations distinct, and lets the reader choose
+complete fragments under a Unicode-character context budget. Actual literal
+ranking, requested-k precision, full-reference recall and single-task reciprocal
+rank are inspectable; none is called model ability, truth or learning mastery.
+
+The complete export includes source, annotations, settings, ranking, selection and
+exact context. No model, vector service, private index or website package was
+added. The existing RAG lesson/question links here without changing 28 permanent
+journal IDs. See [delivery](docs/ATLAS-ITERATION-22.md),
+[design audit](docs/design-audit-iteration-22.md),
+[resource/privacy review](docs/iteration-22-compliance.md) and
+[compiled preview](docs/PREVIEW.md).
+
 ## Iteration 21 a loop that can stop
 
 `feat/atlas-iteration-21` continues pushed twentieth-round `8d68747`. The new

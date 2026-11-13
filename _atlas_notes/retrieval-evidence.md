@@ -7,6 +7,7 @@ kind: tutorial
 ai_assisted: true
 tags: [RAG, 检索增强生成, retrieval, embedding, rerank, citation, chunk, 检索, 证据, 上下文]
 summary: 分开看检索、上下文与回答，理解切片、版本和引用；相似度高、附了链接都不能代替证据核查。
+lab_url: /playground/retrieval/
 toc:
   - {id: pipeline, label: 三段不同的任务}
   - {id: retrieve, label: 先决定找什么}
@@ -83,6 +84,15 @@ toc:
 受益，不能把记录中的历史模型成绩写成今天的复现结果。
 
 ## 写一条小而完整的证据链 {#exercise}
+
+先打开 [检索与证据实验]({{ "/playground/retrieval/" | relative_url }})。默认前两条
+结果混有旧版；将版本限定v2，核对试用与正式两段的完整条件，再手动放入
+上下文。预算按完整引用文本的Unicode码点计算，不是模型token，不截断
+例外条件来凑预算。检索、标注与上下文真实在本机计算，没有调用模型。
+
+precision@k的分母在此固定为请求的k，未返回的槽位仍计入；recall的相关
+集合来自本题公开标注，不因版本筛选而缩小。显示的RR是单题倒数排名，
+不是多题平均MRR。切到无标注自由检索时，不从字面匹配猜出召回率。
 
 选一份允许使用的公开材料，只写一个可回查主张。附上具体版本/位置，标注
 哪些字支持结论、哪些是自己的解释，再写一个缺少依据而暂不回答的问题。

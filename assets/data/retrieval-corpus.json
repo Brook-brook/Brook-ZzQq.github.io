@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /assets/data/retrieval-corpus.json
+---
+{{ site.data.retrieval_samples | jsonify }}

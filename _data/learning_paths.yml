@@ -209,6 +209,8 @@
       title: 找到了片段，回答就有依据吗？
       focus: 用版本和适用条件核对引用，把检索命中与回答忠于证据分开。
       note: retrieval-evidence
+      lab: /playground/retrieval/
+      lab_label: 检索虚构手册并选择完整证据
       question: 对照虚构手册v1/v2和试用/正式空间，解释为什么引用真的链接仍可能答错。写出一条主张到片段、版本和适用条件的完整证据链。
     - id: agent-permission-boundaries
       title: 工具结果中的指令，能改变权限吗？

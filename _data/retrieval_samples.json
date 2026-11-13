@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "corpus_id": "brook-retrieval-teaching-v1",
+  "title": "演示空间手册：原创虚构语料",
+  "disclosure": "全部文档、版本与相关性标注均为原创AI辅助教学数据；不是校园、产品或真实机构规定，不是模型输出。",
+  "documents": [
+    {
+      "id": "retention-old",
+      "title": "记录保留手册",
+      "version": "v1"
+    },
+    {
+      "id": "retention-current",
+      "title": "记录保留手册",
+      "version": "v2"
+    },
+    {
+      "id": "loop-current",
+      "title": "循环预算手册",
+      "version": "v2"
+    },
+    {
+      "id": "transport-current",
+      "title": "请求超时备忘",
+      "version": "v2"
+    }
+  ],
+  "fragments": [
+    {
+      "id": "a-retention-old",
+      "document_id": "retention-old",
+      "section": "第1节：旧版保留规则",
+      "text": "试用空间的记录保留7天，正式空间的记录保留14天。本片段属于手册v1，不能代替v2的适用规则。"
+    },
+    {
+      "id": "b-retention-trial",
+      "document_id": "retention-current",
+      "section": "第1节：试用空间",
+      "text": "试用空间：记录保留7天。这一条只适用于试用空间，正式空间的保留期见第2节。"
+    },
+    {
+      "id": "c-retention-full",
+      "document_id": "retention-current",
+      "section": "第2节：正式空间",
+      "text": "正式空间：记录保留30天。这一条只适用于正式空间，不改变试用空间的7天保留期。"
+    },
+    {
+      "id": "d-retention-backup",
+      "document_id": "retention-current",
+      "section": "第3节：备份",
+      "text": "手动导出的备份由使用者自己保存；空间内记录的保留期不等于备份文件的保存期限。"
+    },
+    {
+      "id": "e-loop-proposals",
+      "document_id": "loop-current",
+      "section": "第1节：提议",
+      "text": "提议预算限制产生提议的次数。一个提议可以包含多个工具调用，所以提议预算不能代替工具派发次数的预算。"
+    },
+    {
+      "id": "f-loop-dispatches",
+      "document_id": "loop-current",
+      "section": "第2节：派发",
+      "text": "每次实际派发工具前检查派发预算。批量调用可能只执行一部分；预算耗尽表示尚未完成，不会撤销已发生的只读计算。"
+    },
+    {
+      "id": "g-timeout-read",
+      "document_id": "transport-current",
+      "section": "第1节：读取等待",
+      "text": "传输读取超时限制某段网络读取的等待，不等于整个任务的绝对截止时间，也不等于所有重试的总用时上限。"
+    },
+    {
+      "id": "h-timeout-retry",
+      "document_id": "transport-current",
+      "section": "第2节：发送之后",
+      "text": "请求超时不能证明服务端没有执行。重试有副作用的请求之前，应核对真实提交状态与幂等性，不能仅凭客户端超时判断可重复执行。"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "retention",
+      "question": "手册v2中，试用与正式空间分别保留记录多久？",
+      "query": "保留 空间",
+      "relevant_ids": [
+        "b-retention-trial",
+        "c-retention-full"
+      ],
+      "annotation_reason": "该题明确要求v2与两种空间。第1、2节分别给出完整条件；旧版与备份说明不能独自回答此题。标注只针对本题，不把旧版资料称为普遍无用。",
+      "title": "保留期与版本"
+    },
+    {
+      "id": "budgets",
+      "question": "为什么提议预算还需要独立的派发预算？",
+      "query": "预算 调用",
+      "relevant_ids": [
+        "e-loop-proposals",
+        "f-loop-dispatches"
+      ],
+      "annotation_reason": "一段说明一次提议可带多个调用，另一段说明每次派发与部分完成。两段共同给出本题要核对的计数边界。",
+      "title": "循环的两种预算"
+    },
+    {
+      "id": "timeout",
+      "question": "请求超时，是否就能确认服务端没有执行？",
+      "query": "请求 超时",
+      "relevant_ids": [
+        "h-timeout-retry"
+      ],
+      "annotation_reason": "第2节直接回答执行状态与重试条件；读取等待的时长定义不能独自证明服务端是否执行。",
+      "title": "超时与执行状态"
+    },
+    {
+      "id": "free",
+      "question": "自由检索：自行改关键词，暂不评价相关性",
+      "query": "备份",
+      "relevant_ids": null,
+      "annotation_reason": "自由检索没有为你的实际问题建立相关性标注，因此不计算precision、recall或RR；相似的字面命中不自动补成标注。",
+      "title": "自由检索（无标注）"
+    }
+  ]
+}

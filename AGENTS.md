@@ -353,3 +353,31 @@
 - Keep actual download/partial-export/browser checks, source provenance, both
   prefixes, mobile action feedback and reduced-motion cancellation. The initial
   desktop action must remain visible at 1280×800; counters support the action.
+
+## Literal retrieval and complete context (Iteration 22)
+
+- The retrieval lab uses an original fictional manual corpus and disclosed
+  task-specific relevance annotations, never real campus/service rules or model
+  output. Keep document ID/version/section and the complete scope of each fragment.
+- NFKC/lowercase, whitespace-delimited unique literal terms, OR candidates and
+  distinct-term presence scores are explicit. Sort tied scores by ASCII fragment
+  ID; no inferred semantics, synonym expansion or factual-confidence score.
+- precision@k divides by requested k, including missing result slots. Recall
+  divides by the full original task reference set, unchanged by version filtering.
+  RR@k is one query, not MRR; no positive reference gives null for recall/RR.
+  Null annotations mean no metric, never inferred labels. Keep independent oracles.
+- Context contains whole selected returned fragments in the reader's order,
+  including exact citation headers and separators. Count Unicode code points,
+  not UTF16 units, bytes or model tokens. Reject an over-budget addition intact;
+  never truncate away a qualification. Exports contain all public replay inputs.
+- Editing settings retains applied results but blocks stale selection/export
+  until explicit rerun. Preserve action focus and a context jump beside each
+  action; use local row feedback for a rejected addition. Source anchors open
+  the native source disclosure and focus the real section; no-JS keeps it open.
+- No private-store read/write, query history, model request or network corpus
+  ingestion. Keep the original28 journal IDs/key/schema. Real Jekyll data checks
+  reject malformed source/annotation references before output. Search indexes
+  only public metadata, not this corpus's body or private learning text.
+- Search input, version select and action share52px at normal text; their height
+  grows together with em-sized text. Preserve320px and200%DOM-text browser checks,
+  live reduced-motion cancellation, exact-budget downloads and both prefixes.

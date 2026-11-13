@@ -1,0 +1,30 @@
+---
+layout: atlas
+title: 检索与证据实验
+permalink: /playground/retrieval/
+section: Playground
+universe: true
+retrieval: true
+description: 在原创虚构手册里做真实字面检索、核对版本和相关性标注，再用完整片段组织有预算的上下文；不调用模型。
+---
+<div class="retrieval-page" data-retrieval>
+  <nav class="breadcrumbs" aria-label="面包屑"><a href="{{ '/study/ai/' | relative_url }}">AI 与 Agent 路径</a><span aria-hidden="true">/</span><span>检索与证据</span></nav>
+  <header class="retrieval-intro"><h1>找到片段，还要接住条件。</h1><p>检索、核对版本，再选择完整证据。使用原创虚构手册和字面匹配，不调用模型。</p></header>
+  <fieldset id="retrieval-controls" disabled><legend class="retrieval-sr-only">检索设置与上下文选择</legend>
+    <label class="retrieval-task-label" for="retrieval-task">这次练什么<select id="retrieval-task">{% for task in site.data.retrieval_samples.tasks %}<option value="{{ task.id }}">{{ task.title | escape }}</option>{% endfor %}</select></label>
+    <div class="retrieval-query-row"><label for="retrieval-query">检索词，用空格分开<input id="retrieval-query" type="search" value="保留 空间" maxlength="200" autocomplete="off" spellcheck="false" aria-describedby="retrieval-query-help"></label><label for="retrieval-version">文档版本<select id="retrieval-version"><option value="all">所有版本</option>{% assign versions = site.data.retrieval_samples.documents | map: 'version' | uniq %}{% for version in versions %}<option value="{{ version }}">{{ version }}</option>{% endfor %}</select></label><button id="retrieval-run" type="button">重新检索</button></div>
+    <p id="retrieval-query-help" class="retrieval-help">最多6词，字面匹配；不作语义推断。</p>
+    <details class="retrieval-options"><summary>检索规则与上下文预算</summary><p>标题、节名、正文任一处命中任一词就成为候选；按命中的不同词数降序、片段ID升序排列。不做中文自动分词或同义扩展，空格决定词的边界。</p><div><label for="retrieval-k">返回前 k 条<input id="retrieval-k" type="number" min="1" max="8" step="1" value="2" inputmode="numeric"></label><label for="retrieval-budget">上下文字符预算<input id="retrieval-budget" type="number" min="40" max="1000" step="1" value="220" inputmode="numeric"></label></div><p class="retrieval-help">预算包括完整片段、引用头和片段间空行，按Unicode码点计数，不是模型token。参数修改后需重新检索。</p></details>
+    <p id="retrieval-status" class="retrieval-status" role="status">等待加载本页公开语料。</p>
+    <p id="retrieval-question" class="retrieval-question">当前问题：手册v2中，试用与正式空间分别保留记录多久？</p>
+    <div class="retrieval-workspace">
+      <section class="retrieval-candidates" aria-labelledby="retrieval-results-title"><h2 id="retrieval-results-title" tabindex="-1">候选片段</h2><p id="retrieval-result-summary"></p><div class="retrieval-metrics" id="retrieval-metrics"></div><p id="retrieval-empty" hidden>这次语料、版本与词组没有返回候选。可以改词或版本；没有命中不表示现实中没有资料。</p><ol id="retrieval-results"></ol></section>
+      <section class="retrieval-context glass-light" aria-labelledby="retrieval-context-title"><h2 id="retrieval-context-title" tabindex="-1">选好的上下文</h2><p>从候选中手动放入完整片段，保留引用、版本和适用条件。这里不生成回答。</p><p id="retrieval-usage" class="retrieval-usage">已用0 / 220字符</p><pre id="retrieval-context" tabindex="0" aria-label="完整上下文文本">还没有选择片段。</pre><button type="button" id="retrieval-export">导出检索与上下文</button><p class="retrieval-help">点击后下载完整公开语料、标注、设置、排序和选择；不读取或保存你的学习手记。</p></section>
+    </div>
+    <details class="retrieval-annotations"><summary>标注、分母与指标，具体指什么？</summary><p id="retrieval-annotation"></p><p>precision@k＝前k个位置中命中标注的数量÷请求的k，未返回的位置也在分母中。recall@k＝命中数÷本题全部标注片段；版本筛选不会偷偷缩小这个集合。RR@k是本题首个相关片段排名的倒数，没有命中为0；它不是多题平均的MRR。没有标注时不计算。</p><p>这些标注是针对虚构问题的公开教学参考，不是模型成绩、客观真值认证或你的学习评分。检索命中与最终回答是否有依据，仍是两层检查。</p></details>
+  </fieldset>
+  <noscript><p>交互需要JavaScript。原理、题目和下方完整虚构语料仍可阅读。默认问题要求v2的两种空间；旧版虽然同样命中“保留”和“空间”，仍不能独自回答它。</p></noscript>
+  <section class="retrieval-reading"><h2>引用在，条件也要在。</h2><p>把版本限定为v2，再把前两条完整片段放入上下文。对照试用与正式空间，说明“30天”为什么不能单独回答所有问题。</p><div class="retrieval-study-prompt"><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" width="40" height="40" alt=""><p>再把字符预算降到80。能否保留完整证据？不足时，应省掉条件还是说明不足？</p><a href="{{ '/study/practice/#agent-context-evidence' | relative_url }}">写下自己的证据链</a></div><div class="retrieval-links"><a href="{{ '/knowledge/retrieval-evidence/' | relative_url }}">RAG、切片与引用原理</a><a href="{{ '/playground/agent-runtime/' | relative_url }}">观察怎样进入下一轮</a><a href="{{ '/knowledge/agent-evaluation/' | relative_url }}">分开评测检索与回答</a></div></section>
+  <details class="retrieval-source" id="retrieval-source" open><summary>阅读完整原创语料与标注</summary><p>{{ site.data.retrieval_samples.disclosure | escape }}</p><a href="{{ '/assets/data/retrieval-corpus.json' | relative_url }}" download="brooks-retrieval-corpus.json">下载完整虚构语料 JSON</a>{% for document in site.data.retrieval_samples.documents %}<section><h2>{{ document.title | escape }} / {{ document.version }}</h2>{% assign fragments = site.data.retrieval_samples.fragments | where: 'document_id', document.id %}{% for fragment in fragments %}<section class="retrieval-source-fragment"><h3 id="source-{{ fragment.id }}" tabindex="-1">{{ fragment.section | escape }} <small>{{ fragment.id }}</small></h3><p>{{ fragment.text | escape }}</p></section>{% endfor %}</section>{% endfor %}<h2>公开教学标注</h2>{% for task in site.data.retrieval_samples.tasks %}<section><h3>{{ task.question | escape }}</h3><p>{{ task.annotation_reason | escape }}</p><p>相关片段：{% if task.relevant_ids %}{{ task.relevant_ids | join: '、' }}{% else %}未建立标注{% endif %}</p></section>{% endfor %}</details>
+  <script type="application/json" data-retrieval-corpus>{{ site.data.retrieval_samples | jsonify | replace: '<', '\u003c' }}</script>
+</div>
