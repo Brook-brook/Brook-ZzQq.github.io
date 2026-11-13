@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-13T13:52:55.300Z",
+  "attempted_at": "2026-11-13T15:58:47.551Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 219,
+  "total": 222,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-13T13:52:55.300Z",
-      "last_success_at": "2026-11-13T13:52:55.300Z",
+      "attempted_at": "2026-11-13T15:58:47.551Z",
+      "last_success_at": "2026-11-13T15:58:47.551Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T13:52:55.300Z",
-      "last_success_at": "2026-11-13T13:52:55.300Z",
+      "attempted_at": "2026-11-13T15:58:47.551Z",
+      "last_success_at": "2026-11-13T15:58:47.551Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,12 +60,12 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T13:52:55.300Z",
-      "last_success_at": "2026-11-13T13:52:55.300Z",
+      "attempted_at": "2026-11-13T15:58:47.551Z",
+      "last_success_at": "2026-11-13T15:58:47.551Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
-      "etag": "W/\"41648-f223y9lT6XftGVEj2wA5PHKiiYc\"",
+      "etag": "W/\"4177d-df99bLvRw4ap4wjJzU57YdKV5mw\"",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-13T13:52:55.300Z",
-      "last_success_at": "2026-11-13T13:52:55.300Z",
+      "attempted_at": "2026-11-13T15:58:47.551Z",
+      "last_success_at": "2026-11-13T15:58:47.551Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T13:52:55.300Z",
-      "last_success_at": "2026-11-13T13:52:55.300Z",
+      "attempted_at": "2026-11-13T15:58:47.551Z",
+      "last_success_at": "2026-11-13T15:58:47.551Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794574620-gzip\"",
-      "last_modified": "Fri, 13 Nov 2026 12:57:00 GMT",
+      "etag": "\"1794583910-gzip\"",
+      "last_modified": "Fri, 13 Nov 2026 15:31:50 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-13T13:52:55.300Z",
+      "attempted_at": "2026-11-13T15:58:47.551Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T13:52:55.300Z",
-      "last_success_at": "2026-11-13T13:52:55.300Z",
+      "attempted_at": "2026-11-13T15:58:47.551Z",
+      "last_success_at": "2026-11-13T15:58:47.551Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -154,9 +154,63 @@
   ],
   "latest": [
     {
+      "id": "n-7d4d71d056da02862d0b2ec1b87dadd7019731481c576401840bf8ff718ee663",
+      "source_id": "openai-news",
+      "title": "Introducing ChatGPT Wallet",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-13T15:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 15:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-13T15:58:47.551Z",
+      "changed_at": "2026-11-13T15:58:47.551Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-6841e619fcd7e8d9370258a227590a244c9afe604f7f173c18d14806c323db86",
+      "source_id": "hf-blog",
+      "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-13T14:05:22.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 14:05:22 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-13T15:58:47.551Z",
+      "changed_at": "2026-11-13T15:58:47.551Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-8e8d04d3b9846a6967a8db113847eb94c766bf8ae2037c89c1044f21794fb301",
+      "source_id": "un-news",
+      "title": "‘Lives are at stake’: Humanitarians call for swift entry of winter supplies in Gaza",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168799",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-13T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-13T15:58:47.551Z",
+      "changed_at": "2026-11-13T15:58:47.551Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
       "id": "n-9cf54d021a2bc4e96bd9ea419d1eb96198010b1d7bf0dc24b437c910a27bee27",
       "source_id": "un-news",
-      "title": "DR Congo Ebola outbreak: armed groups unrest holds back response",
+      "title": "DR Congo Ebola outbreak: Unrest fuelled by armed groups holds back response",
       "url": "https://news.un.org/feed/view/en/story/2026/11/1168797",
       "topic": "politics",
       "publisher": "United Nations News",
@@ -167,9 +221,19 @@
       "review_status": "needs_review",
       "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
       "first_seen_at": "2026-11-13T13:52:55.300Z",
-      "changed_at": "2026-11-13T13:52:55.300Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-13T15:58:47.551Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "DR Congo Ebola outbreak: armed groups unrest holds back response",
+          "url": "https://news.un.org/feed/view/en/story/2026/11/1168797",
+          "published_at": "2026-11-13T12:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
+          "date_warning": null,
+          "changed_at": "2026-11-13T13:52:55.300Z"
+        }
+      ]
     },
     {
       "id": "n-caa6051ad9a7a5b6a55bb01485dea5545e02358a954b62bf771fbb23f2ad18bc",
@@ -1178,66 +1242,12 @@
       "changed_at": "2026-11-12T20:17:07.538Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-1ee6867cdbb6f3c3818c41cf816ecb3f04af48e3d69450ac807785387cf4fbaf",
-      "source_id": "fed-press",
-      "title": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
-      "topic": "economy",
-      "publisher": "Federal Reserve Board",
-      "published_at": "2026-11-12T18:30:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 12 Nov 2026 18:30:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
-      "first_seen_at": "2026-11-12T20:17:07.538Z",
-      "changed_at": "2026-11-12T20:17:07.538Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-4d5f93737abb2dff01098721974f4829f9539e367d0fb9d63b0b2c11598e4247",
-      "source_id": "un-news",
-      "title": "COP31: Cities rise up the climate agenda as leaders face demands for action",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168792",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-12T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 12 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-12T20:17:07.538Z",
-      "changed_at": "2026-11-12T20:17:07.538Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-e44bf41057f0c524da79f938cd65282924fdd0dc554bf9c2d66424c83c05efb8",
-      "source_id": "un-news",
-      "title": "Aid is the ‘only hope’ for millions in Sudan, WFP chief warns, as funding cuts deepen hunger crisis",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168793",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-12T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 12 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-12T20:17:07.538Z",
-      "changed_at": "2026-11-12T20:17:07.538Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-13",
-      "count": 65,
+      "count": 68,
       "path": "archive/2026-11-13.json"
     },
     {
@@ -1247,21 +1257,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-12T22:18:20.596Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 1,
-      "revisions": 0,
-      "total": 164,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-13T00:18:13.043Z",
       "status": "partial",
@@ -1360,6 +1355,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 219,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T15:58:47.551Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 3,
+      "revisions": 1,
+      "total": 222,
       "failed_sources": [
         {
           "id": "europarl-news",
