@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-12T22:18:20.596Z",
+  "attempted_at": "2026-11-13T00:18:13.043Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 164,
+  "total": 166,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-12T22:18:20.596Z",
-      "last_success_at": "2026-11-12T22:18:20.596Z",
+      "attempted_at": "2026-11-13T00:18:13.043Z",
+      "last_success_at": "2026-11-13T00:18:13.043Z",
       "accepted": 0,
       "invalid": 0,
       "limited": false,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T22:18:20.596Z",
-      "last_success_at": "2026-11-12T22:18:20.596Z",
+      "attempted_at": "2026-11-13T00:18:13.043Z",
+      "last_success_at": "2026-11-13T00:18:13.043Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T22:18:20.596Z",
-      "last_success_at": "2026-11-12T22:18:20.596Z",
+      "attempted_at": "2026-11-13T00:18:13.043Z",
+      "last_success_at": "2026-11-13T00:18:13.043Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-12T22:18:20.596Z",
-      "last_success_at": "2026-11-12T22:18:20.596Z",
+      "attempted_at": "2026-11-13T00:18:13.043Z",
+      "last_success_at": "2026-11-13T00:18:13.043Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -103,9 +103,9 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "ok",
-      "attempted_at": "2026-11-12T22:18:20.596Z",
-      "last_success_at": "2026-11-12T22:18:20.596Z",
+      "status": "not_modified",
+      "attempted_at": "2026-11-13T00:18:13.043Z",
+      "last_success_at": "2026-11-13T00:18:13.043Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-12T22:18:20.596Z",
+      "attempted_at": "2026-11-13T00:18:13.043Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-12T22:18:20.596Z",
-      "last_success_at": "2026-11-12T22:18:20.596Z",
+      "attempted_at": "2026-11-13T00:18:13.043Z",
+      "last_success_at": "2026-11-13T00:18:13.043Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-67672a694e389b29af5588bf1be29a978063408e3c6a0262fcadf6da500500d7",
+      "source_id": "openai-news",
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "url": "https://openai.com/business/customer-stories/amplitude",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-12T20:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 20:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-13T00:18:13.043Z",
+      "changed_at": "2026-11-13T00:18:13.043Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-b9840fd67063a36a400d5e1d91fe182c1b415df6997c889b681a58ba22957843",
+      "source_id": "openai-news",
+      "title": "Gondola doubles revenue as its team builds more with Codex",
+      "url": "https://openai.com/business/customer-stories/gondola",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-12T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 12:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-13T00:18:13.043Z",
+      "changed_at": "2026-11-13T00:18:13.043Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-a491aa90d650ab2bf91e0a7d38a72e157edfbef974240c627de775007f1696bc",
       "source_id": "openai-news",
@@ -1206,48 +1242,12 @@
       "changed_at": "2026-11-12T08:01:23.049Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-54dba382ae12dc4c47a32cf5443e7b6c853b138a3f110ed049a25f4dd197b300",
-      "source_id": "un-news",
-      "title": "Afghanistan faces deepening humanitarian crisis amid sweeping rights restrictions",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168758",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-06T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Fri, 06 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-12T08:01:23.049Z",
-      "changed_at": "2026-11-12T08:01:23.049Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-5dc3421566c889391c9fd750eb5ee0e3cc8d53d2b5677fe1e998d97b1939a0a2",
-      "source_id": "un-news",
-      "title": "World News in Brief: Civilians killed in DR Congo, Ukrainians wrestle with return, Guterres calls out ‘normalisation’ of force",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168757",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-06T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Fri, 06 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-12T08:01:23.049Z",
-      "changed_at": "2026-11-12T08:01:23.049Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-13",
-      "count": 10,
+      "count": 12,
       "path": "archive/2026-11-13.json"
     },
     {
@@ -1257,21 +1257,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-12T08:01:23.049Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 151,
-      "revisions": 0,
-      "total": 151,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-12T10:13:37.931Z",
       "status": "partial",
@@ -1370,6 +1355,21 @@
       "additions": 1,
       "revisions": 0,
       "total": 164,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T00:18:13.043Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 166,
       "failed_sources": [
         {
           "id": "europarl-news",

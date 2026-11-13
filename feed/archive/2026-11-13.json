@@ -181,6 +181,42 @@
       "changed_at": "2026-11-12T22:18:20.596Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-67672a694e389b29af5588bf1be29a978063408e3c6a0262fcadf6da500500d7",
+      "source_id": "openai-news",
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "url": "https://openai.com/business/customer-stories/amplitude",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-12T20:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 20:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-13T00:18:13.043Z",
+      "changed_at": "2026-11-13T00:18:13.043Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-b9840fd67063a36a400d5e1d91fe182c1b415df6997c889b681a58ba22957843",
+      "source_id": "openai-news",
+      "title": "Gondola doubles revenue as its team builds more with Codex",
+      "url": "https://openai.com/business/customer-stories/gondola",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-12T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 12:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-13T00:18:13.043Z",
+      "changed_at": "2026-11-13T00:18:13.043Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
