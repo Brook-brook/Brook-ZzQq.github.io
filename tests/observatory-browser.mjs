@@ -129,7 +129,7 @@ try {
         assert.ok(await routes.locator('a[href*="/study/paths/#"]').count() > 0, 'route navigation contains real matching routes');
         assert.ok((await routes.locator('a').allTextContents()).every((title) => title.trim()));
       }
-      if (path.includes('reading-ai-evidence')) assert.ok(await routes.locator('a[href$="#evaluation-evidence"]').isVisible());
+      if (path.includes('reading-ai-evidence')) assert.ok(await routes.locator('a[href*="/study/paths/"][href$="#evaluation-evidence"]').isVisible());
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       await axe(page, `${width} ${theme} ${path}`);
     }

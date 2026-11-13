@@ -13,6 +13,7 @@ require_relative "../_plugins/observatory-validation"
 require_relative "../_plugins/site-search-index"
 require_relative "../_plugins/evaluation-data-validation"
 require_relative "../_plugins/spatial-data-validation"
+require_relative "../_plugins/practice-prompt-validation"
 
 # A generator runs after :site/:post_read, just as an index/sitemap generator
 # would. Its written output must never receive filtered research documents.
@@ -459,6 +460,65 @@ class StudyPublicationChecks
             assert(error.message.include?("spatial_samples.json"), "identify invalid spatial source")
             assert(!File.exist?(File.join(destination, "index.html")), "invalid spatial data fails before output")
           end
+        end
+      end
+    end
+
+    check("practice references require exactly the public permanent step IDs") do
+      with_fixture do |source, destination|
+        note(source, "legacy")
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        path = [{ "id" => "route", "title" => "Fixture", "summary" => "Learning",
+                  "steps" => [{ "id" => "first", "title" => "Read", "note" => "legacy", "question" => "Explain?" }] }]
+        prompt = { "first" => { "hint" => "Original hint", "explanation" => "Original reference", "counterexample" => "A limitation" } }
+        File.write(File.join(source, "_data", "learning_paths.yml"), YAML.dump(path))
+        File.write(File.join(source, "_data", "practice_prompts.yml"), YAML.dump(prompt))
+        site = build(source, destination)
+        assert(site.data["practice_prompts"].keys == ["first"], "reference maps to a public question")
+      end
+    end
+
+    check("practice rejects unknown/missing IDs, empty/oversized references and extra generated fields") do
+      %w[unknown missing empty oversized extra].each do |mode|
+        with_fixture do |source, destination|
+          note(source, "legacy")
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          path = [{ "id" => "route", "title" => "Fixture", "summary" => "Learning",
+                    "steps" => [{ "id" => "first", "title" => "Read", "note" => "legacy", "question" => "Explain?" }] }]
+          prompt = { "first" => { "hint" => "Original hint", "explanation" => "Original reference", "counterexample" => "A limitation" } }
+          prompt["unknown"] = prompt["first"].dup if mode == "unknown"
+          prompt.delete("first") if mode == "missing"
+          prompt["first"]["hint"] = "" if mode == "empty"
+          prompt["first"]["explanation"] = "x" * 2001 if mode == "oversized"
+          prompt["first"]["grade"] = 100 if mode == "extra"
+          File.write(File.join(source, "_data", "learning_paths.yml"), YAML.dump(path))
+          File.write(File.join(source, "_data", "practice_prompts.yml"), YAML.dump(prompt))
+          begin
+            build(source, destination)
+            assert(false, "invalid reference must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("practice_prompts.yml"), "identify invalid public reference")
+            assert(!File.exist?(File.join(destination, "index.html")), "invalid references fail before writing")
+          end
+        end
+      end
+    end
+
+    check("practice references run after publication and route validation") do
+      with_fixture do |source, destination|
+        note(source, "pending", "kind" => "research", "review_status" => "needs_review")
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        path = [{ "id" => "route", "title" => "Fixture", "summary" => "Learning",
+                  "steps" => [{ "id" => "first", "title" => "Read", "note" => "pending", "question" => "Explain?" }] }]
+        prompt = { "first" => { "hint" => "Original hint", "explanation" => "Reference", "counterexample" => "Limit" } }
+        File.write(File.join(source, "_data", "learning_paths.yml"), YAML.dump(path))
+        File.write(File.join(source, "_data", "practice_prompts.yml"), YAML.dump(prompt))
+        begin
+          build(source, destination, unpublished: true)
+          assert(false, "references must not bypass publication checks")
+        rescue Jekyll::Errors::FatalException => error
+          assert(error.message.include?("learning_paths.yml"), "public route validation runs first")
+          assert(!File.exist?(page_path(destination, "pending")), "unverified research remains unwritten")
         end
       end
     end

@@ -2,7 +2,7 @@ const examples = {
   basics:
     '# 变量、数据类型与条件判断\nname = "Brook"\nvisits = 3\nlatitude = 30.0\nprint(name, type(name).__name__)\nprint(visits, type(visits).__name__)\nprint(latitude, type(latitude).__name__)\n\nif visits >= 3:\n    print("Keep exploring!")\nelse:\n    print("Welcome to the Atlas")\n',
   loops:
-    '# 函数、列表与循环\ndef mean(values):\n    return sum(values) / len(values)\n\nheights = [12, 18, 24]\nfor i, height in enumerate(heights, start=1):\n    print(f"Point {i}: {height} m")\n\nprint("Mean:", mean(heights))\n',
+    '# 函数、列表与循环\ndef mean(values):\n    if not values:\n        raise ValueError("Need at least one value")\n    return sum(values) / len(values)\n\nheights = [12, 18, 24]\nfor i, height in enumerate(heights, start=1):\n    print(f"Point {i}: {height} m")\n\nprint("Mean:", mean(heights))\n',
   dict: '# 字典与演示空间数据（不是个人位置）\nimport math\n\npoint = {"label": "Demo", "latitude": 60.0}\nphi = math.radians(point["latitude"])\nscale = 1 / math.cos(phi)\n\nprint(point["label"])\nprint(f"Spherical Mercator local scale: {scale:.3f}")\n'
 };
 const byId = (id) => document.getElementById(id);

@@ -1649,3 +1649,5 @@ html {
     transform: none;
   }
 }
+
+.knowledge-learning-bridge { padding-block: var(--space-lg); border-block: 1px solid var(--glass-border); margin-bottom: calc(var(--space-lg) + var(--space-xs)); }

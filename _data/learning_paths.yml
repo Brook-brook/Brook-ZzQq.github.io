@@ -96,3 +96,27 @@
       title: 把模型成绩放回使用场景
       note: reading-ai-evidence
       question: 阅读一份模型报告，找出任务、部署分布、划分、基线和不确定性。缺少空间外推测试时，哪些结论仍不能确认？
+- id: frontier-reading
+  challenge: 从观察台挑一份 AI 或政经材料，附版本与原文位置，分开写作者主张、证据、自己的解释和能改变判断的新证据。
+  title: 让前沿信息，变成自己的理解
+  summary: 用任务条件、统计口径与政策状态，练习阅读 AI 和全球政经资料；不把新标题当作已核对结论。
+  prerequisite: 选择一份可回查的公开材料；可以从阅读提纲开始，不要求先懂全部背景。
+  steps:
+    - id: ai-version-scope
+      title: 给 AI 能力声明补上版本和条件
+      note: reading-ai-evidence
+      lab: /observatory/#reading-guides
+      lab_label: 查看 AI 阅读提纲
+      question: 一篇预印本、一段产品演示和一次独立评测，分别能支持什么？写出任务、版本、基线与预算，保留还不能确认的部分。
+    - id: economy-denominators
+      title: 数字相似，比较的是同一件事吗？
+      note: reading-world-evidence
+      lab: /observatory/#reading-guides
+      lab_label: 查看经济阅读提纲
+      question: 从一份经济材料找出统计期、单位、同比或环比、名义或实际，以及实绩/估计/预测。哪些条件缺失时不能直接比较？
+    - id: policy-status
+      title: 一项政策，从主张走到结果
+      note: reading-world-evidence
+      lab: /observatory/#reading-guides
+      lab_label: 查看政治阅读提纲
+      question: 选一个可回查的文本，区分草案、通过、适用与执行结果；两家报道引用同一文件，是否已经形成两份独立证据？

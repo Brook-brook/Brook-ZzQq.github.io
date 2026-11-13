@@ -42,12 +42,12 @@ test('bounded notes and UTF-8 file size reject excess input', () => {
   assert.throws(() => parseLearningBackup('中'.repeat(MAX_BACKUP_BYTES), ids), /256 KB/);
 });
 
-test('maximum current twelve-step backup round trips even escaped control characters', () => {
-  const twelve = new Set(Array.from({ length: 12 }, (_, i) => `step-${i}`));
-  const state = snapshot(Object.fromEntries([...twelve].map((id) => [id, record(true, '\u0000'.repeat(2000))])));
+test('maximum current fifteen-step backup round trips even escaped control characters', () => {
+  const fifteen = new Set(Array.from({ length: 15 }, (_, i) => `step-${i}`));
+  const state = snapshot(Object.fromEntries([...fifteen].map((id) => [id, record(true, '\u0000'.repeat(2000))])));
   const text = JSON.stringify(state);
   assert.ok(new TextEncoder().encode(text).byteLength < MAX_BACKUP_BYTES);
-  assert.deepEqual(parseLearningBackup(text, twelve), state);
+  assert.deepEqual(parseLearningBackup(text, fifteen), state);
 });
 
 test('import merges new records, preserves all occupied local records and does not mutate inputs', () => {

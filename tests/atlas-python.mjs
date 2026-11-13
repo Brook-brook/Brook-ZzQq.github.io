@@ -46,6 +46,11 @@ try {
     document.getElementById('python-status').textContent.includes('执行完成')
   );
   assert.match(await page.locator('#python-output').innerText(), /Mean: 18.0/);
+  const loopsSource = await page.inputValue('#python-code');
+  await page.fill('#python-code', loopsSource.replace('heights = [12, 18, 24]', 'heights = []'));
+  await page.click('#python-run');
+  await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行遇到错误'));
+  assert.match(await page.locator('#python-output').innerText(), /ValueError: Need at least one value/);
   await page.selectOption('#python-example', 'dict');
   await page.click('#python-run');
   await page.waitForFunction(() =>
@@ -87,7 +92,7 @@ try {
   await page.click('#python-stop');
   assert.match(await page.locator('#python-status').innerText(), /停止并释放/);
   console.log(
-    'PASS real Pyodide in Chromium: 3 examples, exception, capped output, infinite-loop timeout, reload and stop'
+    'PASS real Pyodide in Chromium: 3 examples, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop'
   );
 } finally {
   await browser.close();

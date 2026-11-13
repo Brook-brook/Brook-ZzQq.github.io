@@ -1,0 +1,66 @@
+/* Hallmark · checked: 2026-11-13 · genre: playful (inferred) · scope: app
+ * finish-review: subagent · ship · 0 material findings
+ * built: the project · redesign: polish · audit: docs/design-audit-iteration-16.md · v2.0.0 */
+/* Hallmark · reworded "继续：把输入变成可解释的输出" to "继续自检" · The full current destination remains in aria-label; the compact resume control fits the phone without hiding question titles. */
+/* One-question worksheet. The existing journal remains the only record. */
+.practice-page { padding-top: var(--space-lg); }
+.practice-page .learning-intro h1 { font-size: clamp(1.8rem, 3.2vw, 3rem); margin-block: var(--space-md) var(--space-sm); }
+.practice-page .learning-intro { margin-bottom: var(--space-lg); }
+.practice-page .learning-resume { background: none; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; border: 0; border-bottom: 1px solid var(--glass-border); border-radius: 0; padding: 0 0 var(--space-md); margin-bottom: calc(var(--space-md) + var(--space-2xs)); }
+.practice-picker { padding: var(--space-lg); border-radius: var(--radius-control); margin-bottom: var(--space-lg); }
+.practice-picker h2 { font-size: var(--text-lg); margin: 0 0 calc(var(--space-md) + var(--space-2xs)); }
+.practice-filter-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: calc(var(--space-md) + var(--space-2xs)); }
+.practice-picker label { display: grid; gap: var(--space-xs); color: var(--text-secondary); font-size: var(--text-sm); }
+.practice-picker select, .practice-picker input { width: 100%; min-width: 0; min-height: 48px; padding: var(--space-sm) var(--space-sm); color: var(--text-primary); background: var(--color-field); border: 1px solid var(--color-control-edge); border-radius: var(--radius-control); font: inherit; font-size: 16px; }
+.practice-select-row { display: flex; align-items: end; flex-wrap: wrap; gap: var(--space-sm); margin-top: 0; }
+.practice-select-row label { flex: 1 1 320px; min-width: 0; }
+.practice-select-row button { flex: 0 0 auto; }
+#practice-query-help, .practice-method { color: var(--text-secondary); font-size: var(--text-xs); line-height: 1.8; }
+#practice-query-help { margin: var(--space-sm) 0; }
+.practice-page .practice-filters { padding-top: var(--space-sm); }
+.practice-filter-row { margin-block: var(--space-md); }
+#practice-status { margin: var(--space-md) 0 0; font-size: var(--text-sm); min-height: 1.6em; }
+.practice-method { max-width: 90ch; margin-bottom: calc(var(--space-lg) + var(--space-xs)); }
+.practice-page[data-practice-ready] .learning-layout { grid-template-columns: minmax(180px, .25fr) minmax(0, .75fr); gap: calc(var(--space-xl) + var(--space-xs)); }
+.practice-map .practice-directory { max-height: calc(100vh - 80px); overflow-y: auto; }
+.practice-map .practice-directory > div { padding-block: var(--space-sm); }
+.practice-map .practice-directory h2 { line-height: 1.7; font-size: var(--text-sm); margin: 0; }
+.practice-map a[aria-current="true"] { color: var(--text-primary); text-decoration-thickness: 2px; }
+.practice-page[data-practice-ready] .learning-route { border: 0; padding: 0; }
+.practice-page[data-practice-ready] .learning-route > header h2 { font-size: var(--text-sm); color: var(--text-secondary); font-weight: 400; }
+.practice-page[data-practice-ready] .learning-route > header p { display: none; }
+.practice-page[data-practice-ready] .learning-steps { list-style: none; padding: 0; margin-top: var(--space-md); }
+.practice-page[data-practice-ready] .learning-steps > li { border: 0; padding: 0; }
+.practice-page[data-practice-ready] .learning-steps h3 { font-size: clamp(1.3rem, 2.4vw, 1.8rem); line-height: 1.5; }
+.practice-page[data-practice-ready] .learning-question { font-size: var(--text-md); margin-block: calc(var(--space-md) + var(--space-2xs)); line-height: 1.9; }
+.practice-page[data-practice-ready] .learning-question strong { font-size: var(--text-xs); color: var(--text-secondary); font-weight: 400; }
+.practice-page[data-practice-ready] .learning-challenge { display: none; }
+.practice-page .learning-entry { margin-block: var(--space-lg); }
+.practice-reference { border-top: 1px solid var(--glass-border); padding-top: var(--space-sm); margin-top: var(--space-lg); }
+.practice-reference p { font-size: var(--text-sm); line-height: 1.9; color: var(--text-secondary); max-width: 75ch; }
+.practice-reference .practice-reference-label { font-size: var(--text-xs); color: var(--accent-soft); }
+.practice-reference pre { overflow-x: auto; border-left: 2px solid var(--accent-primary); padding: var(--space-sm) var(--space-md); font-size: var(--text-sm); }
+.practice-counterexample { border-left: 2px solid var(--glass-border); padding-left: var(--space-md); }
+.practice-counterexample strong { display: block; color: var(--text-primary); margin-bottom: var(--space-xs); }
+.practice-page [hidden] { display: none; }
+@media (max-width: 60rem) { .practice-page[data-practice-ready] .learning-layout { grid-template-columns: 1fr; gap: var(--space-lg); } .practice-map { order: 2; display: block; padding-top: var(--space-lg); border-top: 1px solid var(--glass-border); } .practice-map .practice-directory { max-height: none; } .practice-map > a { display: inline-flex; margin-right: calc(var(--space-md) + var(--space-2xs)); } }
+@media (max-width: 40rem) { .practice-picker { padding: var(--space-md); } .practice-filter-row { grid-template-columns: 1fr; gap: var(--space-md); } .practice-select-row label { flex-basis: 100%; } }
+
+.practice-page #learning-resume-title { font-size: var(--text-sm); }
+.practice-page .learning-resume img { width: 32px; height: 32px; flex-basis: 32px; }
+.practice-page .learning-resume p { font-size: var(--text-xs); }
+.practice-page .learning-resume a { font-size: var(--text-sm); }
+.practice-page .practice-method { margin-top: var(--space-lg); margin-bottom: var(--space-lg); }
+
+.practice-resume-content { flex: 1; min-width: 0; }
+.practice-resume-actions { display: flex; align-items: start; justify-content: space-between; gap: var(--space-md); }
+.practice-resume-details { min-width: 0; }
+.practice-page .practice-resume-actions > a { white-space: nowrap; }
+.practice-page .learning-resume { align-items: start; gap: var(--space-sm); }
+
+.practice-page .practice-map { display: block; }
+.practice-page .practice-directory { width: 100%; }
+.practice-page .practice-map > a { display: inline-flex; margin-right: var(--space-md); }
+.practice-select-row button { min-height: 48px; }
+
+.practice-page .learning-intro h1 { text-wrap: balance; overflow-wrap: break-word; min-width: 0; }

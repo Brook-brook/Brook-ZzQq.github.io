@@ -1,0 +1,4 @@
+<div class="practice-reference">
+  <details data-practice-hint><summary>先看一点提示</summary><p>{{ prompt.hint | escape }}</p></details>
+  <details data-practice-reference><summary>展开参考思路与反例</summary><p class="practice-reference-label">参考思路 · 请回到实验和来源核对</p><p>{{ prompt.explanation | escape }}</p>{% if prompt.code %}<pre tabindex="0"><code>{{ prompt.code | escape }}</code></pre>{% endif %}<p class="practice-counterexample"><strong>再用一个反例追问</strong>{{ prompt.counterexample | escape }}</p><p class="learning-help">参考文字不能替代你的推理，也不会自动勾选自检。可修改手记，保留还没有想通的问题。</p></details>
+</div>

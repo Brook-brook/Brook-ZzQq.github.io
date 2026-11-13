@@ -1,4 +1,10 @@
 entries:
+  - title: 自解释练习 · 一次讲清一个问题
+    kind: page
+    url: /study/practice/
+    summary: 按路线或本机手记选题，先解释，再核对提示、参考思路和反例；与学习路线共用同一份本机记录。
+    keywords: [学习, 练习, 复习, 自解释, practice, retrieval, AI, 政经, 反例]
+    featured: true
   - title: GIS × AI · 空间留出与邻居证据
     kind: lab
     url: /playground/spatial-validation/
