@@ -201,3 +201,15 @@ permanent questions, preserving earlier fifteen-record backups. The original AI
 flow/Mercator entry remains; no LLM, external tool service, private upload or
 production change. Next: make curated prerequisite/next-reading reasons visible
 across the growing public library rather than adding another unrelated panel.
+
+## Iteration 18 — follow a reason, not an anonymous edge
+
+The Knowledge page now connects actual public notes through twelve explicitly
+authored preparation/extension/comparison reasons. Public-only generation follows
+publication pruning; invalid/private endpoints fail the build. Existing complete
+directory, URL-backed note filters, all five old SVG links, no-JS access and
+independent journal boundaries remain. Phone diagram labels no longer shrink
+to 6.7px; a native scrolling region preserves a 14px canvas. No new package,
+private index, mastery score, forced learning order or production change.
+Next useful lesson: an original, bounded public-goods experiment explaining
+individual incentives, social-sum objectives and degenerate equality cases.

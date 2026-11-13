@@ -1,0 +1,47 @@
+
+## hallmark-first.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration18/hallmark-audit/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:4185/Brook-ZzQq.github.io/knowledge/
+  REFLEX 49b :1 [320px] link "读 AI 论文：从排行榜到可检验的证据" wraps to 2 lines (a) | fix: Shorten the label or set nowrap
+  REFLEX 49b :1 [320px] link "用 Python 把一个问题拆成输入与输出" wraps to 2 lines (a)
+  REFLEX 49b :1 [320px] link "把 RSS 条目整理成可核对的 JSON" wraps to 2 lines (a)
+  REFLEX 49b :1 [320px] link "读 BestBlogs：先把源码与产品描述分开" wraps to 2 lines (a)
+  REFLEX 49b :1 [320px] link "模型提议之后，谁真正执行工具？" wraps to 2 lines (a)
+  REFLEX 49b :1 [320px] link "换一个区域，模型成绩还说明什么？" wraps to 2 lines (a)
+  REFLEX 49b :1 [320px] link "纳什均衡，为什么不等于社会最优？" wraps to 2 lines (a)
+  REFLEX 49b :1 [320px] link "读全球政经：分清事实、预测与机构立场" wraps to 2 lines (a)
+  REFLEX 72 :1 [1440px] text crowds the edge of its box: details bottom -76px; details.connection-directory bottom -1769px; details.kn… | fix: Pad the box: max(8px, 0.5em) at the sides, max(4px, 0.3em) above and below
+  WARN F19 :1 [1440px] 4 font weights in running use (400, 500, 600, 700) | fix: Three weights at most, display and body together, picked as extremes
+/workspace/Brook-ZzQq.github.io/assets/css/knowledge.css
+  WARN 25 :46 measure 80ch on .connection-directory > p (45-75ch range) | fix: Set prose measure between 45 and 75ch; a one-sentence lede or caption from 28ch
+  WARN 25 :51 measure 85ch on .connection-directory li > p (45-75ch range)
+  WARN F4 :22 2 filled primary-button recipes: .knowledge-page button + .knowledge-page button[ari… | fix: One filled primary per page; demote the rest to outline/quiet variants
+sloplint: 0 FAIL, 9 REFLEX, 4 WARN across 1 file(s) and 1 URL(s).
+
+## hallmark-second.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration18/hallmark-audit/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:4186/Brook-ZzQq.github.io/knowledge/
+  REFLEX 71 :1 [1440px] heads nearer what precedes them than what they head: h2 "沿一个问题，读到能解释。" 4px over, 16px under; h2 "从原理，到实验。" 21p… | fix: At least twice the space above a head as below it
+  WAIVED 49b :1 [320px] link "读 AI 论文：从排行榜到可检验的证据" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "用 Python 把一个问题拆成输入与输出" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "读 BestBlogs：先把源码与产品描述分开" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "读全球政经：分清事实、预测与机构立场" wraps to 2 lines (a)
+/workspace/Brook-ZzQq.github.io/assets/css/knowledge.css
+  WARN F4 :26 2 filled primary-button recipes: .knowledge-page button + .knowledge-page button[ari… | fix: One filled primary per page; demote the rest to outline/quiet variants
+sloplint: 0 FAIL, 1 REFLEX, 1 WARN, 4 WAIVED across 1 file(s) and 1 URL(s).
+
+## hallmark-final.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration18/hallmark-audit/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:4188/Brook-ZzQq.github.io/knowledge/
+  WAIVED 49b :1 [320px] link "读 AI 论文：从排行榜到可检验的证据" wraps to 2 lines (a)
+/workspace/Brook-ZzQq.github.io/assets/css/knowledge.css
+  ANSWERED F4 :28 2 filled primary-button recipes: .knowledge-page button + .knowledge-page button[ari…
+sloplint: 0 FAIL, 0 WARN, 1 WAIVED, 1 ANSWERED across 1 file(s) and 1 URL(s).
+
+## hallmark-resolved.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration18/final-audit/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:4193/Brook-ZzQq.github.io/knowledge/
+  WAIVED 49b :1 [320px] link "读 AI 论文：从排行榜到可检验的证据" wraps to 2 lines (a)
+/workspace/Brook-ZzQq.github.io/assets/css/knowledge.css
+  ANSWERED F4 :29 2 filled primary-button recipes: .knowledge-page button + .knowledge-page button[ari…
+sloplint: 0 FAIL, 0 WARN, 1 WAIVED, 1 ANSWERED across 1 file(s) and 1 URL(s).

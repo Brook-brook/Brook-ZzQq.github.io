@@ -253,3 +253,22 @@
   source provenance and honest script/template labels, never journal material.
   Parameters stay in page memory. Preserve the earlier fifteen permanent step IDs
   as the journal extends to eighteen, with a real legacy-15 resume/export test.
+
+## Public knowledge connections (Iteration 18)
+
+- `_data/knowledge_connections.yml` contains explicitly authored, AI-assistance-
+  disclosed preparation/extension/comparison suggestions with reasons, not inferred
+  semantic edges, strict prerequisites, mastery or personalized recommendations.
+- The post_read hook runs after publication/route checks and derives public
+  metadata only. Private/missing endpoints, duplicates, unsafe URLs and unbounded
+  fields fail the real build. Do not include note bodies, browser records or new
+  progress fields. Keep --unpublished and demotion/cleanup build cases.
+- `/knowledge/` retains the complete note directory/filter and five original SVG
+  destinations. Full connection directory and graph work without JS; invalid
+  models leave the native fallback open. Keep diagram text at 14 effective pixels
+  using a labelled keyboard-scrollable canvas on phone.
+- New selection writes only a public note fragment, preserving history.state;
+  no private storage reads/writes, visits or inferred completion. The older note
+  directory's URL-backed filters remain distinct from global private-query search.
+  Keep complete title links, explicit empty/type recovery, native select focus,
+  actual note/lab/practice links and reduced-motion cancellation tested.
