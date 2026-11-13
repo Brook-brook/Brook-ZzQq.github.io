@@ -120,3 +120,27 @@
       lab: /observatory/#reading-guides
       lab_label: 查看政治阅读提纲
       question: 选一个可回查的文本，区分草案、通过、适用与执行结果；两家报道引用同一文件，是否已经形成两份独立证据？
+- id: tool-evidence
+  challenge: 给一个只读工具写出输入契约、允许操作、回执检查和不能支持的结论；把参数错误、执行错误与解释越界分开记录。
+  title: 从调用提议，到能核对的结果
+  summary: 实际执行本机 GIS 工具，沿参数、权限、回执与资料边界认识 Tool Calling；不把脚本当作真实模型。
+  prerequisite: 能阅读简单 JSON；不需要模型账号或 API Key。
+  steps:
+    - id: tool-contract
+      title: JSON 合法，就可以执行了吗？
+      note: tool-calling-boundaries
+      lab: /playground/tool-calling/
+      lab_label: 修改参数与开放工具
+      question: 把 radius_m 的字符串改成数值，再尝试未开放工具。语法合法、符合参数契约、权限允许和符合用户意图，为什么不是同一件事？
+    - id: tool-observation
+      title: 这份结果，属于哪一次调用？
+      note: tool-calling-boundaries
+      lab: /playground/tool-calling/
+      lab_label: 检查错配回执
+      question: 操作回执错误案例，修改参数后观察旧结果。调用 ID 对应、本机重算一致，分别能证明什么，又不能证明什么？
+    - id: tool-boundaries
+      title: 算出了距离，就能导航了吗？
+      note: tool-calling-boundaries
+      lab: /playground/tool-calling/
+      lab_label: 对照距离与目录范围
+      question: 查询半径 0 的结果，或查未收录的食堂。为什么空结果不是现实不存在？球面距离、WGS84 坐标和步行路线有哪些不同？

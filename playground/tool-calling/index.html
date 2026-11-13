@@ -1,0 +1,47 @@
+---
+layout: atlas
+title: GIS Tool Calling 实验
+permalink: /playground/tool-calling/
+section: Playground
+universe: true
+toolcalling: true
+description: 修改结构化调用，逐步执行本机只读 GIS 工具，核对参数、回执与解释的边界。
+---
+<div class="tool-page" data-tool-lab>
+  <nav class="breadcrumbs" aria-label="面包屑"><a href="{{ '/playground/' | relative_url }}">Playground</a><span aria-hidden="true">/</span><span>Tool Calling</span></nav>
+  <header class="tool-intro"><h1>模型提议，程序执行。</h1><p>改参数，看结果，弄清工具调用的边界。<a href="{{ '/knowledge/tool-calling-boundaries/' | relative_url }}">先读原理</a></p></header>
+  <details class="tool-boundary"><summary>脚本提议，本机计算。查看实验范围</summary><p>这里没有调用大语言模型，也没有实现 MCP；调用与说明均来自固定教学模板。三个工具只读已有的 {{ site.data.campus.places.size }} 个地点代表点。</p></details>
+  <fieldset id="tool-controls" disabled>
+    <legend class="tool-sr-only">逐步操作一次工具调用</legend>
+    <div class="tool-scenario"><label for="tool-scenario">想探索的问题<select id="tool-scenario"><option value="distance">两座图书馆相距多远？</option><option value="nearby">主图书馆 200 米内有什么？</option><option value="search">按名字找图书馆</option><option value="invalid">错误案例：把米写成文字</option><option value="unknown">错误案例：请求未开放工具</option><option value="receipt">错误案例：回执来自另一调用</option></select></label><p id="tool-request">比较主图书馆和农医图书馆的代表点距离；这能直接用于步行导航吗？</p></div>
+    <ol class="tool-progress" aria-label="本次调用阶段"><li aria-current="step">提议</li><li>校验</li><li>执行</li><li>回执</li><li>解释</li></ol>
+    <div class="tool-workspace">
+      <section class="tool-proposal glass-light" aria-labelledby="tool-proposal-title">
+        <h2 id="tool-proposal-title">先检查这份提议</h2>
+        <label for="tool-call">工具名与参数 JSON</label>
+        <textarea id="tool-call" rows="8" maxlength="4096" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="tool-input-help tool-status">{
+  "name": "measure_distance",
+  "arguments": {
+    "from": "main-library",
+    "to": "medical-library"
+  }
+}</textarea>
+        <p id="tool-input-help" class="tool-help">最多 4096 字符。改动会清除旧校验、结果和导出；不执行 JSON 中的文字。</p>
+        <p id="tool-status" class="tool-status" role="status">正在校验随站点提供的地点目录；尚未执行工具。</p>
+        <div class="tool-actions"><button id="tool-next" type="button" class="tool-primary">检查调用</button><button id="tool-reset" type="button">重置例子</button><a href="#tool-result-title" id="tool-result-jump" hidden>查看结果</a></div>
+        <details class="tool-contracts"><summary>查看开放工具与参数契约</summary><p>参数校验由本页为这三个契约编写；这不是通用 JSON Schema 校验器。工具名称和“只读”描述不会授予其他权限。</p><div id="tool-contract-list"><p><code>find_places</code>：query 为 1 到 80 字符文字；category 为已有类别。</p><p><code>measure_distance</code>：from、to 为已有地点 ID。</p><p><code>nearby_places</code>：center 为已有 ID；radius_m 为 0 到 3000 的数值。</p></div><p>每次执行均需点击确认。没有网络请求、手记读取或网站发布工具。</p></details>
+      </section>
+      <section class="tool-observation" aria-labelledby="tool-result-title">
+        <div class="tool-result-heading"><h2 id="tool-result-title" tabindex="-1">结果还没发生</h2><button id="tool-export" type="button" disabled>导出本次 JSON</button></div>
+        <div id="tool-empty" class="tool-empty"><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" width="48" height="48" alt=""><div><p>先读提议，再决定执行。</p><p>校验通过只表示符合本页契约，不表示问题已经得到回答。</p></div></div>
+        <div id="tool-result" hidden><p id="tool-result-caption"></p><pre tabindex="0" aria-label="本次工具输出或回执 JSON"><code id="tool-output"></code></pre></div>
+        <section id="tool-answer" class="tool-answer" aria-labelledby="tool-answer-title" hidden><h3 id="tool-answer-title" tabindex="-1">固定模板怎样解释</h3><p id="tool-answer-text"></p><p class="tool-help">这段话按回执数值填入模板。回执检查能重算本页工具的一致性，不能证明资料最新，也不能证明现实结论。</p><a href="{{ '/study/practice/#tool-observation' | relative_url }}">用自己的话解释一次</a></section>
+      </section>
+    </div>
+  </fieldset>
+  <noscript><p>启用 JavaScript 后可编辑并运行工具。上方默认提议、下方完整地点资料、方法说明与教程仍可阅读。</p></noscript>
+  <aside class="tool-memory"><p>输入与计算只留在本页内存中，刷新后消失。导出由你主动操作；请勿在参数中输入私密内容。</p><a href="{{ '/study/paths/#tool-contract' | relative_url }}">前往学习路线，留下自己的解释</a></aside>
+  <details id="tool-source" class="tool-source"><summary>核对地点 ID、坐标与来源</summary><p>{{ site.data.campus.note }} 原资料核对日期：{{ site.data.campus.checked }}；本实验没有重新核实地点现状。</p><div class="tool-table-wrap" tabindex="0" role="region" aria-label="地点来源表，可横向滚动"><table><caption>与校园地图共用的 {{ site.data.campus.places.size }} 个 WGS84 代表点；坐标顺序为经度、纬度。</caption><thead><tr><th scope="col">地点 / ID</th><th scope="col">经度、纬度</th><th scope="col">公开来源</th></tr></thead><tbody>{% for place in site.data.campus.places %}<tr><th scope="row">{{ place.name }}<code>{{ place.id }}</code></th><td>{{ place.coordinates[0] }}, {{ place.coordinates[1] }}</td><td><a href="{{ place.source }}">{{ place.osm }}</a></td></tr>{% endfor %}</tbody></table></div><p>© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>，ODbL。<a href="{{ '/explore/' | relative_url }}">在原校园地图中查看</a></p></details>
+  <section class="tool-method"><h2>一次成功执行，还留下哪些问题？</h2><ol><li><strong>参数合法 ≠ 意图正确。</strong>两点相同也可以得到合法的 0 米；它仍可能答错问题。文字检索不会理解“安静”或推断开放时间。</li><li><strong>空结果 ≠ 现实中不存在。</strong>半径只查这份目录，排除中心点；未舍入距离 ≤ 半径才入选。食堂与宿舍没有收录点位。</li><li><strong>距离模型有范围。</strong>Haversine 公式采用 6371008.8 米平均地球半径，输出球面短弧长度；不是 WGS84 椭球测地线、建筑入口间距离或步行路线。</li><li><strong>工具结果是资料，不是指令。</strong>本页只按白名单分发，始终按文字显示参数与结果。真实 Agent 还需处理不可信内容、权限、预算、超时与失败。</li></ol><div class="page-inline-links"><a href="{{ '/knowledge/tool-calling-boundaries/' | relative_url }}">继续读：工具、模型与权限</a><a href="{{ '/playground/spatial-validation/' | relative_url }}">再问：计算正确，评测就正确吗？</a></div></section>
+  <div data-tool-catalog hidden>{{ site.data.campus | jsonify | escape }}</div>
+</div>
