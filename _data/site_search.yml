@@ -1,4 +1,9 @@
 entries:
+  - title: Agent 循环 · 提议、执行与停止
+    kind: lab
+    url: /playground/agent-runtime/
+    summary: 固定脚本逐步提议，实际执行只读GIS工具，核对批量调用、模拟故障、旧回执、预算和停止；不调用模型。
+    keywords: [Agent, 智能体, agent loop, runtime, 工具调用, 预算, 停止, 回执, trace, Python]
   - title: AI 与 Agent 开发学习路径
     kind: page
     url: /study/ai/

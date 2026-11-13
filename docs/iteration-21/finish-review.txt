@@ -1,0 +1,23 @@
+Fresh-context Hallmark finish review, gates.md §6
+Reviewer: /root/iteration21_finish_review
+The reviewer did not inherit the build transcript. Screenshots were inputs.
+
+fix
+
+1. Phone evidence navigation — #runtime-result-jump follows the observations,
+   placing “跳到当前证据” after the evidence it targets; at375px it remains below
+   the action viewport after execution. Move it into the current-action panel
+   beside the step/status controls.
+
+The idea and brand theme describe the page. The largest gap is reaching newly
+produced evidence from the phone controls.
+
+Keep the explicit separation between proposal, execution, accepted receipt, and
+stopped versus completed outcomes.
+
+Builder self-score after recapture: resolved.
+First relocation below status was still below the action viewport and failed
+the test. Final relocation into a reserved-height phase row appears next to
+the action. Actual375/390px executed-state captures and focus-target assertions
+pass. This was a plain interaction finding, no Floor/rebuild second score owed.
+The original verdict remains fix with one resolved finding, not rewritten ship.

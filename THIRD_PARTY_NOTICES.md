@@ -273,3 +273,17 @@ the real SDK against in-memory fake HTTP responses. No package is redistributed
 or added to the site. Actual installed license metadata and the precise source/
 testing limits are recorded in docs/ai-foundations-source-review.md and
 docs/iteration-20-compliance.md. Existing Hallmark/asset licenses remain intact.
+
+## Iteration 21 bounded loop and local SDK extension
+
+The script-driven runtime model/UI, original Python loop, exercises and tests
+are AI-assisted work. No source implementation, course output, icon, font, image
+or new runtime package is copied. The exact existing six-point WGS84 catalog and
+ODbL provenance/check date are reused, not independently refreshed.
+
+The additional SDK function-call, input/output and includable-type documents were
+read at the same pinned OpenAI Python commit above. Its full Apache-2.0 license
+and all earlier reference licenses remain. Real SDK 3.50.0 is installed only in
+an ignored offline-test environment. Fake in-memory responses do not demonstrate
+live model performance, and no SDK/venv/bytecode is redistributed with the site.
+See [iteration-21-compliance.md](docs/iteration-21-compliance.md).

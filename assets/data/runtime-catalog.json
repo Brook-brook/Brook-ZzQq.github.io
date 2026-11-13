@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /assets/data/runtime-catalog.json
+---
+{{ site.data.campus | jsonify }}
