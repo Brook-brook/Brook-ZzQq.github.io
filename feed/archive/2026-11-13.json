@@ -1135,6 +1135,42 @@
       "changed_at": "2026-11-13T08:19:01.096Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-caa6051ad9a7a5b6a55bb01485dea5545e02358a954b62bf771fbb23f2ad18bc",
+      "source_id": "un-news",
+      "title": "COP31: New initiative targets AI and reliable climate change information",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168798",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-13T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-13T13:52:55.300Z",
+      "changed_at": "2026-11-13T13:52:55.300Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-9cf54d021a2bc4e96bd9ea419d1eb96198010b1d7bf0dc24b437c910a27bee27",
+      "source_id": "un-news",
+      "title": "DR Congo Ebola outbreak: armed groups unrest holds back response",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168797",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-13T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-13T13:52:55.300Z",
+      "changed_at": "2026-11-13T13:52:55.300Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
