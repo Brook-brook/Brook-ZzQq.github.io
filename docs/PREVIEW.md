@@ -34,6 +34,7 @@ python3 -m http.server 8000
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/public-goods/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/study/ai/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/agent-runtime/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/retrieval/
 
 服务保持运行，停止时按Ctrl+C。端口8000被占用时，命令和网址一起改为8001。
 
@@ -43,9 +44,13 @@ python3 -m http.server 8000
 Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐统一使用上面的
 目录层级，避免此前出现的404或原始黑白模板。
 
-开发分支依次基于前一轮；最新21包含17–20的代码。CI产物默认保留7天，
+开发分支依次基于前一轮；最新22包含17–21的代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。
 
 循环实验底部可显式下载Python例子与配套公开目录。代码由你在自己的本地/
 服务端安装固定SDK后运行；HTTP预览本身不执行Python，也不需要API Key。
 实际项目测试只用假HTTP传输，没有验证真实模型或你的账户权限。
+
+检索实验直接在浏览器运行，不需模型或Key。默认前两条含一个旧版片段；
+改成v2后，手动放入两段试用/正式空间证据，观察完整引用文本的167字符。
+语料和标注均为原创虚构教学材料，不是实际校园或产品规则。

@@ -24,11 +24,14 @@
   separate proposal/dispatch budgets, batches, correlation, partial-work exports
   and explicit stopped states. Complementary local/server Python SDK loop is
   tested offline; it is not deployed as a model service.
+- Original fictional-manual retrieval workbench with literal ranking, explicit
+  version/task references, separate precision/recall/single-query RR and a complete
+  citation/condition-preserving context budget. No LLM/vector or private index.
 
 ## Next useful increments
 
-1. A bounded retrieval-evidence exercise, separating literal retrieval, annotated
-   relevance, source conditions and any later real model generation.
+1. Clarify Tool/Skill/MCP/runtime boundaries and make each article's actual
+   self-explanation questions easier to reach without new tracking or grades.
 2. C++ RAII/smart-pointer ownership examples; assignment and move semantics.
 3. Map analysis with a verified dataset and CRS-aware distance/buffer operations.
 4. Extend the real bounded local GIS tools only with explicit contracts/provenance;

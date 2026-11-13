@@ -287,3 +287,14 @@ and all earlier reference licenses remain. Real SDK 3.50.0 is installed only in
 an ignored offline-test environment. Fake in-memory responses do not demonstrate
 live model performance, and no SDK/venv/bytecode is redistributed with the site.
 See [iteration-21-compliance.md](docs/iteration-21-compliance.md).
+
+## Iteration 22 literal retrieval and complete evidence
+
+The fictional manual corpus, public task annotations, retrieval/context model,
+interface and tests are original AI-assisted teaching work. No article body,
+embedding corpus, model output, runtime package, font, icon or picture is copied.
+The pinned Claude cookbooks evaluation README above was reread for the separation
+of retrieval and end-to-end evaluation only; its complete MIT notice remains.
+No upstream API experiment or performance result is reproduced. Existing brand,
+Mote, source licenses and all earlier notices remain. See
+[iteration-22-compliance.md](docs/iteration-22-compliance.md).

@@ -1,0 +1,25 @@
+Fresh-context Hallmark finish review, gates.md §6
+Reviewer: /root/iteration22_finish_review
+
+fix
+
+1. Gate39a (Floor) — the search row's version selector renders50px high beside
+   the52.39px search button; align select, input and button to one shared height.
+   Confirmed at320px, also visible in the desktop captures.
+
+Idea/theme gap: none. Lavender glass distinguishes selected context; complete
+fragments retain version and scope. Phone source/context links focus visible
+targets, and the80-character budget explicitly rejects the82-character fragment
+without truncating it.
+
+Preserve the separation between lexical ranking and complete, scoped evidence.
+
+Builder self-score after recapture: resolved.
+Shared box sizing, em-aware height,52px minimum and1.5 line height replace
+different intrinsic control sizing. Actual browser assertions confirm normal
+and scaled equality. All five prescribed captures were repeated.
+
+Required independent scoring round for the Floor finding:
+resolved — Gate39a: recaptures show aligned controls. Live measurements confirm
+all three search controls are52px at320/390/768/1440px and grow equally to74px
+with200% text.

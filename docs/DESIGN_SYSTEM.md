@@ -26,6 +26,21 @@ stripe. A finite 320ms evidence settle uses transform/opacity and cancels on a
 live reduced-motion change. Native details hold source tables, complete JSON
 and the optional local Python extension.
 
+## Evidence selection (Iteration 22)
+
+Retrieval is an app screen: unboxed candidates face one light-glass context
+surface. Actual fragments, versions, local action feedback and source anchors
+are the visual content. Compact task labels avoid duplicating the full applied
+question; native details hold ranking rules and budgets. Metrics support the
+fragments instead of becoming oversized achievement counters.
+
+Search controls share52px at normal text, using em-aware height so larger text
+grows them equally. Candidate buttons keep focus on selection. A context anchor
+shares the action row on phone, and budget failure appears directly beneath it.
+Whole evidence stays readable without animated scrolling; only a finite220ms
+context settle uses opacity/transform and cancels under reduced motion. No new
+palette, nested glass, font, idle effect or UI runtime.
+
 ## Source of truth
 
 `assets/css/atlas-tokens.css` defines colors, font stacks, spacing, type, easing,
