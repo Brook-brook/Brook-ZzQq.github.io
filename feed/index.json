@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-13T04:14:06.668Z",
+  "attempted_at": "2026-11-13T06:15:49.130Z",
   "interval_minutes": 120,
   "last_complete_at": null,
   "total": 167,
@@ -16,13 +16,13 @@
         "arxiv.org",
         "www.arxiv.org"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-13T04:14:06.668Z",
-      "last_success_at": "2026-11-13T04:14:06.668Z",
+      "status": "ok",
+      "attempted_at": "2026-11-13T06:15:49.130Z",
+      "last_success_at": "2026-11-13T06:15:49.130Z",
       "accepted": 0,
       "invalid": 0,
       "limited": false,
-      "etag": "12cc48a13d2a1e68f8378be7d3039dc2c451d4a52c21a3773b17f5efe8ee8e70",
+      "etag": "aa102cb73834fabb36a65ac8b9ad24179e38938d0b5f25943dd6e952def9c0fe",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T04:14:06.668Z",
-      "last_success_at": "2026-11-13T04:14:06.668Z",
+      "attempted_at": "2026-11-13T06:15:49.130Z",
+      "last_success_at": "2026-11-13T06:15:49.130Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T04:14:06.668Z",
-      "last_success_at": "2026-11-13T04:14:06.668Z",
+      "attempted_at": "2026-11-13T06:15:49.130Z",
+      "last_success_at": "2026-11-13T06:15:49.130Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-13T04:14:06.668Z",
-      "last_success_at": "2026-11-13T04:14:06.668Z",
+      "attempted_at": "2026-11-13T06:15:49.130Z",
+      "last_success_at": "2026-11-13T06:15:49.130Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T04:14:06.668Z",
-      "last_success_at": "2026-11-13T04:14:06.668Z",
+      "attempted_at": "2026-11-13T06:15:49.130Z",
+      "last_success_at": "2026-11-13T06:15:49.130Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794503210-gzip\"",
-      "last_modified": "Thu, 12 Nov 2026 17:06:50 GMT",
+      "etag": "\"1794503182-gzip\"",
+      "last_modified": "Thu, 12 Nov 2026 17:06:22 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-13T04:14:06.668Z",
+      "attempted_at": "2026-11-13T06:15:49.130Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T04:14:06.668Z",
-      "last_success_at": "2026-11-13T04:14:06.668Z",
+      "attempted_at": "2026-11-13T06:15:49.130Z",
+      "last_success_at": "2026-11-13T06:15:49.130Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -1258,21 +1258,6 @@
   ],
   "recent_runs": [
     {
-      "at": "2026-11-12T14:18:46.219Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 1,
-      "revisions": 1,
-      "total": 154,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
-    {
       "at": "2026-11-12T16:14:35.619Z",
       "status": "partial",
       "sources_ok": 6,
@@ -1364,6 +1349,21 @@
     },
     {
       "at": "2026-11-13T04:14:06.668Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 0,
+      "revisions": 0,
+      "total": 167,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T06:15:49.130Z",
       "status": "partial",
       "sources_ok": 6,
       "sources_total": 7,
