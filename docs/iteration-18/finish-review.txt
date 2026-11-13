@@ -1,0 +1,25 @@
+Fresh-context review: /root/iteration18_finish_review
+Explicit Hallmark gates.md §6 requirement; read-only reviewer; no hero stage for
+this app screen.
+
+fix
+
+- Copy defect — #connection-status appends 。 after question titles, producing
+  共享？。0 条…; use a punctuation-aware separator.
+
+The stamp describes the page: a public note leads to authored reasons and real
+destinations. No larger gap.
+
+Desktop/mobile selection, keyboard controls, empty-state recovery, directory
+filters, five-node scrolling, and no-JS access work; no browser errors.
+
+The old page exposed the directory and foundation diagram sooner. Both remain
+available.
+
+Preserve the authored reasons, honest uncertainty, full titles, and working
+practice links.
+
+Builder resolution: resolved. Keep the actual title intact on one status line,
+then place the count/explanation on a separate line (white-space: pre-line).
+No punctuation is appended to the title. Recapture and affected browser suite
+follow. No Floor finding or rebuild verdict required a second scoring round.

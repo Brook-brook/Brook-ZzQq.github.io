@@ -6,6 +6,17 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 18 connections with reasons
+
+`feat/atlas-iteration-18` continues seventeenth-round `950a02c`. Knowledge adds
+twelve original, AI-disclosed reading connections across the eleven public notes,
+with direction/reasons, actual experiments and existing self-explanation links.
+No inferred mastery, private index or new storage. Complete no-JS directory and
+the five-node foundation diagram remain; phone labels are now 14px with native
+keyboard scrolling. The public model is built only after publication filtering.
+See [delivery](docs/ATLAS-ITERATION-18.md), [design audit](docs/design-audit-iteration-18.md)
+and [resource/privacy review](docs/iteration-18-compliance.md).
+
 ## Iteration 17 tool boundaries
 
 `feat/atlas-iteration-17` continues unmerged sixteenth-round `4d2dfc1`. An editable

@@ -215,3 +215,14 @@ independent conceptual explanation with pinned references is added; no upstream
 code, diagrams, sample messages or library are copied or loaded. Existing full
 licenses, Mote and the previously installed ignored Hallmark tool remain.
 See docs/iteration-17-compliance.md.
+
+## Iteration 18 review
+
+Knowledge's original editorial connections, public metadata validation, native
+selection and scoped styles add no dependency, copied code, external font, image,
+icon or new map data. Existing Mote, original conceptual SVG and every earlier
+license/attribution remain. Hallmark's already-reviewed pinned tooling is reused
+only for the actual local design audit. Relations are AI-assisted reading
+suggestions based on the existing public tutorials, not newly verified news,
+empirical evidence, private journals or inferred personal progress.
+See docs/iteration-18-compliance.md.

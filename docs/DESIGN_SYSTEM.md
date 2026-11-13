@@ -291,3 +291,18 @@ state change receives one cancellable 320ms/4px settle; reduced-motion changes
 cancel it. Use the existing radius-card/radius-control tokens, never undefined
 aliases. The AI entry retains its source-backed conceptual flow and Mercator link,
 removes inert labels/italic fragment, and leads with the genuinely operable tool.
+
+## Iteration 18 — a neighborhood of reasons
+
+Knowledge uses the same Universe shell as Study, avoiding early Atlas global
+header/article/details rules on the new layout. One light-glass selector leads
+to an unboxed note and ruled reasons with actual destinations. The phone keeps
+DOM order and a complete selected title; full article links may wrap to two lines.
+Native details expose all connections and the retained foundation diagram. Its
+600px conceptual canvas scrolls inside a labelled region, preserving 14px type
+instead of scaling tiny labels. No physics layout, tracking or idle animation.
+
+Explicit selection uses one 320ms/4px feedback and live reduced-motion cancellation.
+Filters represent pressed states, not primary CTA fills. Keep closed native detail
+children out of layout, and put the title/status count on separate lines so real
+question punctuation is preserved. No-JS always exposes the complete directory.
