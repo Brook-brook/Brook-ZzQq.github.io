@@ -40,9 +40,9 @@ try {
     });
     await open(page);
     assert.equal(await page.locator('#primary-nav [aria-current="page"]').innerText(), 'Study');
-    assert.equal(await page.locator('[data-learning-path]').count(), 4);
-    assert.equal(await page.locator('[data-learning-step]').count(), 9);
-    assert.match(await page.locator('#learning-progress').innerText(), /0 \/ 9/);
+    assert.equal(await page.locator('[data-learning-path]').count(), 5);
+    assert.equal(await page.locator('[data-learning-step]').count(), 12);
+    assert.match(await page.locator('#learning-progress').innerText(), /0 \/ 12/);
     assert.equal(await keyState(page), null, 'merely opening a page does not create progress');
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
@@ -61,7 +61,7 @@ try {
     }
     await first(page).locator('[data-step-complete]').focus();
     await page.keyboard.press('Space');
-    assert.match(await page.locator('#learning-progress').innerText(), /1 \/ 9/);
+    assert.match(await page.locator('#learning-progress').innerText(), /1 \/ 12/);
     await first(page).locator('summary').click();
     await page.evaluate(() => {
       window.learningStatusChanges = 0;
@@ -101,7 +101,7 @@ try {
     assert.deepEqual(await keyState(page), saved, 'preview never writes');
     await page.click('#learning-import-confirm');
     assert.match(await page.locator('#learning-backup-feedback').innerText(), /已补入 1 条记录并保存在当前浏览器/);
-    assert.match(await page.locator('#learning-progress').innerText(), /2 \/ 9/);
+    assert.match(await page.locator('#learning-progress').innerText(), /2 \/ 12/);
     const merged = await keyState(page);
     assert.equal(merged.entries['python-values'].note, saved.entries['python-values'].note);
     assert.equal(await second(page).locator('[data-step-complete]').isChecked(), true);
@@ -119,7 +119,7 @@ try {
     page.once('dialog', (dialog) => dialog.accept());
     await page.click('#learning-clear');
     assert.equal(await keyState(page), null);
-    assert.match(await page.locator('#learning-progress').innerText(), /0 \/ 9/);
+    assert.match(await page.locator('#learning-progress').innerText(), /0 \/ 12/);
     assert.equal(await page.evaluate(() => localStorage.getItem('learning-test-other-feature')), 'keep-me');
     assert.equal(await page.evaluate(() => localStorage.getItem('atlas-theme')), theme);
     assert.deepEqual(actionRequests, [], 'saving, import and export do not upload or fetch');
@@ -147,7 +147,7 @@ try {
     await open(page);
     await first(page).locator('[data-step-complete]').check();
     assert.match(await page.locator('#learning-storage').innerText(), /暂存|无法写入/);
-    assert.match(await page.locator('#learning-progress').innerText(), /1 \/ 9/);
+    assert.match(await page.locator('#learning-progress').innerText(), /1 \/ 12/);
     assert.equal((await backup(page)).entries['python-values'].completed, true);
     const warning = await page.locator('#learning-storage').innerText();
     await importFile(page, { version: 2, entries: {} });
@@ -162,6 +162,26 @@ try {
     await context.close();
     console.log(`PASS learning storage ${mode}: no false durable-save claim, memory/export remain usable`);
   }
+
+  const legacy = await browser.newContext();
+  const originalIds = ['python-values', 'rss-records', 'source-evidence', 'mercator-assumptions', 'map-provenance', 'copy-relations', 'lifetime-boundaries', 'individual-collective', 'pure-equilibrium'];
+  const oldBackup = { version: 1, entries: Object.fromEntries(originalIds.map((id) => [id, { completed: true, note: `Original v1: ${id}` }])) };
+  const originalText = JSON.stringify(oldBackup, null, 2);
+  await legacy.addInitScript(({ key, text }) => { if (localStorage.getItem(key) === null) localStorage.setItem(key, text); }, { key: LEARNING_KEY, text: originalText });
+  const legacyPage = await legacy.newPage(); await open(legacyPage);
+  assert.match(await legacyPage.locator('#learning-progress').innerText(), /9 \/ 12/);
+  assert.equal(await legacyPage.evaluate((key) => localStorage.getItem(key), LEARNING_KEY), originalText, 'old nine-step data is not rewritten on open');
+  assert.deepEqual(await backup(legacyPage), oldBackup);
+  const newStep = legacyPage.locator('[data-learning-step="classification-denominators"]');
+  assert.equal(await newStep.locator('[data-step-complete]').isChecked(), false);
+  await newStep.locator('summary').click();
+  await newStep.locator('textarea').fill('A new explanation, without changing old entries.');
+  const extended = await keyState(legacyPage);
+  for (const id of originalIds) assert.deepEqual(extended.entries[id], oldBackup.entries[id]);
+  assert.equal(extended.entries['classification-denominators'].completed, false);
+  assert.equal(extended.entries['classification-denominators'].note, 'A new explanation, without changing old entries.');
+  await legacy.close();
+  console.log('PASS learning v1 compatibility: original nine IDs/read-only opening/export preserved; new steps extend the same journal');
 
   const multi = await browser.newContext();
   const a = await multi.newPage(); const b = await multi.newPage();
@@ -179,11 +199,11 @@ try {
   const nojs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 900 } });
   const page = await nojs.newPage();
   await page.goto(base + '/study/paths/');
-  assert.equal(await page.locator('[data-learning-step]').count(), 9);
-  assert.equal(await page.locator('.learning-question:visible').count(), 9);
+  assert.equal(await page.locator('[data-learning-step]').count(), 12);
+  assert.equal(await page.locator('.learning-question:visible').count(), 12);
   assert.equal(await page.locator('[data-learning-controls]:visible').count(), 0);
   assert.ok(await page.locator('noscript').isVisible());
-  assert.ok((await page.locator('.learning-steps a[href]').count()) >= 9);
+  assert.ok((await page.locator('.learning-steps a[href]').count()) >= 12);
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   await nojs.close();
   console.log('PASS learning no-JS: routes, real resources and questions readable without fake controls');

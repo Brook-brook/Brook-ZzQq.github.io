@@ -1,4 +1,9 @@
 entries:
+  - title: GIS × AI · 空间留出与邻居证据
+    kind: lab
+    url: /playground/spatial-validation/
+    summary: 在 80 个合成点上运行真实 kNN，对照随机与整区留出，核对距离、类别和逐点预测。
+    keywords: [GIS, AI, spatial validation, kNN, 空间验证, 随机划分, 测试集, 邻居, 欧氏距离]
   - title: AI 评测 · 阈值与错误
     kind: lab
     url: /playground/evaluation/

@@ -74,3 +74,25 @@
       lab: /playground/nash/
       lab_label: 编辑收益矩阵
       question: 用匹配硬币的收益矩阵测试探索器。没有纯策略均衡，是否等于不存在任何纳什均衡？
+- id: ai-spatial-evidence
+  challenge: 为一个空间分类问题写下部署区域、划分依据、错误成本和保留的独立测试，再用一个样本追踪预测证据。
+  title: 从 AI 指标到空间验证
+  summary: 核对指标的分母，改变留出区域，沿训练邻居回到可以检查的证据。
+  prerequisite: 知道点坐标和二分类；公式可结合实验阅读。
+  steps:
+    - id: classification-denominators
+      title: 90% 准确率回答了什么？
+      note: ai-evaluation-basics
+      lab: /playground/evaluation/
+      lab_label: 调整阈值与类别
+      question: 稀有正例场景把阈值调到 100，再换成没有正例。两个场景的召回率为什么分别为 0 和未定义？
+    - id: spatial-holdout
+      title: 从已采样区域，走向新的区域
+      note: spatial-validation
+      lab: /playground/spatial-validation/
+      lab_label: 对照两种留出
+      question: 同一组点换成对角线标签，整区留出的表现一定更差吗？选一个测试点，核对训练邻居、类别比例和预测目标。
+    - id: evaluation-evidence
+      title: 把模型成绩放回使用场景
+      note: reading-ai-evidence
+      question: 阅读一份模型报告，找出任务、部署分布、划分、基线和不确定性。缺少空间外推测试时，哪些结论仍不能确认？

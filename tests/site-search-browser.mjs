@@ -23,7 +23,7 @@ try {
     page.on('request', (request) => requests.push(request.url()));
     await page.goto(base + '/');
     assert.equal(requests.filter((url) => url.includes('/assets/data/site-search.json')).length, 0, 'index stays lazy');
-    assert.equal(await page.locator('.home-path-list a').count(), 4);
+    assert.equal(await page.locator('.home-path-list a').count(), 5);
     for (const link of await page.locator('.home-path-list a').all()) assert.ok((await link.getAttribute('href')).startsWith(prefix + '/study/paths/#'));
     await page.screenshot({ path: `${shots}/home-${width}-${theme}.png`, fullPage: true });
     await page.locator('[data-open-site-search]').click();

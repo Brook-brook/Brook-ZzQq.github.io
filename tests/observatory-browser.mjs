@@ -123,7 +123,13 @@ try {
       assert.ok((await page.goto(base + path)).ok());
       assert.equal(await page.locator('#primary-nav [aria-current="page"]').innerText(), 'Study');
       assert.equal(await page.getByRole('link', { name: '打开对应实验', exact: true }).count(), 0);
-      assert.equal(await page.locator('nav[aria-label="相关学习路线"]').count(), 0, 'no empty route navigation for new tutorials');
+      const routes = page.locator('nav[aria-label="相关学习路线"]');
+      assert.ok(await routes.count() <= 1);
+      if (await routes.count()) {
+        assert.ok(await routes.locator('a[href*="/study/paths/#"]').count() > 0, 'route navigation contains real matching routes');
+        assert.ok((await routes.locator('a').allTextContents()).every((title) => title.trim()));
+      }
+      if (path.includes('reading-ai-evidence')) assert.ok(await routes.locator('a[href$="#evaluation-evidence"]').isVisible());
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       await axe(page, `${width} ${theme} ${path}`);
     }
