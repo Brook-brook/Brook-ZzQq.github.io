@@ -15,6 +15,7 @@ require_relative "../_plugins/evaluation-data-validation"
 require_relative "../_plugins/spatial-data-validation"
 require_relative "../_plugins/practice-prompt-validation"
 require_relative "../_plugins/knowledge-connections"
+require_relative "../_plugins/retrieval-data-validation"
 
 # A generator runs after :site/:post_read, just as an index/sitemap generator
 # would. Its written output must never receive filtered research documents.
@@ -637,6 +638,45 @@ class StudyPublicationChecks
         site = build(source, destination, unpublished: true)
         assert(site.data["knowledge_model"]["notes"].map { |n| n["id"] } == ["first"], "metadata removes demoted note")
         assert(!File.exist?(page_path(destination, "second")), "normal Jekyll cleanup removes old direct output")
+      end
+    end
+
+    check("retrieval fixture renders complete versioned source and original annotations") do
+      with_fixture do |source, destination|
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        fixture = File.read(File.expand_path("../_data/retrieval_samples.json", __dir__))
+        File.write(File.join(source, "_data", "retrieval_samples.json"), fixture)
+        File.write(File.join(source, "retrieval.html"), "---\n---\n{% for f in site.data.retrieval_samples.fragments %}<p>{{ f.text | escape }}</p>{% endfor %}")
+        site = build(source, destination)
+        data = site.data["retrieval_samples"]
+        assert(data["documents"].length == 4 && data["fragments"].length == 8, "original fixture identity")
+        assert(data["tasks"].last["relevant_ids"].nil?, "free search has no inferred annotations")
+        output = File.read(File.join(destination, "retrieval.html"))
+        assert(output.include?("只适用于正式空间"), "whole scope statement survives rendering")
+        assert(data["tasks"][0]["relevant_ids"] == %w[b-retention-trial c-retention-full], "explicit version/task reference is preserved")
+      end
+    end
+
+    check("retrieval invalid IDs, references, bounds and fields fail before public output") do
+      %w[duplicate reference version extra oversize terms].each do |mode|
+        with_fixture do |source, destination|
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          data = JSON.parse(File.read(File.expand_path("../_data/retrieval_samples.json", __dir__)))
+          data["fragments"] << data["fragments"][0].dup if mode == "duplicate"
+          data["tasks"][0]["relevant_ids"] << "unknown" if mode == "reference"
+          data["documents"][0]["version"] = "latest" if mode == "version"
+          data["fragments"][0]["private_url"] = "https://unused.test" if mode == "extra"
+          data["fragments"][0]["text"] = "x" * 1501 if mode == "oversize"
+          data["tasks"][0]["query"] = "a b c d e f g" if mode == "terms"
+          File.write(File.join(source, "_data", "retrieval_samples.json"), JSON.generate(data))
+          begin
+            build(source, destination)
+            assert(false, "invalid retrieval fixture must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("retrieval_samples.json"), "identify the actual invalid fixture")
+            assert(!File.exist?(File.join(destination, "index.html")), "bad source fails before public writing")
+          end
+        end
       end
     end
 
