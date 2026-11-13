@@ -326,3 +326,21 @@ Contextual article links use actual Knowledge row anchors as the no-JS fallback;
 enhancement focuses the selected neighborhood for explicit incoming navigation.
 Article search icons have scoped 20px geometry, zero figure margin/border, and a
 non-wrapping label to avoid legacy SVG styling leaking into header controls.
+
+## Iteration 20 — a task, then a learning path
+
+AI learning is a native reading screen, not a progress dashboard. One compact
+opening pairs the task with a light-glass local-start prompt. Two ruled routes
+put their purpose next to an ordered sequence; phone stacks the same DOM. Each
+step has its own authored focus even when reusing an article, plus genuine
+experiment/self-explanation destinations and a native question disclosure.
+
+Use balanced headings, spaced breadcrumbs, complete titles and shared tokens.
+Keep the opening short enough to reach the first route without a tall hero.
+One quiet Mote invites a real experiment; no fake mastery/counters, new fonts,
+idle animation or extra blur surface. Native links get one-pixel press feedback,
+removed with reduced motion. Closed disclosures leave no phantom content layout.
+
+Let the header brand's visible text supply its accessible name, adding a hidden
+home suffix. The compact visible name must remain accessible too. This avoids
+responsive visible-label/aria-label mismatches rather than suppressing axe rules.

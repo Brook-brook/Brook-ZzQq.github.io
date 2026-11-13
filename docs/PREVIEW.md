@@ -32,6 +32,7 @@ python3 -m http.server 8000
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/tool-calling/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/public-goods/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/study/ai/
 
 服务保持运行，停止时按Ctrl+C。端口8000被占用时，命令和网址一起改为8001。
 
@@ -41,5 +42,5 @@ python3 -m http.server 8000
 Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐统一使用上面的
 目录层级，避免此前出现的404或原始黑白模板。
 
-最新 PR17→18→19 依次基于前一轮，19 包含三轮代码。CI产物默认保留7天，
+开发分支依次基于前一轮；最新20包含17–19的代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。

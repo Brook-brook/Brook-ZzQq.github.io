@@ -1,0 +1,15 @@
+ship
+
+Material findings: none. No Floor or Reflex finding was identified in this finish review.
+
+Scope: app screen, following review-finish.md and gates.md §4/§6. No marketing hero, fold, screen-word-budget or section-rhythm judgment was applied. The five required 4201 captures are present and show the correct page. Reviewed the 1440 full page in four successive screen-height slices, the 375 full page, and the 1280/1440/1920 captures. The desktop route headers occupy a static left column beside each longer question list and scroll normally with the page; the left column has open space below its header content.
+
+The hierarchy is clear: two open paths, eight distinct questions, five original notes, real lab links, and explicit links to the existing manual worksheet/journal. Phone reading and control density remain even; native question disclosures have usable 47px targets. The repeated note destinations have distinct step focuses, so request states and output contracts, and control loops and permission boundaries, remain intelligible.
+
+Live verification at http://127.0.0.1:4201/Brook-ZzQq.github.io/study/ai/: no document/body horizontal overflow at 320, 375 or 1440px; the question disclosure opens with Enter; the Agent jump reaches its actual section with clearance; every distinct main-content internal link returned HTTP 200 and every linked fragment existed in the response; no page errors. Axe in a fresh browser context reported no violations in the 375px dark and light states. These interactions created no learning-journal storage key.
+
+The notes and entry wording preserve the real boundaries: the tool lab executes local deterministic functions, the evaluation fixture is synthetic, self-checks are manual, the Python example requires the visitor's own authorized local/server configuration, and repository checks used a real SDK with an offline fake transport. The website does not claim a real LLM call, automated grading, inferred completion or an operational RAG service.
+
+Idea: "one concrete task connects request, tool, evidence and evaluation" describes the screen and its linked lessons. Largest gap: none.
+
+Do not dilute the concrete per-question focus, the visible distinction between execution and evidence, or the calm shared lavender material with its single original Mote.
