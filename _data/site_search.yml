@@ -1,4 +1,9 @@
 entries:
+  - title: 公共物品 · 个人激励与共同收益
+    kind: lab
+    url: /playground/public-goods/
+    summary: 调整人数、放大倍率与每人贡献，逐人核对最佳回应、纯策略均衡、总收益和等号边界。
+    keywords: [公共物品, public goods, MPCR, 合作, Nash, 纳什, 博弈论, 总收益, 最佳回应]
   - title: GIS Tool Calling · 提议、执行与回执
     kind: lab
     url: /playground/tool-calling/
@@ -51,8 +56,8 @@ entries:
   - title: 知识关系图
     kind: page
     url: /knowledge/
-    summary: 沿公开笔记之间的关系继续阅读，保留原 Knowledge 入口。
-    keywords: [知识地图, concepts, 关系]
+    summary: 按明确理由查看笔记的准备、延伸与对照联系，连接真实实验与自解释，保留完整公开目录。
+    keywords: [知识地图, concepts, connections, 关系, 阅读联系, 下一篇]
   - title: Playground · 交互实验
     kind: page
     url: /playground/

@@ -6,6 +6,21 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 19 one ledger, two objectives
+
+`feat/atlas-iteration-19` continues eighteenth-round `27790a1`. A real local
+public-goods workbench lets 2–8 players change contributions and compare their
+unilateral best responses with the explicitly chosen total-points objective.
+Exact multiplier boundaries, a labelled two-player endpoint slice and complete
+JSON export keep the model inspectable. An original source-grounded guide and
+two appended questions extend the same journal to 8 routes / 20 permanent steps.
+Contextual note links return to the corresponding Knowledge neighborhood, with
+real no-JS anchors; article search controls retain compact, single-line geometry.
+No new dependencies, private-store access or production changes. See
+[delivery](docs/ATLAS-ITERATION-19.md), [design audit](docs/design-audit-iteration-19.md)
+and [source/privacy review](docs/iteration-19-compliance.md). The latest review
+branch includes iterations 17–19; use the [compiled preview](docs/PREVIEW.md).
+
 ## Iteration 18 connections with reasons
 
 `feat/atlas-iteration-18` continues seventeenth-round `950a02c`. Knowledge adds

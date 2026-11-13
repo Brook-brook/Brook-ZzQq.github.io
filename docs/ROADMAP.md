@@ -7,6 +7,8 @@
 - Four Markdown tutorials with metadata, TOC, code blocks and experiment links.
 - Knowledge map, client-side search, category filtering and empty state.
 - Prisoner/stag payoff labs and editable 2×2 pure-strategy Nash explorer.
+- Linear public-goods lab with per-player deviations, separate total-points
+  objective, exact equality boundaries and a labelled two-player endpoint slice.
 - Four-step C++ shallow/deep copy visualization with valid lifetime semantics.
 - Spherical Mercator local scale/area experiment and labelled GIS × AI workflow.
 - Lazy Pyodide Worker with examples, real execution, errors, output cap,
@@ -16,12 +18,13 @@
 
 ## Next useful increments
 
-1. Public-goods game: explicit group size, contribution limits and social welfare.
-2. C++ RAII/smart-pointer ownership examples; assignment and move semantics.
-3. Map analysis with a verified dataset and CRS-aware distance/buffer operations.
-4. Real GIS tool calling with permission boundaries, reproducible results and
-   transparent execution logs. Current AI section is a concept demonstration.
-5. Add verified personal projects after reviewing their actual source and state.
+1. C++ RAII/smart-pointer ownership examples; assignment and move semantics.
+2. Map analysis with a verified dataset and CRS-aware distance/buffer operations.
+3. Extend the real bounded local GIS tools only with explicit contracts/provenance;
+   an actual model/API or MCP runtime needs a separate permission/cost decision.
+4. Add verified personal projects after reviewing their actual source and state.
+5. Review whether authored learning connections and worked counterexamples help
+   readers explain a result before adding more topics or recommendations.
 
 ## Release preparation
 
@@ -33,11 +36,21 @@ change `url`/`baseurl` and repeat the path tests. Publishing now uses `.github/w
 
 ## Limits
 
-No mixed-strategy solver, public-goods module, complete C++ course, real Agent,
+No mixed-strategy solver, complete C++ course, real Agent,
 backend storage or unverified external project is presented as completed. Pyodide
 needs the pinned CDN at first load and is not a complete local Python environment.
 Original theme demo posts remain labelled via the legacy blog entry; they are not
 Brook's personal experience or newly authored learning notes.
+
+## Iterations 17–19 — review branches, not production
+
+Three dependent PRs add a script-proposed, genuinely executed local GIS Tool Calling
+lab (not an LLM/Agent/MCP runtime), public note connections with authored reasons,
+and an original public-goods workbench. Eight routes now contain twenty manual
+self-checks; all earlier IDs/backups remain compatible. Twelve public notes and
+thirteen reading suggestions are metadata-only discovery, not a prerequisite
+engine, inferred mastery or private recommendation system. The latest branch
+contains all three rounds. Review and explicit release remain required.
 
 ## Iteration 3 review branch
 

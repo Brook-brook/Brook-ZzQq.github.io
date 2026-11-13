@@ -144,3 +144,21 @@
       lab: /playground/tool-calling/
       lab_label: 对照距离与目录范围
       question: 查询半径 0 的结果，或查未收录的食堂。为什么空结果不是现实不存在？球面距离、WGS84 坐标和步行路线有哪些不同？
+- id: cooperation-incentives
+  challenge: 设计一组贡献，逐人说明谁能单方面多得，再另算总收益；记录条件，避免把同一个模型直接当作现实政策结论。
+  title: 分开看个人激励与共同收益
+  summary: 调整公共物品的贡献和倍率，核对单方面偏离、总收益目标和两种不同的无差别边界。
+  prerequisite: 能比较数值和读简单收益公式；不要求先懂全部博弈论。
+  steps:
+    - id: public-goods-incentives
+      title: 独自少投，与大家一起少投
+      note: public-goods
+      lab: /playground/public-goods/
+      lab_label: 调整贡献与逐人最佳回应
+      question: 默认四人各投10，先只让玩家1改投0，再让所有人都投0。为什么第一次玩家1得32，第二次却只有20？均衡和总收益目标分别比较了什么？
+    - id: public-goods-boundaries
+      title: 哪一种无差别，属于哪一个目标？
+      note: public-goods
+      lab: /playground/public-goods/
+      lab_label: 比较倍率等号与收益切片
+      question: 依次把倍率设成1、设成人数，解释为什么“所有组合总收益相同”和“所有纯策略组合都是均衡”不是同一件事。为什么两人端点切片不能代替全体逐人检查？
