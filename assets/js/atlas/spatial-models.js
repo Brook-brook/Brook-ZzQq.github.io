@@ -71,7 +71,7 @@ export function compareSpatialValidation(input, parameters = {}) {
   const protocols = {};
   for (const [name, split] of Object.entries(splits)) {
     const training = split.train.map((point) => ({ id: point.id, x: point.x, y: point.y, label: point.labels[params.pattern] }));
-    const predictions = split.test.map((point) => ({ id: point.id, ...predictKnn(training, point, params.k) }));
+    const predictions = split.test.map((point) => ({ id: point.id, ...predictKnn(training, { x: point.x, y: point.y }, params.k) }));
     // Only the scorer sees the held-out labels, after prediction is complete.
     const evaluation = evaluateBinary(predictions.map((prediction, i) => ({ id: prediction.id, score: prediction.score, label: split.test[i].labels[params.pattern] })), 50);
     protocols[name] = {

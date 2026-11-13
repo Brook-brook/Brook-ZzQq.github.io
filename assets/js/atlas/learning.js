@@ -21,6 +21,7 @@ if (workspace) {
   let state = emptyLearningState();
   let lastStored = null;
   let writable = true;
+  let recoveryRaw = null;
   let pendingImport = null;
   let importRequest = 0;
   try {
@@ -28,8 +29,19 @@ if (workspace) {
     if (lastStored !== null) state = parseLearningBackup(lastStored, ids);
     storageStatus.textContent = '只在当前浏览器保存。请定期导出备份。';
   } catch {
+    if (typeof lastStored === 'string') recoveryRaw = lastStored;
     writable = false;
     storageStatus.textContent = '本机存储不可用或已有数据无法读取。旧数据未覆盖；本页只暂存，请导出后再离开。';
+  }
+
+  function syncStorageFeedback() {
+    for (const step of steps) {
+      const warning = step.querySelector('[data-storage-warning]');
+      const note = step.querySelector('[data-step-note]');
+      warning.hidden = writable;
+      const helpId = `help-${step.dataset.learningStep}`;
+      note.setAttribute('aria-describedby', writable ? helpId : `${helpId} ${warning.id}`);
+    }
   }
 
   function render() {
@@ -49,13 +61,19 @@ if (workspace) {
     if (nextId) {
       const target = steps.find((step) => step.dataset.learningStep === nextId);
       resumeTitle.textContent = Object.keys(state.entries).length ? '接着已有的线索' : '从一个小问题开始';
-      continueLink.textContent = `继续：${target.querySelector('h3').textContent}`;
+      const nextTitle = target.querySelector('h3').textContent;
+      continueLink.textContent = workspace.hasAttribute('data-practice-workspace') ? '继续自检' : `继续：${nextTitle}`;
+      continueLink.setAttribute('aria-label', workspace.hasAttribute('data-practice-workspace') ? `继续自检：${nextTitle}` : continueLink.textContent);
       continueLink.href = `#${nextId}`;
     } else {
       resumeTitle.textContent = '这些自检都已有记录';
-      continueLink.textContent = '回看路线，挑一个问题再验证';
+      continueLink.textContent = workspace.hasAttribute('data-practice-workspace') ? '回看路线' : '回看路线，挑一个问题再验证';
+      continueLink.setAttribute('aria-label', continueLink.textContent);
       continueLink.href = `#${workspace.querySelector('[data-learning-path]').id}`;
     }
+    syncStorageFeedback();
+    workspace.dataset.learningReady = 'true';
+    workspace.dispatchEvent(new Event('learning:render'));
   }
 
   function persist() {
@@ -74,6 +92,8 @@ if (workspace) {
     } catch {
       writable = false;
       storageStatus.textContent = '无法写入本机存储。本页记录仍在，请导出备份；刷新后可能丢失。';
+    } finally {
+      syncStorageFeedback();
     }
   }
 
@@ -83,6 +103,14 @@ if (workspace) {
     const summaryText = `备份包含 ${keys.length} 条记录，可补入 ${additions} 条。已有记录以本页为准；导入前不会改动任何记录。`;
     if (previewSummary.textContent !== summaryText) previewSummary.textContent = summaryText;
     confirmImport.disabled = additions === 0;
+    const details = document.getElementById('learning-import-details');
+    details.replaceChildren(...keys.map((id) => {
+      const row = document.createElement('li');
+      const title = steps.find((step) => step.dataset.learningStep === id).querySelector('h3').textContent;
+      const incoming = pendingImport.entries[id];
+      row.textContent = `${Object.hasOwn(state.entries, id) ? '保留本页记录' : '可补入'} · ${title} · 备份中${incoming.completed ? '已自检' : '未勾选'}，手记 ${incoming.note.length} 字符。`;
+      return row;
+    }));
   }
 
   function cancelImport() {
@@ -106,14 +134,26 @@ if (workspace) {
     if (event.key !== LEARNING_KEY && event.key !== null) return;
     writable = false;
     storageStatus.textContent = '其他标签页修改了存储。本页已暂停自动保存；可导出当前记录后刷新。';
+    syncStorageFeedback();
   });
 
-  document.getElementById('learning-export').addEventListener('click', () => {
-    const url = URL.createObjectURL(new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' }));
+  function downloadRecord(value, filename, type) {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(value, null, 2)], { type }));
     const link = document.createElement('a');
-    link.href = url; link.download = 'brooks-learning-backup.json';
+    link.href = url; link.download = filename;
     document.body.append(link); link.click(); link.remove();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  document.getElementById('learning-export').addEventListener('click', () => {
+    downloadRecord(state, 'brooks-learning-backup.json', 'application/json');
+  });
+  document.getElementById('learning-raw-recovery').hidden = recoveryRaw === null;
+  document.getElementById('learning-export-raw').addEventListener('click', () => {
+    if (recoveryRaw === null) return;
+    // JSON escaping preserves even an unpaired UTF-16 surrogate in raw storage.
+    // This diagnostic envelope is deliberately not an importable v1 backup.
+    downloadRecord({ format: 'brooks-learning-raw-recovery', storage_key: LEARNING_KEY, raw_value: recoveryRaw }, 'brooks-learning-recovery.txt', 'text/plain');
+    backupFeedback.textContent = '已生成打开本页时保留的原始存储恢复文件。它不是普通学习备份；本机原文未修改。';
   });
 
   fileInput.addEventListener('change', async () => {
@@ -155,13 +195,24 @@ if (workspace) {
   document.getElementById('learning-clear').addEventListener('click', () => {
     if (!window.confirm('清除本机学习记录？这不会删除已导出的备份。建议先导出。')) return;
     try {
+      if (localStorage.getItem(LEARNING_KEY) !== lastStored) {
+        writable = false;
+        storageStatus.textContent = '其他标签页修改了记录，未清除。本页草稿与浏览器记录均保留；请先导出，再刷新。';
+        backupFeedback.textContent = storageStatus.textContent;
+        syncStorageFeedback();
+        return;
+      }
       localStorage.removeItem(LEARNING_KEY);
-      lastStored = null; writable = true;
-      storageStatus.textContent = '本机学习记录已清除，主题和校园收藏不受影响。';
     } catch {
       writable = false;
-      storageStatus.textContent = '本页记录已重置，但无法清除浏览器存储；刷新可能恢复旧记录。';
+      storageStatus.textContent = '无法清除本机存储，未重置本页草稿。当前内容仍可导出；浏览器原记录未由本页删除。';
+      backupFeedback.textContent = storageStatus.textContent;
+      syncStorageFeedback();
+      return;
     }
+    lastStored = null; writable = true; recoveryRaw = null;
+    document.getElementById('learning-raw-recovery').hidden = true;
+    storageStatus.textContent = '本机学习记录已清除，主题和校园收藏不受影响。';
     importRequest++; cancelImport(); state = emptyLearningState(); render();
     backupFeedback.textContent = storageStatus.textContent;
   });

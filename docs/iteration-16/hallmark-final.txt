@@ -1,0 +1,12 @@
+FILE: hallmark-final.txt
+render tier: 15 screenshots in /workspace/Brook-ZzQq.github.io/work/iteration16/hallmark-audit/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:4195/Brook-ZzQq.github.io/playground/evaluation/
+  WAIVED 39b :1 [1440px] control height outside 32 to 52px: button 93px, button 93px, button 93px
+/workspace/Brook-ZzQq.github.io/assets/css/spatial-validation.css
+  ANSWERED F4 :19 2 filled primary-button recipes: .evaluation-page button + .spatial-page button
+/workspace/Brook-ZzQq.github.io/assets/css/evaluation.css
+  ANSWERED F7 :20 same container recipe on 6 selectors (.evaluation-page select, .spatial-page select, …...)
+  ANSWERED F16 :1 browser surfaces unthemed: ::selection
+sloplint: 0 FAIL, 0 WARN, 1 WAIVED, 3 ANSWERED across 5 file(s) and 3 URL(s).
+kept: links 52/52, fields 43/43, headings 38/38, figures 33/33; before 44 FAIL, 10 REFLEX, now 0 FAIL, 0 REFLEX
+compare: .hallmark/compare.html shows before and after side by side

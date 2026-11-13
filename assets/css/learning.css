@@ -1,3 +1,5 @@
+/* Hallmark · checked: 2026-11-13 · genre: playful (inferred) · scope: app
+ * built: the project · redesign: polish · audit: docs/design-audit-iteration-16.md · v2.0.0 */
 /* Learning paths retain the lavender garden; progress is explicit self-report. */
 .learning-page { padding-block: var(--space-xl) var(--space-2xl); }
 .learning-intro { max-width: 60rem; margin-bottom: var(--space-xl); }
@@ -72,3 +74,12 @@
 .learning-challenge h3 { font-size: var(--text-md); margin: 0; }
 .learning-challenge p { color: var(--text-secondary); }
 .learning-challenge a { display: inline-flex; min-height: 44px; align-items: center; font-size: var(--text-sm); }
+
+/* Shared import transparency and raw-record recovery, used by both workspaces. */
+#learning-raw-recovery { margin-block: calc(var(--space-md) + var(--space-2xs)); max-width: 75ch; }
+#learning-raw-recovery p { color: var(--text-secondary); font-size: var(--text-sm); }
+#learning-import-details { margin-block: var(--space-md); padding-left: calc(var(--space-md) + var(--space-2xs)); color: var(--text-secondary); font-size: var(--text-sm); }
+#learning-import-details li { margin-bottom: var(--space-sm); overflow-wrap: anywhere; }
+
+.learning-entry-warning { border-left: 2px solid var(--accent-primary); padding-left: var(--space-md); margin-block: var(--space-sm); font-size: var(--text-sm); color: var(--text-primary); }
+.learning-entry-warning a { display: inline-flex; min-height: 44px; align-items: center; margin-left: var(--space-xs); }

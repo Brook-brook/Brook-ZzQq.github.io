@@ -1,0 +1,17 @@
+Hallmark fresh-context finish review, 2026-11-13
+Read-only reviewer; no inherited development transcript.
+
+ship
+
+No material findings. The hierarchy is clear, diagrams carry inspectable evidence,
+and the lavender material and tiny Mote feel consistent across the three app
+screens. Largest gap from the locked direction: none.
+
+Reviewed the 1440px and 375px full screens, corresponding before captures, and
+light/dark practice captures. Fresh headless checks at 375px in both themes
+confirmed contained table scrolling, usable expanded disclosures, 16px selects,
+no page overflow, and no JavaScript errors.
+
+Before did better: nothing material found.
+Preserve the complete question titles, explicit synthetic-data limits, evidence
+tables, and manual-only learning records.

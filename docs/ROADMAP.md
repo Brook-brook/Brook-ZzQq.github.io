@@ -179,3 +179,14 @@ source-grounded spatial guide and a fifth route (12 permanent steps total).
 This is a teaching holdout, not a real-campus model or complete cross-validation.
 Production stays unchanged. Next: one-question self-explanation using the existing
 journal and a transparent, optional reference/counterexample.
+
+## Iteration 16 — explaining and preserving
+
+Implemented on the review branch: one-question practice with original hints,
+reference reasoning and counterexamples; local note/question filtering with pinned
+worksheets; a sixth frontier-reading route (15 steps total); shared v1 records,
+transparent import preview and exact raw-storage recovery. Explicit/manual only,
+no automated grades/history/AI calls. Both original-nine and previous-twelve
+records remain usable. Three-round review branches stay unmerged and unpublished.
+Next priorities: real learner feedback on question clarity, a carefully sourced
+AI model/agent lesson, and representative spatial datasets only with provenance.
