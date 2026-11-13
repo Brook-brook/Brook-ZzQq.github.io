@@ -53,6 +53,14 @@ try {
     await page.selectOption('#practice-pick', 'classification-denominators');
     assert.equal(await selected(page).getAttribute('id'), 'classification-denominators');
     assert.ok(await selected(page).locator('h3').evaluate((node) => node === document.activeElement));
+    assert.equal(new URL(page.url()).hash, '#classification-denominators', 'explicit selection replaces only the public question fragment');
+    await selected(page).locator('a[href*="/playground/evaluation/"]').click();
+    await page.waitForFunction(() => !document.getElementById('evaluation-controls').disabled);
+    assert.equal(await state(page), null, 'visiting a lab does not invent progress');
+    await page.goBack(); await page.reload();
+    await page.waitForFunction(() => document.querySelector('[data-practice-workspace]')?.dataset.practiceReady === 'true');
+    assert.equal(await selected(page).getAttribute('id'), 'classification-denominators', 'lab/back/reload preserves the public worksheet context');
+    assert.equal(await state(page), null);
     await axe(page, `practice ${width} ${theme}`);
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     assert.ok(await selected(page).locator('textarea').evaluate((node) => parseFloat(getComputedStyle(node).fontSize) >= 16));

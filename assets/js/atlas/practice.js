@@ -55,10 +55,14 @@ if (workspace) {
         const message = `${ids.length} 个匹配问题。${ids.includes(selected) ? '当前问题保留。' : '当前问题不在筛选中，仍保留草稿；选题或清空筛选后继续。'}`;
         if (status.textContent !== message) status.textContent = message;
       }
-      function choose(id, focus = false) {
+      function choose(id, focus = false, remember = false) {
         if (!byId.has(id)) return;
         const changed = selected !== id;
         selected = id; render();
+        if (remember) {
+          try { history.replaceState(history.state, '', `#${id}`); }
+          catch { /* Keep the in-memory worksheet usable if URL state is unavailable. */ }
+        }
         if (focus) byId.get(id).querySelector('h3').focus();
         if (changed) {
           questionMotion?.cancel();
@@ -73,8 +77,8 @@ if (workspace) {
       query.addEventListener('compositionstart', () => { composing = true; });
       query.addEventListener('compositionend', () => { composing = false; render(); });
       query.addEventListener('input', (event) => { if (!composing && !event.isComposing) render(); });
-      pick.addEventListener('change', () => choose(pick.value, true));
-      next.addEventListener('click', () => { const id = nextPracticeQuestion(matches(), selected); if (id) choose(id, true); });
+      pick.addEventListener('change', () => choose(pick.value, true, true));
+      next.addEventListener('click', () => { const id = nextPracticeQuestion(matches(), selected); if (id) choose(id, true, true); });
       workspace.querySelector('#practice-reset').addEventListener('click', () => { topic.value = 'all'; query.value = ''; composing = false; render(); query.focus(); });
       workspace.addEventListener('click', (event) => {
         const link = event.target.closest('a[href^="#"]');
