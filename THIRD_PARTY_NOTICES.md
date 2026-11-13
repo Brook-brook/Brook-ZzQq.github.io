@@ -226,3 +226,24 @@ only for the actual local design audit. Relations are AI-assisted reading
 suggestions based on the existing public tutorials, not newly verified news,
 empirical evidence, private journals or inferred personal progress.
 See docs/iteration-18-compliance.md.
+
+## Iteration 19 review
+
+The public-goods model, native UI, mathematical examples, guide and tests are
+original, AI-assisted work. No runtime package, image, font, icon, map point or
+external execution service is added. Existing attribution and licenses remain.
+
+Actually read the public-goods tutorial and full LICENSE at `oTree-org/otree-docs`
+commit `47bb7435ef39f1f356afe22f29ab232ed71fbf69` as a conceptual mechanism
+reference. No oTree source code, diagram, runtime or human experiment is used.
+Its MIT-style permission grant also contains an undertaking to name/cite the
+authors in publications of experiments conducted with the software. This notice
+does not describe it as unqualified MIT. The complete actual text is preserved
+in [licenses/oTree-docs-LICENSE.txt](licenses/oTree-docs-LICENSE.txt), including
+the upstream copyright names and publication reference.
+
+Reference: Chen, Daniel L., Martin Schonger, and Chris Wickens. 2016. “oTree: An
+open-source platform for laboratory, online, and field experiments.” Journal of
+Behavioral and Experimental Finance 9: 88–97. Only the contribution/multiplier/
+equal-return mechanism is compared; the 4-player / 20-point / 1.6 example is ours,
+not a reported experiment or empirical result. See docs/iteration-19-compliance.md.

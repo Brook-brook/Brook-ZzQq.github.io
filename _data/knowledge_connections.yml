@@ -1,6 +1,11 @@
 schema_version: 1
 ai_assisted: true
 links:
+  - id: games-public-goods
+    from: game-equilibrium
+    to: public-goods
+    kind: extend
+    reason: 从两人最佳回应走向多人共享返还，逐一检查谁能单方面多得；再用单独的收益总和目标比较，不把两人切片当成完整多人均衡。
   - id: values-records
     from: python-first-steps
     to: rss-normalization

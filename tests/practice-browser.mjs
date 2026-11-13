@@ -40,11 +40,11 @@ try {
     page.on('response', (r) => { if (r.url().startsWith(base) && r.status() >= 400) missing.push(r.url()); });
     page.on('request', (r) => requests.push({ url: r.url(), method: r.method() }));
     await open(page);
-    assert.equal(await page.locator('[data-learning-step]').count(), 18);
+    assert.equal(await page.locator('[data-learning-step]').count(), 20);
     assert.equal(await selected(page).count(), 1);
     assert.equal(await selected(page).getAttribute('id'), 'python-values');
     assert.equal(await state(page), null);
-    assert.match(await page.locator('#practice-status').innerText(), /18 个匹配/);
+    assert.match(await page.locator('#practice-status').innerText(), /20 个匹配/);
     assert.equal(await page.locator('#primary-nav [aria-current="page"]').innerText(), 'Study');
     await selected(page).locator('[data-practice-hint] summary').click();
     await selected(page).locator('[data-practice-reference] summary').click();
@@ -201,7 +201,7 @@ try {
   assert.equal(await selected(priorPage).getAttribute('id'), 'ai-version-scope', 'resume selects the next explicitly unfinished route without recording a visit');
   assert.equal(await state(priorPage), previousText);
   await priorPage.locator('.practice-resume-details > summary').click();
-  assert.match(await priorPage.locator('#learning-progress').innerText(), /12 \/ 18/);
+  assert.match(await priorPage.locator('#learning-progress').innerText(), /12 \/ 20/);
   assert.deepEqual(await exportState(priorPage), previousBackup);
   await selected(priorPage).locator('textarea').fill('A new explanation after the twelve-step backup.');
   const extended = JSON.parse(await state(priorPage));
@@ -275,8 +275,8 @@ try {
 
   const nojs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 900 } });
   const noPage = await nojs.newPage(); await noPage.goto(base + '/study/practice/');
-  assert.equal(await noPage.locator('[data-learning-step]:visible').count(), 18);
-  assert.equal(await noPage.locator('[data-practice-reference]').count(), 18);
+  assert.equal(await noPage.locator('[data-learning-step]:visible').count(), 20);
+  assert.equal(await noPage.locator('[data-practice-reference]').count(), 20);
   assert.equal(await noPage.locator('[data-learning-controls]:visible, [data-practice-controls]:visible').count(), 0);
   await noPage.locator('[data-practice-reference] summary').first().click();
   assert.match(await noPage.locator('[data-practice-reference]').first().innerText(), /ValueError/);

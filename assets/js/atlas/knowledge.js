@@ -61,6 +61,13 @@ if (root) {
     return model.notes.some((note) => note.id === match?.[1]) ? match[1] : null;
   }
 
+  function revealCurrent() {
+    const heading = get('connection-note').querySelector('h3');
+    if (!heading) return;
+    heading.tabIndex = -1; heading.focus({ preventScroll: true });
+    heading.scrollIntoView({ block: 'start', behavior: 'auto' });
+  }
+
   select.addEventListener('change', () => {
     current = select.value;
     try { history.replaceState(history.state, '', `#connection-${current}`); } catch { /* optional public context */ }
@@ -72,7 +79,11 @@ if (root) {
     kind = button.dataset.connectionKind; render(true);
   });
   get('connection-show-all').addEventListener('click', () => { kind = 'all'; render(true); select.focus(); });
-  const restore = () => { if (!model) return; const requested = fromHash(); if (requested && requested !== current) { current = requested; render(); } };
+  const restore = () => {
+    if (!model) return;
+    const requested = fromHash();
+    if (requested) { if (requested !== current) { current = requested; render(); } revealCurrent(); }
+  };
   window.addEventListener('hashchange', restore); window.addEventListener('popstate', restore);
   motion.addEventListener('change', () => { if (motion.matches) animation?.cancel(); });
   try {
@@ -82,6 +93,11 @@ if (root) {
     current = fromHash() || (model.notes.some((note) => note.id === 'reading-ai-evidence') ? 'reading-ai-evidence' : model.notes[0].id);
     render(); controls.hidden = false; region.hidden = false;
     get('connection-directory').open = false;
+    // The server-rendered library row is a genuine no-JS anchor. Enhance an
+    // explicit public deep link to the selected neighborhood; leave full-page
+    // history restoration to the browser, and never log a visit.
+    if (fromHash() && performance.getEntriesByType('navigation')[0]?.type !== 'back_forward')
+      requestAnimationFrame(revealCurrent);
   } catch {
     status.textContent = '学习连接无法校验，请使用下方完整目录与笔记继续阅读。没有改写任何本机记录。';
   }

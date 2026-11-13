@@ -32,6 +32,7 @@
   {% if page.toolcalling or page.ai_overview %}<link rel="stylesheet" href="{{ '/assets/css/tool-calling.css' | relative_url }}">{% endif %}
   {% if page.toolcalling %}<script type="module" src="{{ '/assets/js/atlas/tool-calling.js' | relative_url }}"></script>{% endif %}
   {% if page.knowledge %}<link rel="stylesheet" href="{{ '/assets/css/knowledge.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/knowledge.js' | relative_url }}"></script>{% endif %}
+  {% if page.publicgoods %}<link rel="stylesheet" href="{{ '/assets/css/public-goods.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/public-goods.js' | relative_url }}"></script>{% endif %}
   {% if page.observatory %}<link rel="stylesheet" href="{{ '/assets/css/observatory.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/observatory.js' | relative_url }}"></script>{% endif %}
   <script type="module" src="{{ '/assets/js/atlas/site.js' | relative_url }}"></script>
   <meta name="view-transition" content="same-origin">
@@ -67,7 +68,7 @@
     <div class="prose">{{ content | replace: '<pre', '<pre tabindex="0"' }}</div>
   </article>
   {% include note-learning-paths.html %}
-  <aside class="note-end"><a href="{{ '/study/' | relative_url }}">返回 Study</a>{% if page.lab_url %}<p>把概念变成一次实验。</p><a class="text-link" href="{{ page.lab_url | relative_url }}">打开对应实验</a>{% else %}<p>带着来源与边界，继续判断。</p>{% endif %}<a href="{{ '/knowledge/' | relative_url }}">返回知识地图</a></aside>
+  <aside class="note-end"><a href="{{ '/study/' | relative_url }}">返回 Study</a>{% if page.lab_url %}<p>把概念变成一次实验。</p><a class="text-link" href="{{ page.lab_url | relative_url }}">打开对应实验</a>{% else %}<p>带着来源与边界，继续判断。</p>{% endif %}<a href="{{ '/knowledge/' | relative_url }}#connection-{{ page.slug | escape }}">查看这篇的阅读联系</a><a href="{{ '/knowledge/' | relative_url }}">返回知识地图</a></aside>
 {% else %}{{ content }}{% endif %}
 {% include lab-learning-paths.html %}
 </main>
