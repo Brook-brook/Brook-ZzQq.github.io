@@ -1,0 +1,11 @@
+Independent attempt: unavailable; reviewer errored with a usage-limit message before its final decision. Preliminary message said visual review was clear so far, but it is not a finish verdict. No independent pass is claimed.
+
+In-thread fallback (Hallmark gates §6, unavailable reviewer): ship
+0 material findings.
+Shape: app screen; idea: one ledger, two objectives.
+Seen before: shared site shell is retained; the contribution/account/ledger is task-specific rather than a dashboard template.
+Clean: scope and other-player controls have jobs, are native disclosures; one Mote accompanies an actual question. No idle engines or empty panels.
+Carried: private marginal, group marginal, separate verdicts, real profile comparison and all-player ledger carry the distinction throughout.
+Old vs new: new module, no old module removed. Initial mobile feedback was distant; moved immediately below P1 input and verified at390/768/1440.
+Largest gap: no independent finish verdict due to reviewer unavailability. Actual Chromium focused tests, source review and required captures still completed.
+Preserve: each unilateral comparison holds everyone else fixed; m=1 and m=n are distinct; point-sum optimization is not fairness.

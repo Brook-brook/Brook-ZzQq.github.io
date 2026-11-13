@@ -272,3 +272,27 @@
   directory's URL-backed filters remain distinct from global private-query search.
   Keep complete title links, explicit empty/type recovery, native select focus,
   actual note/lab/practice links and reduced-motion cancellation tested.
+
+## Public-goods incentives and contextual return (Iteration 19)
+
+- `/playground/public-goods/` is an original one-round linear points model, not
+  real participants, empirical cooperation, money or policy prediction. Keep
+  `u_i=w-c_i+(m/n)sum(c)` and sum objective `nw+(m-1)sum(c)` distinct from fairness.
+- Classify integer multiplier tenths exactly: m<n/all-zero Nash, m=n/every pure
+  profile Nash, m>n/all-full Nash. Independently, m<1/all-zero sum optimum,
+  m=1/every profile sum optimal, m>1/all-full sum optimum. Do not confuse m=1
+  with m=n. Test every player's deviation holding all others fixed.
+- The optional 2×2 table is only P1/P2 endpoint actions with other contributions
+  fixed. Never label it the full n-player game or infer all-player equilibrium
+  from that slice. Export complete public parameters/assumptions/results only on
+  click; no journal read, network service, private history or automatic saving.
+- Keep adjacent contribution/payoff feedback, readable small-screen ledger,
+  native ranges/selects, no-JS definitions and reduced-motion fallbacks. Reject
+  malformed/sparse/out-of-bound parameters and pause export rather than coerce.
+- Append the two new IDs after the prior eighteen; preserve legacy-18 raw backup
+  on initial rendering and an explicit append/export roundtrip on both worksheets.
+- Note-to-Knowledge fragments have real server-rendered row IDs without JS.
+  Enhanced direct/hash navigation selects and focuses the relevant note; native
+  selects keep focus and back-forward restoration remains the browser's job.
+- Scope search-toggle SVG geometry so earlier article SVG rules cannot enlarge
+  the icon, add figure margins or wrap the search label. Keep real header tests.

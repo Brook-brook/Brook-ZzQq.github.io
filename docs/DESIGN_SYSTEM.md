@@ -306,3 +306,23 @@ Explicit selection uses one 320ms/4px feedback and live reduced-motion cancellat
 Filters represent pressed states, not primary CTA fills. Keep closed native detail
 children out of layout, and put the title/status count on separate lines so real
 question punctuation is preserved. No-JS always exposes the complete directory.
+
+## Iteration 19 — one ledger, two objectives
+
+A compact title leads directly to group size/multiplier controls. One light-glass
+contribution surface sits beside an unboxed payoff decomposition; on phone the
+personal payoff and deviation gain sit immediately below the changed slider.
+Other-player controls are native disclosure content, each with adjacent feedback.
+The full player ledger and separate Nash/sum-optimal verdicts are textual; color
+never substitutes for their meaning. Three comparison bars show real totals,
+normalized only to those three profiles, with that changing scale disclosed.
+
+Keep the same rounded controls, semantic tokens and instant focus. No idle glow,
+particles, expensive blur layer or animated numerical counter. Bar changes use
+finite transform transitions with reduced-motion fallback. A single original
+Mote accompanies a genuine next question. Do not force a tall marketing hero.
+
+Contextual article links use actual Knowledge row anchors as the no-JS fallback;
+enhancement focuses the selected neighborhood for explicit incoming navigation.
+Article search icons have scoped 20px geometry, zero figure margin/border, and a
+non-wrapping label to avoid legacy SVG styling leaking into header controls.
