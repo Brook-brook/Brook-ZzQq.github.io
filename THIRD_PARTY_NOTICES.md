@@ -327,3 +327,31 @@ The original task card reuses the existing sourced public campus snapshot and
 ODbL attribution/date; test-only synthetic coordinates are never new public POIs.
 All earlier notices remain. Scope: [source review](docs/interface-literacy-source-review.md)
 and [iteration-23 compliance](docs/iteration-23-compliance.md).
+
+## Iteration 24: original Agent starter and offline contracts
+
+The two Chinese building/testing notes, project wrapper/fixtures, six acceptance
+checks, guide and packaging/manifest code are original AI-assisted work. No new
+website runtime/development package, font, icon, image, model endpoint or campus
+point is added. The downloadable project reuses the existing original client
+from assets/examples/agent_loop.py, rather than vendoring an upstream Agent.
+Original bundle code/text is MIT, Copyright2026 Brook; full text travels inside.
+
+The separately installed example requirements are openai3.50.0 (already checked
+at fixed59738a289ee82c7b86bf1e10230cceb6daa9716d; Apache2) and the directly imported
+httpx2 2.16.0. Actual httpx2 source/tag commit:
+[6bfbf296bd87891287b3b0335493c7317be4ef18](https://github.com/pydantic/httpx2/tree/6bfbf296bd87891287b3b0335493c7317be4ef18),
+including its MockTransport implementation and complete BSD-3-Clause license.
+Copyright2026 Pydantic Services Inc./contributors and2019 Encode OSS Ltd retained
+in [httpx2 license](licenses/httpx2-LICENSE.md), also in the project ZIP. No HTTP
+transport implementation is copied. SDK/library distributions are not bundled;
+installation retains their own dependencies/licenses. Exact checked project
+requirements need Python3.11+ because httpx2 2.16.0 requires it; tests used3.12.
+
+Public catalog data remains the existing six-point WGS84 snapshot, checked
+2026-11-02, with OSM contributors/ODbL and per-point Mapcarta/OSM source references.
+The ZIP preserves full source provenance; no new geometry or freshness claim.
+
+The offline exercise makes no socket or model request, takes no browser Key and
+collects no private records. Actual model mode is separate and remains untested.
+Scope and checks: [iteration-24 compliance](docs/iteration-24-compliance.md).

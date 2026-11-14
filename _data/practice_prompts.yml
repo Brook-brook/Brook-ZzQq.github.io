@@ -115,3 +115,19 @@ agent-trace-evaluation:
   hint: 对照提议、校验、执行、观察关联和最终解释，定位第一处失效。
   explanation: 非法类型应在执行前被拒；工具失败应保留错误/预算；错配ID不能进入当前证据；正确球面结果也不能解释成步行路线。记录必要版本、调用ID、状态与计数有助诊断，不需要上传全部输入、私人回执或隐藏内部思考。
   counterexample: done、长日志或模型自称“已核实”不是任务正确证明。模型裁判也需要评分准则与独立核查；远程tracing是否包含敏感资料应实际检查，不能默认安全。
+agent-build-project:
+  hint: 先在解压目录找入口、循环、公开资料和检查，别按文件名想象隐藏服务。
+  explanation: agent_loop.py复用实际校验/工具/循环；demo_offline.py经真实SDK交回脚本预写响应，MockTransport不建立网络；catalog.json保留六点及来源；run_checks.py检查这组程序契约。安装依赖可能联网，安装后的离线运行才不需Key；Pages只提供文件。
+  counterexample: 能import SDK不说明有账号权限、模型文件或免费额度。一个脚本返回了answered也不能证明真实推理或任务正确。
+agent-build-adapter:
+  hint: 沿一次提议、实际函数、function_call_output和下一份文本画数据流，指出假回包的边界。
+  explanation: 离线distance先收到函数提议，实际派发一次只读工具，再收到脚本文本，因此两次SDK请求、一次派发，model_called仍false。真实模式会发送问题、工具定义和必要观察；权限、精确参数、回执关联与预算仍须由程序执行，不能交给工具描述或prompt。
+  counterexample: 换一个真实Key不会让MockTransport变成真实服务；离线fixture不测模型理解、可靠性、费用或延迟。store=False也不代表服务从不保留资料。
+agent-build-budgets:
+  hint: 对照一次批量提议中的两个call_id，保留已经发生的一份观察。
+  explanation: Python离线batch设派发上限1，收到一次脚本响应后真实执行第一个工具，保留一份观察，然后预算耗尽；第二个没有执行，也没有最终回答。浏览器同样是一提议、一派发、一接纳回执。请求上限、工具次数、token、费用和总截止是不同限制。
+  counterexample: 不能把预算耗尽记为done，不能为未执行工具补一份看似合理结果，也不能因为总计只请求一次就断言费用或耗时已受完整控制。
+agent-build-acceptance:
+  hint: 从错误类型或批量部分预算的断言入手，再问解释是否超出了实际证据。
+  explanation: 契约检查能证明这组固定输入下的拦截、计数、观察和明确停止；独立公式检查对应的数值，仍不认证资料适用或最终主张。把正确球面结果解释成步行路线是任务层反例。换模型要另测接口支持、任务集、波动、成本与来源，不复用假回包当成绩。
+  counterexample: 删除失败断言不是修复；SDK有返回、JSON能解析和小样本全过都不能外推成真实模型100%可靠或学习者已经掌握。

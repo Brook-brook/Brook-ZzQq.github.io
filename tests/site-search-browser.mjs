@@ -2,6 +2,8 @@ import { chromium } from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { mkdir } from 'node:fs/promises';
+import { expectedLearningIds } from './expected-learning.mjs';
+const expectedLearning = await expectedLearningIds();
 
 const base = process.env.ATLAS_BASE_URL || 'http://127.0.0.1:4173/Brook-ZzQq.github.io';
 const prefix = new URL(base).pathname.replace(/\/$/, '');
@@ -23,7 +25,7 @@ try {
     page.on('request', (request) => requests.push(request.url()));
     await page.goto(base + '/');
     assert.equal(requests.filter((url) => url.includes('/assets/data/site-search.json')).length, 0, 'index stays lazy');
-    assert.equal(await page.locator('.home-path-list a').count(), 10);
+    assert.equal(await page.locator('.home-path-list a').count(), expectedLearning.paths.length);
     for (const link of await page.locator('.home-path-list a').all()) assert.ok((await link.getAttribute('href')).startsWith(prefix + '/study/paths/#'));
     await page.screenshot({ path: `${shots}/home-${width}-${theme}.png`, fullPage: true });
     await page.locator('[data-open-site-search]').click();
@@ -128,7 +130,7 @@ try {
     await page.fill('#page-search-query', 'Python');
     await catalog.locator('[data-search-kind="path"]').click();
     assert.deepEqual((await catalog.locator('[data-search-results] a').evaluateAll((nodes) => nodes.map((node) => node.getAttribute('href')))).sort(),
-      [`${prefix}/study/paths/#ai-development`, `${prefix}/study/paths/#python-data`].sort(), 'Python finds its original route and the explicitly Python-based AI starting point');
+      [`${prefix}/study/paths/#agent-building`, `${prefix}/study/paths/#ai-development`, `${prefix}/study/paths/#python-data`].sort(), 'Python finds the original route and both explicitly Python-based development routes');
     await page.locator('#page-search-query').focus();
     await page.keyboard.press('Control+k');
     assert.equal(await dialog.evaluate((e) => e.open), false, 'shortcut preserves input editing');

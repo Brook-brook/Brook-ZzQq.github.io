@@ -2,10 +2,13 @@
  * idea: an article can lead to more than its first question
  * states: first question / native alternate angles · posture: restrained */
 .note-learning { display: block; }
+.note-download { margin-block: var(--space-sm) var(--space-lg); }
+.note-download a { display: inline-flex; min-height: 44px; align-items: center; font-weight: 600; }
+.note-download p { margin: 0; color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.8; }
 .note-learning > strong { display: block; font-size: var(--text-lg); line-height: 1.5; margin-bottom: var(--space-md); }
 .note-learning-routes { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-xs) var(--space-lg); margin-bottom: var(--space-md); }
 .note-learning a { min-height: 44px; display: inline-flex; align-items: center; }
-.note-learning :is(a, summary):active { transform: translateY(1px); }
+.note-learning :is(a, summary):active, .note-download a:active { transform: translateY(1px); }
 .note-learning .note-practice-choice { padding-block: var(--space-md); border-top: 1px solid var(--color-rule); }
 .note-practice-title { font-weight: 600; line-height: 1.6; }
 .note-practice-choice p { margin-block: var(--space-xs); color: var(--text-secondary); line-height: 1.8; font-size: var(--text-sm); }
@@ -15,7 +18,7 @@
 .note-practice-alternatives summary { cursor: pointer; min-height: 44px; padding-block: var(--space-xs); color: var(--text-secondary); }
 .note-practice-alternatives > p { margin-block: var(--space-sm); color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.8; }
 .note-practice-alternatives ul { list-style: none; margin: 0; padding: 0; }
-.note-learning:focus-visible, .note-learning :is(a, summary):focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
+.note-learning:focus-visible, .note-learning :is(a, summary):focus-visible, .note-download a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
 
 /* Give Rouge one named scroll region. The template moves its line-number layout
  * table out of pre/code; retain quiet line numbers without table/card chrome. */
@@ -29,5 +32,5 @@
 .prose .rouge-table pre { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: var(--color-clear); overflow: visible; font: inherit; color: inherit; }
 .prose :is(.note-code-scroll, pre.highlight):focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) {
-  .note-learning :is(a, summary):active { transform: none; }
+  .note-learning :is(a, summary):active, .note-download a:active { transform: none; }
 }

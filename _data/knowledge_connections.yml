@@ -1,6 +1,21 @@
 schema_version: 1
 ai_assisted: true
 links:
+  - id: loop-starter
+    from: agent-loop-basics
+    to: agent-project-starter
+    kind: extend
+    reason: 把运行时分层与预算带到实际可解压项目，分清真实SDK、只读函数与脚本假响应；先离线再决定真实接入。
+  - id: starter-contract-checks
+    from: agent-project-starter
+    to: agent-testing-contracts
+    kind: extend
+    reason: 运行后逐条阅读六项断言，用可观察状态验收，而不是只看最后出现文本；离线契约不等于模型评测。
+  - id: contract-task-evaluation
+    from: agent-testing-contracts
+    to: agent-evaluation
+    kind: compare
+    reason: 对照程序契约与完整任务核查，保留简单基线、失败例和保留题；一次包内通过不能证明真实场景可靠。
   - id: tools-skill-protocol
     from: tool-calling-boundaries
     to: skills-mcp-boundaries

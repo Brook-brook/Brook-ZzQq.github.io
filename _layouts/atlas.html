@@ -68,6 +68,7 @@
     <p class="lead">{{ page.summary }}</p>
     <div class="note-meta"><span>{% include note-kind.html note=page %}</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time><span>{{ content | strip_html | size | divided_by: 500 | plus: 1 }} 分钟参考阅读</span></div>
     {% include note-provenance.html %}
+    {% include note-download.html %}
     {% if page.toc %}<nav class="note-toc" aria-label="本文目录"><strong>本文导航</strong>{% for heading in page.toc %}<a href="#{{ heading.id }}">{{ heading.label }}</a>{% endfor %}{% include note-learning-paths.html mode='jump' %}</nav>{% endif %}
     {% include note-code.html body=content %}
   </article>

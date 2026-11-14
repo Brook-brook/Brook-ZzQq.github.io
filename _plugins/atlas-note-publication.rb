@@ -63,7 +63,23 @@ module AtlasNotePublication
           "#{document.relative_path}: #{key} must be an unquoted YAML boolean."
       end
       validate!(document) if document.data["kind"] == "research"
+      validate_download!(document, site) if document.data.key?("download")
     end
+  end
+
+  def self.validate_download!(document, site)
+    value = document.data["download"]
+    fields = %w[detail filename label path]
+    valid = value.is_a?(Hash) && (value.keys - fields).empty? && fields.all? { |key| value.key?(key) } &&
+      value["path"].is_a?(String) && value["path"].match?(/\A\/assets\/examples\/[a-z0-9][a-z0-9_.-]*\.zip\z/) &&
+      value["filename"].is_a?(String) && value["filename"].match?(/\A[a-zA-Z0-9][a-zA-Z0-9_.-]{0,79}\z/) &&
+      %w[label detail].all? { |key| value[key].is_a?(String) && !value[key].strip.empty? && value[key].length <= 200 }
+    path = valid ? site.in_source_dir(value["path"].delete_prefix("/")) : nil
+    public_asset = valid && site.static_files.any? { |asset| asset.relative_path == value["path"] }
+    return if public_asset && File.file?(path) && !File.symlink?(path)
+
+    raise Jekyll::Errors::FatalException,
+      "#{document.relative_path}: download requires an existing public examples ZIP, safe filename and bounded label/detail."
   end
 end
 

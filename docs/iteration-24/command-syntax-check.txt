@@ -1,0 +1,6 @@
+_atlas_notes/agent-project-starter.md block1: bash -n exit0; parse only, no commands or model run
+_atlas_notes/agent-project-starter.md block2: bash -n exit0; parse only, no commands or model run
+_atlas_notes/agent-project-starter.md block3: bash -n exit0; parse only, no commands or model run
+_includes/agent-starter/README.md block1: bash -n exit0; parse only, no commands or model run
+_includes/agent-starter/README.md block2: bash -n exit0; parse only, no commands or model run
+_includes/agent-starter/README.md block3: bash -n exit0; parse only, no commands or model run

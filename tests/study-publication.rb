@@ -98,7 +98,7 @@ class StudyPublicationChecks
                "---\n#{yaml}---\n\nContent marker: #{slug}.\n")
   end
 
-  def build(source, destination, unpublished: false, kramdown: nil)
+  def build(source, destination, unpublished: false, kramdown: nil, exclude: nil)
     config = Jekyll.configuration(
       "config" => [], "source" => source, "destination" => destination,
       "plugins" => [], "plugins_dir" => [], "theme" => nil,
@@ -109,6 +109,7 @@ class StudyPublicationChecks
       "study_publication_fixture" => true
     )
     config["kramdown"] = kramdown if kramdown
+    config["exclude"] = exclude unless exclude.nil?
     Jekyll::Site.new(config).tap(&:process)
   end
 
@@ -678,6 +679,65 @@ class StudyPublicationChecks
             assert(!File.exist?(File.join(destination, "index.html")), "bad source fails before public writing")
           end
         end
+      end
+    end
+
+    check("a real article download keeps the project prefix, filename and literal label/detail") do
+      with_fixture do |source, destination|
+        metadata = { "path" => "/assets/examples/fixture.zip", "filename" => "fixture.zip", "label" => "Get <literal>", "detail" => "Keep & scope" }
+        note(source, "download", "download" => metadata)
+        FileUtils.mkdir_p(File.join(source, "assets", "examples"))
+        File.write(File.join(source, "assets", "examples", "fixture.zip"), "Synthetic file-existence fixture; ZIP payload checks run separately")
+        FileUtils.mkdir_p(File.join(source, "_includes"))
+        FileUtils.cp(File.expand_path("../_includes/note-download.html", __dir__), File.join(source, "_includes", "note-download.html"))
+        File.write(File.join(source, "_layouts", "note.html"), "<!doctype html><title>Download</title>{% include note-download.html %}")
+        build(source, destination)
+        output = File.read(page_path(destination, "download"))
+        assert(output.include?('/Brook-ZzQq.github.io/assets/examples/fixture.zip') && output.include?('download="fixture.zip"'), "actual native download path and name")
+        assert(output.include?("Get &lt;literal&gt;") && output.include?("Keep &amp; scope"), "download metadata is literal text")
+        assert(!output.include?("<literal>"), "download label cannot create markup")
+      end
+    end
+
+    ["/assets/examples/missing.zip", "/assets/examples/../private.zip", "https://external.test/file.zip"].each do |path|
+      check("unavailable or unsafe article download fails before output: #{path}") do
+        with_fixture do |source, destination|
+          note(source, "download", "download" => { "path" => path, "filename" => "fixture.zip", "label" => "Fixture", "detail" => "Synthetic" })
+          error = begin
+            build(source, destination)
+            nil
+          rescue Jekyll::Errors::FatalException => caught
+            caught
+          end
+          assert(!error.nil? && error.message.include?("download requires"), "download validation must run in a real build")
+          assert(error.message.include?("_atlas_notes/download.md"), "failure identifies its note")
+          assert(!File.exist?(page_path(destination, "download")), "invalid download never reaches output")
+        end
+      end
+    end
+
+    check("an existing but excluded ZIP cannot be advertised as a public article download") do
+      with_fixture do |source, destination|
+        note(source, "download", "download" => { "path" => "/assets/examples/fixture.zip", "filename" => "fixture.zip", "label" => "Fixture", "detail" => "Synthetic" })
+        FileUtils.mkdir_p(File.join(source, "assets", "examples"))
+        File.write(File.join(source, "assets", "examples", "fixture.zip"), "Existing but excluded synthetic asset")
+        error = begin
+          build(source, destination, exclude: ["assets/examples/fixture.zip"])
+          nil
+        rescue Jekyll::Errors::FatalException => caught
+          caught
+        end
+        assert(!error.nil? && error.message.include?("download requires"), "an on-disk file is not necessarily published")
+        assert(!File.exist?(page_path(destination, "download")), "no unusable action reaches output")
+      end
+    end
+
+    check("publication pruning happens before optional download validation, even under unpublished") do
+      with_fixture do |source, destination|
+        note(source, "hidden-download", "published" => false, "download" => { "path" => "private-invalid" })
+        site = build(source, destination, unpublished: true)
+        assert(site.collections.fetch("atlas_notes").docs.empty?, "a hidden note is not reintroduced by its download")
+        assert(!File.exist?(page_path(destination, "hidden-download")), "no direct hidden route")
       end
     end
 

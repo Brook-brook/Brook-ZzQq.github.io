@@ -13,9 +13,11 @@ const cases = [
   ['cpp-copy', ['copy-relations', 'lifetime-boundaries']],
   ['tool-calling-boundaries', ['tool-contract', 'tool-observation', 'tool-boundaries']],
   ['model-request-contracts', ['ai-request-failures', 'ai-output-contract']],
-  ['agent-loop-basics', ['agent-control-loop', 'agent-permission-boundaries']],
+  ['agent-loop-basics', ['agent-control-loop', 'agent-permission-boundaries', 'agent-build-budgets']],
   ['retrieval-evidence', ['agent-context-evidence']],
   ['agent-evaluation', ['ai-task-evaluation', 'agent-trace-evaluation']],
+  ['agent-project-starter', ['agent-build-project', 'agent-build-adapter']],
+  ['agent-testing-contracts', ['agent-build-acceptance']],
   ['skills-mcp-boundaries', []]
 ];
 async function visit(page, slug) { await page.goto(base + `/knowledge/${slug}/`); }

@@ -47,3 +47,5 @@
 @media (prefers-reduced-motion: reduce) {
   .ai-learning-page a:active { transform: none; }
 }
+
+.ai-learning-workshop { padding-bottom: var(--space-2xl); scroll-margin-block-start: var(--space-lg); }
