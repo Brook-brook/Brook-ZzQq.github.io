@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "kind": "brook-agent-interface-teaching-case",
+  "generated_at": "2026-11-14T10:13:09Z",
+  "python_version": "3.12.14",
+  "dependencies": {
+    "openai": "3.50.0",
+    "mcp": "2.3.0",
+    "httpx2": "2.16.0"
+  },
+  "generator_sha256": "fbb83e3d1f4d5ac4b3c1d9c2aaf79682dea315b7e5321a07752d5e3a501164a3",
+  "archive_sources": [
+    {
+      "profile": "agent",
+      "path": "assets/examples/agent-starter.zip",
+      "sha256": "2c0f615d6415b67541952c87546dede484ac8cd300ba22e8a53f65eadd027e2f"
+    },
+    {
+      "profile": "mcp",
+      "path": "assets/examples/mcp-starter.zip",
+      "sha256": "58faef103366bb36a4b7f15bb366cd51cc96652a327f0f1743a45e9b7d5e64cc"
+    },
+    {
+      "profile": "bridge",
+      "path": "assets/examples/agent-mcp-bridge.zip",
+      "sha256": "ad09a3055e8ee64fbd72413cb4679566a9ccb8bf209d066033398953e186863f"
+    }
+  ],
+  "catalog": {
+    "version": 1,
+    "checked": "2026-11-02",
+    "license": "ODbL-1.0",
+    "attribution": "OpenStreetMap contributors",
+    "coordinateSystem": "WGS84",
+    "note": "地点代表点来自公开 OSM 数据的 Mapcarta 展示；不是建筑入口或实测坐标，不含道路与建筑轮廓，不提供步行导航。",
+    "places": [
+      {
+        "id": "main-library",
+        "name": "主图书馆",
+        "english": "Main Library",
+        "category": "library",
+        "tags": [
+          "library",
+          "study"
+        ],
+        "icon": "book",
+        "coordinates": [
+          120.07561,
+          30.30534
+        ],
+        "osm": "way/1208408934",
+        "source": "https://mapcarta.com/W1208408934",
+        "description": "从阅读开始，沿着一个问题继续探索。地图标记为公开数据中的图书馆代表点。"
+      },
+      {
+        "id": "medical-library",
+        "name": "农医图书馆",
+        "english": "Agriculture & Medicine Library",
+        "category": "library",
+        "tags": [
+          "library",
+          "study"
+        ],
+        "icon": "book",
+        "coordinates": [
+          120.08268,
+          30.29849
+        ],
+        "osm": "way/448480118",
+        "source": "https://mapcarta.com/W448480118",
+        "description": "紫金港的另一处阅读节点。开放安排与入馆要求请以图书馆官方信息为准。"
+      },
+      {
+        "id": "north-four",
+        "name": "北4教学楼",
+        "english": "North Teaching Building 4",
+        "category": "teaching",
+        "tags": [
+          "teaching"
+        ],
+        "icon": "building",
+        "coordinates": [
+          120.07166,
+          30.30766
+        ],
+        "osm": "way/1112645053",
+        "source": "https://mapcarta.com/W1112645053",
+        "description": "把教学空间放进校园的坐标里。这里只展示地点，不推测课程、教室开放或建筑入口。"
+      },
+      {
+        "id": "lecture-hall",
+        "name": "求是大讲堂",
+        "english": "Qiushi Lecture Hall",
+        "category": "teaching",
+        "tags": [
+          "teaching"
+        ],
+        "icon": "building",
+        "coordinates": [
+          120.07473,
+          30.3043
+        ],
+        "osm": "way/529029530",
+        "source": "https://mapcarta.com/W529029530",
+        "description": "一处公开地图中收录的校园讲堂。活动信息与具体入口请通过学校官方渠道核实。"
+      },
+      {
+        "id": "qiushi",
+        "name": "求是书院",
+        "english": "Qiushi Academy",
+        "category": "landscape",
+        "tags": [
+          "landscape"
+        ],
+        "icon": "spark",
+        "coordinates": [
+          120.07481,
+          30.30533
+        ],
+        "osm": "node/11197016001",
+        "source": "https://mapcarta.com/N11197016001",
+        "description": "在校园记忆与当下之间，留一个探索的坐标。公开数据将其记录为纪念性地点。"
+      },
+      {
+        "id": "lake-island",
+        "name": "湖心岛",
+        "english": "Island in the Lake",
+        "category": "landscape",
+        "tags": [
+          "landscape"
+        ],
+        "icon": "wave",
+        "coordinates": [
+          120.08257,
+          30.30237
+        ],
+        "osm": "way/445920824",
+        "source": "https://mapcarta.com/W445920824",
+        "description": "公开地图中的校园水域景观节点。点标记不表示岛屿形状、可达性或步行路线。"
+      }
+    ]
+  },
+  "catalog_sha256": "942b585aadf6910c3ed70584801234c5c091ea6e1f78d0543e63941b2fef7cbc",
+  "data_license": {
+    "license": "ODbL-1.0",
+    "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "attribution": "OpenStreetMap contributors",
+    "attribution_url": "https://www.openstreetmap.org/copyright"
+  },
+  "cases": [
+    {
+      "id": "direct-function",
+      "scope": "Authored distance scenario; actual SDK and one local read function",
+      "model_called": false,
+      "final_text_returned": true,
+      "answer_fact_checked": false,
+      "counts": {
+        "provider_requests_attempted": 2,
+        "local_dispatch_attempts": 1,
+        "observations": 1
+      },
+      "provider_call_id": "distance_1",
+      "session": null,
+      "selected_result": {
+        "catalog_version": 1,
+        "source_checked": "2026-11-02",
+        "coordinate_system": "WGS84",
+        "catalog_size": 6,
+        "result": {
+          "from": {
+            "id": "main-library",
+            "name": "主图书馆",
+            "coordinates": [
+              120.07561,
+              30.30534
+            ],
+            "osm": "way/1208408934",
+            "source": "https://mapcarta.com/W1208408934"
+          },
+          "to": {
+            "id": "medical-library",
+            "name": "农医图书馆",
+            "coordinates": [
+              120.08268,
+              30.29849
+            ],
+            "osm": "way/448480118",
+            "source": "https://mapcarta.com/W448480118"
+          },
+          "distance_m": 1020.2255073099033,
+          "earth_radius_m": 6371008.8
+        }
+      }
+    },
+    {
+      "id": "mcp-client",
+      "scope": "Distance subcase of a CLI that also checks same-ID, empty match and two rejections; not an Agent run",
+      "model_called": false,
+      "final_text_returned": false,
+      "answer_fact_checked": null,
+      "counts": {
+        "returned_public_cases": 3,
+        "returned_rejected_cases": 2
+      },
+      "provider_call_id": null,
+      "session": {
+        "protocol_version": "2026-07-28",
+        "discovery_received": true,
+        "self_reported_server": {
+          "name": "Brook public campus read tools",
+          "version": "1.0.0-teaching"
+        }
+      },
+      "selected_result": {
+        "catalog_version": 1,
+        "source_checked": "2026-11-02",
+        "coordinate_system": "WGS84",
+        "catalog_size": 6,
+        "result": {
+          "from": {
+            "id": "main-library",
+            "name": "主图书馆",
+            "coordinates": [
+              120.07561,
+              30.30534
+            ],
+            "osm": "way/1208408934",
+            "source": "https://mapcarta.com/W1208408934"
+          },
+          "to": {
+            "id": "medical-library",
+            "name": "农医图书馆",
+            "coordinates": [
+              120.08268,
+              30.29849
+            ],
+            "osm": "way/448480118",
+            "source": "https://mapcarta.com/W448480118"
+          },
+          "distance_m": 1020.2255073099033,
+          "earth_radius_m": 6371008.8
+        }
+      }
+    },
+    {
+      "id": "host-mcp-bridge",
+      "scope": "Authored distance scenario; actual async SDK, host and real local stdio",
+      "model_called": false,
+      "final_text_returned": true,
+      "answer_fact_checked": false,
+      "counts": {
+        "provider_requests_attempted": 2,
+        "mcp_call_attempts": 1,
+        "receipts_accepted": 1
+      },
+      "provider_call_id": "distance_1",
+      "session": {
+        "protocol_version": "2026-07-28",
+        "discovery_received": true,
+        "allowed_tools": [
+          "find_places",
+          "measure_distance",
+          "nearby_places"
+        ]
+      },
+      "selected_result": {
+        "catalog_version": 1,
+        "source_checked": "2026-11-02",
+        "coordinate_system": "WGS84",
+        "catalog_size": 6,
+        "result": {
+          "from": {
+            "id": "main-library",
+            "name": "主图书馆",
+            "coordinates": [
+              120.07561,
+              30.30534
+            ],
+            "osm": "way/1208408934",
+            "source": "https://mapcarta.com/W1208408934"
+          },
+          "to": {
+            "id": "medical-library",
+            "name": "农医图书馆",
+            "coordinates": [
+              120.08268,
+              30.29849
+            ],
+            "osm": "way/448480118",
+            "source": "https://mapcarta.com/W448480118"
+          },
+          "distance_m": 1020.2255073099033,
+          "earth_radius_m": 6371008.8
+        }
+      }
+    }
+  ],
+  "scope": "Static public teaching replay. Authored provider responses, no live model, task benchmark, wire-ID capture, source refresh, routing or server-execution attestation. Counts have different meanings and must not be summed."
+}

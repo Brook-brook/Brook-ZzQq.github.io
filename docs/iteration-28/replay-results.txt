@@ -1,0 +1,27 @@
+SOURCE replay.txt
+
+PASS starter archive: 11 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+PASS starter archive: 13 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+PASS starter archive: 16 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+PASS three actual public ZIP CLIs; matching selected distance, distinct evidence/counters; no raw question, hidden state or answer text published
+
+
+SOURCE replay-final.txt
+
+PASS starter archive: 11 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+PASS starter archive: 13 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+PASS starter archive: 16 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+PASS three actual public ZIP CLIs; matching selected distance, distinct evidence/counters; no raw question, hidden state or answer text published
+
+
+SOURCE replay-py311.txt
+
+python: can't open file '/public/check.py': [Errno 13] Permission denied
+
+
+SOURCE replay-py311-readable.txt
+
+{"case": "direct-function", "counts": {"provider_requests_attempted": 2, "local_dispatch_attempts": 1, "observations": 1}, "distance_m": 1020.2255073099033, "model_called": false}
+{"case": "mcp-client", "counts": {"returned_public_cases": 3, "returned_rejected_cases": 2}, "distance_m": 1020.2255073099033, "model_called": false}
+{"case": "host-mcp-bridge", "counts": {"provider_requests_attempted": 2, "mcp_call_attempts": 1, "receipts_accepted": 1}, "distance_m": 1020.2255073099033, "model_called": false}
+PASS same three public ZIP SHAs: actual Python 3.11.18, nonroot, network-none, read-only; selected outputs/counter scopes match3.12 saved reference

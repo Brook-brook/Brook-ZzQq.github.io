@@ -74,6 +74,16 @@ arguments behind padding or suppress the design gate. Initial download discovery
 was too late on phone and is now visible in the first viewport. Keep the shared
 lavender tokens, native states, instant focus and reduced-motion press fallback.
 
+## Worked evidence (Iteration 28)
+
+A reference lesson stays an article rather than becoming another dashboard.
+The same actual distance, a semantic three-row comparison and a genuine JSON
+download carry its content. On phones the comparison retains readable columns
+inside one named, keyboard-focusable horizontal group; an adjacent sentence
+explains scrolling. Keep a visible instant focus ring, native no-JS scrolling,
+large-text reflow and page-width containment. Rouge layout tables are distinct
+from semantic comparisons. No new color, blur, idle motion or runtime is needed.
+
 ## Source of truth
 
 `assets/css/atlas-tokens.css` defines colors, font stacks, spacing, type, easing,

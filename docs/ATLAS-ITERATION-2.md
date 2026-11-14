@@ -1,5 +1,10 @@
 # Brook's Atlas — implementation and validation
 
+This is the historical second-round report. The current review branch is
+`feat/atlas-iteration-28`; see [Iteration28](ATLAS-ITERATION-28.md) and
+[preview instructions](PREVIEW.md) for the Agent learning additions. Historical
+test counts below are not the current totals. No later PR was auto-merged here.
+
 ## Baseline and scope
 
 The starting workspace was clean at `ae677a8` (Chirpy 7.6 template), matching remote

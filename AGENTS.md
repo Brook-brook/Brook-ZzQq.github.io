@@ -510,3 +510,22 @@
   Pyodide four cases and output-focus behavior at root/project paths. DOM-text
   doubling is distinct from full browser zoom. Keep complete actual CPython
   LICENSE and official pinned source scope; original sample code is MIT.
+
+## Shared interface evidence (Iteration 28)
+
+- The saved public agent-interface-case.json comes from actual replays of the
+  exact three project ZIP CLIs via tools/generate-agent-interface-case.py. Use
+  real current UTC and pinned example SDKs; preserve archive/catalog/generator
+  hashes and original OSM/ODbL attribution/date. Never edit hashes to mask stale
+  evidence or publish raw questions, hidden state or authored answer text.
+- Direct SDK/local dispatch, MCP check cases and host/MCP attempts have different
+  meanings. One selected numerical result is comparable, not the whole CLI task
+  or model quality. Attempts are not server execution counts. Model calls remain
+  false only for these explicitly authored modes; self-reported identity is not
+  authentication, and representative arc length is not a walking route.
+- Website CI uses Node/source guards and an independent numeric reference; it
+  does not rerun SDKs or models. Real CLI logs are separate. New article links an
+  existing acceptance question, keeping all38 permanent IDs and the v1 journal.
+- Keep semantic table rows separate from Rouge layout tables. Phone comparisons
+  need readable columns, a named keyboard scroll group, instant focus, no-JS
+  operation and actual large-text/root/project checks; do not shrink the text.

@@ -1,0 +1,13 @@
+ship
+
+Findings: none owed.
+
+Evidence: inspected all ten final captures, both 1440 full pages in successive 900px screens, and the real initial desktop/phone captures. The compiled HTML preserves the semantic three-row comparison, named focusable scroll group, native download, existing acceptance question and return navigation. In fresh Chromium with page scripts disabled at 375px, ArrowRight moved the table from 0 to its maximum 256px while retaining focus; the page stayed within the viewport. The native download completed as brook-agent-interface-case.json and parsed as JSON.
+
+Idea/theme: the page matches the locked lavender reading document and the comparison of one distance across three distinct evidence scopes. The headings, counts and explanatory limits carry that idea through the article. Largest gap: none. Hero review is N/A for this established article shape.
+
+Before/after: the earlier phone table showed all three columns simultaneously. The final table trades that simultaneity for readable route/count columns and a clearly announced, keyboard-accessible third column. This is an acceptable reading tradeoff; no content or navigation loss was found.
+
+Limits: this is a screenshot/source finish review plus the scoped Chromium check, not an independent SDK replay, model, server-identity or geographic audit. Light-theme rendering, Safari and full browser zoom were not independently exercised here.
+
+Preserve the distinct counter scopes, honest evidence boundaries, native reading/navigation and shared lavender shell.
