@@ -1,0 +1,36 @@
+EXCERPT ONLY. Full repeated diagnostics remain in ignored work/iteration28/final-proofer.txt.
+The command wrongly treated the project-prefix child as the document root. Correct parent-root results are in build-results.txt.
+
+Running 3 checks (Images, Links, Scripts) in ["work/iteration28/final-site/Brook-ZzQq.github.io"] on *.html files ...
+
+
+Checking 474 internal links
+Checking internal link hashes in 53 files
+Ran on 69 files!
+
+
+For the Images check, the following failures were found:
+
+* At work/iteration28/final-site/Brook-ZzQq.github.io/about/index.html:100:
+
+  internal image /Brook-ZzQq.github.io/assets/img/atlas/mote.svg does not exist
+
+* At work/iteration28/final-site/Brook-ZzQq.github.io/explore/ai/index.html:100:
+
+  internal image /Brook-ZzQq.github.io/assets/img/atlas/mote.svg does not exist
+
+* At work/iteration28/final-site/Brook-ZzQq.github.io/explore/code/index.html:100:
+
+  internal image /Brook-ZzQq.github.io/assets/img/atlas/mote.svg does not exist
+
+[repeated failures omitted]
+* At work/iteration28/final-site/Brook-ZzQq.github.io/tags/writing/index.html:1:
+
+  internal script reference /Brook-ZzQq.github.io/assets/js/dist/misc.min.js does not exist
+
+* At work/iteration28/final-site/Brook-ZzQq.github.io/tags/writing/index.html:1:
+
+  internal script reference /Brook-ZzQq.github.io/app.min.js?baseurl=/Brook-ZzQq.github.io&register=true does not exist
+
+
+HTML-Proofer found 2881 failures!

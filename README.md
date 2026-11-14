@@ -6,6 +6,22 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 28 compare evidence from the same GIS result
+
+`feat/atlas-iteration-28` continues pushed/unmerged27 (`eabd212`). One original
+worked lesson actually replays the three public project ZIPs and selects the
+same representative-point distance. The saved downloadable JSON distinguishes
+provider requests, local dispatches, MCP attempts and the broader MCP check CLI;
+it includes source/archive/generator hashes and OSM/ODbL attribution. SDK/stdio
+execution is real; provider responses remain authored, with no live model score.
+
+The comparison table keeps readable columns in a named keyboard scroll group
+on phones. Existing acceptance questions and the v1 journal remain unchanged:
+24 public notes,12 routes/38 manual questions,38 curated links and64 metadata
+search entries. No new runtime, dependency or production change. See
+[delivery](docs/ATLAS-ITERATION-28.md), [audit](docs/design-audit-iteration-28.md),
+[compliance](docs/iteration-28-compliance.md) and [preview](docs/PREVIEW.md).
+
 ## Iteration 27 understand async before the host adapter
 
 `feat/atlas-iteration-27` continues pushed/unmerged26 (`e3d56d5`). A new original

@@ -1,0 +1,8 @@
+Actual isolated Chromium probe output, captured from terminal:
+3
+focus { active: true, client: 265, total: 576, left: 0 }
+RAF timeout { left: 40, active: true }
+poll pass
+after screenshot { left: 40, active: true }
+
+The poll pass was its initial read after RAF timeout, not proof that page timers worked. Final test polls from Node and never sets scrollLeft; both root/project final tests passed.

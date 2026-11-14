@@ -12,6 +12,7 @@
 | 协议怎样发现/调用工具 | [MCP服务](../_atlas_notes/agent-mcp-server.md) | 本机stdio、真实发现/服务，没有模型 |
 | 谁连起调用提议和协议 | [宿主桥接](../_atlas_notes/agent-mcp-bridge.md) | 真异步SDK+假provider、真stdio，预算/回执/部分工作可查 |
 | 程序通过还差哪一层 | [检查与验收](../_atlas_notes/agent-testing-contracts.md)、[任务评估](../_atlas_notes/agent-evaluation.md) | 契约、数值、来源、任务结果分别验收，不是模型分数 |
+| 三种接口返回同一距离，证明了什么 | [同一距离，三层证据](../_atlas_notes/agent-interface-evidence.md) | 实际重放三个CLI，选择同一子案例；整段检查计数不可当同一任务步数 |
 | Tool、Skill、MCP是否一回事 | [接口边界](../_atlas_notes/skills-mcp-boundaries.md) | 概念/格式材料不被冒充自动加载或通用互通 |
 
 只想先动手，可以先在浏览器运行等待/取消，改True/False再解释返回。
@@ -38,5 +39,6 @@
 隐私和任务集需在你自己有权运行的环境另外评估；本站未调用它们。
 
 开发记录：23为文章→问题/接口边界，24为直接函数项目，25为独立MCP，
-26为宿主桥接，27为异步基础与Python交互优化。最新分支包含前序代码；
+26为宿主桥接，27为异步基础与Python交互优化，28为同一GIS案例的证据对照。
+最新分支包含前序代码；
 每个PR只展示相对上轮的增量，未自动合并或部署。

@@ -43,6 +43,7 @@ python3 -m http.server 8000
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-mcp-bridge/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/python-async-boundaries/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/python/#async-wait
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-interface-evidence/
 
 服务保持运行，停止时按Ctrl+C。端口8000被占用时，命令和网址一起改为8001。
 
@@ -52,7 +53,7 @@ python3 -m http.server 8000
 Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐统一使用上面的
 目录层级，避免此前出现的404或原始黑白模板。
 
-开发分支依次基于前一轮；最新27包含17–26的代码。CI产物默认保留7天，
+开发分支依次基于前一轮；最新28包含17–27的代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。
 
 循环实验底部可显式下载Python例子与配套公开目录。代码由你在自己的本地/
@@ -89,3 +90,8 @@ brooks-agent-mcp-bridge，按README安装三个固定依赖并运行python demo_
 点“查看输出/错误”可到真实结果区；修改源代码时会说明旧结果尚未更新。
 本机brook-python-async.zip只用Python3.11+标准库，进入brooks-python-async
 运行python3 demo.py和python3 run_checks.py，不需要pip或Key。
+
+“同一距离，三层证据”可下载静态公开JSON。它是本轮实际运行三个项目CLI
+后的白名单记录，不是新的解释器或模型基准。网站CI验证该记录与当前ZIP/
+目录/生成器及数值参考一致，不重新执行SDK。重放请分别进入三个项目目录，
+不要把整段MCP检查的五个案例与另外两份项目的请求次数相加比较。

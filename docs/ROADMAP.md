@@ -4,7 +4,7 @@
 
 - Home, Explore, Geo Lab, AI Lab, Code Lab, Projects, Knowledge, About.
 - Responsive navigation, persistent dark/light mode, accessible no-JS reading.
-- Twenty-three public notes/tutorials with metadata, TOC, code blocks and actual
+- Twenty-four public notes/tutorials with metadata, TOC, code blocks and actual
   experiment links when available; source-grounded research stays type-labelled.
 - Knowledge map, client-side search, category filtering and empty state.
 - Prisoner/stag payoff labs and editable 2×2 pure-strategy Nash explorer.
@@ -46,6 +46,10 @@
   example, sharing one function. Event/TaskGroup release/cancel, task ownership,
   manual loading, explicit output focus and stopped/stale states; two questions
   append36 to38 without changing the journal or requiring a model.
+- One shared GIS worked case actually replays the three public project CLIs,
+  with a downloadable source-tied reference, honest distinct counters and a
+  readable keyboard-scrolling phone comparison. It links the existing acceptance
+  question; no extra journal ID, model benchmark or automatic mastery record.
 
 ## Next useful increments
 

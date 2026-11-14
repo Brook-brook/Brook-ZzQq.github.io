@@ -409,3 +409,19 @@ example or Python implementation is copied. Its actual complete
 the additional Zero-Clause BSD documentation-code terms, is retained unchanged
 apart from one final newline. This is not an all-MIT label or a Python runtime
 redistribution. Scope: [iteration-27 compliance](docs/iteration-27-compliance.md).
+
+## Iteration 28: original shared GIS evidence lesson
+
+The lesson, replay generator, Node guard and table refinement are original
+AI-assisted Brook work (MIT). No new website/runtime dependency, SDK, font,
+image, icon, upstream implementation, private trace or campus point is added.
+Actual CLI replays use the already pinned three SDKs and existing project ZIPs;
+their complete source/license notices remain unchanged.
+
+The static JSON retains the full existing six-point public catalog, per-point
+source references, original2026-11-02 check date and OpenStreetMap contributors
+attribution. It includes the [ODbL1.0](https://opendatacommons.org/licenses/odbl/1-0/)
+and [OSM copyright](https://www.openstreetmap.org/copyright) links in the file
+itself. Replay time does not refresh that source date, authenticate a server,
+measure real-world location precision or certify a model. See
+[iteration-28 compliance](docs/iteration-28-compliance.md).
