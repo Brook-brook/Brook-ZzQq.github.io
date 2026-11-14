@@ -6,6 +6,23 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 25 connect real local MCP tools
+
+`feat/atlas-iteration-25` continues unmerged twenty-fourth-round `c5e52c9`.
+An original local MCP project exposes the same three real public GIS tools through
+SDK2.3.0 stdio, with actual discovery, explicit input validation and structured
+results. Six package checks include both modern/explicit legacy negotiation and
+injected invalid receipts; no model or remote endpoint is used. The pure tools
+are generated from the existing canonical client, without importing its model SDK.
+
+Current totals:21 public notes,11 routes/34 manual questions,29 curated connections
+and60 public metadata-search entries. Old32 raw/export records remain unchanged
+until an explicit new entry. Python3.11+ is required; actual tests use3.12. No new
+website dependency, private store, hosted MCP service or production change.
+See [delivery](docs/ATLAS-ITERATION-25.md), [source review](docs/mcp-starter-source-review.md),
+[design audit](docs/design-audit-iteration-25.md), [compliance](docs/iteration-25-compliance.md)
+and [compiled preview](docs/PREVIEW.md).
+
 ## Iteration 24 build a small Agent project
 
 `feat/atlas-iteration-24` continues pushed twenty-third-round `7a30e0e`. Two

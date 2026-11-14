@@ -1,0 +1,13 @@
+ship
+
+Findings: none. No open Floor, Reflex or Finish finding in the reviewed reading/app scope.
+
+Evidence: inspected all 15 supplied final-shots images from port 4251, then scrolled fresh synthetic Chromium contexts one 900px screen at a time for all three pages at 1440px. Also inspected 375px full pages, fresh phone focus/disclosure states, and each page in light mode. Evidence is in work/iteration25/finish-evidence/; observations.json records the live checks.
+
+PASS — Gates 26a/34/73: visible keyboard outlines, no page overflow or painted-over text at 1440/375. The MCP and boundary role tables retain their semantic headers and both columns on the phone. The named code group keeps focus and ArrowRight changes scrollLeft from 0 to 40.
+PASS — Access and state honesty: keyboard Enter opens the AI question and MCP alternate-angle disclosures; every article/AI in-page anchor has a real target. The pages identify local examples, fixed versions, authored checks and the absence of model inference without claiming mastery or universal interoperability. Fresh reading accessed only atlas-theme/theme storage and only 127.0.0.1:4251 requests; no page errors occurred.
+PASS — Actual download: keyboard Enter on the early MCP action produced brook-mcp-starter.zip, 19,076 bytes, SHA-256 58faef103366bb36a4b7f15bb366cd51cc96652a327f0f1743a45e9b7d5e64cc. Python 3.11+ and dependency installation are stated beside the action. This is the downloaded artifact, not an inferred success state.
+
+Idea/theme: no gap. The shared lavender garden carries through the runnable local teaching material, source/version references and explicit boundaries. The hierarchy reads as a learning route and long document, not marketing or a dashboard; the retained app shape owes no new hero or marketing section rhythm. Functional headings do their reading/navigation jobs.
+Before: the initial long MCP title did nothing better; the shortened title removes the split Chinese verb and keeps the same task, download and reading destinations discoverable.
+Do not dilute the early real download, native keyboard-readable content, source/version evidence, or the distinction between protocol connection, tool execution and task correctness.

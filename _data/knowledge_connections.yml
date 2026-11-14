@@ -1,6 +1,21 @@
 schema_version: 1
 ai_assisted: true
 links:
+  - id: interface-real-protocol
+    from: skills-mcp-boundaries
+    to: agent-mcp-server
+    kind: extend
+    reason: 从四层概念走到真实本机发现与调用，区分普通JSON、SDK协商、注解和实际校验；不把协议连接当任务认证。
+  - id: starter-mcp-service
+    from: agent-project-starter
+    to: agent-mcp-server
+    kind: extend
+    reason: 在直接函数项目之外，把同一公开只读工具通过stdio提供；服务不需要模型，原客户端不会自动升级为MCP适配器。
+  - id: protocol-contract-checks
+    from: agent-mcp-server
+    to: agent-testing-contracts
+    kind: compare
+    reason: 对照协议回执、输出schema与任务验收；错误信号和正确形状都不能代替独立数值、来源及现实适用检查。
   - id: loop-starter
     from: agent-loop-basics
     to: agent-project-starter

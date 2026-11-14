@@ -1,0 +1,18 @@
+SOURCE hallmark/mcp.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 2 file(s) and 1 URL(s).
+
+
+SOURCE hallmark/ai.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 2 file(s) and 1 URL(s).
+
+
+SOURCE hallmark/skills.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 2 file(s) and 1 URL(s).
+
+
+SOURCE hallmark/mcp-final.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 2 file(s) and 1 URL(s).

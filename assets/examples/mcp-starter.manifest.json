@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "kind": "brook-mcp-starter",
+  "root": "brooks-mcp-starter",
+  "files": [
+    {
+      "name": "README.md",
+      "source": "_includes/mcp-starter/README.md",
+      "sha256": "d90b7881afbe194ce7b88b05588b969b2933f0429318f280107b692cdcfc6040",
+      "bytes": 4583
+    },
+    {
+      "name": "server.py",
+      "source": "_includes/mcp-starter/server.py",
+      "sha256": "991de428ba38fed439b442fb032b7749e340a2213361c429f871601383215295",
+      "bytes": 2981
+    },
+    {
+      "name": "contracts.py",
+      "source": "_includes/mcp-starter/contracts.py",
+      "sha256": "d477a4f88ecdc76a47beb7b4ce55abe9d382510a370cd94de598353e9a57abb5",
+      "bytes": 2312
+    },
+    {
+      "name": "client_check.py",
+      "source": "_includes/mcp-starter/client_check.py",
+      "sha256": "847837712e8b47532fa69e2ed1e2394b25110e9b97485049805934739439e198",
+      "bytes": 5289
+    },
+    {
+      "name": "run_checks.py",
+      "source": "_includes/mcp-starter/run_checks.py",
+      "sha256": "9813c906d3deb1a22550d9e79aeda402d4d9d26c6cce008be48d1acbcb816c95",
+      "bytes": 6183
+    },
+    {
+      "name": "requirements.txt",
+      "source": "_includes/mcp-starter/requirements.txt",
+      "sha256": "5c6e7dc498f48f8be4eb60a108e2ec64e2408783827b867dc1dc6588ab2f4732",
+      "bytes": 26
+    },
+    {
+      "name": "NOTICE.md",
+      "source": "_includes/mcp-starter/NOTICE.md",
+      "sha256": "9071051332ef12f80f8528dca200a4801cd7a979e7e51f53a02751eb48157c80",
+      "bytes": 1791
+    },
+    {
+      "name": "LICENSE.txt",
+      "source": "_includes/agent-starter/LICENSE.txt",
+      "sha256": "13ed684a76a34c04b5b39049f97e497a054e25a89abd1db2ce975daef69ced6e",
+      "bytes": 1062
+    },
+    {
+      "name": "catalog.json",
+      "source": "_includes/agent-starter/catalog.json",
+      "sha256": "942b585aadf6910c3ed70584801234c5c091ea6e1f78d0543e63941b2fef7cbc",
+      "bytes": 2464
+    },
+    {
+      "name": "campus_tools.py",
+      "source": "assets/examples/agent_loop.py",
+      "sha256": "3ff349bd397d3dbdcbc89a94ecfb06b9c2eafad8ce8a980da031b4bcda84498e",
+      "bytes": 7178,
+      "transform": "campus-read-tools-v1",
+      "source_sha256": "eca30647132fa855ea9151216cf73b1d468a7553422133e65c7cfcd017287255"
+    },
+    {
+      "name": "MCP-Python-SDK-LICENSE.txt",
+      "source": "licenses/MCP-Python-SDK-LICENSE.txt",
+      "sha256": "5e13dbbc1d120fc2a03cecde7c91424ae2d7de11b63d58ded2f4431e261ee50d",
+      "bytes": 1071
+    },
+    {
+      "name": "httpx2-LICENSE.md",
+      "source": "licenses/httpx2-LICENSE.md",
+      "sha256": "7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30",
+      "bytes": 1589
+    }
+  ],
+  "archive": {
+    "path": "assets/examples/mcp-starter.zip",
+    "sha256": "58faef103366bb36a4b7f15bb366cd51cc96652a327f0f1743a45e9b7d5e64cc",
+    "bytes": 19076
+  }
+}

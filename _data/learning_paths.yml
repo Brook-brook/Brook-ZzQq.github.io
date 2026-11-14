@@ -256,3 +256,15 @@
       focus: 从一项会失败的改动开始，分开程序契约、工具数值、任务结果与真实模型评测。
       note: agent-testing-contracts
       question: 选一项离线检查，写出输入、可观察断言与检查层，再给出一个全部契约通过但任务仍会答错的反例。换模型后哪些结论必须重新验证？
+    - id: agent-mcp-discovery
+      title: 一个协议工具服务，需要模型吗？
+      focus: 运行本机MCP包，核对真实发现、三种角色与固定SDK的两种协议模式。
+      note: agent-mcp-server
+      question: 画出检查脚本、MCP客户端、stdio、服务和实际函数的位置。没有模型时为什么仍可调用工具？为什么只打印版本字符串或服务名称不足以证明发现、身份和任务正确？
+    - id: agent-mcp-validation
+      title: 协议接通后，哪些检查仍不能省？
+      focus: 对照低层输入校验、错误标志、结构化输出和独立数值事实。
+      note: agent-mcp-server
+      lab: /playground/tool-calling/
+      lab_label: 免安装对照参数与回执，非MCP协议页
+      question: 解释SDKv2低层公布schema与真实参数校验的区别。形状正确但距离999的回执为何还能过schema？readOnlyHint、is_error和_meta分别不能保证什么？

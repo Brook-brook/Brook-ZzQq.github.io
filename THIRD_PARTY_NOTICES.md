@@ -355,3 +355,23 @@ The ZIP preserves full source provenance; no new geometry or freshness claim.
 The offline exercise makes no socket or model request, takes no browser Key and
 collects no private records. Actual model mode is separate and remains untested.
 Scope and checks: [iteration-24 compliance](docs/iteration-24-compliance.md).
+
+## Iteration 25: original local MCP project
+
+The Chinese lesson, stdio server/client, public contracts, checks and packaging
+extension are original AI-assisted Brook work under MIT. No website package,
+font, icon, image, remote endpoint or new campus data is added. The downloadable
+pure read module is generated from the existing original canonical client;
+no third-party implementation or distribution is vendored.
+
+Separately installed MCP Python SDK2.3.0 is checked at
+[2118f14f8a19bc158d8a1cf90af58d85d187f849](https://github.com/modelcontextprotocol/python-sdk/tree/2118f14f8a19bc158d8a1cf90af58d85d187f849).
+Its actual MIT license, Copyright2024 Anthropic,PBC, is retained in full in
+[MCP-Python-SDK-LICENSE.txt](licenses/MCP-Python-SDK-LICENSE.txt) and the ZIP. This
+SDK license is distinct from the protocol repository's composite license above.
+httpx2 2.16.0 BSD3, original MIT and full existing six-point OSM/ODbL source
+attribution/date2026-11-02 also travel with the package. Direct pins require
+Python3.11+; tests use3.12. Installations retain transitive distributions' notices.
+Actual tests use local stdio/in-process transport, not a model or remote host.
+See [source scope](docs/mcp-starter-source-review.md) and
+[compliance](docs/iteration-25-compliance.md).
