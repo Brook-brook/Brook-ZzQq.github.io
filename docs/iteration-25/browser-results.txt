@@ -1,0 +1,146 @@
+SOURCE browser-full-first.txt
+
+> jekyll-theme-chirpy@7.6.0 test:atlas:browser
+> node tests/atlas-browser.mjs && node tests/campus-browser.mjs && node tests/obsidian-browser.mjs && node tests/universe-browser.mjs && node tests/study-browser.mjs && node tests/research-browser.mjs && node tests/learning-browser.mjs && node tests/observatory-browser.mjs && node tests/stream-browser.mjs && node tests/reading-room-browser.mjs && node tests/site-search-browser.mjs && node tests/search-layout-browser.mjs && node tests/evaluation-browser.mjs && node tests/spatial-browser.mjs && node tests/practice-browser.mjs && node tests/learning-feedback-browser.mjs && node tests/tool-browser.mjs && node tests/knowledge-browser.mjs && node tests/goods-browser.mjs && node tests/ai-learning-browser.mjs && node tests/runtime-browser.mjs && node tests/retrieval-browser.mjs && node tests/note-practice-browser.mjs && node tests/agent-building-browser.mjs && node tests/mcp-building-browser.mjs
+
+PASS 390px: 15 pages × 2 themes; links, axe, labs, search, keyboard, menu, storage, Python error path
+PASS 768px: 15 pages × 2 themes; links, axe, labs, search, keyboard, menu, storage, Python error path
+PASS 1440px: 15 pages × 2 themes; links, axe, labs, search, keyboard, menu, storage, Python error path
+PASS no-JavaScript: navigation and all notes accessible
+PASS campus 390: axe, filters, empty state, favorites, marker/detail, layers, view persistence, keyboard, reduced motion
+PASS campus 768: axe, filters, empty state, favorites, marker/detail, layers, view persistence, keyboard, reduced motion
+PASS campus 1440: axe, filters, empty state, favorites, marker/detail, layers, view persistence, keyboard, reduced motion
+PASS campus touch, no-JS source cards and shared legacy palette
+PASS campus network failure and blocked storage fallbacks
+PASS Obsidian 320: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 390: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 768: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 1440: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Obsidian 1920: map-first, selected controls, keyboard, complete source list, glass fallback
+PASS Universe 390 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 390 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 768 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 768 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 1440 dark: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe 1440 light: 3 pages, axe, notebook tabs/keyboard, map preview, Study search/categories, project expansion, legacy route
+PASS Universe no-JavaScript: all tutorials and notebook previews readable
+PASS Study 390 dark: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 390 light: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 768 dark: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 768 light: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 1440 dark: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study 1440 light: type/category/query, source/tag search, share/reload, keyboard/reset, provenance, optional labs, axe and layout
+PASS Study no-JavaScript 390: 21 published notes and full content routes readable
+PASS Study no-JavaScript 1440: 21 published notes and full content routes readable
+PASS research 390 dark: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 390 light: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 768 dark: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 768 light: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 1440 dark: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research 1440 light: RSS/Atom, keyboard, current export, stale/error/empty states, unsafe XML/URL, no network/storage, axe
+PASS research no-JavaScript: readable fixture, explicit limitation, disabled execution/export and actual learning links
+PASS learning 390 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 390 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 768 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 768 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 1440 dark: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning 1440 light: axe, manual-only progress, reload, backup, preview/merge/cancel, reset and privacy
+PASS learning storage blocked: no false durable-save claim, memory/export remain usable
+PASS learning storage corrupt: no false durable-save claim, memory/export remain usable
+PASS learning storage quota: no false durable-save claim, memory/export remain usable
+PASS learning v1 compatibility: original nine IDs/read-only opening/export preserved; new steps extend the same journal
+PASS learning multiple tabs: external changes pause saving rather than silently overwrite
+PASS learning no-JS: routes, real resources and questions readable without fake controls
+PASS Observatory 390 dark: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 390 light: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 768 dark: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 768 light: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 1440 dark: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory 1440 light: source filters, explicit snapshots, starters/reload, real Markdown export, keyboard/reset/privacy, tutorials, axe and layout
+PASS Observatory blocked: inline memory-only feedback, original data preservation and usable export
+PASS Observatory corrupt: inline memory-only feedback, original data preservation and usable export
+PASS Observatory quota: inline memory-only feedback, original data preservation and usable export
+PASS Observatory historical material: safe text/HTTPS rendering and original snapshot export outside current catalog
+PASS Observatory multiple tabs: external changes pause writes and retain page-memory export
+PASS Observatory aging catalog: explicit stale-source reminder, no false live-news status
+PASS Observatory no-JS: full source directory, native reading disclosures and honest unavailable controls
+PASS Observatory expanded navigation: 1051/1280px without overlap
+PASS continuous stream 390 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 390 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 768 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 768 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 1440 dark: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream 1440 light: real DOM filters, load more/focus, metadata selection, typed notes/reload, Markdown+JSON downloads, no uploads, axe
+PASS continuous stream: five-minute visible-only polling, explicit snapshot apply, retained typing/focus, revision details, archive outside latest, HTTP/hash/archive failures retain content
+PASS continuously open tab: snapshot aging updates after eight clock hours without reload or changing notes
+PASS reading desk: v1 recovery without rewrite, explicit migration, previewed JSON merge/local-note priority, bad file preservation, cancel removal, reset protects route journal
+PASS note recovery quota: original storage preserved, typed memory-only reflection remains exportable
+PASS note recovery corrupt: original storage preserved, typed memory-only reflection remains exportable
+PASS no-JS continuous stream: real bundled original links, hidden unavailable controls, phone layout
+PASS reading room 390 dark: empty/no history, direct study, three guides, preserved notes/outline, local retrieval, comparison, real exports, native focus/Esc, reload, axe/reduced-motion/layout
+PASS reading room 390 light: empty/no history, direct study, three guides, preserved notes/outline, local retrieval, comparison, real exports, native focus/Esc, reload, axe/reduced-motion/layout
+PASS reading room 768 dark: empty/no history, direct study, three guides, preserved notes/outline, local retrieval, comparison, real exports, native focus/Esc, reload, axe/reduced-motion/layout
+PASS reading room 768 light: empty/no history, direct study, three guides, preserved notes/outline, local retrieval, comparison, real exports, native focus/Esc, reload, axe/reduced-motion/layout
+PASS reading room 1440 dark: empty/no history, direct study, three guides, preserved notes/outline, local retrieval, comparison, real exports, native focus/Esc, reload, axe/reduced-motion/layout
+PASS reading room 1440 light: empty/no history, direct study, three guides, preserved notes/outline, local retrieval, comparison, real exports, native focus/Esc, reload, axe/reduced-motion/layout
+PASS room blocked: visible modal storage warning and recoverable in-memory notes
+PASS room quota: visible modal storage warning and recoverable in-memory notes
+PASS room corrupt: visible modal storage warning and recoverable in-memory notes
+PASS room multi-tab: visible pause, no overwrite and preserved memory backup
+PASS room legacy/overflow: visit does not rewrite v1, historical snapshots remain safe, outline never truncates notes
+PASS room no-JS: native reading guides and valid source methods remain readable, modal stays closed
+PASS room unsupported dialog: original reading desk remains the native anchor fallback
+PASS public discovery: 390/768/1440 × two themes; aliases/short-word boundaries, highlights/keyword context, type counts, all batches/focus, reset/empty recovery, composition events, axe, privacy/lazy index, keyboard/rapid Esc, no-JS/fallback/retry and safe literal markup; headers 320/1051/1280
+PASS search layout: 390/768/1440 × two themes; stable sheet across empty/results, visible input label after continuation, original query recovery, 520px short viewport, no overflow/console errors
+PASS evaluation: 390/768/1440 × two themes; real threshold/cohort metrics, zero/undefined, row filters, keyboard, JSON download, no private reads/writes/uploads, axe, no overflow/assets/errors, no-JS teaching fallback
+PASS spatial: 390/768/1440 × both themes; actual kNN/split oracle, neighbors, counterexample/null recall, explicit rerun and stale export guard, invalid seed, full JSON download, keyboard scrolling, no private reads/requests, axe, assets/console/overflow, no-JS data
+PASS practice 390 dark: single question, explicit records, hints/counterexamples, pinned filters/composition, shared v1 round trip, merge preview, public search/privacy, axe and layout
+PASS practice 390 light: single question, explicit records, hints/counterexamples, pinned filters/composition, shared v1 round trip, merge preview, public search/privacy, axe and layout
+PASS practice 768 dark: single question, explicit records, hints/counterexamples, pinned filters/composition, shared v1 round trip, merge preview, public search/privacy, axe and layout
+PASS practice 768 light: single question, explicit records, hints/counterexamples, pinned filters/composition, shared v1 round trip, merge preview, public search/privacy, axe and layout
+PASS practice 1440 dark: single question, explicit records, hints/counterexamples, pinned filters/composition, shared v1 round trip, merge preview, public search/privacy, axe and layout
+PASS practice 1440 light: single question, explicit records, hints/counterexamples, pinned filters/composition, shared v1 round trip, merge preview, public search/privacy, axe and layout
+PASS /study/paths/ reset remove: fresh guard preserves local drafts/other-tab data and export
+PASS /study/paths/ reset get: fresh guard preserves local drafts/other-tab data and export
+PASS /study/paths/ reset conflict: fresh guard preserves local drafts/other-tab data and export
+PASS /study/practice/ reset remove: fresh guard preserves local drafts/other-tab data and export
+PASS /study/practice/ reset get: fresh guard preserves local drafts/other-tab data and export
+PASS /study/practice/ reset conflict: fresh guard preserves local drafts/other-tab data and export
+PASS /study/paths/ corrupt raw recovery: explicit exact-string diagnostic download; ordinary backup remains separate
+PASS /study/practice/ corrupt raw recovery: explicit exact-string diagnostic download; ordinary backup remains separate
+PASS practice v1 evolution: all twelve prior records/raw opening/export retained; new three steps extend the same key
+PASS paths/practice real multi-tab conflict: shared-key writes pause; reset cannot erase the other workspace; both drafts remain exportable
+PASS practice blocked: visible memory-only feedback and real usable download
+PASS practice quota: visible memory-only feedback and real usable download
+PASS practice 320×640: keyboard skip, explicit navigation/back, live reduced motion and DOM text-scale reflow
+PASS practice 768×390: keyboard skip, explicit navigation/back, live reduced motion and DOM text-scale reflow
+PASS practice no-JS: every question, method, resource and native reference readable without fake recording controls
+PASS paths quota: viewport-visible editor warning, contextual description, explicit backup jump and real memory export
+PASS paths blocked: viewport-visible editor warning, contextual description, explicit backup jump and real memory export
+PASS paths corrupt: viewport-visible editor warning, contextual description, explicit backup jump and real memory export
+PASS paths conflict: viewport-visible editor warning, contextual description, explicit backup jump and real memory export
+PASS practice quota: viewport-visible editor warning, contextual description, explicit backup jump and real memory export
+PASS practice blocked: viewport-visible editor warning, contextual description, explicit backup jump and real memory export
+PASS practice corrupt: viewport-visible editor warning, contextual description, explicit backup jump and real memory export
+PASS practice conflict: viewport-visible editor warning, contextual description, explicit backup jump and real memory export
+PASS Tool Calling: 390/768/1440 × themes, independent distance oracle, execution stages, raw-radius/empty search, invalid/unknown/mismatched cases, stale-state guard, actual complete download, no private reads/writes/network, keyboard, axe, reduced-motion change, 320/short/200% text, no-JS and invalid catalog
+PASS knowledge: curated direction/reasons, filters/empty recovery, actual labs/practice, public hash/back/reload, no private reads/writes/network, 390/768/1440 × themes, 14px retained SVG/keyboard scroll, preserved directory/reset, axe, no-JS, corrupt/unsafe/literal data, normal/reduced motion and 320/short/200% text
+PASS public goods: 390/768/1440 × themes, unilateral vs simultaneous outcomes, both equality boundaries, 8 players, exact ledger/slice, real complete export, guarded stale controls, privacy/axe/no-JS, original18 journal replay/extension, contextual public/native Knowledge anchors, keyboard/reduced-motion/320/short/200% text
+PASS AI learning: two native routes/eight exact steps, five actual sourced notes, real Python download, public search and Study navigation, 390/768/1440 × themes, axe/keyboard/no-JS/reduced-motion/320/short/200% text, no private reads/writes/network, original20 raw backup/resume/explicit extension on paths and practice
+PASS runtime: all six scripted scenarios, actual GIS execution/1020.2m/source, separate proposal/dispatch/receipt, partial budgets, simulated retry, old-run rejection, forbidden/cancelled/stale controls, complete downloads, 390/768/1440×themes, axe/keyboard/reduced-motion/320/short/200% text, no-JS, bad catalog and no private reads/writes/uploads
+PASS retrieval: original versioned corpus, literal ranks/explicit P@k/recall/RR, complete context167/exact and rejected budgets, maintained focus, actual report/source downloads, stale settings, free/empty cases, source anchors, 390/768/1440×themes, axe/keyboard/reduced-motion/320/short/200% text, no-JS, bad/literal data and no private reads/writes/uploads
+PASS article practice: exact native questions/route anchors, explicit alternate navigation/back, unchanged v1 raw records, no article private reads/writes/uploads, original Skill and five-case task-card downloads, real code/text/line numbers with one keyboard scroll region, 390/768/1440×themes, axe/no-JS/320/short/200% text and live reduced-motion press fallback
+PASS Agent building: actual ZIP/hash/download, two original guides, 390/768/1440×themes, workshop/native links, axe/keyboard/no-JS/320, no article private reads/writes/uploads, original28 exact raw/export and manual-only34-step extension on paths/practice
+PASS MCP building: actual ZIP/hash/download, 390/768/1440×themes, native entry/search/axe/no-JS/keyboard/320/real2×text, no public private-store access/upload, exact old32 and manual-only 34-step extension
+
+
+SOURCE browser-mcp-first.txt
+PASS MCP building: actual ZIP/hash/download, 390/768/1440×themes, native entry/search/axe/no-JS/keyboard/320/real2×text, no public private-store access/upload, exact old32 and manual-only 34-step extension
+
+
+SOURCE browser-mcp-root.txt
+PASS MCP building: actual ZIP/hash/download, 390/768/1440×themes, native entry/search/axe/no-JS/keyboard/320/real2×text, no public private-store access/upload, exact old32 and manual-only 34-step extension
+
+
+SOURCE python-results.txt
+PASS real Pyodide in Chromium: 3 examples, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop

@@ -441,3 +441,25 @@
 - The four new building IDs extend28 to32, never rename/remove the old ones or
   change the v1 journal/schema. Test exact old28 raw/export on paths/practice,
   explicit-only extension and no private reads on public articles/search.
+
+## Real local MCP (Iteration 25)
+
+- The MCP ZIP uses actual SDK2.3.0 constructor callbacks and stdio. Default auto
+  discovery returns2026-07-28; explicit legacy returns2025-11-25 with no discovery.
+  Test actual negotiation/server info, not a self-filled version string. Do not
+  imply remote authentication, arbitrary-host compatibility or model inference.
+- Low-level Server advertises input schemas but does not apply their validation.
+  Validate exact allowlisted fields/types/IDs before dispatch. UTF16 backend bounds
+  and JSON Schema code-point maxLength differ; preserve the explicit emoji cases.
+  readOnlyHint is not a permission or sandbox; metadata is not a secret store.
+- Check is_error, structured schema and content/structure consistency separately
+  from independent task facts. The injected valid-shape/wrong-distance case must
+  remain accepted by schema and rejected by a numerical reference, not hidden.
+- tools/build-agent-starter.py --profile mcp generates only named pure functions
+  from canonical agent_loop.py, with source/transform hashes. The server requires
+  no model SDK. Preserve default Agent archive checks and complete actual SDK MIT
+  license, distinct from the protocol repository's composite license.
+- Two new permanent IDs extend32 to34 in the same v1 journal. Preserve exact old32
+  raw/export on both worksheets, explicit-only extension and no public article
+  private-store accesses. Website build checks use stdlib only; actual SDK/stdio
+  tests run separately in an MCP-only Python3.11+ environment, actually tested3.12.

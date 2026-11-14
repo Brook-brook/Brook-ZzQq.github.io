@@ -39,6 +39,7 @@ python3 -m http.server 8000
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-loop-basics/#note-learning-questions
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-project-starter/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-testing-contracts/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-mcp-server/
 
 服务保持运行，停止时按Ctrl+C。端口8000被占用时，命令和网址一起改为8001。
 
@@ -48,7 +49,7 @@ python3 -m http.server 8000
 Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐统一使用上面的
 目录层级，避免此前出现的404或原始黑白模板。
 
-开发分支依次基于前一轮；最新24包含17–23的代码。CI产物默认保留7天，
+开发分支依次基于前一轮；最新25包含17–24的代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。
 
 循环实验底部可显式下载Python例子与配套公开目录。代码由你在自己的本地/
@@ -69,3 +70,8 @@ Python3.11+，先按README安装固定openai3.50.0/httpx2 2.16.0；安装可能�
 包索引，之后离线演练无需Key或网络。脚本假响应经真实SDK返回，实际工具
 执行，六项检查验证程序契约，不能当作模型成绩。网页本身不运行该项目。
 源码ZIP、编译站点预览ZIP与文章内的Python练习包是不同文件，请按各自说明。
+
+MCP文章另有原创brook-mcp-starter.zip，解压进入brooks-mcp-starter，按README
+安装固定mcp2.3.0/httpx2 2.16.0后运行python client_check.py。客户端会启动本机
+stdio子进程，实际发现/调用三项只读工具；无需模型Key，不要在浏览器打开server.py。
+默认auto与显式legacy是两种已测模式，不能把版本标签或只读提示当作认证。

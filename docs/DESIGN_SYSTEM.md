@@ -407,3 +407,12 @@ removed with reduced motion. Closed disclosures leave no phantom content layout.
 Let the header brand's visible text supply its accessible name, adding a hidden
 home suffix. The compact visible name must remain accessible too. This avoids
 responsive visible-label/aria-label mismatches rather than suppressing axe rules.
+
+## Iteration 25 — a protocol you can run, a page you can read
+
+Keep the native note layout and one early download with actual Python requirements.
+The MCP lesson uses a short task title, an inspectable message path and a semantic
+role table; code scrolls in one named keyboard group. Do not draw a fake connected
+dashboard or add a browser model-Key field. A real stdio example is downloaded and
+run locally. The initial long heading split a Chinese verb on desktop; shortening
+it preserves the point and restores a clean title. No new blur, font or animation.

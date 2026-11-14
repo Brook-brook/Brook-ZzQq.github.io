@@ -1,0 +1,63 @@
+SOURCE package-pure-check.txt
+PASS starter archive: 13 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+PASS isolated standard-library tools from actual MCP ZIP; no protocol SDK or model imported
+
+
+SOURCE package-models.txt
+✔ MCP teaching ZIP is current and its actual read functions execute with isolated standard-library Python (119.805668ms)
+✔ the pure module records its canonical client source while the MCP package declares no model SDK (0.970648ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 237.025751
+
+
+SOURCE checks-first.txt
+test_actual_results_and_returned_data_are_owned (__main__.MCPChecks.test_actual_results_and_returned_data_are_owned) ... ok
+test_actual_stdio_default_auto_negotiates_modern_protocol (__main__.MCPChecks.test_actual_stdio_default_auto_negotiates_modern_protocol) ... ok
+test_actual_stdio_legacy_is_explicit_not_a_new_protocol_claim (__main__.MCPChecks.test_actual_stdio_legacy_is_explicit_not_a_new_protocol_claim) ... ok
+test_invalid_calls_never_reach_actual_dispatch (__main__.MCPChecks.test_invalid_calls_never_reach_actual_dispatch) ... ok
+test_output_schema_rejects_bad_shape_but_does_not_certify_facts (__main__.MCPChecks.test_output_schema_rejects_bad_shape_but_does_not_certify_facts) ... ok
+test_real_discovery_and_three_explicit_schemas (__main__.MCPChecks.test_real_discovery_and_three_explicit_schemas) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.974s
+
+OK
+Actual MCP SDK2.3.0: in-process validation and real stdio subprocesses; no model or remote endpoint.
+
+
+SOURCE package-cli-checks.txt
+test_actual_in_process_and_stdio_six_contract_checks (__main__.ExtractedMCP.test_actual_in_process_and_stdio_six_contract_checks) ... ok
+test_exact_payload_and_standard_library_component (__main__.ExtractedMCP.test_exact_payload_and_standard_library_component) ... ok
+test_real_cli_modes_and_results (__main__.ExtractedMCP.test_real_cli_modes_and_results) ... ok
+test_unoffered_mode_is_not_silently_treated_as_verified (__main__.ExtractedMCP.test_unoffered_mode_is_not_silently_treated_as_verified) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.757s
+
+OK
+Actual SDK2.3.0, public ZIP/CLI and synthetic environment; no model/remote host.
+
+
+SOURCE retained-agent-archive.txt
+PASS starter archive: 11 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+
+
+SOURCE retained-agent-models.txt
+✔ public Agent starter hash covers the exact reused client, catalog, teaching files and licenses (9.375788ms)
+✔ editing the reused client without regenerating the public starter is rejected (8.383863ms)
+✔ a changed archive never passes with an earlier public hash (3.361483ms)
+✔ unsafe and duplicate input paths are rejected rather than reading another file (7.995356ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 145.306778
