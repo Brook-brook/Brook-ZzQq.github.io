@@ -59,6 +59,21 @@ data tables are untouched. Keep literal code, long-line scroll, both themes,
 320px/large text and visible focus. A1px native-choice press cancels under live
 reduced motion; no JS or animation runtime was added for this widget.
 
+## A real project action (Iteration 24)
+
+Keep the two foundation route lists and add one compact building section, reached
+by a native opening jump. Original guides are reading pages, with genuine file
+roles, commands and contract cases, not fake terminal windows or product cards.
+A real note artifact belongs before its TOC, with a44px native download and the
+actual Python/dependency/offline conditions. No artifact means no empty button.
+Escape metadata and fail the build for nonexistent, excluded or unsafe targets.
+
+Long shell commands use valid continuation lines where useful; keep one labelled
+keyboard code-scroll group and full copyable syntax. Do not hide clipped command
+arguments behind padding or suppress the design gate. Initial download discovery
+was too late on phone and is now visible in the first viewport. Keep the shared
+lavender tokens, native states, instant focus and reduced-motion press fallback.
+
 ## Source of truth
 
 `assets/css/atlas-tokens.css` defines colors, font stacks, spacing, type, easing,

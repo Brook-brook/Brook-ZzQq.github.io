@@ -1,0 +1,53 @@
+Command outputs retained; trailing whitespace normalized.
+
+--- ZIP exact payload and current sources ---
+PASS starter archive: 11 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+
+--- Node public archive/source guards ---
+✔ public Agent starter hash covers the exact reused client, catalog, teaching files and licenses (5.116262ms)
+✔ editing the reused client without regenerating the public starter is rejected (6.621796ms)
+✔ a changed archive never passes with an earlier public hash (2.816987ms)
+✔ unsafe and duplicate input paths are rejected rather than reading another file (3.852701ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 138.391459
+
+--- Extracted ZIP + actual SDK CLI ---
+test_actual_cli_scenarios_and_partial_work_outputs (__main__.ExtractedStarter.test_actual_cli_scenarios_and_partial_work_outputs) ... ok
+test_exact_zip_payload_and_manifest_check (__main__.ExtractedStarter.test_exact_zip_payload_and_manifest_check) ... ok
+test_invalid_cli_budget_stops_with_argument_error (__main__.ExtractedStarter.test_invalid_cli_budget_stops_with_argument_error) ... ok
+test_packaged_six_contract_checks_with_network_connections_forbidden (__main__.ExtractedStarter.test_packaged_six_contract_checks_with_network_connections_forbidden) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.006s
+
+OK
+Actual SDK3.50.0, extracted public ZIP, synthetic environment only; no model or account.
+
+--- Fresh venv installed from actual ZIP requirements; same extracted checks ---
+test_actual_cli_scenarios_and_partial_work_outputs (__main__.ExtractedStarter.test_actual_cli_scenarios_and_partial_work_outputs) ... ok
+test_exact_zip_payload_and_manifest_check (__main__.ExtractedStarter.test_exact_zip_payload_and_manifest_check) ... ok
+test_invalid_cli_budget_stops_with_argument_error (__main__.ExtractedStarter.test_invalid_cli_budget_stops_with_argument_error) ... ok
+test_packaged_six_contract_checks_with_network_connections_forbidden (__main__.ExtractedStarter.test_packaged_six_contract_checks_with_network_connections_forbidden) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 5.417s
+
+OK
+Actual SDK3.50.0, extracted public ZIP, synthetic environment only; no model or account.
+
+--- Fresh dependency consistency ---
+No broken requirements found.
+
+--- Shell syntax only, no command/model execution ---
+_atlas_notes/agent-project-starter.md block1: bash -n exit0; parse only, no commands or model run
+_atlas_notes/agent-project-starter.md block2: bash -n exit0; parse only, no commands or model run
+_atlas_notes/agent-project-starter.md block3: bash -n exit0; parse only, no commands or model run
+_includes/agent-starter/README.md block1: bash -n exit0; parse only, no commands or model run
+_includes/agent-starter/README.md block2: bash -n exit0; parse only, no commands or model run
+_includes/agent-starter/README.md block3: bash -n exit0; parse only, no commands or model run

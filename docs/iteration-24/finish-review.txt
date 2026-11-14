@@ -1,0 +1,32 @@
+Fresh-context Hallmark finish review, gates.md §6
+Reviewer: /root/iteration24_finish_review
+Inputs: fifteen prescribed rendered captures for the three actual surfaces,
+original23 AI-entry before captures, initial guide screenshot, current phone
+fold, source files and locked design. No inherited build transcript.
+
+ship
+
+No findings owed under the applicable app-screen gates.
+
+- Gates34/62/75: full-page captures preserve readable hierarchy and tables. Fresh
+  headless checks at320/375/390/1440, including light/dark and no-JS, found no page
+  overflow, broken images or missing local fragment targets.
+- Controls work: keyboard download produced the actual ZIP and matched its
+  manifest SHA256; download precedes the TOC. Python3.11+, dependency installation
+  and offline limits are visible.
+- Keyboard access holds: all four overflowing code regions scroll at320px;
+  native TOC focus and alternate-question disclosure work. The question link
+  opens the correct practice fragment, exposes32 steps and creates no record.
+- Preservation holds: the existing eight foundation steps and their reading/lab
+  links remain visible;25 internal nonfragment destinations returned successfully.
+  Source links and explicit manual-only wording support the claims.
+
+Idea/theme gap: none. The pages connect a concrete task to requests, tools,
+evidence and evaluation within the locked lavender garden.
+
+What the old page did better: its two-link opening was slightly shorter on phone;
+no former action or content is harder to find. The new guide materially improves
+download discovery.
+
+Do not dilute the real-download prominence, specific self-explanation destinations,
+readable native content, or clear scripted-contract/model-performance distinction.

@@ -1,0 +1,2 @@
+{"width":305,"body":"32px","download":"32px","downloadBox":{"left":20,"right":285,"height":108.78125},"viewport":320,"tables":[{"width":265,"right":285,"display":"table"}]}
+{"width":375,"body":"32px","download":"32px","downloadBox":{"left":20,"right":355,"height":108.78125},"viewport":390,"tables":[{"width":335,"right":355,"display":"table"}]}

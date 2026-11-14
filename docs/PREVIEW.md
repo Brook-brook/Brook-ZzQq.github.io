@@ -37,6 +37,8 @@ python3 -m http.server 8000
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/retrieval/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/skills-mcp-boundaries/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-loop-basics/#note-learning-questions
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-project-starter/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-testing-contracts/
 
 服务保持运行，停止时按Ctrl+C。端口8000被占用时，命令和网址一起改为8001。
 
@@ -46,7 +48,7 @@ python3 -m http.server 8000
 Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐统一使用上面的
 目录层级，避免此前出现的404或原始黑白模板。
 
-开发分支依次基于前一轮；最新23包含17–22的代码。CI产物默认保留7天，
+开发分支依次基于前一轮；最新24包含17–23的代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。
 
 循环实验底部可显式下载Python例子与配套公开目录。代码由你在自己的本地/
@@ -61,3 +63,9 @@ Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐
 问题和路线入口保留；这些操作不记录访问或完成。新接口教程可下载
 SKILL.md格式示例，基础笔记可下载五案例任务卡。下载的是学习材料，
 网页不会自动安装Skill、调用模型或连接MCP服务。
+
+新Agent练习包从搭建文章简介下显式下载，再解压进入brooks-agent-starter目录。
+Python3.11+，先按README安装固定openai3.50.0/httpx2 2.16.0；安装可能需要
+包索引，之后离线演练无需Key或网络。脚本假响应经真实SDK返回，实际工具
+执行，六项检查验证程序契约，不能当作模型成绩。网页本身不运行该项目。
+源码ZIP、编译站点预览ZIP与文章内的Python练习包是不同文件，请按各自说明。

@@ -416,3 +416,28 @@
 - Optional Python/JS parity tests compare138 valid read calls with a declared
   numeric tolerance, using synthetic fixtures only and no model/socket/credentials.
   They do not prove bit-identical math across platforms or real-world precision.
+
+## Building an Agent project (Iteration 24)
+
+- The downloadable starter reuses assets/examples/agent_loop.py as the single
+  source of its client/tools. Explicit inputs are in tools/agent-starter-inputs.json;
+  regenerate with python3 tools/build-agent-starter.py when any input changes.
+  The Node hash guard rejects stale client/source/ZIP bytes without adding SDK
+  dependencies to the website. Python --check also inspects every ZIP payload.
+- Keep only explicit bounded public inputs, safe archive paths, complete licenses,
+  original source dates and deterministic metadata. Never bundle venvs, caches,
+  credentials, local logs, private browser notes or third-party distributions.
+- Offline means actual SDK plus authored in-memory MockTransport fixtures, not a
+  model. Installing requirements may need a package index. New project pins both
+  openai3.50.0 and httpx2 2.16.0; this combination needs Python3.11+, tested3.12.
+  Do not reuse the standalone client's lower syntax minimum for the entire bundle.
+- Verify the actual extracted ZIP and CLI, including expected nonzero authored
+  failure/budget exits. Keep six contract checks distinct from real inference,
+  task success and learner mastery. Public traces are not a universal sanitizer.
+- Optional note download metadata is validated after publication pruning. Allow
+  only an existing public examples ZIP with a safe filename and escaped bounded
+  label/detail. Place its native action and real requirements before the TOC;
+  notes without an artifact get no empty button. Preserve no-JS and both prefixes.
+- The four new building IDs extend28 to32, never rename/remove the old ones or
+  change the v1 journal/schema. Test exact old28 raw/export on paths/practice,
+  explicit-only extension and no private reads on public articles/search.

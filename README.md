@@ -6,6 +6,23 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 24 build a small Agent project
+
+`feat/atlas-iteration-24` continues pushed twenty-third-round `7a30e0e`. Two
+original building/testing guides connect to a real downloadable Python project.
+The archive reuses the existing client, ships its public catalog/licenses and
+checks six contracts with real SDK3.50.0 plus authored in-memory HTTP fixtures.
+No model is called. Direct requirements include httpx2 2.16.0: Python3.11+ is
+required, with actual extracted-project verification on3.12.
+
+A third building path adds four manual questions while preserving all28 old IDs
+and raw v1 backups. Current totals:20 public notes,11 routes/32 questions,26
+curated connections and59 public metadata-search entries. The real download is
+visible before the article TOC, with bounded validated metadata and requirements;
+no website package, private store, auto-grading or production change is added.
+See [delivery](docs/ATLAS-ITERATION-24.md), [design audit](docs/design-audit-iteration-24.md),
+[resource/privacy review](docs/iteration-24-compliance.md) and [preview](docs/PREVIEW.md).
+
 ## Iteration 23 follow an article into a specific question
 
 `feat/atlas-iteration-23` continues pushed twenty-second-round `13b5ad0`. Article
