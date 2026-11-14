@@ -130,7 +130,7 @@ try {
     await page.fill('#page-search-query', 'Python');
     await catalog.locator('[data-search-kind="path"]').click();
     assert.deepEqual((await catalog.locator('[data-search-results] a').evaluateAll((nodes) => nodes.map((node) => node.getAttribute('href')))).sort(),
-      [`${prefix}/study/paths/#agent-building`, `${prefix}/study/paths/#ai-development`, `${prefix}/study/paths/#python-data`].sort(), 'Python finds the original route and both explicitly Python-based development routes');
+      [`${prefix}/study/paths/#agent-building`, `${prefix}/study/paths/#ai-development`, `${prefix}/study/paths/#python-data`, `${prefix}/study/paths/#python-async-foundations`].sort(), 'Python finds the original route, both development routes and the new async foundation route');
     await page.locator('#page-search-query').focus();
     await page.keyboard.press('Control+k');
     assert.equal(await dialog.evaluate((e) => e.open), false, 'shortcut preserves input editing');

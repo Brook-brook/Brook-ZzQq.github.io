@@ -18,6 +18,7 @@ PROFILES = {
     "agent": ("agent-starter", "brooks-agent-starter", "brook-agent-starter"),
     "mcp": ("mcp-starter", "brooks-mcp-starter", "brook-mcp-starter"),
     "bridge": ("agent-mcp-bridge", "brooks-agent-mcp-bridge", "brook-agent-mcp-bridge"),
+    "async": ("python-async-starter", "brooks-python-async", "brook-python-async"),
 }
 TOOL_FUNCTIONS = {"text", "catalog_snapshot", "unique_object", "checked_call", "distance", "execute_read_tool", "tool_schemas"}
 TOOL_CONSTANTS = {"CATEGORIES", "RADIUS_M"}

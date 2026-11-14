@@ -57,6 +57,18 @@ try {
     document.getElementById('python-status').textContent.includes('执行完成')
   );
   assert.match(await page.locator('#python-output').innerText(), /2.000/);
+  await page.selectOption('#python-example', 'async');
+  await page.click('#python-run');
+  await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行完成'));
+  const asyncValues = (await page.locator('#python-output').innerText()).trim().split('\n').map((row) => JSON.parse(row));
+  assert.deepEqual(asyncValues.map((row) => row.case), ['cancel', 'release']);
+  assert.deepEqual(asyncValues.map((row) => row.task_cancelled), [true, false]);
+  assert.ok(asyncValues.every((row) => row.task_done && row.before_schedule.length === 0));
+  assert.ok(!asyncValues[0].events.includes('task:resumed'));
+  assert.ok(asyncValues[1].events.includes('task:resumed'));
+  assert.ok(await page.locator('#python-output-jump').isVisible());
+  await page.locator('#python-output-jump').click();
+  assert.ok(await page.locator('#python-output').evaluate((node) => node === document.activeElement));
   await page.fill('#python-code', 'print(1 / 0)');
   await page.click('#python-run');
   await page.waitForFunction(() =>
@@ -76,6 +88,9 @@ try {
   assert.ok((await page.locator('#python-output').innerText()).length < 20100);
   await page.fill('#python-code', 'while True:\n    pass');
   await page.click('#python-run');
+  assert.equal(await page.locator('#python-code').isEditable(), false);
+  assert.ok(await page.locator('#python-example').isDisabled());
+  assert.ok(await page.locator('#python-reset').isDisabled());
   await page.waitForFunction(
     () =>
       document.getElementById('python-status').textContent.includes('执行超时'),
@@ -92,7 +107,7 @@ try {
   await page.click('#python-stop');
   assert.match(await page.locator('#python-status').innerText(), /停止并释放/);
   console.log(
-    'PASS real Pyodide in Chromium: 3 examples, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop'
+    'PASS real Pyodide in Chromium: 4 examples including actual async release/cancel, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop'
   );
 } finally {
   await browser.close();

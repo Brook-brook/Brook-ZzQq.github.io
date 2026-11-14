@@ -1,6 +1,21 @@
 schema_version: 1
 ai_assisted: true
 links:
+  - id: python-functions-to-async
+    from: python-first-steps
+    to: python-async-boundaries
+    kind: extend
+    reason: 能读函数、字典与异常后，实际运行协程、任务和取消；区分调用对象与调度，不把async当CPU并行。
+  - id: async-before-host
+    from: python-async-boundaries
+    to: agent-mcp-bridge
+    kind: prepare
+    reason: 先观察真实等待与取消，再读宿主的SDK/MCP await、部分观察和异常传播；基础不是强制解锁。
+  - id: async-runtime-limits
+    from: python-async-boundaries
+    to: agent-loop-basics
+    kind: compare
+    reason: 对照任务生命周期与请求/工具预算，区分协作取消、强制停止和没有发生的后续工作，不能把停止记成完成。
   - id: protocol-host-bridge
     from: agent-mcp-server
     to: agent-mcp-bridge

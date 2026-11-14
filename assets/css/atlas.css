@@ -1156,6 +1156,43 @@ pre {
 .runtime-note {
   max-width: 850px;
 }
+
+#python-lab .runtime-note details {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin-bottom: var(--space-md);
+}
+
+#python-lab .runtime-note summary {
+  min-height: 44px;
+  padding-block: var(--space-sm);
+}
+
+.python-feedback {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.python-feedback .python-status {
+  flex: 1 1 14rem;
+  min-height: 0;
+  margin: 0;
+}
+
+#python-output-jump {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+#python-output-jump[hidden] { display: none; }
+
+#python-output { scroll-margin-block-start: var(--space-lg); }
+
 .error-text {
   color: var(--amber);
 }

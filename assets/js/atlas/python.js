@@ -8,6 +8,12 @@ const examples = {
 const byId = (id) => document.getElementById(id);
 const lab = byId('python-lab');
 if (lab) {
+  const selection = byId('python-example');
+  const asyncSource = byId('python-async-source')?.content?.querySelector('code')?.textContent;
+  if (asyncSource?.trim()) examples.async = asyncSource;
+  else if (selection.querySelector('[value="async"]')) selection.querySelector('[value="async"]').disabled = true;
+  // A public initial preset, never an automatic load/run or private query.
+  if (location.hash === '#async-wait' && examples.async) selection.value = 'async';
   const editor = byId('python-code'),
     output = byId('python-output'),
     status = byId('python-status');
@@ -23,6 +29,10 @@ if (lab) {
     load.disabled = ['loading', 'ready', 'running'].includes(state);
     run.disabled = state !== 'ready';
     stop.disabled = !worker;
+    byId('python-output-jump').hidden = output.textContent === '输出将在这里显示。';
+    editor.readOnly = state === 'running';
+    selection.disabled = state === 'running';
+    byId('python-reset').disabled = state === 'running';
   }
   function dispose(message) {
     clearTimeout(timer);
@@ -31,11 +41,19 @@ if (lab) {
     controls('idle', message);
   }
   function restore() {
-    editor.value = examples[byId('python-example').value];
+    editor.value = examples[selection.value];
+    if (state === 'ready' && output.textContent !== '输出将在这里显示。')
+      status.textContent = '示例已恢复。当前输出保留上次结果，运行后更新。';
   }
   byId('python-example').addEventListener('change', restore);
   byId('python-reset').addEventListener('click', restore);
   restore();
+  controls('idle', status.textContent);
+  editor.addEventListener('input', () => {
+    if (state === 'ready' && output.textContent !== '输出将在这里显示。' &&
+        status.textContent !== '代码已修改。当前输出保留上次结果，点击运行更新。')
+      status.textContent = '代码已修改。当前输出保留上次结果，点击运行更新。';
+  });
   load.addEventListener('click', () => {
     try {
       worker = new Worker(lab.dataset.worker);
@@ -83,8 +101,9 @@ if (lab) {
     }, 5000);
     worker.postMessage({ type: 'run', code: editor.value });
   });
-  stop.addEventListener('click', () =>
-    dispose('运行时已停止并释放。需要时可重新加载。')
-  );
+  stop.addEventListener('click', () => {
+    if (state === 'running') output.textContent = '运行时已停止，没有接收本次完整结果。';
+    dispose('运行时已停止并释放。需要时可重新加载。');
+  });
   window.addEventListener('pagehide', () => dispose('运行时已释放。'));
 }

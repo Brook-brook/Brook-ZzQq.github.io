@@ -34,6 +34,11 @@ preview_notes:
       均衡不等于社会最优。
 updates:
   - date: "2026-11-14"
+    title: 给Agent搭建补一块可运行的异步基础
+    text: 网页与本机复用同一Python函数，实际观察等待、释放与取消；保留原例子、Worker限制与手动记录，不用预写日志冒充执行。
+    label: 打开等待与取消练习
+    url: /knowledge/python-async-boundaries/
+  - date: "2026-11-14"
     title: 把SDK提议、宿主与真实MCP接成一条路径
     text: 开发分支新增原创本机连接项目；预写模型响应、真实stdio工具、整批校验与独立预算可运行核对。正常、坏回执与取消分别验证，未调用真实模型，待审查发布。
     label: 打开Agent与MCP连接练习

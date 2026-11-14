@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "brook-python-async",
+  "root": "brooks-python-async",
+  "files": [
+    {
+      "name": "README.md",
+      "source": "_includes/python-async-starter/README.md",
+      "sha256": "601f2b6409d2ee94ace657667ce742e0eda72e6770fda66a8b9dd94746fd29d7",
+      "bytes": 1999
+    },
+    {
+      "name": "async_wait.py",
+      "source": "_includes/python-async-starter/async_wait.py",
+      "sha256": "cb69bdd0d5daef778985b95f56fb702846aabbb8ab2be4f645fe431685b5e7b5",
+      "bytes": 1362
+    },
+    {
+      "name": "demo.py",
+      "source": "_includes/python-async-starter/demo.py",
+      "sha256": "d5f357034774b33579806930c3cc6ae23117c4b13899df53bf1189601e76f832",
+      "bytes": 290
+    },
+    {
+      "name": "run_checks.py",
+      "source": "_includes/python-async-starter/run_checks.py",
+      "sha256": "e85f5c4152ee9458785e67d5958be7e8038f67be54076fb86436d05d3a337480",
+      "bytes": 2485
+    },
+    {
+      "name": "LICENSE.txt",
+      "source": "_includes/agent-starter/LICENSE.txt",
+      "sha256": "13ed684a76a34c04b5b39049f97e497a054e25a89abd1db2ce975daef69ced6e",
+      "bytes": 1062
+    }
+  ],
+  "archive": {
+    "path": "assets/examples/python-async-starter.zip",
+    "sha256": "cc19cb1de72eb71fdee337dc7e3bf74d5cfd25783d4536cac673346bdf2ab8e4",
+    "bytes": 4787
+  }
+}
