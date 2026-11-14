@@ -1,0 +1,17 @@
+ship
+
+No concrete finish finding within the reviewed visual, keyboard and unloaded-state scope.
+
+The restrained lavender brand and the two stamped ideas describe the pages in front of me: a real Python editor leads into a specific waiting/cancellation lesson; the article retains a first question plus another native angle; the AI index connects concrete tasks to runnable material. Largest gap: none.
+
+I inspected the final 1440 and 375 full pages for Python, the async lesson and the AI study index, the Python 1440 fold, and the frozen before Python captures. I then scrolled fresh compiled 1440 pages in 900px steps and inspected each resulting screen. The long document and app-screen hierarchy is legible; controls and the lesson table remain available on the phone. No new competitor-generic headline warrants a copy finding in these established app/document shapes.
+
+Fresh isolated /usr/bin/chromium checks used only http://127.0.0.1:4273/Brook-ZzQq.github.io and did not load Pyodide. The public #async-wait URL selected the original async source while status remained unloaded and Run remained disabled. Tab left the editor for the output pane with an immediate visible outline; keyboard activation opened the runtime disclosure. The four options remained native and selectable. None of the three pages exceeded its viewport width at 320, 375, 1440 or 1920. No page exception or external request occurred during this unloaded review.
+
+With JavaScript disabled, all five runtime/example controls were disabled, the editor was read-only, and the explanatory note with readable article links remained available.
+
+Before comparison: no action, information or destination from the supplied before Python captures is harder to find. The shorter initial runtime explanation keeps the expanded limitations accessible through a native disclosure.
+
+Limit: I did not independently certify the running/result/error/timeout/stop refinements or execute Python; the parent is finishing the real Pyodide checks for those states.
+
+Do not dilute the native controls, explicit load/run boundary, readable code and article links, or the distinction between cooperative cancellation and terminating the Worker.

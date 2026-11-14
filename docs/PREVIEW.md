@@ -41,6 +41,8 @@ python3 -m http.server 8000
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-testing-contracts/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-mcp-server/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-mcp-bridge/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/python-async-boundaries/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/python/#async-wait
 
 服务保持运行，停止时按Ctrl+C。端口8000被占用时，命令和网址一起改为8001。
 
@@ -50,7 +52,7 @@ python3 -m http.server 8000
 Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐统一使用上面的
 目录层级，避免此前出现的404或原始黑白模板。
 
-开发分支依次基于前一轮；最新26包含17–25的代码。CI产物默认保留7天，
+开发分支依次基于前一轮；最新27包含17–26的代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。
 
 循环实验底部可显式下载Python例子与配套公开目录。代码由你在自己的本地/
@@ -81,3 +83,9 @@ AI入口的第三段是宿主连接项目。下载brook-agent-mcp-bridge.zip后�
 brooks-agent-mcp-bridge，按README安装三个固定依赖并运行python demo_bridge.py。
 它是真实SDK/本机协议与预写模型响应；batch --max-calls 1会以部分工作
 和退出码1停止。不要把该结果写成真实模型、任务完成或服务端执行次数。
+
+异步基础可以直接在浏览器预选，仍需自己点击加载解释器、运行代码。
+两行JSON来自真实Python，分别显示取消与释放，不是模型推理。完成后
+点“查看输出/错误”可到真实结果区；修改源代码时会说明旧结果尚未更新。
+本机brook-python-async.zip只用Python3.11+标准库，进入brooks-python-async
+运行python3 demo.py和python3 run_checks.py，不需要pip或Key。

@@ -6,6 +6,23 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 27 understand async before the host adapter
+
+`feat/atlas-iteration-27` continues pushed/unmerged26 (`e3d56d5`). A new original
+Python foundation lesson and route connect to a genuinely runnable fourth
+Pyodide example. The browser and six-entry stdlib ZIP share exactly one asyncio
+function; Event/TaskGroup coordinate release/cancel without invented timing.
+Actual CPython3.11.18/3.12 checks and browser Pyodide execution are separate.
+
+The Python screen has a shorter native opening, expandable environment details,
+explicit focused output jump and clear running/stale/stopped states. Loading
+remains manual; no-JS controls are disabled and reading/downloads work. Old36 v1
+records remain exact until explicit extension to38 questions/12 routes. Totals:
+23 public notes,35 curated connections and63 public metadata-search entries.
+No new website/runtime dependency, SDK, private store or production change.
+See [delivery](docs/ATLAS-ITERATION-27.md), [audit](docs/design-audit-iteration-27.md),
+[source/compliance](docs/iteration-27-compliance.md) and [preview](docs/PREVIEW.md).
+
 ## Iteration 26 connect an Agent host to MCP
 
 `feat/atlas-iteration-26` continues pushed, unmerged25 (`a459656`). An original

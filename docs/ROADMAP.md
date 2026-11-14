@@ -4,7 +4,7 @@
 
 - Home, Explore, Geo Lab, AI Lab, Code Lab, Projects, Knowledge, About.
 - Responsive navigation, persistent dark/light mode, accessible no-JS reading.
-- Twenty-two public notes/tutorials with metadata, TOC, code blocks and actual
+- Twenty-three public notes/tutorials with metadata, TOC, code blocks and actual
   experiment links when available; source-grounded research stays type-labelled.
 - Knowledge map, client-side search, category filtering and empty state.
 - Prisoner/stag payoff labs and editable 2×2 pure-strategy Nash explorer.
@@ -12,12 +12,12 @@
   objective, exact equality boundaries and a labelled two-player endpoint slice.
 - Four-step C++ shallow/deep copy visualization with valid lifetime semantics.
 - Spherical Mercator local scale/area experiment and labelled GIS × AI workflow.
-- Lazy Pyodide Worker with examples, real execution, errors, output cap,
+- Lazy Pyodide Worker with four examples, real execution, errors, output cap,
   stop/reload and timeout. Runtime downloads only after the visitor requests it.
 - Existing Chirpy blog/posts remain accessible; old Atlas preview routes redirect.
 - Automated model/browser checks plus an explicit build-before-deploy Pages workflow.
 - Two AI/Agent development paths, five original foundation lessons and a native
-  entry. Eleven routes/thirty-six manual questions retain the same v1 journal.
+  entry. Twelve routes/thirty-eight manual questions retain the same v1 journal.
 - Original local/server Python request example with actual-SDK offline contract
   tests; no live model service or website API-key field.
 - Bounded script-proposed Agent-runtime exercise with real native read tools,
@@ -42,6 +42,10 @@
   actual stdio, strict trusted contracts, independent attempt budgets, checked
   receipts and partial/cancelled observations. Native three-stage workshop and
   two manual questions; no inference claim, private store or hosted Agent.
+- Original async foundation note/stdlib project and a fourth true Pyodide
+  example, sharing one function. Event/TaskGroup release/cancel, task ownership,
+  manual loading, explicit output focus and stopped/stale states; two questions
+  append36 to38 without changing the journal or requiring a model.
 
 ## Next useful increments
 
