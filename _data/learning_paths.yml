@@ -280,3 +280,23 @@
       lab: /playground/agent-runtime/
       lab_label: 免安装对照部分工作，非MCP协议页
       question: batch上限1、形状正确的999距离、第一次观察后取消，各应留下什么？为什么客户端MCP尝试不能当服务端执行次数，answered也不等于事实正确？
+- id: python-async-foundations
+  title: Python：从函数走到异步任务
+  summary: 用真实等待、释放与取消读懂协程和任务，补齐Agent桥接的基础；不把异步当作CPU并行或模型能力。
+  prerequisite: 建议能读Python函数、字典和异常；网页需显式加载Pyodide，本机例子仅需Python3.11+标准库。
+  challenge: 运行两种分支，保留公开输出，用自己的话解释为什么cancel请求、最终取消和终止Worker不是一回事。
+  steps:
+    - id: async-scheduling
+      title: 协程调用后，运行了吗？
+      focus: 对照协程对象、任务调度、Event等待与TaskGroup归属，实际检查事件顺序。
+      note: python-async-boundaries
+      lab: /playground/python/#async-wait
+      lab_label: 在真实Python中运行等待与释放
+      question: before_schedule为什么为空？Task和await分别做什么？Event协调为什么比猜睡眠时间清楚，async为何不自动让CPU工作并行？
+    - id: async-cancellation
+      title: 取消，和强制停止？
+      focus: 核对取消请求、已进入的finally、任务结束和外部取消传播。
+      note: python-async-boundaries
+      lab: /playground/python/#async-wait
+      lab_label: 比较取消与释放
+      question: 对照两条输出说明哪种有task:resumed、哪种最终cancelled为真。为什么不能保证任意任务接受取消，Worker终止也不能保证finally执行或撤回外部操作？

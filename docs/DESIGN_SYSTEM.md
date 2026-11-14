@@ -427,3 +427,17 @@ The phone heading was shortened after a screenshot split its Chinese verb.
 New technical content remains a long reading page with an early native download,
 source dates, semantic tables and a single keyboard code-scroll group. No new
 visual dependency, idle movement, glow or blur layer is necessary.
+
+## Iteration 27 — make a run and its result easy to reach
+
+The Python app uses native breadcrumbs and one short title. A concise runtime
+summary keeps load/run controls in the phone's first view; full limitations are
+one keyboard-operable native disclosure away. Preserve original examples and
+the manual CDN boundary. After a result/error, an explicit anchor focuses the
+real output pane; never automatically drag the reader away from an action.
+
+Freeze source/selection/reset during a run and describe retained outputs when
+the reader edits. Disabled no-JS controls must stay honest while notes/downloads
+remain available. Use the existing lavender tokens, native code/controls and
+scoped feedback spacing. Shorten phone question/source labels, retaining full
+questions and destinations. No new font, particle, blur or animation dependency.

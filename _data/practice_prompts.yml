@@ -135,6 +135,14 @@ agent-mcp-discovery:
   hint: 先列出client_check.py、SDK Client、server.py和实际工具，检查默认auto的discovery_received。
   explanation: 本包客户端明确选择调用，经真实SDK和stdio启动服务，默认auto实际做发现，得到2026-07-28与自报服务信息；没有模型。版本pin本身可不发送发现，名称也不是身份认证。legacy只验证本SDK的旧握手模式，不能外推所有宿主兼容。
   counterexample: 打印硬编码协议版本、安装SDK或收到了普通JSON都不能单独证明MCP互通。此浏览器页面也不是可连接的MCP服务地址。
+async-scheduling:
+  hint: 先找worker()创建对象，再找create_task与entered.wait，最后看离开TaskGroup的位置。
+  explanation: 调用async函数只创建协程对象，所以调度前日志为空。Task安排运行，Event在实际等待点协调任务，TaskGroup离开前等所属子任务结束。async不是自动启动CPU并行；长计算缺少让出机会仍会阻塞其循环。
+  counterexample: 单纯写async关键字、调用但不await，或用睡一秒猜顺序，都不能当作子任务已经执行或测得并行性能的证据。
+async-cancellation:
+  hint: 把cancel_requested、task_cancelled、events里的cleanup和页面停止分开核对。
+  explanation: 本例子任务已等待且没有吞掉取消，cancel请求后先清理再结束，所以最终cancelled为真且不出现resumed。释放分支会继续并清理。TaskGroup等待所属任务；外部取消宿主仍向外传播。网页停止直接终止Worker，机制不同。
+  counterexample: cancel不是撤销交易，未开始协程未必进入finally，其他代码也可能拒绝或吞掉取消。不能从这组检查推出任意进程、远端操作或Worker终止都安全清理。
 agent-bridge-envelope:
   hint: 沿SDK提议、宿主允许与校验、MCP客户端/服务、工具结果、provider续请求各画一条箭头。
   explanation: 宿主从可信契约构造模型工具定义，先整批验证再转成MCP调用。SDK管理协议关联，宿主把实际结果带回对应provider call_id的function_call_output。默认真实SDK接收原创内存假回包，不产生模型推理；通用适配器不能认证调用者的模型来源。

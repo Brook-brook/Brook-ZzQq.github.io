@@ -486,3 +486,27 @@
   read-only container. Preserve archive identity and scope, not a universal
   sandbox/compatibility claim. Two IDs extend34 to36 using the same journal;
   old34 exact raw/export and manual-only extension remain required on both views.
+
+## Async foundations in the existing Python lab (Iteration 27)
+
+- Reuse _includes/python-async-starter/async_wait.py in the safely escaped inert
+  template and stdlib ZIP. Generate/check with --profile async. Do not maintain
+  a second function or substitute authored output. TaskGroup needs Python3.11+;
+  real tests used3.11.18,3.12 and the existing Pyodide0.27.7 browser runtime.
+- The initial public #async-wait preset only selects source. Never implicitly
+  load a CDN, run code or store a visit. Preserve all three earlier examples,
+  explicit load/run, Worker errors/stop/reload/5s timeout and output cap. Running
+  code is read-only; selector/reset freeze until it stops, with an explicit
+  output jump and honest retained-output indication on edits.
+- Coroutines, Tasks, Event and TaskGroup are different concepts. async is not
+  CPU parallelism; cancel requests are not rollback. This joined example does
+  not promise any task accepts cancellation, that an unstarted task runs finally,
+  or that terminating a Worker executes Python cleanup. Preserve those limits.
+- Two new permanent IDs append36→38 in a twelfth optional route. Never reorder
+  old IDs/routes or change the v1 store; original36 raw/export must remain exact,
+  with only explicit new notes/checks creating the37th entry.
+- Native no-JS controls remain unavailable, article/ZIP reading works. Test
+  canonical rendered code, no automatic external requests/private reads, actual
+  Pyodide four cases and output-focus behavior at root/project paths. DOM-text
+  doubling is distinct from full browser zoom. Keep complete actual CPython
+  LICENSE and official pinned source scope; original sample code is MIT.

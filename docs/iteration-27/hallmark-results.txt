@@ -1,0 +1,39 @@
+SOURCE hallmark/python-first.txt
+render tier: failed on /workspace/Brook-ZzQq.github.io/playground/python.html: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/Brook-ZzQq.github.io/playground/python.html
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+playground/python.html
+  FAIL 26a :1 no :focus-visible styling anywhere | fix: A focus ring at 3:1 or better, instant
+  FAIL 34 :1 no overflow-x: clip on html and body | fix: overflow-x: clip on both html and body
+  FAIL render :1 the page did not render (net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/Broo…); its render gates did not run | fix: Fix the page or the URL and rerun; an unrendered page is never a pass
+  REFLEX 26b :1 no :active styling anywhere | fix: All eight states; guard: not a form control, no aria-disabled anywhere
+  REFLEX 26b :1 no :disabled styling anywhere
+  WARN F1 :26 straight quote in prose x6 (first: int(json.dumps({"case": "cancel") | fix: Use typographic quotes: “ ” ’
+sloplint: 3 FAIL, 2 REFLEX, 1 WARN across 2 file(s) and 1 URL(s).
+
+
+SOURCE hallmark-corrected/python.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 2 file(s) and 1 URL(s).
+
+
+SOURCE hallmark-corrected/python-async-boundaries.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:4271/Brook-ZzQq.github.io/knowledge/python-async-boundaries/
+  FAIL 49a :1 [320px] control "调用了async函数，就已经在运行吗？" wraps to 2 lines (a.note-practice-title) | fix: Shorten the label or set nowrap
+  REFLEX 49b :1 [320px] link "Coroutines/Tasks、TaskGroup与Task取" wraps to 2 lines (a) | fix: Shorten the label or set nowrap
+sloplint: 1 FAIL, 1 REFLEX, 0 WARN across 2 file(s) and 1 URL(s).
+
+
+SOURCE hallmark-final/python.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 2 file(s) and 1 URL(s).
+
+
+SOURCE hallmark-final/python-async-boundaries.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 2 file(s) and 1 URL(s).
+
+
+SOURCE hallmark-final/ai.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 2 file(s) and 1 URL(s).

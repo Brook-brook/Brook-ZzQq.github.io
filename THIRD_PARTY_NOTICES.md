@@ -392,3 +392,20 @@ AsyncOpenAI/Responses and MockTransport's async interface were checked directly;
 local SDK/stdio fixtures are not live inference or a safety/performance score.
 See [source scope](docs/agent-bridge-source-review.md) and
 [compliance](docs/iteration-26-compliance.md).
+
+## Iteration 27: original asyncio foundations
+
+The Chinese lesson, Event/TaskGroup exercise, CLI/checks and UI additions are
+original AI-assisted Brook work (MIT, full original license in the six-entry
+ZIP). The browser and stdlib archive reuse the same original function. No new
+website package, Python SDK, font, icon, image, private trace or campus data.
+The existing lazy Pyodide0.27.7 runtime and its notices are unchanged.
+
+Official CPython3.11.18 references are checked at
+[26badd80b6dc7786cd8fb63c3608a31f04754219](https://github.com/python/cpython/tree/26badd80b6dc7786cd8fb63c3608a31f04754219):
+coroutines/tasks, TaskGroup, cancellation/state and Event sections. No upstream
+example or Python implementation is copied. Its actual complete
+[LICENSE](licenses/CPython-LICENSE.txt), including PSF2, historical terms and
+the additional Zero-Clause BSD documentation-code terms, is retained unchanged
+apart from one final newline. This is not an all-MIT label or a Python runtime
+redistribution. Scope: [iteration-27 compliance](docs/iteration-27-compliance.md).

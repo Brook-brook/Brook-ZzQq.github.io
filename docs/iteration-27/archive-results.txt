@@ -1,0 +1,49 @@
+SOURCE archive-build.txt
+PASS starter archive: 6 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+
+
+SOURCE async-checks-first.txt
+test_cancel_is_requested_then_acknowledged_after_cleanup (__main__.AsyncChecks.test_cancel_is_requested_then_acknowledged_after_cleanup) ... ok
+test_concurrent_demo_state_is_independent (__main__.AsyncChecks.test_concurrent_demo_state_is_independent) ... ok
+test_non_boolean_inputs_are_not_silently_coerced (__main__.AsyncChecks.test_non_boolean_inputs_are_not_silently_coerced) ... ok
+test_outer_cancellation_propagates_and_group_joins_its_child (__main__.AsyncChecks.test_outer_cancellation_propagates_and_group_joins_its_child) ... ok
+test_release_resumes_and_joins_without_cancellation (__main__.AsyncChecks.test_release_resumes_and_joins_without_cancellation) ... ok
+test_repeated_runs_leave_no_extra_pending_tasks (__main__.AsyncChecks.test_repeated_runs_leave_no_extra_pending_tasks) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.022s
+
+OK
+
+
+SOURCE archive-final.txt
+PASS starter archive: 6 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+test_cancel_is_requested_then_acknowledged_after_cleanup (__main__.AsyncChecks.test_cancel_is_requested_then_acknowledged_after_cleanup) ... ok
+test_concurrent_demo_state_is_independent (__main__.AsyncChecks.test_concurrent_demo_state_is_independent) ... ok
+test_non_boolean_inputs_are_not_silently_coerced (__main__.AsyncChecks.test_non_boolean_inputs_are_not_silently_coerced) ... ok
+test_outer_cancellation_propagates_and_group_joins_its_child (__main__.AsyncChecks.test_outer_cancellation_propagates_and_group_joins_its_child) ... ok
+test_release_resumes_and_joins_without_cancellation (__main__.AsyncChecks.test_release_resumes_and_joins_without_cancellation) ... ok
+test_repeated_runs_leave_no_extra_pending_tasks (__main__.AsyncChecks.test_repeated_runs_leave_no_extra_pending_tasks) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.015s
+
+OK
+{"case": "cancel", "before_schedule": [], "events": ["task:waiting", "host:continued", "host:cancel-requested", "task:cleanup", "host:joined"], "cancel_requested": true, "task_done": true, "task_cancelled": true}
+{"case": "release", "before_schedule": [], "events": ["task:waiting", "host:continued", "host:released", "task:resumed", "task:cleanup", "host:joined"], "cancel_requested": false, "task_done": true, "task_cancelled": false}
+PASS actual async ZIP: six checks and two CLI cases with isolated stdlib; no SDK, model or socket fixture
+
+
+SOURCE python311-checks.txt
+test_cancel_is_requested_then_acknowledged_after_cleanup (__main__.AsyncChecks.test_cancel_is_requested_then_acknowledged_after_cleanup) ... ok
+test_concurrent_demo_state_is_independent (__main__.AsyncChecks.test_concurrent_demo_state_is_independent) ... ok
+test_non_boolean_inputs_are_not_silently_coerced (__main__.AsyncChecks.test_non_boolean_inputs_are_not_silently_coerced) ... ok
+test_outer_cancellation_propagates_and_group_joins_its_child (__main__.AsyncChecks.test_outer_cancellation_propagates_and_group_joins_its_child) ... ok
+test_release_resumes_and_joins_without_cancellation (__main__.AsyncChecks.test_release_resumes_and_joins_without_cancellation) ... ok
+test_repeated_runs_leave_no_extra_pending_tasks (__main__.AsyncChecks.test_repeated_runs_leave_no_extra_pending_tasks) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.017s
+
+OK
+{"python": "3.11.18", "zip_sha256": "cc19cb1de72eb71fdee337dc7e3bf74d5cfd25783d4536cac673346bdf2ab8e4"}
