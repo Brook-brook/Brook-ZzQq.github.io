@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "root": "brooks-agent-mcp-bridge",
+  "files": [
+    {"name":"README.md","source":"_includes/agent-mcp-bridge/README.md"},
+    {"name":"bridge.py","source":"_includes/agent-mcp-bridge/bridge.py"},
+    {"name":"demo_bridge.py","source":"_includes/agent-mcp-bridge/demo_bridge.py"},
+    {"name":"run_checks.py","source":"_includes/agent-mcp-bridge/run_checks.py"},
+    {"name":"requirements.txt","source":"_includes/agent-mcp-bridge/requirements.txt"},
+    {"name":"NOTICE.md","source":"_includes/agent-mcp-bridge/NOTICE.md"},
+    {"name":"LICENSE.txt","source":"_includes/agent-starter/LICENSE.txt"},
+    {"name":"catalog.json","source":"_includes/agent-starter/catalog.json"},
+    {"name":"server.py","source":"_includes/mcp-starter/server.py"},
+    {"name":"contracts.py","source":"_includes/mcp-starter/contracts.py"},
+    {"name":"campus_tools.py","source":"assets/examples/agent_loop.py","extract":"campus-read-tools-v1"},
+    {"name":"provider_fixtures.py","source":"_includes/agent-starter/demo_offline.py","extract":"scripted-provider-fixtures-v1"},
+    {"name":"MCP-Python-SDK-LICENSE.txt","source":"licenses/MCP-Python-SDK-LICENSE.txt"},
+    {"name":"OpenAI-Python-LICENSE.txt","source":"licenses/OpenAI-Python-LICENSE.txt"},
+    {"name":"httpx2-LICENSE.md","source":"licenses/httpx2-LICENSE.md"}
+  ]
+}

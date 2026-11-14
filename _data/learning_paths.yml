@@ -268,3 +268,15 @@
       lab: /playground/tool-calling/
       lab_label: 免安装对照参数与回执，非MCP协议页
       question: 解释SDKv2低层公布schema与真实参数校验的区别。形状正确但距离999的回执为何还能过schema？readOnlyHint、is_error和_meta分别不能保证什么？
+    - id: agent-bridge-envelope
+      title: 模型调用信封，怎么接到MCP？
+      focus: 运行宿主桥接项目，区分provider调用关联、真实协议、可信契约与预写响应。
+      note: agent-mcp-bridge
+      question: 画出SDK、宿主、MCP客户端/服务与实际工具的位置。provider call_id为何原样带回function_call_output，却不能冒充MCP协议ID？SDK真实运行为什么仍不表示模型推理？
+    - id: agent-bridge-stop
+      title: 连接成功后，如何证明该停就停？
+      focus: 核对整批拒绝、独立调用预算、坏回执与取消后的已读结果。
+      note: agent-mcp-bridge
+      lab: /playground/agent-runtime/
+      lab_label: 免安装对照部分工作，非MCP协议页
+      question: batch上限1、形状正确的999距离、第一次观察后取消，各应留下什么？为什么客户端MCP尝试不能当服务端执行次数，answered也不等于事实正确？

@@ -79,7 +79,7 @@ try {
     await page.waitForFunction(() => document.getElementById('connection-current').value === 'reading-ai-evidence');
     await page.goBack(); await page.waitForFunction(() => document.getElementById('connection-current').value === 'cpp-copy');
     await page.locator('#connection-directory > summary').click();
-    assert.equal(await page.locator('#connection-directory ol > li').count(), 29);
+    assert.equal(await page.locator('#connection-directory ol > li').count(), 32);
     assert.match(await page.locator('#connection-directory').innerText(), /AI 辅助编排/);
     await page.locator('.knowledge-foundations > summary').click();
     assert.equal(await page.locator('.map-nodes a').count(), 5, 'all five original graph destinations remain');
@@ -107,7 +107,7 @@ try {
   const nojs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 900 } });
   const noPage = await nojs.newPage(); await noPage.goto(base + '/knowledge/');
   assert.ok(await noPage.locator('#connection-controls').isHidden());
-  assert.equal(await noPage.locator('#connection-directory ol > li:visible').count(), 29);
+  assert.equal(await noPage.locator('#connection-directory ol > li:visible').count(), 32);
   assert.equal(await noPage.locator('[data-note]:visible').count(), notes.length);
   await noPage.locator('.knowledge-foundations > summary').click(); assert.equal(await noPage.locator('.map-nodes a').count(), 5);
   assert.ok(await noPage.evaluate(() => document.documentElement.scrollWidth <= innerWidth)); await nojs.close();

@@ -1,6 +1,21 @@
 schema_version: 1
 ai_assisted: true
 links:
+  - id: protocol-host-bridge
+    from: agent-mcp-server
+    to: agent-mcp-bridge
+    kind: extend
+    reason: 把独立MCP服务接到真实SDK的宿主适配，沿调用信封、实际协议与对应回执理解中间职责，不把预写响应当推理。
+  - id: bridge-runtime-boundaries
+    from: agent-mcp-bridge
+    to: agent-loop-basics
+    kind: compare
+    reason: 对照直接函数与协议调用的独立预算，区分客户端尝试、服务执行、已接收观察和没有发生的后续工作。
+  - id: bridge-contract-evidence
+    from: agent-mcp-bridge
+    to: agent-testing-contracts
+    kind: compare
+    reason: 用坏回执、部分预算与取消检查程序契约，再给出协议成功但任务仍错的反例；确定性参考不是通用事实核查。
   - id: interface-real-protocol
     from: skills-mcp-boundaries
     to: agent-mcp-server

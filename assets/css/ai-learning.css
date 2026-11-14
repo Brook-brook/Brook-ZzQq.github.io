@@ -49,3 +49,8 @@
 }
 
 .ai-learning-workshop { padding-bottom: var(--space-2xl); scroll-margin-block-start: var(--space-lg); }
+.ai-building-sequence { padding-inline-start: 1.5em; margin-block: var(--space-md) var(--space-lg); }
+.ai-building-sequence li { padding-inline-start: var(--space-xs); }
+.ai-building-sequence li + li { border-top: 1px solid var(--color-rule); padding-top: var(--space-sm); margin-top: var(--space-sm); }
+.ai-building-sequence li p { margin-bottom: var(--space-sm); font-size: var(--text-sm); }
+.ai-building-sequence li::marker { color: var(--text-secondary); }
