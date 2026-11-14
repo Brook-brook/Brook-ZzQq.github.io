@@ -1,6 +1,16 @@
 schema_version: 1
 ai_assisted: true
 links:
+  - id: tools-skill-protocol
+    from: tool-calling-boundaries
+    to: skills-mcp-boundaries
+    kind: extend
+    reason: 实际核对一次工具参数与回执后，再区分工具实现、工作指引与协议适配；文件名和连接成功都不能代替执行与授权。
+  - id: loop-skill-protocol
+    from: agent-loop-basics
+    to: skills-mcp-boundaries
+    kind: compare
+    reason: 对照谁决定下一步、谁提供流程知识、谁交换能力与上下文；选择Skill或MCP不自动决定运行时，也不保证任务正确。
   - id: values-model-request
     from: python-first-steps
     to: model-request-contracts

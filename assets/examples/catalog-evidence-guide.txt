@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /assets/examples/catalog-evidence-guide.txt
+sitemap: false
+---
+{% include skill-examples/catalog-evidence-guide/SKILL.md %}

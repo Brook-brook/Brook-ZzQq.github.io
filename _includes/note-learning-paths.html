@@ -1,4 +1,17 @@
 {% assign note_slug = page.slug %}
-{% assign practice_target = '' %}
-{% capture learning_links %}{% for path in site.data.learning_paths %}{% assign matching = path.steps | where: 'note', note_slug %}{% if matching.size > 0 %}{% assign first_step = matching | first %}{% if practice_target == '' %}{% assign practice_target = first_step.id %}{% endif %}<a href="{{ '/study/paths/' | relative_url }}#{{ first_step.id }}">{{ path.title }}</a>{% endif %}{% endfor %}{% endcapture %}
-{% assign learning_links = learning_links | strip %}{% if learning_links != '' %}<nav class="note-toc" aria-label="相关学习路线"><strong>放回学习路线</strong>{{ learning_links }}<a href="{{ '/study/practice/' | relative_url }}#{{ practice_target }}">用一个问题核对理解 →</a></nav>{% endif %}
+{% assign first_question = nil %}
+{% assign question_count = 0 %}
+{% capture learning_links %}{% for path in site.data.learning_paths %}{% assign matching = path.steps | where: 'note', note_slug %}{% if matching.size > 0 %}{% assign path_first = matching | first %}{% if first_question == nil %}{% assign first_question = path_first %}{% endif %}{% assign question_count = question_count | plus: matching.size %}<a href="{{ '/study/paths/' | relative_url }}#{{ path_first.id | escape }}">{{ path.title | escape }}</a>{% endif %}{% endfor %}{% endcapture %}
+{% assign learning_links = learning_links | strip %}
+{% if learning_links != '' %}
+{% if include.mode == 'jump' %}
+<a href="#note-learning-questions">本篇自解释问题（{{ question_count }}）</a>
+{% else %}
+<nav class="note-toc note-learning" id="note-learning-questions" tabindex="-1" aria-label="相关学习路线">
+  <strong>这篇的自解释问题</strong>
+  <div class="note-learning-routes">{{ learning_links }}</div>
+  <div class="note-practice-choice" data-note-question="{{ first_question.id | escape }}"><a class="note-practice-title" href="{{ '/study/practice/' | relative_url }}#{{ first_question.id | escape }}">{{ first_question.title | escape }}</a>{% if first_question.focus %}<p>{{ first_question.focus | escape }}</p>{% endif %}{% if first_question.lab %}<a class="note-practice-lab" href="{{ first_question.lab | relative_url | escape }}">{{ first_question.lab_label | escape }}</a>{% endif %}</div>
+  {% if question_count > 1 %}<details class="note-practice-alternatives"><summary>再换一个角度（{{ question_count | minus: 1 }}）</summary><p>按你想解释的内容选择，没有先后解锁，也不记录浏览进度。</p><ul>{% for path in site.data.learning_paths %}{% assign matching = path.steps | where: 'note', note_slug %}{% for step in matching %}{% unless step.id == first_question.id %}<li class="note-practice-choice" data-note-question="{{ step.id | escape }}"><a class="note-practice-title" href="{{ '/study/practice/' | relative_url }}#{{ step.id | escape }}">{{ step.title | escape }}</a>{% if step.focus %}<p>{{ step.focus | escape }}</p>{% endif %}{% if step.lab %}<a class="note-practice-lab" href="{{ step.lab | relative_url | escape }}">{{ step.lab_label | escape }}</a>{% endif %}</li>{% endunless %}{% endfor %}{% endfor %}</ul></details>{% endif %}
+</nav>
+{% endif %}
+{% endif %}
