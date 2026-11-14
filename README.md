@@ -6,6 +6,24 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 26 connect an Agent host to MCP
+
+`feat/atlas-iteration-26` continues pushed, unmerged25 (`a459656`). An original
+host adapter connects real async SDK3.50.0/authored in-memory provider responses
+to actual MCP2.3.0 stdio and the same read tools. It validates the whole batch,
+counts independent provider/MCP attempts, checks receipts and preserves partial
+work on budget/cancellation. No live model is called; the generic adapter leaves
+unknown inference provenance null instead of asserting fixture-only behavior.
+
+The native AI workshop now distinguishes direct functions, standalone protocol
+and host adaptation. One new lesson/two questions bring totals to22 public notes,
+11 routes/36 manual questions,32 curated links and61 metadata-search entries.
+Old34 v1 raw/export records are retained. The actual ZIP passes twelve SDK checks
+and four extracted-CLI checks on3.12; the same SHA passes twelve on3.11.18 with
+network disabled/read-only filesystem. No new website dependency or production
+change. See [delivery](docs/ATLAS-ITERATION-26.md), [design audit](docs/design-audit-iteration-26.md),
+[compliance](docs/iteration-26-compliance.md) and [preview](docs/PREVIEW.md).
+
 ## Iteration 25 connect real local MCP tools
 
 `feat/atlas-iteration-25` continues unmerged twenty-fourth-round `c5e52c9`.

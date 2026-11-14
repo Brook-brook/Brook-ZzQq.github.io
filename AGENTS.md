@@ -463,3 +463,26 @@
   raw/export on both worksheets, explicit-only extension and no public article
   private-store accesses. Website build checks use stdlib only; actual SDK/stdio
   tests run separately in an MCP-only Python3.11+ environment, actually tested3.12.
+
+## Host-to-MCP bridge (Iteration 26)
+
+- The third Python archive reuses canonical tools, the25 server/contracts and
+  controlled extraction of the24 authored provider fixtures. Generate/check with
+  tools/build-agent-starter.py --profile bridge; preserve the default/mcp checks.
+  Website CI executes stdlib pure components only, not SDK or protocol claims.
+- Actual AsyncOpenAI/MockTransport plus MCP stdio are distinct from model
+  inference. Generic BridgeRun leaves model_called null; only the known authored
+  fixture wrapper marks false. Do not blindly expose returned descriptions as
+  instructions or use read-only hints as permissions. Fixed schemas/allowlist are
+  host decisions, and parameter validation precedes all batch attempts.
+- Provider call_id and SDK-managed protocol IDs are separate. Retain required
+  provider response context for continuation, excluding private question/hidden
+  reasoning from public traces. A trace is still not a universal sanitizer.
+- MCP attempt counts are not proven server execution counts. Keep SDK failures,
+  returned-receipt rejection and accepted observations separate; preserve partial
+  reads, propagate cancellation, and never fabricate a final answer on a stop.
+  The narrow deterministic receipt reference is not general fact verification.
+- The same public ZIP was checked on3.12 and nonroot3.11.18 in a network-none,
+  read-only container. Preserve archive identity and scope, not a universal
+  sandbox/compatibility claim. Two IDs extend34 to36 using the same journal;
+  old34 exact raw/export and manual-only extension remain required on both views.

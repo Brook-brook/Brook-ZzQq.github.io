@@ -40,6 +40,7 @@ python3 -m http.server 8000
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-project-starter/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-testing-contracts/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-mcp-server/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-mcp-bridge/
 
 服务保持运行，停止时按Ctrl+C。端口8000被占用时，命令和网址一起改为8001。
 
@@ -49,7 +50,7 @@ python3 -m http.server 8000
 Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐统一使用上面的
 目录层级，避免此前出现的404或原始黑白模板。
 
-开发分支依次基于前一轮；最新25包含17–24的代码。CI产物默认保留7天，
+开发分支依次基于前一轮；最新26包含17–25的代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。
 
 循环实验底部可显式下载Python例子与配套公开目录。代码由你在自己的本地/
@@ -75,3 +76,8 @@ MCP文章另有原创brook-mcp-starter.zip，解压进入brooks-mcp-starter，�
 安装固定mcp2.3.0/httpx2 2.16.0后运行python client_check.py。客户端会启动本机
 stdio子进程，实际发现/调用三项只读工具；无需模型Key，不要在浏览器打开server.py。
 默认auto与显式legacy是两种已测模式，不能把版本标签或只读提示当作认证。
+
+AI入口的第三段是宿主连接项目。下载brook-agent-mcp-bridge.zip后进入
+brooks-agent-mcp-bridge，按README安装三个固定依赖并运行python demo_bridge.py。
+它是真实SDK/本机协议与预写模型响应；batch --max-calls 1会以部分工作
+和退出码1停止。不要把该结果写成真实模型、任务完成或服务端执行次数。

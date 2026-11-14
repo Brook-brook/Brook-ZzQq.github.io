@@ -1,0 +1,332 @@
+SOURCE npm-build-first.txt
+
+> jekyll-theme-chirpy@7.6.0 build
+> concurrently npm:build:*
+
+[css]
+[css] > jekyll-theme-chirpy@7.6.0 build:css
+[css] > node purgecss.js
+[css]
+[js]
+[js] > jekyll-theme-chirpy@7.6.0 build:js
+[js] > rollup -c --bundleConfigAsCjs --environment BUILD:production
+[js]
+[css] npm run build:css exited with code 0
+[js] > Directory "assets/js/dist" has been cleaned.
+[js]
+[js] _javascript/commons.js → assets/js/dist/commons.min.js...
+[js] created assets/js/dist/commons.min.js in 3.5s
+[js]
+[js] _javascript/home.js → assets/js/dist/home.min.js...
+[js] created assets/js/dist/home.min.js in 1.5s
+[js]
+[js] _javascript/categories.js → assets/js/dist/categories.min.js...
+[js] created assets/js/dist/categories.min.js in 1.5s
+[js]
+[js] _javascript/page.js → assets/js/dist/page.min.js...
+[js] created assets/js/dist/page.min.js in 1.3s
+[js]
+[js] _javascript/post.js → assets/js/dist/post.min.js...
+[js] created assets/js/dist/post.min.js in 1.3s
+[js]
+[js] _javascript/misc.js → assets/js/dist/misc.min.js...
+[js] created assets/js/dist/misc.min.js in 1.2s
+[js]
+[js] _javascript/theme.js → assets/js/dist/theme.min.js...
+[js] created assets/js/dist/theme.min.js in 260ms
+[js]
+[js] _javascript/pwa/app.js → assets/js/dist/app.min.js...
+[js] created assets/js/dist/app.min.js in 335ms
+[js]
+[js] _javascript/pwa/sw.js → assets/js/dist/sw.min.js...
+[js] created assets/js/dist/sw.min.js in 149ms
+[js] npm run build:js exited with code 0
+
+
+SOURCE lint-final.txt
+
+> jekyll-theme-chirpy@7.6.0 test
+> npm run lint:js && npm run lint:scss
+
+
+> jekyll-theme-chirpy@7.6.0 lint:js
+> eslint
+
+
+> jekyll-theme-chirpy@7.6.0 lint:scss
+> stylelint _sass/**/*.scss
+
+
+
+SOURCE models-first.txt
+
+> jekyll-theme-chirpy@7.6.0 test:atlas
+> node --test tests/atlas-models.test.js tests/campus-models.test.js tests/pages-build.test.js tests/research-models.test.js tests/learning-models.test.js tests/observatory-models.test.js tests/collector-models.test.js tests/stream-models.test.js tests/search-models.test.js tests/evaluation-models.test.js tests/spatial-models.test.js tests/practice-models.test.js tests/tool-models.test.js tests/knowledge-models.test.js tests/goods-models.test.js tests/runtime-models.test.js tests/retrieval-models.test.js tests/agent-starter.test.js tests/mcp-starter.test.js tests/agent-mcp-bridge.test.js
+
+✔ the bridge ZIP matches explicit sources and its actual pure fixture/tool components run without SDKs (121.72831ms)
+✔ bridge inputs reuse canonical tools, authored fixtures and the previous actual MCP server (9.008054ms)
+✔ public Agent starter hash covers the exact reused client, catalog, teaching files and licenses (5.419163ms)
+✔ editing the reused client without regenerating the public starter is rejected (5.665252ms)
+✔ a changed archive never passes with an earlier public hash (2.512404ms)
+✔ unsafe and duplicate input paths are rejected rather than reading another file (5.115202ms)
+✔ prisoner: individual equilibrium differs from social optimum (1.772481ms)
+✔ stag has two coordination equilibria and handles indifference (0.430272ms)
+✔ all reported equilibria resist unilateral improvements across slider range (1.998347ms)
+✔ Mercator: equator, 60 degrees, symmetry and domain (0.6854ms)
+✔ copy ownership: mutation and destruction (0.237454ms)
+✔ matching pennies has no pure equilibrium; all-zero game has four (0.594176ms)
+✔ campus filtering combines query, category and favorites, including verified empty categories (1.512239ms)
+✔ Mercator point projection preserves east/right, north/up, and fits multiple screens (0.499244ms)
+✔ invalid or unrelated-campus coordinates are rejected rather than rendered (0.704638ms)
+✔ stored view values are bounded and invalid storage values cannot escape the map (0.606849ms)
+✔ RSS and Atom extract only bibliographic fields, never descriptions or article bodies (111.212965ms)
+✔ rejects DTD/entity declarations, UTF-16, malformed XML and excessive input (250.702333ms)
+✔ canonical link validation preserves identifying query bytes and blocks off-source/unsafe links (0.997119ms)
+✔ deduplicates deterministically, bounds collection and keeps invalid/future dates explicit (12.118391ms)
+✔ archive history retains first observation and previous metadata, unchanged polls do not rewrite records (0.753749ms)
+✔ archive days follow Shanghai midnight rather than UTC midnight (19.228365ms)
+{"at":"2026-11-14T08:22:30.778Z","status":"partial","sources_ok":1,"sources_total":2,"additions":1,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-2","error":"http_403"}]}
+Recent collection exists; no duplicate fetch.
+{"at":"2026-11-14T08:22:30.859Z","status":"partial","sources_ok":1,"sources_total":2,"additions":0,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-2","error":"http_429"}]}
+{"at":"2026-11-14T08:22:30.866Z","status":"error","sources_ok":0,"sources_total":2,"additions":0,"revisions":0,"total":1,"failed_sources":[{"id":"fixture-1","error":"http_503"},{"id":"fixture-2","error":"http_429"}]}
+✔ real parser/collector pipeline retains archives on partial failures, 304 and rate limits (105.248503ms)
+✔ hand-computed reference distinguishes precision, recall and F1 (3.715389ms)
+✔ published default example is exactly auditable against the original fixture (2.362881ms)
+✔ inclusive threshold, endpoints and undefined denominators stay distinct from zero (0.306457ms)
+✔ all thresholds conserve counts, do not mutate source and recall is monotone (5.549949ms)
+✔ bad data is rejected before evaluation rather than silently dropping records (1.416847ms)
+✔ explicit export contains original samples and reproducible parameters only (4.017545ms)
+✔ default pool, personal deviation and social total agree with independent hand calculations (1.945291ms)
+✔ exact equality boundaries distinguish all Nash profiles from all social optima (4.916803ms)
+✔ small games exhaustively match independent best-response enumeration and group optimization (7.671954ms)
+✔ endpoint slice holds all other individuals fixed and does not claim a full game (0.844303ms)
+✔ for multiplier below one, zero contributions maximize total and private points (0.234611ms)
+✔ complete report replays current and counterfactual profiles without mutation or empirical claims (0.522927ms)
+✔ invalid dimensions, types, unknown preferences and bounds fail instead of silently coercing (0.946906ms)
+✔ directed preparation and symmetric comparisons expose explicit original reasons without mutation (2.469301ms)
+✔ a genuinely unconnected note retains its actual practice and an empty neighborhood (0.428566ms)
+✔ metadata URLs stay inside the exact root/project routes; bodies and learner fields are forbidden (1.943855ms)
+✔ link IDs/endpoints/kinds/reasons are bounded, unique and never inferred from untrusted extra fields (1.176777ms)
+✔ starts empty, changes only explicit manual records and supports undo (2.657355ms)
+✔ JSON backup round trip keeps Unicode and literal markup as data (0.572779ms)
+✔ bad JSON, unsupported versions, extra fields and unknown IDs fail, never partially restore (2.038846ms)
+✔ bounded notes and UTF-8 file size reject excess input (1.993903ms)
+✔ maximum current fifteen-step backup round trips even escaped control characters (2.044853ms)
+✔ import merges new records, preserves all occupied local records and does not mutate inputs (0.499326ms)
+✔ blank imported records do not block useful restoration (0.331577ms)
+✔ continuation prioritizes an active unfinished path, not a fabricated ability score (0.477238ms)
+✔ MCP teaching ZIP is current and its actual read functions execute with isolated standard-library Python (106.772526ms)
+✔ the pure module records its canonical client source while the MCP package declares no model SDK (1.654954ms)
+✔ private reading retrieval intersects topic, annotations and normalized user text without changing snapshots (4.471933ms)
+✔ legacy retrieval recovers v1 in memory and never invents a reflection (0.283797ms)
+✔ outline insertion appends prompts without replacing user writing or duplicating an already-filled outline (0.423022ms)
+✔ outline overflow and invalid input never truncate or partially replace an existing note (0.720402ms)
+✔ only explicit selection creates a snapshot; toggle supports removal without mutating input (0.5515ms)
+✔ starter additions preserve existing materials and deduplicate repeated selection (0.537156ms)
+✔ historical snapshots retain links, versions and reading hints after catalog changes (17.445454ms)
+✔ rejects invalid JSON/schema/version, duplicate IDs and unsafe links as a whole (0.672538ms)
+✔ bounds record count, string length and total UTF-8 bytes (22.500166ms)
+✔ v1 snapshots migrate in memory with blank notes and keep immutable historical metadata (0.99535ms)
+✔ backup merging keeps local notes, fills matching blanks and rejects overflow without partial writes (1.252631ms)
+✔ source filtering intersects topic, material type and normalized search (0.200668ms)
+✔ freshness uses the Shanghai calendar and does not turn future/invalid checks into freshness claims (0.627681ms)
+✔ Markdown export preserves source/version/hints and leaves the learner’s answers blank (0.508803ms)
+✔ Pages artifact guard rejects the raw Jekyll checkout that caused the plain page (41.943083ms)
+✔ public Python examples are allowed while generated caches and venvs are rejected (4.525419ms)
+✔ local literal AND filtering handles public questions and optional notes without mutation (2.204231ms)
+✔ next cycles only through actual matches, with stable current/empty behavior (0.21291ms)
+✔ bounds and malformed/duplicate questions fail rather than search an unbounded private object (0.560262ms)
+✔ URL identity: host/default port/fragment normalize without removing meaningful query (1.496381ms)
+✔ tracking removal preserves remaining query order and duplicate parameters (0.210803ms)
+✔ tracking removal can be disabled while fragment removal remains explicit (1.440072ms)
+✔ tracker filtering preserves retained query spelling, bare values and encoded keys (0.365222ms)
+✔ non-web, relative, credential-bearing and concealed-control URLs are rejected (0.990444ms)
+✔ URL dedup keeps the first record and reports invalid entries independently (1.253277ms)
+✔ the tracking option changes dedup rather than silently discarding query identity (0.308238ms)
+✔ output is deterministic, input is untouched, and no synthetic AI result is assigned (0.306668ms)
+✔ empty and all-invalid inputs remain explicit and over-limit input fails (0.539498ms)
+✔ original fixture preserves exact provenance, versioned scope and explicit task annotations (5.00077ms)
+✔ literal OR ranking counts distinct terms, uses all three public fields and stable ASCII tie order (1.79324ms)
+✔ version filtering fixes the candidate scope without replacing the full relevance denominator (1.587986ms)
+✔ P at requested k counts missing slots, recall and single-task RR have independent handwritten oracles (0.49194ms)
+✔ metric inputs reject repeated IDs, overflow rows, unknown types and absent k (0.448122ms)
+✔ free and empty searches do not infer annotations, model similarity or reality absence (1.019192ms)
+✔ whole-fragment context retains exact section/version/conditions and selection order (1.093648ms)
+✔ exact boundary allows a complete fragment, rejects one-character overflow without mutation or truncation (1.329288ms)
+✔ Unicode code points including citation separators are not counted as UTF16 units or tokens (0.814974ms)
+✔ budget and context selection do not retroactively change retrieval metrics (0.945889ms)
+✔ all public source and annotation snapshots are owned and reproducible in the explicit complete report (3.672358ms)
+✔ invalid bounds and malformed source/reference identities fail before computing a run (1.833431ms)
+✔ proposal, validation, dispatch and accepted observation are separate immutable events (6.508169ms)
+✔ normal script uses observed IDs and an actual distance before its fixed-template completion (3.134903ms)
+✔ one batched proposal can dispatch two calls while a later proposal finishes (2.426285ms)
+✔ budget exhaustion retains partial read-only work without claiming completion or rollback (0.564169ms)
+✔ simulation failure is labelled, correlated and distinct from a successful native dispatch (1.565741ms)
+✔ old-run receipt is rejected then redelivered without another dispatch (1.406825ms)
+✔ receipt validation rejects wrong run, call, tool, type, extra fields and changed computation (1.246388ms)
+✔ unknown tools and invalid second batch call fail before any dispatch (0.784114ms)
+✔ decision and dispatch limits stop repeat loops independently at their actual boundary (1.304647ms)
+✔ all scenarios and budget combinations stay finite and counters agree with committed events (51.4165ms)
+✔ cancel stops future steps, preserves performed work and is idempotent (0.570326ms)
+✔ unexpected local rejection becomes a stopped failed run with an honest attempt count (0.356654ms)
+✔ catalog coverage shortfall is explicit and the run owns a complete source snapshot (0.681233ms)
+✔ explicit reports replay every public event and source without model or grading claims (2.098093ms)
+✔ invalid settings, IDs and catalog provenance fail before a run is created (1.282738ms)
+✔ search intersects literal normalized tokens and kind, ranks title above summary (2.174478ms)
+✔ empty query uses explicit featured entries and stable order (0.381295ms)
+✔ explicit spellings match across titles and metadata with AND semantics (0.581788ms)
+✔ short Latin terms and abbreviations do not match inside unrelated words (0.435432ms)
+✔ literal full title outranks alias/keywords and stable ties do not imply popularity (0.231623ms)
+✔ highlight preserves original Unicode and literal markup, merging overlaps safely (2.239823ms)
+✔ keyword context includes a remote hit and stays bounded without altering source (3.819146ms)
+✔ search validates bounded metadata and does not interpret markup (0.876477ms)
+✔ search URLs cannot escape project path, inject schemes or normalized traversal (0.900742ms)
+✔ uniform Euclidean neighbors have hand-computable votes and stable distance ties (2.194241ms)
+✔ prediction never reads the query label, and rejects malformed training input (0.59134ms)
+✔ default published result agrees with independent Python distance and split oracle (8.441536ms)
+✔ diagonal counterexample preserves undefined recall and defeats universal method ranking (1.743657ms)
+✔ all split choices conserve 80 disjoint samples and neighbors only use training IDs (49.804012ms)
+✔ changing held-out labels changes scoring, never the corresponding predictions (2.824156ms)
+✔ bounded source/parameter validation rejects bad geometry, duplicated IDs and schema (1.662034ms)
+✔ explicit report includes original data and both reproducible protocols, without mutations (5.127201ms)
+✔ bundled metadata is an actual bounded snapshot with separate source health and needs_review records (3.508511ms)
+✔ rejects unsafe source links, malformed dates, duplicate IDs and archive path/count corruption (5.696485ms)
+✔ daily archive lookup validates day, uniqueness and the full record count (27.762808ms)
+✔ filters metadata without fetching and snapshots retain first collection, source publication and review limits (1.629214ms)
+✔ status and JSON validation reject malformed or excessive input without accepting arbitrary index paths (24.872021ms)
+✔ spherical distance matches analytic arcs, symmetry and an independent cosine reference (2.222035ms)
+✔ exact bounded call contracts reject unknown tools, prototype keys, types and extra fields (2.687997ms)
+✔ literal search has declared category/tag scope and does not execute result text (0.97756ms)
+✔ radius uses raw inclusive distance, excludes only the center, sorts and preserves the source (1.26847ms)
+✔ observation correlation and local recomputation reject mismatched, stale and altered outputs (0.964491ms)
+✔ explicit reports preserve complete catalog/provenance and honest template/model boundaries (0.631673ms)
+✔ catalog fails closed for invalid provenance, bad coordinates, large sets and unsafe IDs (1.399842ms)
+ℹ tests 134
+ℹ suites 0
+ℹ pass 134
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2617.245736
+
+
+SOURCE build-first.txt
+PASS legacy tutorial and checked research render through real Jekyll
+PASS research without source checking stays absent, including --unpublished
+PASS explicit unpublished and draft notes stay absent under --unpublished
+PASS checked research with missing commit fails before output
+PASS credential-bearing source URLs cannot be marked checked
+PASS source-check dates must follow analysis dates
+PASS AI assistance must be explicit boolean metadata
+PASS a misspelled research kind cannot bypass source checking
+PASS quoted published and draft flags cannot accidentally publish notes
+PASS demoting research removes stale output on the same destination
+PASS learning routes reference public notes and require unique stable IDs
+PASS optional learning focus is bounded public text, not a coerced value
+PASS learning routes cannot link research removed by publication checks
+PASS observatory validates its source catalog and fails unsafe links before output
+PASS observatory rejects broken reading references and invalid verification dates
+PASS automatic bibliography validates real bundled metadata before any no-JS rendering
+PASS automatic bibliography rejects off-source, unsafe, duplicate and fake-reviewed records before output
+PASS reading guides link published method notes with three accurate topic slots
+PASS reading guides reject missing/duplicate topics, oversized outlines and unpublished methods
+PASS public search excludes drafts and unchecked research, including --unpublished
+PASS search fails closed on unsafe or duplicate configured public entries
+PASS evaluation teaching fixture builds with its declared labels and original scores
+PASS evaluation rejects unsafe/duplicate samples, impossible scores and misleading cohort labels
+PASS spatial synthetic source builds with exactly four bounded blocks
+PASS spatial source rejects malformed coordinates, blocks, labels and identity before writing
+PASS practice references require exactly the public permanent step IDs
+PASS practice rejects unknown/missing IDs, empty/oversized references and extra generated fields
+PASS practice references run after publication and route validation
+PASS knowledge connections derive bounded metadata after public-note pruning
+PASS knowledge edges cannot bypass publication, including --unpublished
+PASS knowledge malformed editorial fields fail before output
+PASS knowledge demotion removes old metadata and output on a valid rebuild
+PASS retrieval fixture renders complete versioned source and original annotations
+PASS retrieval invalid IDs, references, bounds and fields fail before public output
+PASS a real article download keeps the project prefix, filename and literal label/detail
+PASS unavailable or unsafe article download fails before output: /assets/examples/missing.zip
+PASS unavailable or unsafe article download fails before output: /assets/examples/../private.zip
+PASS unavailable or unsafe article download fails before output: https://external.test/file.zip
+PASS an existing but excluded ZIP cannot be advertised as a public article download
+PASS publication pruning happens before optional download validation, even under unpublished
+PASS native article choices keep exact public questions, original route and escaped labels
+PASS real Rouge rendering has one outer keyboard code region and retains complete code/line numbers
+PASS downloaded original Skill keeps its real frontmatter and does not publish the include source
+PASS study publication: 43 cases, 238 assertions, 0 failures
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/_site/Brook-ZzQq.github.io
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 1.632 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Running 3 checks (Images, Links, Scripts) in ["_site"] on *.html files ...
+
+
+Checking 450 internal links
+Checking internal link hashes in 51 files
+Ran on 67 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 2.18 seconds
+
+
+SOURCE root-build.txt
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/work/iteration26/root-site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 4.819 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Running 3 checks (Images, Links, Scripts) in ["work/iteration26/root-site"] on *.html files ...
+
+
+Checking 451 internal links
+Checking internal link hashes in 51 files
+Ran on 67 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 3.92 seconds
+PASS Pages artifact: rendered layout, 14 homepage assets, main routes and legacy bundles (/)
+
+
+SOURCE content-final-build.txt
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/_site/Brook-ZzQq.github.io
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 1.885 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+PASS Pages artifact: rendered layout, 14 homepage assets, main routes and legacy bundles (/Brook-ZzQq.github.io)
+
+
+SOURCE visual-correction-build.txt
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/work/iteration26/final-site/Brook-ZzQq.github.io
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 4.618 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Running 3 checks (Images, Links, Scripts) in ["work/iteration26/final-site"] on *.html files ...
+
+
+Checking 451 internal links
+Checking internal link hashes in 51 files
+Ran on 67 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 5.76 seconds
+PASS Pages artifact: rendered layout, 14 homepage assets, main routes and legacy bundles (/Brook-ZzQq.github.io)

@@ -4,7 +4,7 @@
 
 - Home, Explore, Geo Lab, AI Lab, Code Lab, Projects, Knowledge, About.
 - Responsive navigation, persistent dark/light mode, accessible no-JS reading.
-- Twenty-one public notes/tutorials with metadata, TOC, code blocks and actual
+- Twenty-two public notes/tutorials with metadata, TOC, code blocks and actual
   experiment links when available; source-grounded research stays type-labelled.
 - Knowledge map, client-side search, category filtering and empty state.
 - Prisoner/stag payoff labs and editable 2×2 pure-strategy Nash explorer.
@@ -17,7 +17,7 @@
 - Existing Chirpy blog/posts remain accessible; old Atlas preview routes redirect.
 - Automated model/browser checks plus an explicit build-before-deploy Pages workflow.
 - Two AI/Agent development paths, five original foundation lessons and a native
-  entry. Eleven routes/thirty-four manual questions retain the same v1 journal.
+  entry. Eleven routes/thirty-six manual questions retain the same v1 journal.
 - Original local/server Python request example with actual-SDK offline contract
   tests; no live model service or website API-key field.
 - Bounded script-proposed Agent-runtime exercise with real native read tools,
@@ -38,6 +38,10 @@
   canonical read tools, server input validation, structured receipts and six
   contract checks. Two appended questions preserve32 old records; no model,
   hosted HTTP service, authentication claim or automatic permission grant.
+- Original Agent/MCP host bridge, real async SDK/authored in-memory provider to
+  actual stdio, strict trusted contracts, independent attempt budgets, checked
+  receipts and partial/cancelled observations. Native three-stage workshop and
+  two manual questions; no inference claim, private store or hosted Agent.
 
 ## Next useful increments
 
