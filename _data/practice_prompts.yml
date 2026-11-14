@@ -135,6 +135,14 @@ agent-mcp-discovery:
   hint: 先列出client_check.py、SDK Client、server.py和实际工具，检查默认auto的discovery_received。
   explanation: 本包客户端明确选择调用，经真实SDK和stdio启动服务，默认auto实际做发现，得到2026-07-28与自报服务信息；没有模型。版本pin本身可不发送发现，名称也不是身份认证。legacy只验证本SDK的旧握手模式，不能外推所有宿主兼容。
   counterexample: 打印硬编码协议版本、安装SDK或收到了普通JSON都不能单独证明MCP互通。此浏览器页面也不是可连接的MCP服务地址。
+agent-bridge-envelope:
+  hint: 沿SDK提议、宿主允许与校验、MCP客户端/服务、工具结果、provider续请求各画一条箭头。
+  explanation: 宿主从可信契约构造模型工具定义，先整批验证再转成MCP调用。SDK管理协议关联，宿主把实际结果带回对应provider call_id的function_call_output。默认真实SDK接收原创内存假回包，不产生模型推理；通用适配器不能认证调用者的模型来源。
+  counterexample: 安装两个SDK不会自动形成完整Agent；把provider call_id标成真实MCP wire ID或把硬编码结果当协议记录，都越过了已观察证据。
+agent-bridge-stop:
+  hint: 分开SDK请求尝试、MCP调用尝试、SDK层错误和宿主接收/拒绝的回执。
+  explanation: 批量上限1只接收第一条观察并预算停止；999错误距离虽过schema仍被确定性参考拒绝；取消继续抛给调用者并保留此前观察。三种都不能补造最终答案，MCP尝试也不证明服务端执行次数。最终文本仍须按任务和来源核查。
+  counterexample: 通过schema、收到文本或协议连接成功都不能推成事实正确。返回内容不能授权，服务描述也不能替换宿主允许规则；测试拦截一条合成注入不等于模型安全认证。
 agent-mcp-validation:
   hint: 把公布schema、checked_call实际拦截、is_error、输出schema和最终任务各放到不同一层。
   explanation: SDKv2低层Server只公布输入schema，后端仍要白名单、精确字段、类型/有限值/ID验证。字符串半径和未开放工具在派发前拒绝。输出schema能拒缺字段，却允许形状正确的错误距离；独立数值和来源检查仍必需，注解与外部文字不能授权。

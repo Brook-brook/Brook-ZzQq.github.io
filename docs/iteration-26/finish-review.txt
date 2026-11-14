@@ -1,0 +1,15 @@
+ship
+
+No remaining actionable finish findings in the three reviewed pages.
+
+Reviewed all 15 final port-4263 captures, then the 1440 full pages in consecutive 900px screens; compared the workshop before captures and the earlier long-heading capture. The app-screen and long-reading structure is deliberate: hierarchy, restrained lavender surfaces, native disclosures, code and semantic role tables remain coherent. No new hero or marketing-section requirement applies.
+
+Fresh synthetic Chromium at a 375px viewport: all three pages returned 200; the workshop anchor worked; native summaries opened and closed with Enter; each download had visible keyboard focus and a 44px target and downloaded an actual ZIP. Downloaded sizes were 22066 bytes (direct functions), 28473 bytes (bridge), and 19076 bytes (MCP). Both lesson code groups accepted keyboard horizontal scrolling; their role/field tables fit the phone with no page overflow.
+
+The copy distinguishes direct functions, real local MCP, and the host bridge; explicitly identifies authored provider responses, installation requirements, separate attempt budgets, partial and cancelled observations, narrow receipt checks, and the model_called unknown/fixture-false distinction. It does not turn package checks into model performance or automatic learning progress. No copy finding is owed.
+
+Theme/idea: the locked lavender garden and task-to-question reading path describe the pages in front of me; no material gap.
+Before comparison: the former workshop was shorter, but no previous destination or download is harder to identify in the final three-stage list; the direct-function ZIP label is clearer.
+Verification scope: visual and browser finish review only; package execution and broader regression results were not rerun or independently certified here. No user browser or implementation files were changed.
+
+Do not dilute the native reading flow, explicit layer boundaries, early real downloads, or honest distinction between local contract checks and model/task correctness.

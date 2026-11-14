@@ -416,3 +416,14 @@ role table; code scrolls in one named keyboard group. Do not draw a fake connect
 dashboard or add a browser model-Key field. A real stdio example is downloaded and
 run locally. The initial long heading split a Chinese verb on desktop; shortening
 it preserves the point and restores a clean title. No new blur, font or animation.
+
+## Iteration 26 — choose the layer you want to build
+
+The workshop uses one native ordered list: direct functions, standalone MCP and
+host adaptation. Each link has a short real outcome; rules and spacing separate
+the three instead of another card grid. Preserve old destinations, identify the
+direct-function download clearly and never imply locked prerequisites or mastery.
+The phone heading was shortened after a screenshot split its Chinese verb.
+New technical content remains a long reading page with an early native download,
+source dates, semantic tables and a single keyboard code-scroll group. No new
+visual dependency, idle movement, glow or blur layer is necessary.

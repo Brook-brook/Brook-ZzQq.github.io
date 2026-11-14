@@ -1,0 +1,74 @@
+SOURCE poc-results.txt
+{"protocol": "2026-07-28", "discovery": true, "provider_call_id": "distance_1", "is_error": false, "distance": 1020.2255073099033, "model_called": false}
+
+
+SOURCE package-build-final.txt
+PASS starter archive: 16 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+
+
+SOURCE package-pure-check.txt
+PASS starter archive: 16 exact bounded entries, current sources, full catalog and licenses; no SDK or model executed
+PASS actual ZIP pure tools/authored fixtures under isolated stdlib; no SDK, protocol or model executed
+
+
+SOURCE checks-first.txt
+test_cancellation_retains_prior_accepted_read_and_propagates (__main__.BridgeChecks.test_cancellation_retains_prior_accepted_read_and_propagates) ... Executing <Task pending name='Task-3' coro=<BridgeRun.run() running at /workspace/Brook-ZzQq.github.io/work/iteration26/extracted/brooks-agent-mcp-bridge/bridge.py:88> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/futures.py:389, Task.task_wakeup()] created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py:448> created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/tasks.py:420> took 0.100 seconds
+ok
+test_changed_contract_stops_before_a_provider_request (__main__.BridgeChecks.test_changed_contract_stops_before_a_provider_request) ... ok
+test_empty_match_and_request_exhaustion_are_not_task_correctness (__main__.BridgeChecks.test_empty_match_and_request_exhaustion_are_not_task_correctness) ... ok
+test_invalid_budgets_and_single_use_do_not_start_extra_work (__main__.BridgeChecks.test_invalid_budgets_and_single_use_do_not_start_extra_work) ... ok
+test_invalid_second_proposal_prevents_the_entire_batch (__main__.BridgeChecks.test_invalid_second_proposal_prevents_the_entire_batch) ... ok
+test_output_schema_failure_is_not_an_accepted_receipt (__main__.BridgeChecks.test_output_schema_failure_is_not_an_accepted_receipt) ... ok
+test_provider_continuation_uses_its_call_id_and_retains_required_context_only_there (__main__.BridgeChecks.test_provider_continuation_uses_its_call_id_and_retains_required_context_only_there) ... ok
+test_real_stdio_batch_and_partial_budget_do_not_fabricate_work (__main__.BridgeChecks.test_real_stdio_batch_and_partial_budget_do_not_fabricate_work) ... ok
+test_real_stdio_distance_and_independent_numeric_reference (__main__.BridgeChecks.test_real_stdio_distance_and_independent_numeric_reference) ... ok
+test_server_description_does_not_replace_the_hosts_allowed_instructions (__main__.BridgeChecks.test_server_description_does_not_replace_the_hosts_allowed_instructions) ... ok
+test_valid_shape_wrong_fact_and_mismatched_text_stop_before_continuation (__main__.BridgeChecks.test_valid_shape_wrong_fact_and_mismatched_text_stop_before_continuation) ... ok
+test_wrong_type_duplicate_call_id_and_unsupported_form_never_dispatch (__main__.BridgeChecks.test_wrong_type_duplicate_call_id_and_unsupported_form_never_dispatch) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 3.848s
+
+OK
+Actual SDKs; authored in-memory provider, real local stdio plus separate in-process fault injection. No live model or grading.
+
+
+SOURCE package-cli-checks.txt
+test_extracted_twelve_sdk_contracts (__main__.ExtractedBridge.test_extracted_twelve_sdk_contracts) ... ok
+test_invalid_budget_is_not_silently_accepted (__main__.ExtractedBridge.test_invalid_budget_is_not_silently_accepted) ... ok
+test_real_cli_scenarios_and_partial_states (__main__.ExtractedBridge.test_real_cli_scenarios_and_partial_states) ... ok
+test_source_zip_and_pure_components (__main__.ExtractedBridge.test_source_zip_and_pure_components) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 22.520s
+
+OK
+Actual SDKs/ZIP/stdio and synthetic environment, authored provider only; no live model.
+
+
+SOURCE python311-network-none.txt
+test_cancellation_retains_prior_accepted_read_and_propagates (__main__.BridgeChecks.test_cancellation_retains_prior_accepted_read_and_propagates) ... Executing <Task pending name='Task-3' coro=<BridgeRun.run() running at /opt/brook/brooks-agent-mcp-bridge/bridge.py:88> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /usr/local/lib/python3.11/asyncio/futures.py:387, Task.task_wakeup()] created at /usr/local/lib/python3.11/asyncio/base_events.py:428> created at /usr/local/lib/python3.11/asyncio/tasks.py:384> took 0.207 seconds
+Executing <Task pending name='Task-3' coro=<BridgeRun.run() running at /opt/brook/brooks-agent-mcp-bridge/bridge.py:137> created at /usr/local/lib/python3.11/asyncio/tasks.py:384> took 0.203 seconds
+Executing <Task pending name='Task-3' coro=<BridgeRun.run() running at /opt/brook/brooks-agent-mcp-bridge/bridge.py:88> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.11/asyncio/base_events.py:428> created at /usr/local/lib/python3.11/asyncio/tasks.py:384> took 0.115 seconds
+ok
+test_changed_contract_stops_before_a_provider_request (__main__.BridgeChecks.test_changed_contract_stops_before_a_provider_request) ... ok
+test_empty_match_and_request_exhaustion_are_not_task_correctness (__main__.BridgeChecks.test_empty_match_and_request_exhaustion_are_not_task_correctness) ... ok
+test_invalid_budgets_and_single_use_do_not_start_extra_work (__main__.BridgeChecks.test_invalid_budgets_and_single_use_do_not_start_extra_work) ... ok
+test_invalid_second_proposal_prevents_the_entire_batch (__main__.BridgeChecks.test_invalid_second_proposal_prevents_the_entire_batch) ... ok
+test_output_schema_failure_is_not_an_accepted_receipt (__main__.BridgeChecks.test_output_schema_failure_is_not_an_accepted_receipt) ... ok
+test_provider_continuation_uses_its_call_id_and_retains_required_context_only_there (__main__.BridgeChecks.test_provider_continuation_uses_its_call_id_and_retains_required_context_only_there) ... ok
+test_real_stdio_batch_and_partial_budget_do_not_fabricate_work (__main__.BridgeChecks.test_real_stdio_batch_and_partial_budget_do_not_fabricate_work) ... ok
+test_real_stdio_distance_and_independent_numeric_reference (__main__.BridgeChecks.test_real_stdio_distance_and_independent_numeric_reference) ... ok
+test_server_description_does_not_replace_the_hosts_allowed_instructions (__main__.BridgeChecks.test_server_description_does_not_replace_the_hosts_allowed_instructions) ... ok
+test_valid_shape_wrong_fact_and_mismatched_text_stop_before_continuation (__main__.BridgeChecks.test_valid_shape_wrong_fact_and_mismatched_text_stop_before_continuation) ... ok
+test_wrong_type_duplicate_call_id_and_unsupported_form_never_dispatch (__main__.BridgeChecks.test_wrong_type_duplicate_call_id_and_unsupported_form_never_dispatch) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 9.274s
+
+OK
+Actual SDKs; authored in-memory provider, real local stdio plus separate in-process fault injection. No live model or grading.
+
+
+SOURCE python311-identity-final.txt
+{"python": "3.11.18", "archive_sha256": "ad09a3055e8ee64fbd72413cb4679566a9ccb8bf209d066033398953e186863f", "openai": "3.50.0", "mcp": "2.3.0", "httpx2": "2.16.0"}

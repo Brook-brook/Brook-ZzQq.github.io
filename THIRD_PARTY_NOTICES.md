@@ -375,3 +375,20 @@ Python3.11+; tests use3.12. Installations retain transitive distributions' notic
 Actual tests use local stdio/in-process transport, not a model or remote host.
 See [source scope](docs/mcp-starter-source-review.md) and
 [compliance](docs/iteration-25-compliance.md).
+
+## Iteration 26: original Agent/MCP host bridge
+
+The host adapter, Chinese lesson, async exercise/checks and packaging extension
+are original AI-assisted Brook work (MIT). They reuse existing original pure
+tools, MCP server/contracts and explicitly extracted authored provider fixtures;
+no third-party Agent implementation, new website dependency, font, icon, image,
+campus point, account trace or private record is added.
+
+The separately installed examples retain openai3.50.0 Apache2, MCP Python SDK2.3.0
+MIT and httpx2 2.16.0 BSD3 at the previously pinned commits above. All three full
+actual licenses travel in the sixteen-entry ZIP, alongside original MIT and the
+existing six-point OSM/ODbL source/date attribution. No distributions are vendored.
+AsyncOpenAI/Responses and MockTransport's async interface were checked directly;
+local SDK/stdio fixtures are not live inference or a safety/performance score.
+See [source scope](docs/agent-bridge-source-review.md) and
+[compliance](docs/iteration-26-compliance.md).

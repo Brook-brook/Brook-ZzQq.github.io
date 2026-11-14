@@ -19,6 +19,7 @@ const cases = [
   ['agent-project-starter', ['agent-build-project', 'agent-build-adapter']],
   ['agent-testing-contracts', ['agent-build-acceptance']],
   ['agent-mcp-server', ['agent-mcp-discovery', 'agent-mcp-validation']],
+  ['agent-mcp-bridge', ['agent-bridge-envelope', 'agent-bridge-stop']],
   ['skills-mcp-boundaries', []]
 ];
 async function visit(page, slug) { await page.goto(base + `/knowledge/${slug}/`); }

@@ -34,6 +34,11 @@ preview_notes:
       均衡不等于社会最优。
 updates:
   - date: "2026-11-14"
+    title: 把SDK提议、宿主与真实MCP接成一条路径
+    text: 开发分支新增原创本机连接项目；预写模型响应、真实stdio工具、整批校验与独立预算可运行核对。正常、坏回执与取消分别验证，未调用真实模型，待审查发布。
+    label: 打开Agent与MCP连接练习
+    url: /knowledge/agent-mcp-bridge/
+  - date: "2026-11-14"
     title: 让公开只读工具通过MCP被发现和调用
     text: 固定SDK与真实stdio子进程，核对发现、参数与回执；不需要模型，也不把协议接通当作任务正确。
     label: 打开本机MCP教程

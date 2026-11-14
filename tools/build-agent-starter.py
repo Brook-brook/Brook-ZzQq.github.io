@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PROFILES = {
     "agent": ("agent-starter", "brooks-agent-starter", "brook-agent-starter"),
     "mcp": ("mcp-starter", "brooks-mcp-starter", "brook-mcp-starter"),
+    "bridge": ("agent-mcp-bridge", "brooks-agent-mcp-bridge", "brook-agent-mcp-bridge"),
 }
 TOOL_FUNCTIONS = {"text", "catalog_snapshot", "unique_object", "checked_call", "distance", "execute_read_tool", "tool_schemas"}
 TOOL_CONSTANTS = {"CATEGORIES", "RADIUS_M"}
@@ -46,6 +47,24 @@ def read_tools(raw):
     return (header + "\n\n".join(nodes) + "\n").encode("utf-8")
 
 
+def provider_fixtures(raw):
+    source = raw.decode("utf-8")
+    functions = {"scripted_call", "scripted_response", "scenario_script"}
+    nodes, found, constants = [], set(), set()
+    for node in ast.parse(source).body:
+        if isinstance(node, ast.FunctionDef) and node.name in functions:
+            if node.name in found:
+                raise ValueError("Duplicate fixture definition")
+            nodes.append(ast.get_source_segment(source, node)); found.add(node.name)
+        elif isinstance(node, ast.Assign) and len(node.targets) == 1 and isinstance(node.targets[0], ast.Name) and node.targets[0].id == "SCENARIOS":
+            nodes.append(ast.get_source_segment(source, node)); constants.add("SCENARIOS")
+    if found != functions or constants != {"SCENARIOS"}:
+        raise ValueError("Canonical authored fixture definitions changed")
+    header = ('"""Generated original Brook authored fixtures, never model inference.\n'
+              'Canonical: _includes/agent-starter/demo_offline.py, SHA256 ' + sha256(raw).hexdigest() + '\n"""\nimport json\n\n')
+    return (header + "\n\n".join(nodes) + "\n").encode("utf-8")
+
+
 def inputs(profile):
     stem, root, kind = PROFILES[profile]
     config = json.loads((ROOT / ("tools/" + stem + "-inputs.json")).read_text(encoding="utf-8"))
@@ -62,9 +81,12 @@ def inputs(profile):
             raise ValueError("An explicit public input is empty/too large")
         raw = original
         if "extract" in row:
-            if row["extract"] != "campus-read-tools-v1" or row["source"] != "assets/examples/agent_loop.py":
+            if row["extract"] == "campus-read-tools-v1" and row["source"] == "assets/examples/agent_loop.py":
+                raw = read_tools(original)
+            elif row["extract"] == "scripted-provider-fixtures-v1" and row["source"] == "_includes/agent-starter/demo_offline.py":
+                raw = provider_fixtures(original)
+            else:
                 raise ValueError("Unsupported public-source transform")
-            raw = read_tools(original)
         payload[root + "/" + row["name"]] = raw
         record = {"name": row["name"], "source": row["source"], "sha256": sha256(raw).hexdigest(), "bytes": len(raw)}
         if "extract" in row:

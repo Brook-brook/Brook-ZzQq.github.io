@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "kind": "brook-agent-mcp-bridge",
+  "root": "brooks-agent-mcp-bridge",
+  "files": [
+    {
+      "name": "README.md",
+      "source": "_includes/agent-mcp-bridge/README.md",
+      "sha256": "767d49c262454097e24528fb34408f8bb6325fc44480bdc0d9a7ac81d96dce99",
+      "bytes": 3793
+    },
+    {
+      "name": "bridge.py",
+      "source": "_includes/agent-mcp-bridge/bridge.py",
+      "sha256": "7722159bd64c379245a87b9c10c9539e0db161615bfa9814ac2520f1497cb135",
+      "bytes": 10005
+    },
+    {
+      "name": "demo_bridge.py",
+      "source": "_includes/agent-mcp-bridge/demo_bridge.py",
+      "sha256": "7072a6e7d4292a1f117ef2313af031c5be46e79644a58af32fa2cb148fc9aca4",
+      "bytes": 3199
+    },
+    {
+      "name": "run_checks.py",
+      "source": "_includes/agent-mcp-bridge/run_checks.py",
+      "sha256": "96ce6753f7c3dabc977a9b059b893731fa396bb033b1bf0ba4d1a31d5434512c",
+      "bytes": 11442
+    },
+    {
+      "name": "requirements.txt",
+      "source": "_includes/agent-mcp-bridge/requirements.txt",
+      "sha256": "09482de2a816722cd9f73d9831f37483ce606138b59220686f038cc2270574e0",
+      "bytes": 41
+    },
+    {
+      "name": "NOTICE.md",
+      "source": "_includes/agent-mcp-bridge/NOTICE.md",
+      "sha256": "934b96d9063a30a48bdcaf4425d7353d567967235c771d9086a2fcb2c2b90d7a",
+      "bytes": 1749
+    },
+    {
+      "name": "LICENSE.txt",
+      "source": "_includes/agent-starter/LICENSE.txt",
+      "sha256": "13ed684a76a34c04b5b39049f97e497a054e25a89abd1db2ce975daef69ced6e",
+      "bytes": 1062
+    },
+    {
+      "name": "catalog.json",
+      "source": "_includes/agent-starter/catalog.json",
+      "sha256": "942b585aadf6910c3ed70584801234c5c091ea6e1f78d0543e63941b2fef7cbc",
+      "bytes": 2464
+    },
+    {
+      "name": "server.py",
+      "source": "_includes/mcp-starter/server.py",
+      "sha256": "991de428ba38fed439b442fb032b7749e340a2213361c429f871601383215295",
+      "bytes": 2981
+    },
+    {
+      "name": "contracts.py",
+      "source": "_includes/mcp-starter/contracts.py",
+      "sha256": "d477a4f88ecdc76a47beb7b4ce55abe9d382510a370cd94de598353e9a57abb5",
+      "bytes": 2312
+    },
+    {
+      "name": "campus_tools.py",
+      "source": "assets/examples/agent_loop.py",
+      "sha256": "3ff349bd397d3dbdcbc89a94ecfb06b9c2eafad8ce8a980da031b4bcda84498e",
+      "bytes": 7178,
+      "transform": "campus-read-tools-v1",
+      "source_sha256": "eca30647132fa855ea9151216cf73b1d468a7553422133e65c7cfcd017287255"
+    },
+    {
+      "name": "provider_fixtures.py",
+      "source": "_includes/agent-starter/demo_offline.py",
+      "sha256": "100f0fdbd7a1e5e473a5edbe47bd6f8c1af69924d11968770429bf02a23c4803",
+      "bytes": 2168,
+      "transform": "scripted-provider-fixtures-v1",
+      "source_sha256": "8a0d6eabb11eda4fe8e67f0b68b8ae4d2fc5589dd26aa2a0303e18ccf7662307"
+    },
+    {
+      "name": "MCP-Python-SDK-LICENSE.txt",
+      "source": "licenses/MCP-Python-SDK-LICENSE.txt",
+      "sha256": "5e13dbbc1d120fc2a03cecde7c91424ae2d7de11b63d58ded2f4431e261ee50d",
+      "bytes": 1071
+    },
+    {
+      "name": "OpenAI-Python-LICENSE.txt",
+      "source": "licenses/OpenAI-Python-LICENSE.txt",
+      "sha256": "636eb7d79da9bb6d515a4b3fd417aa26679eb3cf16396ddab4bc55fa74e616e4",
+      "bytes": 11336
+    },
+    {
+      "name": "httpx2-LICENSE.md",
+      "source": "licenses/httpx2-LICENSE.md",
+      "sha256": "7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30",
+      "bytes": 1589
+    }
+  ],
+  "archive": {
+    "path": "assets/examples/agent-mcp-bridge.zip",
+    "sha256": "ad09a3055e8ee64fbd72413cb4679566a9ccb8bf209d066033398953e186863f",
+    "bytes": 28473
+  }
+}
