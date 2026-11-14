@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-13T20:14:16.938Z",
+  "attempted_at": "2026-11-14T01:47:33.765Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 226,
+  "total": 228,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-13T20:14:16.938Z",
-      "last_success_at": "2026-11-13T20:14:16.938Z",
+      "attempted_at": "2026-11-14T01:47:33.765Z",
+      "last_success_at": "2026-11-14T01:47:33.765Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T20:14:16.938Z",
-      "last_success_at": "2026-11-13T20:14:16.938Z",
+      "attempted_at": "2026-11-14T01:47:33.765Z",
+      "last_success_at": "2026-11-14T01:47:33.765Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T20:14:16.938Z",
-      "last_success_at": "2026-11-13T20:14:16.938Z",
+      "attempted_at": "2026-11-14T01:47:33.765Z",
+      "last_success_at": "2026-11-14T01:47:33.765Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -81,14 +81,14 @@
         "www.federalreserve.gov",
         "federalreserve.gov"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-13T20:14:16.938Z",
-      "last_success_at": "2026-11-13T20:14:16.938Z",
+      "status": "ok",
+      "attempted_at": "2026-11-14T01:47:33.765Z",
+      "last_success_at": "2026-11-14T01:47:33.765Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
-      "etag": "W/\"1d917fdad372dd1:0\"",
-      "last_modified": "Thu, 12 Nov 2026 18:30:12 GMT",
+      "etag": "W/\"eb4a6e15b473dd1:0\"",
+      "last_modified": "Fri, 13 Nov 2026 21:15:18 GMT",
       "error": null,
       "retry_after": null
     },
@@ -103,14 +103,14 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-13T20:14:16.938Z",
-      "last_success_at": "2026-11-13T20:14:16.938Z",
+      "status": "ok",
+      "attempted_at": "2026-11-14T01:47:33.765Z",
+      "last_success_at": "2026-11-14T01:47:33.765Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794583910-gzip\"",
-      "last_modified": "Fri, 13 Nov 2026 15:31:50 GMT",
+      "etag": "\"1794583888-gzip\"",
+      "last_modified": "Fri, 13 Nov 2026 15:31:28 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-13T20:14:16.938Z",
+      "attempted_at": "2026-11-14T01:47:33.765Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-13T20:14:16.938Z",
-      "last_success_at": "2026-11-13T20:14:16.938Z",
+      "attempted_at": "2026-11-14T01:47:33.765Z",
+      "last_success_at": "2026-11-14T01:47:33.765Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-537d1229e28dcb2912c5d36b882d3c934c143c8dec9f9c139d0dfc4f3a54ddc3",
+      "source_id": "fed-press",
+      "title": "Agencies extend comment period for proposed third-party risk management guidance",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
+      "topic": "economy",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-11-13T21:15:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 21:15:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
+      "first_seen_at": "2026-11-14T01:47:33.765Z",
+      "changed_at": "2026-11-14T01:47:33.765Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-a99dfdd20d85acbbb850aa77912a8df97b492b8fb6a1e7bebe1dab199cebab4f",
+      "source_id": "openai-news",
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "url": "https://openai.com/business/customer-stories/shield",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-13T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-14T01:47:33.765Z",
+      "changed_at": "2026-11-14T01:47:33.765Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-cdc8eef67bc55a0d0fa5ca86f75a39576cb4cd55b8ad20129c59ea60f80062cd",
       "source_id": "hf-blog",
@@ -1206,48 +1242,12 @@
       "changed_at": "2026-11-13T08:19:01.096Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-ffa1f59686fc24d77182db6c59597f6cbc60ad65a51105296937ce30bd684052",
-      "source_id": "arxiv-ai",
-      "title": "MuEdit: An efficient multi-task editing method towards inter-domain knowledge conflicts",
-      "url": "https://arxiv.org/abs/2611.14910",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-13T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Fri, 13 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-13T08:19:01.096Z",
-      "changed_at": "2026-11-13T08:19:01.096Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-23e5aead6df2bbc4ce74e2aa368713bb70aa1f809137b968e655a03056d8cd18",
-      "source_id": "un-news",
-      "title": "Six killed in Israeli airstrike on Gaza’s Nasser Hospital",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168796",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-12T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 12 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-13T02:16:58.467Z",
-      "changed_at": "2026-11-13T02:16:58.467Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-14",
-      "count": 4,
+      "count": 6,
       "path": "archive/2026-11-14.json"
     },
     {
@@ -1262,21 +1262,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-13T02:16:58.467Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 1,
-      "revisions": 0,
-      "total": 167,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-13T04:14:06.668Z",
       "status": "partial",
@@ -1375,6 +1360,21 @@
       "additions": 4,
       "revisions": 0,
       "total": 226,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-14T01:47:33.765Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 228,
       "failed_sources": [
         {
           "id": "europarl-news",

@@ -73,6 +73,42 @@
       "changed_at": "2026-11-13T20:14:16.938Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-a99dfdd20d85acbbb850aa77912a8df97b492b8fb6a1e7bebe1dab199cebab4f",
+      "source_id": "openai-news",
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "url": "https://openai.com/business/customer-stories/shield",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-13T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-14T01:47:33.765Z",
+      "changed_at": "2026-11-14T01:47:33.765Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-537d1229e28dcb2912c5d36b882d3c934c143c8dec9f9c139d0dfc4f3a54ddc3",
+      "source_id": "fed-press",
+      "title": "Agencies extend comment period for proposed third-party risk management guidance",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
+      "topic": "economy",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-11-13T21:15:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 21:15:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
+      "first_seen_at": "2026-11-14T01:47:33.765Z",
+      "changed_at": "2026-11-14T01:47:33.765Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
