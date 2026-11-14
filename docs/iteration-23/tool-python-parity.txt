@@ -1,0 +1,9 @@
+test_declared_literal_search_and_category_tag_scopes_match (__main__.ToolParity.test_declared_literal_search_and_category_tag_scopes_match) ... ok
+test_equal_position_ids_zero_radius_and_ascii_ties_stay_distinct (__main__.ToolParity.test_equal_position_ids_zero_radius_and_ascii_ties_stay_distinct) ... ok
+test_meridional_analytic_distance_and_clear_sides_of_the_raw_boundary (__main__.ToolParity.test_meridional_analytic_distance_and_clear_sides_of_the_raw_boundary) ... ok
+test_seeded_valid_distances_radius_and_sources_match_without_rounding_membership (__main__.ToolParity.test_seeded_valid_distances_radius_and_sources_match_without_rounding_membership) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.245s
+
+OK

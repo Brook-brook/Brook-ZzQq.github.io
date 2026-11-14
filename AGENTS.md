@@ -381,3 +381,38 @@
 - Search input, version select and action share52px at normal text; their height
   grows together with em-sized text. Preserve320px and200%DOM-text browser checks,
   live reduced-motion cancellation, exact-budget downloads and both prefixes.
+
+## Article-to-practice and interface literacy (Iteration 23)
+
+- The native note-learning include derives question titles/focuses and real labs
+  from the already-validated public routes. Keep original route/first-question
+  destinations visible, alternate angles optional and the TOC jump keyboard
+  focusable. A note with no mapped question gets no fabricated choice or lab.
+  Escape metadata; never load a private store to populate a public article.
+- Keep all28 permanent step IDs, v1 raw records and explicit-only writes. A
+  question click changes only public navigation; opening it must not write a
+  completion or new note. Preserve no-JS links/disclosure, back, both prefixes
+  and old backup/recovery checks.
+- note-code.html formats actual Rouge output with one named outer keyboard region.
+  Keep complete code and visible line numbers, make only the layout table
+  presentational and its gutter hidden from AT, and remove inner tab stops.
+  Move the numbered layout table out of pre/code; it is block content. Preserve
+  normal pre/code for non-numbered output and test actual render-engine output.
+  Native code scroll must work at320px; ordinary data tables remain semantic.
+  Keep the real Jekyll/Rouge test when updating render dependencies.
+- Tool Calling, Skill procedure/resources, MCP context exchange and runtime
+  control flow are distinct. The tutorial uses pinned MCP2026-07-28; do not paste
+  an older session/initialize example as that protocol or claim implemented
+  interoperability. Skill allowed-tools is experimental, not a universal grant.
+- The original Skill-format source stays in the excluded includes directory;
+  its public.txt download must preserve real frontmatter via the tested include.
+  Do not let Jekyll strip it or publish include sources. It is not installed or
+  auto-loaded by the site/Python client. The original task card uses public
+  sourced inputs, not model performance or private/learner records.
+- AgentSkills code is Apache2, docs CC-BY4. MCP's actual composite LICENSE
+  describes its Apache2/MIT transition plus CC-BY4 docs despite an older README
+  summary. Preserve full actual texts and source/changed-work attribution, not
+  an inferred all-MIT label. No course code, logo or font is copied.
+- Optional Python/JS parity tests compare138 valid read calls with a declared
+  numeric tolerance, using synthetic fixtures only and no model/socket/credentials.
+  They do not prove bit-identical math across platforms or real-world precision.

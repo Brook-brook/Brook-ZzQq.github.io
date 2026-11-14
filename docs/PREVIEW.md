@@ -35,6 +35,8 @@ python3 -m http.server 8000
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/study/ai/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/agent-runtime/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/retrieval/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/skills-mcp-boundaries/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-loop-basics/#note-learning-questions
 
 服务保持运行，停止时按Ctrl+C。端口8000被占用时，命令和网址一起改为8001。
 
@@ -44,7 +46,7 @@ python3 -m http.server 8000
 Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐统一使用上面的
 目录层级，避免此前出现的404或原始黑白模板。
 
-开发分支依次基于前一轮；最新22包含17–21的代码。CI产物默认保留7天，
+开发分支依次基于前一轮；最新23包含17–22的代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。
 
 循环实验底部可显式下载Python例子与配套公开目录。代码由你在自己的本地/
@@ -54,3 +56,8 @@ Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐
 检索实验直接在浏览器运行，不需模型或Key。默认前两条含一个旧版片段；
 改成v2后，手动放入两段试用/正式空间证据，观察完整引用文本的167字符。
 语料和标注均为原创虚构教学材料，不是实际校园或产品规则。
+
+文章目录可跳到本篇自解释问题，再用原生展开区换一个角度。第一条原有
+问题和路线入口保留；这些操作不记录访问或完成。新接口教程可下载
+SKILL.md格式示例，基础笔记可下载五案例任务卡。下载的是学习材料，
+网页不会自动安装Skill、调用模型或连接MCP服务。

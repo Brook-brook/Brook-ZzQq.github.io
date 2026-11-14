@@ -1,0 +1,6 @@
+{"width":390,"iteration":0,"immediate":{"eventSeen":false,"running":[{"type":"Animation","target":"campus-sidebar"}]},"after":{"eventSeen":true,"running":0}}
+{"width":390,"iteration":1,"immediate":{"eventSeen":false,"running":[{"type":"Animation","target":"campus-sidebar"}]},"after":{"eventSeen":true,"running":0}}
+{"width":768,"iteration":0,"immediate":{"eventSeen":false,"running":[{"type":"Animation","target":"campus-sidebar"}]},"after":{"eventSeen":true,"running":0}}
+{"width":768,"iteration":1,"immediate":{"eventSeen":false,"running":[{"type":"Animation","target":"campus-sidebar"}]},"after":{"eventSeen":true,"running":0}}
+{"width":1440,"iteration":0,"immediate":{"eventSeen":false,"running":[{"type":"Animation","target":"campus-sidebar"}]},"after":{"eventSeen":true,"running":0}}
+{"width":1440,"iteration":1,"immediate":{"eventSeen":false,"running":[{"type":"Animation","target":"campus-sidebar"}]},"after":{"eventSeen":true,"running":0}}

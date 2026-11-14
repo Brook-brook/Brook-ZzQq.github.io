@@ -1,0 +1,7 @@
+PASS downloaded C1: native mobile-emulated execution, matching receipt, full source JSON export; {"from":{"id":"main-library","name":"主图书馆","coordinates":[120.07561,30.30534],"osm":"way/1208408934","source":"https://mapcarta.com/W1208408934"},"to":{"id":"medical-library","name":"农医图书馆","coordinates":[120.08268,30.29849],"osm":"way/448480118","source":"https://mapcarta.com/W448480118"},"distance_m":1020.2255073104363,"earth_radius_m":6371008.8}
+PASS downloaded C2: native mobile-emulated execution, matching receipt, full source JSON export; {"from":{"id":"main-library","name":"主图书馆","coordinates":[120.07561,30.30534],"osm":"way/1208408934","source":"https://mapcarta.com/W1208408934"},"to":{"id":"main-library","name":"主图书馆","coordinates":[120.07561,30.30534],"osm":"way/1208408934","source":"https://mapcarta.com/W1208408934"},"distance_m":0,"earth_radius_m":6371008.8}
+PASS downloaded C3: native mobile-emulated UI rejects unknown ID before execution
+PASS downloaded C4: native mobile-emulated UI rejects string radius before execution
+PASS downloaded C5: native mobile-emulated execution, matching receipt, full source JSON export; {"count":0,"places":[]}
+PASS Chromium mobile emulation: actual touch-swipe scrolls the single complete loop-code region horizontally; no page-level overflow
+No model/API/credentials/real mobile OS or physical-device claim.

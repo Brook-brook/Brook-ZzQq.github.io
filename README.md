@@ -6,6 +6,25 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 23 follow an article into a specific question
+
+`feat/atlas-iteration-23` continues pushed twenty-second-round `13b5ad0`. Article
+footers retain their original routes/first question and add native alternate
+question choices with actual experiments. A TOC jump reaches the same landmark;
+reading and choosing never create a learning record or another store. Real code
+blocks now have one keyboard scroll surface, with complete code/quiet line numbers.
+
+An original source-grounded Tool/Skill/MCP/runtime lesson joins the AI entry and
+Knowledge, with a real-frontmatter Skill-format download and a five-case small
+task card. The Skill is an example, not an installed loader or MCP service. All
+28 permanent IDs remain across 10 routes; there are 18 public notes / 23 authored
+connections / 56 metadata-search entries. Local Python and JS read-tool parity
+is checked separately from live models. No runtime package or production change.
+See [delivery](docs/ATLAS-ITERATION-23.md), [design audit](docs/design-audit-iteration-23.md),
+[source review](docs/interface-literacy-source-review.md),
+[resource/privacy review](docs/iteration-23-compliance.md) and
+[compiled preview](docs/PREVIEW.md).
+
 ## Iteration 22 retrieve, then preserve the conditions
 
 `feat/atlas-iteration-22` continues pushed twenty-first-round `fec83c1`. A native
