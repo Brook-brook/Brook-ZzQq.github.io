@@ -34,6 +34,11 @@ preview_notes:
       均衡不等于社会最优。
 updates:
   - date: "2026-11-14"
+    title: 用同一GIS案例，核对三层证据
+    text: 实际运行现有三份项目，白名单记录同源距离与不同计数；区分SDK、协议、观察和最终解释，不制作模型能力排行榜。
+    label: 打开接口证据练习
+    url: /knowledge/agent-interface-evidence/
+  - date: "2026-11-14"
     title: 给Agent搭建补一块可运行的异步基础
     text: 网页与本机复用同一Python函数，实际观察等待、释放与取消；保留原例子、Worker限制与手动记录，不用预写日志冒充执行。
     label: 打开等待与取消练习

@@ -26,11 +26,14 @@
 .prose div.highlighter-rouge > .highlight { background: var(--color-clear); border: 0; border-radius: 0; padding: 0; }
 .prose div.highlighter-rouge > .highlight > :is(.note-code-scroll, pre.highlight) { background: var(--color-clear); border: 0; border-radius: 0; box-shadow: none; margin: 0; padding: var(--space-md); overflow: auto; font-family: var(--font-outlier); font-size: var(--text-sm); line-height: 1.7; }
 .prose pre.highlight > code { font: inherit; }
+.prose .note-evidence-scroll { max-width: 100%; margin-block: var(--space-md); overflow-x: auto; }
+.prose .note-evidence-scroll > table { min-width: 40em; margin: 0; }
+.prose .note-evidence-scroll :is(th, td):first-child { min-width: 7em; }
 .prose .rouge-table { width: max-content; border: 0; border-collapse: collapse; margin: 0; background: var(--color-clear); font: inherit; text-align: start; }
 .prose .rouge-table :is(tr, td) { border: 0; padding: 0; background: var(--color-clear); font: inherit; text-align: start; vertical-align: top; white-space: pre; }
 .prose .rouge-table .rouge-gutter { padding-inline-end: var(--space-md); color: var(--text-secondary); user-select: none; }
 .prose .rouge-table pre { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: var(--color-clear); overflow: visible; font: inherit; color: inherit; }
-.prose :is(.note-code-scroll, pre.highlight):focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
+.prose :is(.note-code-scroll, .note-evidence-scroll, pre.highlight):focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) {
   .note-learning :is(a, summary):active, .note-download a:active { transform: none; }
 }

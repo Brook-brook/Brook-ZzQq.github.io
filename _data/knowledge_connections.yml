@@ -1,6 +1,21 @@
 schema_version: 1
 ai_assisted: true
 links:
+  - id: checks-common-evidence
+    from: agent-testing-contracts
+    to: agent-interface-evidence
+    kind: extend
+    reason: 实际对照三份现有项目的同一距离子案例，把SDK请求、本地派发、协议尝试与回执数量分别解释，不把一致值当作任务已核实。
+  - id: protocol-common-evidence
+    from: agent-mcp-server
+    to: agent-interface-evidence
+    kind: compare
+    reason: 区分独立MCP检查的多个正常/拒绝案例和Agent整段任务，核对真实发现与自报身份边界，不拿案例数排行效率。
+  - id: host-common-evidence
+    from: agent-mcp-bridge
+    to: agent-interface-evidence
+    kind: compare
+    reason: 对照provider调用关联、实际stdio与同源数值，给正确球面结果一个错误的步行解释，检查最后主张是否越过资料。
   - id: python-functions-to-async
     from: python-first-steps
     to: python-async-boundaries

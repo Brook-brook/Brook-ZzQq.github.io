@@ -93,3 +93,7 @@ toc:
 - [固定检索/端到端评测方法](https://github.com/anthropics/claude-cookbooks/blob/ce8b2629efe8b24048b127b4c79af1e9cbab93d4/capabilities/retrieval_augmented_generation/evaluation/README.md)：组件和任务分别测试，不将历史教程分数外推到本项目。
 
 本包用例是本项目原创方法建议，许可归属和实际执行范围见搭建手册及包内NOTICE。
+
+想在同一任务里比较接口，可读[同一距离，三层证据](../agent-interface-evidence/)。
+它实际运行直接函数、MCP检查与宿主桥接；计数各有含义，不把一致数值、
+协议连通或脚本最终文本当作任务核实。
