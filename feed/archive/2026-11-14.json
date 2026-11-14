@@ -109,6 +109,24 @@
       "changed_at": "2026-11-14T01:47:33.765Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-0deeb36dc5c97fe622d2049c24fe103fe868066bef9aeee886f45a70fa55a814",
+      "source_id": "un-news",
+      "title": "‘Here, you can eat until you’re full’: Oleshky evacuees savour first proper meals in years",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168803",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-13T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-14T08:11:19.789Z",
+      "changed_at": "2026-11-14T08:11:19.789Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }

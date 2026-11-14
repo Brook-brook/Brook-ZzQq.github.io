@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-14T04:17:17.282Z",
+  "attempted_at": "2026-11-14T08:11:19.789Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 228,
+  "total": 229,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -16,13 +16,13 @@
         "arxiv.org",
         "www.arxiv.org"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-14T04:17:17.282Z",
-      "last_success_at": "2026-11-14T04:17:17.282Z",
-      "accepted": 50,
+      "status": "ok",
+      "attempted_at": "2026-11-14T08:11:19.789Z",
+      "last_success_at": "2026-11-14T08:11:19.789Z",
+      "accepted": 0,
       "invalid": 0,
-      "limited": true,
-      "etag": "284bd520ed6cf4907683ffcf3a9295524d5a7c379e931781890f0133ac2a76de",
+      "limited": false,
+      "etag": "5240b2c417ea6e47c2a22821f15dd3f99f23886048a5c5c62671441934f3b0c2",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-14T04:17:17.282Z",
-      "last_success_at": "2026-11-14T04:17:17.282Z",
+      "attempted_at": "2026-11-14T08:11:19.789Z",
+      "last_success_at": "2026-11-14T08:11:19.789Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-14T04:17:17.282Z",
-      "last_success_at": "2026-11-14T04:17:17.282Z",
+      "attempted_at": "2026-11-14T08:11:19.789Z",
+      "last_success_at": "2026-11-14T08:11:19.789Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-14T04:17:17.282Z",
-      "last_success_at": "2026-11-14T04:17:17.282Z",
+      "attempted_at": "2026-11-14T08:11:19.789Z",
+      "last_success_at": "2026-11-14T08:11:19.789Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-14T04:17:17.282Z",
-      "last_success_at": "2026-11-14T04:17:17.282Z",
+      "attempted_at": "2026-11-14T08:11:19.789Z",
+      "last_success_at": "2026-11-14T08:11:19.789Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794583910-gzip\"",
-      "last_modified": "Fri, 13 Nov 2026 15:31:50 GMT",
+      "etag": "\"1794586289-gzip\"",
+      "last_modified": "Fri, 13 Nov 2026 16:11:29 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-14T04:17:17.282Z",
+      "attempted_at": "2026-11-14T08:11:19.789Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-14T04:17:17.282Z",
-      "last_success_at": "2026-11-14T04:17:17.282Z",
+      "attempted_at": "2026-11-14T08:11:19.789Z",
+      "last_success_at": "2026-11-14T08:11:19.789Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,24 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-0deeb36dc5c97fe622d2049c24fe103fe868066bef9aeee886f45a70fa55a814",
+      "source_id": "un-news",
+      "title": "‘Here, you can eat until you’re full’: Oleshky evacuees savour first proper meals in years",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168803",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-13T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-14T08:11:19.789Z",
+      "changed_at": "2026-11-14T08:11:19.789Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-537d1229e28dcb2912c5d36b882d3c934c143c8dec9f9c139d0dfc4f3a54ddc3",
       "source_id": "fed-press",
@@ -1224,30 +1242,12 @@
       "changed_at": "2026-11-13T08:19:01.096Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-fbf0edcb3fb7d778cfbb466f72549048d0a8519519aa5e2ef8ade30a56ce5a67",
-      "source_id": "arxiv-ai",
-      "title": "Where Autonomy Belongs: A Separation of Powers for Agentic Program Evolution",
-      "url": "https://arxiv.org/abs/2611.15309",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-13T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Fri, 13 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-13T08:19:01.096Z",
-      "changed_at": "2026-11-13T08:19:01.096Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-14",
-      "count": 6,
+      "count": 7,
       "path": "archive/2026-11-14.json"
     },
     {
@@ -1262,21 +1262,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-13T06:15:49.130Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 167,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-13T08:19:01.096Z",
       "status": "partial",
@@ -1375,6 +1360,21 @@
       "additions": 0,
       "revisions": 0,
       "total": 228,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-14T08:11:19.789Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 1,
+      "revisions": 0,
+      "total": 229,
       "failed_sources": [
         {
           "id": "europarl-news",
