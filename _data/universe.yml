@@ -33,6 +33,11 @@ preview_notes:
 
       均衡不等于社会最优。
 updates:
+  - date: "2026-11-14"
+    title: 把一条Agent循环搭成自己能运行的小项目
+    text: 原创练习包、离线SDK演练与六项契约检查，接到四道手动自解释问题；没有模型成绩或自动完成。
+    label: 打开Agent搭建手册
+    url: /knowledge/agent-project-starter/
   - title: 读完一篇，顺着自己的问题继续走
     date: '2026-11-14'
     text: 开发分支补充本篇练习角度选择，保留原路线与同一份手记；新增有固定官方来源的Tool/Skill/MCP辨析和最小格式示例，待审查发布。

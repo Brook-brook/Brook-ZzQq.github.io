@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "kind": "brook-agent-starter",
+  "root": "brooks-agent-starter",
+  "files": [
+    {
+      "name": "README.md",
+      "source": "_includes/agent-starter/README.md",
+      "sha256": "c87136e67bcbe9ca8afb24a93b0c31e07136c2cde9c19beb34128ae6a112d264",
+      "bytes": 5975
+    },
+    {
+      "name": "demo_offline.py",
+      "source": "_includes/agent-starter/demo_offline.py",
+      "sha256": "8a0d6eabb11eda4fe8e67f0b68b8ae4d2fc5589dd26aa2a0303e18ccf7662307",
+      "bytes": 5450
+    },
+    {
+      "name": "run_checks.py",
+      "source": "_includes/agent-starter/run_checks.py",
+      "sha256": "50b9630729c69e3cfb30cb453d93af559ed4b8685d78450e3b6b5380d2e8274b",
+      "bytes": 4072
+    },
+    {
+      "name": "requirements.txt",
+      "source": "_includes/agent-starter/requirements.txt",
+      "sha256": "5986c1063542b3db284f5e9db6c5f8e4ae10cdc9a5ff23d03c3c747f084db9db",
+      "bytes": 30
+    },
+    {
+      "name": "LICENSE.txt",
+      "source": "_includes/agent-starter/LICENSE.txt",
+      "sha256": "13ed684a76a34c04b5b39049f97e497a054e25a89abd1db2ce975daef69ced6e",
+      "bytes": 1062
+    },
+    {
+      "name": "NOTICE.md",
+      "source": "_includes/agent-starter/NOTICE.md",
+      "sha256": "a9b8e634d2296783bd9e22127779492864230e111b1ab864cb3dca78c844a462",
+      "bytes": 1711
+    },
+    {
+      "name": "catalog.json",
+      "source": "_includes/agent-starter/catalog.json",
+      "sha256": "942b585aadf6910c3ed70584801234c5c091ea6e1f78d0543e63941b2fef7cbc",
+      "bytes": 2464
+    },
+    {
+      "name": "agent_loop.py",
+      "source": "assets/examples/agent_loop.py",
+      "sha256": "eca30647132fa855ea9151216cf73b1d468a7553422133e65c7cfcd017287255",
+      "bytes": 14108
+    },
+    {
+      "name": "OpenAI-Python-LICENSE.txt",
+      "source": "licenses/OpenAI-Python-LICENSE.txt",
+      "sha256": "636eb7d79da9bb6d515a4b3fd417aa26679eb3cf16396ddab4bc55fa74e616e4",
+      "bytes": 11336
+    },
+    {
+      "name": "httpx2-LICENSE.md",
+      "source": "licenses/httpx2-LICENSE.md",
+      "sha256": "7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30",
+      "bytes": 1589
+    }
+  ],
+  "archive": {
+    "path": "assets/examples/agent-starter.zip",
+    "sha256": "2c0f615d6415b67541952c87546dede484ac8cd300ba22e8a53f65eadd027e2f",
+    "bytes": 22066
+  }
+}
