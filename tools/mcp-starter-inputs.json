@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "root": "brooks-mcp-starter",
+  "files": [
+    {"name":"README.md","source":"_includes/mcp-starter/README.md"},
+    {"name":"server.py","source":"_includes/mcp-starter/server.py"},
+    {"name":"contracts.py","source":"_includes/mcp-starter/contracts.py"},
+    {"name":"client_check.py","source":"_includes/mcp-starter/client_check.py"},
+    {"name":"run_checks.py","source":"_includes/mcp-starter/run_checks.py"},
+    {"name":"requirements.txt","source":"_includes/mcp-starter/requirements.txt"},
+    {"name":"NOTICE.md","source":"_includes/mcp-starter/NOTICE.md"},
+    {"name":"LICENSE.txt","source":"_includes/agent-starter/LICENSE.txt"},
+    {"name":"catalog.json","source":"_includes/agent-starter/catalog.json"},
+    {"name":"campus_tools.py","source":"assets/examples/agent_loop.py","extract":"campus-read-tools-v1"},
+    {"name":"MCP-Python-SDK-LICENSE.txt","source":"licenses/MCP-Python-SDK-LICENSE.txt"},
+    {"name":"httpx2-LICENSE.md","source":"licenses/httpx2-LICENSE.md"}
+  ]
+}

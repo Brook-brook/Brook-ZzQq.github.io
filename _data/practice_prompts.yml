@@ -131,3 +131,11 @@ agent-build-acceptance:
   hint: 从错误类型或批量部分预算的断言入手，再问解释是否超出了实际证据。
   explanation: 契约检查能证明这组固定输入下的拦截、计数、观察和明确停止；独立公式检查对应的数值，仍不认证资料适用或最终主张。把正确球面结果解释成步行路线是任务层反例。换模型要另测接口支持、任务集、波动、成本与来源，不复用假回包当成绩。
   counterexample: 删除失败断言不是修复；SDK有返回、JSON能解析和小样本全过都不能外推成真实模型100%可靠或学习者已经掌握。
+agent-mcp-discovery:
+  hint: 先列出client_check.py、SDK Client、server.py和实际工具，检查默认auto的discovery_received。
+  explanation: 本包客户端明确选择调用，经真实SDK和stdio启动服务，默认auto实际做发现，得到2026-07-28与自报服务信息；没有模型。版本pin本身可不发送发现，名称也不是身份认证。legacy只验证本SDK的旧握手模式，不能外推所有宿主兼容。
+  counterexample: 打印硬编码协议版本、安装SDK或收到了普通JSON都不能单独证明MCP互通。此浏览器页面也不是可连接的MCP服务地址。
+agent-mcp-validation:
+  hint: 把公布schema、checked_call实际拦截、is_error、输出schema和最终任务各放到不同一层。
+  explanation: SDKv2低层Server只公布输入schema，后端仍要白名单、精确字段、类型/有限值/ID验证。字符串半径和未开放工具在派发前拒绝。输出schema能拒缺字段，却允许形状正确的错误距离；独立数值和来源检查仍必需，注解与外部文字不能授权。
+  counterexample: readOnlyHint不是操作系统沙箱，is_error=false不说明距离可当步行路线，_meta也不能存秘密。协议连接成功既不决定Agent下一步，也不认证任务正确或费用受控。

@@ -112,5 +112,5 @@ try {
   assert.equal(scaled.linkFont, 32);
   assert.ok(scaled.left >= 0 && scaled.right <= scaled.width && scaled.documentWidth <= scaled.width);
   await context.close();
-  console.log('PASS Agent building: actual ZIP/hash/download, two original guides, 390/768/1440×themes, workshop/native links, axe/keyboard/no-JS/320, no article private reads/writes/uploads, original28 exact raw/export and manual-only32-step extension on paths/practice');
+  console.log(`PASS Agent building: actual ZIP/hash/download, two original guides, 390/768/1440×themes, workshop/native links, axe/keyboard/no-JS/320, no article private reads/writes/uploads, original28 exact raw/export and manual-only${expectedLearning.steps.length}-step extension on paths/practice`);
 } finally { await browser.close(); }
