@@ -41,6 +41,24 @@ Whole evidence stays readable without animated scrolling; only a finite220ms
 context settle uses opacity/transform and cancels under reduced motion. No new
 palette, nested glass, font, idle effect or UI runtime.
 
+## Article questions and code reading (Iteration 23)
+
+Article footers lead with the actual first question and retain route links.
+Native optional alternatives expose the other authored angles/focuses, with
+existing lab destinations only. A labelled TOC jump focuses the same landmark;
+one-question notes stay simple and unmapped notes get no invented control.
+The short utility heading avoids an orphaned phone line. No card is added around
+each question or generated recommendation, and no private state is read.
+
+Code gets one surface and one keyboard scroll region. Scoped Rouge resets remove
+inherited data-table borders, multiple pre paddings and inner tab stops; quiet
+line numbers remain visible, with presentational table/gutter semantics. Numbered
+layout tables live in a named scroll group, outside pre/code; the group avoids
+many identically labelled region landmarks. Non-numbered pre/code stays native. Plain
+data tables are untouched. Keep literal code, long-line scroll, both themes,
+320px/large text and visible focus. A1px native-choice press cancels under live
+reduced motion; no JS or animation runtime was added for this widget.
+
 ## Source of truth
 
 `assets/css/atlas-tokens.css` defines colors, font stacks, spacing, type, easing,

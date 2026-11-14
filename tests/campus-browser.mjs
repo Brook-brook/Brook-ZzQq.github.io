@@ -163,8 +163,22 @@ try {
     await page.click("#map-sidebar-toggle");
     assert.ok(await page.locator("#campus-sidebar").isHidden());
     await page.click("#map-sidebar-toggle");
+    await page.evaluate(() => {
+      window.campusReducedMotionFrame = false;
+      matchMedia("(prefers-reduced-motion: reduce)").addEventListener(
+        "change",
+        () => requestAnimationFrame(() => requestAnimationFrame(() => {
+          window.campusReducedMotionFrame = true;
+        })),
+        { once: true }
+      );
+    });
     await page.emulateMedia({ reducedMotion: "reduce" });
-    await page.waitForTimeout(30);
+    await page.waitForFunction(
+      () => window.campusReducedMotionFrame === true,
+      undefined,
+      { timeout: 2000 }
+    );
     assert.equal(
       await page.evaluate(
         () =>

@@ -4,7 +4,7 @@
 
 - Home, Explore, Geo Lab, AI Lab, Code Lab, Projects, Knowledge, About.
 - Responsive navigation, persistent dark/light mode, accessible no-JS reading.
-- Seventeen public notes/tutorials with metadata, TOC, code blocks and actual
+- Eighteen public notes/tutorials with metadata, TOC, code blocks and actual
   experiment links when available; source-grounded research stays type-labelled.
 - Knowledge map, client-side search, category filtering and empty state.
 - Prisoner/stag payoff labs and editable 2×2 pure-strategy Nash explorer.
@@ -27,11 +27,14 @@
 - Original fictional-manual retrieval workbench with literal ranking, explicit
   version/task references, separate precision/recall/single-query RR and a complete
   citation/condition-preserving context budget. No LLM/vector or private index.
+- Source-grounded Tool/Skill/MCP/runtime guide, a minimal Skill-format download,
+  a five-case small-task card and native per-article question choices. Complete
+  code stays in one keyboard scroll surface; same28 manual journal IDs remain.
 
 ## Next useful increments
 
-1. Clarify Tool/Skill/MCP/runtime boundaries and make each article's actual
-   self-explanation questions easier to reach without new tracking or grades.
+1. Collect explicit feedback on question clarity and the whole note→lab→explain
+   loop before adding more topics or interpreting visits as learning evidence.
 2. C++ RAII/smart-pointer ownership examples; assignment and move semantics.
 3. Map analysis with a verified dataset and CRS-aware distance/buffer operations.
 4. Extend the real bounded local GIS tools only with explicit contracts/provenance;

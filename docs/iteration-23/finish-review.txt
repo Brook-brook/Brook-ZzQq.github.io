@@ -1,0 +1,21 @@
+Fresh-context Hallmark finish review, gates.md §6
+Reviewer: /root/iteration23_finish_review
+Inputs: ten prescribed rendered captures for the two reading/choice surfaces,
+phone/code/open-choice close views, both pre-existing-footer before snapshots,
+actual source, locked theme and gates. The reviewer did not inherit the build.
+
+ship
+
+No finish findings. Desktop and phone hierarchy remain readable; tables fit,
+code stays legible, and the clipped loop diagram scrolls by keyboard. Question,
+route and experiment links resolve correctly; choice links and disclosure
+targets measure44px, and Enter toggles the disclosure.
+
+Idea/theme: the lavender garden material carries through both articles, and the
+native alternative question makes “an article can lead to more than its first
+question” concrete. Largest gap: none.
+
+Before comparison: no previous reading or destination is harder to find or use.
+
+Preserve the readable article column, specific question labels, native disclosure
+and direct practice links.

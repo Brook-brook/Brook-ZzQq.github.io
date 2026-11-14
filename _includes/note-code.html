@@ -1,0 +1,2 @@
+{% assign readable_code = include.body | replace: '<pre class="highlight"><code><table class="rouge-table">', '<div class="note-code-scroll" role="group" tabindex="0" aria-label="代码，可横向滚动"><table class="rouge-table" role="presentation">' | replace: '</table></code></pre>', '</table></div>' | replace: '<pre class="highlight">', '<pre class="highlight" tabindex="0" role="group" aria-label="代码，可横向滚动">' | replace: '<td class="rouge-gutter gl">', '<td class="rouge-gutter gl" aria-hidden="true">' %}
+<div class="prose">{{ readable_code }}</div>

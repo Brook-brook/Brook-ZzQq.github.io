@@ -1,0 +1,4 @@
+code-390-dark.png: old=(390, 900), new=(390, 900), differing_bounds=None
+interfaces-390-dark.png: old=(390, 6450), new=(390, 6450), differing_bounds=None
+choices-1440-dark.png: old=(1440, 900), new=(1440, 900), differing_bounds=None
+choices-390-light.png: old=(390, 900), new=(390, 900), differing_bounds=None

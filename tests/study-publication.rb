@@ -98,7 +98,7 @@ class StudyPublicationChecks
                "---\n#{yaml}---\n\nContent marker: #{slug}.\n")
   end
 
-  def build(source, destination, unpublished: false)
+  def build(source, destination, unpublished: false, kramdown: nil)
     config = Jekyll.configuration(
       "config" => [], "source" => source, "destination" => destination,
       "plugins" => [], "plugins_dir" => [], "theme" => nil,
@@ -108,6 +108,7 @@ class StudyPublicationChecks
       "unpublished" => unpublished, "quiet" => true, "incremental" => false,
       "study_publication_fixture" => true
     )
+    config["kramdown"] = kramdown if kramdown
     Jekyll::Site.new(config).tap(&:process)
   end
 
@@ -677,6 +678,75 @@ class StudyPublicationChecks
             assert(!File.exist?(File.join(destination, "index.html")), "bad source fails before public writing")
           end
         end
+      end
+    end
+
+    check("native article choices keep exact public questions, original route and escaped labels") do
+      with_fixture do |source, destination|
+        note(source, "first")
+        note(source, "unmapped")
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        FileUtils.mkdir_p(File.join(source, "_includes"))
+        FileUtils.cp(File.expand_path("../_includes/note-learning-paths.html", __dir__), File.join(source, "_includes", "note-learning-paths.html"))
+        File.write(File.join(source, "_layouts", "note.html"), "<!doctype html><title>Choices</title>{% include note-learning-paths.html mode='jump' %}{% include note-learning-paths.html %}")
+        paths = [{ "id" => "route", "title" => "Route <literal>", "summary" => "Fixture", "steps" => [
+          { "id" => "first-q", "title" => "First <literal>", "note" => "first", "question" => "First?", "focus" => "Keep <scope>" },
+          { "id" => "second-q", "title" => "Second & scope", "note" => "first", "question" => "Second?", "lab" => "/playground/", "lab_label" => "Actual fixture lab" }
+        ] }]
+        File.write(File.join(source, "_data", "learning_paths.yml"), YAML.dump(paths))
+        build(source, destination)
+        output = File.read(page_path(destination, "first"))
+        assert(output.include?("本篇自解释问题（2）") && output.include?("再换一个角度（1）"), "public count/alternative are exact")
+        assert(output.include?("/Brook-ZzQq.github.io/study/paths/#first-q"), "original first route remains")
+        assert(output.include?("/Brook-ZzQq.github.io/study/practice/#second-q"), "alternate question has its real stable destination")
+        assert(output.include?("First &lt;literal&gt;") && output.include?("Second &amp; scope") && output.include?("Keep &lt;scope&gt;"), "metadata remains literal text")
+        assert(!output.include?("<literal>"), "source strings cannot become markup")
+        unmatched = File.read(page_path(destination, "unmapped"))
+        assert(!unmatched.include?("note-learning-questions"), "unmapped reading note gets no fake question")
+      end
+    end
+
+    check("real Rouge rendering has one outer keyboard code region and retains complete code/line numbers") do
+      with_fixture do |source, destination|
+        note(source, "code")
+        File.open(File.join(source, "_atlas_notes", "code.md"), "a") { |file| file.write("\n```python\nfor i in range(12):\n    print(i)\n```\n") }
+        FileUtils.mkdir_p(File.join(source, "_includes"))
+        FileUtils.cp(File.expand_path("../_includes/note-code.html", __dir__), File.join(source, "_includes", "note-code.html"))
+        File.write(File.join(source, "_layouts", "note.html"), "<!doctype html><title>Code</title>{% include note-code.html body=content %}")
+        build(source, destination, kramdown: { "input" => "GFM", "syntax_highlighter" => "rouge", "syntax_highlighter_opts" => { "block" => { "line_numbers" => true } } })
+        output = File.read(page_path(destination, "code"))
+        assert(output.include?('class="rouge-table"') && output.include?('class="lineno"'), "exercise the actual nested Rouge formatter")
+        assert(output.scan('tabindex="0"').length == 1, "one keyboard stop per highlighted block")
+        assert(output.include?('<div class="note-code-scroll" role="group"'), "numbered code has a named block scroll region")
+        assert(!output.match?(/<pre[^>]*><code><table/), "layout table is not invalid phrasing content in pre/code")
+        assert(output.include?('aria-label="代码，可横向滚动"'), "code region has its real interaction label")
+        assert(output.include?('>print</span>') && output.include?('>range</span>'), "body code survives formatting")
+        build(source, destination, kramdown: { "input" => "GFM", "syntax_highlighter" => "rouge", "syntax_highlighter_opts" => { "block" => { "line_numbers" => false } } })
+        plain = File.read(page_path(destination, "code"))
+        assert(!plain.include?('class="rouge-table"') && plain.include?('<pre class="highlight" tabindex="0"'), "non-numbered output keeps its valid pre/code form")
+        assert(plain.scan('tabindex="0"').length == 1 && plain.include?('>print</span>'), "non-numbered code remains complete and keyboard accessible")
+      end
+    end
+
+    check("downloaded original Skill keeps its real frontmatter and does not publish the include source") do
+      with_fixture do |source, destination|
+        relative = "skill-examples/catalog-evidence-guide/SKILL.md"
+        original = File.expand_path("../_includes/" + relative, __dir__)
+        FileUtils.mkdir_p(File.join(source, "_includes", File.dirname(relative)))
+        FileUtils.cp(original, File.join(source, "_includes", relative))
+        asset = File.join(source, "assets", "examples", "catalog-evidence-guide.txt")
+        FileUtils.mkdir_p(File.dirname(asset))
+        FileUtils.cp(File.expand_path("../assets/examples/catalog-evidence-guide.txt", __dir__), asset)
+        build(source, destination)
+        output = File.read(File.join(destination, "assets", "examples", "catalog-evidence-guide.txt"))
+        assert(output.strip == File.read(original).strip, "no Jekyll stripping of the actual Skill header")
+        match = output.match(/\A---\r?\n(.*?)\r?\n---\r?\n(.*)\z/m)
+        assert(!match.nil?, "real frontmatter and body")
+        data = YAML.safe_load(match[1])
+        assert(data["name"] == "catalog-evidence-guide" && data["name"].length <= 64 && data["name"].match?(/\A[a-z0-9]+(?:-[a-z0-9]+)*\z/), "conservative spec name matches directory")
+        assert(data["description"].is_a?(String) && data["description"].length.between?(1, 1024), "required bounded description")
+        assert(data["compatibility"].length <= 500 && data["license"] == "MIT" && !match[2].strip.empty?, "optional fields and original body survive")
+        assert(!File.exist?(File.join(destination, "_includes", relative)), "include source is not a public page")
       end
     end
 

@@ -298,3 +298,32 @@ of retrieval and end-to-end evaluation only; its complete MIT notice remains.
 No upstream API experiment or performance result is reproduced. Existing brand,
 Mote, source licenses and all earlier notices remain. See
 [iteration-22-compliance.md](docs/iteration-22-compliance.md).
+
+## Iteration 23 interface literacy and public article practice
+
+The new Chinese lesson, native question choices, code-formatting adaptation,
+minimal Skill example, task card and tests are original AI-assisted work. No
+upstream implementation, diagram, model output, branding, font or corpus is
+copied. Conceptual sources and the independently written/changed-work nature are
+identified in the lesson; this does not imply official endorsement or tested
+client interoperability.
+
+- Agent Skills contributors, commit `83021e2be457a9b6679148719c1f6074f0ad975e`:
+  [README](https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/README.md),
+  [format specification](https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/specification.mdx).
+  Code Apache-2.0, documentation CC-BY-4.0. Complete actual texts:
+  [code license](licenses/AgentSkills-Code-LICENSE.txt),
+  [documentation license](licenses/AgentSkills-Documentation-LICENSE.txt).
+- Model Context Protocol contributors, commit `06e923405df3df242f1471b9300d9db90ebd10fd`:
+  [architecture](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/06e923405df3df242f1471b9300d9db90ebd10fd/docs/docs/2026-07-28/learn/architecture.mdx),
+  [Tools specification](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/06e923405df3df242f1471b9300d9db90ebd10fd/docs/specification/2026-07-28/server/tools.mdx).
+  The actual [composite LICENSE](licenses/MCP-LICENSE.txt) describes transition to
+  Apache-2.0 for new code/specification contributions, original MIT terms for
+  historical contributions without relicensing consent, and CC-BY-4.0 for other
+  documentation. Its README's MIT summary is not treated as the full license.
+
+No Skill reference CLI, MCP SDK, model backend or new website package is added.
+The original task card reuses the existing sourced public campus snapshot and
+ODbL attribution/date; test-only synthetic coordinates are never new public POIs.
+All earlier notices remain. Scope: [source review](docs/interface-literacy-source-review.md)
+and [iteration-23 compliance](docs/iteration-23-compliance.md).

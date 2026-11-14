@@ -33,6 +33,11 @@ preview_notes:
 
       均衡不等于社会最优。
 updates:
+  - title: 读完一篇，顺着自己的问题继续走
+    date: '2026-11-14'
+    text: 开发分支补充本篇练习角度选择，保留原路线与同一份手记；新增有固定官方来源的Tool/Skill/MCP辨析和最小格式示例，待审查发布。
+    url: /knowledge/skills-mcp-boundaries/
+    label: 区分操作、工作指引与协议
   - date: 2026-11-14
     title: 找到片段之后，继续核对证据
     text: 开发分支新增虚构手册检索实验，分开字面排序、版本标注和完整片段预算；连接既有RAG笔记与自解释问题，待审查发布。
