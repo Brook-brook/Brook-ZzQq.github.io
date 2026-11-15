@@ -7,7 +7,7 @@ kind: tutorial
 ai_assisted: true
 tags: [Python, JSON, 类型, 异常, API, 契约, AI开发, Agent开发]
 summary: 真实解析文本、核对Python类型与应用范围；用同一份浏览器和标准库源码，观察布尔值、重复键和非有限数在哪里被拒绝。
-lab_url: /playground/python/
+lab_url: /playground/python/#json-contracts
 download:
   path: /assets/examples/api-foundations.zip
   filename: brook-api-foundations.zip

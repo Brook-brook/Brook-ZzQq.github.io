@@ -45,6 +45,10 @@ try {
     assert.equal(bytes.length, expected.archive.bytes);
     assert.equal((await new AxeBuilder({ page }).analyze()).violations.length, 0);
     await page.screenshot({ path: `${shots}/json-note-${width}-${theme}.png`, fullPage: true });
+    await page.getByRole('link', { name: '打开对应实验', exact: true }).click();
+    await page.waitForURL(base + '/playground/python/#json-contracts');
+    assert.equal(await page.locator('#python-example').inputValue(), 'json', 'the article-end action selects its own lesson, never an unrelated default');
+    await page.goBack();
     await page.getByRole('link', { name: '预选JSON例子的Python实验', exact: true }).click();
     await page.waitForURL(base + '/playground/python/#json-contracts');
     assert.equal(await page.locator('#python-example').inputValue(), 'json');

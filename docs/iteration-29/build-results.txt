@@ -373,3 +373,51 @@ SOURCE preview-root-check.txt: actual HTTP on two owned frozen roots; incorrect 
 correct-parent HTML 200 stylesheet 200 path /Brook-ZzQq.github.io/assets/css/atlas-tokens.css
 wrong-child HTML 200 stylesheet 404 path /Brook-ZzQq.github.io/assets/css/atlas-tokens.css
 PASS compiled project preview needs its parent directory for both document and baseurl-scoped assets; no site code or deployment setting changed
+
+Native article-end lesson preset correction / actual README cold-start evidence. No interpreter source, archive, visual layout or storage-schema change.
+
+SOURCE python-entry-builds.txt
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/work/iteration29/entry-site/Brook-ZzQq.github.io
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 4.12 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/work/iteration29/entry-root
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 1.733 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+
+SOURCE python-entry-lint.txt
+
+> jekyll-theme-chirpy@7.6.0 lint:js
+> eslint
+
+
+SOURCE python-entry-links.txt
+Running 3 checks (Images, Links, Scripts) in ["work/iteration29/entry-site"] on *.html files ...
+
+
+Checking 530 internal links
+Checking internal link hashes in 58 files
+Ran on 74 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 4.44 seconds
+Running 3 checks (Images, Links, Scripts) in ["work/iteration29/entry-root"] on *.html files ...
+
+
+Checking 530 internal links
+Checking internal link hashes in 58 files
+Ran on 74 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 3.71 seconds

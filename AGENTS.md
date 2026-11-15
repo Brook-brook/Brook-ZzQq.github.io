@@ -566,6 +566,8 @@
   #async-wait, manual interpreter load/run, frozen editor, errors, timeout/stop,
   output cap and focused output jump. Real Pyodide execution is a separate check
   from rendered source equality and real local Python/HTTP.
+  Both the article body and its native end-of-article lab action must keep the
+  corresponding preset; the generic Python default is a different example.
 - Scope app styles, including generic header/label/dl resets; initial screenshots
   caught inherited rules squeezing definitions and pushing the primary operation
   below the short desktop fold. Keep phone observer/return focus links, paired

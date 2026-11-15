@@ -189,3 +189,21 @@ http://127.0.0.1:4302/Brook-ZzQq.github.io/knowledge/agent-state-recovery/
   REFLEX 49b :1 [375px] link "开源致谢" wraps to 2 lines (a)
   WARN render :1 the shots show a fallback: fonts or stylesheets did not load (127.0.0.1:4302) | fix: Recapture when the host answers or the path is right; never review or sign off a fallback face
 sloplint: 3 FAIL, 3 REFLEX, 1 WARN across 1 file(s) and 1 URL(s).
+
+Native article-end lesson preset correction / actual README cold-start evidence. No interpreter source, archive, visual layout or storage-schema change.
+
+SOURCE python-entry-before.txt
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForURL: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "http://127.0.0.1:4302/Brook-ZzQq.github.io/playground/python/#json-contracts" until "load"
+============================================================
+    at /workspace/Brook-ZzQq.github.io/tests/api-foundations-browser.mjs:49:16 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

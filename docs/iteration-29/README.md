@@ -7,8 +7,8 @@
 | 材料 | 范围 |
 | --- | --- |
 | [build-results.txt](build-results.txt) | npm构建/JS与SCSS检查、148项Node检查、真实Jekyll43案例238断言、根/项目路径构建和530内链 |
-| [browser-results.txt](browser-results.txt) | 最终共享模板修正后的31套完整项目路径驱动；根路径选定回归、修正标题及真实Pyodide五例 |
-| [runtime-results.txt](runtime-results.txt) | 同一公开API与SQLite ZIP的实际CPython3.12/3.11解压运行、真实HTTP/进程、保存证据的语义比对 |
+| [browser-results.txt](browser-results.txt) | 共享模板修正后的31套完整项目路径驱动；根路径选定回归、修正标题及真实Pyodide五例；随后正文/页尾预选修正的两路径专门回归 |
+| [runtime-results.txt](runtime-results.txt) | 同一公开API与SQLite ZIP的实际CPython3.12/3.11解压运行、真实HTTP/进程、保存证据语义比对；另实际从预览下载，在新无pip venv照README运行 |
 | [hallmark-results.txt](hallmark-results.txt) | 七URL35初轮渲染范围、修正恢复标题后同页五图；不是整个旧CSS源文件的无债证明 |
 | [finish-review.txt](finish-review.txt) | 独立终审原始fix1、实际阅读/操作范围、父线程同批修正后resolved；未伪造ship |
 | [initial-findings.txt](initial-findings.txt) | 初始CSS格式、首屏/说明布局和漏传localhost例外的原始失败记录 |

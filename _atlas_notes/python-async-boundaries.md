@@ -7,7 +7,7 @@ ai_assisted: true
 kind: tutorial
 tags: [Python, asyncio, async, await, TaskGroup, Agent, 取消, 协程]
 summary: 真正运行Event协调的任务，比较释放和取消；分清协程对象、任务调度、清理与强制终止，读懂Agent桥接的异步基础。
-lab_url: /playground/python/
+lab_url: /playground/python/#async-wait
 download:
   path: /assets/examples/python-async-starter.zip
   filename: brook-python-async.zip

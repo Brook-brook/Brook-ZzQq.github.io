@@ -171,3 +171,13 @@ PASS recovery learning: native AI entry, exact ZIP/hash and actual saved-evidenc
 
 SOURCE wording-recovery-root.txt
 PASS recovery learning: native AI entry, exact ZIP/hash and actual saved-evidence JSON download, six documented cases with semantic table, no private reads/implicit runtime/network writes; 390/768/1440×themes, axe/no-JS/320 native ArrowRight and doubled DOM text (not full zoom). Real SQLite/child processes tested separately.
+
+Native article-end lesson preset correction / actual README cold-start evidence. No interpreter source, archive, visual layout or storage-schema change.
+
+SOURCE python-entry-project-browser.txt
+PASS async learning: native preset and canonical code, no automatic CDN/load/run/private-store access, actual ZIP/hash, 390/768/1440×themes, original36 raw/export and explicit-only 44-step extension, axe/keyboard/no-JS/320; actual interpreter tested separately
+PASS API foundations: actual ZIP/hash and native reading, shared JSON source/preset, all five choices/reset, original38 exact raw/export and explicit-only44 extension on paths/practice, no implicit interpreter/HTTP/private-store access, 390/768/1440×themes, axe/keyboard/no-JS/320; actual Python/HTTP run separately
+
+SOURCE python-entry-root-browser.txt
+PASS async learning: native preset and canonical code, no automatic CDN/load/run/private-store access, actual ZIP/hash, 390/768/1440×themes, original36 raw/export and explicit-only 44-step extension, axe/keyboard/no-JS/320; actual interpreter tested separately
+PASS API foundations: actual ZIP/hash and native reading, shared JSON source/preset, all five choices/reset, original38 exact raw/export and explicit-only44 extension on paths/practice, no implicit interpreter/HTTP/private-store access, 390/768/1440×themes, axe/keyboard/no-JS/320; actual Python/HTTP run separately
