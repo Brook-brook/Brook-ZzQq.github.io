@@ -1,6 +1,16 @@
 schema_version: 1
 ai_assisted: true
 links:
+  - id: delivery-recovery
+    from: agent-delivery-boundaries
+    to: agent-state-recovery
+    kind: extend
+    reason: 内存中没有回执与进程重启后保留提交记录是两层问题；用同一计数/操作标识，对照真实SQLite提交前后退出，不把客户端未知改成未执行。
+  - id: recovery-context
+    from: agent-state-recovery
+    to: agent-loop-basics
+    kind: compare
+    reason: 同一文件事务能保留动作与回执，却不会自动恢复模型消息、预算或授权。把数据库记录和循环中的本地上下文、持久状态与外部动作分别核对。
   - id: python-data-to-json-contract
     from: python-first-steps
     to: python-json-contracts

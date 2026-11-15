@@ -425,3 +425,48 @@ and [OSM copyright](https://www.openstreetmap.org/copyright) links in the file
 itself. Replay time does not refresh that source date, authenticate a server,
 measure real-world location precision or certify a model. See
 [iteration-28 compliance](docs/iteration-28-compliance.md).
+
+## Iteration 29: original JSON, HTTP and receipt foundations
+
+Four AI-assisted tutorials, original small JSON/HTTP/receipt/recovery programs, native
+JS workbench and tests are Brook MIT. No new website/runtime dependency, Python
+package, SDK, font, icon, photograph, campus data or upstream implementation was
+added. The original four learning ZIPs and OSM/ODbL source scope remain unchanged.
+
+Reference reading used CPython3.11.18 at
+`26badd80b6dc7786cd8fb63c3608a31f04754219` (json/http/client/server docs) and
+HTTPWG/http-core at `bde37f634681bd5462568b73aa722af9c9a3ef5e` (RFC9110
+8.6/9.2.2/10.2.3/15.3.5 and actual copyright). Full existing CPython license,
+including historical terms and documentation-example provisions, is retained
+in the explicit15-entry ZIP. It does not redistribute the Python interpreter.
+
+RFC9110 was published in2022. Its actual copyright is IETF Trust and the document
+authors, under BCP78/IETF Trust Legal Provisions, with Revised BSD obligations
+for extracted Code Components. No normative prose or code was copied; the
+standard is not relicensed MIT. Idempotency-Key here is an original local
+application contract, not a universal service-support or exactly-once claim.
+
+The browser Python example shares the original parser/cases. The browser receipt
+lab has real memory effects and scripted receipt loss, while the downloadable
+project separately executes actual loopback sockets. Neither is model inference
+or a remote service benchmark. All public tests use authored teaching data or
+fresh synthetic browser records, never the user's private learning notes.
+
+See [source review](docs/api-foundations-source-review.md) and
+[iteration-29 compliance](docs/iteration-29-compliance.md).
+
+The separate9-entry SQLite recovery project uses Python's standard-library
+sqlite3 and owned temporary files/child processes. No SQLite distribution or
+upstream implementation was copied. Reference reading used CPython's fixed
+sqlite3.rst and SQLite e5cb4b09573aeb53cbb28983be7234e42c48c07a pager-invariants
+plus complete LICENSE.md. The actual license notice is retained in
+licenses/SQLite-SOURCE-LICENSE.md and the ZIP: core code is public domain, with
+explicit build/configuration-script exceptions. The blocked sqlite.org web pages
+were not claimed as read; system SQLite runtime versions are separately recorded.
+
+The downloadable restart-case JSON is original public teaching evidence from an
+actual ZIP replay, with full injected parameters, versions and source hashes.
+It contains no private DB/path, model response, news body or learning note.
+One database transaction does not imply atomic external actions, full Agent
+checkpointing or power-loss certification. See
+[SQLite source review](docs/sqlite-recovery-source-review.md).

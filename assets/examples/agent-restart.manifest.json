@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "brook-agent-restart",
+  "root": "brooks-agent-restart",
+  "files": [
+    {
+      "name": "README.md",
+      "source": "_includes/agent-restart/README.md",
+      "sha256": "797b512c674f227a37bcf780829c9e6bd9400f1df1858cc2eb190dcc56280bb0",
+      "bytes": 4339
+    },
+    {
+      "name": "NOTICE.md",
+      "source": "_includes/agent-restart/NOTICE.md",
+      "sha256": "e9c39f562f4aef6d87bf57c50249dc95dfd9c48380419d860129eaea990b29af",
+      "bytes": 1525
+    },
+    {
+      "name": "LICENSE.txt",
+      "source": "_includes/agent-starter/LICENSE.txt",
+      "sha256": "13ed684a76a34c04b5b39049f97e497a054e25a89abd1db2ce975daef69ced6e",
+      "bytes": 1062
+    },
+    {
+      "name": "CPython-LICENSE.txt",
+      "source": "licenses/CPython-LICENSE.txt",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936
+    },
+    {
+      "name": "SQLite-SOURCE-LICENSE.md",
+      "source": "licenses/SQLite-SOURCE-LICENSE.md",
+      "sha256": "cc01c99204856695406a0116ee09a986846dcdc4252f33e656fbb81d4ce7f050",
+      "bytes": 3830
+    },
+    {
+      "name": "receiver.py",
+      "source": "_includes/agent-restart/receiver.py",
+      "sha256": "826e1fd83afa9a9119a1607fb4a7e1f13b8630322186557737e1f8bed4c00e8a",
+      "bytes": 7858
+    },
+    {
+      "name": "demo_restart.py",
+      "source": "_includes/agent-restart/demo_restart.py",
+      "sha256": "0442dc2d225fa95d3903d0915832ea4f267b2801d61c225b42269cf37119b4e8",
+      "bytes": 5336
+    },
+    {
+      "name": "run_checks.py",
+      "source": "_includes/agent-restart/run_checks.py",
+      "sha256": "ca612b33d063b59c525771efaef8853a4c070b7afd747d6e8a132921ea5b5a12",
+      "bytes": 6108
+    }
+  ],
+  "archive": {
+    "path": "assets/examples/agent-restart.zip",
+    "sha256": "8604440319c5c08477b8e78e4660e427e95d05b523dceb8936c120c1adac8d31",
+    "bytes": 17901
+  }
+}

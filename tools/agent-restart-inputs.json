@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "root": "brooks-agent-restart",
+  "files": [
+    {"name":"README.md","source":"_includes/agent-restart/README.md"},
+    {"name":"NOTICE.md","source":"_includes/agent-restart/NOTICE.md"},
+    {"name":"LICENSE.txt","source":"_includes/agent-starter/LICENSE.txt"},
+    {"name":"CPython-LICENSE.txt","source":"licenses/CPython-LICENSE.txt"},
+    {"name":"SQLite-SOURCE-LICENSE.md","source":"licenses/SQLite-SOURCE-LICENSE.md"},
+    {"name":"receiver.py","source":"_includes/agent-restart/receiver.py"},
+    {"name":"demo_restart.py","source":"_includes/agent-restart/demo_restart.py"},
+    {"name":"run_checks.py","source":"_includes/agent-restart/run_checks.py"}
+  ]
+}

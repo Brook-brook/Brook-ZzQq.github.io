@@ -332,3 +332,19 @@
       lab: /playground/delivery/
       lab_label: 改变操作标识和参数
       question: 先用op-1增加2，再分别改参数为3、换op-2、查询旧op-1。哪些应拒绝、哪些是新操作，value_after为何不一定是当前总值？这个内存缓存又为什么不能证明持久或分布式恰好一次？
+- id: agent-recovery-foundations
+  title: 从进程内存到提交记录
+  summary: 用Python标准库与真实SQLite文件，实际中断并重开子进程，核对提交、回执和完整Agent恢复之间的边界。
+  prerequisite: 建议能读函数、JSON与未知结果；本机Python3.11+需带sqlite3，无模型Key，不在网页运行进程。
+  challenge: 比较提交前/后退出的相同客户端未知，重开同一临时数据库，再列出真实Agent恢复仍缺的状态和核对条件。
+  steps:
+    - id: agent-state-transaction
+      title: 提交与回执，哪一步跨过进程？
+      focus: 用真实子进程退出与SQLite事务，核对计数和回执是否一起提交。
+      note: agent-state-recovery
+      question: 为什么同样退出75且没有回执，新进程重开全新情景的数据库时可能看到0或2？计数与去重回执为何要在同一事务里，提交后的异常又为何不能回滚已经提交的效果？
+    - id: agent-state-recovery
+      title: 重开一个文件，就是Agent恢复吗？
+      focus: 分开已提交数据库、进程对象、模型消息、预算与外部动作，不把持久记录当作任务完成。
+      note: agent-state-recovery
+      question: 查询旧op-1得到历史值2、当前数据库值3时，各能说明什么？把SQLite记录重新打开，为何不会自动恢复模型上下文、授权或远端邮件，恢复前应核对哪些未决状态？

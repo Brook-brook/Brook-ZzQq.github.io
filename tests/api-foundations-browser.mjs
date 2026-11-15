@@ -15,7 +15,7 @@ const journalKey = 'brooks-universe.learning.v1';
 // This committed historical fixture must remain independent of today's route YAML.
 const legacyRaw = await readFile('tests/fixtures/learning-v1-38.json', 'utf8');
 const legacy = JSON.parse(legacyRaw), currentIds = await expectedLearningIds();
-const newIds = ['api-json-types', 'api-http-layers', 'api-timeout-unknown', 'api-idempotency-payload'];
+const newIds = ['api-json-types', 'api-http-layers', 'api-timeout-unknown', 'api-idempotency-payload', 'agent-state-transaction', 'agent-state-recovery'];
 assert.equal(Object.keys(legacy.entries).length, 38);
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || (process.env.CI ? chromium.executablePath() : '/usr/bin/chromium'), args: ['--no-sandbox'] });
 try {
@@ -79,6 +79,7 @@ try {
     assert.equal(await page.evaluate((journalKey) => localStorage.getItem(journalKey), journalKey), legacyRaw, 'opening new content leaves all original raw bytes intact');
     let waiting = page.waitForEvent('download'); await page.locator('#learning-export').click();
     assert.deepEqual(JSON.parse(await readFile(await (await waiting).path(), 'utf8')), legacy);
+    assert.equal(await page.evaluate((journalKey) => localStorage.getItem(journalKey), journalKey), legacyRaw, 'export alone must not rewrite legacy storage');
     for (const id of newIds) {
       await page.goto(base + `/study/${route}/#${id}`);
       const step = page.locator(`[data-learning-step="${id}"]`); await step.waitFor({ state: 'visible' });
@@ -89,7 +90,7 @@ try {
     waiting = page.waitForEvent('download'); await page.locator('#learning-export').click();
     const extended = JSON.parse(await readFile(await (await waiting).path(), 'utf8'));
     for (const [id, entry] of Object.entries(legacy.entries)) assert.deepEqual(extended.entries[id], entry);
-    assert.equal(Object.keys(extended.entries).length, 42);
+    assert.equal(Object.keys(extended.entries).length, 44);
     for (const id of newIds) assert.deepEqual(extended.entries[id], { completed: true, note: `Synthetic explicit ${id}: <literal> 🪻` });
     await context.close();
   }
@@ -103,5 +104,5 @@ try {
   assert.equal(await page.locator('#python-code').isEditable(), false);
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   await context.close();
-  console.log('PASS API foundations: actual ZIP/hash and native reading, shared JSON source/preset, all five choices/reset, original38 exact raw/export and explicit-only42 extension on paths/practice, no implicit interpreter/HTTP/private-store access, 390/768/1440×themes, axe/keyboard/no-JS/320; actual Python/HTTP run separately');
+  console.log('PASS API foundations: actual ZIP/hash and native reading, shared JSON source/preset, all five choices/reset, original38 exact raw/export and explicit-only44 extension on paths/practice, no implicit interpreter/HTTP/private-store access, 390/768/1440×themes, axe/keyboard/no-JS/320; actual Python/HTTP run separately');
 } finally { await browser.close(); }

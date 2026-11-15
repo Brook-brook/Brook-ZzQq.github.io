@@ -20,6 +20,7 @@ PROFILES = {
     "bridge": ("agent-mcp-bridge", "brooks-agent-mcp-bridge", "brook-agent-mcp-bridge"),
     "async": ("python-async-starter", "brooks-python-async", "brook-python-async"),
     "api": ("api-foundations", "brooks-api-foundations", "brook-api-foundations"),
+    "restart": ("agent-restart", "brooks-agent-restart", "brook-agent-restart"),
 }
 TOOL_FUNCTIONS = {"text", "catalog_snapshot", "unique_object", "checked_call", "distance", "execute_read_tool", "tool_schemas"}
 TOOL_CONSTANTS = {"CATEGORIES", "RADIUS_M"}
