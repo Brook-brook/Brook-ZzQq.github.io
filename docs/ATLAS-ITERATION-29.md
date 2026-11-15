@@ -152,6 +152,9 @@ http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-state-recovery/
 
 源码ZIP、编译预览、Python项目ZIP和公开运行JSON各有不同用途。普通
 http.server不会编译Jekyll或运行这些Python项目；网页也不会替你启动进程。
+预览说明修正了旧的“从网址删项目前缀”建议：实际HTTP核对发现，从项目
+子目录托管会让HTML为200而其带前缀的样式为404；回父目录托管后两者均200。
+应按PREVIEW.md的目录层级启动服务，保留完整项目网址。
 没有更改Pages来源、生产工作流或默认分支，没有自动合并/部署。线上
 不会因开发PR更新；CI结果与可用预览以PR最新提交的Checks为准。
 

@@ -368,3 +368,8 @@ Finished in 3.0 seconds
 SOURCE wording-artifact-guards.txt
 PASS Pages artifact: rendered layout, 14 homepage assets, main routes and legacy bundles (/Brook-ZzQq.github.io)
 PASS Pages artifact: rendered layout, 14 homepage assets, main routes and legacy bundles (/)
+
+SOURCE preview-root-check.txt: actual HTTP on two owned frozen roots; incorrect child serving is a deliberate deployment-layout diagnostic, not an accepted preview.
+correct-parent HTML 200 stylesheet 200 path /Brook-ZzQq.github.io/assets/css/atlas-tokens.css
+wrong-child HTML 200 stylesheet 404 path /Brook-ZzQq.github.io/assets/css/atlas-tokens.css
+PASS compiled project preview needs its parent directory for both document and baseurl-scoped assets; no site code or deployment setting changed
