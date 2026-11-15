@@ -1,7 +1,7 @@
 # Brook's Atlas — implementation and validation
 
 This is the historical second-round report. The current review branch is
-`feat/atlas-iteration-28`; see [Iteration28](ATLAS-ITERATION-28.md) and
+`feat/atlas-iteration-29`; see [Iteration29](ATLAS-ITERATION-29.md) and
 [preview instructions](PREVIEW.md) for the Agent learning additions. Historical
 test counts below are not the current totals. No later PR was auto-merged here.
 

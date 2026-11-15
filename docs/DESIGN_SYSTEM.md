@@ -154,6 +154,25 @@ gets a visible map focus fallback when its detail closes.
 - Focus outlines appear immediately, without animated outline/border geometry.
 - No idle animation loop; `requestAnimationFrame` is scheduled only by interaction.
 
+## Receipt practice screen (Iteration 29)
+
+The new app keeps one light-glass settings surface beside an unboxed teaching
+observer. A client status is distinct from receiver value, effects and remembered
+receipts; labels identify the observer as teaching visibility. Only the real send
+action uses the paired accent/ink tokens. Query, reset and export stay secondary.
+
+Phone settings use two compact columns where labels fit, then one below359px.
+Buttons remain48px or taller; texts stay readable. A native observer jump and a
+return anchor move keyboard focus to named headings/regions without recording
+visits. Initial screenshots exposed shared generic header/label/dl styles:
+scoped resets preserve reading width and bring the primary action into the short
+desktop fold, rather than shrinking type or hiding the rules.
+
+Status changes use one finite220ms opacity/4px settle, cancelled when reduced
+motion becomes active. There are no animated counters, timers pretending to be
+network latency, idle loops, extra backdrop layers or imported motion libraries.
+No-JS disables run controls while keeping rules, tutorial links and downloads.
+
 ## Verification contract
 
 Run the existing model, browser and Python suites. New Obsidian checks cover

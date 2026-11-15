@@ -6,6 +6,30 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 29 understand data, HTTP and uncertain actions
+
+`feat/atlas-iteration-29` continues pushed/unmerged28 (`5f29128`). Four original
+foundation lessons connect JSON values/application contracts, actual loopback
+HTTP, unknown outcomes/idempotency, and process/transaction recovery. The fifth
+Python Playground example shares the exact stdlib JSON source. Loading and execution remain explicit.
+
+A new native receipt workbench actually changes a bounded local counter and
+deliberately drops a receipt. Plain retry, keyed replay, changed parameters,
+new operations and historical receipts stay distinct. Its browser model sends
+no HTTP writes; the 15-entry stdlib ZIP separately executes real local GET/POST,
+disconnects, timeouts and concurrent keyed calls. No SDK or model key is needed.
+
+Two optional foundation paths append six questions after all38 permanent IDs:
+28 public notes,14 routes/44 manual questions,46 authored connections and71 public
+metadata search entries. The v1 journal and prior four project ZIPs stay intact.
+A separate nine-entry stdlib SQLite project actually exits/reopens child processes,
+keeps counter/receipt in one transaction, and distinguishes committed state from
+model context or external actions; it is not a complete Agent checkpoint.
+See [delivery](docs/ATLAS-ITERATION-29.md), [source review](docs/api-foundations-source-review.md),
+[audit](docs/design-audit-iteration-29.md), [compliance](docs/iteration-29-compliance.md)
+and [compiled preview](docs/PREVIEW.md). Development PRs are not automatically
+merged or deployed.
+
 ## Iteration 28 compare evidence from the same GIS result
 
 `feat/atlas-iteration-28` continues pushed/unmerged27 (`eabd212`). One original
