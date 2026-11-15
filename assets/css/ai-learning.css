@@ -54,3 +54,9 @@
 .ai-building-sequence li + li { border-top: 1px solid var(--color-rule); padding-top: var(--space-sm); margin-top: var(--space-sm); }
 .ai-building-sequence li p { margin-bottom: var(--space-sm); font-size: var(--text-sm); }
 .ai-building-sequence li::marker { color: var(--text-secondary); }
+.ai-foundations { padding-bottom: var(--space-xl); scroll-margin-block-start: var(--space-lg); }
+.ai-foundation-list { margin-block: var(--space-lg); }
+.ai-foundation-list > div + div { border-top: 1px solid var(--color-rule); padding-top: var(--space-sm); margin-top: var(--space-sm); }
+.ai-foundation-list dt { font-weight: 600; }
+.ai-foundation-list dd { margin: 0; line-height: 1.8; color: var(--text-secondary); }
+.ai-foundation-list dd a { margin-inline-start: var(--space-xs); }

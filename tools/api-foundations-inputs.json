@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "root": "brooks-api-foundations",
+  "files": [
+    {"name":"README.md","source":"_includes/api-foundations/README.md"},
+    {"name":"NOTICE.md","source":"_includes/api-foundations/NOTICE.md"},
+    {"name":"LICENSE.txt","source":"_includes/agent-starter/LICENSE.txt"},
+    {"name":"CPython-LICENSE.txt","source":"licenses/CPython-LICENSE.txt"},
+    {"name":"json_contracts.py","source":"_includes/api-foundations/json_contracts.py"},
+    {"name":"json_cases.py","source":"_includes/api-foundations/json_cases.py"},
+    {"name":"demo_json.py","source":"_includes/api-foundations/demo_json.py"},
+    {"name":"http_client.py","source":"_includes/api-foundations/http_client.py"},
+    {"name":"http_fixtures.py","source":"_includes/api-foundations/http_fixtures.py"},
+    {"name":"demo_http.py","source":"_includes/api-foundations/demo_http.py"},
+    {"name":"run_checks.py","source":"_includes/api-foundations/run_checks.py"},
+    {"name":"effect_model.py","source":"_includes/api-foundations/effect_model.py"},
+    {"name":"delivery_http.py","source":"_includes/api-foundations/delivery_http.py"},
+    {"name":"demo_delivery.py","source":"_includes/api-foundations/demo_delivery.py"}
+  ]
+}

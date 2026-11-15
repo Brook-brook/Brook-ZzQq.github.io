@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "kind": "brook-sqlite-restart-case",
+  "captured_at": "2026-11-15T14:04:15Z",
+  "archive": {
+    "path": "assets/examples/agent-restart.zip",
+    "sha256": "8604440319c5c08477b8e78e4660e427e95d05b523dceb8936c120c1adac8d31",
+    "bytes": 17901
+  },
+  "generator": {
+    "path": "tools/generate-agent-restart-case.py",
+    "sha256": "3450d8433ed169f0d72a8e2c9ba9ae2b3d4316b519c282de597c462b3c8ef42c"
+  },
+  "cases": [
+    {
+      "injected_steps": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "interrupt": "after_commit"
+        },
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "interrupt": "none"
+        }
+      ],
+      "schema_version": 1,
+      "kind": "brook-sqlite-restart-teaching",
+      "scenario": "after-commit-retry",
+      "python": "3.12.14",
+      "sqlite": "3.53.1",
+      "model_called": false,
+      "transport": "actual-child-process-and-temporary-sqlite",
+      "observer_transport": "separate-fresh-child-process",
+      "client_trace": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "process_exit_code": 75,
+          "reply_received": false,
+          "outcome": "unknown",
+          "response": null
+        },
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "process_exit_code": 0,
+          "reply_received": true,
+          "outcome": "replayed",
+          "response": {
+            "status": "replayed",
+            "receipt": {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          }
+        }
+      ],
+      "teaching_observer": [
+        {
+          "value": 2,
+          "effects": 1,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "effects": 1,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          ]
+        }
+      ],
+      "scope": "Original owned temporary DB and actual child os._exit/reopen. One DB transaction includes this counter and receipt; no external effect, model, HTTP, private journal, distributed exactly-once or power-loss guarantee."
+    },
+    {
+      "injected_steps": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "interrupt": "before_commit"
+        },
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "interrupt": "none"
+        }
+      ],
+      "schema_version": 1,
+      "kind": "brook-sqlite-restart-teaching",
+      "scenario": "before-commit-retry",
+      "python": "3.12.14",
+      "sqlite": "3.53.1",
+      "model_called": false,
+      "transport": "actual-child-process-and-temporary-sqlite",
+      "observer_transport": "separate-fresh-child-process",
+      "client_trace": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "process_exit_code": 75,
+          "reply_received": false,
+          "outcome": "unknown",
+          "response": null
+        },
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "process_exit_code": 0,
+          "reply_received": true,
+          "outcome": "applied",
+          "response": {
+            "status": "applied",
+            "receipt": {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          }
+        }
+      ],
+      "teaching_observer": [
+        {
+          "value": 0,
+          "effects": 0,
+          "receipts": []
+        },
+        {
+          "value": 2,
+          "effects": 1,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          ]
+        }
+      ],
+      "scope": "Original owned temporary DB and actual child os._exit/reopen. One DB transaction includes this counter and receipt; no external effect, model, HTTP, private journal, distributed exactly-once or power-loss guarantee."
+    },
+    {
+      "injected_steps": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "interrupt": "after_commit"
+        },
+        {
+          "action": "lookup",
+          "key": "op-1",
+          "units": 2,
+          "interrupt": "none"
+        }
+      ],
+      "schema_version": 1,
+      "kind": "brook-sqlite-restart-teaching",
+      "scenario": "after-commit-lookup",
+      "python": "3.12.14",
+      "sqlite": "3.53.1",
+      "model_called": false,
+      "transport": "actual-child-process-and-temporary-sqlite",
+      "observer_transport": "separate-fresh-child-process",
+      "client_trace": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "process_exit_code": 75,
+          "reply_received": false,
+          "outcome": "unknown",
+          "response": null
+        },
+        {
+          "action": "lookup",
+          "key": "op-1",
+          "units": 2,
+          "process_exit_code": 0,
+          "reply_received": true,
+          "outcome": "found",
+          "response": {
+            "status": "found",
+            "receipt": {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          }
+        }
+      ],
+      "teaching_observer": [
+        {
+          "value": 2,
+          "effects": 1,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "effects": 1,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          ]
+        }
+      ],
+      "scope": "Original owned temporary DB and actual child os._exit/reopen. One DB transaction includes this counter and receipt; no external effect, model, HTTP, private journal, distributed exactly-once or power-loss guarantee."
+    },
+    {
+      "injected_steps": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "interrupt": "after_commit"
+        },
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 3,
+          "interrupt": "none"
+        }
+      ],
+      "schema_version": 1,
+      "kind": "brook-sqlite-restart-teaching",
+      "scenario": "changed-payload",
+      "python": "3.12.14",
+      "sqlite": "3.53.1",
+      "model_called": false,
+      "transport": "actual-child-process-and-temporary-sqlite",
+      "observer_transport": "separate-fresh-child-process",
+      "client_trace": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "process_exit_code": 75,
+          "reply_received": false,
+          "outcome": "unknown",
+          "response": null
+        },
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 3,
+          "process_exit_code": 0,
+          "reply_received": true,
+          "outcome": "conflict",
+          "response": {
+            "status": "conflict",
+            "receipt": null
+          }
+        }
+      ],
+      "teaching_observer": [
+        {
+          "value": 2,
+          "effects": 1,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "effects": 1,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          ]
+        }
+      ],
+      "scope": "Original owned temporary DB and actual child os._exit/reopen. One DB transaction includes this counter and receipt; no external effect, model, HTTP, private journal, distributed exactly-once or power-loss guarantee."
+    },
+    {
+      "injected_steps": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "interrupt": "after_commit"
+        },
+        {
+          "action": "apply",
+          "key": "op-2",
+          "units": 1,
+          "interrupt": "none"
+        }
+      ],
+      "schema_version": 1,
+      "kind": "brook-sqlite-restart-teaching",
+      "scenario": "new-key",
+      "python": "3.12.14",
+      "sqlite": "3.53.1",
+      "model_called": false,
+      "transport": "actual-child-process-and-temporary-sqlite",
+      "observer_transport": "separate-fresh-child-process",
+      "client_trace": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "process_exit_code": 75,
+          "reply_received": false,
+          "outcome": "unknown",
+          "response": null
+        },
+        {
+          "action": "apply",
+          "key": "op-2",
+          "units": 1,
+          "process_exit_code": 0,
+          "reply_received": true,
+          "outcome": "applied",
+          "response": {
+            "status": "applied",
+            "receipt": {
+              "id": "r-2",
+              "key": "op-2",
+              "units": 1,
+              "value_after": 3
+            }
+          }
+        }
+      ],
+      "teaching_observer": [
+        {
+          "value": 2,
+          "effects": 1,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "effects": 2,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            },
+            {
+              "id": "r-2",
+              "key": "op-2",
+              "units": 1,
+              "value_after": 3
+            }
+          ]
+        }
+      ],
+      "scope": "Original owned temporary DB and actual child os._exit/reopen. One DB transaction includes this counter and receipt; no external effect, model, HTTP, private journal, distributed exactly-once or power-loss guarantee."
+    },
+    {
+      "injected_steps": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "interrupt": "none"
+        },
+        {
+          "action": "apply",
+          "key": "op-2",
+          "units": 1,
+          "interrupt": "none"
+        },
+        {
+          "action": "lookup",
+          "key": "op-1",
+          "units": 2,
+          "interrupt": "none"
+        }
+      ],
+      "schema_version": 1,
+      "kind": "brook-sqlite-restart-teaching",
+      "scenario": "historical-receipt",
+      "python": "3.12.14",
+      "sqlite": "3.53.1",
+      "model_called": false,
+      "transport": "actual-child-process-and-temporary-sqlite",
+      "observer_transport": "separate-fresh-child-process",
+      "client_trace": [
+        {
+          "action": "apply",
+          "key": "op-1",
+          "units": 2,
+          "process_exit_code": 0,
+          "reply_received": true,
+          "outcome": "applied",
+          "response": {
+            "status": "applied",
+            "receipt": {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          }
+        },
+        {
+          "action": "apply",
+          "key": "op-2",
+          "units": 1,
+          "process_exit_code": 0,
+          "reply_received": true,
+          "outcome": "applied",
+          "response": {
+            "status": "applied",
+            "receipt": {
+              "id": "r-2",
+              "key": "op-2",
+              "units": 1,
+              "value_after": 3
+            }
+          }
+        },
+        {
+          "action": "lookup",
+          "key": "op-1",
+          "units": 2,
+          "process_exit_code": 0,
+          "reply_received": true,
+          "outcome": "found",
+          "response": {
+            "status": "found",
+            "receipt": {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          }
+        }
+      ],
+      "teaching_observer": [
+        {
+          "value": 2,
+          "effects": 1,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "effects": 2,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            },
+            {
+              "id": "r-2",
+              "key": "op-2",
+              "units": 1,
+              "value_after": 3
+            }
+          ]
+        },
+        {
+          "value": 3,
+          "effects": 2,
+          "receipts": [
+            {
+              "id": "r-1",
+              "key": "op-1",
+              "units": 2,
+              "value_after": 2
+            },
+            {
+              "id": "r-2",
+              "key": "op-2",
+              "units": 1,
+              "value_after": 3
+            }
+          ]
+        }
+      ],
+      "scope": "Original owned temporary DB and actual child os._exit/reopen. One DB transaction includes this counter and receipt; no external effect, model, HTTP, private journal, distributed exactly-once or power-loss guarantee."
+    }
+  ],
+  "scope": "One actual replay of the exact original public ZIP. Injected steps are teaching configuration, client traces are received replies/exits, observers are separate fresh processes. No user DB/path, private journal, HTTP, model, external action, full Agent checkpoint, power-loss guarantee or publisher authentication."
+}

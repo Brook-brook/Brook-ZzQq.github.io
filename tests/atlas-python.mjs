@@ -69,6 +69,21 @@ try {
   assert.ok(await page.locator('#python-output-jump').isVisible());
   await page.locator('#python-output-jump').click();
   assert.ok(await page.locator('#python-output').evaluate((node) => node === document.activeElement));
+  await page.selectOption('#python-example', 'json');
+  await page.click('#python-run');
+  await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行完成'));
+  const jsonValues = (await page.locator('#python-output').innerText()).trim().split('\n').map((row) => JSON.parse(row));
+  assert.equal(jsonValues.length, 4);
+  assert.equal(jsonValues[0].result.total, 6);
+  assert.deepEqual(jsonValues.map((row) => row.accepted), [true, false, false, false]);
+  assert.deepEqual(jsonValues.slice(1).map((row) => row.error), ['number', 'duplicate_name', 'nonstandard_number']);
+  const jsonSource = await page.inputValue('#python-code');
+  await page.fill('#python-code', jsonSource.replace('"values":[1,true]', '"values":[1,4]'));
+  await page.click('#python-run');
+  await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行完成'));
+  const changedJson = (await page.locator('#python-output').innerText()).trim().split('\n').map((row) => JSON.parse(row));
+  assert.equal(changedJson[1].accepted, true);
+  assert.equal(changedJson[1].result.total, 5);
   await page.fill('#python-code', 'print(1 / 0)');
   await page.click('#python-run');
   await page.waitForFunction(() =>
@@ -107,7 +122,7 @@ try {
   await page.click('#python-stop');
   assert.match(await page.locator('#python-status').innerText(), /停止并释放/);
   console.log(
-    'PASS real Pyodide in Chromium: 4 examples including actual async release/cancel, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop'
+    'PASS real Pyodide in Chromium: 5 examples including actual JSON contracts/edit and async release/cancel, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop'
   );
 } finally {
   await browser.close();

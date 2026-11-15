@@ -1,0 +1,209 @@
+SOURCE delivery-css-first.txt
+
+assets/css/delivery.css
+   6:1   ✖  Expected empty line before rule     rule-empty-line-before
+   7:1   ✖  Expected empty line before rule     rule-empty-line-before
+   7:29  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+   8:1   ✖  Expected empty line before rule     rule-empty-line-before
+   8:19  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+   9:1   ✖  Expected empty line before rule     rule-empty-line-before
+  10:1   ✖  Expected empty line before rule     rule-empty-line-before
+  11:1   ✖  Expected empty line before rule     rule-empty-line-before
+  12:1   ✖  Expected empty line before rule     rule-empty-line-before
+  12:36  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  13:1   ✖  Expected empty line before rule     rule-empty-line-before
+  14:1   ✖  Expected empty line before rule     rule-empty-line-before
+  15:1   ✖  Expected empty line before rule     rule-empty-line-before
+  16:1   ✖  Expected empty line before rule     rule-empty-line-before
+  17:1   ✖  Expected empty line before rule     rule-empty-line-before
+  18:1   ✖  Expected empty line before rule     rule-empty-line-before
+  18:21  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  19:1   ✖  Expected empty line before rule     rule-empty-line-before
+  20:1   ✖  Expected empty line before rule     rule-empty-line-before
+  20:18  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  21:1   ✖  Expected empty line before rule     rule-empty-line-before
+  22:1   ✖  Expected empty line before rule     rule-empty-line-before
+  22:24  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  23:1   ✖  Expected empty line before rule     rule-empty-line-before
+  24:1   ✖  Expected empty line before rule     rule-empty-line-before
+  24:16  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  25:1   ✖  Expected empty line before rule     rule-empty-line-before
+  25:19  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  26:1   ✖  Expected empty line before rule     rule-empty-line-before
+  27:1   ✖  Expected empty line before rule     rule-empty-line-before
+  27:17  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  28:1   ✖  Expected empty line before rule     rule-empty-line-before
+  29:1   ✖  Expected empty line before rule     rule-empty-line-before
+  30:1   ✖  Expected empty line before rule     rule-empty-line-before
+  30:18  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  31:1   ✖  Expected empty line before rule     rule-empty-line-before
+  32:1   ✖  Expected empty line before rule     rule-empty-line-before
+  33:1   ✖  Expected empty line before rule     rule-empty-line-before
+  33:24  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  34:1   ✖  Expected empty line before rule     rule-empty-line-before
+  35:1   ✖  Expected empty line before rule     rule-empty-line-before
+  35:24  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  36:1   ✖  Expected empty line before rule     rule-empty-line-before
+  37:1   ✖  Expected empty line before rule     rule-empty-line-before
+  38:1   ✖  Expected empty line before rule     rule-empty-line-before
+  38:16  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  39:1   ✖  Expected empty line before rule     rule-empty-line-before
+  40:1   ✖  Expected empty line before rule     rule-empty-line-before
+  40:26  ✖  Too many declarations, maximum 3    declaration-block-single-line-max-declarations
+  41:1   ✖  Expected empty line before rule     rule-empty-line-before
+  42:1   ✖  Expected empty line before rule     rule-empty-line-before
+  43:1   ✖  Expected empty line before at-rule  at-rule-empty-line-before
+  46:1   ✖  Expected empty line before at-rule  at-rule-empty-line-before
+  49:1   ✖  Expected empty line before at-rule  at-rule-empty-line-before
+
+✖ 54 problems (54 errors, 0 warnings)
+  40 errors potentially fixable with the "--fix" option.
+
+
+SOURCE delivery-browser-first.txt
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: the primary operation is reachable in the desktop initial viewport
+    at file:///workspace/Brook-ZzQq.github.io/tests/delivery-browser.mjs:111:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+
+
+SOURCE delivery-browser-second.txt
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: the primary operation is reachable in the desktop initial viewport
+    at file:///workspace/Brook-ZzQq.github.io/tests/delivery-browser.mjs:112:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+
+
+SOURCE links-final-project.txt
+Running 3 checks (Images, Links, Scripts) in ["/app/work/iteration29/final-site"] on *.html files ...
+
+
+Checking 530 internal links
+Checking internal link hashes in 58 files
+Ran on 74 files!
+
+
+For the Links check, the following failures were found:
+
+* At /app/work/iteration29/final-site/Brook-ZzQq.github.io/posts/getting-started/index.html:3:
+
+  http://127.0.0.1:4000 is not an HTTPS link
+
+* At /app/work/iteration29/final-site/Brook-ZzQq.github.io/posts/text-and-typography/index.html:1:
+
+  http://127.0.0.1:4000 is not an HTTPS link
+
+
+HTML-Proofer found 2 failures!
+
+
+SOURCE links-final-root.txt
+Running 3 checks (Images, Links, Scripts) in ["/app/work/iteration29/final-root"] on *.html files ...
+
+
+Checking 530 internal links
+Checking internal link hashes in 58 files
+Ran on 74 files!
+
+
+For the Links check, the following failures were found:
+
+* At /app/work/iteration29/final-root/posts/getting-started/index.html:3:
+
+  http://127.0.0.1:4000 is not an HTTPS link
+
+* At /app/work/iteration29/final-root/posts/text-and-typography/index.html:1:
+
+  http://127.0.0.1:4000 is not an HTTPS link
+
+
+HTML-Proofer found 2 failures!
+
+
+Final wording snapshot environment failure: the new Docker-built snapshot copied a CSS asset with unreadable permissions for the host server. Guard returned EACCES; browser/Hallmark captured missing styles and were not accepted. chmod a+rX was applied inside the build container only to these owned preview directories. No source/deployment permission rule was changed.
+
+SOURCE wording-recovery-unreadable.txt
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: native no-JS keyboard scroll reaches the recovery evidence
+    at file:///workspace/Brook-ZzQq.github.io/tests/recovery-learning-browser.mjs:86:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+
+SOURCE wording-recovery-root-unreadable.txt
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: native no-JS keyboard scroll reaches the recovery evidence
+    at file:///workspace/Brook-ZzQq.github.io/tests/recovery-learning-browser.mjs:86:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+
+SOURCE hallmark-recovery-wording-unreadable.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:4302/Brook-ZzQq.github.io/knowledge/agent-state-recovery/
+  FAIL 49a :1 [320px] control "本篇自解释问题（2）" wraps to 2 lines (a) | fix: Shorten the label or set nowrap
+  FAIL 49a :1 [375px] control "计数与回执一起提交" wraps to 2 lines (a)
+  FAIL 49a :1 [414px] control "来源与运行范围" wraps to 2 lines (a)
+  REFLEX 49b :1 [320px] link "Brook’s UniverseBrookA personal " wraps to 2 lines (a.brand) | fix: Shorten the label or set nowrap
+  REFLEX 49b :1 [320px] link "博客 / 模板示例" wraps to 2 lines (a)
+  REFLEX 49b :1 [375px] link "开源致谢" wraps to 2 lines (a)
+  WARN render :1 the shots show a fallback: fonts or stylesheets did not load (127.0.0.1:4302) | fix: Recapture when the host answers or the path is right; never review or sign off a fallback face
+sloplint: 3 FAIL, 3 REFLEX, 1 WARN across 1 file(s) and 1 URL(s).
+
+Native article-end lesson preset correction / actual README cold-start evidence. No interpreter source, archive, visual layout or storage-schema change.
+
+SOURCE python-entry-before.txt
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForURL: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "http://127.0.0.1:4302/Brook-ZzQq.github.io/playground/python/#json-contracts" until "load"
+============================================================
+    at /workspace/Brook-ZzQq.github.io/tests/api-foundations-browser.mjs:49:16 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

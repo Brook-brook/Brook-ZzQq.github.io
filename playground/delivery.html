@@ -1,0 +1,47 @@
+---
+layout: atlas
+title: 回执与重试实验
+permalink: /playground/delivery/
+section: Playground
+delivery: true
+description: 在本机内存实际改变一个小计数，显式丢弃首回执，区分未知结果、普通重发、幂等参数和查询；没有模型或远端写入。
+---
+<div class="delivery-page" id="delivery-lab">
+  <nav class="breadcrumbs" aria-label="当前位置"><a href="{{ '/playground/' | relative_url }}">Playground</a><span aria-hidden="true">/</span><span>回执与重试</span></nav>
+  <header class="delivery-head"><h1>没收到，不等于没发生。</h1><p>默认先加2，再故意丢掉回执。客户端知道什么，接收端又发生了什么？</p></header>
+  <div class="delivery-workspace">
+    <section class="delivery-controls glass-light" aria-labelledby="delivery-action-title">
+      <h2 id="delivery-action-title" tabindex="-1">发送一个小操作</h2>
+      <fieldset class="delivery-fields"><legend>这组实验</legend>
+        <div><label for="delivery-mode">接收端模式</label><select id="delivery-mode" disabled><option value="plain">普通模式</option><option value="keyed">幂等模式</option></select></div>
+        <div><label for="delivery-fault">首回丢失位置</label><select id="delivery-fault" disabled><option value="after">应用后</option><option value="before">应用前</option><option value="none">不丢失</option></select></div>
+      </fieldset>
+      <fieldset class="delivery-fields"><legend>下一次操作</legend>
+        <div><label for="delivery-key">操作 key</label><select id="delivery-key" disabled><option value="op-1">op-1 原操作</option><option value="op-2">op-2 新操作</option></select></div>
+        <div><label for="delivery-units">本次增加</label><select id="delivery-units" disabled><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select></div>
+      </fieldset>
+      <p class="delivery-help">发送后锁定接收模式与首回故障；重置后可换一组。改下一次参数，不会撤回已经发生的应用。</p>
+      <div class="delivery-actions"><button id="delivery-send" type="button" disabled>发送一次</button><button id="delivery-lookup" type="button" class="secondary" disabled>核对回执</button><button id="delivery-reset" type="button" class="secondary" disabled>重置演练</button></div>
+      <div class="delivery-result"><p id="delivery-state" role="status">尚未发送。</p><p id="delivery-detail">启用JavaScript后可运行。先预测，再核对接收端。</p><p id="delivery-confirmed" class="delivery-help" hidden></p></div>
+      <p id="delivery-counts" class="delivery-help">发送尝试0次，核对0次，收到响应0份，匹配回执0份。</p>
+      <a href="#delivery-receiver" id="delivery-observer-jump">查看演练透视</a>
+    </section>
+    <section id="delivery-receiver" class="delivery-observer" tabindex="-1" aria-labelledby="delivery-observer-title">
+      <h2 id="delivery-observer-title">接收端的另一面</h2>
+      <p class="delivery-help">这里是本机模型的教学透视，真实客户端不会自动知道这一栏。页面没有发送HTTP，也没有修改真实服务。</p>
+      <dl class="delivery-ledger"><div><dt>演练累计值</dt><dd id="delivery-value">0</dd></div><div><dt>实际应用次数</dt><dd id="delivery-writes">0</dd></div></dl>
+      <details open><summary>接收端记住的回执</summary><ul id="delivery-cache"><li>普通模式不按key保存回执。</li></ul></details>
+      <p class="delivery-help">key是公开操作标识，不是API Key。key相同还要参数相同。换新key是新操作；旧回执的累计值是当时的快照，不保证是最新总值。</p>
+      <details><summary>逐步记录与完整参数</summary><ol id="delivery-events"><li>尚无操作。</li></ol><pre id="delivery-json" tabindex="0" aria-label="完整演练JSON">本组尚未运行。</pre></details>
+      <div class="delivery-actions"><button id="delivery-export" type="button" class="secondary" disabled>下载记录</button><a href="{{ '/study/practice/#api-timeout-unknown' | relative_url }}">用自己的话解释</a></div>
+      <p class="delivery-help">每组最多6次发送、6次核对。导出只含已执行步骤和公开参数，不把未发送的改动算作操作。不做持久保存，重置或重新加载会清空。</p>
+      <a href="#delivery-action-title" id="delivery-action-jump">回到发送区</a>
+    </section>
+  </div>
+  <section class="delivery-rules" aria-labelledby="delivery-rules-title"><h2 id="delivery-rules-title">把未知留在正确的位置。</h2><dl>
+    <div><dt>普通重发</dt><dd>丢在应用后再发一次，会再次增加。首回没收到，也不能据此说接收端没有执行。</dd></div>
+    <div><dt>幂等契约</dt><dd>本模型原子地保存key、精确参数与回执。同key同参数取回旧结果，同key改参数拒绝；不是随便加一个header就有的保障。</dd></div>
+    <div><dt>有限范围</dt><dd>页面内存与脚本丢回执不代表真实网络。没有持久缓存、过期、重启恢复或跨服务事务，不能据此保证分布式“恰好一次”。</dd></div>
+  </dl><p><a href="{{ '/knowledge/agent-delivery-boundaries/' | relative_url }}">读懂未知结果与重试</a>，或下载同一教程的标准库项目，在自己的Python里运行真实loopback HTTP。</p></section>
+  <noscript><p>本实验需要JavaScript，当前控件不可运行。上方规则仍可阅读，也可从教程下载本机Python项目；网页不会替你启动HTTP服务或记录学习进度。</p></noscript>
+</div>

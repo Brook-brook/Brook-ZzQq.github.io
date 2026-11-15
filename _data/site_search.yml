@@ -1,4 +1,9 @@
 entries:
+  - title: 回执与重试 · 未知结果和幂等
+    kind: lab
+    url: /playground/delivery/
+    summary: 原创本机内存演练，显式丢回执，比较普通重发、同key参数、新操作和查询；有配套真实loopback HTTP项目，不调用模型。
+    keywords: [Agent, 智能体, retry, timeout, idempotency, 幂等, 未知, 回执, 重试, JSON, HTTP]
   - title: 检索与证据 · 版本、片段与上下文
     kind: lab
     url: /playground/retrieval/

@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "kind": "brook-api-foundations",
+  "root": "brooks-api-foundations",
+  "files": [
+    {
+      "name": "README.md",
+      "source": "_includes/api-foundations/README.md",
+      "sha256": "6246408f424b7216cb7ccee677f1d4278bda972207bbf92b671c6b8b3c90e844",
+      "bytes": 4390
+    },
+    {
+      "name": "NOTICE.md",
+      "source": "_includes/api-foundations/NOTICE.md",
+      "sha256": "ba1afebaac4fd9c898ebc3306b2e1442c7a90667ba69a855824d5a2a23ed133e",
+      "bytes": 1590
+    },
+    {
+      "name": "LICENSE.txt",
+      "source": "_includes/agent-starter/LICENSE.txt",
+      "sha256": "13ed684a76a34c04b5b39049f97e497a054e25a89abd1db2ce975daef69ced6e",
+      "bytes": 1062
+    },
+    {
+      "name": "CPython-LICENSE.txt",
+      "source": "licenses/CPython-LICENSE.txt",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936
+    },
+    {
+      "name": "json_contracts.py",
+      "source": "_includes/api-foundations/json_contracts.py",
+      "sha256": "cfe6f4012d98fdc4060eddad58dee86328008a9e08d3c90c46ede1cade95ec96",
+      "bytes": 2271
+    },
+    {
+      "name": "json_cases.py",
+      "source": "_includes/api-foundations/json_cases.py",
+      "sha256": "4a5f6f0b4e57f82ad19b0d628b7090d505f9b34454fc4e7c5c45e9df6db6fcaf",
+      "bytes": 834
+    },
+    {
+      "name": "demo_json.py",
+      "source": "_includes/api-foundations/demo_json.py",
+      "sha256": "db8f33b5e5c5c4fa6a330b4e2daff3e20732ce061207f83bca5fcb9d5b6f67b3",
+      "bytes": 297
+    },
+    {
+      "name": "http_client.py",
+      "source": "_includes/api-foundations/http_client.py",
+      "sha256": "f2ec5d13aab65fcfdc2ed4619b9260c1568687684416d6a8e89881a5161f7482",
+      "bytes": 3813
+    },
+    {
+      "name": "http_fixtures.py",
+      "source": "_includes/api-foundations/http_fixtures.py",
+      "sha256": "5bb37d6ff9b7de84ca1fb4fe724dbe3033387378e1f5c483efc4c7c573b430fa",
+      "bytes": 3301
+    },
+    {
+      "name": "demo_http.py",
+      "source": "_includes/api-foundations/demo_http.py",
+      "sha256": "fb6176084ca3f56346d79e04d72700274033532e8d7ccd79feae5d8e05b699fc",
+      "bytes": 345
+    },
+    {
+      "name": "run_checks.py",
+      "source": "_includes/api-foundations/run_checks.py",
+      "sha256": "4d34832b94c156899249b8dc0c5aa9075422a8c923c85400e5c8406ffd3d4aa2",
+      "bytes": 13576
+    },
+    {
+      "name": "effect_model.py",
+      "source": "_includes/api-foundations/effect_model.py",
+      "sha256": "c1ecbad4e4e48299f41d7a109421d71897533abf508865c1ddf50528281cec99",
+      "bytes": 3655
+    },
+    {
+      "name": "delivery_http.py",
+      "source": "_includes/api-foundations/delivery_http.py",
+      "sha256": "79296625fae3c04c12ab07cf4864f187865f619cb802c8bc92f393b734cc0ab1",
+      "bytes": 9824
+    },
+    {
+      "name": "demo_delivery.py",
+      "source": "_includes/api-foundations/demo_delivery.py",
+      "sha256": "a066942bde3d79f1522e5ab971fe5684ab109261836f396c543786505a109a22",
+      "bytes": 1750
+    }
+  ],
+  "archive": {
+    "path": "assets/examples/api-foundations.zip",
+    "sha256": "69dd8861b766ef4bfef89fcd0c4cfb38ec0a54197d281cd10fe9b19da0913735",
+    "bytes": 24629
+  }
+}

@@ -37,3 +37,7 @@
 @media (prefers-reduced-motion: reduce) {
   .note-learning :is(a, summary):active, .note-download a:active { transform: none; }
 }
+
+/* Keep a short title term intact; metadata and search retain the plain title. */
+.note-title-unit { white-space: nowrap; }
+/* Hallmark · finish-review: subagent · fix 1 finding · parent recapture: 1 resolved · gap: none within the changed learning scope. */

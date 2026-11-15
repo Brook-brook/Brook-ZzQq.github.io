@@ -4,7 +4,7 @@
 
 - Home, Explore, Geo Lab, AI Lab, Code Lab, Projects, Knowledge, About.
 - Responsive navigation, persistent dark/light mode, accessible no-JS reading.
-- Twenty-four public notes/tutorials with metadata, TOC, code blocks and actual
+- Twenty-eight public notes/tutorials with metadata, TOC, code blocks and actual
   experiment links when available; source-grounded research stays type-labelled.
 - Knowledge map, client-side search, category filtering and empty state.
 - Prisoner/stag payoff labs and editable 2×2 pure-strategy Nash explorer.
@@ -12,12 +12,12 @@
   objective, exact equality boundaries and a labelled two-player endpoint slice.
 - Four-step C++ shallow/deep copy visualization with valid lifetime semantics.
 - Spherical Mercator local scale/area experiment and labelled GIS × AI workflow.
-- Lazy Pyodide Worker with four examples, real execution, errors, output cap,
+- Lazy Pyodide Worker with five examples, real execution, errors, output cap,
   stop/reload and timeout. Runtime downloads only after the visitor requests it.
 - Existing Chirpy blog/posts remain accessible; old Atlas preview routes redirect.
 - Automated model/browser checks plus an explicit build-before-deploy Pages workflow.
 - Two AI/Agent development paths, five original foundation lessons and a native
-  entry. Twelve routes/thirty-eight manual questions retain the same v1 journal.
+  entry. Fourteen routes/forty-four manual questions retain the same v1 journal.
 - Original local/server Python request example with actual-SDK offline contract
   tests; no live model service or website API-key field.
 - Bounded script-proposed Agent-runtime exercise with real native read tools,
@@ -50,6 +50,15 @@
   with a downloadable source-tied reference, honest distinct counters and a
   readable keyboard-scrolling phone comparison. It links the existing acceptance
   question; no extra journal ID, model benchmark or automatic mastery record.
+- Three original JSON/HTTP/uncertain-action foundations, one shared stdlib ZIP,
+  and a native receipt workbench. Actual local effects/explicit receipt loss
+  differ from real loopback GET/POST and from model calls. Twenty stdlib checks
+  include concurrent keyed calls and malformed receipts after an applied effect;
+  four manual questions append to38 without rewriting historical records.
+- A separate stdlib SQLite exercise actually interrupts/reopens child processes
+  before/after COMMIT, preserves historical receipts across process lifetimes,
+  refuses silent file resets and distinguishes one-DB transactions from full
+  Agent/external-action recovery. Two more manual questions bring the total44.
 
 ## Next useful increments
 

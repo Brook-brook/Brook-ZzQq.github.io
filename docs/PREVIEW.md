@@ -44,16 +44,22 @@ python3 -m http.server 8000
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/python-async-boundaries/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/python/#async-wait
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-interface-evidence/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/study/ai/#api-foundations
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/python/#json-contracts
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/delivery/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/http-response-boundaries/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/agent-state-recovery/
 
 服务保持运行，停止时按Ctrl+C。端口8000被占用时，命令和网址一起改为8001。
 
 源码ZIP含Liquid/Jekyll模板，Python只提供静态HTTP服务，不能把它们编译为
 最终网页。不要直接用源码根目录的http.server地址当作已编译预览；也不要
-双击HTML通过file协议预览依赖站点路径的资源。若启动服务时已经进入
-Brook-ZzQq.github.io那层，则网址应去掉重复的项目名前缀；推荐统一使用上面的
-目录层级，避免此前出现的404或原始黑白模板。
+双击HTML通过file协议预览依赖站点路径的资源。若终端已经进入含index.html
+的Brook-ZzQq.github.io那层，请先用`cd ..`回到父目录，再按上面的命令和
+完整网址访问。这个编译包的导航与资源都带项目名前缀，父目录托管才能
+同时找到页面、样式和脚本。
 
-开发分支依次基于前一轮；最新28包含17–27的代码。CI产物默认保留7天，
+开发分支依次基于前一轮；最新29包含17–28的代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。
 
 循环实验底部可显式下载Python例子与配套公开目录。代码由你在自己的本地/
@@ -95,3 +101,16 @@ brooks-agent-mcp-bridge，按README安装三个固定依赖并运行python demo_
 后的白名单记录，不是新的解释器或模型基准。网站CI验证该记录与当前ZIP/
 目录/生成器及数值参考一致，不重新执行SDK。重放请分别进入三个项目目录，
 不要把整段MCP检查的五个案例与另外两份项目的请求次数相加比较。
+
+第29轮的三个基础教程共用brook-api-foundations.zip。解压进入
+brooks-api-foundations，用Python3.11+依次运行demo_json.py、demo_http.py、
+demo_delivery.py和run_checks.py；只用标准库，无pip/Key。HTTP只在自己的
+本机短时运行。网页JSON需显式加载/运行Python，网页回执实验则直接用JS
+实际改变本机内存，不启动HTTP或修改真实服务。回执导出只有执行过的
+公开步骤，刷新会清空；学习手记仍由你在原路线/练习页显式保存。
+
+独立的brook-agent-restart.zip解压到brooks-agent-restart后，运行
+python3 demo_restart.py和python3 run_checks.py。需带sqlite3的Python3.11+，
+无pip/Key。程序自己创建临时SQLite文件、结束子进程并重开，结束后清理。
+教程还可下载本轮一次实际运行记录JSON，含完整教学参数、客户端回执、
+独立进程的文件观察、版本与源哈希；它不是网站数据库或完整Agent恢复。

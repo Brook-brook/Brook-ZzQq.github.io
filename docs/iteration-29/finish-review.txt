@@ -1,0 +1,53 @@
+fix
+
+Original independent reviewer result, preserved without rewriting fix as ship:
+
+1. Phone heading splits the key term “回执” into “回” / “执还在吗？” at375px on
+/knowledge/agent-state-recovery/; keep that phrase together in the rendered heading.
+Confirmed in the supplied dark capture and a fresh light capture.
+
+The pages teach a progression from JSON contracts through HTTP, uncertain receipts
+and committed SQLite records. A visitor would remember that missing evidence leaves
+the client uncertain even when an actual effect exists.
+
+The stamped ideas and lavender theme describe the pages accurately. The action
+surface and separate teaching observer carry the receipt idea through the interface
+and article. The learning index connects task, tools, evidence and evaluation
+throughout its routes. No wholesale theme gap, decorative empty section or template
+composition finding emerged. The new lesson headings name their subjects directly.
+
+The old AI index reached its original routes earlier during ordinary scrolling.
+Their opening jump links remain available; no removed action or reading destination
+was found. The delivery prototype’s squeezed rules and hidden short-desktop action
+are visibly corrected.
+
+Reviewer evidence: all35 final render screenshots inspected, including sequential
+900px slices of every desktop and phone full page, plus all six supplied before/
+prototype inputs. Fresh isolated Chromium interactions confirmed receipt loss with
+value2/effect1, ordinary repetition to4/2, keyed lookup without another effect,
+parameter conflict, new operation, historical receipt versus current value, JSON
+export and observer/action focus. The fifth Python option preserves the four
+original choices and previews its contract source with zero interpreter requests.
+Native AI questions and article question jumps operated.
+
+Reviewer limits: read-only finish review with scratch captures. No separate Python
+execution or comparison-table keyboard test, no assertion of concurrent-suite
+completion, no legacy-CSS certification, Safari, full browser zoom, OS IME, live
+model or power-loss test. Preserve explicit unknown client state, separate teaching
+visibility, readable phone controls and quiet lavender reading surface.
+
+Parent resolution/scoring after the review:
+
+resolved: optional display-only title_keep protects the two-character term. The
+title text/metadata and public search remain plain, with no invisible Unicode,
+smaller font or changed permanent ID. Native glyph-position checks at320/375/390
+in both themes and16/32px root font keep both characters on the same line, with no
+whole-page horizontal overflow. Actual project/root recovery browser checks pass;
+five scoped Hallmark recaptures remain0 FAIL/REFLEX/WARN. Normal and large-text
+phone images are saved with the supplied before capture in screenshots/.
+
+The original word was fix, with one Finish finding, not rebuild or a named Floor.
+Under Hallmark gates §6 this uses one fix batch and parent scoring; a second
+independent review was not required or claimed. No whole-theme gap remains within
+this changed learning scope. Unchanged legacy-CSS diagnostics remain separately
+recorded in legacy-css-scope.txt.

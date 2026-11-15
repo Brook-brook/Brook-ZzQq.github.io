@@ -44,6 +44,10 @@ try {
     assert.equal(bytes.length, manifest.archive.bytes);
     assert.equal((await new AxeBuilder({ page }).analyze()).violations.length, 0);
     await page.screenshot({ path: `${shots}/guide-${width}-${theme}.png`, fullPage: true });
+    await page.getByRole('link', { name: '打开对应实验', exact: true }).click();
+    await page.waitForURL(base + '/playground/python/#async-wait');
+    assert.equal(await page.locator('#python-example').inputValue(), 'async', 'the article-end action selects its own lesson, never an unrelated default');
+    await page.goBack();
     await page.getByRole('link', { name: '预选异步示例的Python实验', exact: true }).click();
     await page.waitForURL(base + '/playground/python/#async-wait');
     assert.equal(await page.locator('#python-example').inputValue(), 'async');

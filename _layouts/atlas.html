@@ -37,6 +37,7 @@
   {% if page.ai_learning %}<link rel="stylesheet" href="{{ '/assets/css/ai-learning.css' | relative_url }}">{% endif %}
   {% if page.retrieval %}<link rel="stylesheet" href="{{ '/assets/css/retrieval.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/retrieval.js' | relative_url }}"></script>{% endif %}
   {% if page.agent_runtime %}<link rel="stylesheet" href="{{ '/assets/css/agent-runtime.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/agent-runtime.js' | relative_url }}"></script>{% endif %}
+  {% if page.delivery %}<link rel="stylesheet" href="{{ '/assets/css/delivery.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/delivery.js' | relative_url }}"></script>{% endif %}
   {% if page.observatory %}<link rel="stylesheet" href="{{ '/assets/css/observatory.css' | relative_url }}"><script type="module" src="{{ '/assets/js/atlas/observatory.js' | relative_url }}"></script>{% endif %}
   <script type="module" src="{{ '/assets/js/atlas/site.js' | relative_url }}"></script>
   <meta name="view-transition" content="same-origin">
@@ -64,7 +65,13 @@
 {% if page.collection == 'atlas_notes' %}
   <nav class="breadcrumbs" aria-label="面包屑"><a href="{{ '/study/' | relative_url }}">Study</a><span aria-hidden="true">/</span><span>{{ page.category }}</span></nav>
   <article class="note">
-    <h1>{{ page.title }}</h1>
+    <h1>
+      {%- assign note_title_unit = page.title_keep | default: '' | strip | escape -%}
+      {%- if note_title_unit != '' -%}
+        {%- capture note_title_unit_markup -%}<span class="note-title-unit">{{ note_title_unit }}</span>{%- endcapture -%}
+        {{- page.title | escape | replace: note_title_unit, note_title_unit_markup -}}
+      {%- else -%}{{- page.title | escape -}}{%- endif -%}
+    </h1>
     <p class="lead">{{ page.summary }}</p>
     <div class="note-meta"><span>{% include note-kind.html note=page %}</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time><span>{{ content | strip_html | size | divided_by: 500 | plus: 1 }} 分钟参考阅读</span></div>
     {% include note-provenance.html %}

@@ -529,3 +529,67 @@
 - Keep semantic table rows separate from Rouge layout tables. Phone comparisons
   need readable columns, a named keyboard scroll group, instant focus, no-JS
   operation and actual large-text/root/project checks; do not shrink the text.
+
+## Data, HTTP and uncertain effects (Iteration 29)
+
+- _includes/api-foundations/json_contracts.py and json_cases.py are canonical for
+  the escaped Python template and stdlib ZIP. Parsing accepts JSON values;
+  analyze_json_request separately enforces this small sum contract. Keep exact
+  version/types, bool/string rejection, duplicate-name/nonstandard-number policy,
+  finite range and UTF8 byte bound. Neither helper is a universal schema engine,
+  permission check, tokenizer or source verification. No eval/tool dispatch.
+- Generate/check only the new bundle with --profile api, explicit public inputs
+  and complete CPython license. tools/check-api-package.py actually extracts and
+  runs20 stdlib checks plus three CLIs. GET fixtures use11 real loopback cases;
+  POST/lookup demos use6 authored scenarios. Preserve no automatic retries or
+  redirects, bounded representation checks and honest one-operation timeout.
+  RFC9110 is2022 material; Idempotency-Key is our own receiver contract, not
+  assumed support on arbitrary public APIs. Never copy a standard and call it MIT.
+- The delivery browser lab executes only local JS integer effects with explicit
+  before/after receipt loss. Its teaching observer is not client knowledge or
+  actual HTTP. Python counterparts really send loopback HTTP and disconnect;
+  that is not public-network evidence, model inference or a durable transaction.
+  Preserve unknown outcomes, key/payload correlation, historical receipt values,
+  distinct attempts/effects/observations and bounded write/lookup budgets.
+- Exact same key/payload replays the receipt; changed payload conflicts and a new
+  key is a new operation. Missing/invalid/mismatched receipts do not confirm the
+  task or erase a possible applied effect. No persistence, expiry/restart recovery,
+  authentication or distributed exactly-once claim. Export executed events only,
+  not draft controls, private journals or invented remote response fields.
+- Append four permanent IDs after all38 previous IDs in the optional13th route,
+  then two in the optional14th recovery route, for44. Preserve the full order.
+  Keep the v1 key/schema, no implicit completion and exact old38 raw/export on
+  both paths/practice. tests/fixtures/learning-v1-38.json is fixed historical data;
+  never regenerate it from the evolving current YAML. Only explicit new entries
+  extend it. No new journal/preferences store or private search index.
+- #json-contracts selects the fifth source only. Preserve the other four examples,
+  #async-wait, manual interpreter load/run, frozen editor, errors, timeout/stop,
+  output cap and focused output jump. Real Pyodide execution is a separate check
+  from rendered source equality and real local Python/HTTP.
+  Both the article body and its native end-of-article lab action must keep the
+  corresponding preset; the generic Python default is a different example.
+- Scope app styles, including generic header/label/dl resets; initial screenshots
+  caught inherited rules squeezing definitions and pushing the primary operation
+  below the short desktop fold. Keep phone observer/return focus links, paired
+  action tokens, live reduced-motion cancellation, disabled no-JS controls and
+  native reading/downloads. DOM font doubling is not full browser zoom.
+- The separate --profile restart ZIP uses owned temporary SQLite files and actual
+  interrupted/reopened child processes, including independent observer processes.
+  Counter and receipt share one explicit transaction. A before-COMMIT exit in a
+  fresh case differs from an after-COMMIT exit, while the client may know neither.
+  Preserve exclusive file creation, mode=rw recovery, version/invariant failures,
+  historical receipts and the fact that an after-COMMIT exception cannot undo it.
+  No private/user database, browser journal or external action belongs here.
+- This is not complete Agent checkpointing, power-loss validation, authentication,
+  distributed exactly-once, or atomicity with remote effects. Python must include
+  sqlite3; website/Pyodide do not run this child-process project. Keep complete
+  actual SQLite source license/exception text and CPython license, without copying
+  upstream implementations or claiming the entire SQLite repo public domain.
+- agent-restart-case.json is generated only by actually replaying the exact ZIP
+  through tools/generate-agent-restart-case.py; UTC comes from that execution.
+  Retain complete injected configuration separately from actual client replies
+  and independent observer reads, plus versions/ZIP/generator hashes. Never
+  hand-edit evidence/hashes to mask staleness or call a capture source/news freshness.
+  Node checks reject private/extra fields and false observations, and compare a
+  fresh stdlib CLI replay with the saved semantic record (runtime versions may
+  differ). This does not authenticate the publisher or rerun the older SDK cases.
