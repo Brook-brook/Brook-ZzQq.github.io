@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-16",
+  "records": [
+    {
+      "id": "n-901fe109e244531442505ec3f1f98b1d84eac6b54a0d39832f1cb4d01f997e11",
+      "source_id": "un-news",
+      "title": "Nadia Murad: ‘Day by day, I took my story back’",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168801",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-15T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Sun, 15 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-15T20:14:25.220Z",
+      "changed_at": "2026-11-15T20:14:25.220Z",
+      "revision_count": 0,
+      "previous_versions": []
+    }
+  ]
+}
