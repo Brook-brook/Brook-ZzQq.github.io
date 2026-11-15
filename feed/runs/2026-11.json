@@ -480,6 +480,21 @@
           "error": "http_403"
         }
       ]
+    },
+    {
+      "at": "2026-11-15T12:19:19.945Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 0,
+      "revisions": 0,
+      "total": 230,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
     }
   ]
 }
