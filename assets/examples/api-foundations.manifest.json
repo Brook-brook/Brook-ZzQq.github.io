@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "kind": "brook-api-foundations",
+  "root": "brooks-api-foundations",
+  "files": [
+    {
+      "name": "README.md",
+      "source": "_includes/api-foundations/README.md",
+      "sha256": "1c2130e10cba076447cf2d4a957b5f3bc8e8422f30cfdc8a4781b0be69a999d7",
+      "bytes": 3306
+    },
+    {
+      "name": "NOTICE.md",
+      "source": "_includes/api-foundations/NOTICE.md",
+      "sha256": "329cce0bbf7d3905325e3ccb106048571c94901de8f228c7c98aac5d20a30b9f",
+      "bytes": 1308
+    },
+    {
+      "name": "LICENSE.txt",
+      "source": "_includes/agent-starter/LICENSE.txt",
+      "sha256": "13ed684a76a34c04b5b39049f97e497a054e25a89abd1db2ce975daef69ced6e",
+      "bytes": 1062
+    },
+    {
+      "name": "CPython-LICENSE.txt",
+      "source": "licenses/CPython-LICENSE.txt",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936
+    },
+    {
+      "name": "json_contracts.py",
+      "source": "_includes/api-foundations/json_contracts.py",
+      "sha256": "316815b53ef890ae970aa1ffdac7e228779d9bfc29956e84edd3102e6a8d4766",
+      "bytes": 2105
+    },
+    {
+      "name": "json_cases.py",
+      "source": "_includes/api-foundations/json_cases.py",
+      "sha256": "4a5f6f0b4e57f82ad19b0d628b7090d505f9b34454fc4e7c5c45e9df6db6fcaf",
+      "bytes": 834
+    },
+    {
+      "name": "demo_json.py",
+      "source": "_includes/api-foundations/demo_json.py",
+      "sha256": "db8f33b5e5c5c4fa6a330b4e2daff3e20732ce061207f83bca5fcb9d5b6f67b3",
+      "bytes": 297
+    },
+    {
+      "name": "http_client.py",
+      "source": "_includes/api-foundations/http_client.py",
+      "sha256": "f2ec5d13aab65fcfdc2ed4619b9260c1568687684416d6a8e89881a5161f7482",
+      "bytes": 3813
+    },
+    {
+      "name": "http_fixtures.py",
+      "source": "_includes/api-foundations/http_fixtures.py",
+      "sha256": "5bb37d6ff9b7de84ca1fb4fe724dbe3033387378e1f5c483efc4c7c573b430fa",
+      "bytes": 3301
+    },
+    {
+      "name": "demo_http.py",
+      "source": "_includes/api-foundations/demo_http.py",
+      "sha256": "fb6176084ca3f56346d79e04d72700274033532e8d7ccd79feae5d8e05b699fc",
+      "bytes": 345
+    },
+    {
+      "name": "run_checks.py",
+      "source": "_includes/api-foundations/run_checks.py",
+      "sha256": "3cc533775bad48dab1afe83f6086cb26948784bf8f136cc8da06e330cd4c1345",
+      "bytes": 6449
+    }
+  ],
+  "archive": {
+    "path": "assets/examples/api-foundations.zip",
+    "sha256": "43d9430d07d473ca58543bc501fe61496c7734c9a4732053ffcf610ba4bac62b",
+    "bytes": 16944
+  }
+}

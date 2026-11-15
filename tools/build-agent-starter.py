@@ -19,6 +19,7 @@ PROFILES = {
     "mcp": ("mcp-starter", "brooks-mcp-starter", "brook-mcp-starter"),
     "bridge": ("agent-mcp-bridge", "brooks-agent-mcp-bridge", "brook-agent-mcp-bridge"),
     "async": ("python-async-starter", "brooks-python-async", "brook-python-async"),
+    "api": ("api-foundations", "brooks-api-foundations", "brook-api-foundations"),
 }
 TOOL_FUNCTIONS = {"text", "catalog_snapshot", "unique_object", "checked_call", "distance", "execute_read_tool", "tool_schemas"}
 TOOL_CONSTANTS = {"CATEGORIES", "RADIUS_M"}
@@ -119,7 +120,7 @@ def check(profile):
         for info in archive.infolist():
             if info.file_size != len(payload[info.filename]) or archive.read(info) != payload[info.filename]:
                 raise ValueError("Archive payload differs from its explicit public source")
-    print(f"PASS starter archive: {len(payload)} exact bounded entries, current sources, full catalog and licenses; no SDK or model executed")
+    print(f"PASS starter archive: {len(payload)} exact bounded entries, current public sources and declared licenses; no SDK or model executed")
 
 
 def main():

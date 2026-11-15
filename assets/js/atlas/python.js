@@ -9,11 +9,14 @@ const byId = (id) => document.getElementById(id);
 const lab = byId('python-lab');
 if (lab) {
   const selection = byId('python-example');
-  const asyncSource = byId('python-async-source')?.content?.querySelector('code')?.textContent;
-  if (asyncSource?.trim()) examples.async = asyncSource;
-  else if (selection.querySelector('[value="async"]')) selection.querySelector('[value="async"]').disabled = true;
+  for (const name of ['async', 'json']) {
+    const source = byId(`python-${name}-source`)?.content?.querySelector('code')?.textContent;
+    if (source?.trim()) examples[name] = source;
+    else if (selection.querySelector(`[value="${name}"]`)) selection.querySelector(`[value="${name}"]`).disabled = true;
+  }
   // A public initial preset, never an automatic load/run or private query.
-  if (location.hash === '#async-wait' && examples.async) selection.value = 'async';
+  const preset = { '#async-wait': 'async', '#json-contracts': 'json' }[location.hash];
+  if (preset && examples[preset]) selection.value = preset;
   const editor = byId('python-code'),
     output = byId('python-output'),
     status = byId('python-status');

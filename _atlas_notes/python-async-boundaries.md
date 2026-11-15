@@ -31,7 +31,7 @@ toc:
 
 打开[预选异步示例的Python实验]({{ '/playground/python/#async-wait' | relative_url }})，
 点击加载Python，再运行代码。首次下载仍需要网络；示例执行只用标准库。
-四个学习选项可手动切换，预选不会自动加载、运行或记录完成。
+学习选项可手动切换，预选不会自动加载、运行或记录完成。
 
 输出有`cancel`和`release`两行JSON。先预测哪一行出现`task:resumed`，
 再核对`before_schedule`、`events`、`task_done`和`task_cancelled`。
