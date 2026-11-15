@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-15T12:19:19.945Z",
+  "attempted_at": "2026-11-15T14:20:34.224Z",
   "interval_minutes": 120,
   "last_complete_at": null,
   "total": 230,
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-15T12:19:19.945Z",
-      "last_success_at": "2026-11-15T12:19:19.945Z",
+      "attempted_at": "2026-11-15T14:20:34.224Z",
+      "last_success_at": "2026-11-15T14:20:34.224Z",
       "accepted": 0,
       "invalid": 0,
       "limited": false,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-15T12:19:19.945Z",
-      "last_success_at": "2026-11-15T12:19:19.945Z",
+      "attempted_at": "2026-11-15T14:20:34.224Z",
+      "last_success_at": "2026-11-15T14:20:34.224Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-15T12:19:19.945Z",
-      "last_success_at": "2026-11-15T12:19:19.945Z",
+      "attempted_at": "2026-11-15T14:20:34.224Z",
+      "last_success_at": "2026-11-15T14:20:34.224Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-15T12:19:19.945Z",
-      "last_success_at": "2026-11-15T12:19:19.945Z",
+      "attempted_at": "2026-11-15T14:20:34.224Z",
+      "last_success_at": "2026-11-15T14:20:34.224Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -103,14 +103,14 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-15T12:19:19.945Z",
-      "last_success_at": "2026-11-15T12:19:19.945Z",
+      "status": "ok",
+      "attempted_at": "2026-11-15T14:20:34.224Z",
+      "last_success_at": "2026-11-15T14:20:34.224Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794658230-gzip\"",
-      "last_modified": "Sat, 14 Nov 2026 12:10:30 GMT",
+      "etag": "\"1794643878-gzip\"",
+      "last_modified": "Sat, 14 Nov 2026 08:11:18 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-15T12:19:19.945Z",
+      "attempted_at": "2026-11-15T14:20:34.224Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-15T12:19:19.945Z",
-      "last_success_at": "2026-11-15T12:19:19.945Z",
+      "attempted_at": "2026-11-15T14:20:34.224Z",
+      "last_success_at": "2026-11-15T14:20:34.224Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -1268,21 +1268,6 @@
   ],
   "recent_runs": [
     {
-      "at": "2026-11-14T22:16:12.141Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 230,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
-    {
       "at": "2026-11-15T00:15:02.481Z",
       "status": "partial",
       "sources_ok": 6,
@@ -1374,6 +1359,21 @@
     },
     {
       "at": "2026-11-15T12:19:19.945Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 0,
+      "revisions": 0,
+      "total": 230,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-15T14:20:34.224Z",
       "status": "partial",
       "sources_ok": 6,
       "sources_total": 7,
