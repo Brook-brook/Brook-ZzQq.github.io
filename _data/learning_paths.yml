@@ -300,3 +300,35 @@
       lab: /playground/python/#async-wait
       lab_label: 比较取消与释放
       question: 对照两条输出说明哪种有task:resumed、哪种最终cancelled为真。为什么不能保证任意任务接受取消，Worker终止也不能保证finally执行或撤回外部操作？
+- id: api-agent-foundations
+  title: 从数据接口到可靠动作
+  summary: 以真实Python理解JSON类型、HTTP层次与未知结果，再用小接收端区分重试、参数一致性和已发生的动作。
+  prerequisite: 建议先能读函数、列表与字典；不设解锁。网页JSON和回执实验可直接操作，本机HTTP项目需Python3.11+标准库，无模型Key。
+  challenge: 修改一个会被拒绝的JSON输入，运行一份HTTP案例，再对照丢回执前后各一次发送，写清哪些事实已知、哪些仍未知。
+  steps:
+    - id: api-json-types
+      title: 文本变成了什么？
+      focus: 分开JSON文本、Python对象与应用约定，真实对照布尔值、重复键和非有限数。
+      note: python-json-contracts
+      lab: /playground/python/#json-contracts
+      lab_label: 运行真实JSON契约例子
+      question: 对照true、1和"1"的解析类型，解释为什么解析成功仍可能被加和契约拒绝。重复键、NaN与1e309分别在哪层被处理？UTF8字节上限又为何不是token上限？
+    - id: api-http-layers
+      title: 200之后，还要查什么？
+      focus: 用下载包实际运行本机HTTP，区分传输、状态、表示、JSON与应用结果。
+      note: http-response-boundaries
+      question: 为200坏JSON、200布尔值、204空内容和断开连接各写出本例可观察状态。为什么204不能被补成数值0，response_headers_received也不代表正文或任务已经正确？
+    - id: api-timeout-unknown
+      title: 没收到，就没发生？
+      focus: 对照回执在应用前/后丢失时的客户端视角和教学透视，保留未知并区分查询与重发。
+      note: agent-delivery-boundaries
+      lab: /playground/delivery/
+      lab_label: 对照丢回执与已经发生的应用
+      question: 同样没有收到回执，接收端值为什么可能是0或2？普通模式重发为何会变为4？核对回执与再发送一次在尝试数、应用数和结果上有什么不同？
+    - id: api-idempotency-payload
+      title: 同key，可以改参数吗？
+      focus: 核对同key同参数、参数冲突、新key与历史回执，辨别有限内存契约和生产保障。
+      note: agent-delivery-boundaries
+      lab: /playground/delivery/
+      lab_label: 改变操作标识和参数
+      question: 先用op-1增加2，再分别改参数为3、换op-2、查询旧op-1。哪些应拒绝、哪些是新操作，value_after为何不一定是当前总值？这个内存缓存又为什么不能证明持久或分布式恰好一次？

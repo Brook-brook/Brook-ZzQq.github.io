@@ -12,6 +12,9 @@
     {"name":"http_client.py","source":"_includes/api-foundations/http_client.py"},
     {"name":"http_fixtures.py","source":"_includes/api-foundations/http_fixtures.py"},
     {"name":"demo_http.py","source":"_includes/api-foundations/demo_http.py"},
-    {"name":"run_checks.py","source":"_includes/api-foundations/run_checks.py"}
+    {"name":"run_checks.py","source":"_includes/api-foundations/run_checks.py"},
+    {"name":"effect_model.py","source":"_includes/api-foundations/effect_model.py"},
+    {"name":"delivery_http.py","source":"_includes/api-foundations/delivery_http.py"},
+    {"name":"demo_delivery.py","source":"_includes/api-foundations/demo_delivery.py"}
   ]
 }

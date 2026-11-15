@@ -6,14 +6,14 @@
     {
       "name": "README.md",
       "source": "_includes/api-foundations/README.md",
-      "sha256": "1c2130e10cba076447cf2d4a957b5f3bc8e8422f30cfdc8a4781b0be69a999d7",
-      "bytes": 3306
+      "sha256": "6246408f424b7216cb7ccee677f1d4278bda972207bbf92b671c6b8b3c90e844",
+      "bytes": 4390
     },
     {
       "name": "NOTICE.md",
       "source": "_includes/api-foundations/NOTICE.md",
-      "sha256": "329cce0bbf7d3905325e3ccb106048571c94901de8f228c7c98aac5d20a30b9f",
-      "bytes": 1308
+      "sha256": "ba1afebaac4fd9c898ebc3306b2e1442c7a90667ba69a855824d5a2a23ed133e",
+      "bytes": 1590
     },
     {
       "name": "LICENSE.txt",
@@ -30,8 +30,8 @@
     {
       "name": "json_contracts.py",
       "source": "_includes/api-foundations/json_contracts.py",
-      "sha256": "316815b53ef890ae970aa1ffdac7e228779d9bfc29956e84edd3102e6a8d4766",
-      "bytes": 2105
+      "sha256": "cfe6f4012d98fdc4060eddad58dee86328008a9e08d3c90c46ede1cade95ec96",
+      "bytes": 2271
     },
     {
       "name": "json_cases.py",
@@ -66,13 +66,31 @@
     {
       "name": "run_checks.py",
       "source": "_includes/api-foundations/run_checks.py",
-      "sha256": "3cc533775bad48dab1afe83f6086cb26948784bf8f136cc8da06e330cd4c1345",
-      "bytes": 6449
+      "sha256": "4d34832b94c156899249b8dc0c5aa9075422a8c923c85400e5c8406ffd3d4aa2",
+      "bytes": 13576
+    },
+    {
+      "name": "effect_model.py",
+      "source": "_includes/api-foundations/effect_model.py",
+      "sha256": "c1ecbad4e4e48299f41d7a109421d71897533abf508865c1ddf50528281cec99",
+      "bytes": 3655
+    },
+    {
+      "name": "delivery_http.py",
+      "source": "_includes/api-foundations/delivery_http.py",
+      "sha256": "79296625fae3c04c12ab07cf4864f187865f619cb802c8bc92f393b734cc0ab1",
+      "bytes": 9824
+    },
+    {
+      "name": "demo_delivery.py",
+      "source": "_includes/api-foundations/demo_delivery.py",
+      "sha256": "a066942bde3d79f1522e5ab971fe5684ab109261836f396c543786505a109a22",
+      "bytes": 1750
     }
   ],
   "archive": {
     "path": "assets/examples/api-foundations.zip",
-    "sha256": "43d9430d07d473ca58543bc501fe61496c7734c9a4732053ffcf610ba4bac62b",
-    "bytes": 16944
+    "sha256": "69dd8861b766ef4bfef89fcd0c4cfb38ec0a54197d281cd10fe9b19da0913735",
+    "bytes": 24629
   }
 }

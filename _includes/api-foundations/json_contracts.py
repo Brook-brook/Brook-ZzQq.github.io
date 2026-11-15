@@ -13,7 +13,8 @@ class ContractError(ValueError):
     """A fixed diagnostic code, never an echo of an arbitrary input document."""
 
 
-def analyze_json_request(text):
+def decode_json_document(text):
+    """Decode with byte/name/constant policies; not an application schema."""
     if type(text) is not str:
         raise ContractError("text_required")
     try:
@@ -41,6 +42,11 @@ def analyze_json_request(text):
         raise
     except (json.JSONDecodeError, RecursionError, ValueError):
         raise ContractError("json_syntax") from None
+    return data
+
+
+def analyze_json_request(text):
+    data = decode_json_document(text)
     if type(data) is not dict:
         raise ContractError("object_required")
     if set(data) != {"schema_version", "task", "values"}:

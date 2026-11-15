@@ -1,6 +1,36 @@
 schema_version: 1
 ai_assisted: true
 links:
+  - id: python-data-to-json-contract
+    from: python-first-steps
+    to: python-json-contracts
+    kind: extend
+    reason: 能读字典和函数后，把JSON文本、实际Python类型与应用边界分开，亲自修改布尔值和数字字符串核对结果。
+  - id: json-contract-to-http
+    from: python-json-contracts
+    to: http-response-boundaries
+    kind: extend
+    reason: 把同一解析核心接到真实loopback HTTP，分清收到字节、状态、表示与应用结果，不把200当成最后一关。
+  - id: http-before-model-contract
+    from: http-response-boundaries
+    to: model-request-contracts
+    kind: prepare
+    reason: 理解HTTP层次和阻塞超时后，再读SDK输出、拒绝、重试与任务契约；本机脚本不等于模型能力。
+  - id: http-unknown-delivery
+    from: http-response-boundaries
+    to: agent-delivery-boundaries
+    kind: extend
+    reason: 从缺少响应走到已发生动作，比较普通重发、精确key/参数与查询，在未知状态保留证据。
+  - id: delivery-before-host-effects
+    from: agent-delivery-boundaries
+    to: agent-mcp-bridge
+    kind: compare
+    reason: 把写入演练与现有只读宿主分开，理解调用尝试不等于执行、取消不等于撤回；不因连接协议就获得真实写权限。
+  - id: acceptance-to-idempotency
+    from: agent-testing-contracts
+    to: agent-delivery-boundaries
+    kind: extend
+    reason: 为未知结果、参数冲突和历史回执写可观察断言，把本机程序通过与生产持久化保障分开验收。
   - id: checks-common-evidence
     from: agent-testing-contracts
     to: agent-interface-evidence

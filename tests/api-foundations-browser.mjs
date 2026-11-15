@@ -3,6 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { mkdir, readFile } from 'node:fs/promises';
+import { expectedLearningIds } from './expected-learning.mjs';
 
 const base = (process.env.ATLAS_BASE_URL || 'http://127.0.0.1:4173/Brook-ZzQq.github.io').replace(/\/$/, '');
 const shots = process.env.API_FOUNDATIONS_SHOT_DIR || 'work/api-foundations';
@@ -10,6 +11,12 @@ await mkdir(shots, { recursive: true });
 const core = (await readFile('_includes/api-foundations/json_contracts.py', 'utf8')).trim();
 const cases = (await readFile('_includes/api-foundations/json_cases.py', 'utf8')).trim();
 const expected = JSON.parse(await readFile('assets/examples/api-foundations.manifest.json', 'utf8'));
+const journalKey = 'brooks-universe.learning.v1';
+// This committed historical fixture must remain independent of today's route YAML.
+const legacyRaw = await readFile('tests/fixtures/learning-v1-38.json', 'utf8');
+const legacy = JSON.parse(legacyRaw), currentIds = await expectedLearningIds();
+const newIds = ['api-json-types', 'api-http-layers', 'api-timeout-unknown', 'api-idempotency-payload'];
+assert.equal(Object.keys(legacy.entries).length, 38);
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || (process.env.CI ? chromium.executablePath() : '/usr/bin/chromium'), args: ['--no-sandbox'] });
 try {
   for (const width of [390, 768, 1440]) for (const theme of ['dark', 'light']) {
@@ -62,6 +69,30 @@ try {
     assert.ok(requests.every((request) => request.method === 'GET' && new URL(request.url).origin === new URL(base).origin), 'public preset does not fetch an interpreter, call localhost HTTP fixtures or upload anything');
     await context.close();
   }
+  for (const route of ['paths', 'practice']) {
+    const context = await browser.newContext({ viewport: { width: 390, height: 844 }, acceptDownloads: true });
+    await context.addInitScript(({ journalKey, legacyRaw }) => { if (localStorage.getItem(journalKey) === null) localStorage.setItem(journalKey, legacyRaw); }, { journalKey, legacyRaw });
+    const page = await context.newPage(); await page.goto(base + `/study/${route}/#api-json-types`);
+    await page.waitForFunction(() => !document.getElementById('learning-export').closest('[hidden]'));
+    assert.equal(await page.locator('[data-learning-step]').count(), currentIds.steps.length);
+    assert.deepEqual(await page.locator('[data-learning-step]').evaluateAll((nodes) => nodes.map((node) => node.dataset.learningStep)), currentIds.steps);
+    assert.equal(await page.evaluate((journalKey) => localStorage.getItem(journalKey), journalKey), legacyRaw, 'opening new content leaves all original raw bytes intact');
+    let waiting = page.waitForEvent('download'); await page.locator('#learning-export').click();
+    assert.deepEqual(JSON.parse(await readFile(await (await waiting).path(), 'utf8')), legacy);
+    for (const id of newIds) {
+      await page.goto(base + `/study/${route}/#${id}`);
+      const step = page.locator(`[data-learning-step="${id}"]`); await step.waitFor({ state: 'visible' });
+      if (route === 'paths') await step.locator('.learning-entry summary').click();
+      await step.locator('textarea').fill(`Synthetic explicit ${id}: <literal> 🪻`);
+      await step.locator('[data-step-complete]').check();
+    }
+    waiting = page.waitForEvent('download'); await page.locator('#learning-export').click();
+    const extended = JSON.parse(await readFile(await (await waiting).path(), 'utf8'));
+    for (const [id, entry] of Object.entries(legacy.entries)) assert.deepEqual(extended.entries[id], entry);
+    assert.equal(Object.keys(extended.entries).length, 42);
+    for (const id of newIds) assert.deepEqual(extended.entries[id], { completed: true, note: `Synthetic explicit ${id}: <literal> 🪻` });
+    await context.close();
+  }
   const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 320, height: 640 } });
   const page = await context.newPage();
   await page.goto(base + '/knowledge/python-json-contracts/');
@@ -72,5 +103,5 @@ try {
   assert.equal(await page.locator('#python-code').isEditable(), false);
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   await context.close();
-  console.log('PASS API foundations: actual ZIP/hash and native reading, shared JSON source/preset, all five choices/reset, no implicit interpreter/HTTP/private-store access, 390/768/1440×themes, axe/keyboard/no-JS/320; actual Python/HTTP run separately');
+  console.log('PASS API foundations: actual ZIP/hash and native reading, shared JSON source/preset, all five choices/reset, original38 exact raw/export and explicit-only42 extension on paths/practice, no implicit interpreter/HTTP/private-store access, 390/768/1440×themes, axe/keyboard/no-JS/320; actual Python/HTTP run separately');
 } finally { await browser.close(); }

@@ -65,6 +65,10 @@ brooks-agent-starter/
 
 ## 在自己的电脑第一次运行 {#run}
 
+如果JSON文本、Python字典或HTTP响应还分不清，可先补[JSON契约](../python-json-contracts/)
+与[一次HTTP](../http-response-boundaries/)。这份标准库练习不用安装SDK；
+下面的搭建项目有自己的固定依赖，两者不是同一个运行环境。
+
 解压后进入包含README的`brooks-agent-starter`目录。Python需3.11+；
 下面为Mac/Linux命令，Windows激活方法见包内README。实际验证为Python3.12；
 这里的3.11最低要求来自固定httpx2版本的Requires-Python，不是把原客户端

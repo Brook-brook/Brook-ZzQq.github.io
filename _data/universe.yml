@@ -33,6 +33,11 @@ preview_notes:
 
       均衡不等于社会最优。
 updates:
+  - date: "2026-11-15"
+    title: 从JSON与HTTP，走到未知结果
+    text: 共享标准库源码实际运行JSON、loopback HTTP与丢回执案例；用本机状态实验区分重发、幂等参数和已经发生的动作。
+    label: 打开接口基础路线
+    url: /study/ai/#api-foundations
   - date: "2026-11-14"
     title: 用同一GIS案例，核对三层证据
     text: 实际运行现有三份项目，白名单记录同源距离与不同计数；区分SDK、协议、观察和最终解释，不制作模型能力排行榜。

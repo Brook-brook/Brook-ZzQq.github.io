@@ -3,9 +3,15 @@ import http.client
 import json
 import math
 import unittest
-from json_contracts import analyze_json_request, ContractError, MAX_JSON_BYTES
+from concurrent.futures import ThreadPoolExecutor
+from copy import deepcopy
+from unittest.mock import patch
+from json_contracts import analyze_json_request, decode_json_document, ContractError, MAX_JSON_BYTES
 from http_client import request_case, CASE_NAMES
 from http_fixtures import fixture_server
+from delivery_http import DeliveryHandler, delivery_server, request_delivery, public_receiver_snapshot
+from effect_model import new_receiver, apply_effect, lookup_effect
+from demo_delivery import SCENARIOS, run_scenario
 
 
 def document(values, **changes):
@@ -72,6 +78,12 @@ class ContractChecks(unittest.TestCase):
             self.rejected(raw, "json_syntax")
         self.rejected(b"{}", "text_required")
 
+    def test_parse_result_is_not_application_acceptance(self):
+        self.assertIs(decode_json_document("true"), True)
+        self.assertIsNone(decode_json_document("null"))
+        self.assertEqual(decode_json_document("[1,2]"), [1, 2])
+        self.rejected("true", "object_required")
+
 
 class HTTPChecks(unittest.TestCase):
     def test_actual_http_matrix_and_exact_one_request_per_case(self):
@@ -127,6 +139,109 @@ class HTTPChecks(unittest.TestCase):
                     request_case(server.server_port, "valid", timeout=timeout)
             with server.count_lock:
                 self.assertEqual(server.request_paths, [])
+
+
+class DeliveryChecks(unittest.TestCase):
+    def test_real_http_loss_retry_and_reconcile_cases(self):
+        expected = [(4, 2, "confirmed"), (2, 1, "confirmed"), (2, 1, "confirmed"),
+                    (2, 1, "conflict"), (4, 2, "confirmed"), (2, 1, "confirmed")]
+        for case, wanted in zip(SCENARIOS, expected):
+            result = run_scenario(*case)
+            receiver = result["teaching_observer"]["receiver"]
+            self.assertEqual((receiver["value"], receiver["writes"], result["client_trace"][-1]["outcome"]), wanted)
+            self.assertEqual(result["client_trace"][0]["outcome"], "unknown")
+            self.assertIsNone(result["client_trace"][0]["receipt"])
+            self.assertTrue(all(row["http_requests_attempted"] == 1 for row in result["client_trace"]))
+        self.assertEqual(run_scenario(*SCENARIOS[-1])["teaching_observer"]["write_requests_received"], 1)
+
+    def test_real_concurrent_identical_key_is_serialized_by_receiver(self):
+        with delivery_server("keyed", "none") as server:
+            with ThreadPoolExecutor(max_workers=2) as workers:
+                results = list(workers.map(lambda _: request_delivery(server.server_port, "op-1", 2), range(2)))
+            self.assertEqual({row["response_kind"] for row in results}, {"applied", "replayed"})
+            self.assertEqual(public_receiver_snapshot(server)["receiver"]["value"], 2)
+            self.assertEqual(public_receiver_snapshot(server)["receiver"]["writes"], 1)
+            self.assertEqual(public_receiver_snapshot(server)["write_requests_received"], 2)
+
+    def test_real_lookup_receipt_is_historical_and_bound_to_expected_payload(self):
+        with delivery_server("keyed", "none") as server:
+            request_delivery(server.server_port, "op-1", 2)
+            request_delivery(server.server_port, "op-2", 1)
+            receipt = request_delivery(server.server_port, "op-1", 2, lookup=True)
+            self.assertEqual(receipt["receipt"]["value_after"], 2)
+            self.assertEqual(public_receiver_snapshot(server)["receiver"]["value"], 3)
+            mismatch = request_delivery(server.server_port, "op-1", 3, lookup=True)
+            self.assertEqual(mismatch["outcome"], "conflict")
+            self.assertIsNone(mismatch["receipt"])
+            self.assertEqual(public_receiver_snapshot(server)["receiver"]["writes"], 2)
+
+    def test_actual_receiver_rejects_bad_document_before_effect(self):
+        with delivery_server("keyed", "none") as server:
+            for body in ('{"units":true}', '{"units":1,"units":2}', '{"units":2,"extra":"SYNTHETIC_UNUSED"}'):
+                connection = http.client.HTTPConnection("127.0.0.1", server.server_port, timeout=1)
+                try:
+                    connection.request("POST", "/trial/add", body=body, headers={"Content-Type": "application/json", "Idempotency-Key": "op-1"})
+                    response = connection.getresponse()
+                    self.assertEqual(response.status, 400)
+                    self.assertEqual(json.loads(response.read()), {"status": "invalid_request", "receipt": None})
+                finally:
+                    connection.close()
+            self.assertEqual(public_receiver_snapshot(server)["receiver"]["writes"], 0)
+
+    def test_real_malformed_receipt_is_not_accepted_even_after_effect(self):
+        # Original altered server replies travel through real HTTP sockets. The
+        # client is not mocked, and refusal must not erase the receiver's effect.
+        for fault in ("wrong_role", "wrong_key", "wrong_units", "bool_value", "charset", "duplicate_media", "encoding"):
+            with self.subTest(fault=fault):
+                def malformed(handler, response):
+                    value = deepcopy(response)
+                    if fault == "wrong_role":
+                        value["status"] = "found"
+                    elif fault == "wrong_key":
+                        value["receipt"]["key"] = "op-2"
+                    elif fault == "wrong_units":
+                        value["receipt"]["units"] = 3
+                    elif fault == "bool_value":
+                        value["receipt"]["value_after"] = True
+                    raw = json.dumps(value, allow_nan=False).encode("utf-8")
+                    handler.send_response(200)
+                    handler.send_header("Content-Type", "application/json; charset=iso-8859-1" if fault == "charset" else "application/json")
+                    if fault == "duplicate_media":
+                        handler.send_header("Content-Type", "application/json")
+                    if fault == "encoding":
+                        handler.send_header("Content-Encoding", "gzip")
+                    handler.send_header("Content-Length", str(len(raw)))
+                    handler.send_header("Connection", "close")
+                    handler.end_headers()
+                    handler.wfile.write(raw)
+                    handler.close_connection = True
+                with patch.object(DeliveryHandler, "reply", malformed), delivery_server("keyed", "none") as server:
+                    row = request_delivery(server.server_port, "op-1", 2)
+                    self.assertEqual(row["http_status"], 200)
+                    self.assertIsNone(row["receipt"])
+                    self.assertEqual(row["outcome"], "conflict" if fault in {"wrong_key", "wrong_units"} else "unknown")
+                    self.assertEqual(public_receiver_snapshot(server)["receiver"]["value"], 2)
+
+    def test_plain_receiver_bound_and_keyed_reply_copies(self):
+        receiver = new_receiver("plain")
+        for _ in range(6):
+            receiver, _ = apply_effect(receiver, "op-1", 1)
+        stopped, response = apply_effect(receiver, "op-1", 1)
+        self.assertEqual(response["status"], "write_limit")
+        self.assertEqual(stopped["value"], 6)
+        keyed, _ = apply_effect(new_receiver("keyed"), "op-1", 2)
+        reply = lookup_effect(keyed, "op-1", 2)
+        reply["receipt"]["units"] = 3
+        self.assertEqual(keyed["receipts"][0]["units"], 2)
+
+    def test_receiver_rejects_coercion_and_unknown_fields(self):
+        for key, units in (("op-1", True), ("op-1", "2"), ("op-1", 0), ("op-1", 4), ("unknown", 2)):
+            with self.assertRaises(ValueError):
+                apply_effect(new_receiver("keyed"), key, units)
+        bad = new_receiver("keyed")
+        bad["extra"] = "SYNTHETIC_UNUSED"
+        with self.assertRaises(ValueError):
+            apply_effect(bad, "op-1", 1)
 
 
 if __name__ == "__main__":

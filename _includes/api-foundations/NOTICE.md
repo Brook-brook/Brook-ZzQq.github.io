@@ -17,3 +17,7 @@ https://github.com/httpwg/http-core/blob/bde37f634681bd5462568b73aa722af9c9a3ef5
 其实际版权声明为2022 IETF Trust及文档作者，受BCP78/IETF Trust Legal
 Provisions约束；抽取Code Components另要求Revised BSD许可。这里只作
 事实参考与原创解释，不复制规范文本/代码，也不将整份规范标成MIT。
+
+Idempotency-Key是本机教学服务自己的显式契约，不表示所有POST或公开服务
+支持该header。浏览器JS模型没有HTTP；Python示例实际使用loopback sockets。
+坏回执拒绝测试使用原创服务端故障注入，不是模型或公网服务输出。

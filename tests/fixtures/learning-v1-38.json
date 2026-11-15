@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "entries": {
+    "python-values": {
+      "completed": true,
+      "note": "Synthetic legacy38 0: <literal> 🪻"
+    },
+    "rss-records": {
+      "completed": false,
+      "note": "Synthetic legacy38 1: <literal> 🪻"
+    },
+    "source-evidence": {
+      "completed": true,
+      "note": "Synthetic legacy38 2: <literal> 🪻"
+    },
+    "mercator-assumptions": {
+      "completed": false,
+      "note": "Synthetic legacy38 3: <literal> 🪻"
+    },
+    "map-provenance": {
+      "completed": true,
+      "note": "Synthetic legacy38 4: <literal> 🪻"
+    },
+    "copy-relations": {
+      "completed": false,
+      "note": "Synthetic legacy38 5: <literal> 🪻"
+    },
+    "lifetime-boundaries": {
+      "completed": true,
+      "note": "Synthetic legacy38 6: <literal> 🪻"
+    },
+    "individual-collective": {
+      "completed": false,
+      "note": "Synthetic legacy38 7: <literal> 🪻"
+    },
+    "pure-equilibrium": {
+      "completed": true,
+      "note": "Synthetic legacy38 8: <literal> 🪻"
+    },
+    "classification-denominators": {
+      "completed": false,
+      "note": "Synthetic legacy38 9: <literal> 🪻"
+    },
+    "spatial-holdout": {
+      "completed": true,
+      "note": "Synthetic legacy38 10: <literal> 🪻"
+    },
+    "evaluation-evidence": {
+      "completed": false,
+      "note": "Synthetic legacy38 11: <literal> 🪻"
+    },
+    "ai-version-scope": {
+      "completed": true,
+      "note": "Synthetic legacy38 12: <literal> 🪻"
+    },
+    "economy-denominators": {
+      "completed": false,
+      "note": "Synthetic legacy38 13: <literal> 🪻"
+    },
+    "policy-status": {
+      "completed": true,
+      "note": "Synthetic legacy38 14: <literal> 🪻"
+    },
+    "tool-contract": {
+      "completed": false,
+      "note": "Synthetic legacy38 15: <literal> 🪻"
+    },
+    "tool-observation": {
+      "completed": true,
+      "note": "Synthetic legacy38 16: <literal> 🪻"
+    },
+    "tool-boundaries": {
+      "completed": false,
+      "note": "Synthetic legacy38 17: <literal> 🪻"
+    },
+    "public-goods-incentives": {
+      "completed": true,
+      "note": "Synthetic legacy38 18: <literal> 🪻"
+    },
+    "public-goods-boundaries": {
+      "completed": false,
+      "note": "Synthetic legacy38 19: <literal> 🪻"
+    },
+    "ai-model-boundaries": {
+      "completed": true,
+      "note": "Synthetic legacy38 20: <literal> 🪻"
+    },
+    "ai-request-failures": {
+      "completed": false,
+      "note": "Synthetic legacy38 21: <literal> 🪻"
+    },
+    "ai-output-contract": {
+      "completed": true,
+      "note": "Synthetic legacy38 22: <literal> 🪻"
+    },
+    "ai-task-evaluation": {
+      "completed": false,
+      "note": "Synthetic legacy38 23: <literal> 🪻"
+    },
+    "agent-control-loop": {
+      "completed": true,
+      "note": "Synthetic legacy38 24: <literal> 🪻"
+    },
+    "agent-context-evidence": {
+      "completed": false,
+      "note": "Synthetic legacy38 25: <literal> 🪻"
+    },
+    "agent-permission-boundaries": {
+      "completed": true,
+      "note": "Synthetic legacy38 26: <literal> 🪻"
+    },
+    "agent-trace-evaluation": {
+      "completed": false,
+      "note": "Synthetic legacy38 27: <literal> 🪻"
+    },
+    "agent-build-project": {
+      "completed": true,
+      "note": "Synthetic legacy38 28: <literal> 🪻"
+    },
+    "agent-build-adapter": {
+      "completed": false,
+      "note": "Synthetic legacy38 29: <literal> 🪻"
+    },
+    "agent-build-budgets": {
+      "completed": true,
+      "note": "Synthetic legacy38 30: <literal> 🪻"
+    },
+    "agent-build-acceptance": {
+      "completed": false,
+      "note": "Synthetic legacy38 31: <literal> 🪻"
+    },
+    "agent-mcp-discovery": {
+      "completed": true,
+      "note": "Synthetic legacy38 32: <literal> 🪻"
+    },
+    "agent-mcp-validation": {
+      "completed": false,
+      "note": "Synthetic legacy38 33: <literal> 🪻"
+    },
+    "agent-bridge-envelope": {
+      "completed": true,
+      "note": "Synthetic legacy38 34: <literal> 🪻"
+    },
+    "agent-bridge-stop": {
+      "completed": false,
+      "note": "Synthetic legacy38 35: <literal> 🪻"
+    },
+    "async-scheduling": {
+      "completed": true,
+      "note": "Synthetic legacy38 36: <literal> 🪻"
+    },
+    "async-cancellation": {
+      "completed": false,
+      "note": "Synthetic legacy38 37: <literal> 🪻"
+    }
+  }
+}
