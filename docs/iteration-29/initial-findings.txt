@@ -141,3 +141,51 @@ For the Links check, the following failures were found:
 
 HTML-Proofer found 2 failures!
 
+
+Final wording snapshot environment failure: the new Docker-built snapshot copied a CSS asset with unreadable permissions for the host server. Guard returned EACCES; browser/Hallmark captured missing styles and were not accepted. chmod a+rX was applied inside the build container only to these owned preview directories. No source/deployment permission rule was changed.
+
+SOURCE wording-recovery-unreadable.txt
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: native no-JS keyboard scroll reaches the recovery evidence
+    at file:///workspace/Brook-ZzQq.github.io/tests/recovery-learning-browser.mjs:86:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+
+SOURCE wording-recovery-root-unreadable.txt
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: native no-JS keyboard scroll reaches the recovery evidence
+    at file:///workspace/Brook-ZzQq.github.io/tests/recovery-learning-browser.mjs:86:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+
+SOURCE hallmark-recovery-wording-unreadable.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:4302/Brook-ZzQq.github.io/knowledge/agent-state-recovery/
+  FAIL 49a :1 [320px] control "本篇自解释问题（2）" wraps to 2 lines (a) | fix: Shorten the label or set nowrap
+  FAIL 49a :1 [375px] control "计数与回执一起提交" wraps to 2 lines (a)
+  FAIL 49a :1 [414px] control "来源与运行范围" wraps to 2 lines (a)
+  REFLEX 49b :1 [320px] link "Brook’s UniverseBrookA personal " wraps to 2 lines (a.brand) | fix: Shorten the label or set nowrap
+  REFLEX 49b :1 [320px] link "博客 / 模板示例" wraps to 2 lines (a)
+  REFLEX 49b :1 [375px] link "开源致谢" wraps to 2 lines (a)
+  WARN render :1 the shots show a fallback: fonts or stylesheets did not load (127.0.0.1:4302) | fix: Recapture when the host answers or the path is right; never review or sign off a fallback face
+sloplint: 3 FAIL, 3 REFLEX, 1 WARN across 1 file(s) and 1 URL(s).

@@ -318,3 +318,53 @@ Ran on 74 files!
 
 HTML-Proofer finished successfully.
 Finished in 7.21 seconds
+
+Final article numeric wording refinement; fresh owned snapshots after the recorded permissions correction. No further source/runtime or common-layout change.
+
+SOURCE wording-project-build.txt
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/work/iteration29/wording-site/Brook-ZzQq.github.io
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 2.47 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+
+SOURCE wording-root-build.txt
+Configuration file: /app/_config.yml
+ Theme Config file: /app/_config.yml
+            Source: /app
+       Destination: /app/work/iteration29/wording-root
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 2.225 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+
+SOURCE wording-project-links.txt
+Running 3 checks (Images, Links, Scripts) in ["work/iteration29/wording-site"] on *.html files ...
+
+
+Checking 530 internal links
+Checking internal link hashes in 58 files
+Ran on 74 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 7.82 seconds
+
+SOURCE wording-root-links.txt
+Running 3 checks (Images, Links, Scripts) in ["work/iteration29/wording-root"] on *.html files ...
+
+
+Checking 530 internal links
+Checking internal link hashes in 58 files
+Ran on 74 files!
+
+
+HTML-Proofer finished successfully.
+Finished in 3.0 seconds
+
+SOURCE wording-artifact-guards.txt
+PASS Pages artifact: rendered layout, 14 homepage assets, main routes and legacy bundles (/Brook-ZzQq.github.io)
+PASS Pages artifact: rendered layout, 14 homepage assets, main routes and legacy bundles (/)

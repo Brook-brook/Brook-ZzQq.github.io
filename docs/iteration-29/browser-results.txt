@@ -163,3 +163,11 @@ PASS recovery learning: native AI entry, exact ZIP/hash and actual saved-evidenc
 
 SOURCE python-regression.txt
 PASS real Pyodide in Chromium: 5 examples including actual JSON contracts/edit and async release/cancel, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop
+
+Final article numeric wording refinement; fresh owned snapshots after the recorded permissions correction. No further source/runtime or common-layout change.
+
+SOURCE wording-recovery.txt
+PASS recovery learning: native AI entry, exact ZIP/hash and actual saved-evidence JSON download, six documented cases with semantic table, no private reads/implicit runtime/network writes; 390/768/1440×themes, axe/no-JS/320 native ArrowRight and doubled DOM text (not full zoom). Real SQLite/child processes tested separately.
+
+SOURCE wording-recovery-root.txt
+PASS recovery learning: native AI entry, exact ZIP/hash and actual saved-evidence JSON download, six documented cases with semantic table, no private reads/implicit runtime/network writes; 390/768/1440×themes, axe/no-JS/320 native ArrowRight and doubled DOM text (not full zoom). Real SQLite/child processes tested separately.
