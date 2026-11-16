@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "kind": "brook-neural-basics",
+  "root": "brooks-neural-basics",
+  "files": [
+    {
+      "name": "README.md",
+      "source": "_includes/neural-basics/README.md",
+      "sha256": "83f65814e627cac0098885d941ddc1d67403e7945f3e55f49f9275330798b482",
+      "bytes": 1975
+    },
+    {
+      "name": "neural.py",
+      "source": "_includes/neural-basics/neural.py",
+      "sha256": "a6efc4f47d213a1b484f6b83039ba419becab27b0bdeb88332165afc5fc4754d",
+      "bytes": 4347
+    },
+    {
+      "name": "demo.py",
+      "source": "_includes/neural-basics/demo.py",
+      "sha256": "5c01b1774eec912e638b63df65dee5f333b94f7137fc6fd948b03975fa58a56f",
+      "bytes": 116
+    },
+    {
+      "name": "run_checks.py",
+      "source": "_includes/neural-basics/run_checks.py",
+      "sha256": "2b18f0a707e82270140034c0bb98f1e73e8b224b01ca4ee17172039bdc9a08c9",
+      "bytes": 5225
+    },
+    {
+      "name": "NOTICE.md",
+      "source": "_includes/neural-basics/NOTICE.md",
+      "sha256": "361e7396960bbce442a3f536770c7b4470b8cf36059aae2f719dda4ded5898f9",
+      "bytes": 1597
+    },
+    {
+      "name": "LICENSE.txt",
+      "source": "_includes/agent-starter/LICENSE.txt",
+      "sha256": "13ed684a76a34c04b5b39049f97e497a054e25a89abd1db2ce975daef69ced6e",
+      "bytes": 1062
+    },
+    {
+      "name": "licenses/CPython-LICENSE.txt",
+      "source": "licenses/CPython-LICENSE.txt",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936
+    }
+  ],
+  "archive": {
+    "path": "assets/examples/neural-basics.zip",
+    "sha256": "2ed7f1975f6c696d6e1eed8049c72b2a10082379e2535ad81ddca9502dfe0827",
+    "bytes": 12620
+  }
+}

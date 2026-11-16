@@ -1,0 +1,409 @@
+/* Hallmark · shape: app screen · genre: playful · theme: brand · nav: retained glass dock · footer: garden links
+ * idea: one update moves the fitted line and its measured losses together · data: original synthetic teaching sample · v2.0.0 */
+
+/* Hallmark · pre-emit critique: P5 H4 E4 S4 R5 V4 · weakest: hierarchy; a single action surface faces the actual plot instead of a wall of metric cards. */
+
+/* Hallmark · finish-review: subagent · ship · 0 findings · gap: none in seven rendered app/document screens */
+
+/* Hallmark · answered F4 · The gradient primary action uses the accent fill; secondary buttons resolve --color-clear to transparent and retain only the control-edge outline in both themes. */
+.gradient-page {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-block: var(--space-lg) var(--space-2xl);
+}
+
+.gradient-page :where(section, header, figure) {
+  display: block;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.gradient-page :where(h1, h2, h3, p, figure, fieldset) {
+  margin-block-start: 0;
+  min-width: 0;
+}
+
+.gradient-page :is(h1, h2, h3) {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+.gradient-page .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  margin-block-end: var(--space-lg);
+}
+
+.gradient-heading {
+  padding: 0;
+  margin-block-end: var(--space-lg);
+}
+
+.gradient-heading h1 {
+  font-size: var(--text-display);
+  line-height: 1.4;
+  margin-block-end: var(--space-sm);
+}
+
+.gradient-page p {
+  max-width: 65ch;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.gradient-heading > p {
+  margin-block-end: 0;
+}
+
+.gradient-page h2 {
+  font-size: var(--text-xl);
+  line-height: 1.5;
+  margin-block-end: var(--space-md);
+}
+
+.gradient-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.gradient-controls {
+  padding: var(--space-lg);
+  border-radius: var(--radius-card);
+}
+
+.gradient-controls > label, .gradient-start-fields label, .gradient-sample-evidence label {
+  display: block;
+  padding: 0;
+  margin-block: 0 var(--space-xs);
+  font-size: var(--text-sm);
+}
+
+.gradient-page :is(input[type="number"], select) {
+  width: 100%;
+  min-width: 0;
+  min-height: 3em;
+  padding: var(--space-sm) var(--space-md);
+  font: inherit;
+  line-height: 1.4;
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--color-control-edge);
+  border-radius: var(--radius-control);
+  font-variant-numeric: tabular-nums;
+}
+
+.gradient-page input[aria-invalid="true"] {
+  border-color: var(--color-focus);
+}
+
+.gradient-page .gradient-help {
+  font-size: var(--text-sm);
+  line-height: 1.75;
+  margin-block: var(--space-xs) var(--space-md);
+}
+
+.gradient-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm) var(--space-md);
+}
+
+.gradient-page button {
+  min-height: 3em;
+  padding: var(--space-sm) var(--space-lg);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-pill);
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.4;
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform var(--dur-short) var(--ease-out);
+}
+
+.gradient-page button.secondary {
+  background: var(--color-clear);
+  color: var(--text-primary);
+  border-color: var(--color-control-edge);
+}
+
+.gradient-page button:hover:not(:disabled) {
+  border-color: var(--color-focus);
+}
+
+.gradient-page button:active:not(:disabled) {
+  transform: scale(.98);
+}
+
+.gradient-page :is(button, input, select):disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.gradient-page :is(button, input, select, a, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+.gradient-page a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.gradient-page a:active {
+  transform: translateY(1px);
+}
+
+#gradient-status {
+  margin-block: var(--space-md);
+  color: var(--text-primary);
+}
+
+.gradient-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
+  gap: var(--space-md);
+  margin-block: var(--space-md);
+}
+
+.gradient-values > div {
+  display: block;
+  min-width: 0;
+}
+
+.gradient-values dt {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.gradient-values dd {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: break-word;
+}
+
+.gradient-page details {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: var(--color-clear);
+  margin-block: var(--space-md);
+}
+
+.gradient-page details:not([open]) > :not(summary) {
+  display: none;
+}
+
+.gradient-page summary {
+  min-height: 44px;
+  padding-block: var(--space-sm);
+  cursor: pointer;
+}
+
+.gradient-start-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-md);
+  margin-block-end: var(--space-md);
+}
+
+.gradient-plots {
+  min-width: 0;
+  scroll-margin-block-start: var(--space-lg);
+}
+
+.gradient-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  font-size: var(--text-sm);
+}
+
+.gradient-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  white-space: nowrap;
+}
+
+.gradient-legend svg {
+  display: inline;
+  width: var(--text-md);
+  height: var(--text-md);
+  flex: none;
+  margin: 0;
+  background: var(--color-clear);
+  border: 0;
+}
+
+.gradient-chart {
+  display: block;
+  width: 100%;
+  height: 22rem;
+  margin: 0;
+  overflow: visible;
+  background: var(--color-clear);
+  border: 0;
+  border-radius: 0;
+  font-size: var(--text-sm);
+  font-family: var(--font-body);
+}
+
+.gradient-loss-chart {
+  height: 18rem;
+}
+
+.gradient-chart text {
+  fill: var(--text-secondary);
+  font-size: inherit;
+  font-variant-numeric: tabular-nums;
+}
+
+.gradient-grid {
+  stroke: var(--color-rule);
+  stroke-width: 1;
+}
+
+.gradient-current-line, .gradient-train-loss {
+  stroke: var(--color-accent);
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.gradient-reference-line, .gradient-validation-loss {
+  stroke: var(--text-secondary);
+  stroke-width: 2;
+  stroke-dasharray: 6 5;
+  fill: none;
+}
+
+.gradient-train-mark {
+  fill: var(--color-accent);
+  stroke: var(--text-primary);
+  stroke-width: 1;
+}
+
+.gradient-validation-mark {
+  fill: var(--surface);
+  stroke: var(--text-secondary);
+  stroke-width: 2;
+}
+
+.gradient-selected-mark {
+  stroke: var(--color-focus);
+  stroke-width: 2.5;
+}
+
+.gradient-residual-guide {
+  stroke: var(--text-secondary);
+  stroke-width: 2;
+  stroke-dasharray: 3 3;
+}
+
+.gradient-page .gradient-reference {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 44px;
+  padding: 0;
+  margin-block: var(--space-sm);
+}
+
+.gradient-reference input {
+  accent-color: var(--color-accent);
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.gradient-loss-figure {
+  padding: var(--space-lg) 0 0;
+  border-top: 1px solid var(--color-rule);
+  margin-block: var(--space-lg) 0;
+}
+
+.gradient-loss-figure figcaption {
+  color: var(--text-primary);
+  font-size: var(--text-md);
+}
+
+.gradient-record {
+  border-top: 1px solid var(--color-rule);
+  padding-block-start: var(--space-xl);
+  margin-block-start: var(--space-xl);
+}
+
+.gradient-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.gradient-scroll table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.gradient-scroll :is(th, td) {
+  text-align: start;
+  padding: var(--space-sm) var(--space-md);
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.gradient-scroll caption {
+  text-align: start;
+  color: var(--text-secondary);
+  padding-block: var(--space-sm);
+}
+
+.gradient-reading {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr);
+  gap: var(--space-xl);
+  border-top: 1px solid var(--color-rule);
+  padding-block-start: var(--space-xl);
+  margin-block-start: var(--space-xl);
+}
+
+[id^="gradient-"] {
+  scroll-margin-block-start: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+  .gradient-workspace, .gradient-reading {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gradient-reading {
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 359px) {
+  .gradient-start-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-page :is(button, a):active {
+    transform: none;
+  }
+
+  .gradient-page button {
+    transition: none;
+  }
+}

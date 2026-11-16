@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "brook-linear-regression",
+  "root": "brooks-linear-regression",
+  "files": [
+    {
+      "name": "README.md",
+      "source": "_includes/linear-regression-starter/README.md",
+      "sha256": "98b795465f37c2e23f67692252e32186df9eb71f0b42dede96da7adb13e20fc0",
+      "bytes": 2850
+    },
+    {
+      "name": "gradient.py",
+      "source": "_includes/linear-regression-starter/gradient.py",
+      "sha256": "2ba2c32bd43432f48bd1ea5f5b96b996113085a3a4784a00c4d4980bec86c489",
+      "bytes": 7206
+    },
+    {
+      "name": "demo.py",
+      "source": "_includes/linear-regression-starter/demo.py",
+      "sha256": "894da83651af346df4d2f9f4ab96fef21807afc22970d2f1b4275c5e03ef86b5",
+      "bytes": 923
+    },
+    {
+      "name": "run_checks.py",
+      "source": "_includes/linear-regression-starter/run_checks.py",
+      "sha256": "ba7181da81acac389f24192f3d7beb2d9e111509a44709a5cf09b783f489b5ac",
+      "bytes": 7174
+    },
+    {
+      "name": "samples.json",
+      "source": "_data/gradient_samples.json",
+      "sha256": "92e1870bd5ef6163122b2a8258035c1f2afa633cc28b23b956b289bcd4aeb311",
+      "bytes": 929
+    },
+    {
+      "name": "NOTICE.md",
+      "source": "_includes/linear-regression-starter/NOTICE.md",
+      "sha256": "9abeb553abc521980b0a9c3ec5500224156bcf2d4a4c1982711c3065a4057ca3",
+      "bytes": 1289
+    },
+    {
+      "name": "LICENSE.txt",
+      "source": "_includes/agent-starter/LICENSE.txt",
+      "sha256": "13ed684a76a34c04b5b39049f97e497a054e25a89abd1db2ce975daef69ced6e",
+      "bytes": 1062
+    },
+    {
+      "name": "licenses/CPython-LICENSE.txt",
+      "source": "licenses/CPython-LICENSE.txt",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936
+    }
+  ],
+  "archive": {
+    "path": "assets/examples/linear-regression-starter.zip",
+    "sha256": "e206c13cf4271d7f79baf147ac4dc2a4e45dd68795b613c58098fb1d64207215",
+    "bytes": 15205
+  }
+}

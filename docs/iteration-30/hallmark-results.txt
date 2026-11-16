@@ -1,0 +1,37 @@
+Hallmark2.0.0 pin04977e15f3dfd6ee4b74c887dac3eb52665d6c92. Correct HTTP compiled pages; new CSS only for source scope, existing shell is exercised by render/browser. No marketing hero applies.
+
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:4320/Brook-ZzQq.github.io/study/ai-foundations/
+  WAIVED 49b :1 [320px] link "模型之外，一个 AI 应用还需要什么？" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "读 AI 论文：从排行榜到可检验的证据" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "用 Python 把一个问题拆成输入与输出" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "第一次模型调用，除了 prompt 还有什么？" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "换一个区域，模型成绩还说明什么？" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "验收自己的 Agent：先测契约，再测任务" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "RAG：找到资料之后，仍要核对什么？" wraps to 2 lines (a)
+  WAIVED 49b :1 [320px] link "Tool、Skill、MCP：下一步该改哪一层？" wraps to 2 lines (a)
+sloplint: 0 FAIL, 0 WARN, 8 WAIVED across 1 file(s) and 1 URL(s).
+
+
+Six further correct compiled URLs;30 captures, scoped source + actual render, exit0. F4 is answered for the shared transparent secondary token.
+
+render tier: 30 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+assets/css/gradient.css
+  ANSWERED F4 :130 2 filled primary-button recipes: .gradient-page button + .gradient-page button.secon…
+sloplint: 0 FAIL, 0 WARN, 1 ANSWERED across 1 file(s) and 6 URL(s).
+
+
+After engineering SVG guard: same five regression views recaptured, scoped source + URL still exit0
+
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+assets/css/gradient.css
+  ANSWERED F4 :133 2 filled primary-button recipes: .gradient-page button + .gradient-page button.secon…
+sloplint: 0 FAIL, 0 WARN, 1 ANSWERED across 1 file(s) and 1 URL(s).
+
+
+Actual recapture equality checks. This is equality of normal captured views, not proof of every interactive state:
+1280x800: reviewed4320 == guarded4324 bytes; SHA256 445729d8c72867572dc04ac2af26c0e6c56c07c5d7a25ddfe1b7f08b884fa8d0
+1440x900: reviewed4320 == guarded4324 bytes; SHA256 60563a43733e0de8a7661faaca8517437fc88dd8fee658c2a398d136f09c3de7
+1920x1080: reviewed4320 == guarded4324 bytes; SHA256 af05f826694821e3976b737cd12a4d6c1e92e1ed8ca97752591195bbad265d3b
+1440-full: reviewed4320 == guarded4324 bytes; SHA256 910edba8115dca44c4a6da9edd8276f196818465489b2934da4d382d3ae4ba5d
+375: reviewed4320 == guarded4324 bytes; SHA256 551c17312b2fb0b1cd941cfbdeb997042cf0b5348d597044d5069720f22fd788

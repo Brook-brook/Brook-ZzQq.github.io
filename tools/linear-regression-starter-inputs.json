@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "root": "brooks-linear-regression",
+  "files": [
+    {"name":"README.md","source":"_includes/linear-regression-starter/README.md"},
+    {"name":"gradient.py","source":"_includes/linear-regression-starter/gradient.py"},
+    {"name":"demo.py","source":"_includes/linear-regression-starter/demo.py"},
+    {"name":"run_checks.py","source":"_includes/linear-regression-starter/run_checks.py"},
+    {"name":"samples.json","source":"_data/gradient_samples.json"},
+    {"name":"NOTICE.md","source":"_includes/linear-regression-starter/NOTICE.md"},
+    {"name":"LICENSE.txt","source":"_includes/agent-starter/LICENSE.txt"},
+    {"name":"licenses/CPython-LICENSE.txt","source":"licenses/CPython-LICENSE.txt"}
+  ]
+}

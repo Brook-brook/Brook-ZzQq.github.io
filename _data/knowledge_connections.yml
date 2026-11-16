@@ -231,3 +231,38 @@ links:
     to: tool-calling-boundaries
     kind: extend
     reason: 从核对源码中的请求与数据流，走向可操作的调用边界；结构化请求不自动授予权限，运行示意也不是实际 Agent。
+  - id: task-gradient
+    from: ml-task-loss
+    to: linear-regression-gradient
+    kind: prepare
+    reason: 先确定输入、目标与训练MSE，再看同一组旧参数怎样产生两个偏导；模型、优化器与验证指标各有职责。
+  - id: python-gradient
+    from: python-first-steps
+    to: linear-regression-gradient
+    kind: extend
+    reason: 把函数、列表与求平均用于真正的参数更新，逐步记录实际学习率；全批量线性回归不是语言模型服务调用。
+  - id: regression-metrics
+    from: ml-task-loss
+    to: ai-evaluation-basics
+    kind: compare
+    reason: 回归MSE与分类指标回答不同问题；目标编码、阈值、错误成本和分母不能互相替代，也不能把损失写成准确率。
+  - id: gradient-spatial-validation
+    from: linear-regression-gradient
+    to: spatial-validation
+    kind: extend
+    reason: 优化训练损失与检查未见区域是两层问题；反复观察的固定合成验证点不能代替现实部署分布和独立最终测试。
+  - id: gradient-chain-rule
+    from: linear-regression-gradient
+    to: neural-chain-rule
+    kind: extend
+    reason: 从两个参数的直接偏导，走向固定小网络的链式梯度；反传负责求导，已有线性实验再展示优化器式更新，不能把两步混成同一动作。
+  - id: neural-agent-loop
+    from: neural-chain-rule
+    to: agent-loop-basics
+    kind: compare
+    reason: 模型前向与反传在计算函数及梯度，Agent循环在组织提议、工具与观察；增加工具轮次不会自动更新模型权重，验证依据也不同。
+  - id: neural-classification-metrics
+    from: neural-chain-rule
+    to: ai-evaluation-basics
+    kind: extend
+    reason: 二元交叉熵与sigmoid输出提供训练目标和模型输出；阈值后的分类指标、校准与未见数据表现仍需分别检查，四个逻辑算例不构成真实评测。

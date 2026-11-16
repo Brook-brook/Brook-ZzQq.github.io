@@ -1,0 +1,100 @@
+[
+  {
+    "name": "before",
+    "scope": "synchronous ten-update handler, 4x CDP CPU, 1280x800; not INP or a physical-device benchmark",
+    "times": [
+      129.19999998807907,
+      93.80000001192093,
+      114.60000002384186,
+      169.39999997615814,
+      101.19999998807907,
+      169.30000001192093,
+      117.29999995231628,
+      102.30000001192093,
+      250.60000002384186,
+      220.80000001192093,
+      204.30000001192093,
+      247.19999998807907
+    ],
+    "max": 250.60000002384186
+  },
+  {
+    "name": "before",
+    "scope": "320px viewport, root font 32px, one actual update; DOM scaling, not full browser zoom",
+    "metrics": [
+      {
+        "text": "1.485",
+        "font": "38.4px",
+        "width": 101,
+        "textLines": 1
+      },
+      {
+        "text": "0.10625",
+        "font": "38.4px",
+        "width": 101,
+        "textLines": 2
+      },
+      {
+        "text": "2.79395",
+        "font": "38.4px",
+        "width": 101,
+        "textLines": 2
+      },
+      {
+        "text": "4.3734",
+        "font": "38.4px",
+        "width": 101,
+        "textLines": 2
+      }
+    ]
+  },
+  {
+    "name": "after",
+    "scope": "synchronous ten-update handler, 4x CDP CPU, 1280x800; not INP or a physical-device benchmark",
+    "times": [
+      44.80000001192093,
+      22,
+      30.200000047683716,
+      20.200000047683716,
+      30.69999998807907,
+      46.5,
+      8.900000035762787,
+      30.80000001192093,
+      18.19999998807907,
+      15.400000035762787,
+      10.399999976158142,
+      22.400000035762787
+    ],
+    "max": 46.5
+  },
+  {
+    "name": "after",
+    "scope": "320px viewport, root font 32px, one actual update; DOM scaling, not full browser zoom",
+    "metrics": [
+      {
+        "text": "1.485",
+        "font": "38.4px",
+        "width": 217,
+        "textLines": 1
+      },
+      {
+        "text": "0.10625",
+        "font": "38.4px",
+        "width": 217,
+        "textLines": 1
+      },
+      {
+        "text": "2.79395",
+        "font": "38.4px",
+        "width": 217,
+        "textLines": 1
+      },
+      {
+        "text": "4.3734",
+        "font": "38.4px",
+        "width": 217,
+        "textLines": 1
+      }
+    ]
+  }
+]

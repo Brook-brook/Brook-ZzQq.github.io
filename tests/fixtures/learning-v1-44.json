@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "entries": {
+    "python-values": {
+      "completed": true,
+      "note": "Historical29 synthetic 0: <literal> 🪻"
+    },
+    "rss-records": {
+      "completed": false,
+      "note": "Historical29 synthetic 1: <literal> 🪻"
+    },
+    "source-evidence": {
+      "completed": true,
+      "note": "Historical29 synthetic 2: <literal> 🪻"
+    },
+    "mercator-assumptions": {
+      "completed": false,
+      "note": "Historical29 synthetic 3: <literal> 🪻"
+    },
+    "map-provenance": {
+      "completed": true,
+      "note": "Historical29 synthetic 4: <literal> 🪻"
+    },
+    "copy-relations": {
+      "completed": false,
+      "note": "Historical29 synthetic 5: <literal> 🪻"
+    },
+    "lifetime-boundaries": {
+      "completed": true,
+      "note": "Historical29 synthetic 6: <literal> 🪻"
+    },
+    "individual-collective": {
+      "completed": false,
+      "note": "Historical29 synthetic 7: <literal> 🪻"
+    },
+    "pure-equilibrium": {
+      "completed": true,
+      "note": "Historical29 synthetic 8: <literal> 🪻"
+    },
+    "classification-denominators": {
+      "completed": false,
+      "note": "Historical29 synthetic 9: <literal> 🪻"
+    },
+    "spatial-holdout": {
+      "completed": true,
+      "note": "Historical29 synthetic 10: <literal> 🪻"
+    },
+    "evaluation-evidence": {
+      "completed": false,
+      "note": "Historical29 synthetic 11: <literal> 🪻"
+    },
+    "ai-version-scope": {
+      "completed": true,
+      "note": "Historical29 synthetic 12: <literal> 🪻"
+    },
+    "economy-denominators": {
+      "completed": false,
+      "note": "Historical29 synthetic 13: <literal> 🪻"
+    },
+    "policy-status": {
+      "completed": true,
+      "note": "Historical29 synthetic 14: <literal> 🪻"
+    },
+    "tool-contract": {
+      "completed": false,
+      "note": "Historical29 synthetic 15: <literal> 🪻"
+    },
+    "tool-observation": {
+      "completed": true,
+      "note": "Historical29 synthetic 16: <literal> 🪻"
+    },
+    "tool-boundaries": {
+      "completed": false,
+      "note": "Historical29 synthetic 17: <literal> 🪻"
+    },
+    "public-goods-incentives": {
+      "completed": true,
+      "note": "Historical29 synthetic 18: <literal> 🪻"
+    },
+    "public-goods-boundaries": {
+      "completed": false,
+      "note": "Historical29 synthetic 19: <literal> 🪻"
+    },
+    "ai-model-boundaries": {
+      "completed": true,
+      "note": "Historical29 synthetic 20: <literal> 🪻"
+    },
+    "ai-request-failures": {
+      "completed": false,
+      "note": "Historical29 synthetic 21: <literal> 🪻"
+    },
+    "ai-output-contract": {
+      "completed": true,
+      "note": "Historical29 synthetic 22: <literal> 🪻"
+    },
+    "ai-task-evaluation": {
+      "completed": false,
+      "note": "Historical29 synthetic 23: <literal> 🪻"
+    },
+    "agent-control-loop": {
+      "completed": true,
+      "note": "Historical29 synthetic 24: <literal> 🪻"
+    },
+    "agent-context-evidence": {
+      "completed": false,
+      "note": "Historical29 synthetic 25: <literal> 🪻"
+    },
+    "agent-permission-boundaries": {
+      "completed": true,
+      "note": "Historical29 synthetic 26: <literal> 🪻"
+    },
+    "agent-trace-evaluation": {
+      "completed": false,
+      "note": "Historical29 synthetic 27: <literal> 🪻"
+    },
+    "agent-build-project": {
+      "completed": true,
+      "note": "Historical29 synthetic 28: <literal> 🪻"
+    },
+    "agent-build-adapter": {
+      "completed": false,
+      "note": "Historical29 synthetic 29: <literal> 🪻"
+    },
+    "agent-build-budgets": {
+      "completed": true,
+      "note": "Historical29 synthetic 30: <literal> 🪻"
+    },
+    "agent-build-acceptance": {
+      "completed": false,
+      "note": "Historical29 synthetic 31: <literal> 🪻"
+    },
+    "agent-mcp-discovery": {
+      "completed": true,
+      "note": "Historical29 synthetic 32: <literal> 🪻"
+    },
+    "agent-mcp-validation": {
+      "completed": false,
+      "note": "Historical29 synthetic 33: <literal> 🪻"
+    },
+    "agent-bridge-envelope": {
+      "completed": true,
+      "note": "Historical29 synthetic 34: <literal> 🪻"
+    },
+    "agent-bridge-stop": {
+      "completed": false,
+      "note": "Historical29 synthetic 35: <literal> 🪻"
+    },
+    "async-scheduling": {
+      "completed": true,
+      "note": "Historical29 synthetic 36: <literal> 🪻"
+    },
+    "async-cancellation": {
+      "completed": false,
+      "note": "Historical29 synthetic 37: <literal> 🪻"
+    },
+    "api-json-types": {
+      "completed": true,
+      "note": "Historical29 synthetic 38: <literal> 🪻"
+    },
+    "api-http-layers": {
+      "completed": false,
+      "note": "Historical29 synthetic 39: <literal> 🪻"
+    },
+    "api-timeout-unknown": {
+      "completed": true,
+      "note": "Historical29 synthetic 40: <literal> 🪻"
+    },
+    "api-idempotency-payload": {
+      "completed": false,
+      "note": "Historical29 synthetic 41: <literal> 🪻"
+    },
+    "agent-state-transaction": {
+      "completed": true,
+      "note": "Historical29 synthetic 42: <literal> 🪻"
+    },
+    "agent-state-recovery": {
+      "completed": false,
+      "note": "Historical29 synthetic 43: <literal> 🪻"
+    }
+  }
+}

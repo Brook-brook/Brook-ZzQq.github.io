@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "brook-gradient-transect-v1",
+  "source_kind": "original_synthetic",
+  "units": "abstract",
+  "description": "Brook原创的12点教学剖面；在y=2x+1附近手工加入固定偏差。不是随机抽样、地理坐标、校园实测或模型预测。",
+  "samples": [
+    {"id":"t-01","split":"train","x":-4,"y":-6.8},
+    {"id":"t-02","split":"train","x":-3,"y":-5.1},
+    {"id":"t-03","split":"train","x":-2,"y":-3},
+    {"id":"t-04","split":"train","x":-1,"y":-0.6},
+    {"id":"t-05","split":"train","x":1,"y":3},
+    {"id":"t-06","split":"train","x":2,"y":5.3},
+    {"id":"t-07","split":"train","x":3,"y":6.7},
+    {"id":"t-08","split":"train","x":4,"y":9},
+    {"id":"v-01","split":"validation","x":-3.5,"y":-5.6},
+    {"id":"v-02","split":"validation","x":-0.5,"y":0.6},
+    {"id":"v-03","split":"validation","x":2.5,"y":6.8},
+    {"id":"v-04","split":"validation","x":4.5,"y":9.4}
+  ]
+}

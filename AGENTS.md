@@ -593,3 +593,47 @@
   Node checks reject private/extra fields and false observations, and compare a
   fresh stdlib CLI replay with the saved semantic record (runtime versions may
   differ). This does not authenticate the publisher or rerun the older SDK cases.
+
+## AI foundations and actual gradients (Iteration 30)
+
+- The uploaded outline is topic material, not authorization to operate school
+  accounts, upload grades, publish the original or infer Brook's enrollment and
+  progress. The native13-topic map states real available resources and gaps;
+  entry/practice/planned are resource availability, never chapter completion.
+- The new catalog validates after publication pruning: exactly four groups and
+  thirteen unique topics, bounded explicit fields, public notes and actual safe
+  pages. Planned topics have no fake actions. Missing required data fails before
+  writing; preserve real-build tests for private/demoted notes and valid cleanup.
+- gradient_samples.json is an original12-point abstract synthetic fixture, fixed
+  8/4 partitions, not measured campus data or a random sample. Full-batch MSE
+  updates use one old w/b simultaneously; validation labels do not enter gradients,
+  the OLS reference or numeric stopping. Repeatedly viewed validation is not a
+  final independent test. The2/15 constant-rate bound belongs to this quadratic.
+- Keep120 applied updates, finite parameter/training-loss guards, the last valid
+  frame and complete rejected proposal. Export actual full history/data, not
+  future drafts, selected-point viewing state or private notes. Individual
+  residual/gradient contributions describe current parameters, distinct from the
+  previous update's old parameters. Observation must not trigger training.
+- SVG charts retain real text size with responsive viewBoxes, shape/dash cues,
+  explicit log10(1+MSE) loss axis, a labelled fixed scatter window and complete
+  native tables. Scope old header/section/label/dl/SVG resets. Finite feedback
+  cancels live under reduced motion; no-JS controls stay disabled.
+- Append five permanent IDs after the original44, for49/15 routes. Preserve the
+  v1 key/schema and exact old44 raw/export on both worksheets. The historical44
+  fixture was frozen before adding IDs; do not regenerate it from current YAML.
+  Visiting, running, selecting or downloading never records completion.
+- The sixth Python preset #neural-gradients shares the canonical original
+  _includes/neural-basics/neural.py. It computes2->2->1 forward values and nine
+  manual BCE gradients for four logical XOR worked examples; no parameter update,
+  optimizer, framework autograd or independent test. Identity hidden layers fold
+  to an affine logit while the output sigmoid stays nonlinear. Preserve all five
+  earlier sources/presets, manual load/run, errors, limits and output-focus logic.
+- Generate/check only the new --profile regression and --profile neural ZIPs;
+  old six archives stay unchanged. Keep complete MIT/CPython terms and actual
+  pinned-source scope. Compare Python/JS traces with numerical tolerance, not
+  bitwise or framework-equivalence claims. Real Pyodide execution is separate
+  from rendered source equality and actual CPython CLI execution.
+- No-JS keyboard-scroll checks observe real ArrowRight results from the test
+  process; never set scrollLeft to make a check pass. Large-text tests must double
+  actual computed prose fonts, including inherited px rules. DOM font scaling is
+  not full browser zoom. Retain console-error checks and both base paths.

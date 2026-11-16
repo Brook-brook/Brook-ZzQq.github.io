@@ -1,0 +1,45 @@
+---
+layout: atlas
+title: 线性回归与梯度实验
+permalink: /playground/linear-regression/
+section: Playground
+gradient: true
+description: 用12个原创合成点真实计算全批量梯度、参数更新及训练与验证MSE；可调整学习率、逐步观察并下载完整记录，不调用语言模型。
+---
+<div class="gradient-page" id="gradient-lab">
+  <nav class="breadcrumbs" aria-label="当前位置"><a href="{{ '/playground/' | relative_url }}">Playground</a><span aria-hidden="true">/</span><span>线性回归</span></nav>
+  <header class="gradient-heading"><h1>让直线，靠近样本。</h1><p>从斜率0、截距0开始；每一步用8个训练点计算梯度，另外4点只用来验证。</p></header>
+  <div class="gradient-workspace">
+    <section class="gradient-controls glass-light" aria-labelledby="gradient-action-title">
+      <h2 id="gradient-action-title" tabindex="-1">实际更新一次参数</h2>
+      <label for="gradient-rate">下一步学习率 η</label><input id="gradient-rate" type="number" min="0.001" max="0.5" step="any" value="0.05" disabled aria-describedby="gradient-rate-help gradient-input-message">
+      <p id="gradient-rate-help" class="gradient-help">0.001至0.5。改学习率不改写历史；点击后才应用。先用0.05，再重开比较0.2。</p>
+      <div class="gradient-actions"><button id="gradient-step" type="button" disabled>走一步</button><button id="gradient-ten" class="secondary" type="button" disabled>连走10步</button></div>
+      <p id="gradient-input-message" class="gradient-help" role="alert" hidden></p>
+      <p id="gradient-status" role="status" tabindex="-1">启用JavaScript后计算。当前还没有执行更新。</p>
+      <dl id="gradient-values" class="gradient-values" aria-label="当前已应用状态"><div><dt>斜率 w</dt><dd id="gradient-w">0</dd></div><div><dt>截距 b</dt><dd id="gradient-b">0</dd></div><div><dt>训练MSE</dt><dd id="gradient-training">待计算</dd></div><div><dt>验证MSE</dt><dd id="gradient-validation">待计算</dd></div></dl>
+      <p id="gradient-last" class="gradient-help">预测式为 ŷ = w × x + b。MSE是平均平方误差，不是准确率。</p>
+      <details class="gradient-start"><summary>换一个起点，重新开始</summary><p class="gradient-help">下面是起点草稿。重开会清空本组内存记录，不改动学习手记。</p><div class="gradient-start-fields"><div><label for="gradient-start-w">起始斜率</label><input id="gradient-start-w" type="number" min="-10" max="10" step="any" value="0" disabled></div><div><label for="gradient-start-b">起始截距</label><input id="gradient-start-b" type="number" min="-10" max="10" step="any" value="0" disabled></div></div><button id="gradient-reset" class="secondary" type="button" disabled>用起点重开</button><p id="gradient-start-message" class="gradient-help" role="alert" hidden></p></details>
+      <a href="#gradient-plots" id="gradient-plot-jump">查看直线与损失</a>
+    </section>
+    <section class="gradient-plots" id="gradient-plots" tabindex="-1" aria-labelledby="gradient-plot-title">
+      <h2 id="gradient-plot-title">同一条线，两组观察。</h2>
+      <p class="gradient-help">原创教学剖面，抽象单位；不是校园实测、真实地理坐标或随机采样。训练圆点与验证方点按固定规则分组；直线超出观察窗时裁切显示。</p>
+      <div class="gradient-legend"><span><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle class="gradient-train-mark" cx="8" cy="8" r="5"/></svg>训练点</span><span><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect class="gradient-validation-mark" x="3" y="3" width="10" height="10"/></svg>验证点</span></div>
+      <p id="gradient-chart-fallback">下方样本表与公式可直接阅读；图形在数据通过检查后显示。</p>
+      <div id="gradient-visual" hidden><svg id="gradient-fit-chart" class="gradient-chart" role="img" aria-label="原创12点教学样本与当前预测直线"></svg>
+        <label class="gradient-reference"><input id="gradient-reference" type="checkbox" disabled>显示训练最小二乘参考</label><p id="gradient-reference-detail" class="gradient-help"></p>
+        <details class="gradient-sample-evidence"><summary>拆开一个样本，看看误差从哪来</summary><label for="gradient-sample">选择样本，只改变观察</label><select id="gradient-sample" disabled>{% for point in site.data.gradient_samples.samples %}<option value="{{ point.id | escape }}">{{ point.id | escape }} · {% if point.split == 'train' %}训练{% else %}验证{% endif %}</option>{% endfor %}</select><p id="gradient-sample-values" class="gradient-help" role="status"></p><p id="gradient-sample-contribution" class="gradient-help"></p><p class="gradient-help">这里解释当前参数的残差与贡献。最近一次更新使用的是更新前参数；选择样本不会再训练，也不会改变下载记录。</p></details>
+        <figure class="gradient-loss-figure"><figcaption>损失随真实更新次数变化</figcaption><p class="gradient-help">纵轴为 log₁₀(1+MSE)，只改变显示；梯度仍用原始MSE。实线为训练，虚线为验证，数值不是百分比。</p><svg id="gradient-loss-chart" class="gradient-chart gradient-loss-chart" role="img" aria-label="每次已执行更新的训练与验证损失轨迹"></svg></figure>
+      </div>
+      <a href="#gradient-action-title" id="gradient-action-jump">回到更新区</a>
+    </section>
+  </div>
+  <section class="gradient-record" aria-labelledby="gradient-record-title"><h2 id="gradient-record-title">留下可以复算的记录。</h2><p>最多120次已应用更新。到步数或数值边界会停止，不表示模型已收敛或任务已经做对。导出包含所有样本、起点、每步真实学习率/梯度/参数/损失；不包含未应用的草稿或私人手记。</p><div class="gradient-actions"><button id="gradient-export" class="secondary" type="button" disabled>下载完整记录</button><a href="{{ '/study/practice/#ml-gradient-update' | relative_url }}">用自己的话解释</a></div>
+    <details><summary>每一步实际发生了什么</summary><div class="gradient-scroll" role="group" tabindex="0" aria-label="完整训练步骤，可横向滚动"><table><caption>梯度取自更新前参数，损失取自更新后参数；第0行只是起点。</caption><thead><tr><th scope="col">更新次数</th><th scope="col">学习率</th><th scope="col">梯度 w</th><th scope="col">梯度 b</th><th scope="col">新 w</th><th scope="col">新 b</th><th scope="col">训练MSE</th><th scope="col">验证MSE</th></tr></thead><tbody id="gradient-history"><tr><td colspan="8">启用JavaScript后计算。</td></tr></tbody></table></div><p id="gradient-rejection" class="gradient-help" hidden></p></details>
+    <details><summary>原始样本与当前残差</summary><div class="gradient-scroll" role="group" tabindex="0" aria-label="12个原始教学样本和残差，可横向滚动"><table><caption>固定8/4分组，不是随机留出。残差 = 预测值 − 目标值。</caption><thead><tr><th scope="col">样本</th><th scope="col">集合</th><th scope="col">输入 x</th><th scope="col">目标 y</th><th scope="col">当前预测</th><th scope="col">残差</th></tr></thead><tbody id="gradient-samples">{% for point in site.data.gradient_samples.samples %}<tr><th scope="row">{{ point.id | escape }}</th><td>{% if point.split == 'train' %}训练{% else %}验证{% endif %}</td><td>{{ point.x }}</td><td>{{ point.y }}</td><td>待计算</td><td>待计算</td></tr>{% endfor %}</tbody></table></div></details>
+  </section>
+  <section class="gradient-reading" aria-labelledby="gradient-reading-title"><h2 id="gradient-reading-title">把这一步，放回学习过程。</h2><div><p>这里每次用全部8个训练点更新参数。验证点用来观察误差；如果根据它们反复挑选设置，就不能再当作独立的最终测试。</p><p><a href="{{ '/knowledge/ml-task-loss/' | relative_url }}">先分清特征、目标与损失</a>，再读<a href="{{ '/knowledge/linear-regression-gradient/' | relative_url }}">梯度、学习率与更新公式</a>。本机标准库项目可从教程下载，网页无需安装机器学习框架。</p><div class="gradient-actions"><a href="{{ '/study/paths/#ml-regression-foundations' | relative_url }}">基础路线与手记</a><a href="{{ '/study/ai-foundations/' | relative_url }}">回到AI基础学习地图</a></div></div></section>
+  <noscript><p>当前没有执行更新，按钮不可运行。样本、阅读与自检入口仍可使用；网页不会因此记录学习完成。</p></noscript>
+  <script type="application/json" id="gradient-data">{{ site.data.gradient_samples | jsonify | replace: '<', '\u003c' }}</script>
+</div>

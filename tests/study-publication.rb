@@ -16,6 +16,8 @@ require_relative "../_plugins/spatial-data-validation"
 require_relative "../_plugins/practice-prompt-validation"
 require_relative "../_plugins/knowledge-connections"
 require_relative "../_plugins/retrieval-data-validation"
+require_relative "../_plugins/gradient-data-validation"
+require_relative "../_plugins/ai-foundations-validation"
 
 # A generator runs after :site/:post_read, just as an index/sitemap generator
 # would. Its written output must never receive filtered research documents.
@@ -111,6 +113,20 @@ class StudyPublicationChecks
     config["kramdown"] = kramdown if kramdown
     config["exclude"] = exclude unless exclude.nil?
     Jekyll::Site.new(config).tap(&:process)
+  end
+
+  def foundations_fixture(source)
+    data = YAML.safe_load(File.read(File.expand_path("../_data/ai_foundations.yml", __dir__)))
+    data["groups"].flat_map { |g| g["topics"] }.flat_map { |t| t["notes"] }.uniq.each { |slug| note(source, slug) }
+    labs = data["groups"].flat_map { |g| g["topics"] }.filter_map { |t| t["lab"] }.uniq
+    labs.each_with_index do |url, index|
+      File.write(File.join(source, "lab-#{index}.html"), "---\npermalink: #{url}\n---\n<p>Original fixture lab</p>")
+    end
+    File.write(File.join(source, "_layouts", "atlas.html"), "<!doctype html><title>{{ page.title }}</title><main>{{ content }}</main>")
+    FileUtils.cp(File.expand_path("../study/ai-foundations.html", __dir__), File.join(source, "foundations.html"))
+    FileUtils.mkdir_p(File.join(source, "_data"))
+    File.write(File.join(source, "_data", "ai_foundations.yml"), YAML.dump(data))
+    data
   end
 
   def page_path(destination, slug)
@@ -807,6 +823,160 @@ class StudyPublicationChecks
         assert(data["description"].is_a?(String) && data["description"].length.between?(1, 1024), "required bounded description")
         assert(data["compatibility"].length <= 500 && data["license"] == "MIT" && !match[2].strip.empty?, "optional fields and original body survive")
         assert(!File.exist?(File.join(destination, "_includes", relative)), "include source is not a public page")
+      end
+    end
+
+    check("the original gradient data survives a real build with fixed synthetic8/4 roles") do
+      with_fixture do |source, destination|
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        FileUtils.cp(File.expand_path("../_data/gradient_samples.json", __dir__), File.join(source, "_data", "gradient_samples.json"))
+        File.write(File.join(source, "gradient.html"), "---\n---\n{% for point in site.data.gradient_samples.samples %}<p data-sample=\"{{ point.id }}\">{{ point.split }}:{{ point.x }},{{ point.y }}</p>{% endfor %}")
+        site = build(source, destination)
+        points = site.data["gradient_samples"]["samples"]
+        output = File.read(File.join(destination, "gradient.html"))
+        assert(points.count { |p| p["split"] == "train" } == 8 && points.count { |p| p["split"] == "validation" } == 4, "actual fixed partitions")
+        assert(output.scan('data-sample="').length == 12 && output.include?("train:-4,-6.8"), "complete original sample rows")
+      end
+    end
+
+    check("malformed, nonfinite, duplicate or falsely measured gradient data fails before writing") do
+      %w[unknown schema count duplicate type nonfinite bounds role variance provenance].each do |mode|
+        with_fixture do |source, destination|
+          data = JSON.parse(File.read(File.expand_path("../_data/gradient_samples.json", __dir__)))
+          data["private_note"] = "synthetic" if mode == "unknown"
+          data["schema_version"] = true if mode == "schema"
+          data["samples"].pop if mode == "count"
+          data["samples"][1]["id"] = data["samples"][0]["id"] if mode == "duplicate"
+          data["samples"][0]["x"] = true if mode == "type"
+          data["samples"][0]["y"] = Float::INFINITY if mode == "nonfinite"
+          data["samples"][0]["x"] = 6 if mode == "bounds"
+          data["samples"][0]["split"] = "validation" if mode == "role"
+          data["samples"].select { |p| p["split"] == "train" }.each { |p| p["x"] = 1 } if mode == "variance"
+          data["source_kind"] = "campus_measurement" if mode == "provenance"
+          FileUtils.mkdir_p(File.join(source, "_data"))
+          File.write(File.join(source, "_data", "gradient_samples.yml"), YAML.dump(data))
+          begin
+            build(source, destination)
+            assert(false, "invalid gradient source must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("gradient fixture"), "identify actual data contract")
+            assert(!File.exist?(File.join(destination, "index.html")), "reject before public writing")
+          end
+        end
+      end
+    end
+
+    check("the actual foundations template renders13 honest states, native resources and escaped copy") do
+      with_fixture do |source, destination|
+        data = foundations_fixture(source)
+        data["groups"][0]["topics"][0]["scope"] = '<script>synthetic marker</script>'
+        File.write(File.join(source, "_data", "ai_foundations.yml"), YAML.dump(data))
+        build(source, destination)
+        output = File.read(File.join(destination, "study", "ai-foundations", "index.html"))
+        assert(output.scan('data-foundation-topic="').length == 13, "all13 topics use the real template")
+        assert(output.scan('data-foundation-state="planned"').length == 4, "four gaps remain explicit")
+        assert(output.include?('&lt;script&gt;synthetic marker&lt;/script&gt;') && !output.include?('<script>synthetic marker'), "scope text stays escaped")
+        assert(output.include?('/Brook-ZzQq.github.io/playground/linear-regression/'), "real lab retains project prefix")
+        assert(output.include?('/Brook-ZzQq.github.io/knowledge/ml-task-loss/'), "native note resource")
+      end
+    end
+
+    check("foundations reject fake planned resources, private fields and unsafe or nonexistent labs") do
+      %w[unknown schema duplicate title state missing_note planned_resource practice_without_lab label_without_lab external query fragment encoded missing_page].each do |mode|
+        with_fixture do |source, destination|
+          data = foundations_fixture(source)
+          topic = data["groups"][0]["topics"][0]
+          data["enrollment_record"] = "synthetic" if mode == "unknown"
+          data["schema_version"] = true if mode == "schema"
+          data["groups"][1]["id"] = data["groups"][0]["id"] if mode == "duplicate"
+          topic["title"] = " " if mode == "title"
+          topic["state"] = "mastered" if mode == "state"
+          topic["notes"] = ["unavailable"] if mode == "missing_note"
+          topic["state"] = "planned" if mode == "planned_resource"
+          topic["state"] = "practice" if mode == "practice_without_lab"
+          topic["lab_label"] = "Fake action" if mode == "label_without_lab"
+          if %w[external query fragment encoded missing_page].include?(mode)
+            topic["lab_label"] = "Synthetic lab"
+            topic["lab"] = {"external" => "https://example.test/", "query" => "/playground/python/?a=b", "fragment" => "/playground/python/#unverified", "encoded" => "/playground/%2e%2e/", "missing_page" => "/no-such-lab/"}.fetch(mode)
+          end
+          File.write(File.join(source, "_data", "ai_foundations.yml"), YAML.dump(data))
+          begin
+            build(source, destination)
+            assert(false, "invalid foundations source must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("AI foundations"), "identify actual catalog contract")
+            assert(!File.exist?(File.join(destination, "index.html")), "reject before public writing")
+          end
+        end
+      end
+    end
+
+    check("foundations cannot link demoted or unchecked notes even with unpublished enabled") do
+      ["demoted", "unchecked"].each do |mode|
+        with_fixture do |source, destination|
+          data = foundations_fixture(source)
+          slug = data["groups"][0]["topics"][0]["notes"][0]
+          note(source, slug, mode == "demoted" ? {"published" => false} : {"kind" => "research"})
+          begin
+            build(source, destination, unpublished: true)
+            assert(false, "filtered note must not become a resource")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("AI foundations"), "publication pruning happens first")
+            assert(!File.exist?(page_path(destination, slug)), "no hidden note route")
+          end
+        end
+      end
+    end
+
+    check("a valid foundations rebuild removes a retired resource and its direct note output") do
+      with_fixture do |source, destination|
+        data = foundations_fixture(source)
+        topic = data["groups"][0]["topics"][0]
+        topic["notes"] << "retired"
+        note(source, "retired")
+        File.write(File.join(source, "_data", "ai_foundations.yml"), YAML.dump(data))
+        build(source, destination)
+        assert(File.exist?(page_path(destination, "retired")), "initial published output exists")
+        note(source, "retired", "published" => false)
+        topic["notes"].delete("retired")
+        File.write(File.join(source, "_data", "ai_foundations.yml"), YAML.dump(data))
+        build(source, destination, unpublished: true)
+        output = File.read(File.join(destination, "study", "ai-foundations", "index.html"))
+        assert(!output.include?("/knowledge/retired/"), "native resource removed")
+        assert(!File.exist?(page_path(destination, "retired")), "normal Jekyll cleanup removes retired article")
+      end
+    end
+
+    check("advertised foundations and gradient screens require their actual source data") do
+      %w[gradient ai_foundations].each do |flag|
+        with_fixture do |source, destination|
+          File.write(File.join(source, "advertised.html"), "---\n#{flag}: true\n---\n<p>Actual screen requires data</p>")
+          begin
+            build(source, destination)
+            assert(false, "advertised screen without source must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?(flag == "gradient" ? "gradient fixture" : "AI foundations"), "identify required source")
+            assert(!File.exist?(File.join(destination, "advertised.html")), "no broken advertised screen is written")
+          end
+        end
+      end
+    end
+
+    check("the actual gradient template escapes script terminators while preserving complete data") do
+      with_fixture do |source, destination|
+        FileUtils.mkdir_p(File.join(source, "_data"))
+        data = JSON.parse(File.read(File.expand_path("../_data/gradient_samples.json", __dir__)))
+        data["description"] = 'Synthetic </script><script>alert("not executed")</script> marker'
+        File.write(File.join(source, "_data", "gradient_samples.json"), JSON.generate(data))
+        FileUtils.cp(File.expand_path("../playground/linear-regression.html", __dir__), File.join(source, "gradient.html"))
+        File.write(File.join(source, "_layouts", "atlas.html"), "<!doctype html><title>{{ page.title }}</title><main>{{ content }}</main>")
+        build(source, destination)
+        output = File.read(File.join(destination, "playground", "linear-regression", "index.html"))
+        embedded = output.match(/<script type="application\/json" id="gradient-data">(.*?)<\/script>/m)
+        assert(!embedded.nil?, "actual inline data script exists")
+        assert(!embedded[1].include?("</script>"), "literal terminator cannot break out of JSON")
+        assert(JSON.parse(embedded[1]) == data, "full safe data decodes without loss")
+        assert(output.scan('<th scope="row">').length == 12, "native samples remain complete without JS")
       end
     end
 

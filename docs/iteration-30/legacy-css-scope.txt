@@ -1,0 +1,197 @@
+Iteration30 inherited source scope: atlas.css is byte-identical to actual29/e991994.
+Current blob: edb477b32e12897dc4095ecc3610583bb8a9f20f
+Base blob: edb477b32e12897dc4095ecc3610583bb8a9f20f
+No claim that these inherited source issues were repaired by new scoped CSS. New source+URL results are in hallmark-results.txt.
+
+Prior actual29 scope and debt record follows unchanged:
+
+SOURCE hallmark/python.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+assets/css/atlas.css
+  FAIL 7a :67 pure #fff: color: white (nav a[aria-current]) | fix: Tint the base toward the anchor hue
+  FAIL 20 :1 no Hallmark stamp on the first non-empty line of any CSS | fix: The stamp comment is line 1 of the CSS; only @charset may precede it
+  FAIL 39a :341 disabled via opacity alone on button:disabled | fix: Three disabled channels: fill, ink and cursor, plus the disabled attribute
+  FAIL 48 :122 colour literal #c4b5fd22 outside tokens (background on .coordinates) | fix: Lift the value into the token block
+  FAIL 48 :175 colour literal #e9d5ff outside tokens (background on .button:hover, button:hover)
+  FAIL 48 :176 colour literal #151024 outside tokens (color on .button:hover, button:hover)
+  FAIL 48 :321 colour literal #e9d5ff outside tokens (outline on :focus-visible)
+  FAIL 48 :466 font-family literal "Georgia, serif" on .brand-mark
+  FAIL 48 :530 font-family literal "Georgia, 'Times New Roman', serif" on .hero h1 em, h1 em
+  FAIL 48 :584 colour literal #0002 outside tokens (filter on .hero-globe)
+  FAIL 48 :613 colour literal #0001 outside tokens (box-shadow on .globe-node)
+  FAIL 48 :1200 colour literal #a78bfa0d outside tokens (background on body:has(.hero))
+  FAIL 48 :1530 colour literal #a78bfa22 outside tokens (box-shadow on .js-magnetic:hover)
+  FAIL 48 :1542 colour literal #0002 outside tokens (box-shadow on .motion-card:hover, .field:ho…)
+  FAIL 48 :1549 colour literal #c4b5fd0d outside tokens (background on .motion-card::after)
+  FAIL 67 :89 .eyebrow: letter-spaced tracked 0.14em at 12px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+  FAIL 67 :452 .brand small: letter-spaced tracked 0.12em at 8px in a label role
+  FAIL 67 :559 .hero-caption: letter-spaced tracked 0.09em at 10px in a label role
+  FAIL 67 :586 .orbit-label: letter-spaced tracked 0.09em at 10px in a label role
+  FAIL 67 :631 .manifesto-strip: letter-spaced tracked 0.05em at 13px in a label role
+  FAIL 67 :678 .field-number: letter-spaced tracked 0.08em at 10px in a label role
+  REFLEX 12 :1514 overshoot easing cubic-bezier(0.2, 0.9, 0.25, 1.18) on .button, button, .js-magnetic | fix: Use exponential ease-out on UI state changes
+  REFLEX 12 :1576 overshoot easing cubic-bezier(0.2, 0.9, 0.25, 1.18) on .campus-categories button:hover > span
+  REFLEX 12 :1586 overshoot easing cubic-bezier(0.2, 0.9, 0.25, 1.18) on .favorite-button[aria-pressed='true']
+  REFLEX 24b :104 padding-top: 70px (off the 4px scale) on .hero | fix: Use the 4px spacing scale
+  REFLEX 24b :188 margin: 18px 0 8px (off the 4px scale) on label
+  REFLEX 24b :211 padding: 12px 18px (off the 4px scale) on .result
+  REFLEX 24b :226 padding: 15px 10px (off the 4px scale) on th, td
+  REFLEX 24b :231 margin: 18px 0 12px (off the 4px scale) on caption
+  REFLEX 24b :387 padding: 12px 6px (off the 4px scale) on th, td
+  REFLEX 24b :518 padding: 58px 0 50px (off the 4px scale) on .hero
+  REFLEX 24b :526 margin: 30px 0 28px (off the 4px scale) on .hero h1
+  REFLEX 24b :537 margin-bottom: 10px (off the 4px scale) on .hero-intro
+  REFLEX 24b :544 margin-top: 30px (off the 4px scale) on .hero .actions
+  REFLEX 24b :546 gap: 26px (off the 4px scale) on .hero .actions
+  REFLEX 24b :550 padding: 13px 24px (off the 4px scale) on .hero .button
+  REFLEX 24b :553 margin-left: 22px (off the 4px scale) on .button span
+  REFLEX 24b :571 margin: 0 6px 2px 0 (off the 4px scale) on .status-dot
+  REFLEX 24b :610 padding: 10px 16px (off the 4px scale) on .globe-node
+  REFLEX 24b :636 padding: 22px 0 (off the 4px scale) on .manifesto-strip
+  REFLEX 24b :697 margin-bottom: 26px (off the 4px scale) on .field p
+  REFLEX 24b :768 padding: 25px 0 (off the 4px scale) on .note-row
+  REFLEX 24b :778 margin: 0 0 6px (off the 4px scale) on .note-row h3
+  REFLEX 24b :794 padding-top: 6px (off the 4px scale) on .note-category
+  REFLEX 24b :813 padding-top: 42px (off the 4px scale) on .site-footer
+  REFLEX 24b :814 padding-bottom: 42px (off the 4px scale) on .site-footer
+  REFLEX 24b :835 padding: 30px 0 (off the 4px scale) on .explore-index > a
+  REFLEX 24b :842 margin: 10px 0 (off the 4px scale) on .explore-index h2
+  REFLEX 24b :903 margin-top: 30px (off the 4px scale) on .lab-callout
+  REFLEX 24b :919 margin-bottom: 30px (off the 4px scale) on .interactive-section h2
+  REFLEX 24b :923 padding: 4px 10px (off the 4px scale) on .tag
+  REFLEX 24b :933 padding: 45px 0 (off the 4px scale) on .project-row
+  REFLEX 24b :939 gap: 14px (off the 4px scale) on .project-meta
+  REFLEX 24b :952 gap: 14px (off the 4px scale) on dl
+  REFLEX 24b :966 gap: 30px (off the 4px scale) on .knowledge-map
+  REFLEX 24b :1011 margin: 0 0 6px (off the 4px scale) on .note-search label
+  REFLEX 24b :1036 gap: 18px (off the 4px scale) on .note-toc
+  REFLEX 24b :1038 margin: 30px 0 (off the 4px scale) on .note-toc
+  REFLEX 24b :1052 margin: 10px 0 (off the 4px scale) on .prose li
+  REFLEX 24b :1114 padding: 10px (off the 4px scale) on .nash-table td
+  REFLEX 24b :1118 gap: 6px (off the 4px scale) on .payoff-pair
+  REFLEX 24b :1144 gap: 10px (off the 4px scale) on .python-toolbar
+  REFLEX 24b :1251 padding: 8px 10px (off the 4px scale) on .globe-node
+  REFLEX 24b :1255 gap: 30px (off the 4px scale) on .featured-lab, .split-feature
+  REFLEX 24b :1258 padding: 22px (off the 4px scale) on .field
+  REFLEX 24b :1269 padding: 18px 20px (off the 4px scale) on .site-header
+  REFLEX 24b :1290 column-gap: 22px (off the 4px scale) on .site-header nav
+  REFLEX 24b :1297 padding-top: 34px (off the 4px scale) on .hero
+  REFLEX 24b :1298 gap: 10px (off the 4px scale) on .hero
+  REFLEX 24b :1307 margin-top: 30px (off the 4px scale) on .hero-caption
+  REFLEX 24b :1340 gap: 18px (off the 4px scale) on .section-heading
+  REFLEX 24b :1350 gap: 6px 20px (off the 4px scale) on .field
+  REFLEX 24b :1370 margin: 6px 0 12px (off the 4px scale) on .field p
+  REFLEX 24b :1378 gap: 30px (off the 4px scale) on .featured-lab, .split-feature
+  REFLEX 24b :1392 padding: 30px 20px (off the 4px scale) on .site-footer
+  REFLEX 38iii :529 accented word inside a heading (.hero h1 em, h1 em) | fix: Set the whole head one way: a line break, a second line at a second size, or the whole head in the accent. Guard: the theme names the coloured word as its signature and it appears once on the page, in the hero
+  REFLEX 38iii :844 accented word inside a heading (.explore-index h2 span)
+  REFLEX 64 :90 monospace label voice on .eyebrow | fix: Labels in the body face, a step smaller, sentence case; mono only for code and figures
+  REFLEX 64 :454 monospace label voice on .brand small
+  REFLEX 64 :560 monospace label voice on .hero-caption
+  REFLEX 64 :588 monospace label voice on .orbit-label
+  REFLEX 64 :789 monospace label voice on .note-row small
+  REFLEX 64 :792 monospace label voice on .note-category
+  WARN 3 :210 side stripe border-left: 3px solid var(--accent) on .result | fix: Hairline all round, none, or an accent square
+  WARN 3 :1064 side stripe border-left: 3px solid var(--accent) on .prose blockquote
+  WARN F3 :70 no text-wrap: balance on any display head (21 head rule(s), e.g. h1) | fix: Add text-wrap: balance to h1/h2-level heads
+  WARN F24 :613 a hairline border under a wide soft shadow on .globe-node | fix: Commit to one: a defined edge, or elevation by shadow
+sloplint: 21 FAIL, 62 REFLEX, 4 WARN across 1 file(s) and 1 URL(s).
+
+
+SOURCE hallmark/python-legacy-baseline.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+work/iteration29/atlas-before.css
+  FAIL 7a :67 pure #fff: color: white (nav a[aria-current]) | fix: Tint the base toward the anchor hue
+  FAIL 20 :1 no Hallmark stamp on the first non-empty line of any CSS | fix: The stamp comment is line 1 of the CSS; only @charset may precede it
+  FAIL 39a :341 disabled via opacity alone on button:disabled | fix: Three disabled channels: fill, ink and cursor, plus the disabled attribute
+  FAIL 48 :122 colour literal #c4b5fd22 outside tokens (background on .coordinates) | fix: Lift the value into the token block
+  FAIL 48 :175 colour literal #e9d5ff outside tokens (background on .button:hover, button:hover)
+  FAIL 48 :176 colour literal #151024 outside tokens (color on .button:hover, button:hover)
+  FAIL 48 :321 colour literal #e9d5ff outside tokens (outline on :focus-visible)
+  FAIL 48 :466 font-family literal "Georgia, serif" on .brand-mark
+  FAIL 48 :530 font-family literal "Georgia, 'Times New Roman', serif" on .hero h1 em, h1 em
+  FAIL 48 :584 colour literal #0002 outside tokens (filter on .hero-globe)
+  FAIL 48 :613 colour literal #0001 outside tokens (box-shadow on .globe-node)
+  FAIL 48 :1200 colour literal #a78bfa0d outside tokens (background on body:has(.hero))
+  FAIL 48 :1530 colour literal #a78bfa22 outside tokens (box-shadow on .js-magnetic:hover)
+  FAIL 48 :1542 colour literal #0002 outside tokens (box-shadow on .motion-card:hover, .field:ho…)
+  FAIL 48 :1549 colour literal #c4b5fd0d outside tokens (background on .motion-card::after)
+  FAIL 67 :89 .eyebrow: letter-spaced tracked 0.14em at 12px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+  FAIL 67 :452 .brand small: letter-spaced tracked 0.12em at 8px in a label role
+  FAIL 67 :559 .hero-caption: letter-spaced tracked 0.09em at 10px in a label role
+  FAIL 67 :586 .orbit-label: letter-spaced tracked 0.09em at 10px in a label role
+  FAIL 67 :631 .manifesto-strip: letter-spaced tracked 0.05em at 13px in a label role
+  FAIL 67 :678 .field-number: letter-spaced tracked 0.08em at 10px in a label role
+  REFLEX 12 :1514 overshoot easing cubic-bezier(0.2, 0.9, 0.25, 1.18) on .button, button, .js-magnetic | fix: Use exponential ease-out on UI state changes
+  REFLEX 12 :1576 overshoot easing cubic-bezier(0.2, 0.9, 0.25, 1.18) on .campus-categories button:hover > span
+  REFLEX 12 :1586 overshoot easing cubic-bezier(0.2, 0.9, 0.25, 1.18) on .favorite-button[aria-pressed='true']
+  REFLEX 24b :104 padding-top: 70px (off the 4px scale) on .hero | fix: Use the 4px spacing scale
+  REFLEX 24b :188 margin: 18px 0 8px (off the 4px scale) on label
+  REFLEX 24b :211 padding: 12px 18px (off the 4px scale) on .result
+  REFLEX 24b :226 padding: 15px 10px (off the 4px scale) on th, td
+  REFLEX 24b :231 margin: 18px 0 12px (off the 4px scale) on caption
+  REFLEX 24b :387 padding: 12px 6px (off the 4px scale) on th, td
+  REFLEX 24b :518 padding: 58px 0 50px (off the 4px scale) on .hero
+  REFLEX 24b :526 margin: 30px 0 28px (off the 4px scale) on .hero h1
+  REFLEX 24b :537 margin-bottom: 10px (off the 4px scale) on .hero-intro
+  REFLEX 24b :544 margin-top: 30px (off the 4px scale) on .hero .actions
+  REFLEX 24b :546 gap: 26px (off the 4px scale) on .hero .actions
+  REFLEX 24b :550 padding: 13px 24px (off the 4px scale) on .hero .button
+  REFLEX 24b :553 margin-left: 22px (off the 4px scale) on .button span
+  REFLEX 24b :571 margin: 0 6px 2px 0 (off the 4px scale) on .status-dot
+  REFLEX 24b :610 padding: 10px 16px (off the 4px scale) on .globe-node
+  REFLEX 24b :636 padding: 22px 0 (off the 4px scale) on .manifesto-strip
+  REFLEX 24b :697 margin-bottom: 26px (off the 4px scale) on .field p
+  REFLEX 24b :768 padding: 25px 0 (off the 4px scale) on .note-row
+  REFLEX 24b :778 margin: 0 0 6px (off the 4px scale) on .note-row h3
+  REFLEX 24b :794 padding-top: 6px (off the 4px scale) on .note-category
+  REFLEX 24b :813 padding-top: 42px (off the 4px scale) on .site-footer
+  REFLEX 24b :814 padding-bottom: 42px (off the 4px scale) on .site-footer
+  REFLEX 24b :835 padding: 30px 0 (off the 4px scale) on .explore-index > a
+  REFLEX 24b :842 margin: 10px 0 (off the 4px scale) on .explore-index h2
+  REFLEX 24b :903 margin-top: 30px (off the 4px scale) on .lab-callout
+  REFLEX 24b :919 margin-bottom: 30px (off the 4px scale) on .interactive-section h2
+  REFLEX 24b :923 padding: 4px 10px (off the 4px scale) on .tag
+  REFLEX 24b :933 padding: 45px 0 (off the 4px scale) on .project-row
+  REFLEX 24b :939 gap: 14px (off the 4px scale) on .project-meta
+  REFLEX 24b :952 gap: 14px (off the 4px scale) on dl
+  REFLEX 24b :966 gap: 30px (off the 4px scale) on .knowledge-map
+  REFLEX 24b :1011 margin: 0 0 6px (off the 4px scale) on .note-search label
+  REFLEX 24b :1036 gap: 18px (off the 4px scale) on .note-toc
+  REFLEX 24b :1038 margin: 30px 0 (off the 4px scale) on .note-toc
+  REFLEX 24b :1052 margin: 10px 0 (off the 4px scale) on .prose li
+  REFLEX 24b :1114 padding: 10px (off the 4px scale) on .nash-table td
+  REFLEX 24b :1118 gap: 6px (off the 4px scale) on .payoff-pair
+  REFLEX 24b :1144 gap: 10px (off the 4px scale) on .python-toolbar
+  REFLEX 24b :1251 padding: 8px 10px (off the 4px scale) on .globe-node
+  REFLEX 24b :1255 gap: 30px (off the 4px scale) on .featured-lab, .split-feature
+  REFLEX 24b :1258 padding: 22px (off the 4px scale) on .field
+  REFLEX 24b :1269 padding: 18px 20px (off the 4px scale) on .site-header
+  REFLEX 24b :1290 column-gap: 22px (off the 4px scale) on .site-header nav
+  REFLEX 24b :1297 padding-top: 34px (off the 4px scale) on .hero
+  REFLEX 24b :1298 gap: 10px (off the 4px scale) on .hero
+  REFLEX 24b :1307 margin-top: 30px (off the 4px scale) on .hero-caption
+  REFLEX 24b :1340 gap: 18px (off the 4px scale) on .section-heading
+  REFLEX 24b :1350 gap: 6px 20px (off the 4px scale) on .field
+  REFLEX 24b :1370 margin: 6px 0 12px (off the 4px scale) on .field p
+  REFLEX 24b :1378 gap: 30px (off the 4px scale) on .featured-lab, .split-feature
+  REFLEX 24b :1392 padding: 30px 20px (off the 4px scale) on .site-footer
+  REFLEX 38iii :529 accented word inside a heading (.hero h1 em, h1 em) | fix: Set the whole head one way: a line break, a second line at a second size, or the whole head in the accent. Guard: the theme names the coloured word as its signature and it appears once on the page, in the hero
+  REFLEX 38iii :844 accented word inside a heading (.explore-index h2 span)
+  REFLEX 64 :90 monospace label voice on .eyebrow | fix: Labels in the body face, a step smaller, sentence case; mono only for code and figures
+  REFLEX 64 :454 monospace label voice on .brand small
+  REFLEX 64 :560 monospace label voice on .hero-caption
+  REFLEX 64 :588 monospace label voice on .orbit-label
+  REFLEX 64 :789 monospace label voice on .note-row small
+  REFLEX 64 :792 monospace label voice on .note-category
+  WARN 3 :210 side stripe border-left: 3px solid var(--accent) on .result | fix: Hairline all round, none, or an accent square
+  WARN 3 :1064 side stripe border-left: 3px solid var(--accent) on .prose blockquote
+  WARN F3 :70 no text-wrap: balance on any display head (21 head rule(s), e.g. h1) | fix: Add text-wrap: balance to h1/h2-level heads
+  WARN F24 :613 a hairline border under a wide soft shadow on .globe-node | fix: Commit to one: a defined edge, or elevation by shadow
+sloplint: 21 FAIL, 62 REFLEX, 4 WARN across 1 file(s) and 1 URL(s).
+
+
+SOURCE hallmark/python-scoped.txt
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+sloplint: clean. 0 FAIL, 0 REFLEX, 0 WARN across 0 file(s) and 1 URL(s).
+

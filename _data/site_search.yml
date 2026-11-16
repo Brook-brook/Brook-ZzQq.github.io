@@ -1,4 +1,14 @@
 entries:
+  - title: AI基础学习地图
+    kind: page
+    url: /study/ai-foundations/
+    summary: 按13个主题连接概念、数据、机器学习与语言模型；明确已有读物、可操作实验和后续缺口，不代表课程完成。
+    keywords: [AI基础, 机器学习, 神经网络, CNN, RNN, Transformer, 学习地图, 课程]
+  - title: 直线与梯度 · 真实更新与学习率
+    kind: lab
+    url: /playground/linear-regression/
+    summary: 用12个原创合成点执行全批量MSE梯度下降，核对参数、学习率、训练与验证损失和完整记录；不调用语言模型。
+    keywords: [AI基础, 线性回归, 梯度下降, gradient descent, MSE, 学习率, loss, 训练, 验证]
   - title: 回执与重试 · 未知结果和幂等
     kind: lab
     url: /playground/delivery/
@@ -97,8 +107,8 @@ entries:
   - title: Python 代码实验
     kind: lab
     url: /playground/python/
-    summary: 修改变量、判断、循环、函数与容器示例，在浏览器 Worker 中执行 Python。
-    keywords: [Python, loops, functions, 列表, 字典, 代码]
+    summary: 修改变量、函数、JSON、异步与手写神经网络梯度，在浏览器Worker中真实执行Python；加载与运行由你明确点击。
+    keywords: [Python, loops, functions, 列表, 字典, 代码, 神经网络, BP, 反向传播, 链式梯度]
     featured: true
   - title: 囚徒困境与猎鹿博弈
     kind: lab

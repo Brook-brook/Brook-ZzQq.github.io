@@ -1,0 +1,104 @@
+schema_version: 1
+title: AI基础学习地图
+summary: 从任务、数据和优化接到模型与应用；按实际材料选择入口，保留尚未完成的主题。
+groups:
+  - id: foundation-start
+    title: 先看清任务与数据
+    topics:
+      - id: ai-concepts
+        title: AI是什么，应用又多做了什么
+        state: entry
+        scope: 已有模型、应用、训练与推理的概念入口；完整发展史仍待补充。
+        question: 一个确定公式能解决的计算，为什么不必先让语言模型猜答案？
+        notes: [ai-app-foundations, reading-ai-evidence]
+      - id: systems-data
+        title: 系统与数据表示
+        state: entry
+        scope: 可先分清文本、字节与Python值；硬件体系、二进制与多媒体编码还没有完整教程。
+        question: 同一段文本的字符数、UTF8字节数和模型token数为什么不同？
+        notes: [python-json-contracts]
+      - id: development-basics
+        title: 写一段能运行的程序
+        state: practice
+        scope: Python示例与本机项目可运行；NumPy、pandas及深度学习框架环境课尚未完成。
+        question: 哪些结果由自己的函数计算，哪些需要另装依赖或调用外部服务？
+        notes: [python-first-steps, model-request-contracts]
+        lab: /playground/python/
+        lab_label: 运行Python基础
+  - id: foundation-learning
+    title: 从样本到学习目标
+    topics:
+      - id: problem-solving
+        title: 先定义一个可检查的问题
+        state: entry
+        scope: 可练特征、目标与损失的区分；状态空间与启发式搜索还没有独立实验。
+        question: 输入、期待输出和允许的错误是什么，学习程序要最小化哪一个量？
+        notes: [ml-task-loss]
+      - id: regression-classification
+        title: 连续值预测，与类别判断
+        state: practice
+        scope: 一元线性训练与分类指标可操作；不是完整分类器或决策树课程。
+        question: 回归MSE与分类准确率分别在比较什么，为什么不能互换？
+        notes: [ml-task-loss, linear-regression-gradient, ai-evaluation-basics]
+        lab: /playground/linear-regression/
+        lab_label: 逐步训练一条直线
+      - id: clustering-reduction
+        title: 没有标签时，寻找什么结构
+        state: planned
+        scope: 聚类、K-means与PCA尚无本站教程或实验，保留为后续主题。
+        question: 把相近样本分组与找到保留方差的低维方向，目标为什么不同？
+        notes: []
+  - id: foundation-networks
+    title: 再走向神经网络
+    topics:
+      - id: network-components
+        title: 参数、损失与梯度的一步
+        state: practice
+        scope: 有可复算的线性更新与2→2→1小网络前向/链式梯度；后者不更新参数，尚无通用自动微分或MNIST训练。
+        question: 梯度说明局部变化方向，为什么不等于模型结构或最终任务正确？
+        notes: [linear-regression-gradient, neural-chain-rule]
+        lab: /playground/python/
+        lab_label: 选择链式梯度Python示例
+      - id: convolution
+        title: 图像中的局部连接
+        state: planned
+        scope: CNN、卷积输出形状、池化与感受野尚待建设，没有伪装成已训练的图像模型。
+        question: 一个位置看到的范围如何随层数变化，共享权重又带来什么约束？
+        notes: []
+      - id: sequence-models
+        title: 按序列传递状态
+        state: planned
+        scope: RNN、LSTM与GRU尚无本站训练演示；Python异步任务不是循环神经网络。
+        question: 时间步的隐藏状态与程序任务的等待状态，分别属于哪一层？
+        notes: []
+      - id: application-cycle
+        title: 把问题、数据与验收接起来
+        state: practice
+        scope: 任务设计、公开GIS工具和留出评测可练；不含完整模型部署平台。
+        question: 同一批样本调过参数后，还能把它当作独立的最终评测吗？
+        notes: [ai-app-foundations, spatial-validation, agent-testing-contracts]
+        lab: /playground/spatial-validation/
+        lab_label: 比较两种留出方式
+  - id: foundation-language
+    title: 接到语言与Agent工程
+    topics:
+      - id: language-representation
+        title: 文本、检索与上下文
+        state: entry
+        scope: 字面检索与引用实验可用；词向量、Seq2Seq与注意力的完整建模课仍待补充。
+        question: 检索命中一个片段，为什么还要检查版本、限定条件与回答主张？
+        notes: [retrieval-evidence]
+        lab: /playground/retrieval/
+        lab_label: 选择完整证据
+      - id: language-models
+        title: 看懂一次模型请求
+        state: entry
+        scope: token、上下文、请求契约与工具边界已有读物；网站不发起付费模型调用。
+        question: API成功、JSON形状正确与问题回答正确，分别需要什么证据？
+        notes: [ai-app-foundations, model-request-contracts, skills-mcp-boundaries]
+      - id: tuning-multimodal
+        title: 改变权重，与改变输入
+        state: planned
+        scope: 微调、扩散与多模态训练尚未实现；现有概念辨析不能当作已经部署这些能力。
+        question: 添加检索资料和训练更新参数改变了什么，如何分别验收？
+        notes: []
