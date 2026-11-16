@@ -348,3 +348,44 @@
       focus: 分开已提交数据库、进程对象、模型消息、预算与外部动作，不把持久记录当作任务完成。
       note: agent-state-recovery
       question: 查询旧op-1得到历史值2、当前数据库值3时，各能说明什么？把SQLite记录重新打开，为何不会自动恢复模型上下文、授权或远端邮件，恢复前应核对哪些未决状态？
+- id: ml-regression-foundations
+  title: 从样本与损失，到一次真实更新
+  summary: 先定义输入和目标，再用原创合成点训练一条直线；复算梯度、比较学习率，分清训练优化与验证观察。
+  prerequisite: 会读变量、加减乘除即可；偏导有展开公式，不设解锁，也不要求模型Key。
+  challenge: 复算默认第一步，比较两种学习率，下载实际记录，并解释为什么反复看过的验证点不是独立最终测试。
+  steps:
+    - id: ml-feature-target
+      title: 输入、目标与参数，是同一回事吗？
+      focus: 对照样本id、x、y、参数和预测，明确回归任务与原创合成数据的范围。
+      note: ml-task-loss
+      lab: /playground/linear-regression/
+      lab_label: 查看12个原创样本
+      question: 在这个任务里x、y、id和w、b分别做什么？为什么y是数值还不足以把任意类别编码称为回归，合成点又为何不是校园实测？
+    - id: ml-gradient-update
+      title: 两个参数，如何同时走一步？
+      focus: 用同一组旧参数计算全训练集MSE的两个偏导，再一起更新。
+      note: linear-regression-gradient
+      lab: /playground/linear-regression/
+      lab_label: 复算第一次更新
+      question: 从w=0、b=0、学习率0.05开始，核对dw=-29.7、db=-2.125如何得到w=1.485、b=0.10625。为什么不能先更新w再计算本步db，这里又为何不是SGD或完整BP？
+    - id: ml-learning-rate
+      title: 损失变大，只是步数不够吗？
+      focus: 对照稳定步幅、交替放大、实际采用的学习率和未应用的拟议步骤。
+      note: linear-regression-gradient
+      lab: /playground/linear-regression/
+      lab_label: 比较0.05与0.2
+      question: 这组训练点下0.05和0.2在斜率方向分别把误差乘几？为什么120步上限和数值停止都不代表收敛、最佳模型或掌握，2/15又为何不是通用学习率？
+    - id: ml-validation-split
+      title: 没进梯度，就算独立测试吗？
+      focus: 区分训练更新、验证观察、反复调参与最终评估；检查完整实际记录。
+      note: ml-task-loss
+      lab: /playground/linear-regression/
+      lab_label: 对照训练与验证损失
+      question: 验证标签没有进入哪些计算？如果根据这4个验证点反复选择学习率，为什么它们仍不是独立最终测试？MSE为何也不能直接显示成准确率百分比？
+    - id: neural-chain-rule
+      title: 反向传播后，参数就更新了吗？
+      focus: 实际算2→2→1小网络的前向与九个梯度，核对一条链的因子、四行平均和优化器边界。
+      note: neural-chain-rule
+      lab: /playground/python/#neural-gradients
+      lab_label: 运行前向与链式梯度
+      question: chain_w00的五个因子各来自哪一步，为什么还要累加四行？identity隐藏层的logit为何可以折叠，输出sigmoid又为何仍是非线性？parameters_updated=false说明求梯度与训练更新有什么区别？

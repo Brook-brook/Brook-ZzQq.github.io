@@ -1,0 +1,29 @@
+---
+layout: atlas
+title: AI基础学习地图
+permalink: /study/ai-foundations/
+section: Study
+universe: true
+ai_foundations: true
+description: 按实际资源把AI概念、数据、机器学习、神经网络与语言模型接起来；标明可操作入口与尚待建设的主题，不记录课程进度或成绩。
+---
+<div class="foundations-page">
+  <nav class="breadcrumbs" aria-label="当前位置"><a href="{{ '/study/' | relative_url }}">Study</a><span aria-hidden="true">/</span><span>AI基础</span></nav>
+  <header class="foundations-intro">
+    <div><h1>把AI基础，一块块接起来。</h1><p>先看任务与数据，再亲手更新参数；带着可复算的结果走向模型与应用。</p><div class="foundations-actions"><a class="button primary" href="{{ '/playground/linear-regression/' | relative_url }}">从一条直线开始</a><a href="{{ '/study/paths/#ml-regression-foundations' | relative_url }}">基础路线与手记</a></div></div>
+    <aside class="foundations-key"><h2>选择一个现在能做的入口。</h2><p>下面13个主题是自主学习索引。每项写明已有材料与缺口，资源入口不代表整章已覆盖。</p><p>阅读、运行与下载不会记录完成；自检和手记仍由你在原学习页明确填写。</p><a href="{{ '/study/ai/' | relative_url }}">已有基础，直接看Agent开发</a></aside>
+  </header>
+  <nav class="foundations-groups" aria-label="四组基础主题">{% for group in site.data.ai_foundations.groups %}<a href="#{{ group.id | escape }}">{{ group.title | escape }}</a>{% endfor %}</nav>
+  {% for group in site.data.ai_foundations.groups %}
+  <section class="foundations-section" id="{{ group.id | escape }}" aria-labelledby="heading-{{ group.id | escape }}">
+    <h2 id="heading-{{ group.id | escape }}">{{ group.title | escape }}</h2>
+    <ol>{% for topic in group.topics %}<li id="{{ topic.id | escape }}" data-foundation-topic="{{ topic.id | escape }}" data-foundation-state="{{ topic.state | escape }}">
+      <div class="foundations-topic"><h3>{{ topic.title | escape }}</h3><p class="foundations-availability">{% case topic.state %}{% when 'practice' %}可做局部实验{% when 'entry' %}已有入门读物{% else %}后续主题{% endcase %}</p></div>
+      <div class="foundations-detail"><p>{{ topic.scope | escape }}</p><p class="foundations-question">先问一句：{{ topic.question | escape }}</p>
+        {% if topic.notes.size > 0 %}<ul class="foundations-resources" aria-label="{{ topic.title | escape }}的实际资源">{% for slug in topic.notes %}{% assign note = site.atlas_notes | where: 'slug', slug | first %}<li><a href="{{ note.url | relative_url }}">{{ note.title | escape }}</a></li>{% endfor %}{% if topic.lab %}<li><a href="{{ topic.lab | relative_url }}">{{ topic.lab_label | escape }}</a></li>{% endif %}</ul>{% endif %}
+      </div>
+    </li>{% endfor %}</ol>
+  </section>
+  {% endfor %}
+  <section class="foundations-scope" aria-labelledby="foundations-scope-title"><h2 id="foundations-scope-title">用自己的问题，继续接下去。</h2><div><p>主题线索参考AI教学大纲，说明与练习由本站独立编写。你可以跳过熟悉的部分，选择现在最想弄清楚的一块。</p><p>当前实验使用原创合成点和本机计算。聚类、神经网络、注意力与微调留待后续建设；每项已有资源的范围在对应主题下说明。</p><a href="{{ '/study/practice/#ml-feature-target' | relative_url }}">从特征与目标开始自检</a><a href="{{ '/knowledge/' | relative_url }}">沿着笔记之间的联系阅读</a></div></section>
+</div>

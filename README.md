@@ -6,6 +6,26 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 30 learn from actual gradients
+
+`feat/atlas-iteration-30` continues pushed, unmerged29 (`e991994`). An honest
+13-topic AI-foundations map connects three original lessons to actual full-batch
+linear regression and a sixth Python example for manual network chain-rule
+gradients. The line/parameters/losses are computed, with complete records;
+validation and learning completion keep their explicit boundaries.
+
+Two stdlib-only downloads complement the browser work. The neural example
+computes forward/backward values without updating parameters or claiming a
+trained XOR classifier. The original44 journal entries stay intact; five explicit
+questions extend the optional15th route to49. Totals:31 public notes,53 curated
+connections and77 public search entries. No new runtime dependency or deployment.
+
+See [source review](docs/ml-foundations-source-review.md),
+[audit](docs/design-audit-iteration-30.md), [compliance](docs/iteration-30-compliance.md)
+and [compiled preview instructions](docs/PREVIEW.md). The review PR is
+[30](https://github.com/Brook-brook/Brook-ZzQq.github.io/pull/30); it is not
+an automatic website deployment.
+
 ## Iteration 29 understand data, HTTP and uncertain actions
 
 `feat/atlas-iteration-29` continues pushed/unmerged28 (`5f29128`). Four original

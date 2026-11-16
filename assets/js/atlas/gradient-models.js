@@ -69,6 +69,7 @@ function candidate(data, previous, learningRate) {
   const theta = { w: previous.parameters.w - learningRate * gradient.w, b: previous.parameters.b - learningRate * gradient.b };
   const trainingLoss = lossFor(train, theta);
   if (!number(theta.w, MAX_PARAMETER) || !number(theta.b, MAX_PARAMETER) || !Number.isFinite(trainingLoss) || trainingLoss > MAX_TRAIN_LOSS) {
+    // This stop uses no validation label or validation loss.
     return { frame: null, rejected: { iteration: previous.iteration + 1, learning_rate: learningRate,
       before: clone(previous.parameters), gradient, proposed_parameters: theta, proposed_training_mse: trainingLoss, reason: 'numeric_limit' } };
   }

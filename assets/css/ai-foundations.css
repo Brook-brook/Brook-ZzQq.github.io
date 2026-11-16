@@ -1,0 +1,201 @@
+/* Hallmark · shape: app screen · genre: playful · theme: brand · nav: retained glass dock · footer: garden links
+ * idea: honest topic spine connects available evidence and explicit gaps · data: authored topic catalog · v2.0.0 */
+
+/* Hallmark · pre-emit critique: P5 H4 E4 S4 R5 V4 · weakest: hierarchy; resource availability follows each topic instead of becoming a badge wall. */
+.foundations-page {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-block: var(--space-lg) var(--space-2xl);
+}
+
+.foundations-page :where(h1, h2, h3, p) {
+  margin-block-start: 0;
+  min-width: 0;
+}
+
+.foundations-page :is(h1, h2, h3) {
+  overflow-wrap: break-word;
+}
+
+.foundations-page .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-block-end: var(--space-xl);
+  font-size: var(--text-sm);
+}
+
+.foundations-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: var(--space-2xl);
+  padding-block-end: var(--space-xl);
+}
+
+.foundations-intro h1 {
+  font-size: var(--text-display);
+  line-height: 1.4;
+  margin-block-end: var(--space-md);
+}
+
+.foundations-page p {
+  max-width: 65ch;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+.foundations-page a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.foundations-page a:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+.foundations-page a:active {
+  transform: translateY(1px);
+}
+
+.foundations-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm) var(--space-lg);
+}
+
+.foundations-actions .primary {
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.foundations-key {
+  border-inline-start: 1px solid var(--color-rule);
+  padding-inline-start: var(--space-lg);
+}
+
+.foundations-key h2 {
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  margin-block-end: var(--space-sm);
+}
+
+.foundations-key p {
+  font-size: var(--text-sm);
+  margin-block-end: var(--space-xs);
+}
+
+.foundations-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-xl);
+  border-block: 1px solid var(--color-rule);
+  padding-block: var(--space-sm);
+  margin-block-end: var(--space-xl);
+}
+
+.foundations-section {
+  scroll-margin-block-start: var(--space-lg);
+  margin-block-end: var(--space-2xl);
+}
+
+.foundations-section > h2, .foundations-scope h2 {
+  font-size: var(--text-2xl);
+  line-height: 1.5;
+  margin-block-end: var(--space-lg);
+}
+
+.foundations-section > ol {
+  padding-inline-start: var(--space-lg);
+  margin: 0;
+}
+
+.foundations-section > ol > li {
+  display: list-item;
+  padding-inline-start: var(--space-sm);
+  padding-block: var(--space-lg);
+  border-top: 1px solid var(--color-rule);
+}
+
+.foundations-section > ol > li::marker {
+  color: var(--text-secondary);
+}
+
+.foundations-topic h3 {
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  margin-block-end: var(--space-xs);
+}
+
+.foundations-page .foundations-availability {
+  font-size: var(--text-sm);
+  margin-block-end: var(--space-md);
+}
+
+.foundations-detail p {
+  margin-block-end: var(--space-sm);
+}
+
+.foundations-question {
+  font-size: var(--text-sm);
+}
+
+.foundations-resources {
+  padding-inline-start: var(--space-lg);
+  margin-block: var(--space-sm) 0;
+}
+
+.foundations-resources li {
+  padding-inline-start: var(--space-xs);
+}
+
+.foundations-scope {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr);
+  gap: var(--space-xl);
+  border-top: 1px solid var(--color-rule);
+  padding-block-start: var(--space-xl);
+}
+
+.foundations-scope a + a {
+  margin-inline-start: var(--space-lg);
+}
+
+@media (min-width: 900px) {
+  .foundations-section > ol > li {
+    display: grid;
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr);
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 899px) {
+  .foundations-intro, .foundations-scope {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .foundations-key {
+    border-inline-start: 0;
+    padding-inline-start: 0;
+    border-top: 1px solid var(--color-rule);
+    padding-block-start: var(--space-lg);
+  }
+
+  .foundations-scope a + a {
+    margin-inline-start: 0;
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .foundations-page a:active {
+    transform: none;
+  }
+}

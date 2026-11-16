@@ -26,6 +26,10 @@ python3 -m http.server 8000
 
 然后打开：
 
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/study/ai-foundations/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/linear-regression/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/neural-chain-rule/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/python/#neural-gradients
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/study/practice/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/evaluation/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/spatial-validation/
@@ -59,7 +63,7 @@ python3 -m http.server 8000
 完整网址访问。这个编译包的导航与资源都带项目名前缀，父目录托管才能
 同时找到页面、样式和脚本。
 
-开发分支依次基于前一轮；最新29包含17–28的代码。CI产物默认保留7天，
+开发分支依次基于前一轮；最新30基于未合并29并包含此前开发代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。
 
 循环实验底部可显式下载Python例子与配套公开目录。代码由你在自己的本地/

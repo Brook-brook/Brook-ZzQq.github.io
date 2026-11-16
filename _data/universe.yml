@@ -33,6 +33,11 @@ preview_notes:
 
       均衡不等于社会最优。
 updates:
+  - date: "2026-11-16"
+    title: 从AI基础，走到一次真实参数更新
+    text: 开发分支新增基础学习地图与原创合成点梯度实验；明确已有资源和后续主题，训练记录可复算，待审查发布。
+    label: 打开AI基础学习地图
+    url: /study/ai-foundations/
   - date: "2026-11-15"
     title: 从JSON与HTTP，走到未知结果
     text: 共享标准库源码实际运行JSON、loopback HTTP与丢回执案例；用本机状态实验区分重发、幂等参数和已经发生的动作。

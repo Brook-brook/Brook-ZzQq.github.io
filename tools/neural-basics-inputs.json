@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "root": "brooks-neural-basics",
+  "files": [
+    {"name":"README.md","source":"_includes/neural-basics/README.md"},
+    {"name":"neural.py","source":"_includes/neural-basics/neural.py"},
+    {"name":"demo.py","source":"_includes/neural-basics/demo.py"},
+    {"name":"run_checks.py","source":"_includes/neural-basics/run_checks.py"},
+    {"name":"NOTICE.md","source":"_includes/neural-basics/NOTICE.md"},
+    {"name":"LICENSE.txt","source":"_includes/agent-starter/LICENSE.txt"},
+    {"name":"licenses/CPython-LICENSE.txt","source":"licenses/CPython-LICENSE.txt"}
+  ]
+}

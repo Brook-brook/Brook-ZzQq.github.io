@@ -470,3 +470,32 @@ It contains no private DB/path, model response, news body or learning note.
 One database transaction does not imply atomic external actions, full Agent
 checkpointing or power-loss certification. See
 [SQLite source review](docs/sqlite-recovery-source-review.md).
+
+## Iteration 30: AI foundations and actual gradients
+
+Three original AI-assisted lessons, the13-topic learning index, the12-point
+synthetic regression fixture and the four logical XOR examples are Brook MIT
+teaching material. No new website/Python dependency, font, image, campus POI,
+model weight, article body or external language-model service was added.
+The existing Pyodide0.27.7 runtime remains explicit-load only.
+
+Facts were checked at scikit-learn1a16a519abd16444af692c841e314d32a3b52a29
+(OLS, SGD introduction/rate/scale and cross-validation opening/held-out
+preprocessing), PyTorch Tutorials5277794075fd393cf24f139ac978f96bc06b5aa3
+(complete autograd introduction), and PyTorch2a2d844941bf776d1a49a8ff8730e90f5242f836
+(BCEWithLogitsLoss documentation section). Their actual complete licenses were
+read: scikit-learn BSD3-Clause copyright2007–2026 developers; Tutorials BSD3-Clause
+copyright2017–2022 Pytorch contributors; PyTorch has the actual multi-party
+Facebook/Caffe2 BSD attribution/conditions. No upstream implementation, example,
+figure, dataset or text passage is redistributed or relicensed as Brook MIT.
+
+New explicit9-entry regression and8-entry neural ZIPs retain original MIT and
+the complete existing CPython license/historical text. They do not redistribute
+CPython, scikit-learn or PyTorch. The six older ZIPs remain byte-identical.
+Regression really updates parameters; the fixed neural example computes forward
+values/manual gradients without updating. Neither is an external LLM call or
+learner assessment. The uploaded outline is a topic reference, not an instruction
+to operate school accounts, upload grades or publish its full text.
+
+See [source review](docs/ml-foundations-source-review.md) and
+[iteration30 compliance](docs/iteration-30-compliance.md).

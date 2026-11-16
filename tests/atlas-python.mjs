@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { resolve, basename } from 'node:path';
+import { spawnSync } from 'node:child_process';
 const browser = await chromium.launch({
   executablePath:
     process.env.CHROMIUM_PATH ||
@@ -84,6 +85,30 @@ try {
   const changedJson = (await page.locator('#python-output').innerText()).trim().split('\n').map((row) => JSON.parse(row));
   assert.equal(changedJson[1].accepted, true);
   assert.equal(changedJson[1].result.total, 5);
+  await page.selectOption('#python-example', 'neural');
+  await page.click('#python-run');
+  await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行完成'));
+  const neuralRows = JSON.parse('[' + (await page.locator('#python-output').innerText()).trim().split('\n').join(',') + ']');
+  const local = spawnSync('python3', ['-I', '-S', '-B', '-c', 'import runpy;runpy.run_path("_includes/neural-basics/neural.py")["demo"]()'], { encoding: 'utf8', timeout: 10000 });
+  assert.equal(local.status, 0, local.stderr);
+  const expectedNeural = local.stdout.trim().split('\n').map((line) => JSON.parse(line));
+  function sameCalculation(actual, expected) {
+    if (typeof expected === 'number') assert.ok(Math.abs(actual - expected) <= 1e-10 * Math.max(1, Math.abs(expected)));
+    else if (expected !== null && typeof expected === 'object') { assert.deepEqual(Object.keys(actual).sort(), Object.keys(expected).sort()); for (const key of Object.keys(expected)) sameCalculation(actual[key], expected[key]); }
+    else assert.equal(actual, expected);
+  }
+  sameCalculation(neuralRows, expectedNeural);
+  assert.deepEqual(neuralRows.map((row) => row.parameters_updated), [false, false]);
+  const neuralSource = await page.inputValue('#python-code'), changedNeuralSource = neuralSource.replace('"v0": 0.8', '"v0": 0.7');
+  assert.notEqual(changedNeuralSource, neuralSource);
+  await page.fill('#python-code', changedNeuralSource); await page.click('#python-run');
+  await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行完成'));
+  const changedNeural = (await page.locator('#python-output').innerText()).trim().split('\n').map((line) => JSON.parse(line));
+  assert.equal(changedNeural[0].parameters.v0, 0.7);
+  assert.notEqual(changedNeural[0].mean_binary_cross_entropy, neuralRows[0].mean_binary_cross_entropy);
+  await page.click('#python-reset'); await page.click('#python-run');
+  await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行完成'));
+  sameCalculation((await page.locator('#python-output').innerText()).trim().split('\n').map((line) => JSON.parse(line)), expectedNeural);
   await page.fill('#python-code', 'print(1 / 0)');
   await page.click('#python-run');
   await page.waitForFunction(() =>
@@ -122,7 +147,7 @@ try {
   await page.click('#python-stop');
   assert.match(await page.locator('#python-status').innerText(), /停止并释放/);
   console.log(
-    'PASS real Pyodide in Chromium: 5 examples including actual JSON contracts/edit and async release/cancel, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop'
+    'PASS real Pyodide in Chromium: 6 examples including real manual neural forward/gradients with CPython parity/edit/reset, JSON contracts/edit and async release/cancel, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop'
   );
 } finally {
   await browser.close();

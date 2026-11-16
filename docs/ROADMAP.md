@@ -2,22 +2,29 @@
 
 ## Implemented in the review branch
 
+Current totals are31 notes,15 routes/49 explicit questions and77 public search
+entries. Lower bullets retain historical counts from when each addition entered.
+
 - Home, Explore, Geo Lab, AI Lab, Code Lab, Projects, Knowledge, About.
 - Responsive navigation, persistent dark/light mode, accessible no-JS reading.
-- Twenty-eight public notes/tutorials with metadata, TOC, code blocks and actual
+- Thirty-one public notes/tutorials with metadata, TOC, code blocks and actual
   experiment links when available; source-grounded research stays type-labelled.
 - Knowledge map, client-side search, category filtering and empty state.
+- Native13-topic AI-foundations map with honest resource/gap states, original
+  full-batch regression with complete traces and per-sample evidence, and a
+  manual2->2->1 chain-rule Python example. Two new stdlib downloads retain the
+  old six projects; neither a tiny fixture nor a resource link certifies mastery.
 - Prisoner/stag payoff labs and editable 2×2 pure-strategy Nash explorer.
 - Linear public-goods lab with per-player deviations, separate total-points
   objective, exact equality boundaries and a labelled two-player endpoint slice.
 - Four-step C++ shallow/deep copy visualization with valid lifetime semantics.
 - Spherical Mercator local scale/area experiment and labelled GIS × AI workflow.
-- Lazy Pyodide Worker with five examples, real execution, errors, output cap,
+- Lazy Pyodide Worker with six examples, real execution, errors, output cap,
   stop/reload and timeout. Runtime downloads only after the visitor requests it.
 - Existing Chirpy blog/posts remain accessible; old Atlas preview routes redirect.
 - Automated model/browser checks plus an explicit build-before-deploy Pages workflow.
 - Two AI/Agent development paths, five original foundation lessons and a native
-  entry. Fourteen routes/forty-four manual questions retain the same v1 journal.
+  entry. Fifteen routes/forty-nine manual questions retain the same v1 journal.
 - Original local/server Python request example with actual-SDK offline contract
   tests; no live model service or website API-key field.
 - Bounded script-proposed Agent-runtime exercise with real native read tools,
