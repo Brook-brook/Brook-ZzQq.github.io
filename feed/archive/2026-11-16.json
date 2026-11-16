@@ -1009,6 +1009,24 @@
       "changed_at": "2026-11-16T10:26:32.694Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-60f3c7381bc61eae5e3d002a0ecfce30c3913c926a7778f89e799b4b1d0cc1eb",
+      "source_id": "openai-news",
+      "title": "The King’s Trust and OpenAI launch £1m partnership",
+      "url": "https://openai.com/index/the-kings-trust-and-openai",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-16T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 16 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-16T14:24:44.408Z",
+      "changed_at": "2026-11-16T14:24:44.408Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
