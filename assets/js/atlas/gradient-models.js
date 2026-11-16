@@ -6,10 +6,14 @@ const scope = 'Original synthetic single-feature linear regression. Actual full-
 const number = (value, bound) => typeof value === 'number' && Number.isFinite(value) && Math.abs(value) <= bound;
 const object = (value, names) => value !== null && typeof value === 'object' && !Array.isArray(value) && Object.keys(value).sort().join('|') === names.slice().sort().join('|');
 const clone = (value) => JSON.parse(JSON.stringify(value));
+// Only privately constructed, deeply frozen runs receive this identity brand.
+// Parsed/mutable reports always take the complete deterministic replay path.
+const ownedRuns = new WeakSet();
 function frozen(value) {
-  if (value && typeof value === 'object') { for (const child of Object.values(value)) frozen(child); Object.freeze(value); }
+  if (value && typeof value === 'object' && !Object.isFrozen(value)) { for (const child of Object.values(value)) frozen(child); Object.freeze(value); }
   return value;
 }
+function sealRun(run) { frozen(run); ownedRuns.add(run); return run; }
 export function validateGradientData(value) {
   if (!object(value, ['schema_version', 'id', 'source_kind', 'units', 'description', 'samples']) || value.schema_version !== 1 || value.id !== 'brook-gradient-transect-v1' || value.source_kind !== 'original_synthetic' || value.units !== 'abstract' || typeof value.description !== 'string' || !value.description.trim() || value.description.length > 400 || !Array.isArray(value.samples) || value.samples.length !== 12) throw new Error('gradient_data');
   const seen = new Set(), counts = { train: 0, validation: 0 };
@@ -78,9 +82,10 @@ function candidate(data, previous, learningRate) {
 }
 export function createGradientRun(input, theta = { w: 0, b: 0 }) {
   const data = validateGradientData(input); parameters(theta, 10);
-  return frozen({ schema_version: 1, kind: 'brook-gradient-run', data, initial: clone(theta), history: [initialFrame(data, theta)], stop: null, rejected: null });
+  return sealRun({ schema_version: 1, kind: 'brook-gradient-run', data, initial: clone(theta), history: [initialFrame(data, theta)], stop: null, rejected: null });
 }
 export function validateGradientRun(run) {
+  if (ownedRuns.has(run)) return run;
   if (!object(run, ['schema_version', 'kind', 'data', 'initial', 'history', 'stop', 'rejected']) || run.schema_version !== 1 || run.kind !== 'brook-gradient-run') throw new Error('gradient_run');
   const data = validateGradientData(run.data); parameters(run.initial, 10);
   if (!Array.isArray(run.history) || run.history.length < 1 || run.history.length > MAX_UPDATES + 1) throw new Error('gradient_history');
@@ -102,14 +107,16 @@ export function validateGradientRun(run) {
 export function advanceGradientRun(input, learningRate, count = 1) {
   const run = validateGradientRun(input); rate(learningRate);
   if (![1, 10].includes(count) || run.stop !== null) throw new Error('gradient_action');
-  const next = clone(run);
+  const next = ownedRuns.has(run) ? { ...run, history: [...run.history] } : clone(run);
   for (let i = 0; i < count; i++) {
     const result = candidate(next.data, next.history.at(-1), learningRate);
     if (result.rejected) { next.stop = 'numeric_limit'; next.rejected = result.rejected; break; }
     next.history.push(result.frame);
     if (next.history.length === MAX_UPDATES + 1) { next.stop = 'update_budget'; break; }
   }
-  validateGradientRun(next); return frozen(next);
+  // New frames came from the validated prior state and candidate(). Its frozen
+  // prefix can be shared without replaying every old frame on every click.
+  return sealRun(next);
 }
 export function gradientReport(input) {
   const run = validateGradientRun(input);

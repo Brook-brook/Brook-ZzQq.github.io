@@ -13,7 +13,7 @@ description: 用12个原创合成点真实计算全批量梯度、参数更新�
     <section class="gradient-controls glass-light" aria-labelledby="gradient-action-title">
       <h2 id="gradient-action-title" tabindex="-1">实际更新一次参数</h2>
       <label for="gradient-rate">下一步学习率 η</label><input id="gradient-rate" type="number" min="0.001" max="0.5" step="any" value="0.05" disabled aria-describedby="gradient-rate-help gradient-input-message">
-      <p id="gradient-rate-help" class="gradient-help">0.001–0.5。改学习率不改写历史；点击后才应用。先用0.05，再重开比较0.2。</p>
+      <p id="gradient-rate-help" class="gradient-help">0.001至0.5。改学习率不改写历史；点击后才应用。先用0.05，再重开比较0.2。</p>
       <div class="gradient-actions"><button id="gradient-step" type="button" disabled>走一步</button><button id="gradient-ten" class="secondary" type="button" disabled>连走10步</button></div>
       <p id="gradient-input-message" class="gradient-help" role="alert" hidden></p>
       <p id="gradient-status" role="status" tabindex="-1">启用JavaScript后计算。当前还没有执行更新。</p>
@@ -30,7 +30,7 @@ description: 用12个原创合成点真实计算全批量梯度、参数更新�
       <div id="gradient-visual" hidden><svg id="gradient-fit-chart" class="gradient-chart" role="img" aria-label="原创12点教学样本与当前预测直线"></svg>
         <label class="gradient-reference"><input id="gradient-reference" type="checkbox" disabled>显示训练最小二乘参考</label><p id="gradient-reference-detail" class="gradient-help"></p>
         <details class="gradient-sample-evidence"><summary>拆开一个样本，看看误差从哪来</summary><label for="gradient-sample">选择样本，只改变观察</label><select id="gradient-sample" disabled>{% for point in site.data.gradient_samples.samples %}<option value="{{ point.id | escape }}">{{ point.id | escape }} · {% if point.split == 'train' %}训练{% else %}验证{% endif %}</option>{% endfor %}</select><p id="gradient-sample-values" class="gradient-help" role="status"></p><p id="gradient-sample-contribution" class="gradient-help"></p><p class="gradient-help">这里解释当前参数的残差与贡献。最近一次更新使用的是更新前参数；选择样本不会再训练，也不会改变下载记录。</p></details>
-        <figure class="gradient-loss-figure"><figcaption>损失随真实更新次数变化</figcaption><p class="gradient-help">纵轴为 log₁₀(1+MSE)，便于观察不同量级；数值不是百分比。实线为训练，虚线为验证。</p><svg id="gradient-loss-chart" class="gradient-chart gradient-loss-chart" role="img" aria-label="每次已执行更新的训练与验证损失轨迹"></svg></figure>
+        <figure class="gradient-loss-figure"><figcaption>损失随真实更新次数变化</figcaption><p class="gradient-help">纵轴为 log₁₀(1+MSE)，只改变显示；梯度仍用原始MSE。实线为训练，虚线为验证，数值不是百分比。</p><svg id="gradient-loss-chart" class="gradient-chart gradient-loss-chart" role="img" aria-label="每次已执行更新的训练与验证损失轨迹"></svg></figure>
       </div>
       <a href="#gradient-action-title" id="gradient-action-jump">回到更新区</a>
     </section>

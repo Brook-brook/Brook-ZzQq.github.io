@@ -3,8 +3,9 @@ import { advanceGradientRun, createGradientRun, gradientFacts, gradientReport, g
 const byId = (id) => document.getElementById(id);
 if (byId('gradient-lab')) {
   const preference = matchMedia('(prefers-reduced-motion: reduce)'), animations = new Set();
-  let state, data, redraw;
-  const format = (n) => n === null ? '—' : Math.abs(n) >= 1e5 ? n.toExponential(3) : new Intl.NumberFormat('zh-CN', { maximumFractionDigits: 5 }).format(n);
+  let state, data, redraw, renderedHistory = [];
+  const numberFormat = new Intl.NumberFormat('zh-CN', { maximumFractionDigits: 5 });
+  const format = (n) => n === null ? '—' : Math.abs(n) >= 1e5 || (n !== 0 && Math.abs(n) < 1e-4) ? n.toExponential(3) : numberFormat.format(n);
   const value = (id) => byId(id).valueAsNumber;
   const inputError = (id, bad) => byId(id).setAttribute('aria-invalid', String(bad));
   function syncInputs() {
@@ -26,8 +27,12 @@ if (byId('gradient-lab')) {
     return node;
   };
   function chartBase(svg, xMax, yMax, yMin) {
-    const width = Math.max(1, svg.clientWidth), height = Math.max(240, svg.clientHeight), font = parseFloat(getComputedStyle(svg).fontSize);
+    const width = svg.clientWidth, height = Math.max(240, svg.clientHeight), font = parseFloat(getComputedStyle(svg).fontSize);
+    if (!Number.isFinite(font) || font <= 0) return null;
     const left = Math.max(48, 3.5 * font), right = Math.max(16, font), top = 1.8 * font, bottom = 3 * font;
+    // Hidden or temporarily narrow containers have no drawable area yet.
+    // Keep the last valid plot until ResizeObserver can measure the restored box.
+    if (width <= left + right || height <= top + bottom) return null;
     const box = { left, right: width - right, top, bottom: height - bottom };
     svg.setAttribute('viewBox', `0 0 ${width} ${height}`); svg.replaceChildren();
     const px = (x) => box.left + x / xMax * (box.right - box.left), py = (y) => box.bottom - (y - yMin) / (yMax - yMin) * (box.bottom - box.top);
@@ -37,6 +42,7 @@ if (byId('gradient-lab')) {
     if (!state) return;
     const frame = state.history.at(-1), theta = frame.parameters, facts = gradientFacts(data, theta);
     const plot = byId('gradient-fit-chart'), fitted = chartBase(plot, 10, 12, -12);
+    if (!fitted) return;
     const { box, font } = fitted, x = (n) => fitted.px(n + 5), y = fitted.py;
     for (const tick of [-10, 0, 10]) {
       plot.append(svgElement('line', { x1: box.left, x2: box.right, y1: y(tick), y2: y(tick), class: 'gradient-grid' }));
@@ -61,6 +67,7 @@ if (byId('gradient-lab')) {
     plot.append(marks); plot.setAttribute('aria-label', `12个原创教学点，当前w=${format(theta.w)}，b=${format(theta.b)}。圆点训练，方点验证；不是实测地理数据。`);
     const loss = byId('gradient-loss-chart'), maximum = Math.max(1, Math.ceil(Math.max(...state.history.flatMap((r) => [Math.log10(1 + r.training_mse), Math.log10(1 + r.validation_mse)]))));
     const chart = chartBase(loss, Math.max(1, frame.iteration), maximum, 0);
+    if (!chart) return;
     for (const tick of [0, maximum / 2, maximum]) {
       loss.append(svgElement('line', { x1: chart.box.left, x2: chart.box.right, y1: chart.py(tick), y2: chart.py(tick), class: 'gradient-grid' }));
       loss.append(svgElement('text', { x: chart.box.left - chart.font * .6, y: chart.py(tick) + chart.font * .3, 'text-anchor': 'end' }, format(tick)));
@@ -92,7 +99,10 @@ if (byId('gradient-lab')) {
     byId('gradient-status').textContent = state.stop === 'numeric_limit' ? `数值边界停止。保留最后有效的${frame.iteration}次更新；被拒绝的一步没有应用。` : state.stop === 'update_budget' ? `已应用${MAX_UPDATES}次更新，到教学步数上限；这不是收敛或任务正确认证。` : frame.iteration ? `已实际应用${frame.iteration}次更新；改学习率只影响下一次。` : '第0行是起点，还没有执行更新。';
     byId('gradient-last').textContent = frame.gradient ? `最近一步：η=${format(frame.learning_rate)}，更新前梯度w=${format(frame.gradient.w)}、b=${format(frame.gradient.b)}。用同一旧参数同时更新两项。` : '预测式 ŷ = w × x + b；MSE是平均平方误差，不是准确率。';
     byId('gradient-reference-detail').textContent = `只用训练点的闭式参考：w=${format(facts.reference.w)}，b=${format(facts.reference.b)}，训练MSE=${format(facts.reference_training_mse)}。它不是已核实的现实规律。`;
-    byId('gradient-history').replaceChildren(...state.history.map((r) => tableRow([String(r.iteration), format(r.learning_rate), format(r.gradient?.w ?? null), format(r.gradient?.b ?? null), format(r.parameters.w), format(r.parameters.b), format(r.training_mse), format(r.validation_mse)], true)));
+    const history = byId('gradient-history'), start = renderedHistory[0] === state.history[0] ? renderedHistory.length : 0;
+    if (start === 0) history.replaceChildren();
+    history.append(...state.history.slice(start).map((r) => tableRow([String(r.iteration), format(r.learning_rate), format(r.gradient?.w ?? null), format(r.gradient?.b ?? null), format(r.parameters.w), format(r.parameters.b), format(r.training_mse), format(r.validation_mse)], true)));
+    renderedHistory = state.history;
     byId('gradient-samples').replaceChildren(...data.samples.map((row) => { const prediction = theta.w * row.x + theta.b; return tableRow([row.id, row.split === 'train' ? '训练' : '验证', format(row.x), format(row.y), format(prediction), format(prediction - row.y)], true); }));
     byId('gradient-rejection').hidden = !state.rejected;
     byId('gradient-rejection').textContent = state.rejected ? `拟议第${state.rejected.iteration}步越过教学数值边界，未应用；完整拟议值与训练损失保留在下载记录中。` : '';

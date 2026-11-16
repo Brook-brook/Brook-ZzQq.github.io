@@ -2,6 +2,10 @@
  * idea: one update moves the fitted line and its measured losses together · data: original synthetic teaching sample · v2.0.0 */
 
 /* Hallmark · pre-emit critique: P5 H4 E4 S4 R5 V4 · weakest: hierarchy; a single action surface faces the actual plot instead of a wall of metric cards. */
+
+/* Hallmark · finish-review: subagent · ship · 0 findings · gap: none in seven rendered app/document screens */
+
+/* Hallmark · answered F4 · The gradient primary action uses the accent fill; secondary buttons resolve --color-clear to transparent and retain only the control-edge outline in both themes. */
 .gradient-page {
   max-width: 1280px;
   margin-inline: auto;
@@ -22,6 +26,7 @@
 
 .gradient-page :is(h1, h2, h3) {
   overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .gradient-page .breadcrumbs {
@@ -165,7 +170,7 @@
 
 .gradient-values {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
   gap: var(--space-md);
   margin-block: var(--space-md);
 }

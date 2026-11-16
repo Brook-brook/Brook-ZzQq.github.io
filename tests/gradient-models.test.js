@@ -104,3 +104,23 @@ test('invalid actions and altered numerical evidence cannot become training', ()
   const altered = structuredClone(advanceGradientRun(run, 0.05)); altered.history[1].validation_mse = 0;
   assert.throws(() => validateGradientRun(altered)); assert.equal(run.history.length, 1);
 });
+test('immutable prefixes stay replayable while validated mutable copies never gain cached trust', () => {
+  for (const [learningRate, initial] of [[0.001, { w: -10, b: 10 }], [0.05, { w: 0, b: 0 }], [0.2, { w: 3, b: -4 }], [0.5, { w: 0, b: 0 }]]) {
+    let run = createGradientRun(data, initial);
+    while (!run.stop) {
+      const prior = run, length = prior.history.length;
+      run = advanceGradientRun(run, learningRate, 10);
+      assert.equal(prior.history.length, length);
+      const mutable = JSON.parse(JSON.stringify(run));
+      assert.equal(validateGradientRun(mutable), mutable, 'serialized copies receive full replay');
+      mutable.history.at(-1).training_mse += 1;
+      assert.throws(() => validateGradientRun(mutable), 'previously validated mutable objects must be checked again');
+      assert.equal(validateGradientRun(run), run);
+      assert.ok(Object.isFrozen(run.data.samples[0]) && Object.isFrozen(run.history.at(-1).parameters));
+    }
+    const shallowFrozen = Object.freeze(JSON.parse(JSON.stringify(run)));
+    validateGradientRun(shallowFrozen);
+    shallowFrozen.data.samples[0].y += 0.1;
+    assert.throws(() => validateGradientRun(shallowFrozen), 'freezing an external shell cannot forge private ownership');
+  }
+});

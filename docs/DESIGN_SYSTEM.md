@@ -84,6 +84,48 @@ explains scrolling. Keep a visible instant focus ring, native no-JS scrolling,
 large-text reflow and page-width containment. Rouge layout tables are distinct
 from semantic comparisons. No new color, blur, idle motion or runtime is needed.
 
+## Actual gradients and learning availability (Iteration 30)
+
+The AI-foundations index has four editorial groups and thirteen honest topics.
+Availability follows each heading in quiet type; real resources and explicit gaps
+replace uniform achievement cards. No locked progression or inferred completion.
+Reuse the lavender tokens, native anchors and existing dock across the index,
+actual experiment and source-grounded reading pages.
+
+Regression is an app screen: one light-glass action surface faces an unboxed
+scatter/loss stage. Shape and dash cues distinguish training/validation. SVG
+viewBoxes follow actual rendered dimensions so text stays14px at normal size.
+The loss display explicitly useslog10(1+MSE); this is not the training objective.
+Native complete tables and full-precision JSON remain available for inspection.
+
+An optional single-point lens shows actual residual, MSE contribution and current
+gradient contribution. It is an observation, not another training step. Historical
+updates retain their old-parameter gradients. Meaningful finite180ms value feedback
+starts at0.8 opacity and cancels immediately under live reduced-motion preference.
+No idle animation, additional blur stack or interpolated fictional training step.
+
+Numeric rows use a rem-aware minimum width so larger text reflows to fewer columns
+and decimals stay intact. Very small nonzero values use scientific notation. The
+first screenshots exposed inherited header/section/SVG rules; local resets protect
+the working plot and keep the initial desktop action discoverable.
+
+Only privately constructed deeply frozen runs reuse validated immutable prefixes.
+Mutable or merely shallow-frozen external records always undergo full replay.
+This reduces repeated handler work without introducing a serialized trust flag,
+changing the numerical trace or weakening downloaded-record checks.
+The native history table appends only newly applied immutable frames and resets
+for a genuinely new run. One reusable number formatter avoids constructing a
+locale formatter per table cell; this changes rendering work, not the values.
+An unmeasurable or too-narrow chart never emits negative SVG geometry. Retain the
+last valid chart while hidden, continue the actual numerical record, and redraw
+when ResizeObserver reports enough drawable space again.
+
+The sixth Python preset reuses one original standard-library source for true
+forward/backward execution. Its article uses ordinary reading hierarchy, a named
+keyboard-scrolling shape table and a genuine project action. Large-text checks
+double computed prose sizes, including legacy px rules; this is not full browser
+zoom. No-JS keyboard tests observe real ArrowRight response from the test process.
+
 ## Source of truth
 
 `assets/css/atlas-tokens.css` defines colors, font stacks, spacing, type, easing,

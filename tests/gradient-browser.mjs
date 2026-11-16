@@ -51,6 +51,7 @@ try {
     await page.goto(lab); await page.locator('#gradient-step').waitFor({ state: 'visible' });
     assert.ok(await page.locator('#gradient-step').isEnabled());
     let expected = createGradientRun(data);
+    const originalHistoryRow = await page.locator('#gradient-history tr').first().elementHandle();
     assert.deepEqual(await download(page), gradientReport(expected));
     await page.locator('#gradient-step').click(); expected = advanceGradientRun(expected, 0.05);
     assert.equal(await page.locator('#gradient-w').innerText(), '1.485');
@@ -69,6 +70,8 @@ try {
     await page.evaluate(() => scrollTo(0, 0));
     await page.screenshot({ path: `${shots}/first-${width}-${theme}.png`, fullPage: true });
     await page.locator('#gradient-ten').click(); expected = advanceGradientRun(expected, 0.05, 10);
+    assert.ok(await originalHistoryRow.evaluate((row) => row.isConnected), 'immutable earlier steps retain their existing native rows');
+    assert.equal(await page.locator('#gradient-history tr').count(), 12);
     await page.locator('#gradient-rate').fill('0.08'); await page.locator('#gradient-step').click(); expected = advanceGradientRun(expected, 0.08);
     assert.deepEqual(await download(page), gradientReport(expected));
     await page.locator('#gradient-reference').check();
@@ -101,6 +104,9 @@ try {
     assert.ok(await page.locator('#gradient-reset').isDisabled());
     assert.deepEqual(await download(page), gradientReport(expected), 'invalid initial draft is not exported as executed state');
     await reset(page, '4', '-1'); expected = createGradientRun(data, { w: 4, b: -1 });
+    assert.ok(!await originalHistoryRow.evaluate((row) => row.isConnected), 'a genuinely new run replaces the prior history');
+    await originalHistoryRow.dispose();
+    assert.equal(await page.locator('#gradient-history tr').count(), 1);
     assert.deepEqual(await download(page), gradientReport(expected));
     await reset(page); await page.locator('#gradient-rate').fill('0.5'); await page.locator('#gradient-ten').click();
     const guarded = await download(page);
@@ -113,6 +119,7 @@ try {
     assert.equal(await page.evaluate(() => document.activeElement.id), 'gradient-status', 'a button becoming disabled transfers focus to its real stop status');
     const budget = await download(page);
     assert.equal(budget.run.stop, 'update_budget'); assert.equal(budget.run.history.length, 121);
+    assert.match(await page.locator('#gradient-last').innerText(), /e-/, 'a small nonzero gradient stays visible in scientific notation');
     assert.equal(budget.run.rejected, null); assert.ok(await page.locator('#gradient-ten').isDisabled());
     assert.equal(await page.locator('#gradient-history tr').count(), 121);
     await page.getByText('每一步实际发生了什么', { exact: true }).click();
@@ -122,6 +129,16 @@ try {
     assert.equal((await new AxeBuilder({ page }).analyze()).violations.length, 0);
     assert.deepEqual(privateAccess, []); assert.deepEqual(errors, []); assert.deepEqual(missing, []);
     assert.ok(requests.every((r) => r.method === 'GET' && new URL(r.url).origin === new URL(base).origin), 'real linear training remains local and does not request a model, interpreter or private source');
+
+    await reset(page);
+    await page.locator('#gradient-plots').evaluate((node) => { node.style.display = 'none'; });
+    await page.locator('#gradient-step').click();
+    assert.equal(await page.locator('#gradient-w').innerText(), '1.485');
+    assert.equal((await download(page)).run.history.length, 2, 'a temporarily unmeasurable plot cannot drop the real update');
+    await page.locator('#gradient-plots').evaluate((node) => { node.style.removeProperty('display'); });
+    await page.waitForFunction(() => document.querySelector('#gradient-fit-chart').getAttribute('aria-label')?.includes('w=1.485'));
+    assert.ok(await page.locator('#gradient-fit-chart clipPath rect').evaluate((node) => Number(node.getAttribute('width')) > 0));
+    assert.deepEqual(errors, [], 'hiding/updating/restoring a plot never emits a negative SVG dimension');
     assert.equal(await page.locator('#gradient-values').evaluate((node) => node.getAnimations().length), 0, 'reduced motion disables numerical settle feedback');
     await context.close();
   }
@@ -140,8 +157,10 @@ try {
   const large = await browser.newContext({ viewport: { width: 320, height: 640 }, reducedMotion: 'reduce' });
   const largePage = await large.newPage(); await largePage.goto(lab);
   await largePage.evaluate(() => document.documentElement.style.fontSize = '32px');
+  await largePage.locator('#gradient-step').click();
   await largePage.waitForFunction(() => Math.abs(document.querySelector('#gradient-fit-chart').viewBox.baseVal.width - document.querySelector('#gradient-fit-chart').clientWidth) < 1);
   await chartLabelsKeepTheirSize(largePage);
+  assert.ok(await largePage.locator('.gradient-values dd').evaluateAll((nodes) => nodes.every((node) => { const range = document.createRange(); range.selectNodeContents(node); return range.getClientRects().length === 1; })), 'large-text decimals stay on one line');
   assert.ok(await largePage.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   await largePage.screenshot({ path: `${shots}/double-text-320.png`, fullPage: true }); await large.close();
 

@@ -43,7 +43,8 @@ b_new = 0 − 0.05*(−2.125) = 0.10625
 
 “完整步骤”表保存这次实际使用的学习率与梯度，下载记录还保留更新前
 参数和完整精度。界面为可读性做了小数格式化；复算请用下载中的数字，
-而不是把显示的5位小数继续当作精确输入。
+而不是把格式化小数继续当作精确输入。常规值最多显示5位小数，极大或
+极小的非零值用科学计数，避免把尚未为零的梯度显示为0。
 
 ## 为什么沿负梯度方向走 {#gradient}
 
@@ -101,6 +102,7 @@ scikit-learn的`LinearRegression`也不等于这里的手写迭代实现。
 
 散点图只显示固定观察窗，越界直线会被裁切。损失图使用
 `log10(1+MSE)`轴，便于同时看清小损失和放大的损失；刻度不是原始MSE，
+这个变换只用于显示，参数更新仍最小化原始训练MSE。
 完整表与下载始终保留原始值。圆点与方点区分训练/验证，曲线以实线与
 虚线区分，不只依靠颜色。
 
@@ -143,7 +145,7 @@ python3 run_checks.py
 
 - [Linear Models：Ordinary Least Squares](https://github.com/scikit-learn/scikit-learn/blob/1a16a519abd16444af692c841e314d32a3b52a29/doc/modules/linear_model.rst)：线性模型与残差平方目标。
 - [Stochastic Gradient Descent：简介和学习率/缩放说明](https://github.com/scikit-learn/scikit-learn/blob/1a16a519abd16444af692c841e314d32a3b52a29/doc/modules/sgd.rst)：优化方法与模型类别不同，学习率和尺度需要分清；本文不是其SGD复现。
-- [Cross-validation：开头与留出预处理段落](https://github.com/scikit-learn/scikit-learn/blob/1a16a519abd16444af692c841e314d32a3b52a29/doc/modules/cross_validation.rst)：验证与最终测试的区别。
+- [Cross-validation：留出与预处理](https://github.com/scikit-learn/scikit-learn/blob/1a16a519abd16444af692c841e314d32a3b52a29/doc/modules/cross_validation.rst)：阅读开头与留出预处理段落，区分验证与最终测试。
 
 没有复制上游实现、图片或数据集，没有新增模型服务和动画库。
 教学大纲帮助确定基础主题，独立编写的材料用于自学；章节线索不等于完整课程覆盖。

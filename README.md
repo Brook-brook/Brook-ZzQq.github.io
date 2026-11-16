@@ -20,7 +20,9 @@ trained XOR classifier. The original44 journal entries stay intact; five explici
 questions extend the optional15th route to49. Totals:31 public notes,53 curated
 connections and77 public search entries. No new runtime dependency or deployment.
 
-See [source review](docs/ml-foundations-source-review.md),
+See [delivery and validation](docs/ATLAS-ITERATION-30.md),
+[screenshots and raw evidence](docs/iteration-30/README.md),
+[source review](docs/ml-foundations-source-review.md),
 [audit](docs/design-audit-iteration-30.md), [compliance](docs/iteration-30-compliance.md)
 and [compiled preview instructions](docs/PREVIEW.md). The review PR is
 [30](https://github.com/Brook-brook/Brook-ZzQq.github.io/pull/30); it is not

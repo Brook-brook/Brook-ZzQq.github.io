@@ -2,6 +2,10 @@
  * idea: honest topic spine connects available evidence and explicit gaps · data: authored topic catalog · v2.0.0 */
 
 /* Hallmark · pre-emit critique: P5 H4 E4 S4 R5 V4 · weakest: hierarchy; resource availability follows each topic instead of becoming a badge wall. */
+
+/* Hallmark · finish-review: subagent · ship · 0 findings · gap: none in seven rendered app/document screens */
+
+/* Hallmark · waive 49b · locked design.md preserves full tutorial titles and 44px resource targets · The foundations resource index lets long article titles wrap at 320px so readers can distinguish the actual sources instead of losing their names to truncation. */
 .foundations-page {
   max-width: 1280px;
   margin-inline: auto;
@@ -15,6 +19,7 @@
 
 .foundations-page :is(h1, h2, h3) {
   overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .foundations-page .breadcrumbs {
