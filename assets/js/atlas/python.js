@@ -9,13 +9,13 @@ const byId = (id) => document.getElementById(id);
 const lab = byId('python-lab');
 if (lab) {
   const selection = byId('python-example');
-  for (const name of ['async', 'json', 'neural']) {
+  for (const name of ['async', 'json', 'neural', 'vectors']) {
     const source = byId(`python-${name}-source`)?.content?.querySelector('code')?.textContent;
     if (source?.trim()) examples[name] = source;
     else if (selection.querySelector(`[value="${name}"]`)) selection.querySelector(`[value="${name}"]`).disabled = true;
   }
   // A public initial preset, never an automatic load/run or private query.
-  const preset = { '#async-wait': 'async', '#json-contracts': 'json', '#neural-gradients': 'neural' }[location.hash];
+  const preset = { '#async-wait': 'async', '#json-contracts': 'json', '#neural-gradients': 'neural', '#lexical-vectors': 'vectors' }[location.hash];
   if (preset && examples[preset]) selection.value = preset;
   const editor = byId('python-code'),
     output = byId('python-output'),

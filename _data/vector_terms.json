@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "brook-lexical-vectors-v1",
+  "source_kind": "original_feature_registry",
+  "corpus_id": "brook-retrieval-teaching-v1",
+  "feature_policy": "nfkc-lower-nonoverlap-substrings-v1",
+  "description": "原创固定14词项，对同一虚构语料与查询做不重叠字面计数；不同词项可相互重叠。不自动分词、不扩展同义词、不调用语义模型。",
+  "vocabulary": ["记录", "保留", "空间", "试用", "正式", "备份", "预算", "提议", "派发", "调用", "请求", "超时", "执行", "重试"]
+}

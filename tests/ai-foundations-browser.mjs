@@ -12,7 +12,7 @@ const journalKey = 'brooks-universe.learning.v1', legacyRaw = await readFile('te
 const legacy = JSON.parse(legacyRaw), current = await expectedLearningIds();
 const newIds = ['ml-feature-target', 'ml-gradient-update', 'ml-learning-rate', 'ml-validation-split', 'neural-chain-rule'];
 assert.deepEqual(current.steps.slice(0, 44), Object.keys(legacy.entries), 'the fixed historical44 keep their exact order');
-assert.deepEqual(current.steps.slice(44), newIds);
+assert.deepEqual(current.steps.slice(44, 49), newIds);
 const manifest = JSON.parse(await readFile('assets/examples/linear-regression-starter.manifest.json', 'utf8'));
 await mkdir(shots, { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || (process.env.CI ? chromium.executablePath() : '/usr/bin/chromium'), args: ['--no-sandbox'] });

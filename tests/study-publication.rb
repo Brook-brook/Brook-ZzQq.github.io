@@ -17,6 +17,7 @@ require_relative "../_plugins/practice-prompt-validation"
 require_relative "../_plugins/knowledge-connections"
 require_relative "../_plugins/retrieval-data-validation"
 require_relative "../_plugins/gradient-data-validation"
+require_relative "../_plugins/vector-data-validation"
 require_relative "../_plugins/ai-foundations-validation"
 
 # A generator runs after :site/:post_read, just as an index/sitemap generator
@@ -131,6 +132,15 @@ class StudyPublicationChecks
 
   def page_path(destination, slug)
     File.join(destination, "knowledge", slug, "index.html")
+  end
+
+  def vector_fixture(source)
+    FileUtils.mkdir_p(File.join(source, "_data"))
+    %w[retrieval_samples vector_terms].each do |name|
+      FileUtils.cp(File.expand_path("../_data/#{name}.json", __dir__), File.join(source, "_data", "#{name}.json"))
+    end
+    FileUtils.cp(File.expand_path("../playground/vector-retrieval.html", __dir__), File.join(source, "vectors.html"))
+    File.write(File.join(source, "_layouts", "atlas.html"), "<!doctype html><title>{{ page.title }}</title><main>{{ content }}</main>")
   end
 
   def absent_everywhere(site, destination, slugs)
@@ -977,6 +987,88 @@ class StudyPublicationChecks
         assert(!embedded[1].include?("</script>"), "literal terminator cannot break out of JSON")
         assert(JSON.parse(embedded[1]) == data, "full safe data decodes without loss")
         assert(output.scan('<th scope="row">').length == 12, "native samples remain complete without JS")
+      end
+    end
+
+    check("the actual vector template preserves all14 lexical terms and8 source fragments safely") do
+      with_fixture do |source, destination|
+        vector_fixture(source)
+        registry = JSON.parse(File.read(File.join(source, "_data", "vector_terms.json")))
+        corpus = JSON.parse(File.read(File.join(source, "_data", "retrieval_samples.json")))
+        registry["description"] = 'Original </script><script>alert("not executed")</script> registry'
+        corpus["disclosure"] = 'Fictional </script><script>alert("not executed")</script> corpus'
+        File.write(File.join(source, "_data", "vector_terms.json"), JSON.generate(registry))
+        File.write(File.join(source, "_data", "retrieval_samples.json"), JSON.generate(corpus))
+        build(source, destination)
+        output = File.read(File.join(destination, "playground", "vector-retrieval", "index.html"))
+        {"vector-corpus-data" => corpus, "vector-registry-data" => registry}.each do |id, original|
+          embedded = output.match(/<script type="application\/json" id="#{id}">(.*?)<\/script>/m)
+          assert(!embedded.nil? && !embedded[1].include?("</script>"), "actual JSON script cannot break its element")
+          assert(JSON.parse(embedded[1]) == original, "full public input decodes without loss")
+        end
+        assert(output.scan('id="vector-source-').length == 9, "eight complete source headings and one source link")
+        assert(output.include?("不改变试用空间的7天保留期"), "full qualification remains in the native source")
+        assert(output.include?('/Brook-ZzQq.github.io/assets/examples/retrieval-vectors.zip'), "real download keeps the project prefix")
+        vocabulary = output.match(/固定词项：(.*?)。<\/p>/m)
+        assert(!vocabulary.nil? && vocabulary[1].scan("<span>").length == 14, "all14 terms remain in the native vocabulary")
+      end
+    end
+
+    check("vector registry rejects incorrect schemas, vocabularies, provenance and private fields before writing") do
+      %w[schema unknown kind identity corpus_identity policy count duplicate empty whitespace noncanonical term_bound description missing_corpus fragment_count].each do |mode|
+        with_fixture do |source, destination|
+          vector_fixture(source)
+          path = File.join(source, "_data", "vector_terms.json")
+          data = JSON.parse(File.read(path))
+          data["schema_version"] = true if mode == "schema"
+          data["private_note"] = "synthetic canary" if mode == "unknown"
+          data["source_kind"] = "semantic_embedding" if mode == "kind"
+          data["id"] = "another-model" if mode == "identity"
+          data["corpus_id"] = "another-corpus" if mode == "corpus_identity"
+          data["feature_policy"] = "word-tokenizer" if mode == "policy"
+          data["vocabulary"].pop if mode == "count"
+          data["vocabulary"][1] = data["vocabulary"][0] if mode == "duplicate"
+          data["vocabulary"][0] = "" if mode == "empty"
+          data["vocabulary"][0] = "two terms" if mode == "whitespace"
+          data["vocabulary"][0] = "Ａ" if mode == "noncanonical"
+          data["vocabulary"][0] = "x" * 25 if mode == "term_bound"
+          data["description"] = "x" * 501 if mode == "description"
+          File.write(path, JSON.generate(data))
+          FileUtils.rm(File.join(source, "_data", "retrieval_samples.json")) if mode == "missing_corpus"
+          if mode == "fragment_count"
+            corpus_path = File.join(source, "_data", "retrieval_samples.json")
+            corpus = JSON.parse(File.read(corpus_path))
+            corpus["fragments"] << corpus["fragments"].last.merge("id" => "additional-fragment")
+            File.write(corpus_path, JSON.generate(corpus))
+          end
+          begin
+            build(source, destination)
+            assert(false, "invalid vector source must fail")
+          rescue Jekyll::Errors::FatalException => error
+            assert(error.message.include?("vector registry"), "identify the actual registry contract: #{mode}")
+            assert(!File.exist?(File.join(destination, "index.html")), "reject before public writing")
+          end
+        end
+      end
+    end
+
+    check("advertised vector screen requires source but removing it leaves the original retrieval source valid") do
+      with_fixture do |source, destination|
+        vector_fixture(source)
+        build(source, destination)
+        target = File.join(destination, "playground", "vector-retrieval", "index.html")
+        assert(File.exist?(target), "first valid output exists")
+        FileUtils.rm(File.join(source, "_data", "vector_terms.json"))
+        begin
+          build(source, destination)
+          assert(false, "advertised vector screen without registry must fail")
+        rescue Jekyll::Errors::FatalException => error
+          assert(error.message.include?("vector registry"), "identify missing required registry")
+        end
+        FileUtils.rm(File.join(source, "vectors.html"))
+        site = build(source, destination)
+        assert(site.data["retrieval_samples"]["fragments"].length == 8, "existing literal corpus is retained")
+        assert(!File.exist?(target), "normal real Jekyll cleanup removes retired screen")
       end
     end
 

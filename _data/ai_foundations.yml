@@ -84,12 +84,12 @@ groups:
     topics:
       - id: language-representation
         title: 文本、检索与上下文
-        state: entry
-        scope: 字面检索与引用实验可用；词向量、Seq2Seq与注意力的完整建模课仍待补充。
+        state: practice
+        scope: 固定词项计数、TF-IDF余弦与完整引用可练；神经词向量、Seq2Seq与注意力的完整建模课仍待补充。
         question: 检索命中一个片段，为什么还要检查版本、限定条件与回答主张？
-        notes: [retrieval-evidence]
-        lab: /playground/retrieval/
-        lab_label: 选择完整证据
+        notes: [retrieval-evidence, lexical-vector-foundations, retrieval-index-boundaries]
+        lab: /playground/vector-retrieval/
+        lab_label: 拆开向量检索分数
       - id: language-models
         title: 看懂一次模型请求
         state: entry

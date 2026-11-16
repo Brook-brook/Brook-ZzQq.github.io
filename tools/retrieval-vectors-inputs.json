@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "root": "brooks-retrieval-vectors",
+  "files": [
+    {"name":"README.md","source":"_includes/retrieval-vectors/README.md"},
+    {"name":"vectors.py","source":"_includes/retrieval-vectors/vectors.py"},
+    {"name":"demo.py","source":"_includes/retrieval-vectors/demo.py"},
+    {"name":"run_checks.py","source":"_includes/retrieval-vectors/run_checks.py"},
+    {"name":"corpus.json","source":"_data/retrieval_samples.json"},
+    {"name":"registry.json","source":"_data/vector_terms.json"},
+    {"name":"NOTICE.md","source":"_includes/retrieval-vectors/NOTICE.md"},
+    {"name":"LICENSE.txt","source":"_includes/agent-starter/LICENSE.txt"},
+    {"name":"licenses/CPython-LICENSE.txt","source":"licenses/CPython-LICENSE.txt"}
+  ]
+}

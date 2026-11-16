@@ -109,6 +109,31 @@ try {
   await page.click('#python-reset'); await page.click('#python-run');
   await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行完成'));
   sameCalculation((await page.locator('#python-output').innerText()).trim().split('\n').map((line) => JSON.parse(line)), expectedNeural);
+  await page.selectOption('#python-example', 'vectors');
+  const vectorSource = await page.inputValue('#python-code');
+  const vectorLocal = spawnSync('python3', ['-I', '-S', '-B', '-c', vectorSource], { encoding: 'utf8', timeout: 10000 });
+  assert.equal(vectorLocal.status, 0, vectorLocal.stderr);
+  const expectedVectors = vectorLocal.stdout.trim().split('\n').map(line => JSON.parse(line));
+  assert.ok(vectorLocal.stdout.length < 20000, 'the real summary fits the existing output cap');
+  await page.click('#python-run');
+  await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行完成'));
+  const vectors = (await page.locator('#python-output').innerText()).trim().split('\n').map(line => JSON.parse(line));
+  sameCalculation(vectors, expectedVectors);
+  assert.deepEqual(vectors[0].ranked.map(row => row.id), ['b-retention-trial', 'c-retention-full']);
+  assert.equal(vectors[1].query_vector.norm, 0); assert.equal(vectors[1].query_vector.unit_vector, null);
+  assert.deepEqual(vectors[1].ranked, []); assert.equal(vectors[1].literal_baseline.ranked.length, 2);
+  assert.deepEqual(vectors[0].index, vectors[1].index, 'a query change never refits the actual index');
+  assert.ok(vectors.every(row => row.model_called === false));
+  const changedVectorSource = vectorSource.replace('for query in ("保留 空间", "7天"):', 'for query in ("保留 保留 空间", "7天"):');
+  assert.notEqual(changedVectorSource, vectorSource);
+  await page.fill('#python-code', changedVectorSource); await page.click('#python-run');
+  await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行完成'));
+  const changedVectors = (await page.locator('#python-output').innerText()).trim().split('\n').map(line => JSON.parse(line));
+  assert.equal(changedVectors[0].ranked[0].id, 'a-retention-old');
+  assert.deepEqual(changedVectors[0].index, vectors[0].index);
+  await page.click('#python-reset'); await page.click('#python-run');
+  await page.waitForFunction(() => document.getElementById('python-status').textContent.includes('执行完成'));
+  sameCalculation((await page.locator('#python-output').innerText()).trim().split('\n').map(line => JSON.parse(line)), expectedVectors);
   await page.fill('#python-code', 'print(1 / 0)');
   await page.click('#python-run');
   await page.waitForFunction(() =>
@@ -147,7 +172,7 @@ try {
   await page.click('#python-stop');
   assert.match(await page.locator('#python-status').innerText(), /停止并释放/);
   console.log(
-    'PASS real Pyodide in Chromium: 6 examples including real manual neural forward/gradients with CPython parity/edit/reset, JSON contracts/edit and async release/cancel, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop'
+    'PASS real Pyodide in Chromium: 7 examples including actual lexical vectors/zero-query/edit/reset and manual neural forward/gradients with CPython parity, JSON contracts/edit and async release/cancel, guarded empty mean, exception, capped output, infinite-loop timeout, reload and stop'
   );
 } finally {
   await browser.close();

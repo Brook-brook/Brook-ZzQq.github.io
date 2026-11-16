@@ -389,3 +389,37 @@
       lab: /playground/python/#neural-gradients
       lab_label: 运行前向与链式梯度
       question: chain_w00的五个因子各来自哪一步，为什么还要累加四行？identity隐藏层的logit为何可以折叠，输出sigmoid又为何仍是非线性？parameters_updated=false说明求梯度与训练更新有什么区别？
+- id: retrieval-vectors
+  title: 从词项与向量，到检索证据
+  summary: 在同一原创语料里计算固定特征、TF-IDF与余弦，保留索引快照，再回到版本和完整引用。
+  prerequisite: 会读列表、乘法与平方和即可；完整小矩阵与标准库项目可复算，不设先修锁或模型账户要求。
+  challenge: 对照原始计数与TF-IDF，解释7天为何被词表遗漏，筛选v2后核对IDF与原片段分数，并保留完整实际记录。
+  steps:
+    - id: vector-representation
+      title: 这一列，到底数了什么？
+      focus: 核对14个固定词项、标题/节名/正文范围与不重叠字面计数，辨别统计表示与语义模型。
+      note: lexical-vector-foundations
+      lab: /playground/vector-retrieval/
+      lab_label: 查看真实计数矩阵
+      question: 为什么标题中的记录和保留也进入矩阵？aaaa中a和aa分别数几次，词项能相互重叠又为何不代表自动中文分词？固定词表遗漏7天时，可以据此断言原文不存在吗？
+    - id: vector-cosine
+      title: 分数，如何一项项加出来？
+      focus: 从df和平滑自然对数IDF走到L2归一化，复算单维乘积、总和与零向量边界。
+      note: lexical-vector-foundations
+      lab: /playground/vector-retrieval/
+      lab_label: 拆开一个余弦分数
+      question: 为什么df不是词项出现总次数，N又是8而不是4？选择一条候选，核对14项归一化权重乘积如何累加；零范数的未定义为什么不能等同于非零正交向量的0分？
+    - id: vector-fit-snapshot
+      title: 去掉旧版，会改变哪一层？
+      focus: 区分全语料拟合、查询变换、候选版本筛选与实际快照，不混淆筛选和重新建索引。
+      note: retrieval-index-boundaries
+      lab: /playground/vector-retrieval/
+      lab_label: 对照全部版本与v2
+      question: 只将候选版本改成v2，为什么IDF和原片段分数应保持不变？如果改成只用v2重新建索引，又额外改变了哪些统计，为什么不能把所有排序变化都归因于候选过滤？
+    - id: vector-evidence
+      title: 相似度之后，还要核对什么？
+      focus: 把检索分数、适用版本、完整条件和回答依据分开，沿原实验保留完整引用。
+      note: retrieval-index-boundaries
+      lab: /playground/retrieval/
+      lab_label: 回到完整证据选择
+      question: 原字面命中数2与余弦0.8能直接比较优劣吗？默认问题要求v2的两种空间，旧版即使相似度高仍缺什么依据，怎样把版本和条件一起带入上下文？

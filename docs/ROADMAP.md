@@ -2,12 +2,12 @@
 
 ## Implemented in the review branch
 
-Current totals are31 notes,15 routes/49 explicit questions and77 public search
+Current totals are33 notes,16 routes/53 explicit questions and81 public search
 entries. Lower bullets retain historical counts from when each addition entered.
 
 - Home, Explore, Geo Lab, AI Lab, Code Lab, Projects, Knowledge, About.
 - Responsive navigation, persistent dark/light mode, accessible no-JS reading.
-- Thirty-one public notes/tutorials with metadata, TOC, code blocks and actual
+- Thirty-three public notes/tutorials with metadata, TOC, code blocks and actual
   experiment links when available; source-grounded research stays type-labelled.
 - Knowledge map, client-side search, category filtering and empty state.
 - Native13-topic AI-foundations map with honest resource/gap states, original
@@ -19,12 +19,17 @@ entries. Lower bullets retain historical counts from when each addition entered.
   objective, exact equality boundaries and a labelled two-player endpoint slice.
 - Four-step C++ shallow/deep copy visualization with valid lifetime semantics.
 - Spherical Mercator local scale/area experiment and labelled GIS × AI workflow.
-- Lazy Pyodide Worker with six examples, real execution, errors, output cap,
+- Lexical-vector workbench sharing the original eight fictional fragments:
+  fixed14-term counters, actual TF-IDF/L2/cosine products, same-query literal
+  baseline, complete fitted snapshots and honest zero-vector coverage limits.
+  Two original lessons and a stdlib-only download connect the optional16th route
+  to evidence selection; no semantic embedding, vector DB or model-service claim.
+- Lazy Pyodide Worker with seven examples, real execution, errors, output cap,
   stop/reload and timeout. Runtime downloads only after the visitor requests it.
 - Existing Chirpy blog/posts remain accessible; old Atlas preview routes redirect.
 - Automated model/browser checks plus an explicit build-before-deploy Pages workflow.
 - Two AI/Agent development paths, five original foundation lessons and a native
-  entry. Fifteen routes/forty-nine manual questions retain the same v1 journal.
+  entry. Sixteen routes/fifty-three manual questions retain the same v1 journal.
 - Original local/server Python request example with actual-SDK offline contract
   tests; no live model service or website API-key field.
 - Bounded script-proposed Agent-runtime exercise with real native read tools,

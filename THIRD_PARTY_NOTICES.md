@@ -499,3 +499,26 @@ to operate school accounts, upload grades or publish its full text.
 
 See [source review](docs/ml-foundations-source-review.md) and
 [iteration30 compliance](docs/iteration-30-compliance.md).
+
+## Iteration 31: explicit lexical vectors and retrieval evidence
+
+The14-term registry, two AI-assisted lessons, native workbench and original
+stdlib implementation are Brook MIT teaching work. The existing eight-fragment
+fictional manual corpus is unchanged; no real policy, news body, campus point,
+private learning record, semantic model or new runtime dependency was added.
+
+Reference reading uses scikit-learn1a16a519abd16444af692c841e314d32a3b52a29:
+TF-IDF documentation, TfidfTransformer docstring/fit/transform and cosine_similarity
+definition/implementation. Its full COPYING was actually read: BSD3-Clause,
+copyright2007–2026 the scikit-learn developers. No upstream code, examples,
+figures, dataset or weights are copied or relicensed MIT.
+
+The explicit ten-entry ZIP retains original MIT and the complete existing
+CPython license, without distributing Python or scikit-learn. Host scikit-learn
+1.8.0 was used solely as an independent numeric comparison on the same explicit
+count matrix; it is not a website/download dependency. Its zero-vector convention
+differs deliberately. The seventh browser Python preset reuses our canonical
+core through an escaped inert template; Pyodide0.27.7 stays manual-load only.
+
+See [source review](docs/lexical-vectors-source-review.md) and
+[iteration31 compliance](docs/iteration-31-compliance.md).

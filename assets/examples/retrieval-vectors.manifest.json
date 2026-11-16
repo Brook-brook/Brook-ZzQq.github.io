@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "kind": "brook-retrieval-vectors",
+  "root": "brooks-retrieval-vectors",
+  "files": [
+    {
+      "name": "README.md",
+      "source": "_includes/retrieval-vectors/README.md",
+      "sha256": "563a3766a6975fcdaded9f4b3acd5a48fc1ea37f18bbd042ccbc49db22af9107",
+      "bytes": 3010
+    },
+    {
+      "name": "vectors.py",
+      "source": "_includes/retrieval-vectors/vectors.py",
+      "sha256": "7ae65bef313bad3ec1831931834a9642d1c0c92a6dc9ce90e6dd326071da137a",
+      "bytes": 12929
+    },
+    {
+      "name": "demo.py",
+      "source": "_includes/retrieval-vectors/demo.py",
+      "sha256": "c0634946e1e88d612ce861ca228248f38e0d3af36d02ac3a57b7a2b0974f9cd3",
+      "bytes": 1554
+    },
+    {
+      "name": "run_checks.py",
+      "source": "_includes/retrieval-vectors/run_checks.py",
+      "sha256": "0e4e7ddad5ed4d4893fea682c697556f0ed5effb078743a38bff59eb7016f52c",
+      "bytes": 6961
+    },
+    {
+      "name": "corpus.json",
+      "source": "_data/retrieval_samples.json",
+      "sha256": "91184b1b35234b4c3fc8c65f01358f6e3b8ec2e9d64599467a4b04b066717d2e",
+      "bytes": 4717
+    },
+    {
+      "name": "registry.json",
+      "source": "_data/vector_terms.json",
+      "sha256": "94cea8654d0ba375a2e2d0e0e47f5ded0dc2a50f8570d9f4c44064a69305a462",
+      "bytes": 565
+    },
+    {
+      "name": "NOTICE.md",
+      "source": "_includes/retrieval-vectors/NOTICE.md",
+      "sha256": "4b53da1f9a41f92c7ed5aeb15ae0a5aaf6dccc25b6b7e4e17d8f14835cb63f1e",
+      "bytes": 1620
+    },
+    {
+      "name": "LICENSE.txt",
+      "source": "_includes/agent-starter/LICENSE.txt",
+      "sha256": "13ed684a76a34c04b5b39049f97e497a054e25a89abd1db2ce975daef69ced6e",
+      "bytes": 1062
+    },
+    {
+      "name": "licenses/CPython-LICENSE.txt",
+      "source": "licenses/CPython-LICENSE.txt",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936
+    }
+  ],
+  "archive": {
+    "path": "assets/examples/retrieval-vectors.zip",
+    "sha256": "9dac3999e356e46c4fa2a14c06fa501543320fde80f7b4ac3b8848198a2b76af",
+    "bytes": 18782
+  }
+}
