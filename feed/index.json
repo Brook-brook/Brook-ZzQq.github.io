@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-15T22:17:10.085Z",
+  "attempted_at": "2026-11-16T00:18:52.882Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 231,
+  "total": 233,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-15T22:17:10.085Z",
-      "last_success_at": "2026-11-15T22:17:10.085Z",
+      "attempted_at": "2026-11-16T00:18:52.882Z",
+      "last_success_at": "2026-11-16T00:18:52.882Z",
       "accepted": 0,
       "invalid": 0,
       "limited": false,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-15T22:17:10.085Z",
-      "last_success_at": "2026-11-15T22:17:10.085Z",
+      "attempted_at": "2026-11-16T00:18:52.882Z",
+      "last_success_at": "2026-11-16T00:18:52.882Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-15T22:17:10.085Z",
-      "last_success_at": "2026-11-15T22:17:10.085Z",
+      "attempted_at": "2026-11-16T00:18:52.882Z",
+      "last_success_at": "2026-11-16T00:18:52.882Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-15T22:17:10.085Z",
-      "last_success_at": "2026-11-15T22:17:10.085Z",
+      "attempted_at": "2026-11-16T00:18:52.882Z",
+      "last_success_at": "2026-11-16T00:18:52.882Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -103,9 +103,9 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "ok",
-      "attempted_at": "2026-11-15T22:17:10.085Z",
-      "last_success_at": "2026-11-15T22:17:10.085Z",
+      "status": "not_modified",
+      "attempted_at": "2026-11-16T00:18:52.882Z",
+      "last_success_at": "2026-11-16T00:18:52.882Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-15T22:17:10.085Z",
+      "attempted_at": "2026-11-16T00:18:52.882Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-15T22:17:10.085Z",
-      "last_success_at": "2026-11-15T22:17:10.085Z",
+      "attempted_at": "2026-11-16T00:18:52.882Z",
+      "last_success_at": "2026-11-16T00:18:52.882Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-2e8f421d2ee2a3dfd36bfcc5be1c93ba1a42b98e60398a99d5e21362ce523fd9",
+      "source_id": "openai-news",
+      "title": "A step toward defining the Standard Model on a lattice",
+      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-15T22:00:01.000Z",
+      "updated_at": null,
+      "published_raw": "Sun, 15 Nov 2026 22:00:01 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-16T00:18:52.882Z",
+      "changed_at": "2026-11-16T00:18:52.882Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-33b95c2112c46efd095543028e60f6116680e85e464182b74c65e43667746d78",
+      "source_id": "openai-news",
+      "title": "Our new blog for science",
+      "url": "https://openai.com/index/our-new-blog-for-science",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-15T22:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Sun, 15 Nov 2026 22:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-16T00:18:52.882Z",
+      "changed_at": "2026-11-16T00:18:52.882Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-901fe109e244531442505ec3f1f98b1d84eac6b54a0d39832f1cb4d01f997e11",
       "source_id": "un-news",
@@ -1206,48 +1242,12 @@
       "changed_at": "2026-11-13T08:19:01.096Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-eef01a785311fec48e3867245af2e648727b16ece1790ba5394212f4bd8bbe1b",
-      "source_id": "arxiv-ai",
-      "title": "AutoAssumption: Searching over Assumptions Discovers ML-Systems Algorithms",
-      "url": "https://arxiv.org/abs/2611.14844",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-13T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Fri, 13 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-13T08:19:01.096Z",
-      "changed_at": "2026-11-13T08:19:01.096Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-efc149437fd597e4a1cfa7a4b97b0a50a8c834c134a3e1819ebea87d11b51cd5",
-      "source_id": "arxiv-ai",
-      "title": "Incentive-Responsive Agents: A Principal-Agent Framework, Metric Suite, and Runtime Architecture for Long-Lived Personal AI Agents",
-      "url": "https://arxiv.org/abs/2611.15515",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-13T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Fri, 13 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-13T08:19:01.096Z",
-      "changed_at": "2026-11-13T08:19:01.096Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-16",
-      "count": 1,
+      "count": 3,
       "path": "archive/2026-11-16.json"
     },
     {
@@ -1272,21 +1272,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-15T04:16:04.867Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 230,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-15T06:14:53.721Z",
       "status": "partial",
@@ -1385,6 +1370,21 @@
       "additions": 0,
       "revisions": 0,
       "total": 231,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T00:18:52.882Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 233,
       "failed_sources": [
         {
           "id": "europarl-news",

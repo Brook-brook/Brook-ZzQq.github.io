@@ -19,6 +19,42 @@
       "changed_at": "2026-11-15T20:14:25.220Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-2e8f421d2ee2a3dfd36bfcc5be1c93ba1a42b98e60398a99d5e21362ce523fd9",
+      "source_id": "openai-news",
+      "title": "A step toward defining the Standard Model on a lattice",
+      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-15T22:00:01.000Z",
+      "updated_at": null,
+      "published_raw": "Sun, 15 Nov 2026 22:00:01 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-16T00:18:52.882Z",
+      "changed_at": "2026-11-16T00:18:52.882Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-33b95c2112c46efd095543028e60f6116680e85e464182b74c65e43667746d78",
+      "source_id": "openai-news",
+      "title": "Our new blog for science",
+      "url": "https://openai.com/index/our-new-blog-for-science",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-15T22:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Sun, 15 Nov 2026 22:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-16T00:18:52.882Z",
+      "changed_at": "2026-11-16T00:18:52.882Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
