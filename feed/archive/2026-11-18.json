@@ -109,6 +109,42 @@
       "changed_at": "2026-11-17T18:11:29.888Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-c445ee26f942e340fa099e842626e5982badf2e0a0908d946febe10090d9faa9",
+      "source_id": "un-news",
+      "title": "COP31: The push to protect warming oceans reaches the negotiating table",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168824",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-17T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-17T20:18:53.359Z",
+      "changed_at": "2026-11-17T20:18:53.359Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-1f968809e74611d90069cbf7de409df526f842bef1b75d7d268957a6f1c12ed9",
+      "source_id": "un-news",
+      "title": "Haiti: ‘Atrocious abuses’ continue as UN warns anti-gang operations must priortise civilian protection",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168823",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-17T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-17T20:18:53.359Z",
+      "changed_at": "2026-11-17T20:18:53.359Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
