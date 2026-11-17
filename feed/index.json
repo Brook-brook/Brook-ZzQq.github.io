@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-17T20:18:53.359Z",
+  "attempted_at": "2026-11-17T22:19:09.786Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 365,
+  "total": 367,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-17T20:18:53.359Z",
-      "last_success_at": "2026-11-17T20:18:53.359Z",
+      "attempted_at": "2026-11-17T22:19:09.786Z",
+      "last_success_at": "2026-11-17T22:19:09.786Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T20:18:53.359Z",
-      "last_success_at": "2026-11-17T20:18:53.359Z",
+      "attempted_at": "2026-11-17T22:19:09.786Z",
+      "last_success_at": "2026-11-17T22:19:09.786Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T20:18:53.359Z",
-      "last_success_at": "2026-11-17T20:18:53.359Z",
+      "attempted_at": "2026-11-17T22:19:09.786Z",
+      "last_success_at": "2026-11-17T22:19:09.786Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-17T20:18:53.359Z",
-      "last_success_at": "2026-11-17T20:18:53.359Z",
+      "attempted_at": "2026-11-17T22:19:09.786Z",
+      "last_success_at": "2026-11-17T22:19:09.786Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -103,14 +103,14 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-17T20:18:53.359Z",
-      "last_success_at": "2026-11-17T20:18:53.359Z",
+      "status": "ok",
+      "attempted_at": "2026-11-17T22:19:09.786Z",
+      "last_success_at": "2026-11-17T22:19:09.786Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794934524-gzip\"",
-      "last_modified": "Tue, 17 Nov 2026 16:55:24 GMT",
+      "etag": "\"1794951489-gzip\"",
+      "last_modified": "Tue, 17 Nov 2026 21:38:09 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-17T20:18:53.359Z",
+      "attempted_at": "2026-11-17T22:19:09.786Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T20:18:53.359Z",
-      "last_success_at": "2026-11-17T20:18:53.359Z",
+      "attempted_at": "2026-11-17T22:19:09.786Z",
+      "last_success_at": "2026-11-17T22:19:09.786Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-ca5eab4f8a8271cecb211e1632894da93a4b370199e1c61c88bcde5d6d20721e",
+      "source_id": "un-news",
+      "title": "World News in Brief: Ebola cases double in DR Congo, chemical exposure starts before birth, Türk concern over EU-Rwanda transfer plan",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168827",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-17T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-17T22:19:09.786Z",
+      "changed_at": "2026-11-17T22:19:09.786Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-cff41e40b9a1a96b64c0d6a52a4e6ffacb92f662112aa72bfd6abaf2f654bd87",
+      "source_id": "un-news",
+      "title": "Ukraine: Civilian casualties in 2026 already far exceed previous years’ tolls",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168828",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-17T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-17T22:19:09.786Z",
+      "changed_at": "2026-11-17T22:19:09.786Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-1f968809e74611d90069cbf7de409df526f842bef1b75d7d268957a6f1c12ed9",
       "source_id": "un-news",
@@ -1196,58 +1232,12 @@
       "changed_at": "2026-11-17T10:14:35.424Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-fbabac9870ad28769284fcd425361b3ddfa1197c29dfc31b7b9250379d44b8ef",
-      "source_id": "arxiv-ai",
-      "title": "When Does Confidence Reveal Problem Difficulty?",
-      "url": "https://arxiv.org/abs/2611.19173",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-17T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-17T10:14:35.424Z",
-      "changed_at": "2026-11-17T10:14:35.424Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-04234be9f8573efb0afce7fbf8bc40f0723ccfff0388360b6937c6ae88ef2e5b",
-      "source_id": "arxiv-ai",
-      "title": "LLM-Guided Cluster Lifecycle Management: Deciding When and How to Evolve Behavioral Clusters",
-      "url": "https://arxiv.org/abs/2611.17616",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-17T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-17T08:23:04.873Z",
-      "revision_count": 1,
-      "previous_versions": [
-        {
-          "title": "LLM-Guided Cluster Lifecycle Management: Deciding When and How to Evolve Behavioral Clusters",
-          "url": "https://arxiv.org/abs/2611.17616",
-          "published_at": "2026-11-16T05:00:00.000Z",
-          "updated_at": null,
-          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
-          "date_warning": null,
-          "changed_at": "2026-11-16T08:27:47.161Z"
-        }
-      ]
     }
   ],
   "archives": [
     {
       "date": "2026-11-18",
-      "count": 8,
+      "count": 10,
       "path": "archive/2026-11-18.json"
     },
     {
@@ -1282,21 +1272,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-16T14:24:44.408Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 1,
-      "revisions": 0,
-      "total": 287,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-17T08:23:04.873Z",
       "status": "partial",
@@ -1395,6 +1370,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 365,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-17T22:19:09.786Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 367,
       "failed_sources": [
         {
           "id": "europarl-news",
