@@ -1243,6 +1243,24 @@
       "changed_at": "2026-11-17T10:14:35.424Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-3b3be741a87f5e2153e626602817efd9dcc9c3fb90f3d3d29d39838acce03d65",
+      "source_id": "openai-news",
+      "title": "Introducing OpenAI for Chile",
+      "url": "https://openai.com/index/introducing-openai-for-chile",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-17T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-17T14:15:54.503Z",
+      "changed_at": "2026-11-17T14:15:54.503Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
