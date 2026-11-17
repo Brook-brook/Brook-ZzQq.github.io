@@ -633,6 +633,31 @@
   pinned-source scope. Compare Python/JS traces with numerical tolerance, not
   bitwise or framework-equivalence claims. Real Pyodide execution is separate
   from rendered source equality and actual CPython CLI execution.
+
+## Explicit lexical vectors (Iteration 31)
+
+- Preserve the original retrieval corpus. The registry has14 explicit normalized
+  terms; counting title/section/text uses NFKC/lowercase nonoverlapping literal
+  substrings per feature. Different features may overlap. This is neither Chinese
+  segmentation nor a neural embedding, model response or universal semantic score.
+- Fit the full eight-fragment matrix first. Queries and candidate-version filters
+  do not change df/IDF. Raw count or ln((N+1)/(df+1))+1 weights both get L2
+  normalization. Keep undefined zero-norm cosine null, distinct from a defined0;
+  sort positive candidates by score and ASCII IDs. Literal-baseline units differ.
+- Downloads retain complete actual public inputs, applied query, matrix and
+  scores, with numerical replay/tamper checks; viewing a fragment is not another
+  fit or report field. Draft edits preserve applied results but block stale
+  export. No query URL/history/private-journal access or inference request.
+- The original stdlib core is shared by the ten-entry ZIP and escaped seventh
+  Python preset #lexical-vectors. Generate/check only --profile vectors. Preserve
+  all eight old ZIP bytes and six earlier presets/manual runtime controls.
+  Browser output is an explicitly bounded summary; full matrices remain in the
+  dedicated workbench and CLI. Real Pyodide and extracted CPython are separate
+  checks; numeric tolerance and zero-vector conventions must stay explicit.
+- Append four permanent IDs after the historical49, for53/16 routes. Preserve
+  exact old49 raw/export on both worksheets and the existing v1 key/schema.
+  Only explicit new entries extend it. Actual source/weight tables remain native
+  keyboard scroll groups; computed-font doubling must keep bars/decimals legible.
 - No-JS keyboard-scroll checks observe real ArrowRight results from the test
   process; never set scrollLeft to make a check pass. Large-text tests must double
   actual computed prose fonts, including inherited px rules. DOM font scaling is

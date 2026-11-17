@@ -10,7 +10,7 @@ description: 从Python/JSON与HTTP基础走向工具、Agent循环、检索证�
 <div class="ai-learning-page">
   <nav class="breadcrumbs" aria-label="面包屑"><a href="{{ '/study/' | relative_url }}">Study</a><span aria-hidden="true">/</span><span>AI 与 Agent 开发</span></nav>
   <header class="ai-learning-intro">
-    <div><h1>把 AI，做成能验收的小应用。</h1><p>先写清任务，再理解请求、工具与证据。两条可以随时进入的路线，把“能跑”慢慢变成“知道哪里做对了”。</p><nav class="ai-learning-jumps" aria-label="本页路线"><a href="{{ '/study/ai-foundations/' | relative_url }}">补机器学习基础</a><a href="#ai-development">从 AI 开发开始</a><a href="#agent-development">进入 Agent 开发</a><a href="#agent-workshop">搭一个小项目</a><a href="#api-foundations">补接口基础</a></nav></div>
+    <div><h1>把 AI，做成能验收的小应用。</h1><p>先写清任务，再理解请求、工具与证据。两条可以随时进入的路线，把“能跑”慢慢变成“知道哪里做对了”。</p><nav class="ai-learning-jumps" aria-label="本页路线"><a href="{{ '/study/ai-foundations/' | relative_url }}">补机器学习基础</a><a href="#ai-development">从 AI 开发开始</a><a href="#agent-development">进入 Agent 开发</a><a href="#agent-workshop">搭一个小项目</a><a href="#api-foundations">补接口基础</a><a href="{{ '/study/paths/#retrieval-vectors' | relative_url }}">词项与向量基础</a></nav></div>
     <aside class="ai-learning-start glass-light"><img src="{{ '/assets/img/atlas/mote.svg' | relative_url }}" width="40" height="40" alt=""><h2>不必先有 API Key。</h2><p>从 Python 函数和 JSON 开始。工具实验在本机运行，无模型账号也可操作。</p><a href="{{ '/playground/tool-calling/' | relative_url }}">先操作一次本地工具</a></aside>
   </header>
   <section id="api-foundations" class="ai-learning-method ai-foundations" aria-labelledby="api-foundations-title">
@@ -25,6 +25,7 @@ description: 从Python/JSON与HTTP基础走向工具、Agent循环、检索证�
       <p class="ai-learning-prerequisite">基础项目只需Python3.11+标准库，无pip或模型Key。网页共享JSON核心；HTTP与带sqlite3的进程练习须在自己的本机运行。</p>
     </div>
   </section>
+  <nav class="ai-learning-links" aria-label="词项与向量学习入口"><a href="{{ '/playground/vector-retrieval/' | relative_url }}">逐项计算TF-IDF与余弦</a><a href="{{ '/knowledge/lexical-vector-foundations/' | relative_url }}">先读词项与向量原理</a><a href="{{ '/knowledge/retrieval-index-boundaries/' | relative_url }}">核对索引与证据边界</a></nav>
   <div class="ai-learning-routes">
     {% assign ai_path = site.data.learning_paths | where: 'id', 'ai-development' | first %}
     {% assign agent_path = site.data.learning_paths | where: 'id', 'agent-development' | first %}
@@ -49,5 +50,5 @@ description: 从Python/JSON与HTTP基础走向工具、Agent循环、检索证�
       <div class="ai-learning-links"><a href="{{ '/assets/examples/agent-starter.zip' | relative_url }}" download="brook-agent-starter.zip">下载直接函数练习包</a><a href="{{ '/study/paths/#agent-building' | relative_url }}">搭建路线与本机手记</a></div>
     </div>
   </section>
-  <section class="ai-learning-method" aria-labelledby="ai-method-title"><h2 id="ai-method-title">学原理，也保留来路。</h2><div><p>新笔记由 AI 辅助、独立整理，正文列出官方资料的固定提交与核对范围。原理课参考核对日为 <time datetime="2026-11-13">2026-11-13</time>，接口与恢复基础为 <time datetime="2026-11-15">2026-11-15</time>；不是实时新闻或模型能力认证。</p><p>标准库与默认离线练习无需模型Key。单独的模型请求例子才需要自己配置有权限的客户端与账户；真实SDK假响应、本机HTTP和浏览器Python各有对应范围，API Key不进入网页。</p><p>想继续分清工具、工作指引与协议，可读 <a href="{{ '/knowledge/skills-mcp-boundaries/' | relative_url }}">Tool、Skill与MCP：该改哪一层？</a>。这是可选辨析，不增加解锁条件。</p><div class="ai-learning-links"><a href="{{ '/knowledge/model-request-contracts/#example' | relative_url }}">本地请求例子与运行条件</a><a href="{{ '/observatory/' | relative_url }}">继续读前沿资料</a><a href="{{ '/knowledge/' | relative_url }}">查看笔记间的理由</a></div></div></section>
+  <section class="ai-learning-method" aria-labelledby="ai-method-title"><h2 id="ai-method-title">学原理，也保留来路。</h2><div><p>新笔记由 AI 辅助、独立整理，正文列出官方资料的固定提交与核对范围。原理课参考核对日为 <time datetime="2026-11-13">2026-11-13</time>，接口与恢复基础为 <time datetime="2026-11-15">2026-11-15</time>；不是实时新闻或模型能力认证。词项与向量资料核对日为<time datetime="2026-11-16">2026-11-16</time>，统计组件范围在对应笔记单列。</p><p>标准库与默认离线练习无需模型Key。单独的模型请求例子才需要自己配置有权限的客户端与账户；真实SDK假响应、本机HTTP和浏览器Python各有对应范围，API Key不进入网页。</p><p>想继续分清工具、工作指引与协议，可读 <a href="{{ '/knowledge/skills-mcp-boundaries/' | relative_url }}">Tool、Skill与MCP：该改哪一层？</a>。这是可选辨析，不增加解锁条件。</p><div class="ai-learning-links"><a href="{{ '/knowledge/model-request-contracts/#example' | relative_url }}">本地请求例子与运行条件</a><a href="{{ '/observatory/' | relative_url }}">继续读前沿资料</a><a href="{{ '/knowledge/' | relative_url }}">查看笔记间的理由</a></div></div></section>
 </div>

@@ -1,0 +1,133 @@
+Actual Hallmark2.0.0: final5URLs + separately scoped foundationsURL =30 rendered frames. Foundations preserves the existing design.md full-title waiver. F4 recipes resolve to a transparent token and are explicitly answered. Inherited atlas.css source debt is tracked separately.
+
+=== work/iteration31/hallmark-screens-final.json ===
+{
+  "summary": {
+    "fails": 0,
+    "reflex": 0,
+    "warns": 0,
+    "waived": 0,
+    "rejected": 0,
+    "answered": 1,
+    "dismissed": 0,
+    "notes": 0,
+    "files": 1,
+    "render": "ran"
+  },
+  "findings": [
+    {
+      "gate": "F4",
+      "grade": "ANSWERED",
+      "tier": "finish",
+      "file": "assets/css/vector-retrieval.css",
+      "line": 172,
+      "evidence": "2 filled primary-button recipes: .vector-examples button + .vector-page .vector-cand…",
+      "fix": "One filled primary per page; demote the rest to outline/quiet variants"
+    }
+  ]
+}
+
+=== work/iteration31/hallmark-screens-final.stderr ===
+render tier: 25 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+
+=== work/iteration31/hallmark-foundations.json ===
+{
+  "summary": {
+    "fails": 0,
+    "reflex": 0,
+    "warns": 0,
+    "waived": 9,
+    "rejected": 0,
+    "answered": 0,
+    "dismissed": 0,
+    "notes": 0,
+    "files": 1,
+    "render": "ran"
+  },
+  "findings": [
+    {
+      "gate": "49b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"模型之外，一个 AI 应用还需要什么？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"读 AI 论文：从排行榜到可检验的证据\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"用 Python 把一个问题拆成输入与输出\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"第一次模型调用，除了 prompt 还有什么？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"换一个区域，模型成绩还说明什么？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"验收自己的 Agent：先测契约，再测任务\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"RAG：找到资料之后，仍要核对什么？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"索引变了，分数还能直接比吗？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"Tool、Skill、MCP：下一步该改哪一层？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    }
+  ]
+}
+
+=== work/iteration31/hallmark-foundations.stderr ===
+render tier: 5 screenshots in /workspace/Brook-ZzQq.github.io/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)

@@ -1,0 +1,75 @@
+Actual extracted/downloaded standard-library projects and actual browser interpreter; no model inference. The311 run uses normal script imports with no path injection.
+
+=== work/iteration31/numerics-complete.txt ===
+✔ an independent three-row count matrix reproduces smoothed IDF and exact L2/dot arithmetic (9.489131ms)
+✔ count mode applies unity weights and defined orthogonality differs from a zero vector (3.05615ms)
+✔ literal counters are non-overlapping within a feature, permit cross-feature overlap and normalize the same way (0.799946ms)
+✔ version selection and query changes never refit the source snapshot (13.277445ms)
+✔ reweighting one query feature can rank the actual old version first without making it applicable (2.416154ms)
+✔ a term outside the registry can match the original literal retriever without gaining vector coverage (2.260276ms)
+✔ score ties follow ASCII fragment IDs and requested k can exceed positive candidates (0.683154ms)
+✔ the current vocabulary and complete per-feature contributions are inspectable without changing the run (15.291844ms)
+✔ malformed settings/registries and altered numerical records cannot become exported evidence (7.764103ms)
+✔ nonfinite replacements cannot masquerade as the null result of an undefined cosine (7.013927ms)
+✔ the exact vector ZIP runs ten real stdlib checks/five CLIs and matches complete JavaScript calculations within tolerance (342.617774ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 613.289887
+
+=== work/iteration31/python311-first.txt ===
+test_bounds_types_and_complete_record_replay (__main__.VectorChecks.test_bounds_types_and_complete_record_replay) ... ok
+test_contributions_sum_to_actual_score (__main__.VectorChecks.test_contributions_sum_to_actual_score) ... ok
+test_count_mode_and_unit_length (__main__.VectorChecks.test_count_mode_and_unit_length) ... ok
+test_display_filter_and_query_never_refit (__main__.VectorChecks.test_display_filter_and_query_never_refit) ... ok
+test_fixed_feature_counts_and_normalization (__main__.VectorChecks.test_fixed_feature_counts_and_normalization) ... ok
+test_hand_matrix_and_smoothed_idf (__main__.VectorChecks.test_hand_matrix_and_smoothed_idf) ... ok
+test_json_duplicate_nonfinite_and_unicode_policy (__main__.VectorChecks.test_json_duplicate_nonfinite_and_unicode_policy) ... ok
+test_missing_feature_coverage_keeps_literal_hits (__main__.VectorChecks.test_missing_feature_coverage_keeps_literal_hits) ... ok
+test_ties_and_absent_feature_df (__main__.VectorChecks.test_ties_and_absent_feature_df) ... ok
+test_zero_vectors_are_not_orthogonality (__main__.VectorChecks.test_zero_vectors_are_not_orthogonality) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.124s
+
+OK
+
+{"python": "Python 3.11.18", "archive_sha256": "9dac3999e356e46c4fa2a14c06fa501543320fde80f7b4ac3b8848198a2b76af", "entries": 10, "checks": 10, "real_cli_cases": 5, "network": "none", "root_and_project": "read-only", "user": "nonroot", "local_imports": "ordinary script directory; no injected path"}
+
+=== work/iteration31/http-download/result.json ===
+{
+  "download_sha256": "9dac3999e356e46c4fa2a14c06fa501543320fde80f7b4ac3b8848198a2b76af",
+  "entries": 10,
+  "python": "Python 3.12.14",
+  "fresh_venv": "stdlib only; no pip/packages/path injection",
+  "runs": [
+    {
+      "command": "python demo.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python demo.py --case count",
+      "exit_code": 0
+    },
+    {
+      "command": "python demo.py --case gap",
+      "exit_code": 0
+    },
+    {
+      "command": "python run_checks.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python demo.py --case all",
+      "exit_code": 0
+    }
+  ]
+}
+
+=== work/iteration31/sklearn-oracle.txt ===
+Actual independent reference scikit-learn 1.8.0 same given count matrix; not a segmentation/semantic-model test
+{"result": "PASS", "defined_cosines_compared": 128, "zero_vector_convention_cases": 96, "max_absolute_cosine_error": 2.220446049250313e-16, "reference_version": "1.8.0", "scope": "28 runs,8 original rows,14 exact features; zero norm is null here and0 in library; no external model/network, no library copied into project"}

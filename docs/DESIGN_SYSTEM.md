@@ -126,6 +126,26 @@ keyboard-scrolling shape table and a genuine project action. Large-text checks
 double computed prose sizes, including legacy px rules; this is not full browser
 zoom. No-JS keyboard tests observe real ArrowRight response from the test process.
 
+## An inspectable retrieval score (Iteration 31)
+
+One light-glass operation surface and its ranked candidates face an unboxed
+cosine stage. The number decomposes into actual per-feature products; zero
+contributions and the full count/weight/unit-vector tables are native details,
+not repeated cards or invented semantic strength. A selected fragment always
+retains its document version, complete condition and real source anchor.
+
+The first screenshots exposed a full-width form separating action and result.
+The revised desktop keeps both in the1280×800 fold; phone selection deliberately
+focuses the evidence heading with nearby return links. Actual doubled computed
+fonts exposed tiny bars on320px, so narrow screens put bars on their own full
+row and preserve decimal strings. Finite180ms opacity feedback only responds to
+explicit calculations/selections and cancels live under reduced motion.
+
+Query edits preserve the last applied record, disable stale downloads and state
+what still needs applying. Empty vectors explain a missing feature rather than
+claiming the source does not exist. The original Mote appears only in this
+meaningful empty state. No new palette, font, blur stack or idle motion.
+
 ## Source of truth
 
 `assets/css/atlas-tokens.css` defines colors, font stacks, spacing, type, easing,

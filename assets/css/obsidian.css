@@ -294,6 +294,12 @@ body:not(.campus-app) .eyebrow {
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.site-footer > div {
+  min-width: 0;
+  max-width: 100%;
 }
 .site-footer > div:nth-child(2) {
   display: flex;

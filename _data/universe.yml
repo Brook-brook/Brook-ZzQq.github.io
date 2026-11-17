@@ -34,6 +34,11 @@ preview_notes:
       均衡不等于社会最优。
 updates:
   - date: "2026-11-16"
+    title: 把检索分数，一项项算清
+    text: 开发分支复用同一份原创虚构语料，真实计算词项、TF-IDF与余弦；四个自检问题接回版本和完整证据，待审查发布。
+    label: 打开词项与向量实验
+    url: /playground/vector-retrieval/
+  - date: "2026-11-16"
     title: 从AI基础，走到一次真实参数更新
     text: 开发分支新增基础学习地图与原创合成点梯度实验；明确已有资源和后续主题，训练记录可复算，待审查发布。
     label: 打开AI基础学习地图

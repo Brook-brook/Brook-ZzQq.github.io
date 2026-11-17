@@ -266,3 +266,33 @@ links:
     to: ai-evaluation-basics
     kind: extend
     reason: 二元交叉熵与sigmoid输出提供训练目标和模型输出；阈值后的分类指标、校准与未见数据表现仍需分别检查，四个逻辑算例不构成真实评测。
+  - id: retrieval-lexical-vectors
+    from: retrieval-evidence
+    to: lexical-vector-foundations
+    kind: extend
+    reason: 把候选排序的数值拆成明确词项、IDF与归一化乘积，保留原字面实验，再区分统计表示与语义模型。
+  - id: vector-index-snapshot
+    from: lexical-vector-foundations
+    to: retrieval-index-boundaries
+    kind: extend
+    reason: 同一坐标列的权重取决于拟合语料；用版本过滤与完整记录分清查询、索引和候选变化，避免只比较一个分数。
+  - id: vector-back-to-evidence
+    from: retrieval-index-boundaries
+    to: retrieval-evidence
+    kind: compare
+    reason: 可复算的检索分数仍需要核对适用版本和完整条件，回到原实验组织带限定的引用，不把索引快照当成答案认证。
+  - id: task-loss-vector-features
+    from: ml-task-loss
+    to: lexical-vector-foundations
+    kind: compare
+    reason: 输入如何表示与监督训练最小化哪一项是不同选择；固定词项统计形成索引，不等于一元回归梯度更新或语义模型服务。
+  - id: agent-test-index-component
+    from: agent-testing-contracts
+    to: retrieval-index-boundaries
+    kind: extend
+    reason: 先验证词项计数、拟合范围和重放契约，再评估共同任务下的检索与证据，不能由组件通过推断Agent整体正确。
+  - id: neural-vs-lexical-vector
+    from: neural-chain-rule
+    to: lexical-vector-foundations
+    kind: compare
+    reason: 两者都产生数值向量，但固定词项计数与小网络前向/链式梯度的构造和验收不同；不把稀疏词项分数写成已调用语义编码器。

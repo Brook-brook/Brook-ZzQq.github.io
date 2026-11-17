@@ -23,6 +23,7 @@ PROFILES = {
     "restart": ("agent-restart", "brooks-agent-restart", "brook-agent-restart"),
     "regression": ("linear-regression-starter", "brooks-linear-regression", "brook-linear-regression"),
     "neural": ("neural-basics", "brooks-neural-basics", "brook-neural-basics"),
+    "vectors": ("retrieval-vectors", "brooks-retrieval-vectors", "brook-retrieval-vectors"),
 }
 TOOL_FUNCTIONS = {"text", "catalog_snapshot", "unique_object", "checked_call", "distance", "execute_read_tool", "tool_schemas"}
 TOOL_CONSTANTS = {"CATEGORIES", "RADIUS_M"}

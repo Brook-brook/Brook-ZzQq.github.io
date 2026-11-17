@@ -6,6 +6,30 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## Iteration 31 inspect what a retrieval score preserves
+
+`feat/atlas-iteration-31` continues pushed, unmerged30 (`e46786e`). A new lexical
+vector workbench reuses the eight original fictional fragments and14 explicit
+features: actual counts, smoothed TF-IDF, L2 normalization and per-term cosine
+products. Version filtering never silently refits the index. Zero vectors stay
+undefined, and the same-query literal baseline exposes a real vocabulary gap.
+
+Two original lessons, one ten-entry stdlib Python download and a seventh optional
+Python Playground source connect representation to complete source evidence.
+This is statistical retrieval, not a neural semantic model or deployed Agent.
+The original49 learning IDs and v1 records remain; four explicit questions append
+an optional16th route. Current totals:33 notes,53 questions,59 authored connections
+and81 public metadata search entries. No new runtime dependency or deployment.
+
+See the [delivery and validation record](docs/ATLAS-ITERATION-31.md),
+[actual screenshots and raw evidence](docs/iteration-31/README.md), the
+[design audit](docs/design-audit-iteration-31.md),
+[source review](docs/lexical-vectors-source-review.md),
+[compliance](docs/iteration-31-compliance.md) and
+[compiled preview instructions](docs/PREVIEW.md). Review
+[PR31](https://github.com/Brook-brook/Brook-ZzQq.github.io/pull/31) targets the
+unmerged iteration30 branch; its latest Checks identify the exact tested head.
+
 ## Iteration 30 learn from actual gradients
 
 `feat/atlas-iteration-30` continues pushed, unmerged29 (`e991994`). An honest

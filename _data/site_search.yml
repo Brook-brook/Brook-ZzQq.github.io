@@ -1,4 +1,9 @@
 entries:
+  - title: 向量检索与词项实验
+    kind: lab
+    url: /playground/vector-retrieval/
+    summary: 在原8片段虚构语料中计算固定14词项、TF-IDF、L2与余弦，查看逐维贡献、完整矩阵和字面规则对照；不调用语义模型。
+    keywords: [TF-IDF, tfidf, cosine, 余弦, 向量检索, IDF, L2, 词频, 词项, index, RAG]
   - title: AI基础学习地图
     kind: page
     url: /study/ai-foundations/

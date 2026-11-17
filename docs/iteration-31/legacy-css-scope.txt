@@ -1,0 +1,5 @@
+atlas.css is byte-identical to iteration30/e46786e.
+sha256=3ae7dbdbdeaee5b1e81e14a1e655d6f6101cf6958d875beb2d448f64e0da1b99
+The prior full-file debt is documented in ../iteration-30/legacy-css-scope.txt.
+This iteration checks its new scoped CSS and actual six compiled URLs, not a fabricated whole-legacy stylesheet pass.
+obsidian.css has a bounded common-footer wrap/min-width correction prompted by a real doubled-font screenshot; the rest of its existing design is retained.
