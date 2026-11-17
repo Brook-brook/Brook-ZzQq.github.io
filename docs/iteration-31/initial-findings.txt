@@ -1,0 +1,268 @@
+Real findings and corrections, with original failures retained. The full-width form separated controls/results; actual doubled fonts made contribution bars too short; the clipped root concealed a382px footer body until body width was checked. Revisions pair desktop controls/evidence, give phone bars a whole row, and wrap/cap footer content. Test-observation mistakes are not UI failures: closed-details innerText is empty, fieldset.isDisabled does not prove its descendants, and an assumed vocabulary class was absent. Tests now inspect actual text/disabled descendants/the14 native spans. The first multi-page Hallmark invocation omitted the already-existing foundations waiver; rerunning that actual CSS resolves its nine readable-title wraps.
+
+=== work/iteration31/vector-browser-first.txt ===
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /c-retention-full/. Input:
+
+''
+
+    at file:///workspace/Brook-ZzQq.github.io/tests/vector-browser.mjs:81:12 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '',
+  expected: /c-retention-full/,
+  operator: 'match',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+
+=== work/iteration31/vector-browser-second.txt ===
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /已过滤/. Input:
+
+''
+
+    at file:///workspace/Brook-ZzQq.github.io/tests/vector-browser.mjs:104:12 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '',
+  expected: /已过滤/,
+  operator: 'match',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+
+=== work/iteration31/vector-browser-third.txt ===
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(await native.locator('#vector-controls').isDisabled())
+
+    at file:///workspace/Brook-ZzQq.github.io/tests/vector-browser.mjs:160:10 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+
+=== work/iteration31/publication-first.txt ===
+FAIL the actual vector template preserves all14 lexical terms and8 source fragments safely: RuntimeError: one native vocabulary list
+tests/study-publication.rb:58:in `assert'
+tests/study-publication.rb:1012:in `block (2 levels) in run'
+tests/study-publication.rb:90:in `block in with_fixture'
+/usr/local/lib/ruby/3.3.0/tmpdir.rb:99:in `mktmpdir'
+tests/study-publication.rb:73:in `with_fixture'
+PASS legacy tutorial and checked research render through real Jekyll
+PASS research without source checking stays absent, including --unpublished
+PASS explicit unpublished and draft notes stay absent under --unpublished
+PASS checked research with missing commit fails before output
+PASS credential-bearing source URLs cannot be marked checked
+PASS source-check dates must follow analysis dates
+PASS AI assistance must be explicit boolean metadata
+PASS a misspelled research kind cannot bypass source checking
+PASS quoted published and draft flags cannot accidentally publish notes
+PASS demoting research removes stale output on the same destination
+PASS learning routes reference public notes and require unique stable IDs
+PASS optional learning focus is bounded public text, not a coerced value
+PASS learning routes cannot link research removed by publication checks
+PASS observatory validates its source catalog and fails unsafe links before output
+PASS observatory rejects broken reading references and invalid verification dates
+PASS automatic bibliography validates real bundled metadata before any no-JS rendering
+PASS automatic bibliography rejects off-source, unsafe, duplicate and fake-reviewed records before output
+PASS reading guides link published method notes with three accurate topic slots
+PASS reading guides reject missing/duplicate topics, oversized outlines and unpublished methods
+PASS public search excludes drafts and unchecked research, including --unpublished
+PASS search fails closed on unsafe or duplicate configured public entries
+PASS evaluation teaching fixture builds with its declared labels and original scores
+PASS evaluation rejects unsafe/duplicate samples, impossible scores and misleading cohort labels
+PASS spatial synthetic source builds with exactly four bounded blocks
+PASS spatial source rejects malformed coordinates, blocks, labels and identity before writing
+PASS practice references require exactly the public permanent step IDs
+PASS practice rejects unknown/missing IDs, empty/oversized references and extra generated fields
+PASS practice references run after publication and route validation
+PASS knowledge connections derive bounded metadata after public-note pruning
+PASS knowledge edges cannot bypass publication, including --unpublished
+PASS knowledge malformed editorial fields fail before output
+PASS knowledge demotion removes old metadata and output on a valid rebuild
+PASS retrieval fixture renders complete versioned source and original annotations
+PASS retrieval invalid IDs, references, bounds and fields fail before public output
+PASS a real article download keeps the project prefix, filename and literal label/detail
+PASS unavailable or unsafe article download fails before output: /assets/examples/missing.zip
+PASS unavailable or unsafe article download fails before output: /assets/examples/../private.zip
+PASS unavailable or unsafe article download fails before output: https://external.test/file.zip
+PASS an existing but excluded ZIP cannot be advertised as a public article download
+PASS publication pruning happens before optional download validation, even under unpublished
+PASS native article choices keep exact public questions, original route and escaped labels
+PASS real Rouge rendering has one outer keyboard code region and retains complete code/line numbers
+PASS downloaded original Skill keeps its real frontmatter and does not publish the include source
+PASS the original gradient data survives a real build with fixed synthetic8/4 roles
+PASS malformed, nonfinite, duplicate or falsely measured gradient data fails before writing
+PASS the actual foundations template renders13 honest states, native resources and escaped copy
+PASS foundations reject fake planned resources, private fields and unsafe or nonexistent labs
+PASS foundations cannot link demoted or unchecked notes even with unpublished enabled
+PASS a valid foundations rebuild removes a retired resource and its direct note output
+PASS advertised foundations and gradient screens require their actual source data
+PASS the actual gradient template escapes script terminators while preserving complete data
+PASS vector registry rejects incorrect schemas, vocabularies, provenance and private fields before writing
+PASS advertised vector screen requires source but removing it leaves the original retrieval source valid
+FAIL study publication: 54 cases, 350 assertions, 1 failures
+
+=== work/iteration31/hallmark-vector-source.json ===
+{
+  "summary": {
+    "fails": 0,
+    "reflex": 0,
+    "warns": 1,
+    "waived": 0,
+    "rejected": 0,
+    "answered": 0,
+    "dismissed": 0,
+    "notes": 0,
+    "files": 1,
+    "render": "off"
+  },
+  "findings": [
+    {
+      "gate": "F4",
+      "grade": "WARN",
+      "tier": "finish",
+      "file": "assets/css/vector-retrieval.css",
+      "line": 171,
+      "evidence": "2 filled primary-button recipes: .vector-examples button + .vector-page .vector-cand…",
+      "fix": "One filled primary per page; demote the rest to outline/quiet variants"
+    }
+  ]
+}
+
+=== work/iteration31/hallmark-screens-first.json ===
+{
+  "summary": {
+    "fails": 0,
+    "reflex": 9,
+    "warns": 0,
+    "waived": 0,
+    "rejected": 0,
+    "answered": 1,
+    "dismissed": 0,
+    "notes": 0,
+    "files": 1,
+    "render": "ran"
+  },
+  "findings": [
+    {
+      "gate": "49b",
+      "grade": "REFLEX",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"模型之外，一个 AI 应用还需要什么？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "REFLEX",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"读 AI 论文：从排行榜到可检验的证据\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "REFLEX",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"用 Python 把一个问题拆成输入与输出\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "REFLEX",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"第一次模型调用，除了 prompt 还有什么？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "REFLEX",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"换一个区域，模型成绩还说明什么？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "REFLEX",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"验收自己的 Agent：先测契约，再测任务\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "REFLEX",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"RAG：找到资料之后，仍要核对什么？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "REFLEX",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"索引变了，分数还能直接比吗？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "49b",
+      "grade": "REFLEX",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:4406/study/ai-foundations/",
+      "line": 1,
+      "evidence": "[320px] link \"Tool、Skill、MCP：下一步该改哪一层？\" wraps to 2 lines (a)",
+      "fix": "Shorten the label or set nowrap"
+    },
+    {
+      "gate": "F4",
+      "grade": "ANSWERED",
+      "tier": "finish",
+      "file": "assets/css/vector-retrieval.css",
+      "line": 172,
+      "evidence": "2 filled primary-button recipes: .vector-examples button + .vector-page .vector-cand…",
+      "fix": "One filled primary per page; demote the rest to outline/quiet variants"
+    }
+  ]
+}
+
+Final stamp-comment formatting check found missing blank lines, then corrected without changing CSS declarations.
+
+assets/css/vector-retrieval.css
+  5:1  ✖  Expected empty line before comment  comment-empty-line-before
+  6:1  ✖  Expected empty line before comment  comment-empty-line-before
+
+✖ 2 problems (2 errors, 0 warnings)
+  2 errors potentially fixable with the "--fix" option.
+

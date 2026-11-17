@@ -179,7 +179,7 @@ try {
     return fonts.filter(([node]) => ['vector-query', 'vector-run', 'vector-score'].includes(node.id)).map(([node, original]) => ({ original, actual: parseFloat(getComputedStyle(node).fontSize) }));
   });
   assert.ok(sizes.every(row => row.actual === row.original * 2), 'actual computed fonts double, including inherited px values');
-  assert.ok(await largePage.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+  assert.ok(await largePage.evaluate(() => Math.max(document.documentElement.scrollWidth, document.body.scrollWidth) <= innerWidth), 'the shell and its footer must fit too, not only a clipped root');
   const bars = await largePage.locator('.vector-contributions meter').evaluateAll(nodes => nodes.map(node => node.clientWidth));
   assert.ok(bars.every(width => width >= 120), 'large text keeps a meaningful bar length rather than turning contributions into dots');
   const numbers = await largePage.locator('.vector-contribution-value').evaluateAll(nodes => nodes.map(node => { const range = document.createRange(); range.selectNodeContents(node); return range.getClientRects().length; }));

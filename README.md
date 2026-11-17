@@ -21,11 +21,14 @@ The original49 learning IDs and v1 records remain; four explicit questions appen
 an optional16th route. Current totals:33 notes,53 questions,59 authored connections
 and81 public metadata search entries. No new runtime dependency or deployment.
 
-The branch is still undergoing complete final validation. See the
+See the [delivery and validation record](docs/ATLAS-ITERATION-31.md),
+[actual screenshots and raw evidence](docs/iteration-31/README.md), the
 [design audit](docs/design-audit-iteration-31.md),
 [source review](docs/lexical-vectors-source-review.md),
 [compliance](docs/iteration-31-compliance.md) and
-[compiled preview instructions](docs/PREVIEW.md).
+[compiled preview instructions](docs/PREVIEW.md). Review
+[PR31](https://github.com/Brook-brook/Brook-ZzQq.github.io/pull/31) targets the
+unmerged iteration30 branch; its latest Checks identify the exact tested head.
 
 ## Iteration 30 learn from actual gradients
 

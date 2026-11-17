@@ -1,0 +1,30 @@
+[
+  {
+    "file": "screenshots/before-study-ai-1440-full.png",
+    "source": "docs/iteration-30/hallmark-shots/study-ai-1440-full.png",
+    "source_commit": "e46786e1ec6e47c56c7e9bca35197e08755bab89",
+    "sha256": "afa99e9c038a5dc6472cc1a49230ed2d4693181e075cb912d40ac04fbc0ef250",
+    "note": "actual previously archived iteration30 screenshot; new vector page has no prior counterpart"
+  },
+  {
+    "file": "screenshots/before-study-ai-375.png",
+    "source": "docs/iteration-30/hallmark-shots/study-ai-375.png",
+    "source_commit": "e46786e1ec6e47c56c7e9bca35197e08755bab89",
+    "sha256": "04189b9c4f3161548b64e9a8f1386d9e39e549a967723a4fc861af2624bc2e5d",
+    "note": "actual previously archived iteration30 screenshot; new vector page has no prior counterpart"
+  },
+  {
+    "file": "screenshots/before-study-ai-foundations-1440-full.png",
+    "source": "docs/iteration-30/hallmark-shots/study-ai-foundations-1440-full.png",
+    "source_commit": "e46786e1ec6e47c56c7e9bca35197e08755bab89",
+    "sha256": "eb8afa62bbb357186de88625b74db36370b07eaea4957fbef7e5c36c4cf3acbf",
+    "note": "actual previously archived iteration30 screenshot; new vector page has no prior counterpart"
+  },
+  {
+    "file": "screenshots/before-study-ai-foundations-375.png",
+    "source": "docs/iteration-30/hallmark-shots/study-ai-foundations-375.png",
+    "source_commit": "e46786e1ec6e47c56c7e9bca35197e08755bab89",
+    "sha256": "e01b1f11b8979b99312487a9f782294182a75676a8ddd0d0668250dd94a9d1da",
+    "note": "actual previously archived iteration30 screenshot; new vector page has no prior counterpart"
+  }
+]

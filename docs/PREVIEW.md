@@ -26,6 +26,9 @@ python3 -m http.server 8000
 
 然后打开：
 
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/vector-retrieval/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/lexical-vector-foundations/
+- http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/python/#lexical-vectors
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/study/ai-foundations/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/playground/linear-regression/
 - http://127.0.0.1:8000/Brook-ZzQq.github.io/knowledge/neural-chain-rule/
@@ -63,7 +66,7 @@ python3 -m http.server 8000
 完整网址访问。这个编译包的导航与资源都带项目名前缀，父目录托管才能
 同时找到页面、样式和脚本。
 
-开发分支依次基于前一轮；最新30基于未合并29并包含此前开发代码。CI产物默认保留7天，
+开发分支依次基于前一轮；31基于实际已推送、未合并的30/e46786e，并包含此前代码。CI产物默认保留7天，
 过期后可在对应开发分支重新运行CI；不要因此更改生产Pages来源或直接推main。
 
 循环实验底部可显式下载Python例子与配套公开目录。代码由你在自己的本地/
@@ -118,3 +121,10 @@ python3 demo_restart.py和python3 run_checks.py。需带sqlite3的Python3.11+，
 无pip/Key。程序自己创建临时SQLite文件、结束子进程并重开，结束后清理。
 教程还可下载本轮一次实际运行记录JSON，含完整教学参数、客户端回执、
 独立进程的文件观察、版本与源哈希；它不是网站数据库或完整Agent恢复。
+
+第31轮向量实验直接以JS计算固定词项，不需模型或Key。“试试7天”只更改
+查询草稿，明确计算后可看到词表遗漏与未定义余弦，再展开同一查询的原
+字面对照。第七Python预选同样不自动加载/运行解释器，输出实际计算摘要。
+完整记录可在专用实验明确下载；其中包含已应用查询，请自行保管本机文件。
+本机brook-retrieval-vectors.zip只需Python3.11+标准库，解压进入
+brooks-retrieval-vectors运行python3 demo.py和python3 run_checks.py。
