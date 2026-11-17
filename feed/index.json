@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-17T14:15:54.503Z",
+  "attempted_at": "2026-11-17T16:16:58.060Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 357,
+  "total": 359,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-17T14:15:54.503Z",
-      "last_success_at": "2026-11-17T14:15:54.503Z",
+      "attempted_at": "2026-11-17T16:16:58.060Z",
+      "last_success_at": "2026-11-17T16:16:58.060Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T14:15:54.503Z",
-      "last_success_at": "2026-11-17T14:15:54.503Z",
+      "attempted_at": "2026-11-17T16:16:58.060Z",
+      "last_success_at": "2026-11-17T16:16:58.060Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T14:15:54.503Z",
-      "last_success_at": "2026-11-17T14:15:54.503Z",
+      "attempted_at": "2026-11-17T16:16:58.060Z",
+      "last_success_at": "2026-11-17T16:16:58.060Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-17T14:15:54.503Z",
-      "last_success_at": "2026-11-17T14:15:54.503Z",
+      "attempted_at": "2026-11-17T16:16:58.060Z",
+      "last_success_at": "2026-11-17T16:16:58.060Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T14:15:54.503Z",
-      "last_success_at": "2026-11-17T14:15:54.503Z",
+      "attempted_at": "2026-11-17T16:16:58.060Z",
+      "last_success_at": "2026-11-17T16:16:58.060Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794924902-gzip\"",
-      "last_modified": "Tue, 17 Nov 2026 14:15:02 GMT",
+      "etag": "\"1794932101-gzip\"",
+      "last_modified": "Tue, 17 Nov 2026 16:15:01 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-17T14:15:54.503Z",
+      "attempted_at": "2026-11-17T16:16:58.060Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T14:15:54.503Z",
-      "last_success_at": "2026-11-17T14:15:54.503Z",
+      "attempted_at": "2026-11-17T16:16:58.060Z",
+      "last_success_at": "2026-11-17T16:16:58.060Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-22fef1d8978ed6139673deb7349fc037aab946ed504ab148b5510b7fbd58be36",
+      "source_id": "un-news",
+      "title": "‘Hunger should not be a concern’: WFP steps in for families in Kenya who fled Ethiopia violence",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168822",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-17T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-17T16:16:58.060Z",
+      "changed_at": "2026-11-17T16:16:58.060Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-72928fed140e8c54b09958e3189e8924a75201b1dfd8886cbfd6c997e727e983",
+      "source_id": "un-news",
+      "title": "Winter rains deepen Gaza crisis amid restricted access and aid cuts",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168821",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-17T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-17T16:16:58.060Z",
+      "changed_at": "2026-11-17T16:16:58.060Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-3b3be741a87f5e2153e626602817efd9dcc9c3fb90f3d3d29d39838acce03d65",
       "source_id": "openai-news",
@@ -1266,65 +1302,14 @@
           "changed_at": "2026-11-16T08:27:47.161Z"
         }
       ]
-    },
-    {
-      "id": "n-24726b94ad97ab7c664f7008f7fc34ad6ee5fa75191ff50734d200ccf33deae4",
-      "source_id": "arxiv-ai",
-      "title": "What Balanced Accuracy Cannot Identify in Neural-Signal Decoding under Test-Time Adaptation",
-      "url": "https://arxiv.org/abs/2611.17925",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-17T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-17T08:23:04.873Z",
-      "revision_count": 1,
-      "previous_versions": [
-        {
-          "title": "What Balanced Accuracy Cannot Identify in Neural-Signal Decoding under Test-Time Adaptation",
-          "url": "https://arxiv.org/abs/2611.17925",
-          "published_at": "2026-11-16T05:00:00.000Z",
-          "updated_at": null,
-          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
-          "date_warning": null,
-          "changed_at": "2026-11-16T08:27:47.161Z"
-        }
-      ]
-    },
-    {
-      "id": "n-301d88fb993bdd9cc0fba4a74ed40f16bbcdb97699465a25870ecabedf6e5c8f",
-      "source_id": "arxiv-ai",
-      "title": "Soteria: Formally Verified Planning with Runtime Enforcement for Safe LLM Agents",
-      "url": "https://arxiv.org/abs/2611.17880",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-17T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-17T08:23:04.873Z",
-      "revision_count": 1,
-      "previous_versions": [
-        {
-          "title": "Soteria: Formally Verified Planning with Runtime Enforcement for Safe LLM Agents",
-          "url": "https://arxiv.org/abs/2611.17880",
-          "published_at": "2026-11-16T05:00:00.000Z",
-          "updated_at": null,
-          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
-          "date_warning": null,
-          "changed_at": "2026-11-16T08:27:47.161Z"
-        }
-      ]
     }
   ],
   "archives": [
+    {
+      "date": "2026-11-18",
+      "count": 2,
+      "path": "archive/2026-11-18.json"
+    },
     {
       "date": "2026-11-17",
       "count": 70,
@@ -1357,21 +1342,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-16T04:19:34.021Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 233,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-16T08:27:47.161Z",
       "status": "partial",
@@ -1470,6 +1440,21 @@
       "additions": 1,
       "revisions": 0,
       "total": 357,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-17T16:16:58.060Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 359,
       "failed_sources": [
         {
           "id": "europarl-news",
