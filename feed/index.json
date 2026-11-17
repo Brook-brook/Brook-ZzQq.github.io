@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-17T16:16:58.060Z",
+  "attempted_at": "2026-11-17T18:11:29.888Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 359,
+  "total": 363,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-17T16:16:58.060Z",
-      "last_success_at": "2026-11-17T16:16:58.060Z",
+      "attempted_at": "2026-11-17T18:11:29.888Z",
+      "last_success_at": "2026-11-17T18:11:29.888Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T16:16:58.060Z",
-      "last_success_at": "2026-11-17T16:16:58.060Z",
+      "attempted_at": "2026-11-17T18:11:29.888Z",
+      "last_success_at": "2026-11-17T18:11:29.888Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T16:16:58.060Z",
-      "last_success_at": "2026-11-17T16:16:58.060Z",
+      "attempted_at": "2026-11-17T18:11:29.888Z",
+      "last_success_at": "2026-11-17T18:11:29.888Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-17T16:16:58.060Z",
-      "last_success_at": "2026-11-17T16:16:58.060Z",
+      "attempted_at": "2026-11-17T18:11:29.888Z",
+      "last_success_at": "2026-11-17T18:11:29.888Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T16:16:58.060Z",
-      "last_success_at": "2026-11-17T16:16:58.060Z",
+      "attempted_at": "2026-11-17T18:11:29.888Z",
+      "last_success_at": "2026-11-17T18:11:29.888Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794932101-gzip\"",
-      "last_modified": "Tue, 17 Nov 2026 16:15:01 GMT",
+      "etag": "\"1794934524-gzip\"",
+      "last_modified": "Tue, 17 Nov 2026 16:55:24 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-17T16:16:58.060Z",
+      "attempted_at": "2026-11-17T18:11:29.888Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-17T16:16:58.060Z",
-      "last_success_at": "2026-11-17T16:16:58.060Z",
+      "attempted_at": "2026-11-17T18:11:29.888Z",
+      "last_success_at": "2026-11-17T18:11:29.888Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,78 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-8f6af8c44a4a1bfb5de31585ff7d049da9f0b0c7303ae5eb79fd652e216c50e9",
+      "source_id": "openai-news",
+      "title": "Introducing GPT-6.2 Astra and Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-17T17:45:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 17 Nov 2026 17:45:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-17T18:11:29.888Z",
+      "changed_at": "2026-11-17T18:11:29.888Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-b43ef08ac3ed4f7af6f4fa4f8f60d0d2c49772fc6e540a21a0c9e441265578ef",
+      "source_id": "openai-news",
+      "title": "Astra for Law leads in legal intelligence",
+      "url": "https://openai.com/index/astra-law-6-2",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-17T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-17T18:11:29.888Z",
+      "changed_at": "2026-11-17T18:11:29.888Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-35bcc4b3dafe10f2abb0524c62a6cb7e6288c75afa8208edf2e5c5c0e82ee7f4",
+      "source_id": "openai-news",
+      "title": "ChatGPT Ads increases its market presence in 44 countries",
+      "url": "https://openai.com/ads/blog/chatgpt-ads-increases-its-market-presence",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-12T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 12 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-17T18:11:29.888Z",
+      "changed_at": "2026-11-17T18:11:29.888Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-81209450b91a7acb6d820b2020db5647f0b84ad27ab43c6cb86f3892e9013414",
+      "source_id": "openai-news",
+      "title": "How VistaPrint helps small businesses get the word out",
+      "url": "https://openai.com/ads/customers/vistaprint",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-09T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 09 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-17T18:11:29.888Z",
+      "changed_at": "2026-11-17T18:11:29.888Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-22fef1d8978ed6139673deb7349fc037aab946ed504ab148b5510b7fbd58be36",
       "source_id": "un-news",
@@ -1190,124 +1262,12 @@
           "changed_at": "2026-11-16T08:27:47.161Z"
         }
       ]
-    },
-    {
-      "id": "n-199bb42cf667d7c742b5cda78818d8ebdf3091fb7cf568ddf20d544bf1d4bff0",
-      "source_id": "arxiv-ai",
-      "title": "AI-Voyager: A Public-Interest System for Human-AI Civic Reasoning to Contest and Shape the Rules That Govern AI",
-      "url": "https://arxiv.org/abs/2611.17564",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-17T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-17T08:23:04.873Z",
-      "revision_count": 1,
-      "previous_versions": [
-        {
-          "title": "AI-Voyager: A Public-Interest System for Human-AI Civic Reasoning to Contest and Shape the Rules That Govern AI",
-          "url": "https://arxiv.org/abs/2611.17564",
-          "published_at": "2026-11-16T05:00:00.000Z",
-          "updated_at": null,
-          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
-          "date_warning": null,
-          "changed_at": "2026-11-16T08:27:47.161Z"
-        }
-      ]
-    },
-    {
-      "id": "n-1a4c2af9452115ba886404b9ad4eeecb164022464799ac4d63440deed688f803",
-      "source_id": "arxiv-ai",
-      "title": "Aligning AI Teams",
-      "url": "https://arxiv.org/abs/2611.17820",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-17T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-17T08:23:04.873Z",
-      "revision_count": 1,
-      "previous_versions": [
-        {
-          "title": "Aligning AI Teams",
-          "url": "https://arxiv.org/abs/2611.17820",
-          "published_at": "2026-11-16T05:00:00.000Z",
-          "updated_at": null,
-          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
-          "date_warning": null,
-          "changed_at": "2026-11-16T08:27:47.161Z"
-        }
-      ]
-    },
-    {
-      "id": "n-2058b8ffe8f15f120054cb8688556d132765a98158e4aff8243bd42171bc7554",
-      "source_id": "arxiv-ai",
-      "title": "What LLM Agents See and What Users Say",
-      "url": "https://arxiv.org/abs/2611.17639",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-17T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-17T08:23:04.873Z",
-      "revision_count": 1,
-      "previous_versions": [
-        {
-          "title": "What LLM Agents See and What Users Say",
-          "url": "https://arxiv.org/abs/2611.17639",
-          "published_at": "2026-11-16T05:00:00.000Z",
-          "updated_at": null,
-          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
-          "date_warning": null,
-          "changed_at": "2026-11-16T08:27:47.161Z"
-        }
-      ]
-    },
-    {
-      "id": "n-210d06b357721023f0556059d041e86c7c44d165cffe31e31dff9bec2aea0d57",
-      "source_id": "arxiv-ai",
-      "title": "Robustness Evaluation of GPU Cloud Pricing Benchmarks under Incomplete Observations: A Controlled Missingness Study",
-      "url": "https://arxiv.org/abs/2611.17796",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-17T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-17T08:23:04.873Z",
-      "revision_count": 1,
-      "previous_versions": [
-        {
-          "title": "Robustness Evaluation of GPU Cloud Pricing Benchmarks under Incomplete Observations: A Controlled Missingness Study",
-          "url": "https://arxiv.org/abs/2611.17796",
-          "published_at": "2026-11-16T05:00:00.000Z",
-          "updated_at": null,
-          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
-          "date_warning": null,
-          "changed_at": "2026-11-16T08:27:47.161Z"
-        }
-      ]
     }
   ],
   "archives": [
     {
       "date": "2026-11-18",
-      "count": 2,
+      "count": 6,
       "path": "archive/2026-11-18.json"
     },
     {
@@ -1342,21 +1302,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-16T08:27:47.161Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 50,
-      "revisions": 0,
-      "total": 283,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-16T10:26:32.694Z",
       "status": "partial",
@@ -1455,6 +1400,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 359,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-17T18:11:29.888Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 4,
+      "revisions": 0,
+      "total": 363,
       "failed_sources": [
         {
           "id": "europarl-news",
