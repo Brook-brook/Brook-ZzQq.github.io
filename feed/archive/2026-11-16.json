@@ -63,16 +63,26 @@
       "url": "https://arxiv.org/abs/2611.17338",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+          "url": "https://arxiv.org/abs/2611.17338",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-5b66b471dda6a30666311ba511cd1fdf12103b40b78d16de1a4ce79691288b20",
@@ -81,16 +91,26 @@
       "url": "https://arxiv.org/abs/2611.17339",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+          "url": "https://arxiv.org/abs/2611.17339",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-e6b637328ef2109d9e898dbcd9595d57a43d62a2b3253b3c9d040d989c19ee42",
@@ -99,16 +119,26 @@
       "url": "https://arxiv.org/abs/2611.17340",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+          "url": "https://arxiv.org/abs/2611.17340",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-5cc536aed4b9c9336147104638484d00d460cc70a5057de07b872d944a07431a",
@@ -117,16 +147,26 @@
       "url": "https://arxiv.org/abs/2611.17341",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction",
+          "url": "https://arxiv.org/abs/2611.17341",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-5da9a95de14e592d935b175e57b6db6233feb2ef6963da3fadf3bec2d780003b",
@@ -135,16 +175,26 @@
       "url": "https://arxiv.org/abs/2611.17495",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "An Operationalization of Opaque Serial Depth",
+          "url": "https://arxiv.org/abs/2611.17495",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-c0fb3abdbf393ee063b314a44b4303a8d74e2b7a050beb1403951fff9182d97c",
@@ -153,16 +203,26 @@
       "url": "https://arxiv.org/abs/2611.17501",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Advancing Quantization for R&R Models with Microscaling Formats",
+          "url": "https://arxiv.org/abs/2611.17501",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-963bbe19ff67ab4441c4be69b1b7933297f020ad7d5dcebebc22efb1a28bfdf8",
@@ -171,16 +231,26 @@
       "url": "https://arxiv.org/abs/2611.17515",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "A Push Down the Mountain: Framing Effects and Internal State Interventions on Collusive Behavior in a Long-Horizon LLM Agent",
+          "url": "https://arxiv.org/abs/2611.17515",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-f50e63d8425077c4b471e5908d7a51c66d1a620975d027a9499d2243928246d1",
@@ -189,16 +259,26 @@
       "url": "https://arxiv.org/abs/2611.17524",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Model Annealing: Data-Efficient Learning through Review and Consolidation",
+          "url": "https://arxiv.org/abs/2611.17524",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-b5369aae9868552237b7611968a0bd6a7a454b9e1cb66bec6eca0fdc5ac136d4",
@@ -207,16 +287,26 @@
       "url": "https://arxiv.org/abs/2611.17532",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Astrocyte Biocomputing: Astrocytic Contributions to Neural Network Computation",
+          "url": "https://arxiv.org/abs/2611.17532",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-d6f2a3136b4179e3604cb7ed701151e4cef125ffe87398853e03a4ecd2b6e418",
@@ -225,16 +315,26 @@
       "url": "https://arxiv.org/abs/2611.17539",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Verifiable pXRD: Hill-climbing pXRD structure determination with LLM agents",
+          "url": "https://arxiv.org/abs/2611.17539",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-199bb42cf667d7c742b5cda78818d8ebdf3091fb7cf568ddf20d544bf1d4bff0",
@@ -243,16 +343,26 @@
       "url": "https://arxiv.org/abs/2611.17564",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "AI-Voyager: A Public-Interest System for Human-AI Civic Reasoning to Contest and Shape the Rules That Govern AI",
+          "url": "https://arxiv.org/abs/2611.17564",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-6e7825326e83b136fe22d30698de161fe85d04ce6c39d7b248d4efa0a3765b1d",
@@ -261,16 +371,26 @@
       "url": "https://arxiv.org/abs/2611.17583",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "When Does Less Information Pay? An Exact Finite Atlas of Representation, Payoff, and Cost",
+          "url": "https://arxiv.org/abs/2611.17583",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-b715b2affb8796e9f221a7053aa79e8372ccfdd0e26f32dc669ae05fbd58331a",
@@ -279,16 +399,26 @@
       "url": "https://arxiv.org/abs/2611.17610",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "More Agents, More Samples, or More Thinking? Untangling Coordination, Ensembling, and Test-Time Compute in Multi-Agent LLMs",
+          "url": "https://arxiv.org/abs/2611.17610",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-04234be9f8573efb0afce7fbf8bc40f0723ccfff0388360b6937c6ae88ef2e5b",
@@ -297,16 +427,26 @@
       "url": "https://arxiv.org/abs/2611.17616",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "LLM-Guided Cluster Lifecycle Management: Deciding When and How to Evolve Behavioral Clusters",
+          "url": "https://arxiv.org/abs/2611.17616",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-0e4a08dbe6ed3850782ee7daa7340e0388a0c5ba55492060255170c249a530f3",
@@ -315,16 +455,26 @@
       "url": "https://arxiv.org/abs/2611.17620",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Safety Side Effects of Preventative Persona Steering: An Empirical Audit",
+          "url": "https://arxiv.org/abs/2611.17620",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-db119966b06bc1071275700df631251f33f1769339f1cdf10e4f52d4095a4363",
@@ -333,16 +483,26 @@
       "url": "https://arxiv.org/abs/2611.17621",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs",
+          "url": "https://arxiv.org/abs/2611.17621",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-7f91f504d57986c16b77399956d1bc54a84f91446b4f2f16af65520c36d9edac",
@@ -351,16 +511,26 @@
       "url": "https://arxiv.org/abs/2611.17632",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Generated Evaluation Suites as Diversity-Driven Search for Real Agent Regressions",
+          "url": "https://arxiv.org/abs/2611.17632",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-2058b8ffe8f15f120054cb8688556d132765a98158e4aff8243bd42171bc7554",
@@ -369,16 +539,26 @@
       "url": "https://arxiv.org/abs/2611.17639",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "What LLM Agents See and What Users Say",
+          "url": "https://arxiv.org/abs/2611.17639",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-8a5c1a78f21f4e4953bad2970a8dab74936e20db4f7aa184f2ca15acd2adac99",
@@ -387,16 +567,26 @@
       "url": "https://arxiv.org/abs/2611.17662",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Learn then Bet: Learning Interpretable Rules for Reliable Agent Intervention",
+          "url": "https://arxiv.org/abs/2611.17662",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-bb14b9e7844b57ec97c9f3baf28211ed3f231a60b4a38ca85d79f940f692c5be",
@@ -405,16 +595,26 @@
       "url": "https://arxiv.org/abs/2611.17680",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Aligned, Conflicting, or Unspecified? A Diagnostic Benchmark for Multimodal Time Series Forecasting",
+          "url": "https://arxiv.org/abs/2611.17680",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-5ac702919025cdc28443b0afdc0c6722ee946deeceaca4e1527eb80e2e155845",
@@ -423,16 +623,26 @@
       "url": "https://arxiv.org/abs/2611.17681",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "OCTAVE: A Capability-Resolved Benchmark for End-to-End HTML5 Game Generation",
+          "url": "https://arxiv.org/abs/2611.17681",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-eec451ca8d6e6997bed811fa226693b1e865af68510f0dbc75cd2b62f4cb7cef",
@@ -441,16 +651,26 @@
       "url": "https://arxiv.org/abs/2611.17696",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Co-Sight Harness: Externalized Control Assets and Deterministic Enforcement for Long-Horizon Business Agents",
+          "url": "https://arxiv.org/abs/2611.17696",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-8e257d66526dc57485092f279399d599ab848031da9c980f0a891e3962533f40",
@@ -459,16 +679,26 @@
       "url": "https://arxiv.org/abs/2611.17704",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "An AI-enabled high-resolution chlorophyll-a forecasting model that outperforms the operational global biogeochemical system",
+          "url": "https://arxiv.org/abs/2611.17704",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-619525edf219eeff49fe31bc2d842a3466c8fc43f3cb140bc0b03fbbe3359b6a",
@@ -477,16 +707,26 @@
       "url": "https://arxiv.org/abs/2611.17710",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Cross-Linguistic Acoustic Biomarkers of Cognitive Impairment Across Interactive and Single-Speaker Speech Tasks",
+          "url": "https://arxiv.org/abs/2611.17710",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-eb4235b75bfce8df2107f7231b462e7b3e0d5da40d6f165a792a8e8c12890d62",
@@ -495,16 +735,26 @@
       "url": "https://arxiv.org/abs/2611.17722",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Federated Soft Poly-Level Learning Over a Distributed Network with Guaranteed Convergence",
+          "url": "https://arxiv.org/abs/2611.17722",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-fe749e12033c8dfa2127759163ef2cc6834cc11ea9ce3ea1c542537315c3e9de",
@@ -513,16 +763,26 @@
       "url": "https://arxiv.org/abs/2611.17728",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "A Spectral Framework for Universal Proxy Regularization in Model Merging",
+          "url": "https://arxiv.org/abs/2611.17728",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-c3d9d3fc175d75085700aa9ed33066c23115c687bd2adcafdc6afb8853a57f7d",
@@ -531,16 +791,26 @@
       "url": "https://arxiv.org/abs/2611.17763",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Knowledge After Collapse: Context and Wording Shape Factual Accessibility in Language Models",
+          "url": "https://arxiv.org/abs/2611.17763",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-402a0286b8bd0b9d4e8d373f8586abf733de63a724368d9f34ee49bfafb02d00",
@@ -549,16 +819,26 @@
       "url": "https://arxiv.org/abs/2611.17776",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Certified Improvements to Best-Known Thomson-Problem Configurations with a Search Pipeline Built with Large Language Model Agents",
+          "url": "https://arxiv.org/abs/2611.17776",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-ca24fd9faebebad26585e211ee6f8a47a6ec1839b7cf6e7ce9d5a06c231edd38",
@@ -567,16 +847,26 @@
       "url": "https://arxiv.org/abs/2611.17781",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "TReC: Evaluating Move-Induced State Changes in Instruction-Conditioned Go",
+          "url": "https://arxiv.org/abs/2611.17781",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-64e4b1f0e4ac35b1d1b22641a6574d868476ac55a4eb46400ea306b498522c22",
@@ -585,16 +875,26 @@
       "url": "https://arxiv.org/abs/2611.17790",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "AutoRL: A Multi-Agent System towards Autonomous Reinforcement Learning",
+          "url": "https://arxiv.org/abs/2611.17790",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-0581304bba9d0ff26015940e57f7966c60ed21eab42cb3438087a08ccf00c21b",
@@ -603,16 +903,26 @@
       "url": "https://arxiv.org/abs/2611.17793",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "MASTARS: Multi-Agent Sequential Trajectory Augmentation with Return-Conditioned Subgoals",
+          "url": "https://arxiv.org/abs/2611.17793",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-210d06b357721023f0556059d041e86c7c44d165cffe31e31dff9bec2aea0d57",
@@ -621,16 +931,26 @@
       "url": "https://arxiv.org/abs/2611.17796",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Robustness Evaluation of GPU Cloud Pricing Benchmarks under Incomplete Observations: A Controlled Missingness Study",
+          "url": "https://arxiv.org/abs/2611.17796",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-523089d0f48248f2aa330634b3beadcb3d2e980ad19671f738297c81b6e06c63",
@@ -639,16 +959,26 @@
       "url": "https://arxiv.org/abs/2611.17797",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Vision-as-a-Tool: Visual Harness for Multimodal Agentic Coding",
+          "url": "https://arxiv.org/abs/2611.17797",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-52c627e404d969773650b661e592a89b7c537d690617e03a4703e5923d7f8550",
@@ -657,16 +987,26 @@
       "url": "https://arxiv.org/abs/2611.17806",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Can Agents Keep Up with Time? An Empirical Analysis of Temporal Adaptation After a Conversational Hiatus",
+          "url": "https://arxiv.org/abs/2611.17806",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-aa474b1d44419ef306f2c1bf4aff9e61f2ad1eec43ce9e036b0322c952665269",
@@ -675,16 +1015,26 @@
       "url": "https://arxiv.org/abs/2611.17814",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "G-CAST: Governed Continual Self-Training for E-Commerce Agents under Evolving Demands",
+          "url": "https://arxiv.org/abs/2611.17814",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-3b2334f66a885a564aacaa8a06e5b332dcc7d856df375fec2a910012852495a5",
@@ -693,16 +1043,26 @@
       "url": "https://arxiv.org/abs/2611.17819",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Causally Constrained and Uncertainty-Aware Cardiopulmonary Risk Prediction",
+          "url": "https://arxiv.org/abs/2611.17819",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-1a4c2af9452115ba886404b9ad4eeecb164022464799ac4d63440deed688f803",
@@ -711,16 +1071,26 @@
       "url": "https://arxiv.org/abs/2611.17820",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Aligning AI Teams",
+          "url": "https://arxiv.org/abs/2611.17820",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-7211a5e895b1221c6221f94e74353aab5eb9789afc7b22b4eeb5a92b12e6e0d4",
@@ -729,16 +1099,26 @@
       "url": "https://arxiv.org/abs/2611.17846",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Is Abliteration Getting Harder? Not Uniformly: Refusal Removal by Direction-Based Ablation and ARA in Heretic on the Qwen3.8, Gemma 4, Olmo 3.1 and Mistral Small 3.2 LLMs Versus Their Predecessors",
+          "url": "https://arxiv.org/abs/2611.17846",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-ac9a3fb69143c5ff4dfe11173bd60cc7df5d4adebf3a59ec98ac6dba60e99c8f",
@@ -747,16 +1127,26 @@
       "url": "https://arxiv.org/abs/2611.17856",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "DECODE: Diagnosing Interpretability Failures in Automated Interpretation Process",
+          "url": "https://arxiv.org/abs/2611.17856",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-be164367ef86e545dbd7d0a69a33219512e95cd3dd78bf8b066b099237efa667",
@@ -765,16 +1155,26 @@
       "url": "https://arxiv.org/abs/2611.17858",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "AI-aided Decision-Making in Education - Uncertainty, Explainability, and Human Responsibility",
+          "url": "https://arxiv.org/abs/2611.17858",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-b133c17075bfb9f3efabdb1293dfd706f5e54119950d16187144a8245707f3c4",
@@ -783,16 +1183,26 @@
       "url": "https://arxiv.org/abs/2611.17862",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "FlexCast: Flexible Context Learning for Time Series Foundation Models",
+          "url": "https://arxiv.org/abs/2611.17862",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-dec4de96c74d220a2e56e8652cfc402f632e6c2ba8b853944d0788a3ecc4c546",
@@ -801,16 +1211,26 @@
       "url": "https://arxiv.org/abs/2611.17870",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "OmniScore-Bench: Evaluating Vision-Language Models on Musical Score Reading",
+          "url": "https://arxiv.org/abs/2611.17870",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-301d88fb993bdd9cc0fba4a74ed40f16bbcdb97699465a25870ecabedf6e5c8f",
@@ -819,16 +1239,26 @@
       "url": "https://arxiv.org/abs/2611.17880",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Soteria: Formally Verified Planning with Runtime Enforcement for Safe LLM Agents",
+          "url": "https://arxiv.org/abs/2611.17880",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-b00f578f43b58a1c49d22039ffead22d7c33f3236ec5ce5ee75cc8da88f13e99",
@@ -837,16 +1267,26 @@
       "url": "https://arxiv.org/abs/2611.17910",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Adversarially Attacking Symbolic Vocabulary Vulnerabilities In LLM Planners",
+          "url": "https://arxiv.org/abs/2611.17910",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-f517f2103b52a42cb7332688b8e62bc9c9e103c5dc24cb25d2fb32fe6ec8c976",
@@ -855,16 +1295,26 @@
       "url": "https://arxiv.org/abs/2611.17915",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "SWIFT: Sample-Wise Instance Fine-Tuning of Time-Series Foundation Models for Forecasting",
+          "url": "https://arxiv.org/abs/2611.17915",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-cefa0baf06950ec3a2520b552dfe365f85a33217cd5727b59581daf431baeb80",
@@ -873,16 +1323,26 @@
       "url": "https://arxiv.org/abs/2611.17917",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "When Cooperation Must Change: Semantic Strategy Unlearning in Multi-Agent Reinforcement Learning",
+          "url": "https://arxiv.org/abs/2611.17917",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-426da31439cdc34432a9983f6a374b7daa48acc97d972beb59883f26bd221b7d",
@@ -891,16 +1351,26 @@
       "url": "https://arxiv.org/abs/2611.17921",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "RecMem: Recurrent Memory Compression for Long-Sequence Generative Recommendation",
+          "url": "https://arxiv.org/abs/2611.17921",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-24726b94ad97ab7c664f7008f7fc34ad6ee5fa75191ff50734d200ccf33deae4",
@@ -909,16 +1379,26 @@
       "url": "https://arxiv.org/abs/2611.17925",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "What Balanced Accuracy Cannot Identify in Neural-Signal Decoding under Test-Time Adaptation",
+          "url": "https://arxiv.org/abs/2611.17925",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-bb4804ed5348466ab159cf8c10915d8dc1d6b507022388747899f2269d35e630",
@@ -927,16 +1407,26 @@
       "url": "https://arxiv.org/abs/2611.17929",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Evaluating Large Language Models for Scientific Paper Search: Retrieval Success and Inference Latency on Mac Studio and NVIDIA A100",
+          "url": "https://arxiv.org/abs/2611.17929",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-84ce8b5bb16261b91fd06c7011663ed4fe944329d70dc5d94892f6ed95898c62",
@@ -945,16 +1435,26 @@
       "url": "https://arxiv.org/abs/2611.17933",
       "topic": "ai",
       "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-16T05:00:00.000Z",
+      "published_at": "2026-11-17T05:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "published_raw": "Tue, 17 Nov 2026 00:00:00 -0500",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
       "first_seen_at": "2026-11-16T08:27:47.161Z",
-      "changed_at": "2026-11-16T08:27:47.161Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-17T08:23:04.873Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "OutfitterBench: Evaluating LLM Agents on Long-Horizon Resource Allocation and Commitment Coordination",
+          "url": "https://arxiv.org/abs/2611.17933",
+          "published_at": "2026-11-16T05:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 16 Nov 2026 00:00:00 -0500",
+          "date_warning": null,
+          "changed_at": "2026-11-16T08:27:47.161Z"
+        }
+      ]
     },
     {
       "id": "n-ff7833693fa2a06713dc923ab6354b82d0a99faf362cef1531beb712e1bb1855",
