@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-18T08:15:32.452Z",
+  "attempted_at": "2026-11-18T10:20:27.066Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 418,
+  "total": 419,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-18T08:15:32.452Z",
-      "last_success_at": "2026-11-18T08:15:32.452Z",
+      "attempted_at": "2026-11-18T10:20:27.066Z",
+      "last_success_at": "2026-11-18T10:20:27.066Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T08:15:32.452Z",
-      "last_success_at": "2026-11-18T08:15:32.452Z",
+      "attempted_at": "2026-11-18T10:20:27.066Z",
+      "last_success_at": "2026-11-18T10:20:27.066Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T08:15:32.452Z",
-      "last_success_at": "2026-11-18T08:15:32.452Z",
+      "attempted_at": "2026-11-18T10:20:27.066Z",
+      "last_success_at": "2026-11-18T10:20:27.066Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-18T08:15:32.452Z",
-      "last_success_at": "2026-11-18T08:15:32.452Z",
+      "attempted_at": "2026-11-18T10:20:27.066Z",
+      "last_success_at": "2026-11-18T10:20:27.066Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T08:15:32.452Z",
-      "last_success_at": "2026-11-18T08:15:32.452Z",
+      "attempted_at": "2026-11-18T10:20:27.066Z",
+      "last_success_at": "2026-11-18T10:20:27.066Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1794989342-gzip\"",
-      "last_modified": "Wed, 18 Nov 2026 08:09:02 GMT",
+      "etag": "\"1794997193-gzip\"",
+      "last_modified": "Wed, 18 Nov 2026 10:19:53 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-18T08:15:32.452Z",
+      "attempted_at": "2026-11-18T10:20:27.066Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T08:15:32.452Z",
-      "last_success_at": "2026-11-18T08:15:32.452Z",
+      "attempted_at": "2026-11-18T10:20:27.066Z",
+      "last_success_at": "2026-11-18T10:20:27.066Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,24 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-a1de396d3910fa2e0f79d5fc1596f0a162b45e4ee5be0f06557fa126a8cc5915",
+      "source_id": "openai-news",
+      "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+      "url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-18T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-18T10:20:27.066Z",
+      "changed_at": "2026-11-18T10:20:27.066Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-03b179946dd0e551984b025c5c0109181a33c8ab2521005dd6c1243f1fb2bdf6",
       "source_id": "arxiv-ai",
@@ -1214,30 +1232,12 @@
       "changed_at": "2026-11-17T18:11:29.888Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-22fef1d8978ed6139673deb7349fc037aab946ed504ab148b5510b7fbd58be36",
-      "source_id": "un-news",
-      "title": "‘Hunger should not be a concern’: WFP steps in for families in Kenya who fled Ethiopia violence",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168822",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-17T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-17T16:16:58.060Z",
-      "changed_at": "2026-11-17T16:16:58.060Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-18",
-      "count": 61,
+      "count": 62,
       "path": "archive/2026-11-18.json"
     },
     {
@@ -1272,21 +1272,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-17T18:11:29.888Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 4,
-      "revisions": 0,
-      "total": 363,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-17T20:18:53.359Z",
       "status": "partial",
@@ -1385,6 +1370,21 @@
       "additions": 0,
       "revisions": 0,
       "total": 418,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-18T10:20:27.066Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 1,
+      "revisions": 0,
+      "total": 419,
       "failed_sources": [
         {
           "id": "europarl-news",
