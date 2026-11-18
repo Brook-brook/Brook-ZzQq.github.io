@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-19",
+  "records": [
+    {
+      "id": "n-aef632472a5e3af7f91b4cd9c5d8e0ecee47135327c9822e26d24027e878b6a3",
+      "source_id": "hf-blog",
+      "title": "Time-Series Models in the Streamhouse: A New Frontier and Use Cases",
+      "url": "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-18T15:00:23.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 15:00:23 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-18T16:18:21.457Z",
+      "changed_at": "2026-11-18T16:18:21.457Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-5b89a2db7f60ae9099b72ca73768977f61c082125cbaf94b72c9c9bced5f17aa",
+      "source_id": "hf-blog",
+      "title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
+      "url": "https://huggingface.co/blog/rumble-2-flash",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-18T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-18T16:18:21.457Z",
+      "changed_at": "2026-11-18T16:18:21.457Z",
+      "revision_count": 0,
+      "previous_versions": []
+    }
+  ]
+}

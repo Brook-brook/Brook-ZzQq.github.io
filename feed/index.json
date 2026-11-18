@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-18T14:11:26.617Z",
+  "attempted_at": "2026-11-18T16:18:21.457Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 420,
+  "total": 422,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-18T14:11:26.617Z",
-      "last_success_at": "2026-11-18T14:11:26.617Z",
+      "attempted_at": "2026-11-18T16:18:21.457Z",
+      "last_success_at": "2026-11-18T16:18:21.457Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T14:11:26.617Z",
-      "last_success_at": "2026-11-18T14:11:26.617Z",
+      "attempted_at": "2026-11-18T16:18:21.457Z",
+      "last_success_at": "2026-11-18T16:18:21.457Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,12 +60,12 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T14:11:26.617Z",
-      "last_success_at": "2026-11-18T14:11:26.617Z",
+      "attempted_at": "2026-11-18T16:18:21.457Z",
+      "last_success_at": "2026-11-18T16:18:21.457Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
-      "etag": "W/\"4186f-XN9Hnkw5PokMlbvDxN8o8EGt6PQ\"",
+      "etag": "W/\"41af0-dm/sCrca3/eeAapP9XDyR5AlbWk\"",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-18T14:11:26.617Z",
-      "last_success_at": "2026-11-18T14:11:26.617Z",
+      "attempted_at": "2026-11-18T16:18:21.457Z",
+      "last_success_at": "2026-11-18T16:18:21.457Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T14:11:26.617Z",
-      "last_success_at": "2026-11-18T14:11:26.617Z",
+      "attempted_at": "2026-11-18T16:18:21.457Z",
+      "last_success_at": "2026-11-18T16:18:21.457Z",
       "accepted": 1,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795009593-gzip\"",
-      "last_modified": "Wed, 18 Nov 2026 13:46:33 GMT",
+      "etag": "\"1795018492-gzip\"",
+      "last_modified": "Wed, 18 Nov 2026 16:14:52 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-18T14:11:26.617Z",
+      "attempted_at": "2026-11-18T16:18:21.457Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T14:11:26.617Z",
-      "last_success_at": "2026-11-18T14:11:26.617Z",
+      "attempted_at": "2026-11-18T16:18:21.457Z",
+      "last_success_at": "2026-11-18T16:18:21.457Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-aef632472a5e3af7f91b4cd9c5d8e0ecee47135327c9822e26d24027e878b6a3",
+      "source_id": "hf-blog",
+      "title": "Time-Series Models in the Streamhouse: A New Frontier and Use Cases",
+      "url": "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-18T15:00:23.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 15:00:23 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-18T16:18:21.457Z",
+      "changed_at": "2026-11-18T16:18:21.457Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-5b89a2db7f60ae9099b72ca73768977f61c082125cbaf94b72c9c9bced5f17aa",
+      "source_id": "hf-blog",
+      "title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
+      "url": "https://huggingface.co/blog/rumble-2-flash",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-18T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-18T16:18:21.457Z",
+      "changed_at": "2026-11-18T16:18:21.457Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-5c8f207ad1b0ea8078a8217ff362c5fee09a1bf5a37813cf190b728828538ecf",
       "source_id": "un-news",
@@ -1196,45 +1232,14 @@
       "changed_at": "2026-11-17T18:11:29.888Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-b43ef08ac3ed4f7af6f4fa4f8f60d0d2c49772fc6e540a21a0c9e441265578ef",
-      "source_id": "openai-news",
-      "title": "Astra for Law leads in legal intelligence",
-      "url": "https://openai.com/index/astra-law-6-2",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-17T00:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 00:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-17T18:11:29.888Z",
-      "changed_at": "2026-11-17T18:11:29.888Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-35bcc4b3dafe10f2abb0524c62a6cb7e6288c75afa8208edf2e5c5c0e82ee7f4",
-      "source_id": "openai-news",
-      "title": "ChatGPT Ads increases its market presence in 44 countries",
-      "url": "https://openai.com/ads/blog/chatgpt-ads-increases-its-market-presence",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-12T00:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 12 Nov 2026 00:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-17T18:11:29.888Z",
-      "changed_at": "2026-11-17T18:11:29.888Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
+    {
+      "date": "2026-11-19",
+      "count": 2,
+      "path": "archive/2026-11-19.json"
+    },
     {
       "date": "2026-11-18",
       "count": 63,
@@ -1272,21 +1277,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-18T00:17:52.513Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 1,
-      "revisions": 0,
-      "total": 368,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-18T02:12:43.809Z",
       "status": "partial",
@@ -1385,6 +1375,21 @@
       "additions": 1,
       "revisions": 0,
       "total": 420,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-18T16:18:21.457Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 422,
       "failed_sources": [
         {
           "id": "europarl-news",
