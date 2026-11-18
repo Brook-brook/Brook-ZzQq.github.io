@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-18T16:18:21.457Z",
+  "attempted_at": "2026-11-18T18:13:33.047Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 422,
+  "total": 427,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-18T16:18:21.457Z",
-      "last_success_at": "2026-11-18T16:18:21.457Z",
+      "attempted_at": "2026-11-18T18:13:33.047Z",
+      "last_success_at": "2026-11-18T18:13:33.047Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T16:18:21.457Z",
-      "last_success_at": "2026-11-18T16:18:21.457Z",
+      "attempted_at": "2026-11-18T18:13:33.047Z",
+      "last_success_at": "2026-11-18T18:13:33.047Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,12 +60,12 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T16:18:21.457Z",
-      "last_success_at": "2026-11-18T16:18:21.457Z",
+      "attempted_at": "2026-11-18T18:13:33.047Z",
+      "last_success_at": "2026-11-18T18:13:33.047Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
-      "etag": "W/\"41af0-dm/sCrca3/eeAapP9XDyR5AlbWk\"",
+      "etag": "W/\"41c31-7C0l8wW4VF4zD0QWW9GnOTNk450\"",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-18T16:18:21.457Z",
-      "last_success_at": "2026-11-18T16:18:21.457Z",
+      "attempted_at": "2026-11-18T18:13:33.047Z",
+      "last_success_at": "2026-11-18T18:13:33.047Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T16:18:21.457Z",
-      "last_success_at": "2026-11-18T16:18:21.457Z",
-      "accepted": 1,
+      "attempted_at": "2026-11-18T18:13:33.047Z",
+      "last_success_at": "2026-11-18T18:13:33.047Z",
+      "accepted": 2,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795018492-gzip\"",
-      "last_modified": "Wed, 18 Nov 2026 16:14:52 GMT",
+      "etag": "\"1795025209-gzip\"",
+      "last_modified": "Wed, 18 Nov 2026 18:06:49 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-18T16:18:21.457Z",
+      "attempted_at": "2026-11-18T18:13:33.047Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T16:18:21.457Z",
-      "last_success_at": "2026-11-18T16:18:21.457Z",
+      "attempted_at": "2026-11-18T18:13:33.047Z",
+      "last_success_at": "2026-11-18T18:13:33.047Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,96 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-67952d9a918d2536a7bf3b37b6c05ec5dc7c7c22fdf68db178458bb74b4d4f2d",
+      "source_id": "openai-news",
+      "title": "Inside the Codex sandbox",
+      "url": "https://openai.com/index/inside-the-codex-sandbox",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-18T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-18T18:13:33.047Z",
+      "changed_at": "2026-11-18T18:13:33.047Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-184d931227f2504de1a33bebb5615518a5072d45e1bfb93a37850e8332740e3a",
+      "source_id": "openai-news",
+      "title": "The Silent Consensus",
+      "url": "https://openai.com/index/the-silent-consensus",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-18T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-18T18:13:33.047Z",
+      "changed_at": "2026-11-18T18:13:33.047Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-68ddb817fe4001c0fc7b71404e8ed33269a5f57651ec2110d7ae5f13ebb157e7",
+      "source_id": "openai-news",
+      "title": "Advancing chip design with OpenAI models",
+      "url": "https://openai.com/index/advancing-chip-design-with-our-models",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-18T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-18T18:13:33.047Z",
+      "changed_at": "2026-11-18T18:13:33.047Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-b725123bbd637731bf47d88049d284db0ba2a42c1d9da7ba74289a058aa8e329",
+      "source_id": "bis-press",
+      "title": "Basel Committee discusses risks and vulnerabilities faced by global banking system",
+      "url": "https://www.bis.org/media-releases/20261118-basel-committee-discusses-risks-and-vulnerabilities-faced-global-banking-system",
+      "topic": "economy",
+      "publisher": "Bank for International Settlements",
+      "published_at": "2026-11-18T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "2026-11-18T00:00:00Z",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "机构发布与研究推断需分别阅读；不表示对市场走势的确定预测。",
+      "first_seen_at": "2026-11-18T18:13:33.047Z",
+      "changed_at": "2026-11-18T18:13:33.047Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-ec56b5eff9affb1c339e466ce0f8237f0117032663d5db85034279f9f2a19228",
+      "source_id": "hf-blog",
+      "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
+      "url": "https://huggingface.co/blog/moe-expert-streaming",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-18T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-18T18:13:33.047Z",
+      "changed_at": "2026-11-18T18:13:33.047Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-aef632472a5e3af7f91b4cd9c5d8e0ecee47135327c9822e26d24027e878b6a3",
       "source_id": "hf-blog",
@@ -1142,102 +1232,12 @@
       "changed_at": "2026-11-18T00:17:52.513Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-ca5eab4f8a8271cecb211e1632894da93a4b370199e1c61c88bcde5d6d20721e",
-      "source_id": "un-news",
-      "title": "World News in Brief: Ebola cases double in DR Congo, chemical exposure starts before birth, Türk concern over EU-Rwanda transfer plan",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168827",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-17T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-17T22:19:09.786Z",
-      "changed_at": "2026-11-17T22:19:09.786Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-cff41e40b9a1a96b64c0d6a52a4e6ffacb92f662112aa72bfd6abaf2f654bd87",
-      "source_id": "un-news",
-      "title": "Ukraine: Civilian casualties in 2026 already far exceed previous years’ tolls",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168828",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-17T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-17T22:19:09.786Z",
-      "changed_at": "2026-11-17T22:19:09.786Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-1f968809e74611d90069cbf7de409df526f842bef1b75d7d268957a6f1c12ed9",
-      "source_id": "un-news",
-      "title": "Haiti: ‘Atrocious abuses’ continue as UN warns anti-gang operations must priortise civilian protection",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168823",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-17T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-17T20:18:53.359Z",
-      "changed_at": "2026-11-17T20:18:53.359Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-c445ee26f942e340fa099e842626e5982badf2e0a0908d946febe10090d9faa9",
-      "source_id": "un-news",
-      "title": "COP31: The push to protect warming oceans reaches the negotiating table",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168824",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-17T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-17T20:18:53.359Z",
-      "changed_at": "2026-11-17T20:18:53.359Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-8f6af8c44a4a1bfb5de31585ff7d049da9f0b0c7303ae5eb79fd652e216c50e9",
-      "source_id": "openai-news",
-      "title": "Introducing GPT-6.2 Astra and Sol",
-      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-17T17:45:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 17:45:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-17T18:11:29.888Z",
-      "changed_at": "2026-11-17T18:11:29.888Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-19",
-      "count": 2,
+      "count": 7,
       "path": "archive/2026-11-19.json"
     },
     {
@@ -1277,21 +1277,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-18T02:12:43.809Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 368,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-18T04:20:18.547Z",
       "status": "partial",
@@ -1390,6 +1375,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 422,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-18T18:13:33.047Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 5,
+      "revisions": 0,
+      "total": 427,
       "failed_sources": [
         {
           "id": "europarl-news",
