@@ -63,16 +63,26 @@
       "url": "https://openai.com/index/the-silent-consensus",
       "topic": "ai",
       "publisher": "OpenAI",
-      "published_at": "2026-11-18T00:00:00.000Z",
+      "published_at": "2026-11-18T10:00:00.000Z",
       "updated_at": null,
-      "published_raw": "Wed, 18 Nov 2026 00:00:00 GMT",
+      "published_raw": "Wed, 18 Nov 2026 10:00:00 GMT",
       "date_warning": null,
       "review_status": "needs_review",
       "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
       "first_seen_at": "2026-11-18T18:13:33.047Z",
-      "changed_at": "2026-11-18T18:13:33.047Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-18T22:12:16.054Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "The Silent Consensus",
+          "url": "https://openai.com/index/the-silent-consensus",
+          "published_at": "2026-11-18T00:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Wed, 18 Nov 2026 00:00:00 GMT",
+          "date_warning": null,
+          "changed_at": "2026-11-18T18:13:33.047Z"
+        }
+      ]
     },
     {
       "id": "n-68ddb817fe4001c0fc7b71404e8ed33269a5f57651ec2110d7ae5f13ebb157e7",
@@ -197,6 +207,42 @@
       "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
       "first_seen_at": "2026-11-18T20:11:05.748Z",
       "changed_at": "2026-11-18T20:11:05.748Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-99be0c0a7e074380d1a5d6cdb0953a68d68217eb3d8f50443a74e9d288a8cea0",
+      "source_id": "openai-news",
+      "title": "Managing frontier AI risk: From training to deployment",
+      "url": "https://openai.com/index/managing-frontier-ai-risk",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-18T06:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 06:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-18T22:12:16.054Z",
+      "changed_at": "2026-11-18T22:12:16.054Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-a2441a86e7a8fcfdc07a50d4af8a1f9a84e1b5b26eb54c383ac29864e1e117fd",
+      "source_id": "un-news",
+      "title": "COP31 deadlock persists as countries launch new ‘climate reality check’",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168833",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-18T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-18T22:12:16.054Z",
+      "changed_at": "2026-11-18T22:12:16.054Z",
       "revision_count": 0,
       "previous_versions": []
     }
