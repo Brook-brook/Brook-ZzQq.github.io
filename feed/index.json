@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-18T18:13:33.047Z",
+  "attempted_at": "2026-11-18T20:11:05.748Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 427,
+  "total": 431,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-18T18:13:33.047Z",
-      "last_success_at": "2026-11-18T18:13:33.047Z",
+      "attempted_at": "2026-11-18T20:11:05.748Z",
+      "last_success_at": "2026-11-18T20:11:05.748Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T18:13:33.047Z",
-      "last_success_at": "2026-11-18T18:13:33.047Z",
+      "attempted_at": "2026-11-18T20:11:05.748Z",
+      "last_success_at": "2026-11-18T20:11:05.748Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,12 +60,12 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T18:13:33.047Z",
-      "last_success_at": "2026-11-18T18:13:33.047Z",
+      "attempted_at": "2026-11-18T20:11:05.748Z",
+      "last_success_at": "2026-11-18T20:11:05.748Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
-      "etag": "W/\"41c31-7C0l8wW4VF4zD0QWW9GnOTNk450\"",
+      "etag": "W/\"41ef8-La4G9k3xjjza6gqSf13PgRxlvAs\"",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -81,14 +81,14 @@
         "www.federalreserve.gov",
         "federalreserve.gov"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-18T18:13:33.047Z",
-      "last_success_at": "2026-11-18T18:13:33.047Z",
+      "status": "ok",
+      "attempted_at": "2026-11-18T20:11:05.748Z",
+      "last_success_at": "2026-11-18T20:11:05.748Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
-      "etag": "W/\"eb4a6e15b473dd1:0\"",
-      "last_modified": "Fri, 13 Nov 2026 21:15:18 GMT",
+      "etag": "W/\"4cb96b8f77dd1:0\"",
+      "last_modified": "Wed, 18 Nov 2026 19:00:14 GMT",
       "error": null,
       "retry_after": null
     },
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T18:13:33.047Z",
-      "last_success_at": "2026-11-18T18:13:33.047Z",
+      "attempted_at": "2026-11-18T20:11:05.748Z",
+      "last_success_at": "2026-11-18T20:11:05.748Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795025209-gzip\"",
-      "last_modified": "Wed, 18 Nov 2026 18:06:49 GMT",
+      "etag": "\"1795029304-gzip\"",
+      "last_modified": "Wed, 18 Nov 2026 19:15:04 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-18T18:13:33.047Z",
+      "attempted_at": "2026-11-18T20:11:05.748Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-18T18:13:33.047Z",
-      "last_success_at": "2026-11-18T18:13:33.047Z",
+      "attempted_at": "2026-11-18T20:11:05.748Z",
+      "last_success_at": "2026-11-18T20:11:05.748Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,78 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-f0b81ce3c14612880642c854f15f292b941326a9491f444584b41bfe82ab7a56",
+      "source_id": "hf-blog",
+      "title": "DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency",
+      "url": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-18T19:54:56.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 19:54:56 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-18T20:11:05.748Z",
+      "changed_at": "2026-11-18T20:11:05.748Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-c0c4ef66e0d9307c0568eff5e9abce7818405bc16fc001685f0c5acfed4f12e6",
+      "source_id": "fed-press",
+      "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
+      "topic": "economy",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-11-18T19:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 19:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
+      "first_seen_at": "2026-11-18T20:11:05.748Z",
+      "changed_at": "2026-11-18T20:11:05.748Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-e55c8f2df06c07ffc92b5ea28b360b047797a023e968816743ef7e472d87d336",
+      "source_id": "hf-blog",
+      "title": "Why your fine-tuning job takes longer than the FLOPs say",
+      "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-18T18:53:43.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 18:53:43 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-18T20:11:05.748Z",
+      "changed_at": "2026-11-18T20:11:05.748Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-b8cfa4b75777cbe36dd5312c6df19429b6fe358b5894dae3efd888fcd21781e3",
+      "source_id": "un-news",
+      "title": "Patients running out of options as antibiotics stop working against common infections",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168832",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-18T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-18T20:11:05.748Z",
+      "changed_at": "2026-11-18T20:11:05.748Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-67952d9a918d2536a7bf3b37b6c05ec5dc7c7c22fdf68db178458bb74b4d4f2d",
       "source_id": "openai-news",
@@ -1160,84 +1232,12 @@
       "changed_at": "2026-11-18T06:16:37.053Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-ec1360fdca7b7fd616fe81fc53f75df41c534fdad10343ae4b0562d70cbe4e78",
-      "source_id": "arxiv-ai",
-      "title": "What Does an Agent Need? Bundle-Aware Agent Resource Composition",
-      "url": "https://arxiv.org/abs/2611.22030",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-18T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Wed, 18 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-18T06:16:37.053Z",
-      "changed_at": "2026-11-18T06:16:37.053Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-f181b71528c6066e3281f21c7f17efd8594cc526edaf7045863df7fef885c018",
-      "source_id": "arxiv-ai",
-      "title": "Can You Undo It? Reversibility Classes for AI Agent Actions",
-      "url": "https://arxiv.org/abs/2611.22075",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-18T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Wed, 18 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-18T06:16:37.053Z",
-      "changed_at": "2026-11-18T06:16:37.053Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-f3f5e8f906dec8fe47b20d6e0cb93acfbe14bdacda968baa7fa7bfc457d79539",
-      "source_id": "arxiv-ai",
-      "title": "ConfGuard: a physics-grounded reference monitor for predictive-maintenance large-language-model agents",
-      "url": "https://arxiv.org/abs/2611.22288",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-18T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Wed, 18 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-18T06:16:37.053Z",
-      "changed_at": "2026-11-18T06:16:37.053Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-3047d7657748ea760feb4367a861eff886526fc9a8d7d29ee939532b2c42b6aa",
-      "source_id": "openai-news",
-      "title": "Introducing ChatGPT for Sales",
-      "url": "https://openai.com/index/introducing-chatgpt-for-sales",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-17T08:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Tue, 17 Nov 2026 08:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-18T00:17:52.513Z",
-      "changed_at": "2026-11-18T00:17:52.513Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-19",
-      "count": 7,
+      "count": 11,
       "path": "archive/2026-11-19.json"
     },
     {
@@ -1277,21 +1277,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-18T04:20:18.547Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 368,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-18T06:16:37.053Z",
       "status": "partial",
@@ -1390,6 +1375,21 @@
       "additions": 5,
       "revisions": 0,
       "total": 427,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-18T20:11:05.748Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 4,
+      "revisions": 0,
+      "total": 431,
       "failed_sources": [
         {
           "id": "europarl-news",
