@@ -181,6 +181,24 @@
       "changed_at": "2026-11-17T22:19:09.786Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-3047d7657748ea760feb4367a861eff886526fc9a8d7d29ee939532b2c42b6aa",
+      "source_id": "openai-news",
+      "title": "Introducing ChatGPT for Sales",
+      "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-17T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 17 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-18T00:17:52.513Z",
+      "changed_at": "2026-11-18T00:17:52.513Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
