@@ -37,6 +37,24 @@
       "changed_at": "2026-11-19T16:15:32.678Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-9342dbf934e428aa00c16520441f258a949ccd62bcb28471deb475c04ce3c227",
+      "source_id": "openai-news",
+      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-19T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-19T18:11:48.694Z",
+      "changed_at": "2026-11-19T18:11:48.694Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }

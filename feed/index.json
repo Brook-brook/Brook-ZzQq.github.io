@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-19T16:15:32.678Z",
+  "attempted_at": "2026-11-19T18:11:48.694Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 487,
+  "total": 488,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-19T16:15:32.678Z",
-      "last_success_at": "2026-11-19T16:15:32.678Z",
+      "attempted_at": "2026-11-19T18:11:48.694Z",
+      "last_success_at": "2026-11-19T18:11:48.694Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-19T16:15:32.678Z",
-      "last_success_at": "2026-11-19T16:15:32.678Z",
+      "attempted_at": "2026-11-19T18:11:48.694Z",
+      "last_success_at": "2026-11-19T18:11:48.694Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-19T16:15:32.678Z",
-      "last_success_at": "2026-11-19T16:15:32.678Z",
+      "attempted_at": "2026-11-19T18:11:48.694Z",
+      "last_success_at": "2026-11-19T18:11:48.694Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -81,9 +81,9 @@
         "www.federalreserve.gov",
         "federalreserve.gov"
       ],
-      "status": "ok",
-      "attempted_at": "2026-11-19T16:15:32.678Z",
-      "last_success_at": "2026-11-19T16:15:32.678Z",
+      "status": "not_modified",
+      "attempted_at": "2026-11-19T18:11:48.694Z",
+      "last_success_at": "2026-11-19T18:11:48.694Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-19T16:15:32.678Z",
-      "last_success_at": "2026-11-19T16:15:32.678Z",
+      "attempted_at": "2026-11-19T18:11:48.694Z",
+      "last_success_at": "2026-11-19T18:11:48.694Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795104498-gzip\"",
-      "last_modified": "Thu, 19 Nov 2026 16:08:18 GMT",
+      "etag": "\"1795109142-gzip\"",
+      "last_modified": "Thu, 19 Nov 2026 17:25:42 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-19T16:15:32.678Z",
+      "attempted_at": "2026-11-19T18:11:48.694Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-19T16:15:32.678Z",
-      "last_success_at": "2026-11-19T16:15:32.678Z",
+      "attempted_at": "2026-11-19T18:11:48.694Z",
+      "last_success_at": "2026-11-19T18:11:48.694Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,24 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-9342dbf934e428aa00c16520441f258a949ccd62bcb28471deb475c04ce3c227",
+      "source_id": "openai-news",
+      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-19T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-19T18:11:48.694Z",
+      "changed_at": "2026-11-19T18:11:48.694Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-325a2d06cee138cc11ca9d61312d5ad710721f602dd5c8f46e6d89fc8badfb7e",
       "source_id": "fed-press",
@@ -1224,30 +1242,12 @@
       "changed_at": "2026-11-18T20:11:05.748Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-e55c8f2df06c07ffc92b5ea28b360b047797a023e968816743ef7e472d87d336",
-      "source_id": "hf-blog",
-      "title": "Why your fine-tuning job takes longer than the FLOPs say",
-      "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
-      "topic": "ai",
-      "publisher": "Hugging Face / 博客作者",
-      "published_at": "2026-11-18T18:53:43.000Z",
-      "updated_at": null,
-      "published_raw": "Wed, 18 Nov 2026 18:53:43 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
-      "first_seen_at": "2026-11-18T20:11:05.748Z",
-      "changed_at": "2026-11-18T20:11:05.748Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-20",
-      "count": 2,
+      "count": 3,
       "path": "archive/2026-11-20.json"
     },
     {
@@ -1292,21 +1292,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-19T02:18:41.641Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 435,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-19T04:12:52.942Z",
       "status": "partial",
@@ -1405,6 +1390,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 487,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-19T18:11:48.694Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 1,
+      "revisions": 0,
+      "total": 488,
       "failed_sources": [
         {
           "id": "europarl-news",
