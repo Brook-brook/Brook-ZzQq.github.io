@@ -55,6 +55,42 @@
       "changed_at": "2026-11-19T18:11:48.694Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-cb25ee157274b1df14a9b1126a74c6121290cd93c6c64ac7b8cc2918cb1b0c88",
+      "source_id": "un-news",
+      "title": "COP31: Ambition goes missing as fossil fuel language drops from draft deal",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168839",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-19T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-19T20:20:20.080Z",
+      "changed_at": "2026-11-19T20:20:20.080Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-54080d49b28caf36bb39c9748c8e3671a6f62dc12133a7f549605e2abc290b7b",
+      "source_id": "un-news",
+      "title": "No government approval needed to form or join a group, UN rights committee says",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168837",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-19T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-19T20:20:20.080Z",
+      "changed_at": "2026-11-19T20:20:20.080Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
