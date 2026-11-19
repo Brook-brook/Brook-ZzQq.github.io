@@ -74,9 +74,17 @@ Study 只筛选，不使用全站搜索的相关度排序，因此仍保留原�
 | Pages 产物结构检查 | 通过，实际构建布局、资源、入口与旧包均存在 |
 | 根路径 Study 浏览器回归 | 390/768/1440px × 深浅主题通过；别名、全角、多词、分享、排序、键盘、空结果、axe；33 篇无 JS 阅读通过 |
 | 实际浏览器 Python | 七个既有例子真实执行、异常、输出上限、超时、重载和停止检查通过 |
+| 项目子路径浏览器回归 | 全部 36 个配置入口通过，涵盖现有地图、搜索、知识库、手记与交互实验 |
+| 搜索关键状态的控制台专项 | 390/768/1440px × 深浅主题，Study 别名、全站搜索、筛选空结果/重置；0 console.error、页面异常或同源 HTTP 错误 |
 
-完整项目子路径浏览器回归仍在运行，将在完成后填入本报告；以上没有将
-等待中的检查记为通过。
+首轮本地预览服务进程在长回归期间退出，原命令没有整体正常结束。保留
+前 30 个入口顺序完成的结果后，重启相同的冻结构建，重新执行第 31–36
+个入口；补跑六项均退出 0。控制台专项首次连接失败，也在恢复服务后
+重新跑完六个状态并通过。没有把进程中断记作测试成功。
+
+功能代码已提交至独立修复分支，见
+[PR #32](https://github.com/Brook-brook/Brook-ZzQq.github.io/pull/32)。
+GitHub Actions 的最新结果以该 PR Checks 为准，本表记录实际完成的本地验证。
 
 ### 实际前后截图
 
@@ -101,3 +109,6 @@ Study 只筛选，不使用全站搜索的相关度排序，因此仍保留原�
 本次检查的功能源码：`_includes/study-index.html`、
 `assets/js/atlas/site.js`、`assets/js/atlas/search-models.js`；
 对应回归位于 `tests/study-browser.mjs`、`tests/search-models.test.js`。
+另有 README、`docs/ROADMAP.md`、`THIRD_PARTY_NOTICES.md`、本审计与
+`docs/site-audit-2026-11-19-compliance.md` 五份说明，以及八张真实截图，
+共 18 个修改/新增文件。
