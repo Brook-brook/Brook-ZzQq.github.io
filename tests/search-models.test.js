@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateSearchIndex, searchEntries, highlightSearch, keywordContext, searchAliasHint } from '../assets/js/atlas/search-models.js';
+import { validateSearchIndex, searchEntries, matchesSearchQuery, highlightSearch, keywordContext, searchAliasHint } from '../assets/js/atlas/search-models.js';
 
 const base = '/Brook-ZzQq.github.io';
 const entry = (extra = {}) => ({ id: 'note-0123456789abcdef', kind: 'note', title: 'C++ 对象复制', summary: '比较浅拷贝与深拷贝', keywords: 'memory ownership', detail: '实验室教程', url: base + '/knowledge/cpp-copy/', featured: false, ...extra });
@@ -32,6 +32,17 @@ test('short Latin terms and abbreviations do not match inside unrelated words', 
   const rows = [entry({ title: 'chair', summary: 'details', keywords: 'JSON GIScience NashvillE' })];
   for (const query of ['AI', 'JS', 'GIS', 'nash']) assert.equal(searchEntries(rows, query).length, 0, query);
   assert.equal(searchEntries([entry({ title: 'AI 人工智能', keywords: 'JavaScript GIS C++17' })], 'ai js GIS cpp').length, 1);
+});
+test('reading-index matching uses literal aliases and normalized AND terms without ranking', () => {
+  const text = '复制了对象，为什么数据仍然共享？ C++ shallow-copy ownership';
+  for (const query of ['C++', 'CPP', 'cplusplus', 'ＣＰＰ', 'Ｃ＋＋', 'CPP 复制', '   '])
+    assert.ok(matchesSearchQuery(text, query), query);
+  for (const query of ['CPP 没有这个词', '.*', '<img'])
+    assert.equal(matchesSearchQuery(text, query), false, query);
+  assert.ok(matchesSearchQuery('GIS × AI 空间验证', '地理信息系统 人工智能'));
+  for (const query of ['AI', 'JS', 'GIS'])
+    assert.equal(matchesSearchQuery('chair JSON GIScience', query), false, query);
+  assert.equal(matchesSearchQuery('保持原文', ''), true);
 });
 test('literal full title outranks alias/keywords and stable ties do not imply popularity', () => {
   const rows = [entry({ title: '别名示例', keywords: 'C++' }), entry({ id: 'lab-0123456789abcdef', kind: 'lab', title: 'CPP' })];

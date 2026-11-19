@@ -88,6 +88,16 @@ export function normalizeSearch(value) {
   return String(value).normalize('NFKC').toLocaleLowerCase().trim();
 }
 
+function matchesTerms(text, terms) {
+  return terms.every((options) => options.some((term) => occurrences(text, term, true).length));
+}
+
+// The reading index filters in its original order; the global finder also ranks.
+// Both use the same explicit aliases, Unicode normalization and word boundaries.
+export function matchesSearchQuery(text, query = '') {
+  return matchesTerms(normalizeSearch(text), termsFor(query));
+}
+
 export function validateSearchIndex(data, base = '') {
   if (data?.schema_version !== 1 || !Array.isArray(data.entries) || data.entries.length > 1000)
     throw new Error('搜索索引格式不兼容。');
@@ -120,7 +130,7 @@ export function searchEntries(entries, query = '', kind = 'all') {
     const keywords = normalizeSearch(entry.keywords);
     const summary = normalizeSearch(entry.summary);
     const haystack = [title, keywords, summary, normalizeSearch(entry.detail)].join(' ');
-    const match = (kind === 'all' || entry.kind === kind) && terms.every((options) => options.some((term) => occurrences(haystack, term, true).length));
+    const match = (kind === 'all' || entry.kind === kind) && matchesTerms(haystack, terms);
     const score = terms.length ? (title === text ? 100 : 0) + terms.reduce((sum, options) =>
       sum + Math.max(...options.map((term) => (occurrences(title, term, true).length ? 12 : 0) +
         (occurrences(keywords, term, true).length ? 6 : 0) + (occurrences(summary, term, true).length ? 2 : 0))), 0)

@@ -88,6 +88,41 @@ try {
       assert.equal(await noteCard(page, 'cpp-copy').getAttribute('data-note-kind'), 'tutorial',
         'older notes retain the tutorial default');
 
+      const originalOrder = await page.locator('[data-note] h3 a').evaluateAll((links) =>
+        links.map((link) => link.getAttribute('href')));
+      for (const spelling of ['C++', 'CPP', 'cplusplus', 'ＣＰＰ', 'Ｃ＋＋', 'CPP 复制']) {
+        await page.locator('#note-query').fill(spelling);
+        assert.equal(await page.locator('[data-note]:visible').count(), 1,
+          `${spelling} finds the note whose visible category is C++`);
+        assert.ok(await noteCard(page, 'cpp-copy').isVisible());
+        assert.equal(await page.locator('#note-query').evaluate((node) => node === document.activeElement), true);
+      }
+      await page.reload();
+      await page.waitForSelector('[data-note-kinds]:visible');
+      assert.equal(await page.locator('#note-query').inputValue(), 'CPP 复制');
+      assert.ok(await noteCard(page, 'cpp-copy').isVisible(), 'shared aliases restore after reload');
+      await page.locator('#note-query').fill('AI');
+      const aiOrder = await page.locator('[data-note]:visible h3 a').evaluateAll((links) =>
+        links.map((link) => link.getAttribute('href')));
+      assert.ok(aiOrder.length > 0);
+      assert.deepEqual(aiOrder, originalOrder.filter((href) => aiOrder.includes(href)),
+        'matching does not reorder the date-sorted reading index');
+      await page.locator('#note-query').fill('人工智能');
+      assert.deepEqual(await page.locator('[data-note]:visible h3 a').evaluateAll((links) =>
+        links.map((link) => link.getAttribute('href'))), aiOrder, 'Chinese and Latin aliases return the same notes');
+      await page.locator('#note-query').fill('地理信息系统');
+      assert.ok(await noteCard(page, 'mercator-scale').isVisible(), 'visible GIS metadata is searchable');
+      await page.locator('#note-query').fill('CPP 不存在的词');
+      assert.equal(await page.locator('[data-note]:visible').count(), 0, 'all query terms must match');
+      assert.ok(await page.locator('#note-empty').isVisible());
+      await page.locator('#note-query').fill('CPP');
+      await keyboardClick(page, page.locator('[data-kind="research"]'), 'Space');
+      assert.equal(await page.locator('[data-note]:visible').count(), 0, 'aliases still intersect the selected content kind');
+      await keyboardClick(page, page.locator('#note-reset'));
+      assert.equal(await page.evaluate(() => document.activeElement.id), 'note-query');
+      assert.deepEqual(await page.locator('[data-note]:visible h3 a').evaluateAll((links) =>
+        links.map((link) => link.getAttribute('href'))), originalOrder);
+
       await keyboardClick(page, page.locator('[data-kind="research"]'), 'Space');
       await keyboardClick(page,
         page.locator(`.study-filters [data-category="${researchCategory}"]`));
