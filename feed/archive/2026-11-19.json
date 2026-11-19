@@ -245,6 +245,42 @@
       "changed_at": "2026-11-18T22:12:16.054Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-58da586369f33999eb920dc2411502d48d9dc9ca37a4ab1a788d83ffd176938a",
+      "source_id": "openai-news",
+      "title": "Research acceleration: The jagged frontier",
+      "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-18T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-19T00:11:33.328Z",
+      "changed_at": "2026-11-19T00:11:33.328Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-53d809d7420a3923e8bad7c3bd224d7d2c9da9cb37fe0d761411713f6da0b90e",
+      "source_id": "openai-news",
+      "title": "How Sumitomo Life’s leaders helped teams adopt ChatGPT Enterprise",
+      "url": "https://openai.com/business/customer-stories/sumitomo-life",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-18T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Wed, 18 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-19T00:11:33.328Z",
+      "changed_at": "2026-11-19T00:11:33.328Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
