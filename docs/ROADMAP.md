@@ -10,6 +10,8 @@ entries. Lower bullets retain historical counts from when each addition entered.
 - Thirty-three public notes/tutorials with metadata, TOC, code blocks and actual
   experiment links when available; source-grounded research stays type-labelled.
 - Knowledge map, client-side search, category filtering and empty state.
+- Study category/alias/Unicode search now follows the global finder's explicit
+  matching rules while retaining the reading index's original date order.
 - Native13-topic AI-foundations map with honest resource/gap states, original
   full-batch regression with complete traces and per-sample evidence, and a
   manual2->2->1 chain-rule Python example. Two new stdlib downloads retain the

@@ -1,4 +1,5 @@
 import { mountSiteSearch } from './site-search.js';
+import { matchesSearchQuery } from './search-models.js';
 
 const root = document.documentElement;
 const toggle = document.getElementById('theme-toggle');
@@ -91,13 +92,12 @@ if (query) {
   }
 
   function filter(syncUrl = true) {
-    const text = query.value.trim().toLocaleLowerCase();
     notes.forEach((note) => {
       const haystack = note.dataset.search || note.textContent;
       note.hidden = !(
         (category === 'all' || note.dataset.category === category) &&
         (kind === 'all' || (note.dataset.noteKind || 'tutorial') === kind) &&
-        haystack.toLocaleLowerCase().includes(text)
+        matchesSearchQuery(haystack, query.value)
       );
     });
     categories.forEach((button) => button.setAttribute('aria-pressed',

@@ -1,5 +1,14 @@
 # Third-party notices
 
+## 2026-11-19 site audit
+
+The Study-search fix reuses this project's original public-search matcher and
+existing explicit aliases. No package, font, image source, corpus or copied
+third-party implementation is added. Review screenshots use synthetic public
+queries in fresh browser contexts and stay in the build-excluded docs directory.
+Existing licenses and attributions remain intact; see
+`docs/site-audit-2026-11-19-compliance.md`.
+
 Brook’s Digital Universe retains the original theme and dependency notices.
 This inventory distinguishes shipped site code/assets, externally loaded runtimes,
 and design/build tools. Exact versions and review scope: `docs/iteration-5-compliance.md`.

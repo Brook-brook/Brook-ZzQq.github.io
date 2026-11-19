@@ -6,6 +6,15 @@ A Jekyll personal space for learning notes, projects, creative experiments and
 new interests. Brook’s Atlas remains its campus-map work.
 Public identity: **Brook**. Production publishing uses the built-site Actions workflow.
 
+## 2026-11-19 site audit: Study search consistency
+
+Study now shares the public finder's explicit aliases, Unicode normalization
+and all-term matching. Visible categories are searchable: `C++`, `CPP` and
+full-width spellings find the same ownership lesson. Existing date order,
+type/category intersections, share URLs and no-JS reading remain available.
+See the [three findings and browser evidence](docs/site-audit-2026-11-19.md).
+The review branch is based on unmerged iteration31; this is not a deployment.
+
 ## Iteration 31 inspect what a retrieval score preserves
 
 `feat/atlas-iteration-31` continues pushed, unmerged30 (`e46786e`). A new lexical
