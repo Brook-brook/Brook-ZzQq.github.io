@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-19T22:21:15.632Z",
+  "attempted_at": "2026-11-20T00:16:41.597Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 490,
+  "total": 493,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-19T22:21:15.632Z",
-      "last_success_at": "2026-11-19T22:21:15.632Z",
+      "attempted_at": "2026-11-20T00:16:41.597Z",
+      "last_success_at": "2026-11-20T00:16:41.597Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-19T22:21:15.632Z",
-      "last_success_at": "2026-11-19T22:21:15.632Z",
+      "attempted_at": "2026-11-20T00:16:41.597Z",
+      "last_success_at": "2026-11-20T00:16:41.597Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-19T22:21:15.632Z",
-      "last_success_at": "2026-11-19T22:21:15.632Z",
+      "attempted_at": "2026-11-20T00:16:41.597Z",
+      "last_success_at": "2026-11-20T00:16:41.597Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-19T22:21:15.632Z",
-      "last_success_at": "2026-11-19T22:21:15.632Z",
+      "attempted_at": "2026-11-20T00:16:41.597Z",
+      "last_success_at": "2026-11-20T00:16:41.597Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -103,9 +103,9 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "ok",
-      "attempted_at": "2026-11-19T22:21:15.632Z",
-      "last_success_at": "2026-11-19T22:21:15.632Z",
+      "status": "not_modified",
+      "attempted_at": "2026-11-20T00:16:41.597Z",
+      "last_success_at": "2026-11-20T00:16:41.597Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-19T22:21:15.632Z",
+      "attempted_at": "2026-11-20T00:16:41.597Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-19T22:21:15.632Z",
-      "last_success_at": "2026-11-19T22:21:15.632Z",
+      "attempted_at": "2026-11-20T00:16:41.597Z",
+      "last_success_at": "2026-11-20T00:16:41.597Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,60 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-17b7a2b39f098895a2208f48f1507c3092e017b4481f6732b70b65df4c04b2b0",
+      "source_id": "openai-news",
+      "title": "See PR scans in action",
+      "url": "https://openai.com/business/learn/pr-scans-demo",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-19T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-20T00:16:41.597Z",
+      "changed_at": "2026-11-20T00:16:41.597Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-82fe289fe466dcc1d4f71a60b5a7fb88a90a6df5cf719a456eac5a721e5f3552",
+      "source_id": "openai-news",
+      "title": "Explore the Codex Security Plugin",
+      "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-19T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-20T00:16:41.597Z",
+      "changed_at": "2026-11-20T00:16:41.597Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-da30645137037f0052cd70ab3b09df0b31abc0303db9422eaa375a651d60b969",
+      "source_id": "openai-news",
+      "title": "Get started with Daybreak Blue",
+      "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-19T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-20T00:16:41.597Z",
+      "changed_at": "2026-11-20T00:16:41.597Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-54080d49b28caf36bb39c9748c8e3671a6f62dc12133a7f549605e2abc290b7b",
       "source_id": "un-news",
@@ -1178,76 +1232,12 @@
       "changed_at": "2026-11-19T00:11:33.328Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-a2441a86e7a8fcfdc07a50d4af8a1f9a84e1b5b26eb54c383ac29864e1e117fd",
-      "source_id": "un-news",
-      "title": "COP31 deadlock persists as countries launch new ‘climate reality check’",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168833",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-18T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Wed, 18 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-18T22:12:16.054Z",
-      "changed_at": "2026-11-18T22:12:16.054Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-184d931227f2504de1a33bebb5615518a5072d45e1bfb93a37850e8332740e3a",
-      "source_id": "openai-news",
-      "title": "The Silent Consensus",
-      "url": "https://openai.com/index/the-silent-consensus",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-18T10:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Wed, 18 Nov 2026 10:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-18T18:13:33.047Z",
-      "changed_at": "2026-11-18T22:12:16.054Z",
-      "revision_count": 1,
-      "previous_versions": [
-        {
-          "title": "The Silent Consensus",
-          "url": "https://openai.com/index/the-silent-consensus",
-          "published_at": "2026-11-18T00:00:00.000Z",
-          "updated_at": null,
-          "published_raw": "Wed, 18 Nov 2026 00:00:00 GMT",
-          "date_warning": null,
-          "changed_at": "2026-11-18T18:13:33.047Z"
-        }
-      ]
-    },
-    {
-      "id": "n-99be0c0a7e074380d1a5d6cdb0953a68d68217eb3d8f50443a74e9d288a8cea0",
-      "source_id": "openai-news",
-      "title": "Managing frontier AI risk: From training to deployment",
-      "url": "https://openai.com/index/managing-frontier-ai-risk",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-18T06:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Wed, 18 Nov 2026 06:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-18T22:12:16.054Z",
-      "changed_at": "2026-11-18T22:12:16.054Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-20",
-      "count": 5,
+      "count": 8,
       "path": "archive/2026-11-20.json"
     },
     {
@@ -1292,21 +1282,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-19T08:20:00.012Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 485,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-19T10:16:00.408Z",
       "status": "partial",
@@ -1405,6 +1380,21 @@
       "additions": 0,
       "revisions": 0,
       "total": 490,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-20T00:16:41.597Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 3,
+      "revisions": 0,
+      "total": 493,
       "failed_sources": [
         {
           "id": "europarl-news",
