@@ -145,6 +145,24 @@
       "changed_at": "2026-11-20T00:16:41.597Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-a890a236270cc5e31862345b7933987a42b139de2dead494b477fbf1189784a9",
+      "source_id": "openai-news",
+      "title": "Deploying Daybreak Red",
+      "url": "https://openai.com/business/learn/deploying-daybreak-red",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-19T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-20T02:17:30.319Z",
+      "changed_at": "2026-11-20T02:17:30.319Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
