@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-20T12:16:36.049Z",
+  "attempted_at": "2026-11-20T14:12:54.556Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 547,
+  "total": 548,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-20T12:16:36.049Z",
-      "last_success_at": "2026-11-20T12:16:36.049Z",
+      "attempted_at": "2026-11-20T14:12:54.556Z",
+      "last_success_at": "2026-11-20T14:12:54.556Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T12:16:36.049Z",
-      "last_success_at": "2026-11-20T12:16:36.049Z",
+      "attempted_at": "2026-11-20T14:12:54.556Z",
+      "last_success_at": "2026-11-20T14:12:54.556Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,12 +60,12 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T12:16:36.049Z",
-      "last_success_at": "2026-11-20T12:16:36.049Z",
+      "attempted_at": "2026-11-20T14:12:54.556Z",
+      "last_success_at": "2026-11-20T14:12:54.556Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
-      "etag": "W/\"41ef8-La4G9k3xjjza6gqSf13PgRxlvAs\"",
+      "etag": "W/\"42058-cgRcqM+SgPYSJwKvHRRmkrwdB8E\"",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-20T12:16:36.049Z",
-      "last_success_at": "2026-11-20T12:16:36.049Z",
+      "attempted_at": "2026-11-20T14:12:54.556Z",
+      "last_success_at": "2026-11-20T14:12:54.556Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,8 +104,8 @@
         "bis.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-20T12:16:36.049Z",
-      "last_success_at": "2026-11-20T12:16:36.049Z",
+      "attempted_at": "2026-11-20T14:12:54.556Z",
+      "last_success_at": "2026-11-20T14:12:54.556Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-20T12:16:36.049Z",
+      "attempted_at": "2026-11-20T14:12:54.556Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T12:16:36.049Z",
-      "last_success_at": "2026-11-20T12:16:36.049Z",
+      "attempted_at": "2026-11-20T14:12:54.556Z",
+      "last_success_at": "2026-11-20T14:12:54.556Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,24 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-701a571706ec6c00de8bbc6af8a9bc31d2eec98a2272e87a59a9e6a4a97a82f1",
+      "source_id": "hf-blog",
+      "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+      "url": "https://huggingface.co/blog/harness-adapters-at-scale",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-20T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 20 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-20T14:12:54.556Z",
+      "changed_at": "2026-11-20T14:12:54.556Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-1c9351b994c5dad1cd1653c0c69cd47dee043595c2dbe12a5ec157311750af73",
       "source_id": "un-news",
@@ -1214,30 +1232,12 @@
       "changed_at": "2026-11-19T20:20:20.080Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-9342dbf934e428aa00c16520441f258a949ccd62bcb28471deb475c04ce3c227",
-      "source_id": "openai-news",
-      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
-      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-19T08:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 19 Nov 2026 08:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-19T18:11:48.694Z",
-      "changed_at": "2026-11-19T18:11:48.694Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-20",
-      "count": 62,
+      "count": 63,
       "path": "archive/2026-11-20.json"
     },
     {
@@ -1282,21 +1282,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-19T22:21:15.632Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 490,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-20T00:16:41.597Z",
       "status": "partial",
@@ -1395,6 +1380,21 @@
       "additions": 0,
       "revisions": 0,
       "total": 547,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-20T14:12:54.556Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 1,
+      "revisions": 0,
+      "total": 548,
       "failed_sources": [
         {
           "id": "europarl-news",

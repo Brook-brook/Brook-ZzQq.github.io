@@ -1117,6 +1117,24 @@
       "changed_at": "2026-11-20T10:11:37.535Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-701a571706ec6c00de8bbc6af8a9bc31d2eec98a2272e87a59a9e6a4a97a82f1",
+      "source_id": "hf-blog",
+      "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+      "url": "https://huggingface.co/blog/harness-adapters-at-scale",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-20T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 20 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-20T14:12:54.556Z",
+      "changed_at": "2026-11-20T14:12:54.556Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
