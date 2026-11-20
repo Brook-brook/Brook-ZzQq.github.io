@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-20T18:19:21.197Z",
+  "attempted_at": "2026-11-20T20:17:38.393Z",
   "last_complete_at": null,
   "sources_ok": 6,
   "sources_total": 7,
-  "total": 553,
-  "digest": "7a8eb3ea443028991da447f310a7c01ead1dbd00e8901367fb78e452796427fe",
+  "total": 556,
+  "digest": "a9b1ef235d40d02d011dd2a33322de5d0330247733618f4c97d4c2a786bb38c0",
   "index_path": "index.json"
 }

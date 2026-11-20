@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-20T18:19:21.197Z",
+  "attempted_at": "2026-11-20T20:17:38.393Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 553,
+  "total": 556,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-20T18:19:21.197Z",
-      "last_success_at": "2026-11-20T18:19:21.197Z",
+      "attempted_at": "2026-11-20T20:17:38.393Z",
+      "last_success_at": "2026-11-20T20:17:38.393Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T18:19:21.197Z",
-      "last_success_at": "2026-11-20T18:19:21.197Z",
+      "attempted_at": "2026-11-20T20:17:38.393Z",
+      "last_success_at": "2026-11-20T20:17:38.393Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,12 +60,12 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T18:19:21.197Z",
-      "last_success_at": "2026-11-20T18:19:21.197Z",
+      "attempted_at": "2026-11-20T20:17:38.393Z",
+      "last_success_at": "2026-11-20T20:17:38.393Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
-      "etag": "W/\"42058-cgRcqM+SgPYSJwKvHRRmkrwdB8E\"",
+      "etag": "W/\"4217c-lsdoxghiK3DBEQ5fzRniwnuc+GU\"",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-20T18:19:21.197Z",
-      "last_success_at": "2026-11-20T18:19:21.197Z",
+      "attempted_at": "2026-11-20T20:17:38.393Z",
+      "last_success_at": "2026-11-20T20:17:38.393Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -103,9 +103,9 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "ok",
-      "attempted_at": "2026-11-20T18:19:21.197Z",
-      "last_success_at": "2026-11-20T18:19:21.197Z",
+      "status": "not_modified",
+      "attempted_at": "2026-11-20T20:17:38.393Z",
+      "last_success_at": "2026-11-20T20:17:38.393Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-20T18:19:21.197Z",
+      "attempted_at": "2026-11-20T20:17:38.393Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T18:19:21.197Z",
-      "last_success_at": "2026-11-20T18:19:21.197Z",
+      "attempted_at": "2026-11-20T20:17:38.393Z",
+      "last_success_at": "2026-11-20T20:17:38.393Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,60 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-7ad44f990f0c53ef2e2a537716dcd0f4d19ea5c4fbcd3c1cf3877b1b8eae8965",
+      "source_id": "openai-news",
+      "title": "Combatting adversarial distillation",
+      "url": "https://openai.com/index/combatting-adversarial-distillation",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-20T10:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 20 Nov 2026 10:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-20T20:17:38.393Z",
+      "changed_at": "2026-11-20T20:17:38.393Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-824c03b970f1dc58cad676334e63167d2af3b369add30c83b73e4ecb318d913d",
+      "source_id": "hf-blog",
+      "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+      "url": "https://huggingface.co/blog/inkling2mini",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-20T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 20 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-20T20:17:38.393Z",
+      "changed_at": "2026-11-20T20:17:38.393Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-c1a2af93db54bfcf7c217cb74db83cfc0f90565b5c1b91d5871ab9ee0c953910",
+      "source_id": "openai-news",
+      "title": "Can AI help scientists identify promising drug candidates?",
+      "url": "https://openai.com/index/introducing-medchembench",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-20T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 20 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-20T20:17:38.393Z",
+      "changed_at": "2026-11-20T20:17:38.393Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-4b9813abbbbcba462a28480f698ccfc797eb48093f0b541668c0381e3b822176",
       "source_id": "fed-press",
@@ -1178,66 +1232,12 @@
       "changed_at": "2026-11-20T06:12:24.317Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-f8f824b568719334a4810093c561b6daa82d4376dee9a6c0c380945d5bb84ee9",
-      "source_id": "arxiv-ai",
-      "title": "AeroBelief: Budgeted First-Action Verification for Evidence-Guided Aerial Sensing",
-      "url": "https://arxiv.org/abs/2611.25568",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-20T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Fri, 20 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-20T06:12:24.317Z",
-      "changed_at": "2026-11-20T06:12:24.317Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-f9276d621b8c8e7dc4a3f8840a6773db6f03ab35c6fa0ff723eec80a84c3bb9d",
-      "source_id": "arxiv-ai",
-      "title": "Beyond Weight Updates: Evolving Agent Harnesses for Domain Specialization",
-      "url": "https://arxiv.org/abs/2611.25380",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-20T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Fri, 20 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-20T06:12:24.317Z",
-      "changed_at": "2026-11-20T06:12:24.317Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-a890a236270cc5e31862345b7933987a42b139de2dead494b477fbf1189784a9",
-      "source_id": "openai-news",
-      "title": "Deploying Daybreak Red",
-      "url": "https://openai.com/business/learn/deploying-daybreak-red",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-19T00:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-20T02:17:30.319Z",
-      "changed_at": "2026-11-20T02:17:30.319Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-21",
-      "count": 5,
+      "count": 8,
       "path": "archive/2026-11-21.json"
     },
     {
@@ -1287,21 +1287,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-20T04:12:31.658Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 494,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-20T06:12:24.317Z",
       "status": "partial",
@@ -1400,6 +1385,21 @@
       "additions": 0,
       "revisions": 0,
       "total": 553,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-20T20:17:38.393Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 3,
+      "revisions": 0,
+      "total": 556,
       "failed_sources": [
         {
           "id": "europarl-news",
