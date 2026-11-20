@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-20T14:12:54.556Z",
+  "attempted_at": "2026-11-20T16:14:36.458Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 548,
+  "total": 553,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-20T14:12:54.556Z",
-      "last_success_at": "2026-11-20T14:12:54.556Z",
+      "attempted_at": "2026-11-20T16:14:36.458Z",
+      "last_success_at": "2026-11-20T16:14:36.458Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T14:12:54.556Z",
-      "last_success_at": "2026-11-20T14:12:54.556Z",
+      "attempted_at": "2026-11-20T16:14:36.458Z",
+      "last_success_at": "2026-11-20T16:14:36.458Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T14:12:54.556Z",
-      "last_success_at": "2026-11-20T14:12:54.556Z",
+      "attempted_at": "2026-11-20T16:14:36.458Z",
+      "last_success_at": "2026-11-20T16:14:36.458Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -81,14 +81,14 @@
         "www.federalreserve.gov",
         "federalreserve.gov"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-20T14:12:54.556Z",
-      "last_success_at": "2026-11-20T14:12:54.556Z",
+      "status": "ok",
+      "attempted_at": "2026-11-20T16:14:36.458Z",
+      "last_success_at": "2026-11-20T16:14:36.458Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
-      "etag": "W/\"9824ef113f78dd1:0\"",
-      "last_modified": "Thu, 19 Nov 2026 16:00:17 GMT",
+      "etag": "W/\"56ad8bdbff78dd1:0\"",
+      "last_modified": "Fri, 20 Nov 2026 15:00:18 GMT",
       "error": null,
       "retry_after": null
     },
@@ -103,14 +103,14 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-20T14:12:54.556Z",
-      "last_success_at": "2026-11-20T14:12:54.556Z",
+      "status": "ok",
+      "attempted_at": "2026-11-20T16:14:36.458Z",
+      "last_success_at": "2026-11-20T16:14:36.458Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795109142-gzip\"",
-      "last_modified": "Thu, 19 Nov 2026 17:25:42 GMT",
+      "etag": "\"1795189800-gzip\"",
+      "last_modified": "Fri, 20 Nov 2026 15:50:00 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-20T14:12:54.556Z",
+      "attempted_at": "2026-11-20T16:14:36.458Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T14:12:54.556Z",
-      "last_success_at": "2026-11-20T14:12:54.556Z",
+      "attempted_at": "2026-11-20T16:14:36.458Z",
+      "last_success_at": "2026-11-20T16:14:36.458Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,96 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-4b9813abbbbcba462a28480f698ccfc797eb48093f0b541668c0381e3b822176",
+      "source_id": "fed-press",
+      "title": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120a.htm",
+      "topic": "economy",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-11-20T15:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 20 Nov 2026 15:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
+      "first_seen_at": "2026-11-20T16:14:36.458Z",
+      "changed_at": "2026-11-20T16:14:36.458Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-0baf9bc58ca616165e5c077787074df4822e55fd44a59562c872df27c76dbf74",
+      "source_id": "un-news",
+      "title": "WFP plans to assist 91 million in 2027 as hunger crisis deepens",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168846",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-20T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-20T16:14:36.458Z",
+      "changed_at": "2026-11-20T16:14:36.458Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-689337f466be3e7c13d2e503c04dd35e81f4742d59ebaf6314347083823b9684",
+      "source_id": "un-news",
+      "title": "Shattered playgrounds and freezing classrooms: Inside Ukraine’s deadliest year for children",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168847",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-20T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-20T16:14:36.458Z",
+      "changed_at": "2026-11-20T16:14:36.458Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-7faea82f16e20cde1c6ec0d1a9b0d66398ea6b1d3434a41fc4dd8b87568355b6",
+      "source_id": "un-news",
+      "title": "Afghanistan restrictions prevent pregnant women from seeking medical help",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168844",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-20T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-20T16:14:36.458Z",
+      "changed_at": "2026-11-20T16:14:36.458Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-c425ac3b9ef5c2a1e911dc1bcfe0031b27a200fbf2e340522343377afb9a5196",
+      "source_id": "un-news",
+      "title": "COP31: Countries demand stronger climate deal as talks in Antalya reach final day",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168845",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-20T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-20T16:14:36.458Z",
+      "changed_at": "2026-11-20T16:14:36.458Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-701a571706ec6c00de8bbc6af8a9bc31d2eec98a2272e87a59a9e6a4a97a82f1",
       "source_id": "hf-blog",
@@ -1142,99 +1232,14 @@
       "changed_at": "2026-11-20T02:17:30.319Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-17b7a2b39f098895a2208f48f1507c3092e017b4481f6732b70b65df4c04b2b0",
-      "source_id": "openai-news",
-      "title": "See PR scans in action",
-      "url": "https://openai.com/business/learn/pr-scans-demo",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-19T00:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-20T00:16:41.597Z",
-      "changed_at": "2026-11-20T00:16:41.597Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-82fe289fe466dcc1d4f71a60b5a7fb88a90a6df5cf719a456eac5a721e5f3552",
-      "source_id": "openai-news",
-      "title": "Explore the Codex Security Plugin",
-      "url": "https://openai.com/business/learn/codex-security-plugin-demo",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-19T00:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-20T00:16:41.597Z",
-      "changed_at": "2026-11-20T00:16:41.597Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-da30645137037f0052cd70ab3b09df0b31abc0303db9422eaa375a651d60b969",
-      "source_id": "openai-news",
-      "title": "Get started with Daybreak Blue",
-      "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-19T00:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-20T00:16:41.597Z",
-      "changed_at": "2026-11-20T00:16:41.597Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-54080d49b28caf36bb39c9748c8e3671a6f62dc12133a7f549605e2abc290b7b",
-      "source_id": "un-news",
-      "title": "No government approval needed to form or join a group, UN rights committee says",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168837",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-19T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 19 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-19T20:20:20.080Z",
-      "changed_at": "2026-11-19T20:20:20.080Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-cb25ee157274b1df14a9b1126a74c6121290cd93c6c64ac7b8cc2918cb1b0c88",
-      "source_id": "un-news",
-      "title": "COP31: Ambition goes missing as fossil fuel language drops from draft deal",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168839",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-19T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 19 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-19T20:20:20.080Z",
-      "changed_at": "2026-11-19T20:20:20.080Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
+    {
+      "date": "2026-11-21",
+      "count": 5,
+      "path": "archive/2026-11-21.json"
+    },
     {
       "date": "2026-11-20",
       "count": 63,
@@ -1282,21 +1287,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-20T00:16:41.597Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 3,
-      "revisions": 0,
-      "total": 493,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-20T02:17:30.319Z",
       "status": "partial",
@@ -1395,6 +1385,21 @@
       "additions": 1,
       "revisions": 0,
       "total": 548,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-20T16:14:36.458Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 5,
+      "revisions": 0,
+      "total": 553,
       "failed_sources": [
         {
           "id": "europarl-news",
