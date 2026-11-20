@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-20T08:19:16.523Z",
+  "attempted_at": "2026-11-20T10:11:37.535Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 544,
+  "total": 547,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-20T08:19:16.523Z",
-      "last_success_at": "2026-11-20T08:19:16.523Z",
+      "attempted_at": "2026-11-20T10:11:37.535Z",
+      "last_success_at": "2026-11-20T10:11:37.535Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T08:19:16.523Z",
-      "last_success_at": "2026-11-20T08:19:16.523Z",
+      "attempted_at": "2026-11-20T10:11:37.535Z",
+      "last_success_at": "2026-11-20T10:11:37.535Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T08:19:16.523Z",
-      "last_success_at": "2026-11-20T08:19:16.523Z",
+      "attempted_at": "2026-11-20T10:11:37.535Z",
+      "last_success_at": "2026-11-20T10:11:37.535Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-20T08:19:16.523Z",
-      "last_success_at": "2026-11-20T08:19:16.523Z",
+      "attempted_at": "2026-11-20T10:11:37.535Z",
+      "last_success_at": "2026-11-20T10:11:37.535Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T08:19:16.523Z",
-      "last_success_at": "2026-11-20T08:19:16.523Z",
+      "attempted_at": "2026-11-20T10:11:37.535Z",
+      "last_success_at": "2026-11-20T10:11:37.535Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795109147-gzip\"",
-      "last_modified": "Thu, 19 Nov 2026 17:25:47 GMT",
+      "etag": "\"1795109142-gzip\"",
+      "last_modified": "Thu, 19 Nov 2026 17:25:42 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-20T08:19:16.523Z",
+      "attempted_at": "2026-11-20T10:11:37.535Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-20T08:19:16.523Z",
-      "last_success_at": "2026-11-20T08:19:16.523Z",
+      "attempted_at": "2026-11-20T10:11:37.535Z",
+      "last_success_at": "2026-11-20T10:11:37.535Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,60 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-1c9351b994c5dad1cd1653c0c69cd47dee043595c2dbe12a5ec157311750af73",
+      "source_id": "un-news",
+      "title": "Battle to control GPS and radio signals raises civilian safety concerns",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168843",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-19T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-20T10:11:37.535Z",
+      "changed_at": "2026-11-20T10:11:37.535Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-297180f88a25cc103629cd501c3233b3093596fd4f7144d7aaf4877426fad411",
+      "source_id": "un-news",
+      "title": "‘Losing the battle’: AI hands predators new ways to target children",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168841",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-19T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-20T10:11:37.535Z",
+      "changed_at": "2026-11-20T10:11:37.535Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-660d08e7269e5544d4b837b2d8f98e51eabc9847feccff970231891ea2a524a0",
+      "source_id": "un-news",
+      "title": "Peacekeeping: With 500 paternity and child support claims unresolved, UN scales up accountability",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168842",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-19T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Thu, 19 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-20T10:11:37.535Z",
+      "changed_at": "2026-11-20T10:11:37.535Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-006a4488e98d6fb7a4bac542897d0c6fcf08ca5a91bdec553cf586559c3161a5",
       "source_id": "arxiv-ai",
@@ -1178,66 +1232,12 @@
       "changed_at": "2026-11-19T18:11:48.694Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-325a2d06cee138cc11ca9d61312d5ad710721f602dd5c8f46e6d89fc8badfb7e",
-      "source_id": "fed-press",
-      "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
-      "topic": "economy",
-      "publisher": "Federal Reserve Board",
-      "published_at": "2026-11-19T16:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 19 Nov 2026 16:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
-      "first_seen_at": "2026-11-19T16:15:32.678Z",
-      "changed_at": "2026-11-19T16:15:32.678Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-d9590ae676aea05f11792897bda1a2c051e81323fad5b1d7ec07ec12a8277f19",
-      "source_id": "un-news",
-      "title": "World’s top court finds Myanmar guilty of genocide against Rohingya",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168836",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-19T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 19 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-19T16:15:32.678Z",
-      "changed_at": "2026-11-19T16:15:32.678Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-017489cfad28fbfe61b1e90ecd30e83571d2c2ba1087cc174c6545c8c3c205a0",
-      "source_id": "arxiv-ai",
-      "title": "Thinking Fast, Anywhere: One System-1 for the Decision Points of Any Agent Workflow",
-      "url": "https://arxiv.org/abs/2611.23751",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-19T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Thu, 19 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-19T06:15:53.319Z",
-      "changed_at": "2026-11-19T06:15:53.319Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-20",
-      "count": 59,
+      "count": 62,
       "path": "archive/2026-11-20.json"
     },
     {
@@ -1282,21 +1282,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-19T18:11:48.694Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 1,
-      "revisions": 0,
-      "total": 488,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-19T20:20:20.080Z",
       "status": "partial",
@@ -1395,6 +1380,21 @@
       "additions": 0,
       "revisions": 0,
       "total": 544,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-20T10:11:37.535Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 3,
+      "revisions": 0,
+      "total": 547,
       "failed_sources": [
         {
           "id": "europarl-news",
