@@ -1410,6 +1410,25 @@
           "error": "http_403"
         }
       ]
+    },
+    {
+      "at": "2026-11-21T16:16:16.890Z",
+      "status": "partial",
+      "sources_ok": 5,
+      "sources_total": 7,
+      "additions": 0,
+      "revisions": 1,
+      "total": 561,
+      "failed_sources": [
+        {
+          "id": "fed-press",
+          "error": "http_404"
+        },
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
     }
   ]
 }

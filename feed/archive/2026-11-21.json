@@ -59,7 +59,7 @@
     {
       "id": "n-c425ac3b9ef5c2a1e911dc1bcfe0031b27a200fbf2e340522343377afb9a5196",
       "source_id": "un-news",
-      "title": "COP31: Countries demand stronger climate deal as talks in Antalya reach final day",
+      "title": "COP31: Countries demand stronger climate deal amid deadlock in Antalya",
       "url": "https://news.un.org/feed/view/en/story/2026/11/1168845",
       "topic": "politics",
       "publisher": "United Nations News",
@@ -70,9 +70,19 @@
       "review_status": "needs_review",
       "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
       "first_seen_at": "2026-11-20T16:14:36.458Z",
-      "changed_at": "2026-11-20T16:14:36.458Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-21T16:16:16.890Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "COP31: Countries demand stronger climate deal as talks in Antalya reach final day",
+          "url": "https://news.un.org/feed/view/en/story/2026/11/1168845",
+          "published_at": "2026-11-20T12:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+          "date_warning": null,
+          "changed_at": "2026-11-20T16:14:36.458Z"
+        }
+      ]
     },
     {
       "id": "n-7faea82f16e20cde1c6ec0d1a9b0d66398ea6b1d3434a41fc4dd8b87568355b6",
