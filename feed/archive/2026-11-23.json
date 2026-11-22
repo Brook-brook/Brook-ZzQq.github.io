@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-23",
+  "records": [
+    {
+      "id": "n-2f16e29e794aeda17bf3c36f3bec9fbf51b86b0e8189d6bdfe1c50375cea77aa",
+      "source_id": "un-news",
+      "title": "‘I had a better life in Iran’: Afghan women forced home struggle to rebuild",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168852",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-22T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Sun, 22 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-22T16:16:28.578Z",
+      "changed_at": "2026-11-22T16:16:28.578Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-d8cb37b6ee449ecf0032af0e85b92ab2f84013a242ee160852af3b69487d4714",
+      "source_id": "un-news",
+      "title": "COP31 ends without climate pact as UN chief warns there is ‘no ambiguity in the science’",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168855",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-22T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Sun, 22 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-22T16:16:28.578Z",
+      "changed_at": "2026-11-22T16:16:28.578Z",
+      "revision_count": 0,
+      "previous_versions": []
+    }
+  ]
+}
