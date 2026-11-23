@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-23T20:11:14.964Z",
+  "attempted_at": "2026-11-23T22:17:01.124Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 624,
+  "total": 626,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-23T20:11:14.964Z",
-      "last_success_at": "2026-11-23T20:11:14.964Z",
+      "attempted_at": "2026-11-23T22:17:01.124Z",
+      "last_success_at": "2026-11-23T22:17:01.124Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T20:11:14.964Z",
-      "last_success_at": "2026-11-23T20:11:14.964Z",
+      "attempted_at": "2026-11-23T22:17:01.124Z",
+      "last_success_at": "2026-11-23T22:17:01.124Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T20:11:14.964Z",
-      "last_success_at": "2026-11-23T20:11:14.964Z",
+      "attempted_at": "2026-11-23T22:17:01.124Z",
+      "last_success_at": "2026-11-23T22:17:01.124Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-23T20:11:14.964Z",
-      "last_success_at": "2026-11-23T20:11:14.964Z",
+      "attempted_at": "2026-11-23T22:17:01.124Z",
+      "last_success_at": "2026-11-23T22:17:01.124Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T20:11:14.964Z",
-      "last_success_at": "2026-11-23T20:11:14.964Z",
+      "attempted_at": "2026-11-23T22:17:01.124Z",
+      "last_success_at": "2026-11-23T22:17:01.124Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795450909-gzip\"",
-      "last_modified": "Mon, 23 Nov 2026 16:21:49 GMT",
+      "etag": "\"1795450845-gzip\"",
+      "last_modified": "Mon, 23 Nov 2026 16:20:45 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-23T20:11:14.964Z",
+      "attempted_at": "2026-11-23T22:17:01.124Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T20:11:14.964Z",
-      "last_success_at": "2026-11-23T20:11:14.964Z",
+      "attempted_at": "2026-11-23T22:17:01.124Z",
+      "last_success_at": "2026-11-23T22:17:01.124Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-23ce2785727fbeec4d3c90130477928acc479502d7c6f9e56d3293a9440f8da0",
+      "source_id": "un-news",
+      "title": "Gaza conflict has undone 77 years of human development, UN warns",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168862",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-23T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-23T22:17:01.124Z",
+      "changed_at": "2026-11-23T22:17:01.124Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-1259b534687dd8b3171199ff6c1e4d274ef5d072ac6513620703d8171072ee72",
+      "source_id": "openai-news",
+      "title": "Richpanel helps companies automate 50% of support in 30 days",
+      "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-23T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 23 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-23T22:17:01.124Z",
+      "changed_at": "2026-11-23T22:17:01.124Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-16ee36335eaaf1cb954a62b4e50687de239749922615bb668f66aece8dbe3065",
       "source_id": "un-news",
@@ -1196,48 +1232,12 @@
       "changed_at": "2026-11-23T06:12:54.730Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-1a10f1676d46fc01a909d8eab6d17033b89331ee5fd1f1e04952fc2f6f54665c",
-      "source_id": "openai-news",
-      "title": "Perplexity and Intelligence",
-      "url": "https://openai.com/index/perplexity-and-intelligence",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-22T00:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Sun, 22 Nov 2026 00:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-22T18:18:24.307Z",
-      "changed_at": "2026-11-22T18:18:24.307Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-2f16e29e794aeda17bf3c36f3bec9fbf51b86b0e8189d6bdfe1c50375cea77aa",
-      "source_id": "un-news",
-      "title": "‘I had a better life in Iran’: Afghan women forced home struggle to rebuild",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168852",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-22T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Sun, 22 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-22T16:16:28.578Z",
-      "changed_at": "2026-11-22T16:16:28.578Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-24",
-      "count": 4,
+      "count": 6,
       "path": "archive/2026-11-24.json"
     },
     {
@@ -1302,21 +1302,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-23T04:11:27.353Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 566,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-23T06:12:54.730Z",
       "status": "partial",
@@ -1415,6 +1400,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 624,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-23T22:17:01.124Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 626,
       "failed_sources": [
         {
           "id": "europarl-news",
