@@ -37,6 +37,42 @@
       "changed_at": "2026-11-23T18:12:36.291Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-10878202550bbbf922d1872ab8ac87272ec1fb51ba1f61195752ed3c5f3ba59c",
+      "source_id": "openai-news",
+      "title": "Connected intelligence for in-house legal",
+      "url": "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-23T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 23 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-23T20:11:14.964Z",
+      "changed_at": "2026-11-23T20:11:14.964Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-16ee36335eaaf1cb954a62b4e50687de239749922615bb668f66aece8dbe3065",
+      "source_id": "un-news",
+      "title": "UN chief urges talks on global AI safety framework, warns of historic shift in power",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168861",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-23T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-23T20:11:14.964Z",
+      "changed_at": "2026-11-23T20:11:14.964Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }

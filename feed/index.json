@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-23T18:12:36.291Z",
+  "attempted_at": "2026-11-23T20:11:14.964Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 622,
+  "total": 624,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-23T18:12:36.291Z",
-      "last_success_at": "2026-11-23T18:12:36.291Z",
+      "attempted_at": "2026-11-23T20:11:14.964Z",
+      "last_success_at": "2026-11-23T20:11:14.964Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T18:12:36.291Z",
-      "last_success_at": "2026-11-23T18:12:36.291Z",
+      "attempted_at": "2026-11-23T20:11:14.964Z",
+      "last_success_at": "2026-11-23T20:11:14.964Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T18:12:36.291Z",
-      "last_success_at": "2026-11-23T18:12:36.291Z",
+      "attempted_at": "2026-11-23T20:11:14.964Z",
+      "last_success_at": "2026-11-23T20:11:14.964Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-23T18:12:36.291Z",
-      "last_success_at": "2026-11-23T18:12:36.291Z",
+      "attempted_at": "2026-11-23T20:11:14.964Z",
+      "last_success_at": "2026-11-23T20:11:14.964Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T18:12:36.291Z",
-      "last_success_at": "2026-11-23T18:12:36.291Z",
+      "attempted_at": "2026-11-23T20:11:14.964Z",
+      "last_success_at": "2026-11-23T20:11:14.964Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795450845-gzip\"",
-      "last_modified": "Mon, 23 Nov 2026 16:20:45 GMT",
+      "etag": "\"1795450909-gzip\"",
+      "last_modified": "Mon, 23 Nov 2026 16:21:49 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-23T18:12:36.291Z",
+      "attempted_at": "2026-11-23T20:11:14.964Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T18:12:36.291Z",
-      "last_success_at": "2026-11-23T18:12:36.291Z",
+      "attempted_at": "2026-11-23T20:11:14.964Z",
+      "last_success_at": "2026-11-23T20:11:14.964Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-16ee36335eaaf1cb954a62b4e50687de239749922615bb668f66aece8dbe3065",
+      "source_id": "un-news",
+      "title": "UN chief urges talks on global AI safety framework, warns of historic shift in power",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168861",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-23T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-23T20:11:14.964Z",
+      "changed_at": "2026-11-23T20:11:14.964Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-10878202550bbbf922d1872ab8ac87272ec1fb51ba1f61195752ed3c5f3ba59c",
+      "source_id": "openai-news",
+      "title": "Connected intelligence for in-house legal",
+      "url": "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-23T08:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 23 Nov 2026 08:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-23T20:11:14.964Z",
+      "changed_at": "2026-11-23T20:11:14.964Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-eb2701ff66febea2729388256362b1e990ea44c9d3e87f78378f64a362cb43e9",
       "source_id": "hf-blog",
@@ -1196,48 +1232,12 @@
       "changed_at": "2026-11-22T16:16:28.578Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-d8cb37b6ee449ecf0032af0e85b92ab2f84013a242ee160852af3b69487d4714",
-      "source_id": "un-news",
-      "title": "COP31 ends without climate pact as UN chief warns there is ‘no ambiguity in the science’",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168855",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-22T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Sun, 22 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-22T16:16:28.578Z",
-      "changed_at": "2026-11-22T16:16:28.578Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-1651c68df9d739512efb75158b1b5befd3b93767674743a216f07768640cadac",
-      "source_id": "un-news",
-      "title": "‘We escaped with only our lives’: Fighting to give birth in war-torn Yemen",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168851",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-21T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Sat, 21 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-22T02:17:25.685Z",
-      "changed_at": "2026-11-22T02:17:25.685Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-24",
-      "count": 2,
+      "count": 4,
       "path": "archive/2026-11-24.json"
     },
     {
@@ -1302,21 +1302,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-23T02:19:29.016Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 566,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-23T04:11:27.353Z",
       "status": "partial",
@@ -1415,6 +1400,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 622,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-23T20:11:14.964Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 624,
       "failed_sources": [
         {
           "id": "europarl-news",
