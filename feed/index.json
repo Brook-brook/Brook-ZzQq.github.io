@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-23T10:32:20.586Z",
+  "attempted_at": "2026-11-23T12:19:20.878Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 616,
+  "total": 618,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-23T10:32:20.586Z",
-      "last_success_at": "2026-11-23T10:32:20.586Z",
+      "attempted_at": "2026-11-23T12:19:20.878Z",
+      "last_success_at": "2026-11-23T12:19:20.878Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T10:32:20.586Z",
-      "last_success_at": "2026-11-23T10:32:20.586Z",
+      "attempted_at": "2026-11-23T12:19:20.878Z",
+      "last_success_at": "2026-11-23T12:19:20.878Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T10:32:20.586Z",
-      "last_success_at": "2026-11-23T10:32:20.586Z",
+      "attempted_at": "2026-11-23T12:19:20.878Z",
+      "last_success_at": "2026-11-23T12:19:20.878Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-23T10:32:20.586Z",
-      "last_success_at": "2026-11-23T10:32:20.586Z",
+      "attempted_at": "2026-11-23T12:19:20.878Z",
+      "last_success_at": "2026-11-23T12:19:20.878Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T10:32:20.586Z",
-      "last_success_at": "2026-11-23T10:32:20.586Z",
+      "attempted_at": "2026-11-23T12:19:20.878Z",
+      "last_success_at": "2026-11-23T12:19:20.878Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795429802-gzip\"",
-      "last_modified": "Mon, 23 Nov 2026 10:30:02 GMT",
+      "etag": "\"1795436059-gzip\"",
+      "last_modified": "Mon, 23 Nov 2026 12:14:19 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-23T10:32:20.586Z",
+      "attempted_at": "2026-11-23T12:19:20.878Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T10:32:20.586Z",
-      "last_success_at": "2026-11-23T10:32:20.586Z",
+      "attempted_at": "2026-11-23T12:19:20.878Z",
+      "last_success_at": "2026-11-23T12:19:20.878Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-307e98b05da69a0258cc51e093710acdd73849cd2981d9e29b070c0f597b0c1b",
+      "source_id": "un-news",
+      "title": "Libya: UN mission urges probe into Benghazi port attacks",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168857",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-23T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-23T12:19:20.878Z",
+      "changed_at": "2026-11-23T12:19:20.878Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-180a5dc2f3a58b222d120c4869fbc7d5c089a3ce0e83b865b4156705b2634bcb",
+      "source_id": "un-news",
+      "title": "Guterres laments COP31 outcome, urges climate justice from Barbados",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168856",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-22T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Sun, 22 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-23T12:19:20.878Z",
+      "changed_at": "2026-11-23T12:19:20.878Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-03465724b88b0cc08e0a5ae9483bc1e9585ff8591a35ba6673e019752e0e92f1",
       "source_id": "arxiv-ai",
@@ -1206,48 +1242,12 @@
       "changed_at": "2026-11-20T22:17:59.705Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-1e3300495dbd72fb273adec6910448d24d41084f49b1b4eb4ac8b4f33d37b5a8",
-      "source_id": "un-news",
-      "title": "‘You will not be alone’: General Assembly President tells Rohingya refugees after genocide ruling",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168853",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-20T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-20T22:17:59.705Z",
-      "changed_at": "2026-11-20T22:17:59.705Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-1e33a84d56832480d23569e63f3d3ef958d9fdb0e114a29307e13bf629729487",
-      "source_id": "un-news",
-      "title": "West Bank: Record settler attacks mar olive harvest as UN urges Israel to protect farmers",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168849",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-20T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-20T22:17:59.705Z",
-      "changed_at": "2026-11-20T22:17:59.705Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-23",
-      "count": 53,
+      "count": 55,
       "path": "archive/2026-11-23.json"
     },
     {
@@ -1307,21 +1307,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-22T20:19:03.951Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 566,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-22T22:12:04.994Z",
       "status": "partial",
@@ -1420,6 +1405,21 @@
       "additions": 0,
       "revisions": 0,
       "total": 616,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-23T12:19:20.878Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 618,
       "failed_sources": [
         {
           "id": "europarl-news",

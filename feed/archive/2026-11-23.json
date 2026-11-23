@@ -955,6 +955,42 @@
       "changed_at": "2026-11-23T06:12:54.730Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-307e98b05da69a0258cc51e093710acdd73849cd2981d9e29b070c0f597b0c1b",
+      "source_id": "un-news",
+      "title": "Libya: UN mission urges probe into Benghazi port attacks",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168857",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-23T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-23T12:19:20.878Z",
+      "changed_at": "2026-11-23T12:19:20.878Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-180a5dc2f3a58b222d120c4869fbc7d5c089a3ce0e83b865b4156705b2634bcb",
+      "source_id": "un-news",
+      "title": "Guterres laments COP31 outcome, urges climate justice from Barbados",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168856",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-22T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Sun, 22 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-23T12:19:20.878Z",
+      "changed_at": "2026-11-23T12:19:20.878Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
