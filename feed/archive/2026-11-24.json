@@ -1037,6 +1037,42 @@
       "changed_at": "2026-11-24T10:11:24.925Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-67a38418993d24fc98fdddb215e84f8bfc4be90c44d6f4b00c7488c585801500",
+      "source_id": "un-news",
+      "title": "Colombia: Guterres urges renewed commitment to landmark peace deal",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168864",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-24T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-24T14:15:48.186Z",
+      "changed_at": "2026-11-24T14:15:48.186Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-f12aebcb27fa9ccc85590e357b8b86de24b4bfe01da45e173c9c2a227631f2ba",
+      "source_id": "un-news",
+      "title": "Five women killed every hour by partners or family members",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168863",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-24T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-24T14:15:48.186Z",
+      "changed_at": "2026-11-24T14:15:48.186Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
