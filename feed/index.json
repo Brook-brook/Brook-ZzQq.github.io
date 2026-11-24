@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-24T18:17:24.316Z",
+  "attempted_at": "2026-11-24T20:13:08.791Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 682,
+  "total": 686,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-24T18:17:24.316Z",
-      "last_success_at": "2026-11-24T18:17:24.316Z",
+      "attempted_at": "2026-11-24T20:13:08.791Z",
+      "last_success_at": "2026-11-24T20:13:08.791Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T18:17:24.316Z",
-      "last_success_at": "2026-11-24T18:17:24.316Z",
+      "attempted_at": "2026-11-24T20:13:08.791Z",
+      "last_success_at": "2026-11-24T20:13:08.791Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T18:17:24.316Z",
-      "last_success_at": "2026-11-24T18:17:24.316Z",
+      "attempted_at": "2026-11-24T20:13:08.791Z",
+      "last_success_at": "2026-11-24T20:13:08.791Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -81,14 +81,14 @@
         "www.federalreserve.gov",
         "federalreserve.gov"
       ],
-      "status": "not_modified",
-      "attempted_at": "2026-11-24T18:17:24.316Z",
-      "last_success_at": "2026-11-24T18:17:24.316Z",
+      "status": "ok",
+      "attempted_at": "2026-11-24T20:13:08.791Z",
+      "last_success_at": "2026-11-24T20:13:08.791Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
-      "etag": "W/\"f37fd93c3479dd1:0\"",
-      "last_modified": "Fri, 20 Nov 2026 21:15:15 GMT",
+      "etag": "W/\"78ff54b467cdd1:0\"",
+      "last_modified": "Tue, 24 Nov 2026 19:00:17 GMT",
       "error": null,
       "retry_after": null
     },
@@ -103,9 +103,9 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "ok",
-      "attempted_at": "2026-11-24T18:17:24.316Z",
-      "last_success_at": "2026-11-24T18:17:24.316Z",
+      "status": "not_modified",
+      "attempted_at": "2026-11-24T20:13:08.791Z",
+      "last_success_at": "2026-11-24T20:13:08.791Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-24T18:17:24.316Z",
+      "attempted_at": "2026-11-24T20:13:08.791Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T18:17:24.316Z",
-      "last_success_at": "2026-11-24T18:17:24.316Z",
+      "attempted_at": "2026-11-24T20:13:08.791Z",
+      "last_success_at": "2026-11-24T20:13:08.791Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,78 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-ee53adbaa022cb629b983f02768ca260b18e1e25dfd4510c912e5c5dbec569e7",
+      "source_id": "fed-press",
+      "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
+      "topic": "economy",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-11-24T19:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 19:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "政策声明、监管措施与经济预测各有范围；发布时间不是统计期，预测不是承诺。",
+      "first_seen_at": "2026-11-24T20:13:08.791Z",
+      "changed_at": "2026-11-24T20:13:08.791Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-7758c04a629331bf96383fb7f46e256dce8c50dc19007956b18ca6b429d0aeb8",
+      "source_id": "openai-news",
+      "title": "Searching for distant planets with Astra",
+      "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-24T11:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 11:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-24T20:13:08.791Z",
+      "changed_at": "2026-11-24T20:13:08.791Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-7e14b56be674430859075a7f0bce62ec43b4bbfbd056d91f846c666ac01fbfaf",
+      "source_id": "openai-news",
+      "title": "How Intentful uses dots to make more time for growth",
+      "url": "https://openai.com/business/customer-stories/intentful-dots",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-24T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-24T20:13:08.791Z",
+      "changed_at": "2026-11-24T20:13:08.791Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-89a905d5eae9fa3ef5a8af6c1b3d6471a3626169568a0058a355675d3a41557f",
+      "source_id": "openai-news",
+      "title": "How iFood scales coding agents across 15,000 repositories",
+      "url": "https://openai.com/business/customer-stories/ifood",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-24T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-24T20:13:08.791Z",
+      "changed_at": "2026-11-24T20:13:08.791Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-6a28e842b3bf4bfd8400220ee7c0735b0ecf3e38a0b3cb368303e1e3a450e25f",
       "source_id": "hf-blog",
@@ -1160,94 +1232,12 @@
       "changed_at": "2026-11-24T00:16:53.121Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-23ce2785727fbeec4d3c90130477928acc479502d7c6f9e56d3293a9440f8da0",
-      "source_id": "un-news",
-      "title": "Gaza war has undone 77 years of human development, UN warns",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168862",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-23T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-23T22:17:01.124Z",
-      "changed_at": "2026-11-24T00:16:53.121Z",
-      "revision_count": 1,
-      "previous_versions": [
-        {
-          "title": "Gaza conflict has undone 77 years of human development, UN warns",
-          "url": "https://news.un.org/feed/view/en/story/2026/11/1168862",
-          "published_at": "2026-11-23T12:00:00.000Z",
-          "updated_at": null,
-          "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
-          "date_warning": null,
-          "changed_at": "2026-11-23T22:17:01.124Z"
-        }
-      ]
-    },
-    {
-      "id": "n-1259b534687dd8b3171199ff6c1e4d274ef5d072ac6513620703d8171072ee72",
-      "source_id": "openai-news",
-      "title": "Richpanel helps companies automate 50% of support in 30 days",
-      "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-23T08:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Mon, 23 Nov 2026 08:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-23T22:17:01.124Z",
-      "changed_at": "2026-11-23T22:17:01.124Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-16ee36335eaaf1cb954a62b4e50687de239749922615bb668f66aece8dbe3065",
-      "source_id": "un-news",
-      "title": "UN chief urges talks on global AI safety framework, warns of historic shift in power",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168861",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-23T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-23T20:11:14.964Z",
-      "changed_at": "2026-11-23T20:11:14.964Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-10878202550bbbf922d1872ab8ac87272ec1fb51ba1f61195752ed3c5f3ba59c",
-      "source_id": "openai-news",
-      "title": "Connected intelligence for in-house legal",
-      "url": "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
-      "topic": "ai",
-      "publisher": "OpenAI",
-      "published_at": "2026-11-23T08:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Mon, 23 Nov 2026 08:00:00 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
-      "first_seen_at": "2026-11-23T20:11:14.964Z",
-      "changed_at": "2026-11-23T20:11:14.964Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-25",
-      "count": 3,
+      "count": 7,
       "path": "archive/2026-11-25.json"
     },
     {
@@ -1317,21 +1307,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-24T04:12:49.435Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 627,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-24T06:15:20.057Z",
       "status": "partial",
@@ -1430,6 +1405,21 @@
       "additions": 1,
       "revisions": 0,
       "total": 682,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-24T20:13:08.791Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 4,
+      "revisions": 0,
+      "total": 686,
       "failed_sources": [
         {
           "id": "europarl-news",
