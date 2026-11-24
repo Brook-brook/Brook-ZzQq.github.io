@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-24T14:15:48.186Z",
+  "attempted_at": "2026-11-24T16:18:23.011Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 679,
+  "total": 681,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-24T14:15:48.186Z",
-      "last_success_at": "2026-11-24T14:15:48.186Z",
+      "attempted_at": "2026-11-24T16:18:23.011Z",
+      "last_success_at": "2026-11-24T16:18:23.011Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T14:15:48.186Z",
-      "last_success_at": "2026-11-24T14:15:48.186Z",
+      "attempted_at": "2026-11-24T16:18:23.011Z",
+      "last_success_at": "2026-11-24T16:18:23.011Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T14:15:48.186Z",
-      "last_success_at": "2026-11-24T14:15:48.186Z",
+      "attempted_at": "2026-11-24T16:18:23.011Z",
+      "last_success_at": "2026-11-24T16:18:23.011Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-24T14:15:48.186Z",
-      "last_success_at": "2026-11-24T14:15:48.186Z",
+      "attempted_at": "2026-11-24T16:18:23.011Z",
+      "last_success_at": "2026-11-24T16:18:23.011Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T14:15:48.186Z",
-      "last_success_at": "2026-11-24T14:15:48.186Z",
+      "attempted_at": "2026-11-24T16:18:23.011Z",
+      "last_success_at": "2026-11-24T16:18:23.011Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795529703-gzip\"",
-      "last_modified": "Tue, 24 Nov 2026 14:15:03 GMT",
+      "etag": "\"1795536902-gzip\"",
+      "last_modified": "Tue, 24 Nov 2026 16:15:02 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-24T14:15:48.186Z",
+      "attempted_at": "2026-11-24T16:18:23.011Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T14:15:48.186Z",
-      "last_success_at": "2026-11-24T14:15:48.186Z",
+      "attempted_at": "2026-11-24T16:18:23.011Z",
+      "last_success_at": "2026-11-24T16:18:23.011Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,42 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-7d8cc547f7c9a0219b514d6d97d720d83856d806a5322619f7d838c64714e466",
+      "source_id": "un-news",
+      "title": "Security Council LIVE: Can conflict resolution keep pace as AI and drones reshape war?",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168866",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-24T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-24T16:18:23.011Z",
+      "changed_at": "2026-11-24T16:18:23.011Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
+      "id": "n-a44f2907ccd9b3976bfbbf516475ba601313533a43644bd300819a2de7f1e094",
+      "source_id": "un-news",
+      "title": "DR Congo: Concern for trapped Ebola workers as violence against women and girls deepens",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168865",
+      "topic": "politics",
+      "publisher": "United Nations News",
+      "published_at": "2026-11-24T12:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 12:00:00 +0000",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
+      "first_seen_at": "2026-11-24T16:18:23.011Z",
+      "changed_at": "2026-11-24T16:18:23.011Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-67a38418993d24fc98fdddb215e84f8bfc4be90c44d6f4b00c7488c585801500",
       "source_id": "un-news",
@@ -1206,45 +1242,14 @@
       "changed_at": "2026-11-23T18:12:36.291Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-095442ef4a2257f8bdef35ffdf974088abfe3a393c4f38516f100a99f6211319",
-      "source_id": "un-news",
-      "title": "Security Council LIVE: Winter attacks on Ukraine's power grid and Black Sea shipping threaten lives and global food supplies",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168859",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-23T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-23T18:12:36.291Z",
-      "changed_at": "2026-11-23T18:12:36.291Z",
-      "revision_count": 0,
-      "previous_versions": []
-    },
-    {
-      "id": "n-a68db2f1d7afa7818e90f7e2ddc8bc5020412ae2ad6e87d4be07fe5621b354a3",
-      "source_id": "un-news",
-      "title": "Heavy fighting in Ituri traps DR Congo Ebola responders: WHO",
-      "url": "https://news.un.org/feed/view/en/story/2026/11/1168858",
-      "topic": "politics",
-      "publisher": "United Nations News",
-      "published_at": "2026-11-23T12:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
-      "first_seen_at": "2026-11-23T14:44:00.591Z",
-      "changed_at": "2026-11-23T14:44:00.591Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
+    {
+      "date": "2026-11-25",
+      "count": 2,
+      "path": "archive/2026-11-25.json"
+    },
     {
       "date": "2026-11-24",
       "count": 59,
@@ -1312,21 +1317,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-24T00:16:53.121Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 1,
-      "revisions": 1,
-      "total": 627,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-24T02:13:10.890Z",
       "status": "partial",
@@ -1425,6 +1415,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 679,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-24T16:18:23.011Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 2,
+      "revisions": 0,
+      "total": 681,
       "failed_sources": [
         {
           "id": "europarl-news",
