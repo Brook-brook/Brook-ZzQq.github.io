@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-23T22:17:01.124Z",
+  "attempted_at": "2026-11-24T00:16:53.121Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 626,
+  "total": 627,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-23T22:17:01.124Z",
-      "last_success_at": "2026-11-23T22:17:01.124Z",
+      "attempted_at": "2026-11-24T00:16:53.121Z",
+      "last_success_at": "2026-11-24T00:16:53.121Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T22:17:01.124Z",
-      "last_success_at": "2026-11-23T22:17:01.124Z",
+      "attempted_at": "2026-11-24T00:16:53.121Z",
+      "last_success_at": "2026-11-24T00:16:53.121Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,8 +60,8 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T22:17:01.124Z",
-      "last_success_at": "2026-11-23T22:17:01.124Z",
+      "attempted_at": "2026-11-24T00:16:53.121Z",
+      "last_success_at": "2026-11-24T00:16:53.121Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-23T22:17:01.124Z",
-      "last_success_at": "2026-11-23T22:17:01.124Z",
+      "attempted_at": "2026-11-24T00:16:53.121Z",
+      "last_success_at": "2026-11-24T00:16:53.121Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -103,9 +103,9 @@
         "www.bis.org",
         "bis.org"
       ],
-      "status": "ok",
-      "attempted_at": "2026-11-23T22:17:01.124Z",
-      "last_success_at": "2026-11-23T22:17:01.124Z",
+      "status": "not_modified",
+      "attempted_at": "2026-11-24T00:16:53.121Z",
+      "last_success_at": "2026-11-24T00:16:53.121Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-23T22:17:01.124Z",
+      "attempted_at": "2026-11-24T00:16:53.121Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-23T22:17:01.124Z",
-      "last_success_at": "2026-11-23T22:17:01.124Z",
+      "attempted_at": "2026-11-24T00:16:53.121Z",
+      "last_success_at": "2026-11-24T00:16:53.121Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -154,9 +154,27 @@
   ],
   "latest": [
     {
+      "id": "n-b0689cf87ab570a441c88635b910134907af4a34b0ffafe4d1af03d0273e75fa",
+      "source_id": "openai-news",
+      "title": "OpenAI and Cisco introduce Shirudo",
+      "url": "https://openai.com/index/introducing-shirudo",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-23T21:20:00.000Z",
+      "updated_at": null,
+      "published_raw": "Mon, 23 Nov 2026 21:20:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-24T00:16:53.121Z",
+      "changed_at": "2026-11-24T00:16:53.121Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
+    {
       "id": "n-23ce2785727fbeec4d3c90130477928acc479502d7c6f9e56d3293a9440f8da0",
       "source_id": "un-news",
-      "title": "Gaza conflict has undone 77 years of human development, UN warns",
+      "title": "Gaza war has undone 77 years of human development, UN warns",
       "url": "https://news.un.org/feed/view/en/story/2026/11/1168862",
       "topic": "politics",
       "publisher": "United Nations News",
@@ -167,9 +185,19 @@
       "review_status": "needs_review",
       "caveat": "从联合国工作视角报道；应结合原始文件与独立媒体核对。",
       "first_seen_at": "2026-11-23T22:17:01.124Z",
-      "changed_at": "2026-11-23T22:17:01.124Z",
-      "revision_count": 0,
-      "previous_versions": []
+      "changed_at": "2026-11-24T00:16:53.121Z",
+      "revision_count": 1,
+      "previous_versions": [
+        {
+          "title": "Gaza conflict has undone 77 years of human development, UN warns",
+          "url": "https://news.un.org/feed/view/en/story/2026/11/1168862",
+          "published_at": "2026-11-23T12:00:00.000Z",
+          "updated_at": null,
+          "published_raw": "Mon, 23 Nov 2026 12:00:00 +0000",
+          "date_warning": null,
+          "changed_at": "2026-11-23T22:17:01.124Z"
+        }
+      ]
     },
     {
       "id": "n-1259b534687dd8b3171199ff6c1e4d274ef5d072ac6513620703d8171072ee72",
@@ -1214,30 +1242,12 @@
       "changed_at": "2026-11-23T06:12:54.730Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-fcc3caa65c7619f93f64817c54fd3e47d38802703c3e0f80fbde143f6c56efe9",
-      "source_id": "arxiv-ai",
-      "title": "Same Facts, Different Decision: Fact-Invariant Manipulation and Provenance-Based Defense in Typed Decision Models",
-      "url": "https://arxiv.org/abs/2611.27016",
-      "topic": "ai",
-      "publisher": "arXiv / 论文作者",
-      "published_at": "2026-11-23T05:00:00.000Z",
-      "updated_at": null,
-      "published_raw": "Mon, 23 Nov 2026 00:00:00 -0500",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "预印本元信息不表示同行评审或独立复现；版本与接收状态需回查原文。",
-      "first_seen_at": "2026-11-23T06:12:54.730Z",
-      "changed_at": "2026-11-23T06:12:54.730Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-24",
-      "count": 6,
+      "count": 7,
       "path": "archive/2026-11-24.json"
     },
     {
@@ -1302,21 +1312,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-23T06:12:54.730Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 50,
-      "revisions": 0,
-      "total": 616,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-23T08:57:35.668Z",
       "status": "partial",
@@ -1415,6 +1410,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 626,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-24T00:16:53.121Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 1,
+      "revisions": 1,
+      "total": 627,
       "failed_sources": [
         {
           "id": "europarl-news",
