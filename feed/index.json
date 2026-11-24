@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-24T16:18:23.011Z",
+  "attempted_at": "2026-11-24T18:17:24.316Z",
   "interval_minutes": 120,
   "last_complete_at": null,
-  "total": 681,
+  "total": 682,
   "sources": [
     {
       "id": "arxiv-ai",
@@ -17,8 +17,8 @@
         "www.arxiv.org"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-24T16:18:23.011Z",
-      "last_success_at": "2026-11-24T16:18:23.011Z",
+      "attempted_at": "2026-11-24T18:17:24.316Z",
+      "last_success_at": "2026-11-24T18:17:24.316Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -39,8 +39,8 @@
         "www.openai.com"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T16:18:23.011Z",
-      "last_success_at": "2026-11-24T16:18:23.011Z",
+      "attempted_at": "2026-11-24T18:17:24.316Z",
+      "last_success_at": "2026-11-24T18:17:24.316Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
@@ -60,12 +60,12 @@
         "huggingface.co"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T16:18:23.011Z",
-      "last_success_at": "2026-11-24T16:18:23.011Z",
+      "attempted_at": "2026-11-24T18:17:24.316Z",
+      "last_success_at": "2026-11-24T18:17:24.316Z",
       "accepted": 50,
       "invalid": 0,
       "limited": true,
-      "etag": "W/\"42298-tXD2I7mC5oUSAGFcKFwWRx+ANhs\"",
+      "etag": "W/\"42297-gdOLeX4aOiXgJqDSfT5VUj3SY3k\"",
       "last_modified": "",
       "error": null,
       "retry_after": null
@@ -82,8 +82,8 @@
         "federalreserve.gov"
       ],
       "status": "not_modified",
-      "attempted_at": "2026-11-24T16:18:23.011Z",
-      "last_success_at": "2026-11-24T16:18:23.011Z",
+      "attempted_at": "2026-11-24T18:17:24.316Z",
+      "last_success_at": "2026-11-24T18:17:24.316Z",
       "accepted": 20,
       "invalid": 0,
       "limited": false,
@@ -104,13 +104,13 @@
         "bis.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T16:18:23.011Z",
-      "last_success_at": "2026-11-24T16:18:23.011Z",
+      "attempted_at": "2026-11-24T18:17:24.316Z",
+      "last_success_at": "2026-11-24T18:17:24.316Z",
       "accepted": 2,
       "invalid": 0,
       "limited": false,
-      "etag": "\"1795536902-gzip\"",
-      "last_modified": "Tue, 24 Nov 2026 16:15:02 GMT",
+      "etag": "\"1795541164-gzip\"",
+      "last_modified": "Tue, 24 Nov 2026 17:26:04 GMT",
       "error": null,
       "retry_after": null
     },
@@ -122,7 +122,7 @@
       "home": "https://www.europarl.europa.eu/news/en",
       "feed_url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
       "status": "error",
-      "attempted_at": "2026-11-24T16:18:23.011Z",
+      "attempted_at": "2026-11-24T18:17:24.316Z",
       "error": "http_403",
       "retry_after": null,
       "article_hosts": [
@@ -141,8 +141,8 @@
         "news.un.org"
       ],
       "status": "ok",
-      "attempted_at": "2026-11-24T16:18:23.011Z",
-      "last_success_at": "2026-11-24T16:18:23.011Z",
+      "attempted_at": "2026-11-24T18:17:24.316Z",
+      "last_success_at": "2026-11-24T18:17:24.316Z",
       "accepted": 30,
       "invalid": 0,
       "limited": false,
@@ -153,6 +153,24 @@
     }
   ],
   "latest": [
+    {
+      "id": "n-6a28e842b3bf4bfd8400220ee7c0735b0ecf3e38a0b3cb368303e1e3a450e25f",
+      "source_id": "hf-blog",
+      "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+      "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-24T16:34:13.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 16:34:13 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-24T18:17:24.316Z",
+      "changed_at": "2026-11-24T18:17:24.316Z",
+      "revision_count": 0,
+      "previous_versions": []
+    },
     {
       "id": "n-7d8cc547f7c9a0219b514d6d97d720d83856d806a5322619f7d838c64714e466",
       "source_id": "un-news",
@@ -1224,30 +1242,12 @@
       "changed_at": "2026-11-23T20:11:14.964Z",
       "revision_count": 0,
       "previous_versions": []
-    },
-    {
-      "id": "n-eb2701ff66febea2729388256362b1e990ea44c9d3e87f78378f64a362cb43e9",
-      "source_id": "hf-blog",
-      "title": "RoboTrack: Point tracking for real-world robotic manipulation",
-      "url": "https://huggingface.co/blog/allenai/robotrack",
-      "topic": "ai",
-      "publisher": "Hugging Face / 博客作者",
-      "published_at": "2026-11-23T17:20:37.000Z",
-      "updated_at": null,
-      "published_raw": "Mon, 23 Nov 2026 17:20:37 GMT",
-      "date_warning": null,
-      "review_status": "needs_review",
-      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
-      "first_seen_at": "2026-11-23T18:12:36.291Z",
-      "changed_at": "2026-11-23T18:12:36.291Z",
-      "revision_count": 0,
-      "previous_versions": []
     }
   ],
   "archives": [
     {
       "date": "2026-11-25",
-      "count": 2,
+      "count": 3,
       "path": "archive/2026-11-25.json"
     },
     {
@@ -1317,21 +1317,6 @@
     }
   ],
   "recent_runs": [
-    {
-      "at": "2026-11-24T02:13:10.890Z",
-      "status": "partial",
-      "sources_ok": 6,
-      "sources_total": 7,
-      "additions": 0,
-      "revisions": 0,
-      "total": 627,
-      "failed_sources": [
-        {
-          "id": "europarl-news",
-          "error": "http_403"
-        }
-      ]
-    },
     {
       "at": "2026-11-24T04:12:49.435Z",
       "status": "partial",
@@ -1430,6 +1415,21 @@
       "additions": 2,
       "revisions": 0,
       "total": 681,
+      "failed_sources": [
+        {
+          "id": "europarl-news",
+          "error": "http_403"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-24T18:17:24.316Z",
+      "status": "partial",
+      "sources_ok": 6,
+      "sources_total": 7,
+      "additions": 1,
+      "revisions": 0,
+      "total": 682,
       "failed_sources": [
         {
           "id": "europarl-news",

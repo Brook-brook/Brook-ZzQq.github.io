@@ -37,6 +37,24 @@
       "changed_at": "2026-11-24T16:18:23.011Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-6a28e842b3bf4bfd8400220ee7c0735b0ecf3e38a0b3cb368303e1e3a450e25f",
+      "source_id": "hf-blog",
+      "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+      "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+      "topic": "ai",
+      "publisher": "Hugging Face / 博客作者",
+      "published_at": "2026-11-24T16:34:13.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 16:34:13 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含团队与社区作者文章；平台发布不是同行评审或效果认证。",
+      "first_seen_at": "2026-11-24T18:17:24.316Z",
+      "changed_at": "2026-11-24T18:17:24.316Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
