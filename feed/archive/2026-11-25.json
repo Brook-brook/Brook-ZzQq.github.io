@@ -199,6 +199,24 @@
       "changed_at": "2026-11-24T22:18:10.714Z",
       "revision_count": 0,
       "previous_versions": []
+    },
+    {
+      "id": "n-a3c9028eefd69cfd15ff27f48e02556532b9ed7a8c483b2a5ba430ca611a8783",
+      "source_id": "openai-news",
+      "title": "Clay helps sales teams win with Codex and ChatGPT",
+      "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+      "topic": "ai",
+      "publisher": "OpenAI",
+      "published_at": "2026-11-24T00:00:00.000Z",
+      "updated_at": null,
+      "published_raw": "Tue, 24 Nov 2026 00:00:00 GMT",
+      "date_warning": null,
+      "review_status": "needs_review",
+      "caveat": "包含产品及公司动态；作者能力声明仍需结合评测条件与独立证据。",
+      "first_seen_at": "2026-11-25T00:14:59.809Z",
+      "changed_at": "2026-11-25T00:14:59.809Z",
+      "revision_count": 0,
+      "previous_versions": []
     }
   ]
 }
